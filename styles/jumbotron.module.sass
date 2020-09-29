@@ -1,0 +1,50 @@
+@import "_partials.sass"
+
+.section
+	position: relative
+	display: flex
+	align-items: flex-end
+	min-height: 60vh
+	padding: map-get($spaces, mobileContent)
+	margin-bottom: 8rem
+
+.jumbotron
+	position: absolute
+	left: 0
+	right: 0
+	top: 0
+	bottom: 0
+	background-size: cover
+	background-position: center center
+	background-repeat: no-repeat
+	z-index: -1
+	display: flex
+	align-items: flex-end
+
+	&:before
+		content: ""
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		background: linear-gradient(to bottom, map-get($colors, primary), map-get($colors, textLight))
+		opacity: 0.2
+
+.content
+	position: relative
+	display: flex
+	gap: 1rem
+	flex-wrap: wrap
+	padding: 2rem 1rem
+	color: map-get($colors, textLight)
+	background-color: map-get($colors, primary)
+	border-radius: 2px
+	margin-bottom: -6rem
+
+.header
+	line-height: 2rem
+	margin: 0
+
+.icon
+	font-size: 3rem

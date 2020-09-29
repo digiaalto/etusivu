@@ -1,0 +1,33 @@
+@import "_partials.sass"
+
+*
+	box-sizing: border-box
+
+html,
+body 
+	color: map-get($colors, "textDark")
+	padding: 0
+	margin: 0
+
+html
+	scroll-behavior: smooth
+
+a
+	color: map-get($colors, link)
+	text-decoration: none !important
+	&:visited, &:active
+		color: map-get($colors, link)
+	&:hover
+		color: map-get($colors, linkAlt)
+
+p
+	max-width: 600px
+
+img
+	display: block
+	margin: 0
+	padding: 0
+
+
+.bold
+	font-weight: 900

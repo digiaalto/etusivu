@@ -1,0 +1,30 @@
+@import "_partials.sass"
+
+.section
+	margin: map-get($spaces, mobileContent)
+
+.content
+	background-color: #f7f7f7
+	padding: 1rem 1.5rem
+	border-radius: 1rem
+	display: inline-block
+
+	.quoteMark:last-of-type
+		margin-left: auto
+
+.quote
+	margin-bottom: 0
+
+.source
+	display: block
+	margin-left: auto
+	text-align: right
+	font-style: italic
+	margin-top: 1rem
+	color: map-get($colors, textDark) !important
+
+.quoteMark
+	display: block
+	font-size: 3rem
+	color: map-get($colors, textDark)
+

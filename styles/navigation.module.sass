@@ -1,0 +1,32 @@
+@import "_partials"
+
+.header
+	position: fixed
+	right: 0
+	bottom: 0
+	z-index: 100
+
+.burgerButton
+	display: flex
+	justify-content: center
+	align-items: center
+	border-radius: 9999px
+	border: none
+	background-color: map-get($colors, primary)
+	width: 4rem
+	height: 4rem
+	margin: 1rem
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.33)
+	cursor: pointer
+
+	&:focus
+		outline: none
+		opacity: 0.80
+
+.burgerIcon
+	color: #ffffff
+	font-size: 2rem
+
+
+.noBoxShadow
+	box-shadow: none
