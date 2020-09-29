@@ -6,12 +6,12 @@
     "dev": "next dev",
     "start": "next start",
     "build": "next build",
-    "export": "next export",
-    "deploy": "npm run build && npm run export"
+    "postbuild": "next-on-netlify"
   },
   "dependencies": {
     "disable-scroll": "^0.5.1",
     "next": "9.5.3",
+    "next-on-netlify": "^2.4.0",
     "prop-types": "^15.7.2",
     "react": "16.13.1",
     "react-device-detect": "^1.13.1",
