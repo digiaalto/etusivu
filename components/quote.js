@@ -1,28 +1,31 @@
 import styles from "../styles/quote.module.sass"
 import { MdFormatQuote } from "react-icons/md"
 
-const sourceUrl = "https://www.youtube.com/watch?v=mLjxXPHuIJo"
+const sourceUrl = "https://youtu.be/mLjxXPHuIJo?t=76"
 
 const Quote = () => {
   return (
     <section className={styles.section}>
-      <div className={styles.content}>
-        <MdFormatQuote className={styles.quoteMark} />
-        <p className={styles.quote}>
-          The speed that it takes for a page to load is revealed to be the most
-          important factor in a user's mobile experience. It's more important
-          than how easy it is to find what they want and it's more important
-          than the simplicity of using the site.
+      <div className={styles.flexWrapper}>
+        <div className={styles.container}>
+          <MdFormatQuote className={styles.quoteMark} />
+          <p className={styles.quoteText}>
+            Sivun latausnopeuden osoitetaan olevan tärkein tekijä käyttäjän
+            mobiilikokemuksessa. Se on tärkeämpää kuin kuinka helppoa on löytää
+            mitä etsii, se on tärkeämpää kuin sivuston käytön yksinkertaisuus ja
+            mielenkiintoisesti, se on kolme kertaa tärkeämpi kuin miltä sivusto
+            näyttää.
+          </p>
           <a
-            className={styles.source}
             href={sourceUrl}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer noopener"
+            className={styles.source}
           >
-            ―Google I/O
+            ―Google I/O 2019
           </a>
-        </p>
-        <MdFormatQuote className={styles.quoteMark} />
+          <MdFormatQuote className={styles.quoteMark} />
+        </div>
       </div>
     </section>
   )

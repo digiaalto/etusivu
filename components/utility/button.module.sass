@@ -3,7 +3,7 @@
 .button
 	display: block
 	border-radius: 9999px
-	padding: 0.7rem
+	padding: 0.5rem 1rem
 	text-transform: uppercase
 	letter-spacing: 0.075rem
 	font-weight: 600
@@ -12,12 +12,11 @@
 	border: 3px solid map-get($colors, secondary)
 	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5)
 	transition: all 0.2s ease
+	min-width: 6rem
+	text-align: center
 
 	&:hover 
 		box-shadow: none
-
-	@media (min-width: map-get($breakpoints, tablet))
-		padding: 1rem 2rem
 
 .secondary
 	color: map-get($colors, textLight) !important

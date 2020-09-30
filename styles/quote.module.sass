@@ -1,30 +1,39 @@
 @import "_partials.sass"
 
-.section
-	margin: map-get($spaces, mobileContent)
+.flexWrapper
+	display: flex
+	justify-content: center
+	background-color: map-get($colors, secondary)
 
-.content
-	background-color: #f7f7f7
-	padding: 1rem 1.5rem
-	border-radius: 1rem
-	display: inline-block
-
-	.quoteMark:last-of-type
-		margin-left: auto
-
-.quote
-	margin-bottom: 0
-
-.source
-	display: block
-	margin-left: auto
-	text-align: right
-	font-style: italic
-	margin-top: 1rem
-	color: map-get($colors, textDark) !important
-
-.quoteMark
-	display: block
-	font-size: 3rem
+.container
+	display: inline-flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	padding: map-get($padding, mobile)
 	color: map-get($colors, textDark)
 
+.quoteMark
+	font-size: 3rem
+	align-self: flex-start
+
+	&:last-of-type
+		align-self: flex-end
+
+.quoteText
+	margin: 0
+
+.source
+	align-self: flex-end
+	color: map-get($colors, textDark) !important
+	font-weight: 900
+	letter-spacing: 0.025rem
+
+	&:hover
+		opacity: 0.66
+
+@media (min-width: map-get($bp, laptop))
+	.container
+		background-color: map-get($colors, secondary)
+		color: map-get($colors, textDark)
+		padding: 2rem

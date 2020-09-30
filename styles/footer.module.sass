@@ -1,0 +1,23 @@
+@import "_partials"
+
+.footer
+	background-color: #fafafa
+	border-top: 1px solid #ccc
+	padding: map-get($padding, mobile)
+
+.content
+	padding: 4rem 0
+
+.title
+	margin-bottom: 0
+
+.copyrightContainer
+	margin-bottom: 1rem
+
+.contactHeader
+	margin-bottom: 0
+
+
+@media (min-width: map-get($bp, laptop))
+	.footer
+		padding: map-get($padding, laptop)

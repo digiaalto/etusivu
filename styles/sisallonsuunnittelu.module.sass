@@ -1,7 +1,12 @@
 @import "_partials.sass"
 
-.content
-	margin: map-get($spaces, mobileContent)
+.section
+	padding: map-get($padding, mobile)
 
 .headerIcon
 	font-size: 2rem
+	vertical-align: middle
+
+@media (min-width: map-get($bp, laptop))
+	.section
+		padding: map-get($padding, laptop)

@@ -1,47 +1,50 @@
 import styles from "../styles/salespitch.module.sass"
+import { GiBullseye } from "react-icons/gi"
 
 const SalesPitch = () => {
   return (
-    <section className={styles.section} id="investoi-uuteen">
+    <section className={styles.section} id="paremmat-verkkosivut">
       <div className={styles.content}>
-        <h2 className={styles.header}>Investoi Uuteen</h2>
-        <img
-          src="lighthouse-scores.png"
-          alt="Impressive lighthouse scores"
-          className={styles.scores}
-        />
+        <span className="miniheader">Kilpailu on kovaa</span>
+        <h2 className={`${styles.header} headerAfter`}>
+          Tiesitkö että Google auditoi nettisivuja?
+        </h2>
         <p>
-          Kilpailu on kovaa verkkosivujen näkyvyydessä, mutta koskemattomia
-          mahdollisuuksia erottua joukosta on vielä olemassa.
+          Perinteisesti vain hakusanat ja sisältö vaikuttivat
+          hakukoneoptimointiin, mutta internet on kehittynyt villin lännen
+          ajoilta jolloin mitään parhaita käytäntöjä ei noudatettu, eikä
+          web-standardeja ollut olemassa. Nykyään asiat ovat toisin.
         </p>
         <p>
-          Digiaalto panostaa verkkosivujen teknisteen toteutukseen joka
-          noudattaa Googlen vaatimuksia ja suosituksia tarkemmin kuin muut,
-          jolloin sinä verkkosivun omistajana hyödyt etuasemasta Googlen
-          algoritmeissä.
+          Kehittyneellä metodologialla rakennettu verkkosivu vaikuttaa
+          positiivisesti hakukoneoptimointiin, käyttäjäkokemukseen, sivusi
+          saatavuuteen ja esteettömyyteen.
         </p>
         <p>
-          Selvitä paljonko omissa, tai kilpailijoittesi nettisivuissa on
-          parantamisen varaa syöttämällä nettiosoite{" "}
+          Digiaalto panostaa säästämättömästi verkkosivujen backendiin, eli
+          tekniseen toteutukseen noudattamalla Googlen vaatimuksia ja
+          suosituksia huolella, jolloin sinä verkkosivun omistajana hyödyt.
+        </p>
+        <p>
+          Voit selvittää paljonko omissa verkkosivuissasi on parantamisen varaa
+          syöttämällä nettiosoite{" "}
           <a
             href="https://web.dev/measure/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            tähän testiin.
-          </a>
+            tähän laatutestiin.
+          </a>{" "}
+          Testissä menee vain muutama sekunti.
         </p>
-        <p>
-          Nettisivut jotka onnistuvat teknillisesti eivät ole pelkästään
-          hakukoneiden roboottien suosiossa, myös käyttäjät arvostavat salaman
-          nopeaa latausaikaa, esteettömyyttä ja todistettua laatua.
-        </p>
-      </div>
-      <div className={styles.highlight}>
-        <h2>
-          Digiaalto on erikoistunut auttamaan verkkosivusi laatumittauksen
-          arvojen parantamisessa.
-        </h2>
+        <div className={styles.highlight}>
+          <div>
+            <GiBullseye className={styles.highlightIcon} />
+          </div>
+          <h3 className={styles.highlightHeader}>
+            Digiaalto tähtää täysiin pisteisiin.
+          </h3>
+        </div>
       </div>
     </section>
   )

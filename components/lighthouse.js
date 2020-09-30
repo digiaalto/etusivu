@@ -3,16 +3,9 @@ import styles from "../styles/lighthouse.module.sass"
 const Lighthouse = () => {
   return (
     <section className={styles.section} id="google-lighthouse">
-      <div className={styles.imageWrapper}>
-        <img
-          src="google-lighthouse.svg"
-          alt="Google lighthouse image"
-          className={styles.image}
-        />
-      </div>
       <div className={styles.content}>
         <div className={styles.textWrapper}>
-          <h2>Mikä on Google Lighthouse?</h2>
+          <h2 className="headerAfter">Mikä on Google Lighthouse?</h2>
           <p>
             Lighthouse on avoimen lähdekoodin automaattinen työkalu
             verkkosivujen laadun mittaamiseen. Google kehitti Lighthousen jotta
@@ -20,8 +13,8 @@ const Lighthouse = () => {
           </p>
           <p>
             Tämä laatumittari auditoi sivun kuin sivun sadoilla testeillä
-            muutamassa sekunnissa ja generoi raportin jossa ilmenee miten sivun
-            toteutuksessa on parantamisen varaa.
+            muutamassa sekunnissa ja generoi raportin jossa ilmenee missä sivu
+            onnistuu ja missä epäonnistuu.
           </p>
           <p className="bold">Lighthouse on nettisivujen tulikoe.</p>
         </div>

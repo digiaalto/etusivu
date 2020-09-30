@@ -3,30 +3,25 @@
 .header
 	position: fixed
 	right: 0
-	bottom: 0
+	top: 0
 	z-index: 100
 
 .burgerButton
 	display: flex
 	justify-content: center
 	align-items: center
-	border-radius: 9999px
+	width: 3rem
+	height: 3rem
 	border: none
-	background-color: map-get($colors, primary)
-	width: 4rem
-	height: 4rem
-	margin: 1rem
-	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.33)
+	background-color: map-get($colors, secondary)
 	cursor: pointer
+	border-bottom-left-radius: 4px
+	overflow: hidden
 
 	&:focus
 		outline: none
-		opacity: 0.80
+		opacity: 0.5
 
 .burgerIcon
-	color: #ffffff
+	color: map-get($colors, textDark)
 	font-size: 2rem
-
-
-.noBoxShadow
-	box-shadow: none

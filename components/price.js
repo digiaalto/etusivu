@@ -3,17 +3,19 @@ import { RiMoneyEuroCircleFill } from "react-icons/ri"
 
 const Price = () => {
   return (
-    <section>
+    <section className={styles.section}>
       <div className={styles.content}>
         <div className={styles.header}>
           <RiMoneyEuroCircleFill />
-          <span>3,500</span>
+          <span>~3,500</span>
         </div>
         <p>
-          Digiaalto myy taattua laatua suhteellisen pienellä investoinnilla
-          verrattuna muihin web-suunnittelioihin ja web-kehittäjiin. Työn
-          hinnoitteluun vaikuttaa projektikohtaiset vaatimukset ja
-          lähdemateriaalin saatavuus.
+          Hyvin toteutettu verkkosivu on fiksu investointi joka hengittää eloa
+          yrityksesi tuottavuuden mittariin.
+        </p>
+        <p className={styles.note}>
+          Työn hinnoitteluun vaikuttaa projektikohtaiset vaatimukset,
+          lähdemateriaali ja muut hankinnat ja palvelut.
         </p>
       </div>
     </section>

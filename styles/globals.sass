@@ -8,17 +8,41 @@ body
 	color: map-get($colors, "textDark")
 	padding: 0
 	margin: 0
-
-html
 	scroll-behavior: smooth
 
 a
 	color: map-get($colors, link)
 	text-decoration: none !important
+
 	&:visited, &:active
 		color: map-get($colors, link)
 	&:hover
 		color: map-get($colors, linkAlt)
+
+.headerBefore
+	&::before
+		display: block
+		content: " "
+		height: 1rem
+		width: 4rem
+		background-color: map-get($colors, textDark)
+		margin-bottom: 0.5rem
+
+.headerAfter
+	&::after
+		display: block
+		content: " "
+		height: 0.5rem
+		width: 4rem
+		background-color: map-get($colors, secondary)
+		margin-top: 1rem
+		margin-bottom: 0.5rem
+
+.miniheader
+	color: map-get($colors, textGray)
+	letter-spacing: 0.03rem
+	text-transform: uppercase
+	font-size: 0.9rem
 
 p
 	max-width: 600px

@@ -33,12 +33,7 @@ export default Navigation
 
 const BurgerMenu = ({ sidebar, toggleSidebar }) => {
 	return (
-		<button
-			onClick={toggleSidebar}
-			className={`${styles.burgerButton} ${
-				sidebar ? styles.noBoxShadow : null
-			}`}
-		>
+		<button onClick={toggleSidebar} className={styles.burgerButton}>
 			{sidebar ? (
 				<VscChromeClose className={styles.burgerIcon} />
 			) : (

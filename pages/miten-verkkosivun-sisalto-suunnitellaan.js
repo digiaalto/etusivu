@@ -3,6 +3,7 @@ import Jumbotron from "../components/jumbotron"
 import styles from "../styles/sisallonsuunnittelu.module.sass"
 import { BiBookContent } from "react-icons/bi"
 import { FaQuestionCircle } from "react-icons/fa"
+
 const Sisallonsuunnittelu = () => {
 	return (
 		<Layout title="Miten verkkosivun sisältö suunnitellaan">
@@ -10,22 +11,20 @@ const Sisallonsuunnittelu = () => {
 				header="Miten verkkosivun sisältö suunnitellaan"
 				icon={<FaQuestionCircle className={styles.headerIcon} />}
 			/>
-			<div className={styles.content}>
-				<div className={styles.information}>
-					<h1>
-						Sisältö on kieltämättä verkkosivun tärkein osa johon kannattaa
-						panostaa.
-					</h1>
-					<h3>
-						Suunnittelu lähtee käyntiin yrityksen toiminnan tutkinnasta. Siihen
-						kuuluu verkkosivun tavoitteiden kartoitus, asiakkaiden hahmotus ja
-						oman brändisi tuntemus.
-					</h3>
+			<section className={styles.section}>
+				<div className={styles.content}>
+					<div className={styles.information}>
+						<h3>
+							Suunnittelu lähtee käyntiin yrityksen toiminnan tutkinnasta.
+							Siihen kuuluu verkkosivun tavoitteiden kartoitus, asiakkaiden
+							hahmotus ja oman brändisi tuntemus.
+						</h3>
+					</div>
+					<Part dataObject={tavoitteet} />
+					<Part dataObject={asiakkaat} />
+					<Part dataObject={brandi} />
 				</div>
-				<Part dataObject={tavoitteet} />
-				<Part dataObject={asiakkaat} />
-				<Part dataObject={brandi} />
-			</div>
+			</section>
 		</Layout>
 	)
 }

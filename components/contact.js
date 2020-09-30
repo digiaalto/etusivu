@@ -20,7 +20,7 @@ const Contact = () => {
 	}
 
 	return (
-		<section className={styles.section}>
+		<section className={styles.section} id="yhteystietolomake">
 			<div className={styles.contet}>
 				<h2>Yhteyslomake</h2>
 				<p>

@@ -8,7 +8,7 @@ const Sidebar = ({ visible, toggleSidebar }) => {
 
 	function activateLink(href) {
 		toggleSidebar(null)
-		router.push(href)
+		router.push(href).then(() => window.scrollTo(0, 0))
 	}
 
 	return (

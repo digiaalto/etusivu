@@ -1,2 +1,8 @@
+@import "_partials"
+
 .section
-  margin: 5vw
+	padding: map-get($padding, mobile)
+
+@media (min-width: map-get($bp, laptop))
+	.section
+		padding: map-get($padding, laptop)

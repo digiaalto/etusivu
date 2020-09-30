@@ -2,19 +2,32 @@
 
 .section
 	position: relative
+	padding: map-get($padding, mobile)
 
 .content
-	margin: map-get($spaces, mobileContent)
 	display: flex
 	flex-direction: column
 	align-items: flex-start
 
 .header
-	margin-bottom: 0
-
-.scores
-	margin: 1rem 0
+	margin-top: 0.1rem
 
 .highlight
-	margin: map-get($spaces, mobileContent)
+	display: flex
+	flex-direction: row
+	align-items: center
+	justify-content: center
+	gap: 0.5rem
+	margin-top: 1rem
+
+.highlightIcon
+	display: inline-block !important
+	font-size: 4rem
+
+.highlightHeader
+	margin: 0
 	font-style: italic
+
+@media (min-width: map-get($bp, laptop))
+	.section
+		padding: map-get($padding, laptop)

@@ -3,21 +3,23 @@ import Link from "next/link"
 import Particles from "react-tsparticles"
 import particleOptions from "../utils/particles"
 import Button from "./utility/button"
+import { FaArrowAltCircleDown } from "react-icons/fa"
 
 const Hero = () => {
   return (
     <section className={styles.section}>
       <Particles className={styles.particles} options={particleOptions} />
       <div className={styles.content}>
-        <h1 className={styles.header}>Haluatko lisää näkyvyyttä verkossa?</h1>
-        <p>
-          Digiaalto kehittää nettisivuja jotka saavat kiitettävät pisteet
+        <h1 className={styles.header}>Haluatko löytyä verkosta?</h1>
+        <h2 className={styles.subheader}>
+          Digiaalto on erikoistunut rakentamaan verkkosivuja jotka menestyvät
           Googlen laatumittauksessa.
-        </p>
-        <div className={styles.actions}>
-          <Button text="Miten?" href="#investoi-uuteen" />
-          <Button text="Lue lisää" href="#google-lighthouse" secondary />
-        </div>
+        </h2>
+        <Link href="#paremmat-verkkosivut">
+          <a>
+            <FaArrowAltCircleDown className={styles.arrow} />
+          </a>
+        </Link>
       </div>
     </section>
   )

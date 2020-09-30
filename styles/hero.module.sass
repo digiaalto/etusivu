@@ -3,7 +3,10 @@
 .section
 	display: flex
 	align-items: center
+	justify-content: center
 	min-height: 100vh
+	position: relative
+	padding: map-get($padding, mobile)
 
 .particles
 	position: absolute
@@ -16,19 +19,36 @@
 	z-index: -1
 
 .content
-	margin: map-get($spaces, mobileContent)
 	color: map-get($colors, textLight)
-
-.actions
-	display: flex
-	gap: 0.75rem
-	flex-grow: 0
-	align-items: flex-start
-	flex-wrap: wrap
+	text-align: center
 
 .header
 	text-transform: uppercase
 	margin-top: 0
+	border-bottom: none
 
 .subheader
-	margin-bottom: 1.25rem
+	margin-bottom: 2rem
+	font-size: 1.2rem
+	font-weight: 100
+	border-bottom: none
+
+.arrow
+	font-size: 3rem
+	color: map-get($colors, secondary)
+	transition: color 0.15s ease
+
+	&:hover
+		color: white
+
+@media (min-width: map-get($bp, tablet))
+	.header
+		font-size: 4rem
+
+@media (min-width: map-get($bp, laptop))
+	.content
+		max-width: 800px
+
+@media (min-width: map-get($bp, desktop))
+		.header
+			font-size: 5rem

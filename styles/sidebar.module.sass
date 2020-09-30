@@ -16,10 +16,9 @@
 	max-width: 550px
 
 .content
-	margin: map-get($spaces, mobileContent)
+	padding: map-get($padding, mobile)
 	margin-top: 3rem
 	padding: .5rem
-	padding: 1rem
 	border-radius: 1rem
 	text-align: right
 
@@ -42,3 +41,8 @@
 
 .navLink
 	color: map-get($colors, textLight) !important
+
+
+@media (min-width: map-get($bp, laptop))
+	.content
+		padding: map-get($padding, laptop)
