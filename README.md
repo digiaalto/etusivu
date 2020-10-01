@@ -2,8 +2,10 @@
 
 ## Design
 
-- [ ] navigaatio
-- [ ] desktop
+- [ ] navigaatio menu isoille näytöille
+- [ ] "tiesitkö että..." taustakuva
+- [ ] toteutus osio re-design
+- [ ] buunaus
 
 ## Backend ja palvelut
 

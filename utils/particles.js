@@ -1,25 +1,18 @@
 export default {
 	background: {
-		color: {
-			value: "#0d47a1",
-		},
+		color: { value: "#fff" },
 		image: "",
-		position: "50% 50%",
-		repeat: "no-repeat",
-		size: "cover",
+		position: "",
+		repeat: "",
+		size: "",
 		opacity: 1,
 	},
 	backgroundMask: {
-		cover: {
-			color: {
-				value: "#fff",
-			},
-			opacity: 1,
-		},
+		cover: { color: { value: "#fff" }, opacity: 1 },
 		enable: false,
 	},
 	detectRetina: true,
-	fpsLimit: 60,
+	fpsLimit: 30,
 	infection: {
 		cure: false,
 		delay: 0,
@@ -30,171 +23,74 @@ export default {
 	interactivity: {
 		detectsOn: "canvas",
 		events: {
-			onClick: {
-				enable: true,
-				mode: "push",
-			},
-			onDiv: {
-				ids: [],
-				enable: false,
-				mode: [],
-				type: "circle",
-			},
+			onClick: { enable: false, mode: "push" },
+			onDiv: { ids: [], enable: false, mode: [], type: "circle" },
 			onHover: {
 				enable: true,
-				mode: "grab",
-				parallax: {
-					enable: true,
-					force: 60,
-					smooth: 10,
-				},
+				mode: "repulse",
+				parallax: { enable: false, force: 60, smooth: 10 },
 			},
 			resize: true,
 		},
 		modes: {
-			attract: {
-				distance: 200,
-				duration: 0.4,
-				speed: 1,
-			},
-			bubble: {
-				distance: 400,
-				duration: 2,
-				opacity: 0.8,
-				size: 40,
-			},
-			connect: {
-				distance: 80,
-				links: {
-					opacity: 0.5,
-				},
-				radius: 60,
-			},
-			grab: {
-				distance: 400,
-				links: {
-					opacity: 1,
-				},
-			},
-			push: {
-				quantity: 4,
-			},
-			remove: {
-				quantity: 2,
-			},
-			repulse: {
-				distance: 200,
-				duration: 0.4,
-				speed: 1,
-			},
-			slow: {
-				factor: 3,
-				radius: 200,
-			},
-			trail: {
-				delay: 1,
-				quantity: 1,
-			},
+			attract: { distance: 200, duration: 0.4, speed: 1 },
+			bubble: { distance: 400, duration: 2, opacity: 0.8, size: 40 },
+			connect: { distance: 80, links: { opacity: 0.5 }, radius: 60 },
+			grab: { distance: 400, links: { opacity: 1 } },
+			push: { quantity: 4 },
+			remove: { quantity: 2 },
+			repulse: { distance: 200, duration: 0.4, speed: 1 },
+			slow: { factor: 3, radius: 200 },
+			trail: { delay: 1, quantity: 1 },
 		},
 	},
 	particles: {
-		collisions: {
-			enable: false,
-			mode: "bounce",
-		},
+		collisions: { enable: false, mode: "bounce" },
 		color: {
-			value: "#ffffff",
-			animation: {
-				enable: false,
-				speed: 1,
-				sync: true,
-			},
+			value: "#fff",
+			animation: { enable: false, speed: 1, sync: false },
 		},
 		links: {
 			blink: false,
-			color: {
-				value: "#ffffff",
-			},
+			color: { value: "#000" },
 			consent: false,
 			distance: 150,
 			enable: true,
-			opacity: 0.4,
-			shadow: {
-				blur: 5,
-				color: {
-					value: "#00ff00",
-				},
-				enable: false,
-			},
-			triangles: {
-				enable: false,
-			},
+			opacity: 1,
+			shadow: { blur: 2, color: { value: "black" }, enable: false },
+			triangles: { enable: false },
 			width: 1,
 			warp: false,
 		},
 		move: {
 			angle: 90,
-			attract: {
-				enable: false,
-				rotate: {
-					x: 600,
-					y: 1200,
-				},
-			},
+			attract: { enable: false, rotate: { x: 600, y: 1200 } },
 			direction: "none",
 			enable: true,
 			noise: {
-				delay: {
-					random: {
-						enable: false,
-						minimumValue: 0,
-					},
-					value: 0,
-				},
+				delay: { random: { enable: false, minimumValue: 0 }, value: 0 },
 				enable: false,
 			},
 			outMode: "out",
 			random: false,
 			speed: 2,
 			straight: false,
-			trail: {
-				enable: false,
-				length: 10,
-				fillColor: {
-					value: "#000000",
-				},
-			},
+			trail: { enable: false, length: 10, fillColor: { value: "#000000" } },
 			vibrate: false,
 			warp: false,
 		},
 		number: {
-			density: {
-				enable: true,
-				area: 800,
-				factor: 1000,
-			},
+			density: { enable: true, area: 800, factor: 1000 },
 			limit: 0,
 			value: 100,
 		},
 		opacity: {
-			animation: {
-				enable: true,
-				minimumValue: 0.1,
-				speed: 3,
-				sync: false,
-			},
-			random: {
-				enable: true,
-				minimumValue: 1,
-			},
-			value: 0.5,
+			animation: { enable: true, minimumValue: 0.1, speed: 1, sync: false },
+			random: { enable: false, minimumValue: 1 },
+			value: 1,
 		},
 		rotate: {
-			animation: {
-				enable: false,
-				speed: 0,
-				sync: false,
-			},
+			animation: { enable: false, speed: 0, sync: false },
 			direction: "clockwise",
 			path: false,
 			random: false,
@@ -202,23 +98,28 @@ export default {
 		},
 		shadow: {
 			blur: 0,
-			color: {
-				value: "#000000",
-			},
+			color: { value: "#000000" },
 			enable: false,
-			offset: {
-				x: 0,
-				y: 0,
-			},
+			offset: { x: 0, y: 0 },
 		},
 		shape: {
 			options: {
-				polygon: {
-					nb_sides: 5,
+				character: {
+					value: ["t", "s", "P", "a", "r", "t", "i", "c", "l", "e", "s"],
+					font: "Verdana",
+					style: "",
+					weight: "400",
+					fill: true,
 				},
-				star: {
-					nb_sides: 5,
+				char: {
+					value: ["t", "s", "P", "a", "r", "t", "i", "c", "l", "e", "s"],
+					font: "Verdana",
+					style: "",
+					weight: "400",
+					fill: true,
 				},
+				polygon: { nb_sides: 1 },
+				star: { nb_sides: 5 },
 				image: {
 					src: "https://cdn.matteobruni.it/images/particles/github.svg",
 					width: 100,
@@ -230,45 +131,30 @@ export default {
 					height: 100,
 				},
 			},
-			type: "circle",
+			type: "none",
 		},
 		size: {
 			animation: {
 				destroy: "none",
-				enable: true,
-				minimumValue: 0.1,
-				speed: 20,
+				enable: false,
+				minimumValue: 10,
+				speed: 10,
 				startValue: "max",
 				sync: false,
 			},
-			random: {
-				enable: true,
-				minimumValue: 1,
-			},
-			value: 10,
+			random: { enable: false, minimumValue: 1 },
+			value: 16,
 		},
 		stroke: {
-			width: 0,
+			width: 1,
 			color: {
-				value: "#000000",
-				animation: {
-					enable: false,
-					speed: 1,
-					sync: true,
-				},
+				value: "#ffffff",
+				animation: { enable: false, speed: 1, sync: true },
 			},
 		},
 		twinkle: {
-			lines: {
-				enable: false,
-				frequency: 0.05,
-				opacity: 1,
-			},
-			particles: {
-				enable: false,
-				frequency: 0.05,
-				opacity: 1,
-			},
+			lines: { enable: false, frequency: 0.05, opacity: 1 },
+			particles: { enable: false, frequency: 0.05, opacity: 1 },
 		},
 	},
 	pauseOnBlur: true,

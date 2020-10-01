@@ -16,11 +16,12 @@
 	left: 0
 	width: 100%
 	height: 100%
-	z-index: -1
 
 .content
-	color: map-get($colors, textLight)
+	color: #000
 	text-align: center
+	z-index: 1
+	pointer-events: none
 
 .header
 	text-transform: uppercase
@@ -35,11 +36,13 @@
 
 .arrow
 	font-size: 3rem
-	color: map-get($colors, secondary)
-	transition: color 0.15s ease
+	color: map-get($colors, primary)
+	transition: all 0.3s ease
+	pointer-events: auto
 
 	&:hover
-		color: white
+		color: map-get($colors, secondary)
+		transform: scale(1.2)
 
 @media (min-width: map-get($bp, tablet))
 	.header

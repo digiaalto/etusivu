@@ -1,32 +1,29 @@
 @import "_partials.sass"
 
+$lg: rgba(0, 0, 0, 0.5)
+
 .section
 	position: relative
 	padding: map-get($padding, mobile)
+	background: linear-gradient($lg, $lg), url("/ai-woman.jpg")
+	background-position: center right
+	background-size: cover
+	background-repeat: no-repeat
+	color: map-get($colors, textLight)
+	z-index: 0
 
 .content
 	display: flex
 	flex-direction: column
 	align-items: flex-start
+	z-index: 999 !important
+
+.miniheader
+	color: map-get($colors, textLight) !important
+	opacity: 0.8
 
 .header
 	margin-top: 0.1rem
-
-.highlight
-	display: flex
-	flex-direction: row
-	align-items: center
-	justify-content: center
-	gap: 0.5rem
-	margin-top: 1rem
-
-.highlightIcon
-	display: inline-block !important
-	font-size: 4rem
-
-.highlightHeader
-	margin: 0
-	font-style: italic
 
 @media (min-width: map-get($bp, laptop))
 	.section

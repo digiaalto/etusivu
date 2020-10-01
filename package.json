@@ -1,7 +1,11 @@
 {
-  "name": "etusivu",
+  "name": "digiaalto-etusivu",
   "version": "0.1.0",
   "private": true,
+  "description": "Digiaalto.fi - surffaa aallon harjalla",
+  "keywords": "digiaalto",
+  "license": "UNLICENSED",
+  "author": "Digiaalto.fi",
   "scripts": {
     "dev": "next dev",
     "start": "next start",

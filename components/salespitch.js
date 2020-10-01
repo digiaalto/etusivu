@@ -1,11 +1,13 @@
 import styles from "../styles/salespitch.module.sass"
-import { GiBullseye } from "react-icons/gi"
+import { BiTestTube } from "react-icons/bi"
 
 const SalesPitch = () => {
   return (
     <section className={styles.section} id="paremmat-verkkosivut">
       <div className={styles.content}>
-        <span className="miniheader">Kilpailu on kovaa</span>
+        <span className={`miniheader ${styles.miniheader}`}>
+          Kilpailu on kovaa
+        </span>
         <h2 className={`${styles.header} headerAfter`}>
           Tiesitkö että Google auditoi nettisivuja?
         </h2>
@@ -23,28 +25,8 @@ const SalesPitch = () => {
         <p>
           Digiaalto panostaa säästämättömästi verkkosivujen backendiin, eli
           tekniseen toteutukseen noudattamalla Googlen vaatimuksia ja
-          suosituksia huolella, jolloin sinä verkkosivun omistajana hyödyt.
+          suosituksia huolella, jolloin sinä hyödyt.
         </p>
-        <p>
-          Voit selvittää paljonko omissa verkkosivuissasi on parantamisen varaa
-          syöttämällä nettiosoite{" "}
-          <a
-            href="https://web.dev/measure/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            tähän laatutestiin.
-          </a>{" "}
-          Testissä menee vain muutama sekunti.
-        </p>
-        <div className={styles.highlight}>
-          <div>
-            <GiBullseye className={styles.highlightIcon} />
-          </div>
-          <h3 className={styles.highlightHeader}>
-            Digiaalto tähtää täysiin pisteisiin.
-          </h3>
-        </div>
       </div>
     </section>
   )
