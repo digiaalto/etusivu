@@ -1,5 +1,6 @@
 import styles from "../styles/salespitch.module.sass"
 import { BiTestTube } from "react-icons/bi"
+import Button from "./utility/button"
 
 const SalesPitch = () => {
   return (
@@ -27,6 +28,13 @@ const SalesPitch = () => {
           tekniseen toteutukseen noudattamalla Googlen vaatimuksia ja
           suosituksia huolella, jolloin sinä hyödyt.
         </p>
+        <div className={styles.buttonWrapper}>
+          <Button
+            text="Testaa Verkkosivusi"
+            href="https://web.dev/measure/"
+            outside
+          />
+        </div>
       </div>
     </section>
   )

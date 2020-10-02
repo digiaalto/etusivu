@@ -1,5 +1,4 @@
 import styles from "../styles/lighthouse.module.sass"
-import Button from "./utility/button"
 
 const Lighthouse = () => {
   return (
@@ -21,11 +20,6 @@ const Lighthouse = () => {
             onnistuu ja missä epäonnistuu.
           </p>
           <p className="bold">Lighthouse on nettisivujen tulikoe.</p>
-          <Button
-            text="Testaa verkkosivuja"
-            href="https://web.dev/measure/"
-            outside
-          />
         </div>
       </div>
     </section>

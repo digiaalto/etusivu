@@ -1,20 +1,22 @@
 @import "_partials.sass"
 
-.section
-	margin: map-get($padding, mobile)
+.content
+	background-color: #fafafd
+	padding: map-get($padding, mobile)
 
 .header
 	display: flex
 	font-size: 2rem
 	font-weight: 900
 	align-items: center
+	margin-bottom: 1rem
 
 	svg
 		margin-right: 0.5rem
 
 .note
 	color: map-get($colors, textGray)
-	font-size: 0.9rem
+	font-size: 0.95rem
 
 @media (min-width: map-get($bp, laptop))
 	.section

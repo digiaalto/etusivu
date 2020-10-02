@@ -3,6 +3,11 @@
 .section
 	margin: map-get($padding, mobile)
 
+.part
+	margin-top: 2.5rem
+	&:first-of-type
+		margin-top: 0
+
 @media (min-width: map-get($bp, laptop))
 	.section
 		margin: map-get($padding, laptop)

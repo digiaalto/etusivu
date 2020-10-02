@@ -3,7 +3,6 @@
 .flexWrapper
 	display: flex
 	justify-content: center
-	background-color: map-get($colors, secondary)
 
 .container
 	display: inline-flex
@@ -34,6 +33,5 @@
 
 @media (min-width: map-get($bp, laptop))
 	.container
-		background-color: map-get($colors, secondary)
 		color: map-get($colors, textDark)
-		padding: 2rem
+		padding: map-get($padding, laptop)
