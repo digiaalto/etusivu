@@ -5,12 +5,9 @@ $lg: rgba(0, 0, 0, 0.5)
 .section
 	position: relative
 	padding: map-get($padding, mobile)
-	background: linear-gradient($lg, $lg), url("/ai-woman.jpg")
-	background-position: center right
-	background-size: cover
-	background-repeat: no-repeat
-	color: map-get($colors, textLight)
+	color: map-get($colors, textDark)
 	z-index: 0
+	background-color: #fafafd
 
 .content
 	display: flex
@@ -19,8 +16,7 @@ $lg: rgba(0, 0, 0, 0.5)
 	z-index: 999 !important
 
 .miniheader
-	color: map-get($colors, textLight) !important
-	opacity: 0.8
+	color: map-get($colors, textGray) !important
 
 .header
 	margin-top: 0.1rem

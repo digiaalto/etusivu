@@ -10,7 +10,7 @@ const Hero = () => {
     <section className={styles.section}>
       <Particles className={styles.particles} options={particleOptions} />
       <div className={styles.content}>
-        <h1 className={styles.header}>Haluatko löytyä verkosta?</h1>
+        <h1 className={styles.header}>Haluatko erottua verkosta?</h1>
         <h2 className={styles.subheader}>
           Digiaalto on erikoistunut rakentamaan verkkosivuja jotka menestyvät
           Googlen laatumittauksessa.
