@@ -21,56 +21,53 @@ const Contact = () => {
 
   return (
     <section className={styles.section} id="yhteystietolomake">
-      <div className={styles.contet}>
-        <h3>
-          Kuvaile projektiasi täyttämällä lomake tai lähetä tervehdys{" "}
-          <a href="mailto:hei@digiaalto.fi">hei@digiaalto.fi.</a>
-        </h3>
-      </div>
-      <div className={styles.form}>
-        <form onSubmit={handleSubmit}>
-          <Input
-            label="Etu- ja sukunimi"
-            name="nimi"
-            value={form.nimi}
-            handleChange={handleChange}
-            isRequired
-          />
-          <Input
-            label="Yritys ja toimiala"
-            name="yritys"
-            value={form.yritys}
-            handleChange={handleChange}
-          />
-          <Input
-            label="Sähköposti"
-            name="sahkoposti"
-            type="email"
-            value={form.sahkoposti}
-            handleChange={handleChange}
-            isRequired
-          />
-          <Input
-            label="Puhelinnumero"
-            type="tel"
-            value={form.puhelinnumero}
-            handleChange={handleChange}
-            isRequired
-          />
-          <label className={styles.label}>
-            <span>Projektin kuvaus *</span>
-            <textarea
-              value={form.viesti}
-              name="viesti"
-              placeholder="Kuvaile projektia lyhyesti omin sanoin"
-              rows="6"
-              onChange={handleChange}
-              className={styles.input}
-              required
+      <div className={styles.content}>
+        <span className={styles.header}>
+          Haluatko tietää enemmän Digiaallon verkkoratkaisusta?
+        </span>
+        <div className={styles.form}>
+          <form onSubmit={handleSubmit}>
+            <Input
+              label="Etunimi, Sukunimi"
+              name="nimi"
+              value={form.nimi}
+              handleChange={handleChange}
+              isRequired
             />
-          </label>
-          <input type="submit" value="Lähetä" className={styles.submit} />
-        </form>
+            <Input
+              label="Yritys, Toimiala"
+              name="yritys"
+              value={form.yritys}
+              handleChange={handleChange}
+            />
+            <Input
+              label="Sähköposti"
+              name="sahkoposti"
+              type="email"
+              value={form.sahkoposti}
+              handleChange={handleChange}
+              isRequired
+            />
+            <Input
+              label="Puhelinnumero"
+              type="tel"
+              value={form.puhelinnumero}
+              handleChange={handleChange}
+            />
+            <label className={styles.label}>
+              <span>Viesti</span>
+              <textarea
+                value={form.viesti}
+                name="viesti"
+                rows="6"
+                onChange={handleChange}
+                className={styles.input}
+                required
+              />
+            </label>
+            <input type="submit" value="Lähetä" className={styles.submit} />
+          </form>
+        </div>
       </div>
     </section>
   )

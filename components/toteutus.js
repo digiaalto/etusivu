@@ -50,7 +50,7 @@ export default Toteutus
 const Part = ({ header, paragraphs }) => {
   return (
     <div className={styles.part}>
-      <h3>{header}</h3>
+      <h3 className={styles.header}>{header}</h3>
       {paragraphs.map((paragraph, index) => (
         <p key={`${header}-${index}`}>{paragraph}</p>
       ))}

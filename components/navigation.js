@@ -18,11 +18,9 @@ const Navigation = () => {
 
   return (
     <Fragment>
-      <header className={styles.header}>
-        <nav className={styles.nav}>
-          <BurgerMenu sidebar={sidebar} toggleSidebar={toggleSidebar} />
-        </nav>
-      </header>
+      <nav className={styles.nav}>
+        <BurgerMenu sidebar={sidebar} toggleSidebar={toggleSidebar} />
+      </nav>
       <Sidebar visible={sidebar} toggleSidebar={toggleSidebar} />
       <Overlay visible={sidebar} toggleSidebar={toggleSidebar} />
     </Fragment>

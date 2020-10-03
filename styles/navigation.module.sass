@@ -1,18 +1,18 @@
 @import "_partials"
 
-.header
-	z-index: 100
-	position: fixed
-	width: 100%
-	background-color: #fff
-	border-bottom: 1px solid #ccc
-
 .nav
+	z-index: 999
 	display: flex
 	justify-content: flex-end
 	align-items: center
-	height: 4em
-	padding: 0 1rem
+	position: fixed
+	top: 0
+	width: 100%
+	height: map-get($size, navHieght)
+	padding: 0 0.5rem
+	border-bottom: 1px solid #ccc
+	background-color: #fff
+	overflow: hidden
 
 .burgerButton
 	display: flex

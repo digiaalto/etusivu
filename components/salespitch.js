@@ -30,7 +30,7 @@ const SalesPitch = () => {
         </p>
         <div className={styles.buttonWrapper}>
           <Button
-            text="Testaa Verkkosivusi"
+            text="Testauta Verkkosivusi"
             href="https://web.dev/measure/"
             outside
           />

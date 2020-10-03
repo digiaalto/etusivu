@@ -1,7 +1,6 @@
 import Layout from "../components/layout"
 import Hero from "../components/hero"
 import SalesPitch from "../components/salespitch"
-import Lighthouse from "../components/lighthouse"
 import Quote from "../components/quote"
 import Toteutus from "../components/toteutus"
 import Price from "../components/price"
@@ -14,7 +13,6 @@ const IndexPage = () => {
         <Hero />
         <SalesPitch />
         <Quote />
-        <Lighthouse />
         <Toteutus />
         <Price />
         <Contact />

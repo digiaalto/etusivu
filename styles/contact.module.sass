@@ -1,11 +1,30 @@
 @import "_partials.sass"
 
 .section
-	margin: map-get($padding, mobile)
+	background-image: url("../public/background.jpg")
+	background-position: center center
+	background-size: cover
+	background-repeat: no-repeat
+
+.content
+	padding: map-get($padding, mobile)
+	color: map-get($colors, textLight)
+	letter-spacing: 0.02rem
+
+.header
+	display: inline-block
+	margin-bottom: 1.5rem
+	font-size: 1.3rem
+	line-height: 1.5rem
+	font-weight: 600
+	letter-spacing: 0.05rem
+
+.subheader
+	color: rgba(255, 255, 255, 0.85)
+	margin-bottom: 1.5rem
 
 .form
 	max-width: 600px
-	margin-top: 2rem
 
 .input
 	width: 100%
@@ -13,32 +32,34 @@
 	margin: 0.5rem auto
 	border: 2px solid #ccc
 	border-radius: 10px
-
+	background-color: rgba(0, 0, 0, 0.1)
+	color: #eee
 	&:focus
 		outline: none
 		border: 2px solid map-get($colors, secondary)
 
 .submit
-	width: 100%
-	padding: 1rem
+	padding: 1rem 2rem
 	margin-top: 1rem
+	border: none
 	text-transform: uppercase
 	letter-spacing: 0.05rem
-	font-weight: 900
+	font-weight: 600
 	border-radius: 9999px
 	color: map-get($colors, textLight)
-	background-color: map-get($colors, primary)
+	background-color: map-get($colors, secondary)
 	cursor: pointer
-	border: none
 	transition: all 0.2s ease
-
 	&:focus
 		outline: none
-
 	&:hover
-		background-color: map-get($colors, secondary)
-		color: map-get($colors, textDark)
+		padding: 1rem 4rem
 
 @media (min-width: map-get($bp, laptop))
-	.section
-		margin: map-get($padding, laptop)
+	.content
+		padding: map-get($padding, laptop)
+
+@media (min-width: map-get($bp, tablet))
+	.header
+		font-size: 2rem
+		line-height: 2.2rem
