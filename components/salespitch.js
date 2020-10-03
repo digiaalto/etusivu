@@ -7,7 +7,7 @@ const SalesPitch = () => {
     <section className={styles.section} id="paremmat-verkkosivut">
       <div className={styles.content}>
         <span className={`miniheader ${styles.miniheader}`}>
-          Kilpailu on kovaa
+          Testaa verkkosivusi
         </span>
         <h2 className={`${styles.header} headerAfter`}>
           Tiesitkö että Google auditoi nettisivuja?
@@ -30,7 +30,7 @@ const SalesPitch = () => {
         </p>
         <div className={styles.buttonWrapper}>
           <Button
-            text="Testauta Verkkosivusi"
+            text="Testaa Verkkosivusi"
             href="https://web.dev/measure/"
             outside
           />
