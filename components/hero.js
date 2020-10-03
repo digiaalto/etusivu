@@ -12,10 +12,7 @@ const Hero = () => {
         <h1 className={styles.header}>Haluatko erottua verkosta?</h1>
         <h2 className={styles.subheader}>
           Digiaalto on erikoistunut rakentamaan verkkosivuja joiden laadun takaa
-          Googlen{" "}
-          <Link href="#mika-on-google-lighthouse?">
-            <a style={{ pointerEvents: "auto" }}>laatumittari.</a>
-          </Link>
+          Googlen kehittämä laatutesti.
         </h2>
         <Link href="#paremmat-verkkosivut">
           <a>
