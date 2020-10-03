@@ -2,7 +2,7 @@ import styles from "../styles/toteutus.module.sass"
 
 const Toteutus = () => {
   return (
-    <section id="verkkosivun-toteutus" className={styles.section}>
+    <section id="toteutus" className={styles.section}>
       <div className={styles.content}>
         <h2 className={`${styles.header} headerAfter`}>Verkkosivun Toteutus</h2>
         <Part

@@ -21,7 +21,7 @@ const Hero = () => {
             Digiaalto on erikoistunut rakentamaan verkkosivuja joiden laadun
             takaa Googlen kehittämä laatutesti.
           </h2>
-          <Link href="#paremmat-verkkosivut">
+          <Link href="#laatutestaus">
             <a>
               <FaArrowAltCircleDown className={styles.arrow} />
             </a>

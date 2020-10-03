@@ -3,16 +3,22 @@
 .nav
 	z-index: 999
 	display: flex
-	justify-content: flex-end
 	align-items: center
+	justify-content: space-between
 	position: fixed
 	top: 0
 	width: 100%
-	height: map-get($size, navHieght)
-	padding: 0 0.5rem
+	height: map-get($size, navHeight)
+	padding: 0 1rem
 	border-bottom: 1px solid #ccc
 	background-color: #fff
 	overflow: hidden
+	color: map-get($colors, primary)
+
+.title
+	font-size: 1.5rem
+	text-transform: uppercase
+	letter-spacing: 0.1rem
 
 .burgerButton
 	display: flex
@@ -29,5 +35,5 @@
 		outline: none
 
 .burgerIcon
-	color: map-get($colors, textDark)
+	color: map-get($colors, primary)
 	font-size: 2rem

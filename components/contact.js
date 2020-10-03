@@ -20,7 +20,7 @@ const Contact = () => {
   }
 
   return (
-    <section className={styles.section} id="yhteystietolomake">
+    <section className={styles.section} id="yhteystiedot">
       <div className={styles.content}>
         <span className={styles.header}>
           Haluatko tietää enemmän Digiaallon verkkoratkaisusta?

@@ -7,7 +7,7 @@ const animDelay = 100
 
 const SalesPitch = () => {
   return (
-    <section className={styles.section} id="paremmat-verkkosivut">
+    <section className={styles.section} id="laatutestaus">
       <div className={styles.content}>
         <Fade delay={animDelay} bottom>
           <span className={`miniheader ${styles.miniheader}`}>

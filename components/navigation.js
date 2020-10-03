@@ -1,7 +1,6 @@
 import styles from "../styles/navigation.module.sass"
 import { useState, Fragment } from "react"
 import { HiMenuAlt3 } from "react-icons/hi"
-import { VscChromeClose } from "react-icons/vsc"
 import Sidebar from "./sidebar"
 import Overlay from "./utility/overlay"
 import disableScroll from "disable-scroll"
@@ -19,6 +18,7 @@ const Navigation = () => {
   return (
     <Fragment>
       <nav className={styles.nav}>
+        <span className={styles.title}>Digiaalto.fi</span>
         <BurgerMenu sidebar={sidebar} toggleSidebar={toggleSidebar} />
       </nav>
       <Sidebar visible={sidebar} toggleSidebar={toggleSidebar} />
@@ -31,12 +31,10 @@ export default Navigation
 
 const BurgerMenu = ({ sidebar, toggleSidebar }) => {
   return (
-    <button onClick={toggleSidebar} className={styles.burgerButton}>
-      {sidebar ? (
-        <VscChromeClose className={styles.burgerIcon} />
-      ) : (
+    !sidebar && (
+      <button onClick={toggleSidebar} className={styles.burgerButton}>
         <HiMenuAlt3 className={styles.burgerIcon} />
-      )}
-    </button>
+      </button>
+    )
   )
 }

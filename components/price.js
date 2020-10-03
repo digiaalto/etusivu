@@ -3,7 +3,7 @@ import { RiMoneyEuroCircleFill } from "react-icons/ri"
 
 const Price = () => {
   return (
-    <section className={styles.section}>
+    <section id="hinnoittelu" className={styles.section}>
       <div className={styles.content}>
         <div className={styles.header}>
           <RiMoneyEuroCircleFill />
