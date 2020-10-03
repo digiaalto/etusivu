@@ -26,6 +26,9 @@
 	font-size: 2.5rem
 	font-weight: 900
 
+.highlight
+	color: map-get($colors, primary)
+
 .subheader
 	margin-bottom: 2rem
 	font-size: 1.5rem
@@ -34,12 +37,11 @@
 
 .arrow
 	font-size: 4rem
-	color: map-get($colors, primary)
+	color: map-get($colors, secondary)
 	transition: all 0.3s ease
 	pointer-events: auto
 
 	&:hover
-		color: map-get($colors, secondary)
 		transform: scale(1.2)
 
 @media (min-width: map-get($bp, tablet))
