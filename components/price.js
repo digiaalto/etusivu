@@ -1,18 +1,15 @@
 import styles from "../styles/price.module.sass"
-import { RiMoneyEuroCircleFill } from "react-icons/ri"
 
 const Price = () => {
   return (
     <section id="hinnoittelu" className={styles.section}>
       <div className={styles.content}>
-        <div className={styles.header}>
-          <RiMoneyEuroCircleFill />
-          <span>~3,500</span>
-        </div>
+        <h2 className="headerAfter">Hinnoittelu</h2>
         <p>
-          Hyvin toteutettu verkkosivu on fiksu investointi joka hengittää eloa
-          yrityksesi tuottavuuden mittariin.
+          Hyvin toteutettu verkkosivu on fiksu investointi joka näkyy
+          tuottavuudessa.
         </p>
+        <p className="bold">Optimoitu verkkosivu alkaen 2200 €</p>
         <p className={styles.note}>
           Työn hinnoitteluun vaikuttaa projektikohtaiset vaatimukset,
           lähdemateriaali ja muut hankinnat ja palvelut.

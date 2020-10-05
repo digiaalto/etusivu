@@ -22,6 +22,7 @@ const Contact = () => {
   return (
     <section className={styles.section} id="yhteystiedot">
       <div className={styles.content}>
+        <img className={styles.paperAirplane} src="plane.svg" />
         <span className={styles.header}>
           Haluatko tietää enemmän Digiaallon verkkoratkaisusta?
         </span>

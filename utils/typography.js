@@ -24,6 +24,9 @@ githubTheme.overrideThemeStyles = ({ rhythm }, options) => ({
 		borderBottom: "none"
 	},
 	"h2": {
+		fontWeight: "900",
+		letterSpacing: "0.025rem",
+		textTransform: "uppercase"
 	},
 	"h2::after": {
 		display: "block",

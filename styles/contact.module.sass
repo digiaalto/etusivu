@@ -7,9 +7,16 @@
 	background-repeat: no-repeat
 
 .content
+	position: relative
 	padding: map-get($padding, mobile)
 	color: map-get($colors, textLight)
 	letter-spacing: 0.02rem
+
+.paperAirplane
+	position: absolute
+	bottom: 0
+	right: 0
+	transform: scaleX(-1)
 
 .header
 	display: inline-block
