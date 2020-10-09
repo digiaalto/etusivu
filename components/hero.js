@@ -1,7 +1,7 @@
 import styles from "../styles/hero.module.sass"
 import Link from "next/link"
 import { FaArrowAltCircleDown } from "react-icons/fa"
-import Zoom from "react-reveal/Zoom"
+import { Zoom } from "react-awesome-reveal"
 
 const Hero = () => {
   return (

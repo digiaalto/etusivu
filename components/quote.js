@@ -1,6 +1,6 @@
 import styles from "../styles/quote.module.sass"
 import { MdFormatQuote } from "react-icons/md"
-import Fade from "react-reveal/Fade"
+import { Fade } from "react-awesome-reveal"
 
 const sourceUrl = "https://youtu.be/mLjxXPHuIJo?t=76"
 

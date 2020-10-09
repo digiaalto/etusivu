@@ -1,6 +1,6 @@
 import styles from "../styles/salespitch.module.sass"
 import { BiTestTube } from "react-icons/bi"
-import Fade from "react-reveal/Fade"
+import { Fade } from "react-awesome-reveal"
 import Button from "./utility/button"
 
 const animDelay = 100
