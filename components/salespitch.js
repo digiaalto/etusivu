@@ -20,18 +20,17 @@ const SalesPitch = () => {
         <Fade delay={animDelay} bottom>
           <p>
             Google on kehittänyt automaattisen työkalun verkkosivujen laadun
-            mittaamiseen. Google Lighthouse tarkastaa muummoassa verkkosivujen
-            suorituskyvyn, saavutettavuuden ja hakukoneoptimoinnin.
+            mittaamiseen joka tarkastaa muummoassa verkkosivujen suorituskyvyn,
+            saavutettavuuden ja hakukoneoptimoinnin.
           </p>
           <p>
-            Paremmalle perustukselle rakennettu verkkosivu vaikuttaa
-            positiivisesti hakukoneoptimointiin, käyttäjäkokemukseen, sivusi
-            saatavuuteen ja esteettömyyteen.
+            Digiaalto on erikoistunut rakentamaan verkkosivuja jotka täyttävät
+            Google Lighthousen korkean pisteytyksen kriteerit.
           </p>
           <p>
             Digiaalto panostaa säästämättömästi verkkosivujesi tekniseen
             toteutukseen noudattamalla Googlen vaatimuksia ja suosituksia
-            todistettavalla huolella.
+            todistettavasti.
           </p>
         </Fade>
         <Fade delay={animDelay} bottom>

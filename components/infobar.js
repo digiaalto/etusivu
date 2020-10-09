@@ -11,11 +11,9 @@ const Infobar = ({ text, ctaHref = "/" }) => {
         <Contacts invertedColors />
       </div>
       <div>
-        <span>
-          <Link href={ctaHref}>
-            <a className={styles.ctaLink}>{text} →</a>
-          </Link>
-        </span>
+        <Link href={ctaHref}>
+          <a className={styles.ctaLink}>{text} →</a>
+        </Link>
       </div>
     </div>
   )
