@@ -10,7 +10,6 @@
 	right: 0
 	height: 100%
 	transform: translateX(100vw)
-	transition: transform 0.5s ease
 	overflow: hidden
 	background-color: map-get($colors, primary)
 	color: map-get($colors, textLight)
@@ -42,6 +41,7 @@
 	padding: map-get($padding, mobile)
 
 .open
+	transition: transform 0.5s ease
 	visiblity: visible
 	transform: translateX(0)
 
