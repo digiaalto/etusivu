@@ -1,4 +1,5 @@
 import styles from "../styles/navigation.module.sass"
+import Link from "next/link"
 import { useState, Fragment } from "react"
 import { HiMenuAlt3 } from "react-icons/hi"
 import Sidebar from "./sidebar"
@@ -18,7 +19,11 @@ const Navigation = () => {
   return (
     <Fragment>
       <nav className={styles.nav}>
-        <span className={styles.title}>Digiaalto.fi</span>
+        <span className={styles.logo}>
+          <Link href="/">
+            <a>Digiaalto.fi</a>
+          </Link>
+        </span>
         <BurgerMenu sidebar={sidebar} toggleSidebar={toggleSidebar} />
       </nav>
       <Sidebar visible={sidebar} toggleSidebar={toggleSidebar} />

@@ -4,7 +4,7 @@ import Head from "next/head"
 import Footer from "../components/footer"
 import Navigation from "../components/navigation"
 
-const Layout = ({ title, children }) => {
+const Layout = ({ title, children, infobar = null }) => {
   return (
     <React.Fragment>
       <Head>
@@ -15,6 +15,7 @@ const Layout = ({ title, children }) => {
         <meta name="googlebot" content="noindex,follow" />
         <title>{title}</title>
       </Head>
+      {infobar}
       <Navigation />
       <main>{children}</main>
       <Footer />

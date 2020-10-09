@@ -1,0 +1,16 @@
+@import "_partials.sass"
+
+.infobar
+  display: flex
+  justify-content: space-between
+  padding: 0.5rem 1rem
+  background-color: #000
+  color: map-get($colors, textLight)
+
+.ctaLink
+  color: #fff !important
+  font-size: 0.9rem
+
+@media (min-width: map-get($bp, tablet))
+  .ctaLink
+    font-size: 1rem

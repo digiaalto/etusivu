@@ -38,10 +38,6 @@ const Socials = ({ invertedColors = false }) => {
             vertical-align: middle;
             padding: 0.25rem;
           }
-
-          .container a::hover {
-            color: red;
-          }
         `}
       </style>
     </div>

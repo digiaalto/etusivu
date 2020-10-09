@@ -5,11 +5,12 @@ import Quote from "../components/quote"
 import Toteutus from "../components/toteutus"
 import Price from "../components/price"
 import Contact from "../components/contact"
+import Infobar from "../components/infobar"
 
 const IndexPage = () => {
   return (
     <div>
-      <Layout>
+      <Layout infobar={<Infobar />}>
         <Hero />
         <SalesPitch />
         <Quote />

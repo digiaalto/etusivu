@@ -7,8 +7,6 @@
 	min-height: 100vh
 	position: relative
 	padding: map-get($padding, mobile)
-	margin-top: map-get($size, navHeight)
-	background: linear-gradient(to bottom right, #CCCFE0, rgba(237, 240, 247, 0))
 
 .particles
 	display: none
@@ -18,26 +16,24 @@
 	text-align: center
 	z-index: 1
 	pointer-events: none
+	margin-top: -10vh
 
 .header
 	margin-top: 0
 	border-bottom: none
-	text-transform: uppercase
 	font-size: 2.5rem
 	font-weight: 900
+	letter-spacing: -0.1rem
 	
 .highlight
 	color: map-get($colors, primary)
-	text-decoration-line: underline
-	text-decoration-style: double
 
 .subheader
 	margin-bottom: 2rem
-	font-size: 1.5rem
-	font-weight: 500
+	font-size: 1.25rem
+	font-weight: 300
 	border-bottom: none
 	text-transform: none
-	letter-spacing: 0
 
 .arrow
 	font-size: 4rem
@@ -64,8 +60,9 @@
 
 @media (min-width: map-get($bp, laptop))
 	.content
-		max-width: 800px
+		max-width: 1200px
 
 @media (min-width: map-get($bp, desktop))
 		.header
-			font-size: 5rem
+			font-size: 6rem
+			line-height: 6rem

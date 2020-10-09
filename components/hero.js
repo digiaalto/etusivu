@@ -9,13 +9,15 @@ const Hero = () => {
       <div className={styles.content}>
         <Zoom>
           <h1 className={styles.header}>
-            Haluatko <span className={styles.highlight}>erottua</span> verkossa?
+            Haluatko <span className={styles.highlight}>löytyä</span> verkosta
+            paremmin?
           </h1>
         </Zoom>
         <Zoom>
           <h2 className={styles.subheader}>
-            Digiaalto on erikoistunut rakentamaan verkkosivuja joiden laadun
-            takaa Googlen kehittämä laatutesti.
+            Digiaalto on erikoistunut rakentamaan edistyneitä verkkosivuja
+            pk-yrityksille joiden laadun takaa Googlen kehittämä laatutesti
+            Lighthouse.
           </h2>
           <Link href="#laatutestaus">
             <a>

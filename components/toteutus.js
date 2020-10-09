@@ -8,15 +8,15 @@ const Toteutus = () => {
         <Part
           header="1. Kartoitus"
           paragraphs={[
-            `Kaikki lähtee käyntiin määrittelemällä verkkoprojektin parametrit mahdollisimman selkeästi.`,
-            `Projektin tavoitteet, vaatimukset, ominaisuudet, palvelut ja kaikki henkilökohtaiset ideat, otetaan huomioon ja kirjataan alas.`,
-            `Lopuksi laadimme ja allekirjoitamme sopparin jossa pääkohdat on hahmotettu.`,
+            `Kaikki lähtee käyntiin määrittelemällä verkkoprojektin vaatimukset mahdollisimman selkeästi.`,
+            `Projektin tavoitteet, ominaisuudet, palvelut ja kaikki henkilökohtaiset ideat otetaan huomioon ja kirjataan alas.`,
+            `Laadimme ja allekirjoitamme sopparin jossa pääkohdat on hahmotettu.`,
           ]}
         />
         <Part
           header="2. Suunnittelu"
           paragraphs={[
-            `Seuraavaksi keskitymme sisältöön ja ulkoasuun.`,
+            `Suunnitteluvaiheessa keskitymme sisältöön ja ulkoasuun.`,
             `Sisältö muodostuu kuvista, videoista, asiakasta puhuttelevasta tekstistä ja muista mahdollisista resursseista kuten palkinnoista ja kehuista.`,
             `Sinä tiedät oman yrityksesti toiminnan paremmin kuin kukaan muu, joten on suositeltavaa että otat pääosan tekstisisällön luonnissa.`,
             `Sisältö on sinun brändisi ja asiakaskohderyhmäsi välistä kanssakäymistä. Miten sinun tavoitteesi tulevat asiakkaasi tarpeita vastaan.`,
@@ -26,8 +26,9 @@ const Toteutus = () => {
         <Part
           header="3. Kehitys"
           paragraphs={[
-            `Kehitys tapahtuu NextJS frameworkilla joka pyörii Facebookin kehittämän ReactJS alustan päällä. Nämä kaksi suosittua ohjelmaa takaavat että parhaat käytännöt toteutuvat.`,
-            `Sivua kehittäessä, optimoin ja mahdollisesti editoin sisältöä jotta se asettuu sopivasti ja sulavasti verkkosivun kokonaiskuvaan. Myös ulkoasua hiotaan ja sovitut palvelut integroidaan web-applikaatioon.`,
+            `Kehitys onnistuu Nextjs frameworkilla joka pyörii Facebookin kehittämän Reactjs alustan päällä.`,
+            `Sivua kehittäessä, optimoin ja mahdollisesti editoin sisältöä jotta se asettuu sopivasti ja sulavasti verkkosivun kokonaiskuvaan.`,
+            `Ulkoasua hiotaan ja sovitut palvelut integroidaan web-applikaatioon.`,
             `Kehitystä voi seurata reaaliajassa salaisesta linkistä.`,
           ]}
         />

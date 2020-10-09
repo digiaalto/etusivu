@@ -11,7 +11,7 @@ const SalesPitch = () => {
       <div className={styles.content}>
         <Fade delay={animDelay} bottom>
           <span className={`miniheader ${styles.miniheader}`}>
-            Testaa verkkosivusi
+            Testaa verkkosivusi muutamassa sekunnissa
           </span>
           <h2 className={`${styles.header} headerAfter`}>
             Tiesitkö että Google valvoo verkkosivujen laatua?
@@ -19,34 +19,26 @@ const SalesPitch = () => {
         </Fade>
         <Fade delay={animDelay} bottom>
           <p>
-            Perinteisesti vain hakusanat ja sisältö vaikuttivat
-            hakukoneoptimointiin, mutta kehittyneet web-standardit. Näiden
-            parhaiden käytäntöjen seurannalla ei ole pelkästään väliä
-            hakukoneoptimoinnissa vaan myös käyttäjäkokemuksessa, joka on
-            sidoksissa kaikkiin tärkeisiin arvoihin Googlen algoritmeissä.
-          </p>
-          <p>
             Google on kehittänyt automaattisen työkalun verkkosivujen laadun
-            mittaamiseen. Sitä voidaan käyttää mitä tahansa verkkosivua vastaan.
-            Google Lighthouse tarkastaa verkkosivujen suorituskyvyn,
-            saavutettavuuden ja hakukoneoptimoinnin.
+            mittaamiseen. Google Lighthouse tarkastaa muummoassa verkkosivujen
+            suorituskyvyn, saavutettavuuden ja hakukoneoptimoinnin.
           </p>
           <p>
-            Kehittyneellä metodologialla rakennettu verkkosivu vaikuttaa
+            Paremmalle perustukselle rakennettu verkkosivu vaikuttaa
             positiivisesti hakukoneoptimointiin, käyttäjäkokemukseen, sivusi
             saatavuuteen ja esteettömyyteen.
           </p>
           <p>
-            Digiaalto panostaa säästämättömästi verkkosivujen backendiin, eli
-            tekniseen toteutukseen noudattamalla Googlen vaatimuksia ja
-            suosituksia huolella, jolloin sinä hyödyt.
+            Digiaalto panostaa säästämättömästi verkkosivujesi tekniseen
+            toteutukseen noudattamalla Googlen vaatimuksia ja suosituksia
+            todistettavalla huolella.
           </p>
         </Fade>
         <Fade delay={animDelay} bottom>
           <div className={styles.buttonWrapper}>
             <Button
               icon={<BiTestTube />}
-              text="Testaa Sivua"
+              text="Testaa Sivuja"
               href="https://web.dev/measure/"
               outside
             />
