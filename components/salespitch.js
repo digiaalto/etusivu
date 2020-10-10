@@ -9,7 +9,7 @@ const SalesPitch = () => {
   return (
     <section className={styles.section} id="laatutestaus">
       <div className={styles.content}>
-        <Fade delay={animDelay} bottom>
+        <Fade delay={animDelay} direction="up">
           <span className={`miniheader ${styles.miniheader}`}>
             Testaa verkkosivusi muutamassa sekunnissa
           </span>
@@ -17,7 +17,7 @@ const SalesPitch = () => {
             Tiesitkö että Google valvoo verkkosivujen laatua?
           </h2>
         </Fade>
-        <Fade delay={animDelay} bottom>
+        <Fade delay={animDelay} direction="up">
           <p>
             Google on kehittänyt automaattisen työkalun verkkosivujen laadun
             mittaamiseen joka tarkastaa muummoassa verkkosivujen suorituskyvyn,
@@ -33,7 +33,7 @@ const SalesPitch = () => {
             todistettavasti.
           </p>
         </Fade>
-        <Fade delay={animDelay} bottom>
+        <Fade delay={animDelay} direction="up">
           <div className={styles.buttonWrapper}>
             <Button
               icon={<BiTestTube />}

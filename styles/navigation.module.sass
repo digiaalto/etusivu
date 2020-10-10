@@ -10,10 +10,9 @@
 	width: 100%
 	height: map-get($size, navHeight)
 	padding: 0 1rem
-	border-bottom: 1px solid #ccc
-	background-color: #fff
+	background-color: rgba(21, 55, 108, 0.8)
 	overflow: hidden
-	color: map-get($colors, textDark)
+	color: map-get($colors, textLight)
 
 .logo
 	font-size: 1.5rem
@@ -21,7 +20,7 @@
 	letter-spacing: 0.1rem
 	font-weight: 500
 	a
-		color: map-get($colors, textDark) !important
+		color: map-get($colors, textLight) !important
 
 .burgerButton
 	display: flex
@@ -33,7 +32,10 @@
 	cursor: pointer
 	overflow: hidden
 	background-color: transparent
+	transition: transform 0.1s ease
+	&:hover
+		transform: scale(1.2)
 
 .burgerIcon
-	color: map-get($colors, textDark)
+	color: map-get($colors, textLight)
 	font-size: 2rem

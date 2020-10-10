@@ -28,13 +28,6 @@ githubTheme.overrideThemeStyles = ({ rhythm }, options) => ({
 		letterSpacing: "0.025rem",
 		textTransform: "uppercase"
 	},
-	"h2::after": {
-		display: "block",
-		content: " ",
-		width: "3rem",
-		height: "1rem",
-		backgroundColor: "#000"
-	}
 })
 
 githubTheme.baseFontSize = "18px"

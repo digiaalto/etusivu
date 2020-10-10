@@ -5,16 +5,13 @@
   justify-content: space-between
   align-items: center
   padding: 0.5rem 1rem
-  background-color: #000
+  background-color: map-get($colors, textDark)
   color: map-get($colors, textLight)
 
 .ctaLink
-  color: #fff !important
+  color: #fff
   font-size: 0.9rem
   
-  &:hover
-    opacity: 0.8
-
 @media (min-width: map-get($bp, tablet))
   .ctaLink
     font-size: 1rem

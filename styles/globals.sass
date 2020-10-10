@@ -12,10 +12,9 @@ body
 
 a
 	color: map-get($colors, link)
-	text-decoration: none !important
+	text-decoration: none
+	transition: color 0.2s ease
 
-	&:visited, &:active
-		color: map-get($colors, link)
 	&:hover
 		color: map-get($colors, linkAlt)
 

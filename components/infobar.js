@@ -22,7 +22,7 @@ const Infobar = ({ text, ctaHref = "/" }) => {
 export default Infobar
 
 Infobar.defaultProps = {
-  text: "Aloita täyttämällä lomake",
+  text: "Täytä yhteydenottolomake",
   ctaHref: "/#yhteystiedot",
 }
 

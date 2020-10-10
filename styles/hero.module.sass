@@ -5,7 +5,6 @@
 	align-items: center
 	justify-content: center
 	min-height: 100vh
-	position: relative
 	padding: map-get($padding, mobile)
 
 .particles
@@ -15,8 +14,8 @@
 	color: #000
 	text-align: center
 	z-index: 1
-	pointer-events: none
-	margin-top: -10vh
+	margin-top: -15vh
+	color: map-get($colors, textLight)
 
 .header
 	margin-top: 0
@@ -26,20 +25,30 @@
 	letter-spacing: -0.1rem
 	
 .highlight
-	color: map-get($colors, primary)
+	color: map-get($colors, textLight)
+	// @supports (background-clip: text) and (-webkit-text-fill-color: transparent) 
+	// 	background-image: linear-gradient(to right,#7f8fa6, #f5f6fa)
+	// 	background-clip: text
+	// 	-webkit-text-fill-color: transparent
 
 .subheader
 	margin-bottom: 2rem
 	font-size: 1.25rem
-	font-weight: 300
+	font-weight: 500
 	border-bottom: none
 	text-transform: none
 
+.subheaderLink
+	color: map-get($colors, textLight) !important
+	text-decoration-line: underline
+	&:hover
+		text-decoration-style: double
+
 .arrow
-	font-size: 4rem
-	color: map-get($colors, primary)
+	font-size: 3rem
 	transition: all 0.3s ease
 	pointer-events: auto
+	color: map-get($colors, textLight)
 
 	&:hover
 		transform: scale(1.2)
