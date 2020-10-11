@@ -18,20 +18,20 @@ const SalesPitch = () => {
             verkkosivusi kehityksen yhteydessä.
           </p>
           <p>
-            Lighthouse tarkistaa minkä tahansa verkkosivun suorituskyvyn,
-            saavutettavuuden ja hakukoneoptimoinnin, ja antaa lopuksi
-            pistearvion ja selvityksen missä kohdissa ja ominaisuuksissa
-            esiintyy puutteita.
+            Lighthouse auditoi mm. nettisivun suorituskyvyn, saavutettavuuden ja
+            hakukoneoptimoinnin. Lopuksi saat pistearvion ja selvityksen
+            kohdista josisa esiintyi puutteita.
           </p>
           <p>
-            Digiaalto on erikoistunut rakentamaan nykyaikaisen laadukkaita
-            verkkosivuja, jotka tähtäävät hakukoneiden arvostamiin
-            web-standardeihin.
+            Digiaalto on erikoistunut rakentamaan laatusivuja ilman puutteita ja
+            vanhentuneista käytännöistä seuraavia vikoja. Hakukoneiden
+            vaatimuksiin vastaaminen ja web-standardien seuranta johtaa
+            menestyksekkääseen nettiläsnäoloon.
           </p>
           <p>
             Parhaat käytännöt eivät pelkästään vaikuta positiivisesti
-            verkkosivusi parametreihin hakukoneiden algoritmeissä, vaan ne
-            parantavat myös asiakkaittesi käyttäjäkokemusta.
+            verkkosivusi parametreihin hakukoneiden algoritmeissä. Myös
+            asiakkaiden käyttökokemus kohenee.
           </p>
           <p className="bold" style={{ marginBottom: "2rem" }}>
             Jos olet tiedonhaluinen, voit tarkistaa muutamassa sekunnissa onko
