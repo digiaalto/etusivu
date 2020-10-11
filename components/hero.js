@@ -13,9 +13,8 @@ const Hero = () => {
             sekä <span className={styles.highlight3}> nopeasti?</span>
           </h1>
           <h2 className={styles.subheader}>
-            Digiaalto voi auttaa rakentamalla sinulle tarkasti optimoidut
-            verkkosivut, joiden toteutuksen takaa Googlen kehittämä
-            verkkosivujen laatutesti.
+            Digiaalto on erikoistunut rakentamaan tarkasti optimoituja
+            verkkosivuja, joiden toteutuksen takaa Googlen kehittämä laatutesti.
           </h2>
           <Button text="Lue lisää" href="#laatutestaus" />
         </Zoom>

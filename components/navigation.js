@@ -1,7 +1,7 @@
 import styles from "../styles/navigation.module.sass"
 import Link from "next/link"
 import { useState, Fragment } from "react"
-import { AiOutlineMenu } from "react-icons/ai"
+import { GiHamburgerMenu } from "react-icons/gi"
 import Sidebar from "./sidebar"
 import Overlay from "./utility/overlay"
 import disableScroll from "disable-scroll"
@@ -41,7 +41,7 @@ const BurgerMenu = ({ sidebar, toggleSidebar }) => {
   return (
     !sidebar && (
       <button onClick={toggleSidebar} className={styles.burgerButton}>
-        <AiOutlineMenu className={styles.burgerIcon} />
+        <GiHamburgerMenu className={styles.burgerIcon} />
       </button>
     )
   )
