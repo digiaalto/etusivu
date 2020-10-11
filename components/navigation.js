@@ -1,7 +1,7 @@
 import styles from "../styles/navigation.module.sass"
 import Link from "next/link"
 import { useState, Fragment } from "react"
-import { HiMenuAlt3 } from "react-icons/hi"
+import { AiOutlineMenu } from "react-icons/ai"
 import Sidebar from "./sidebar"
 import Overlay from "./utility/overlay"
 import disableScroll from "disable-scroll"
@@ -19,11 +19,14 @@ const Navigation = () => {
   return (
     <Fragment>
       <nav className={styles.nav}>
-        <span className={styles.logo}>
+        <button className={styles.titleButton}>
           <Link href="/">
-            <a>Digiaalto.fi</a>
+            <a className={styles.titleLinkWrapper}>
+              <img src="logo.svg" className={styles.logoImage} />
+              <span className={styles.logoText}>Digiaalto</span>
+            </a>
           </Link>
-        </span>
+        </button>
         <BurgerMenu sidebar={sidebar} toggleSidebar={toggleSidebar} />
       </nav>
       <Sidebar visible={sidebar} toggleSidebar={toggleSidebar} />
@@ -38,7 +41,7 @@ const BurgerMenu = ({ sidebar, toggleSidebar }) => {
   return (
     !sidebar && (
       <button onClick={toggleSidebar} className={styles.burgerButton}>
-        <HiMenuAlt3 className={styles.burgerIcon} />
+        <AiOutlineMenu className={styles.burgerIcon} />
       </button>
     )
   )

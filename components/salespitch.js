@@ -2,21 +2,17 @@ import styles from "../styles/salespitch.module.sass"
 import { Fade } from "react-awesome-reveal"
 import Button from "./utility/button"
 
-const animDelay = 100
-
 const SalesPitch = () => {
   return (
     <section className={styles.section} id="laatutestaus">
       <div className={styles.content}>
-        <Fade delay={animDelay} direction="up" triggerOnce>
+        <Fade fraction={1} direction="up" triggerOnce>
           <span className={`miniheader ${styles.miniheader}`}>
             Edelläkävijän nettisivut
           </span>
           <h2 className={`${styles.header} headerAfter`}>
             Hakukoneet arvostavat laatua
           </h2>
-        </Fade>
-        <Fade delay={animDelay} direction="up" triggerOnce>
           <p>
             Google Lighthouse on verkkosivujen laatutesti jota Digiaalto käyttää
             verkkosivusi kehityksen yhteydessä.
@@ -41,8 +37,6 @@ const SalesPitch = () => {
             Jos olet tiedonhaluinen, voit tarkistaa muutamassa sekunnissa onko
             sinun tai kilpailijasi verkkosivuissa parantamisen varaa.
           </p>
-        </Fade>
-        <Fade delay={animDelay} direction="up" triggerOnce>
           <Button
             text="Arvioi verkkosivu"
             href="https://web.dev/measure/"

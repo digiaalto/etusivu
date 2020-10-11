@@ -8,7 +8,7 @@ const Quote = () => {
   return (
     <section className={styles.section}>
       <div className={styles.flexWrapper}>
-        <Fade delay="100" triggerOnce>
+        <Fade fraction={1} triggerOnce>
           <div className={styles.container}>
             <MdFormatQuote className={styles.quoteMark} />
             <p className={styles.quoteText}>

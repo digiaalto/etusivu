@@ -12,8 +12,6 @@ const Hero = () => {
             verkosta <span className={styles.highlight2}> helposti </span>
             sekä <span className={styles.highlight3}> nopeasti?</span>
           </h1>
-        </Zoom>
-        <Zoom delay={1500} triggerOnce>
           <h2 className={styles.subheader}>
             Digiaalto voi auttaa rakentamalla sinulle tarkasti optimoidut
             verkkosivut, joiden toteutuksen takaa Googlen kehittämä
