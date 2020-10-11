@@ -20,7 +20,7 @@ const Contact = () => {
   }
 
   return (
-    <section className={styles.section} id="yhteystiedot">
+    <section className={styles.section} id="yhteydenottolomake">
       <div className={styles.content}>
         <img className={styles.paperAirplane} src="plane.svg" />
         <span className={styles.header}>

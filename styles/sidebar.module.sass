@@ -9,9 +9,11 @@
 	bottom: 0
 	right: 0
 	height: 100%
+	min-width: 280px
 	transform: translateX(100vw)
 	overflow: hidden
-	background-color: rgba(21, 55, 108, 1)
+	//background-color: rgba(21, 55, 108, 1)
+	background-color: map-get($colors, textDark)
 	color: map-get($colors, textLight)
 
 .burgerButton
@@ -36,9 +38,9 @@
 	font-size: 2rem
 
 .content
-	margin-top: 3rem
 	text-align: right
-	padding: map-get($padding, mobile)
+	margin-top: 1rem
+	margin-right: 2rem
 
 .open
 	transition: transform 0.5s ease

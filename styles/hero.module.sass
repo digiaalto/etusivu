@@ -4,18 +4,15 @@
 	display: flex
 	align-items: center
 	justify-content: center
-	min-height: 100vh
 	padding: map-get($padding, mobile)
 
 .particles
 	display: none
 
 .content
-	color: #000
+	color: map-get($colors, textDark)
 	text-align: center
 	z-index: 1
-	margin-top: -15vh
-	color: map-get($colors, textLight)
 
 .header
 	margin-top: 0
@@ -25,33 +22,29 @@
 	letter-spacing: -0.1rem
 	
 .highlight
-	color: map-get($colors, textLight)
-	// @supports (background-clip: text) and (-webkit-text-fill-color: transparent) 
-	// 	background-image: linear-gradient(to right,#7f8fa6, #f5f6fa)
-	// 	background-clip: text
-	// 	-webkit-text-fill-color: transparent
+	@supports (background-clip: text) and (-webkit-text-fill-color: transparent) 
+		background-image: linear-gradient(to right, #007CF0, #00DFD8)
+		background-clip: text
+		-webkit-text-fill-color: transparent
+.highlight2
+	@supports (background-clip: text) and (-webkit-text-fill-color: transparent) 
+		background-image: linear-gradient(to right, #7928CA, #FF0080)
+		background-clip: text
+		-webkit-text-fill-color: transparent
+.highlight3
+	@supports (background-clip: text) and (-webkit-text-fill-color: transparent) 
+		background-image: linear-gradient(to right, #FF4D4D, #F9CB28)
+		background-clip: text
+		-webkit-text-fill-color: transparent
 
 .subheader
 	margin-bottom: 2rem
-	font-size: 1.25rem
-	font-weight: 500
+	font-size: 1.1rem
+	font-weight: 400
 	border-bottom: none
 	text-transform: none
-
-.subheaderLink
-	color: map-get($colors, textLight) !important
-	text-decoration-line: underline
-	&:hover
-		text-decoration-style: double
-
-.arrow
-	font-size: 3rem
-	transition: all 0.3s ease
-	pointer-events: auto
-	color: map-get($colors, textLight)
-
-	&:hover
-		transform: scale(1.2)
+	letter-spacing: 0.05rem
+	color: map-get($colors, textGray)
 
 @media (min-width: map-get($bp, tablet))
 	.particles
@@ -69,7 +62,7 @@
 
 @media (min-width: map-get($bp, laptop))
 	.content
-		max-width: 1200px
+		max-width: 60rem
 
 @media (min-width: map-get($bp, desktop))
 		.header

@@ -1,32 +1,25 @@
 import styles from "../styles/hero.module.sass"
-import Link from "next/link"
-import { FaArrowDown } from "react-icons/fa"
 import { Zoom } from "react-awesome-reveal"
-import Waves from "../components/waves"
+import Button from "../components/utility/button"
 
 const Hero = () => {
   return (
     <section className={styles.section}>
-      <Waves />
       <div className={styles.content}>
-        <Zoom>
+        <Zoom triggerOnce>
           <h1 className={styles.header}>
-            Haluatko <span className={styles.highlight}>löytyä</span> verkosta
-            helposti?
+            Haluatko <span className={styles.highlight}> löytyä </span>
+            verkosta <span className={styles.highlight2}> helposti </span>
+            sekä <span className={styles.highlight3}> nopeasti?</span>
           </h1>
-          <Link href="#laatutestaus">
-            <a>
-              <FaArrowDown className={styles.arrow} />
-            </a>
-          </Link>
+        </Zoom>
+        <Zoom delay={1500} triggerOnce>
           <h2 className={styles.subheader}>
-            Digiaalto on erikoistunut rakentamaan superoptimoituja
-            markkinointisivuja joiden laadun takaa Googlen kehittämä verkkosivun
-            laatutesti,{" "}
-            <Link href="/#laatutestaus">
-              <a className={styles.subheaderLink}>Google Lighthouse.</a>
-            </Link>
+            Digiaalto voi auttaa rakentamalla sinulle tarkasti optimoidut
+            verkkosivut, joiden toteutuksen takaa Googlen kehittämä
+            verkkosivujen laatutesti.
           </h2>
+          <Button text="Lue lisää" href="#laatutestaus" />
         </Zoom>
       </div>
     </section>

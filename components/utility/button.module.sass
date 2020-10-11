@@ -1,34 +1,27 @@
 @import "../../styles/_partials.sass"
 
-.button
+.buttonWrapper
 	display: inline-block
-	border-radius: 9999px
-	padding: 0.5rem 1rem
-	min-width: 6rem
-	margin-top: 1rem
-	text-transform: uppercase
-	letter-spacing: 0.075rem
-	font-weight: 600
-	color: map-get($colors, textLight) !important
-	background-color: map-get($colors, primary)
-	border: 3px solid map-get($colors, primary)
-	text-align: center
-	transition: all 0.25s ease
+
+.button
 	display: flex
 	align-items: center
-	gap: 0.75rem
+	padding: 0.5rem 1rem
+	border-radius: 9999px
+	font-weight: 600
+	text-transform: uppercase
+	letter-spacing: 0.075rem
+	text-align: center
 	text-decoration: none !important
+	border: 3px solid map-get($colors, highlight)
+	color: map-get($colors, textLight) !important
+	background-color: map-get($colors, highlight)
+	transition: all 0.25s ease
+
 	&:hover 
 		padding: 0.5rem 1.5rem
+	
 	& > svg
+		display: none
 		font-size: 1.1rem
 		transition: transform 0.25s ease
-
-.secondary
-	color: map-get($colors, textLight) !important
-	background-color: transparent
-	border: 3px solid map-get($colors, textLight)
-	box-shadow: none
-
-	&:hover
-		border: 3px solid transparent

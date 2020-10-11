@@ -1,20 +1,25 @@
 import React from "react"
 import styles from "../styles/infobar.module.sass"
 import Link from "next/link"
-import Contacts from "../utils/contacts"
 import PropTypes from "prop-types"
+import { MdEmail, MdLocalPhone } from "react-icons/md"
 
 const Infobar = ({ text, ctaHref = "/" }) => {
   return (
     <div className={styles.infobar}>
-      <div>
-        <Contacts invertedColors />
-      </div>
-      <div>
-        <Link href={ctaHref}>
-          <a className={styles.ctaLink}>{text} →</a>
-        </Link>
-      </div>
+      <a href="mailto:hei@digiaalto.fi" className={styles.contactLink}>
+        <MdEmail />
+        <span className={styles.contactText}>hei@digiaalto.fi</span>
+      </a>
+      <div className={styles.divider}></div>
+      <a href="tel:+358505543395" className={styles.contactLink}>
+        <MdLocalPhone />
+        <span className={styles.contactText}>+358505543395</span>
+      </a>
+      <div className={styles.divider}></div>
+      <Link href={ctaHref}>
+        <a className={styles.contactForm}>{text} →</a>
+      </Link>
     </div>
   )
 }
@@ -22,8 +27,8 @@ const Infobar = ({ text, ctaHref = "/" }) => {
 export default Infobar
 
 Infobar.defaultProps = {
-  text: "Täytä yhteydenottolomake",
-  ctaHref: "/#yhteystiedot",
+  text: "yhteydenottolomake",
+  ctaHref: "/#yhteydenottolomake",
 }
 
 Infobar.propTypes = {

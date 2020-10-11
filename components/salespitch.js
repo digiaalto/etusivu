@@ -1,5 +1,4 @@
 import styles from "../styles/salespitch.module.sass"
-import { BiTestTube } from "react-icons/bi"
 import { Fade } from "react-awesome-reveal"
 import Button from "./utility/button"
 
@@ -9,39 +8,46 @@ const SalesPitch = () => {
   return (
     <section className={styles.section} id="laatutestaus">
       <div className={styles.content}>
-        <Fade delay={animDelay} direction="up">
+        <Fade delay={animDelay} direction="up" triggerOnce>
           <span className={`miniheader ${styles.miniheader}`}>
-            Testaa verkkosivusi muutamassa sekunnissa
+            Edelläkävijän nettisivut
           </span>
           <h2 className={`${styles.header} headerAfter`}>
-            Tiesitkö että Google valvoo verkkosivujen laatua?
+            Hakukoneet arvostavat laatua
           </h2>
         </Fade>
-        <Fade delay={animDelay} direction="up">
+        <Fade delay={animDelay} direction="up" triggerOnce>
           <p>
-            Google on kehittänyt automaattisen työkalun verkkosivujen laadun
-            mittaamiseen joka tarkastaa muummoassa verkkosivujen suorituskyvyn,
-            saavutettavuuden ja hakukoneoptimoinnin.
+            Google Lighthouse on verkkosivujen laatutesti jota Digiaalto käyttää
+            verkkosivusi kehityksen yhteydessä.
           </p>
           <p>
-            Digiaalto on erikoistunut rakentamaan verkkosivuja jotka täyttävät
-            Google Lighthousen korkean pisteytyksen kriteerit.
+            Lighthouse tarkistaa minkä tahansa verkkosivun suorituskyvyn,
+            saavutettavuuden ja hakukoneoptimoinnin, ja antaa lopuksi
+            pistearvion ja selvityksen missä kohdissa ja ominaisuuksissa
+            esiintyy puutteita.
           </p>
           <p>
-            Digiaalto panostaa säästämättömästi verkkosivujesi tekniseen
-            toteutukseen noudattamalla Googlen vaatimuksia ja suosituksia
-            todistettavasti.
+            Digiaalto on erikoistunut rakentamaan nykyaikaisen laadukkaita
+            verkkosivuja, jotka tähtäävät hakukoneiden arvostamiin
+            web-standardeihin.
+          </p>
+          <p>
+            Parhaat käytännöt eivät pelkästään vaikuta positiivisesti
+            verkkosivusi parametreihin hakukoneiden algoritmeissä, vaan ne
+            parantavat myös asiakkaittesi käyttäjäkokemusta.
+          </p>
+          <p className="bold">
+            Jos olet tiedonhaluinen, voit tarkistaa muutamassa sekunnissa onko
+            sinun tai kilpailijasi verkkosivuissa parantamisen varaa.
           </p>
         </Fade>
-        <Fade delay={animDelay} direction="up">
-          <div className={styles.buttonWrapper}>
-            <Button
-              icon={<BiTestTube />}
-              text="Testaa Sivuja"
-              href="https://web.dev/measure/"
-              outside
-            />
-          </div>
+        <Fade delay={animDelay} direction="up" triggerOnce>
+          <Button
+            text="Arvioi verkkosivu"
+            href="https://web.dev/measure/"
+            outside
+          />
         </Fade>
       </div>
     </section>
