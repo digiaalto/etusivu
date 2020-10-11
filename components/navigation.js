@@ -39,10 +39,8 @@ export default Navigation
 
 const BurgerMenu = ({ sidebar, toggleSidebar }) => {
   return (
-    !sidebar && (
-      <button onClick={toggleSidebar} className={styles.burgerButton}>
-        <GiHamburgerMenu className={styles.burgerIcon} />
-      </button>
-    )
+    <button onClick={toggleSidebar} className={styles.burgerButton}>
+      <GiHamburgerMenu className={styles.burgerIcon} />
+    </button>
   )
 }
