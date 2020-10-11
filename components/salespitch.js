@@ -33,7 +33,7 @@ const SalesPitch = () => {
             verkkosivusi parametreihin hakukoneiden algoritmeissä, vaan ne
             parantavat myös asiakkaittesi käyttäjäkokemusta.
           </p>
-          <p className="bold">
+          <p className="bold" style={{ marginBottom: "2rem" }}>
             Jos olet tiedonhaluinen, voit tarkistaa muutamassa sekunnissa onko
             sinun tai kilpailijasi verkkosivuissa parantamisen varaa.
           </p>
