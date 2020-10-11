@@ -15,7 +15,7 @@ const Sidebar = ({ visible, toggleSidebar }) => {
     <Fragment>
       <div className={`${styles.panel} ${visible ? styles.open : null}`}>
         <button onClick={toggleSidebar} className={styles.burgerButton}>
-          <VscChromeClose className={styles.burgerIcon} />
+          <VscChromeClose className={styles.closeIcon} />
         </button>
         <div className={styles.content}>
           <h2 className={styles.header} onClick={() => activateLink("/")}>
