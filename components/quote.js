@@ -24,7 +24,7 @@ const Quote = () => {
               rel="noreferrer noopener"
               className={styles.source}
             >
-              ―Google I/O 2019
+              Google I/O 2019
             </a>
             <MdFormatQuote className={styles.quoteMark} />
           </div>
