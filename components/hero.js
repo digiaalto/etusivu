@@ -14,7 +14,7 @@ const Hero = () => {
           </h1>
           <h2 className={styles.subheader}>
             Digiaalto on erikoistunut rakentamaan tarkasti optimoituja
-            verkkosivuja, joiden toteutuksen takaa Googlen kehittämä laatutesti.
+            verkkosivuja joiden toteutuksen takaa Googlen kehittämä laatutesti.
           </h2>
           <Button text="Lue lisää" href="#laatutestaus" />
         </Zoom>
