@@ -4,16 +4,14 @@ const Price = () => {
   return (
     <section id="hinnoittelu" className={styles.section}>
       <div className={styles.content}>
-        <h2 className="headerAfter">Hinnoittelu</h2>
-        <p>
-          Hyvin toteutettu verkkosivu on fiksu investointi joka näkyy
+        <h2 className={styles.header}>
+          Superoptimoitu verkkosivu alkaen 3200€
+        </h2>
+        <h3 className={styles.subheader}>
+          Hyvin toteutettu verkkosivu on fiksu investointi joka näkyy yrityksesi
           tuottavuudessa.
-        </p>
-        <p className="bold">Optimoitu verkkosivu alkaen 2200 €</p>
-        <p className={styles.note}>
-          Työn hinnoitteluun vaikuttaa projektikohtaiset vaatimukset,
-          lähdemateriaali ja muut hankinnat ja palvelut.
-        </p>
+        </h3>
+        <p className={styles.note}>Digiaalto veloittaa 25% työn alkaessa.</p>
       </div>
     </section>
   )
