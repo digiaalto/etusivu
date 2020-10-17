@@ -25,7 +25,6 @@ const Button = (props) => {
 export default Button
 
 const ButtonWrapper = ({ center, children }) => {
-  console.log(center)
   return (
     <div
       className={`${styles.buttonWrapper} ${
