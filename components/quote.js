@@ -8,7 +8,7 @@ const Quote = () => {
   return (
     <section className={styles.section}>
       <div className={styles.flexWrapper}>
-        <Fade fraction={1} triggerOnce>
+        <Fade fraction={0.5} triggerOnce>
           <div className={styles.container}>
             <ImQuotesLeft className={styles.quoteMark} />
             <p className={styles.quoteText}>
