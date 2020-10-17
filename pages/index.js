@@ -2,7 +2,7 @@ import Layout from "../components/layout"
 import Hero from "../components/hero"
 import SalesPitch from "../components/salespitch"
 import Quote from "../components/quote"
-import Toteutus from "../components/toteutus"
+import LP_Process from "../components/LP_Process"
 import Price from "../components/price"
 import Contact from "../components/contact"
 import Infobar from "../components/infobar"
@@ -14,7 +14,7 @@ const IndexPage = () => {
         <Hero />
         <SalesPitch />
         <Quote />
-        <Toteutus />
+        <LP_Process />
         <Price />
         <Contact />
       </Layout>

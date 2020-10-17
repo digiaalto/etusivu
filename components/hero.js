@@ -16,7 +16,7 @@ const Hero = () => {
             Digiaalto on erikoistunut rakentamaan tarkasti optimoituja
             verkkosivuja joiden toteutuksen takaa Googlen kehittämä laatutesti.
           </h2>
-          <Button text="Lue lisää" href="#laatutestaus" />
+          <Button text="Lue lisää" href="#laatutestaus" center />
         </Zoom>
       </div>
     </section>

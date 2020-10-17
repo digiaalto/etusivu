@@ -1,5 +1,5 @@
 import styles from "../styles/quote.module.sass"
-import { MdFormatQuote } from "react-icons/md"
+import { ImQuotesLeft, ImQuotesRight } from "react-icons/im"
 import { Fade } from "react-awesome-reveal"
 
 const sourceUrl = "https://youtu.be/mLjxXPHuIJo?t=76"
@@ -10,7 +10,7 @@ const Quote = () => {
       <div className={styles.flexWrapper}>
         <Fade fraction={1} triggerOnce>
           <div className={styles.container}>
-            <MdFormatQuote className={styles.quoteMark} />
+            <ImQuotesLeft className={styles.quoteMark} />
             <p className={styles.quoteText}>
               Sivun latausnopeuden osoitetaan olevan tärkein tekijä käyttäjän
               mobiilikokemuksessa. Se on tärkeämpää kuin kuinka helppoa on
@@ -26,7 +26,7 @@ const Quote = () => {
             >
               Google I/O 2019
             </a>
-            <MdFormatQuote className={styles.quoteMark} />
+            <ImQuotesRight className={styles.quoteMark} />
           </div>
         </Fade>
       </div>

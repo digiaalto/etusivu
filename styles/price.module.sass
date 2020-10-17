@@ -7,9 +7,10 @@
 .header
 	margin-bottom: 0
 	@supports (background-clip: text) and (-webkit-text-fill-color: transparent) 
-		background-image: linear-gradient(to right, #007CF0, #00DFD8)
+		background-image: linear-gradient(to right, #FF4D4D, #F9CB28)
 		background-clip: text
 		-webkit-text-fill-color: transparent
+
 	&::after
 		display: block
 		content: " "
@@ -19,15 +20,11 @@
 		margin-top: 1rem
 		margin-bottom: 1.25rem
 
-.subheader
-	margin-top: 0
-	opacity: 0.9
-
 .note
 	display: inline-block
-	color: map-get($colors, textGray)
-	font-size: 0.95rem
-	opacity: 0.6
+	font-weight: 500
+	letter-spacing: 0.025rem
+	color: #FF4D4D
 
 @media (min-width: map-get($bp, tablet))
 	.content

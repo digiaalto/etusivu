@@ -6,43 +6,45 @@ const SalesPitch = () => {
   return (
     <section className={styles.section} id="laatutestaus">
       <div className={styles.content}>
-        <Fade fraction={1} direction="up" triggerOnce>
-          <span className={`miniheader ${styles.miniheader}`}>
-            Edelläkävijän nettisivut
-          </span>
-          <h2 className={`${styles.header} headerAfter`}>
-            Hakukoneet arvostavat laatua
-          </h2>
-          <p>
-            Google Lighthouse on verkkosivujen laatutesti jota Digiaalto käyttää
-            verkkosivusi kehityksen yhteydessä.
-          </p>
-          <p>
-            Lighthouse auditoi mm. nettisivun suorituskyvyn, saavutettavuuden ja
-            hakukoneoptimoinnin. Lopuksi saat pistearvion ja selvityksen
-            kohdista josisa esiintyi puutteita.
-          </p>
-          <p>
-            Digiaalto on erikoistunut rakentamaan laatusivuja ilman puutteita ja
-            vanhentuneista käytännöistä seuraavia vikoja. Hakukoneiden
-            vaatimuksiin vastaaminen ja web-standardien seuranta johtaa
-            menestyksekkääseen nettiläsnäoloon.
-          </p>
-          <p>
-            Parhaat käytännöt eivät pelkästään vaikuta positiivisesti
-            verkkosivusi parametreihin hakukoneiden algoritmeissä. Myös
-            asiakkaiden käyttökokemus kohenee.
-          </p>
-          <p className="bold" style={{ marginBottom: "2rem" }}>
-            Jos olet tiedonhaluinen, voit tarkistaa muutamassa sekunnissa onko
-            sinun tai kilpailijasi verkkosivuissa parantamisen varaa.
-          </p>
-          <Button
-            text="Arvioi verkkosivu"
-            href="https://web.dev/measure/"
-            outside
-          />
-        </Fade>
+        <div className={styles.column}>
+          <Fade fraction={1} direction="up" triggerOnce>
+            <h2 className={styles.header}>Hakukoneet vaativat laatua</h2>
+            <p>
+              Digiaalto on erikoistunut koodaamaan normaalia tehokkaampia
+              verkkosivuja jotka keräävät korkeat pisteet Googlelta, mikä johtaa
+              parempaan menestymiseen verkossa.
+            </p>
+            <p>
+              Google Lighthouse on Googlen kehittämä ilmainen laatutesti joka on
+              käytössä globaalisti verkkosivujen tulikokeena.
+            </p>
+            <p>
+              Lighthouse suorittaa automaattisesti satoja pieniä testejä jotka
+              mittaavat minkä tahansa verkkosivun suorituskyvyn,
+              saavutettavuuden ja hakukoneoptimoinnin. Lopuksi se antaa
+              yksinkertaisen arvosanan verkkosivun laadusta.
+            </p>
+            <p>
+              Teknisesti onnistunut sivu ei pelkästään vaikuta positiivisesti
+              hakukoneiden algoritmeissä, myös asiakkaasi käyttökokemus ja
+              vuorovaikutus kohenee.
+            </p>
+          </Fade>
+        </div>
+        <div className={styles.column}>
+          <Fade fraction={1} direction="right" triggerOnce>
+            <h2 className={styles.header2}>
+              Auditoi kilpilijasi tai omat vanhat verkkosivusi Googlen
+              laatutestillä, muutamassa sekunnissa, ilmaiseksi!
+            </h2>
+            <Button
+              text="Suorita mittaus"
+              href="https://web.dev/measure/"
+              center
+              outside
+            />
+          </Fade>
+        </div>
       </div>
     </section>
   )

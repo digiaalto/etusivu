@@ -7,11 +7,7 @@ const Price = () => {
         <h2 className={styles.header}>
           Superoptimoitu verkkosivu alkaen 3200€
         </h2>
-        <h3 className={styles.subheader}>
-          Hyvin toteutettu verkkosivu on fiksu investointi joka näkyy yrityksesi
-          tuottavuudessa.
-        </h3>
-        <p className={styles.note}>Digiaalto veloittaa 25% työn alkaessa.</p>
+        <p className={styles.note}>Digiaalto laskuttaa 50% työn alkaessa.</p>
       </div>
     </section>
   )
