@@ -7,23 +7,18 @@
 
 .header
 	margin-bottom: 0
-	@supports (background-clip: text) and (-webkit-text-fill-color: transparent) 
-		background-image: linear-gradient(to right, #FF4D4D, #F9CB28)
-		background-clip: text
-		-webkit-text-fill-color: transparent
+	font-size: 2rem
 
 .note
 	display: inline-block
 	font-weight: 500
 	letter-spacing: 0.025rem
-	color: #FF4D4D
 
 @media (min-width: map-get($bp, tablet))
 	.content
 		text-align: center
 		max-width: 600px
 	.header
-		margin-bottom: 1rem
 		font-size: 2rem
 		&::after
 			display: none

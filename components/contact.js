@@ -23,9 +23,9 @@ const Contact = () => {
     <section className={styles.section} id="yhteydenottolomake">
       <div className={styles.content}>
         <img className={styles.paperAirplane} src="plane.svg" />
-        <span className={styles.header}>
+        <h2 className={styles.header}>
           Haluatko tietää enemmän Digiaallon verkkoratkaisusta?
-        </span>
+        </h2>
         <div className={styles.form}>
           <form onSubmit={handleSubmit}>
             <Input

@@ -3,28 +3,22 @@
 .buttonWrapper
 	display: flex
 
-.button
+.buttonAnchor
 	display: inline-flex
 	align-items: center
-	padding: 0.5rem 1rem
 	border-radius: 9999px
-	font-weight: 600
-	text-transform: uppercase
-	letter-spacing: 0.075rem
-	text-align: center
-	text-decoration: none !important
 	border: 3px solid map-get($colors, highlight)
+	font-family: $headerFont
+	letter-spacing: 0.1rem
+	text-transform: uppercase
+	text-align: center
 	color: map-get($colors, textLight) !important
 	background-color: map-get($colors, highlight)
+	padding: 0.75rem 1.5rem
 	transition: all 0.25s ease
 
 	&:hover 
-		padding: 0.5rem 1.5rem
-	
-	& > svg
-		display: none
-		font-size: 1.1rem
-		transition: transform 0.25s ease
+		padding: 0.75rem 2rem
 	
 .buttonWrapperCenter
 	justify-content: center

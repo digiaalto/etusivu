@@ -3,7 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "description": "Digiaalto.fi - surffaa aallon harjalla",
-  "keywords": "digiaalto",
+  "keywords": [
+    "digiaalto",
+    "verkkosuunnittelija",
+    "verkkokehittäjä",
+    "web-design"
+  ],
   "license": "UNLICENSED",
   "author": "Digiaalto.fi",
   "scripts": {
@@ -14,6 +19,8 @@
   },
   "dependencies": {
     "disable-scroll": "^0.5.1",
+    "fontsource-lora": "^3.0.5",
+    "fontsource-open-sans": "^3.0.9",
     "next": "9.5.3",
     "next-on-netlify": "^2.4.0",
     "prop-types": "^15.7.2",
@@ -24,10 +31,7 @@
     "react-icons": "^3.11.0",
     "react-lazyload": "^3.0.0",
     "react-typography": "^0.16.19",
-    "sass": "^1.26.11",
-    "typography": "^0.16.19",
-    "typography-theme-github": "^0.16.19",
-    "typography-theme-us-web-design-standards": "^0.16.19"
+    "sass": "^1.26.11"
   },
   "devDependencies": {
     "prettier": "^2.1.2"

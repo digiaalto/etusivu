@@ -8,15 +8,18 @@ const SalesPitch = () => {
       <div className={styles.content}>
         <div className={styles.column}>
           <Fade fraction={1} direction="up" triggerOnce>
-            <h2 className={styles.header}>Hakukoneet vaativat laatua</h2>
+            <h2 className={styles.header}>
+              Paras hakukoneoptimointi vaatii laatua
+            </h2>
             <p>
               Digiaalto on erikoistunut koodaamaan normaalia tehokkaampia
               verkkosivuja jotka keräävät korkeat pisteet Googlelta, mikä johtaa
               parempaan menestymiseen verkossa.
             </p>
             <p>
-              Google Lighthouse on Googlen kehittämä ilmainen laatutesti joka on
-              käytössä globaalisti verkkosivujen tulikokeena.
+              Testaukseen käytetään Googlen Lighthousea joka on Googlen
+              kehittämä ilmainen laatutesti mikä on käytössä globaalisti
+              verkkosivujen tulikokeena.
             </p>
             <p>
               Lighthouse suorittaa automaattisesti satoja pieniä testejä jotka
@@ -34,8 +37,7 @@ const SalesPitch = () => {
         <div className={styles.column}>
           <Fade fraction={1} direction="right" triggerOnce>
             <h2 className={styles.header2}>
-              Auditoi kilpilijasi tai omat vanhat verkkosivusi Googlen
-              laatutestillä, muutamassa sekunnissa, ilmaiseksi!
+              Auditoi kilpilijasi tai yrityksesi verkkosivut!
             </h2>
             <Button
               text="Suorita mittaus"

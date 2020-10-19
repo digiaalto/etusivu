@@ -2,18 +2,17 @@ import styles from "./button.module.sass"
 import Link from "next/link"
 
 const Button = (props) => {
-  let center = props.center
   if (props.outside)
     return (
-      <ButtonWrapper center>
+      <ButtonWrapper center={props.center}>
         <Anchor {...props} />
       </ButtonWrapper>
     )
   else
     return (
-      <ButtonWrapper center>
+      <ButtonWrapper center={props.center}>
         <Link href={props.href}>
-          <a className={styles.button}>
+          <a className={styles.buttonAnchor}>
             {props.icon}
             {props.text}
           </a>
@@ -42,7 +41,7 @@ const Anchor = ({ icon, text, href, secondary }) => {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={styles.button}
+      className={styles.buttonAnchor}
     >
       {icon}
       {text}

@@ -1,126 +1,125 @@
 @import "_partials.sass"
 
 .section
-  padding: map-get($padding, mobile)
-  background-color: #fafafd
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 1)), url("../public/grid.png")
-  background-repeat: repeat
-  background-position: center center
+	padding: map-get($padding, mobile)
+	background-color: #fafafd
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 1)), url("../public/grid.png")
+	background-repeat: repeat
+	background-position: center center
 
 .content
-  display: flex
-  flex-wrap: wrap
-  justify-content: center
-  gap: 2rem
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	gap: 2rem
 
 .header
-  font-size: 1.8rem
-  margin-bottom: 0
+	font-size: 1.8rem
+	margin-bottom: 0
 
 .processTldr
-  font-size: 1.2rem
-  
+	font-size: 1.2rem
+
 .bigHeader
-  font-size: 2rem
-  margin-top: 0
-  margin-bottom: 1rem
-  @supports (background-clip: text) and (-webkit-text-fill-color: transparent) 
-    background-image: linear-gradient(to right, #7928CA, #FF0080)
-    background-clip: text
-    -webkit-text-fill-color: transparent
+	font-size: 2rem
+	font-weight: 400
+	margin-top: 0
+	margin-bottom: 1rem
+	@supports (background-clip: text) and (-webkit-text-fill-color: transparent)
+		background-image: linear-gradient(to right, #7928CA, #FF0080)
+		background-clip: text
+		-webkit-text-fill-color: transparent
 
 .column
-  display: flex
-  flex-wrap: wrap
-  gap: 0.5rem
+	display: flex
+	flex-wrap: wrap
+	gap: 0.5rem
 
-  &:first-of-type
-    position: relative
-    flex-direction: column
-    align-items: center
+	&:first-of-type
+		position: relative
+		flex-direction: column
+		align-items: center
 
-    img
-      max-width: 180px
+		img
+			max-width: 180px
 
-  &:last-of-type
-    flex-direction: column
+	&:last-of-type
+		flex-direction: column
 
 .textBlocks
-  display: flex
-  flex-direction: row
-  flex-wrap: wrap
-  gap: 1.5rem
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	gap: 1.5rem
 
 .textBlock
-  max-width: 400px
+	max-width: 400px
 
-  &:last-of-type
-    max-width: 500px
+	&:last-of-type
+		max-width: 500px
 
 .blockMiniheader
-  display: block
-  font-weight: 700
-  font-size: 1.2rem
-  line-height: 1.1rem
+	display: block
+	font-size: 1.1rem
+	font-weight: 800
+	font-family: $headerFont
 
 .blockHeader
-  display: block
-  font-size: 1.8rem
-  font-weight: 400
+	display: block
+	font-size: 1.7rem
 
 @media (min-width: map-get($bp, laptop))
-  .section
-    padding: map-get($padding, laptop)
-  .column
-    max-width: 600px
-  .textBlock
-    max-width: 280px
+	.section
+		padding: map-get($padding, laptop)
+	.column
+		max-width: 600px
+	.textBlock
+		max-width: 280px
 
 @media (min-width: map-get($bp, desktop))
-  .bigHeader
-    font-size: 2.5rem
-    max-width: 500px
-    font-weight: 500
+	.bigHeader
+		font-size: 2.5rem
+		max-width: 500px
 
-  .content
-    gap: 3rem
+	.content
+		gap: 3rem
 
-  .column
-    display: flex
-    flex-wrap: wrap
-    gap: 0.5rem
+	.column
+		display: flex
+		flex-wrap: wrap
+		gap: 0.5rem
 
-    &:first-of-type
-      flex-direction: column
-      align-items: center
-      padding-right: 200px
-      display: inline-block
-      width: 380px
-      margin-top: 100px
+		&:first-of-type
+			flex-direction: column
+			align-items: center
+			padding-right: 200px
+			display: inline-block
+			width: 380px
+			margin-right: 100px
 
-      img
-        position: absolute
-        max-width: 280px
-        &:nth-of-type(1)
-          z-index: 5
-          transform: rotateZ(-10deg)
-        &:nth-of-type(2)
-          z-index: 3
-          top: 200px
-          left: -140px
-          transform: rotateZ(20deg)
-        &:nth-of-type(3)
-          z-index: 4
-          top: 210px
-          right: 0
-          transform: rotateZ(-15deg)
-        &:nth-of-type(4)
-          z-index: 2
-          top: 390px
-          left: -100px
-          transform: rotateZ(20deg)
-        &:nth-of-type(5)
-          z-index: 1
-          top: 440px
-          right: 0
-          transform: rotateZ(-5deg)
+			img
+				position: absolute
+				max-width: 280px
+				&:nth-of-type(1)
+					z-index: 5
+					transform: rotateZ(-10deg)
+				&:nth-of-type(2)
+					z-index: 3
+					top: 200px
+					left: -140px
+					transform: rotateZ(20deg)
+				&:nth-of-type(3)
+					z-index: 4
+					top: 210px
+					right: 0
+					transform: rotateZ(-15deg)
+				&:nth-of-type(4)
+					z-index: 2
+					top: 390px
+					left: -100px
+					transform: rotateZ(20deg)
+				&:nth-of-type(5)
+					z-index: 1
+					top: 440px
+					right: 0
+					transform: rotateZ(-5deg)

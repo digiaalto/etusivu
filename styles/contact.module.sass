@@ -21,10 +21,6 @@
 .header
 	display: inline-block
 	margin-bottom: 1.5rem
-	font-size: 1.3rem
-	line-height: 1.5rem
-	font-weight: 600
-	letter-spacing: 0.05rem
 
 .subheader
 	color: rgba(255, 255, 255, 0.85)
@@ -32,6 +28,9 @@
 
 .form
 	max-width: 600px
+
+.label
+	font-size: 1rem
 
 .input
 	width: 100%
@@ -41,32 +40,31 @@
 	border-radius: 10px
 	background-color: rgba(0, 0, 0, 0.1)
 	color: #eee
+	font-size: 0.9rem
+	font-family: $headerFont !important
 	&:focus
 		outline: none
 		border: 2px solid map-get($colors, secondary)
 
 .submit
-	padding: 1rem 2rem
+	padding: 0.75rem 1.5rem
 	margin-top: 1rem
 	border: none
-	text-transform: uppercase
-	letter-spacing: 0.05rem
-	font-weight: 600
 	border-radius: 9999px
 	color: map-get($colors, textLight)
 	background-color: map-get($colors, highlight)
 	cursor: pointer
+	font-family: $headerFont
+	font-size: 1rem
+	text-transform: uppercase
+	letter-spacing: 0.1rem
 	transition: all 0.2s ease
+
 	&:focus
 		outline: none
-	&:hover
-		padding: 1rem 4rem
+	&:hover 
+		padding: 0.75rem 2rem
 
 @media (min-width: map-get($bp, laptop))
 	.content
 		padding: map-get($padding, laptop)
-
-@media (min-width: map-get($bp, tablet))
-	.header
-		font-size: 2rem
-		line-height: 2.2rem

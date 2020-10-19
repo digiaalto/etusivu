@@ -1,6 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from "next/document"
-import { TypographyStyle } from "react-typography"
-import typography from "../utils/typography"
 
 class CustomDocument extends Document {
   static async getInitialProps(ctx) {
@@ -11,9 +9,7 @@ class CustomDocument extends Document {
   render() {
     return (
       <Html lang="fi">
-        <Head>
-          <TypographyStyle typography={typography} />
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />
