@@ -12,10 +12,10 @@ const Hero = () => {
             verkosta <span className={styles.highlight2}> helposti </span>
             sekä <span className={styles.highlight3}> nopeasti?</span>
           </h1>
-          <h2 className={styles.subheader}>
+          <h1 className={styles.subheader}>
             Digiaalto on erikoistunut rakentamaan tarkasti optimoituja
             verkkosivuja joiden toteutuksen takaa Googlen kehittämä laatutesti.
-          </h2>
+          </h1>
           <Button text="Lue lisää" href="#laatutestaus" center />
         </Zoom>
       </div>

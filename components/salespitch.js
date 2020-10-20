@@ -1,6 +1,8 @@
 import styles from "../styles/salespitch.module.sass"
+import Link from "next/link"
 import { Fade } from "react-awesome-reveal"
-import Button from "./utility/button"
+
+const testUrl = "https://web.dev/measure/"
 
 const SalesPitch = () => {
   return (
@@ -8,43 +10,37 @@ const SalesPitch = () => {
       <div className={styles.content}>
         <div className={styles.column}>
           <Fade fraction={1} direction="up" triggerOnce>
-            <h2 className={styles.header}>
-              Paras hakukoneoptimointi vaatii laatua
-            </h2>
+            <h2 className={styles.header}>Uusi tekniikka, uusi potenttiaali</h2>
             <p>
-              Digiaalto on erikoistunut koodaamaan normaalia tehokkaampia
-              verkkosivuja jotka keräävät korkeat pisteet Googlelta, mikä johtaa
-              parempaan menestymiseen verkossa.
+              Digiaalto rakentaa huolella optimoituja verkkosivuja tähtäämällä
+              korkeisiin pisteisiin globaalisti suositussa verkkosivun
+              laatutestissä.
+            </p>
+            <h2 className={styles.header2}>Tulikokeena Google Lighthousea.</h2>
+            <p>
+              Lighthouse suorittaa automaattisesti satoja testejä jotka etsivät
+              puutteita testikohteen suorituskyvyssä, saavutettavuudessa ja
+              hakukoneoptimoinnissa.
             </p>
             <p>
-              Testaukseen käytetään Googlen Lighthousea joka on Googlen
-              kehittämä ilmainen laatutesti mikä on käytössä globaalisti
-              verkkosivujen tulikokeena.
-            </p>
-            <p>
-              Lighthouse suorittaa automaattisesti satoja pieniä testejä jotka
-              mittaavat minkä tahansa verkkosivun suorituskyvyn,
-              saavutettavuuden ja hakukoneoptimoinnin. Lopuksi se antaa
-              yksinkertaisen arvosanan verkkosivun laadusta.
-            </p>
-            <p>
-              Teknisesti onnistunut sivu ei pelkästään vaikuta positiivisesti
-              hakukoneiden algoritmeissä, myös asiakkaasi käyttökokemus ja
-              vuorovaikutus kohenee.
+              Tulokset eivät kerro pelkästään sivujen potentiaalista
+              hakukoneiden algoritmeissä, niistä voi päätellä myös vieralijoiden
+              poistumisprosentti ja käyttökokemuksen onnistuneisuus.
             </p>
           </Fade>
         </div>
         <div className={styles.column}>
           <Fade fraction={1} direction="right" triggerOnce>
-            <h2 className={styles.header2}>
-              Auditoi kilpilijasi tai yrityksesi verkkosivut!
-            </h2>
-            <Button
-              text="Suorita mittaus"
-              href="https://web.dev/measure/"
-              center
-              outside
-            />
+            <Link href={testUrl}>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.testLink}
+              >
+                Selvitä miten kilpailijasi tai nykyiset verkkosivusi menestyvät
+                Googlen testissä.
+              </a>
+            </Link>
           </Fade>
         </div>
       </div>
