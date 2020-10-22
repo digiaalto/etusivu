@@ -2,7 +2,7 @@ import styles from "../styles/LP_Process.module.sass"
 
 const LP_Process = () => {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="toteutus">
       <div className={styles.content}>
         <div className={styles.column}>
           <Images />

@@ -1,0 +1,14 @@
+@import "../../styles/_partials"
+
+.navList
+  display: none
+  list-style: none
+  gap: 1rem
+  @media (min-width: map-get($bp, laptop))
+    display: flex
+
+.navItem
+  cursor: pointer
+  color: map-get($colors, link)
+  &:hover
+    color: map-get($colors, linkAlt)

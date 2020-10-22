@@ -10,13 +10,7 @@ const SalesPitch = () => {
       <div className={styles.content}>
         <div className={styles.column}>
           <Fade fraction={1} direction="up" triggerOnce>
-            <h2 className={styles.header}>Uusi tekniikka, uusi potenttiaali</h2>
-            <p>
-              Digiaalto rakentaa huolella optimoituja verkkosivuja tähtäämällä
-              korkeisiin pisteisiin globaalisti suositussa verkkosivun
-              laatutestissä.
-            </p>
-            <h2 className={styles.header2}>Tulikokeena Google Lighthousea.</h2>
+            <h2 className={styles.header2}>Laatutestinä Google Lighthouse</h2>
             <p>
               Lighthouse suorittaa automaattisesti satoja testejä jotka etsivät
               puutteita testikohteen suorituskyvyssä, saavutettavuudessa ja
@@ -25,7 +19,11 @@ const SalesPitch = () => {
             <p>
               Tulokset eivät kerro pelkästään sivujen potentiaalista
               hakukoneiden algoritmeissä, niistä voi päätellä myös vieralijoiden
-              poistumisprosentti ja käyttökokemuksen onnistuneisuus.
+              poistumisprosentti ja käyttökokemus.
+            </p>
+            <p className="bold">
+              Digiaalto tähtää kaikkien web-standardien ja parhaiden käytäntöjen
+              realisointiin.
             </p>
           </Fade>
         </div>
@@ -37,8 +35,8 @@ const SalesPitch = () => {
                 rel="noopener noreferrer"
                 className={styles.testLink}
               >
-                Selvitä miten kilpailijasi tai nykyiset verkkosivusi menestyvät
-                Googlen testissä.
+                Testaa miten kilpailijasi tai nykyiset verkkosivusi pärjäävät
+                Googlen tulikokeessa.
               </a>
             </Link>
           </Fade>
