@@ -10,20 +10,20 @@ const SalesPitch = () => {
       <div className={styles.content}>
         <div className={styles.column}>
           <Fade fraction={1} direction="up" triggerOnce>
-            <h2 className={styles.header2}>Laatutestinä Google Lighthouse</h2>
+            <h2 className={styles.header2}>Laadun takaa Google Lighthouse</h2>
             <p>
-              Lighthouse suorittaa automaattisesti satoja testejä jotka etsivät
-              puutteita testikohteen suorituskyvyssä, saavutettavuudessa ja
+              Lighthouse on verkkosivujen laatutesti joka havaitsee puutteita
+              testikohteen suorituskyvyssä, saavutettavuudessa ja
               hakukoneoptimoinnissa.
             </p>
             <p>
-              Tulokset eivät kerro pelkästään sivujen potentiaalista
-              hakukoneiden algoritmeissä, niistä voi päätellä myös vieralijoiden
-              poistumisprosentti ja käyttökokemus.
+              Testin tulokset eivät kerro pelkästään nettisivun potentiaalista
+              hakukoneen algoritmissä, niistä voi myös päätellä vieralijoiden
+              poistumisprosentin ja käyttökokemusen tason.
             </p>
             <p className="bold">
-              Digiaalto tähtää kaikkien web-standardien ja parhaiden käytäntöjen
-              realisointiin.
+              Digiaalto tähtää kiitettävään arvosanaan rakentaessaan
+              verkkosivuja kilpailijoitasi kehittyneemmällä tekniikalla.
             </p>
           </Fade>
         </div>
