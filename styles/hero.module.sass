@@ -1,4 +1,7 @@
 @import "_partials.sass"
+$tabletWidth: 37rem
+$laptopWidth: 50rem
+$desktopSize: 70rem
 
 .section
 	padding: map-get($padding, mobile)
@@ -50,8 +53,6 @@
 // MEDIA QUERIES
 	
 @media (min-width: map-get($bp, tablet))
-	$tabletWidth: 37rem
-
 	.content
 		align-items: flex-start
 	.lueLisaaContainer
@@ -64,8 +65,6 @@
 		font-size: $h4Size
 
 @media (min-width: map-get($bp, laptop))
-	$laptopWidth: 50rem
-
 	.section
 		padding: map-get($padding, laptop)
 	.salesPitch
@@ -78,7 +77,6 @@
 
 
 @media (min-width: map-get($bp, desktop))
-	$desktopSize: 58rem
 	.salesPitch
 		max-width: $desktopSize
 		font-size: 6rem
