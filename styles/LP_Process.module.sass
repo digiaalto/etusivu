@@ -13,19 +13,20 @@
 	justify-content: center
 	gap: 2rem
 
-.header
-	font-size: 1.8rem
+.topHeader
+	font-size: $h4Size
+	font-weight: 600
 	margin-bottom: 0
 
-.processTldr
-	font-size: 1.2rem
+.middleHeader
+	font-size: $h5Size
+	margin-top: .5rem
 
-.bigHeader
-	font-size: 2rem
-	line-height: 2.4rem
-	font-weight: 400
-	margin-top: 0
-	margin-bottom: 1rem
+.bottomHeader
+	font-size: $h2Size
+	font-weight: 800
+	margin: 0
+	margin-bottom: 1.5rem
 	@supports (background-clip: text) and (-webkit-text-fill-color: transparent)
 		background-image: linear-gradient(to right, #7928CA, #FF0080)
 		background-clip: text
@@ -61,12 +62,11 @@
 
 .blockMiniheader
 	display: block
-	font-size: 1.1rem
 	font-weight: 800
 
 .blockHeader
-	display: block
-	font-size: 1.7rem
+	margin: 0
+	margin-top: -0.1rem
 
 @media (min-width: map-get($bp, laptop))
 	.section
@@ -77,11 +77,6 @@
 		max-width: 280px
 
 @media (min-width: map-get($bp, desktop))
-	.bigHeader
-		font-size: 2.5rem
-		line-height: 3rem
-		max-width: 500px
-
 	.content
 		gap: 3rem
 

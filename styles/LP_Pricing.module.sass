@@ -1,0 +1,26 @@
+@import "_partials.sass"
+
+.section
+	padding: map-get($padding, mobile)
+	display: flex
+	justify-content: center
+
+.content
+	max-width: 480px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-content: center
+	text-align: center
+	margin: 2rem 0
+
+.header
+	font-size: $h3Size
+	margin-top: 1rem
+	font-weight: 800
+	line-height: $headerLineHeight
+	text-align: center
+	margin-top: 0
+
+.note
+	color: map-get($colors, textGray)

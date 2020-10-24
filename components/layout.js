@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Head from "next/head"
-import Footer from "../components/footer"
 import Nav from "../components/navigation"
 
 const Layout = ({ title, children, infobar = null }) => {
@@ -16,9 +15,8 @@ const Layout = ({ title, children, infobar = null }) => {
         <title>{title}</title>
       </Head>
       {infobar}
-      <Nav />
+      {/* <Nav /> */}
       <main>{children}</main>
-      <Footer />
     </React.Fragment>
   )
 }

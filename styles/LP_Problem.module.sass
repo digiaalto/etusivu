@@ -1,0 +1,22 @@
+@import "_partials.sass"
+
+.section
+	z-index: 0
+	position: relative
+	padding: map-get($padding, mobile)
+	background-color: #fafafd
+
+.column
+	flex: 1
+	&:last-of-type
+		justify-content: flex-end
+		align-items: flex-end
+
+.header
+	margin-top: 0
+	font-size: 1.75rem
+	font-weight: 800
+
+@media (min-width: map-get($bp, laptop))
+	.section
+		padding: map-get($padding, laptop)

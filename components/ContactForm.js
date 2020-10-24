@@ -1,7 +1,7 @@
 import { useState } from "react"
-import styles from "../styles/contact.module.sass"
+import styles from "../styles/ContactForm.module.sass"
 
-const Contact = () => {
+const ContactForm = () => {
   const [form, setForm] = useState({
     nimi: "",
     yritys: "",
@@ -23,9 +23,9 @@ const Contact = () => {
     <section className={styles.section} id="yhteystiedot">
       <div className={styles.content}>
         <img className={styles.paperAirplane} src="plane.svg" />
-        <h2 className={styles.header}>
+        <h4 className={styles.header}>
           Haluatko tietää enemmän Digiaallon verkkoratkaisusta?
-        </h2>
+        </h4>
         <div className={styles.form}>
           <form onSubmit={handleSubmit}>
             <Input
@@ -74,7 +74,7 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default ContactForm
 
 const Input = ({
   label,

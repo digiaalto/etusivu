@@ -8,13 +8,15 @@ const LP_Process = () => {
           <Images />
         </div>
         <div className={styles.column}>
-          <h2 className={styles.header}>Prosessi</h2>
-          <p className={styles.processTldr}>
+          <h4 className={styles.topHeader}>Prosessi</h4>
+          <h3 className={styles.middleHeader}>
             Virtaviivainen toteutusprosessi nopeuttaa tuotteen julkaisua. Voit
             tulla pöytään ideat valmiina tai voimme löytää parhaat strategiat
             yhdessä.
-          </p>
-          <h2 className={styles.bigHeader}>Tehostetun Verkkosivun Toteutus</h2>
+          </h3>
+          <h4 className={styles.bottomHeader}>
+            Tehostetun Verkkosivun Toteutus
+          </h4>
           <div className={styles.textBlocks}>
             <TextBlock
               miniheader="Aloitetaan"
@@ -54,7 +56,7 @@ const TextBlock = ({ miniheader, header, text }) => {
   return (
     <div className={styles.textBlock}>
       <span className={styles.blockMiniheader}>{miniheader}</span>
-      <span className={styles.blockHeader}>{header}</span>
+      <h4 className={styles.blockHeader}>{header}</h4>
       <p className={styles.blockText}>{text}</p>
     </div>
   )

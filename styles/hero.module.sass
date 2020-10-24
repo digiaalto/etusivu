@@ -1,27 +1,40 @@
 @import "_partials.sass"
 
 .section
-	display: flex
-	align-items: center
-	justify-content: center
 	padding: map-get($padding, mobile)
 
-.particles
-	display: none
-
 .content
+	z-index: 1
 	display: flex
 	flex-direction: column
 	align-items: center
 	color: map-get($colors, textDark)
-	text-align: center
-	z-index: 1
+
+.salesPitch
+	display: block
+	font-size: $h1Size
+	line-height: 1.1
+	font-weight: 800
+	margin-top: 1rem
+	margin-bottom: 3rem
+
+.directionIcons
+	display: flex
+	flex-direction: column
+	margin: 1rem 0
+
+.directionIcon
+	font-size: 4rem
+	margin-top: -2rem
 
 .header
-	margin-top: 0
-	font-size: 2.5rem
-	font-weight: 800
-	
+	margin: 0
+	font-size: $h5Size
+
+.lueLisaa
+	max-width: 180px
+	margin: 8rem 0
+
 .highlight
 	@supports (background-clip: text) and (-webkit-text-fill-color: transparent) 
 		background-image: linear-gradient(to right, #007CF0, #00DFD8)
@@ -37,36 +50,3 @@
 		background-image: linear-gradient(to right, #FF4D4D, #F9CB28)
 		background-clip: text
 		-webkit-text-fill-color: transparent
-
-.subheader
-	margin-bottom: 2rem
-	max-width: 700px
-	border-bottom: none
-	font-weight: 400
-	font-size: 1.333rem
-
-@media (min-width: map-get($bp, tablet))
-	.particles
-		position: absolute
-		top: 0
-		right: 0
-		bottom: 0
-		left: 0
-		width: 100%
-		height: 100%
-		display: block
-
-	.header
-		font-size: 4rem
-		line-height: 4.2rem
-
-@media (min-width: map-get($bp, laptop))
-	.section
-		padding: map-get($padding, laptop)
-	.content
-		max-width: 60rem
-
-@media (min-width: map-get($bp, desktop))
-		.header
-			font-size: 6rem
-			line-height: 6rem

@@ -3,17 +3,18 @@
 .panel
 	z-index: 1050
 	visiblity: hidden
+	position: fixed
 	display: flex
 	flex-direction: column
-	position: fixed
-	bottom: 0
-	right: 0
 	height: 100%
 	min-width: 280px
-	transform: translateX(100vw)
-	overflow: hidden
 	background-color: map-get($colors, navElements)
 	color: map-get($colors, textLight)
+
+.open
+	transition: transform 0.5s ease
+	visiblity: visible
+	left: 0
 
 .burgerButton
 	display: flex
@@ -41,11 +42,6 @@
 	text-align: right
 	margin-top: 1rem
 	margin-right: 2rem
-
-.open
-	transition: transform 0.5s ease
-	visiblity: visible
-	transform: translateX(0)
 
 .header
 	display: inline-block
