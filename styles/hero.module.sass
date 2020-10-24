@@ -18,22 +18,18 @@
 	margin-top: 1rem
 	margin-bottom: 3rem
 
-.directionIcons
-	display: flex
-	flex-direction: column
-	margin: 1rem 0
-
-.directionIcon
-	font-size: 4rem
-	margin-top: -2rem
-
 .header
 	margin: 0
 	font-size: $h5Size
 
+.lueLisaaContainer
+	display: flex
+	justify-content: center
+
 .lueLisaa
-	max-width: 180px
-	margin: 8rem 0
+	max-width: 10rem
+	margin-top: 5rem
+	margin-bottom: 2rem
 
 .highlight
 	@supports (background-clip: text) and (-webkit-text-fill-color: transparent) 
@@ -50,3 +46,39 @@
 		background-image: linear-gradient(to right, #FF4D4D, #F9CB28)
 		background-clip: text
 		-webkit-text-fill-color: transparent
+
+// MEDIA QUERIES
+	
+@media (min-width: map-get($bp, tablet))
+	$tabletWidth: 37rem
+
+	.content
+		align-items: flex-start
+	.lueLisaaContainer
+		justify-content: flex-start
+	.salesPitch
+		max-width: $tabletWidth
+		font-size: 4rem
+	.header
+		max-width: $tabletWidth
+		font-size: $h4Size
+
+@media (min-width: map-get($bp, laptop))
+	$laptopWidth: 50rem
+
+	.section
+		padding: map-get($padding, laptop)
+	.salesPitch
+		max-width: $laptopWidth
+		font-size: 5rem
+	.header
+		max-width: $laptopWidth / 1.2
+	.lueLisaa
+		max-width: 13rem
+
+
+@media (min-width: map-get($bp, desktop))
+	$desktopSize: 55rem
+	.salesPitch
+		max-width: $desktopSize
+		font-size: 6rem

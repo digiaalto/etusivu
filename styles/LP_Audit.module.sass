@@ -1,7 +1,10 @@
 @import "_partials"
 
+// linear-gradient(to right, #FF4D4D, #F9CB28)
+
 .section
 	padding: map-get($padding, mobile)
+	margin: 5rem 0
 
 .content
 	display: flex
@@ -17,3 +20,27 @@
 	line-height: $headerLineHeight
 	margin-bottom: 2rem
 	text-align: center
+	max-width: $sectionHeaderWidth
+
+.button
+	background: linear-gradient(to right, #FF4D4D, #F9CB28)
+	padding: 1rem 3rem
+	border-radius: 9999px
+	color: map-get($colors, textLight)
+	font-weight: 600
+	letter-spacing: 0.1rem
+	font-size: $h5Size
+	cursor: pointer
+	transition: all 0.3s ease
+
+	&:hover
+		color: inherit
+
+@media (min-width: map-get($bp, tablet))
+	.suggestion
+		font-size: $h2Size
+
+@media (min-width: map-get($bp, laptop))
+	.suggestion
+		font-size: $h1Size * 1.2
+		max-width: $sectionHeaderWidth * 2

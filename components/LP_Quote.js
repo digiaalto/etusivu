@@ -1,9 +1,9 @@
-import styles from "../styles/quote.module.sass"
+import styles from "../styles/LP_Quote.module.sass"
 import { Fade } from "react-awesome-reveal"
 
 const sourceUrl = "https://youtu.be/mLjxXPHuIJo?t=76"
 
-const Quote = () => {
+const LP_Quote = () => {
   return (
     <section className={styles.section}>
       <div className={styles.flexWrapper}>
@@ -31,4 +31,4 @@ const Quote = () => {
   )
 }
 
-export default Quote
+export default LP_Quote

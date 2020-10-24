@@ -1,18 +1,22 @@
 import styles from "../styles/LP_Audit.module.sass"
-import Button from "./utility/button"
+
+const auditLink = "https://www.web.dev/measure"
 
 const LP_Audit = () => {
   return (
     <section className={styles.section}>
       <div className={styles.content}>
         <span className={styles.suggestion}>
-          Auditoi omat, taikka kilpailijasi verkkosivu.
+          Auditoi verkkosivuja ilmaiseksi, sekunneissa.
         </span>
-        <Button
-          text="Suorita Lighthouse"
-          href="https://www.web.dev/measure"
-          outside
-        />
+        <a
+          className={styles.button}
+          href={auditLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Suorita Lighthouse
+        </a>
       </div>
     </section>
   )

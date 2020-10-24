@@ -2,6 +2,7 @@
 
 .section
 	padding: map-get($padding, mobile)
+	margin: 5rem 0
 	display: flex
 	justify-content: center
 
@@ -24,3 +25,12 @@
 
 .note
 	color: map-get($colors, textGray)
+
+@media (min-width: map-get($bp, tablet))
+	.header
+		font-size: $h2Size
+
+@media (min-width: map-get($bp, laptop))
+	.header
+		font-size: $h1Size * 1.2
+		max-width: $sectionHeaderWidth * 2

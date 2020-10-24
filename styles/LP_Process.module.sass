@@ -68,30 +68,23 @@
 	margin: 0
 	margin-top: -0.1rem
 
-@media (min-width: map-get($bp, laptop))
-	.section
-		padding: map-get($padding, laptop)
-	.column
-		max-width: 600px
-	.textBlock
-		max-width: 280px
-
-@media (min-width: map-get($bp, desktop))
+@media (min-width: map-get($bp, tablet))
 	.content
 		gap: 3rem
 
-	.column
-		display: flex
-		flex-wrap: wrap
-		gap: 0.5rem
+	.middleHeader
+		max-width: 480px
+	.bottomHeader
+		max-width: 380px
 
+	.column
 		&:first-of-type
 			flex-direction: column
 			align-items: center
-			padding-right: 200px
-			display: inline-block
+			justify-content: center
+			display: block
 			width: 380px
-			margin-right: 100px
+			height: 700px
 
 			img
 				position: absolute
@@ -119,3 +112,16 @@
 					top: 440px
 					right: 0
 					transform: rotateZ(-5deg)
+
+@media (min-width: map-get($bp, laptop))
+	.section
+		padding: map-get($padding, laptop)
+	.column
+		max-width: 600px
+	.textBlock
+		max-width: 280px
+	
+@media (min-width: map-get($bp, desktop))
+	.column
+		&:first-of-type
+			margin-right: 25px

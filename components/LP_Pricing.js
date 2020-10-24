@@ -4,12 +4,8 @@ const LP_Pricing = () => {
   return (
     <section id="hinnoittelu" className={styles.section}>
       <div className={styles.content}>
-        <h3 className={styles.header}>
-          Superoptimoitu verkkosivu alkaen 3200€
-        </h3>
-        <span className={styles.note}>
-          Digiaalto laskuttaa 50% työn alkaessa.
-        </span>
+        <h3 className={styles.header}>Tehotsivut kiinteään hintaan 3200€.</h3>
+        <span className={styles.note}>50% laskutus työn aloitettua.</span>
       </div>
     </section>
   )
