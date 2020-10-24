@@ -1,5 +1,4 @@
 import styles from "../styles/hero.module.sass"
-import { Zoom } from "react-awesome-reveal"
 
 const Hero = () => {
   return (
