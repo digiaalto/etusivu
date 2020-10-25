@@ -7,7 +7,7 @@ const LP_Audit = () => {
     <section className={styles.section}>
       <div className={styles.content}>
         <span className={styles.suggestion}>
-          Auditoi verkkosivuja ilmaiseksi, sekunneissa.
+          Auditoi verkkosivun laatu ilmaiseksi.
         </span>
         <a
           className={styles.button}

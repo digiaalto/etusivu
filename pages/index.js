@@ -17,7 +17,7 @@ const IndexPage = () => {
         <LP_Problem />
         <LP_Solution />
         <LP_Audit />
-        {/* <LP_Quote /> */}
+        <LP_Quote />
         <LP_Process />
         <LP_Pricing />
         <ContactForm />

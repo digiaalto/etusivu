@@ -29,14 +29,14 @@ const ContactForm = () => {
         <div className={styles.form}>
           <form onSubmit={handleSubmit}>
             <Input
-              label="Etunimi, Sukunimi"
+              label="Etu- ja sukunimi"
               name="nimi"
               value={form.nimi}
               handleChange={handleChange}
               isRequired
             />
             <Input
-              label="Yritys, Toimiala"
+              label="Yritys ja toimiala"
               name="yritys"
               value={form.yritys}
               handleChange={handleChange}

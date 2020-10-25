@@ -23,17 +23,18 @@
 	max-width: $sectionHeaderWidth
 
 .button
-	background: linear-gradient(to right, #FF4D4D, #F9CB28)
-	padding: 1rem 3rem
+	padding: 1rem 2rem
 	border-radius: 9999px
-	color: map-get($colors, textLight)
+	color: map-get($colors, textDark)
+	border: 2px solid map-get($colors, textDark)
 	font-weight: 600
 	letter-spacing: 0.1rem
 	font-size: $h5Size
 	cursor: pointer
-	transition: all 0.3s ease
+	transition: all 0.1s ease
 
 	&:hover
+		border: 2px solid transparent
 		color: inherit
 
 @media (min-width: map-get($bp, tablet))

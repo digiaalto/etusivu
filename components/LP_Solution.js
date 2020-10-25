@@ -4,19 +4,21 @@ const LP_Solution = () => {
   return (
     <section className={styles.section}>
       <div className={styles.content}>
-        <span className="preheader">Ratkaisu</span>
-        <h1 className={styles.header}>
-          Digiaalto kehittää todistetusti huippuluokan verkkosivuja.
-        </h1>
-        <h2 className={styles.subheader}>
+        <div className={styles.headerWrapper}>
+          <span className={styles.preheader}>Ratkaisu</span>
+          <h1 className={styles.header}>
+            Digiaalto kehittää huippuluokan verkkosivuja, todistettavasti.
+          </h1>
+        </div>
+        <p>
           Kehitysvaihe yhdistetään automaattiseen laatumittaukseen, joka
           varmistaa huippuluokan verkkosivutoteutuksen.
-        </h2>
-        <h2 className={styles.subheader}>
+        </p>
+        <p>
           Tuntemalla hakukoneiden suosimat web-standardit ja parhaat käytännöt,
-          Digiaalto rakentaa tehokkaampia verkkosivuja teknologialla, joka takaa
+          Digiaalto rakentaa tehokkaampia verkkosivuja teknologialla joka takaa
           kiitettävät arvosanat hakukoneen algoritmissä.
-        </h2>
+        </p>
       </div>
     </section>
   )

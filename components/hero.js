@@ -11,7 +11,7 @@ const Hero = () => {
         </h6>
         <h2 className={styles.header}>
           Verkkokehittäjä Digiaalto on erikoistunut luomaan markkinointisivuja
-          modernilla, tehostetulla web-app teknologialla.
+          modernilla, ylivoimaisella web-app techillä.
         </h2>
       </div>
       <div className={styles.lueLisaaContainer}>

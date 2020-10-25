@@ -55,7 +55,10 @@ export default LP_Process
 const TextBlock = ({ miniheader, header, text }) => {
   return (
     <div className={styles.textBlock}>
-      <span className={styles.blockMiniheader}>{miniheader}</span>
+      <span className={styles.blockMiniheader}>
+        {miniheader}
+        <span className={styles.emDash}></span>
+      </span>
       <h4 className={styles.blockHeader}>{header}</h4>
       <p className={styles.blockText}>{text}</p>
     </div>
