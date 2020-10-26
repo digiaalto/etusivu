@@ -22,12 +22,10 @@ const LP_Problem = () => {
             <p>
               Kun ostat Wordpress nettisivut, et osta pelkästään valitsemaltasi
               kehittäjältä, ostat myös hänen käyttämiltään sadoilta lisäosien
-              myyjiltä ja suunnittelijoilta, jotka eivät välitä sinun
-              yrityksestä tai sivusta.
+              myyjiltä ja suunnittelijoilta, jotka eivät välitä yrityksestäsi
+              tai verkkosivuistasi.
             </p>
           </div>
-        </Fade>
-        <Fade direction="up" triggerOnce>
           <h2 className={styles.header}>
             Valtaosa Wordpress-kehittäjien koodista on ulkoistettua.
           </h2>

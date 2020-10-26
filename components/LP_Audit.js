@@ -6,9 +6,7 @@ const LP_Audit = () => {
   return (
     <section className={styles.section}>
       <div className={styles.content}>
-        <span className={styles.suggestion}>
-          Auditoi verkkosivun laatu ilmaiseksi.
-        </span>
+        <span className={styles.suggestion}>Auditoi verkkosivusi laatu.</span>
         <a
           className={styles.button}
           href={auditLink}

@@ -6,6 +6,7 @@ import LP_Audit from "../components/LP_Audit"
 import LP_Quote from "../components/LP_Quote"
 import LP_Process from "../components/LP_Process"
 import LP_Pricing from "../components/LP_Pricing"
+import LP_Expect from "../components/LP_Expect"
 import ContactForm from "../components/ContactForm"
 import Infobar from "../components/infobar"
 
@@ -20,6 +21,7 @@ const IndexPage = () => {
         <LP_Quote />
         <LP_Process />
         <LP_Pricing />
+        <LP_Expect />
         <ContactForm />
       </Layout>
     </div>

@@ -4,8 +4,10 @@ const LP_Pricing = () => {
   return (
     <section id="hinnoittelu" className={styles.section}>
       <div className={styles.content}>
-        <h3 className={styles.header}>Tehotsivut kiinteään hintaan 3200€.</h3>
-        <span className={styles.note}>50% laskutus työn aloitettua.</span>
+        <h3 className={styles.header}>Tehotsivut kiinteään hintaan 3,200€</h3>
+        <span className={styles.note}>
+          Digiaalto laskuttaa 50% työn alkaessa.
+        </span>
       </div>
     </section>
   )

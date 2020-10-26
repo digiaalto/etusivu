@@ -1,22 +1,34 @@
 import styles from "../styles/hero.module.sass"
+import Link from "next/link"
+import { Zoom, Fade } from "react-awesome-reveal"
 
 const Hero = () => {
   return (
     <section className={styles.section}>
-      <div className={styles.content}>
-        <h6 className={styles.salesPitch}>
-          Haluatko <span className={styles.highlight}> löytyä </span>
-          verkosta <span className={styles.highlight2}> helposti </span>
-          sekä <span className={styles.highlight3}> nopeasti?</span>
-        </h6>
-        <h2 className={styles.header}>
-          Verkkokehittäjä Digiaalto on erikoistunut luomaan markkinointisivuja
-          modernilla, ylivoimaisella web-app techillä.
-        </h2>
-      </div>
-      <div className={styles.lueLisaaContainer}>
-        <img src="lue-lisaa.svg" className={styles.lueLisaa} />
-      </div>
+      <Zoom delay={200} triggerOnce>
+        <div className={styles.content}>
+          <h6 className={styles.salesPitch}>
+            Haluatko <span className={styles.highlight}> löytyä </span>
+            verkosta <span className={styles.highlight2}> helposti </span>
+            sekä <span className={styles.highlight3}> nopeasti?</span>
+          </h6>
+          <h2 className={styles.header}>
+            Verkkokehittäjä Digiaalto on erikoistunut kehittämään
+            laatutestattuja markkinointisivuja web-app teknologialla.
+          </h2>
+        </div>
+        <div className={styles.lueLisaaContainer}>
+          <Link href="#laatutestaus">
+            <a>
+              <img
+                src="lue-lisaa.svg"
+                className={styles.lueLisaaSvg}
+                alt="Lue Lisää"
+              />
+            </a>
+          </Link>
+        </div>
+      </Zoom>
     </section>
   )
 }

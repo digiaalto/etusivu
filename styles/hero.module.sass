@@ -1,7 +1,7 @@
 @import "_partials.sass"
 $tabletWidth: 37rem
 $laptopWidth: 50rem
-$desktopSize: 70rem
+$desktopSize: 63rem
 
 .section
 	padding: map-get($padding, mobile)
@@ -12,6 +12,7 @@ $desktopSize: 70rem
 	flex-direction: column
 	align-items: center
 	color: map-get($colors, textDark)
+	text-align: center
 
 .salesPitch
 	display: block
@@ -22,17 +23,21 @@ $desktopSize: 70rem
 	margin-bottom: 3rem
 
 .header
-	margin: 0
+	margin-top: 0
 	font-size: $h5Size
 
 .lueLisaaContainer
 	display: flex
 	justify-content: center
 
-.lueLisaa
-	max-width: 10rem
-	margin-top: 5rem
-	margin-bottom: 2rem
+.lueLisaaSvg
+	max-width: 8rem
+	margin: 2rem 0
+	transition: all .4s ease-in-out
+	&:hover
+		transform: rotate(180deg)
+
+
 
 .highlight
 	@supports (background-clip: text) and (-webkit-text-fill-color: transparent) 
@@ -53,10 +58,6 @@ $desktopSize: 70rem
 // MEDIA QUERIES
 	
 @media (min-width: map-get($bp, tablet))
-	.content
-		align-items: flex-start
-	.lueLisaaContainer
-		justify-content: flex-start
 	.salesPitch
 		max-width: $tabletWidth
 		font-size: 4rem
@@ -71,7 +72,7 @@ $desktopSize: 70rem
 		font-size: 5rem
 	.header
 		font-size: $h3Size
-		max-width: $laptopWidth / 1.2
+		max-width: $laptopWidth
 
 
 @media (min-width: map-get($bp, desktop))
