@@ -1,0 +1,56 @@
+@import "_partials"
+
+@mixin noXMargin
+  margin-left: 0
+  margin-right: 0
+
+.section
+  margin: map-get($padding, mobile)
+  @include noXMargin
+
+.content
+  padding: 4rem 0
+  width: 100%
+  overflow: hidden
+  display: flex
+  flex-direction: column
+  justify-content: center
+  flex-wrap: nowrap
+  background-color: map-get($colors, highlight)
+
+.track
+  display: block
+  transform: translate()
+  white-space: nowrap
+  font-size: $h5Size
+  font-weight: 800
+  border-top: 2px solid black
+  border-bottom: 2px solid black
+  &:last-of-type
+    border-top: none
+  //animation: floatText 15s infinite linear
+
+.lines
+  display: block
+  display: flex
+  justify-content: center
+  will-change: transform
+  padding: 2rem 0
+
+.seperator
+  margin: 0 0.5rem
+
+// ANIMATION
+@keyframes floatText
+  to
+    transform: translateX(-100%)
+// MEDIA
+@media (min-width: map-get($bp, tablet))
+  .track
+    font-size: $h2Size
+@media (min-width: map-get($bp, laptop))
+  .section
+    margin: map-get($padding, laptop)
+    @include noXMargin
+  .track
+    font-size: $h1Size
