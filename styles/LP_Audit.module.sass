@@ -18,10 +18,14 @@
 	font-size: $h3Size
 	font-weight: 800
 	line-height: $headerLineHeight
-	margin-bottom: 2rem
 	text-align: center
-	max-width: $sectionHeaderWidth
-
+.info
+	text-align: center
+.help
+	font-size: 0.9rem
+	max-width: 300px
+	opacity: 0.8
+	text-align: center
 .button
 	padding: 1rem 2rem
 	border-radius: 9999px
@@ -32,6 +36,8 @@
 	font-size: $h5Size
 	cursor: pointer
 	transition: all 0.1s ease
+	margin: 1.5rem 0
+	margin-bottom: 0.5rem
 
 	&:hover
 		border: 2px solid transparent
@@ -44,4 +50,5 @@
 @media (min-width: map-get($bp, laptop))
 	.suggestion
 		font-size: $h1Size * 1.2
-		max-width: $sectionHeaderWidth * 2
+	.info
+		margin-bottom: 1rem

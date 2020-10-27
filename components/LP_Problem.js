@@ -15,9 +15,10 @@ const LP_Problem = () => {
           </div>
           <div className={styles.pWrapper}>
             <p>
-              Syy tähän löytyy Wordpressin tuhansista lisäosista ja valmiista
-              teemoista, joilla Wordpress-kehittäjät voivat vaivaa näkemättä
-              myydä asiakkailleen kloonattuja, hitaita verkkosivuja.
+              Syy löytyy Wordpressin tuhansista ikääntyneistä lisäosista ja
+              valmiista teemoista, joita jälleenmyymällä Wordpress-kehittäjät
+              voivat vaivattomasti tarjota kopioituja, hitaita verkkosivuja
+              asiakkailleen.
             </p>
             <p>
               Kun ostat Wordpress nettisivut, et osta pelkästään valitsemaltasi

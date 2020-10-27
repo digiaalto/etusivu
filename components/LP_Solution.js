@@ -13,13 +13,13 @@ const LP_Solution = () => {
             </h1>
           </div>
           <p>
-            Kehitysvaihe yhdistetään automaattiseen laatumittaukseen, joka
-            varmistaa huippuluokan verkkosivutoteutuksen.
+            Noudattamalla hakukoneiden suosimia web-standardeja ja parhaita
+            käytäntöjä Digiaalto voi valmistaa supertehokkaan verkkosivun mikä
+            on optimoitu kilpailijaasi paremmin.
           </p>
           <p>
-            Tuntemalla hakukoneiden suosimat web-standardit ja parhaat
-            käytännöt, Digiaalto rakentaa tehokkaampia verkkosivuja
-            teknologialla joka takaa menestymisen hakukoneen algoritmissä.
+            Kehitysvaihe yhdistetään automaattiseen laatumittaukseen, minkä
+            tuloksia seurataan ja noudatetaan tarkasti.
           </p>
         </Fade>
       </div>

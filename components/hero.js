@@ -1,6 +1,6 @@
 import styles from "../styles/hero.module.sass"
 import Link from "next/link"
-import { Zoom, Fade } from "react-awesome-reveal"
+import { Zoom } from "react-awesome-reveal"
 
 const Hero = () => {
   return (
@@ -13,8 +13,8 @@ const Hero = () => {
             sekä <span className={styles.highlight3}> nopeasti?</span>
           </h6>
           <h2 className={styles.header}>
-            Verkkokehittäjä Digiaalto on erikoistunut kehittämään
-            laatutestattuja markkinointisivuja web-app teknologialla.
+            Verkkosuunnittelija Digiaalto on erikoistunut kehittämään
+            laatutestattuja markkinointisivuja.
           </h2>
         </div>
         <div className={styles.lueLisaaContainer}>
