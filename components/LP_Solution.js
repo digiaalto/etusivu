@@ -1,6 +1,8 @@
 import styles from "../styles/LP_Solution.module.sass"
 import { Fade } from "react-awesome-reveal"
 
+const reactLink = "https://reactjs.org/"
+
 const LP_Solution = () => {
   return (
     <section className={styles.section}>
@@ -14,8 +16,13 @@ const LP_Solution = () => {
           </div>
           <p>
             Noudattamalla hakukoneiden suosimia web-standardeja ja parhaita
-            käytäntöjä Digiaalto voi valmistaa supertehokkaan verkkosivun mikä
-            on optimoitu ja menestyy kilpailijaasi paremmin.
+            käytäntöjä Digiaalto voi valmistaa supertehokkaan verkkosivun
+            ideaaliselle{" "}
+            <a href={reactLink} target="_blank" rel="noopener noreferrer">
+              React-alustalle,{" "}
+            </a>
+            mikä on huolella optimoitu ja tarjoaa parhaan potentiaalin
+            menestymiselle.
           </p>
           <p>
             Kehitysvaihe yhdistetään automaattiseen laatutestaukseen, tuloksia
