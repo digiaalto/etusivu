@@ -17,8 +17,8 @@ const LP_Problem = () => {
             <p>
               Syy löytyy Wordpressin tuhansista ikääntyneistä lisäosista ja
               valmiista teemoista, joita jälleenmyymällä Wordpress-kehittäjät
-              voivat vaivattomasti tarjota kopioituja, hitaita verkkosivuja
-              asiakkailleen.
+              voivat vaivattomasti tarjota kopioituja, hitaita ja monimutkaisia
+              yrityssivuja ylihintaan.
             </p>
             <p>
               Kun ostat Wordpress nettisivut, et osta pelkästään valitsemaltasi
@@ -31,11 +31,6 @@ const LP_Problem = () => {
             Valtaosa Wordpress-kehittäjien koodista on ulkoistettua.
           </h2>
           <p>
-            Wordpress ja sen teemat ovat täynnä turhia paisuneita ominaisuuksia,
-            tietoturva-aukkoja, kyseenalaista logiikkaa ja kuluneita
-            design-päätöksiä.
-          </p>
-          <p className="bold">
             Mikään teknologiajätti ei käytä Wordpressia. Nyt ei tarvitse
             sinunkaan.
           </p>

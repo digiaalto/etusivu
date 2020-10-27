@@ -4,7 +4,6 @@
 
 .section
 	padding: map-get($padding, mobile)
-	margin-top: 5rem
 
 .content
 	display: flex
@@ -15,7 +14,7 @@
 	@include preheader
 	color: map-get($colors, highlight)
 
-.suggestion
+.header
 	display: block
 	font-size: $h3Size
 	font-weight: 800
@@ -56,11 +55,16 @@
 		justify-content: center
 		align-items: center
 		text-align: center
-	.suggestion
+	.header
 		font-size: $h2Size
 
 @media (min-width: map-get($bp, laptop))
-	.suggestion
+	.section
+		padding: map-get($padding, laptop)
+	.header
 		font-size: $h1Size * 1.2
 	.info
 		margin-bottom: 1rem
+@media (min-width: map-get($bp, desktop))
+	.section
+		padding: map-get($padding, desktop)

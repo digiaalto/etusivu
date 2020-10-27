@@ -20,7 +20,7 @@ const LP_Process = () => {
             <TextBlock
               miniheader="Aloitetaan"
               header="Kartoitus"
-              text="Digiaalto hahmoittaa verkkosivusi tavoitteet ja ominaisuudet ja mikä on kannattavin kohderyhmä. Palveluhankinnat tehdään heti sopimuksen allekirjoitettua."
+              text="Digiaalto hahmoittaa verkkosivusi tavoitteet ja ominaisuudet ja mikä on sinun sivusi kannattavin kohderyhmä. Palveluhankinnat tehdään heti sopimuksen allekirjoitettua."
             />
             <TextBlock
               miniheader="Vaihe 2"

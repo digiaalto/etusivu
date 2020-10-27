@@ -12,8 +12,8 @@ const LP_Pricing = () => {
         </h3>
         <p className={styles.note}>
           Kaikki on hoidettu puolestasi, sinun tarvitsee vain täyttää
-          haastattelulomake jonka saat antamaasi sähköpostiosoitteeseen.
-          Digiaalto laskuttaa 50% työn aloitettua.
+          yksinkertainen haastattelulomake jonka saat antamaasi
+          sähköpostiosoitteeseen. Digiaalto laskuttaa 50% työn aloitettua.
         </p>
       </div>
     </section>

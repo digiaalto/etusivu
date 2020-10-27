@@ -7,6 +7,7 @@ const LP_Quote = () => {
     <section className={styles.section}>
       <div className={styles.flexWrapper}>
         <div className={styles.container}>
+          <span className={styles.header}>Mitä Google sanoo.</span>
           <p className={styles.quoteText}>
             "Sivun latausnopeuden osoitetaan olevan tärkein tekijä käyttäjän
             mobiilikokemuksessa. Se on tärkeämpää kuin kuinka helppoa on löytää
@@ -20,7 +21,7 @@ const LP_Quote = () => {
             rel="noreferrer noopener"
             className={styles.source}
           >
-            —Google I/O 2019
+            —I/O 2019
           </a>
         </div>
       </div>

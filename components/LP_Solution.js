@@ -15,11 +15,11 @@ const LP_Solution = () => {
           <p>
             Noudattamalla hakukoneiden suosimia web-standardeja ja parhaita
             käytäntöjä Digiaalto voi valmistaa supertehokkaan verkkosivun mikä
-            on optimoitu kilpailijaasi paremmin.
+            on optimoitu ja menestyy kilpailijaasi paremmin.
           </p>
           <p>
-            Kehitysvaihe yhdistetään automaattiseen laatutestaukseen. Tuloksia
-            seurataan ja korjaukset toteutetaan.
+            Kehitysvaihe yhdistetään automaattiseen laatutestaukseen, tuloksia
+            seurataan ja korjaukset toteutetaan hyvissä ajoin ennen julkaisua.
           </p>
         </Fade>
       </div>
