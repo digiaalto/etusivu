@@ -1,13 +1,20 @@
 import styles from "../styles/LP_Pricing.module.sass"
+import { FaGift } from "react-icons/fa"
 
 const LP_Pricing = () => {
   return (
     <section id="hinnoittelu" className={styles.section}>
       <div className={styles.content}>
-        <h3 className={styles.header}>Tehotsivut kiinteään hintaan 3,200€</h3>
-        <span className={styles.note}>
-          Digiaalto laskuttaa 50% työn alkaessa.
-        </span>
+        <FaGift className={styles.giftIcon} />
+        <h3 className={styles.header}>
+          Valmiit kotisivut yrityksellesi tai vaikka lahjaksi, kiinteään hintaan
+          3,200€.
+        </h3>
+        <p className={styles.note}>
+          Kaikki on hoidettu puolestasi, sinun tarvitsee vain täyttää
+          haastattelulomake jonka saat antamaasi sähköpostiosoitteeseen.
+          Digiaalto laskuttaa 50% työn aloitettua.
+        </p>
       </div>
     </section>
   )

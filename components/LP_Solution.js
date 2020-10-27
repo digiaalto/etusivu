@@ -18,8 +18,8 @@ const LP_Solution = () => {
             on optimoitu kilpailijaasi paremmin.
           </p>
           <p>
-            Kehitysvaihe yhdistetään automaattiseen laatumittaukseen, minkä
-            tuloksia seurataan ja noudatetaan tarkasti.
+            Kehitysvaihe yhdistetään automaattiseen laatutestaukseen. Tuloksia
+            seurataan ja korjaukset toteutetaan.
           </p>
         </Fade>
       </div>

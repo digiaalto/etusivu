@@ -6,13 +6,15 @@ const LP_Audit = () => {
   return (
     <section className={styles.section}>
       <div className={styles.content}>
-        <span className={styles.suggestion}>Auditoi verkkosivusi laatu.</span>
+        <span className={styles.preheader}>
+          Vertaile kilpailijasi sivuja omiisi
+        </span>
+        <span className={styles.suggestion}>Auditoi verkkosivun laatu.</span>
         <p className={styles.info}>
-          Google Lighthouse on avoimen lähdekoodin automaattinen työkalu
-          verkkosivujen laadun mittaamiseen. Sitä voidaan käyttää minkä tahansa
-          julkisen tai todentamista vaativan verkkosivun kanssa. Google
-          Lighthouse tarkastaa verkkosivujen suorituskyvyn, saavutettavuuden ja
-          hakukoneoptimoinnin.
+          Google Lighthouse on avoimen automaattinen työkalu verkkosivujen
+          laadun mittaamiseen. Sitä voidaan käyttää minkä tahansa julkisen
+          verkkosivun kanssa. Google Lighthouse tarkastaa verkkosivujen
+          suorituskyvyn, saavutettavuuden ja hakukoneoptimoinnin.
         </p>
         <a
           className={styles.button}
@@ -20,11 +22,11 @@ const LP_Audit = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Suorita Lighthouse
+          Kokeile testiä
         </a>
         <p className={styles.help}>
-          <HiExclamation /> Kirjoita testiin täydellinen, julkinen osoite
-          (https://www.esimerkki.fi)
+          <HiExclamation className={styles.helpIcon} /> Tulokset ovat
+          englanniksi.
         </p>
       </div>
     </section>

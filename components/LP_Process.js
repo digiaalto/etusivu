@@ -11,8 +11,7 @@ const LP_Process = () => {
           <h4 className={styles.topHeader}>Prosessi</h4>
           <h3 className={styles.middleHeader}>
             Virtaviivainen toteutusprosessi nopeuttaa tuotteen julkaisua. Voit
-            tulla pöytään ideat valmiina tai voimme löytää parhaat strategiat
-            yhdessä.
+            tulla pöytään ideat valmiina tai antaa Digiaallon hoitaa kaiken.
           </h3>
           <h4 className={styles.bottomHeader}>
             Tehostetun Verkkosivun Toteutus
@@ -21,27 +20,27 @@ const LP_Process = () => {
             <TextBlock
               miniheader="Aloitetaan"
               header="Kartoitus"
-              text="Määrittelemme projektin parametrit. Hahmotamme verkkosivun tavoitteet ja ominaisuudet ja mille kohderyhmälle sivut valmistetaan. Palveluhankinnat tehdään heti sopimuksen allekirjoitettua."
+              text="Digiaalto hahmoittaa verkkosivusi tavoitteet ja ominaisuudet ja mikä on kannattavin kohderyhmä. Palveluhankinnat tehdään heti sopimuksen allekirjoitettua."
             />
             <TextBlock
               miniheader="Vaihe 2"
               header="Suunnittelu"
-              text="Keskitymme sisältöön ja ulkoasuun. Otat pääroolin tekstisisällön luonnissa samalla kun Digiaalto rakentaa sivukarttaa, tutkii kilpailijoitasi ja kerää muita lähdemateriaaleja."
+              text="Keskitytään sisältöön. Digiaalto tutkii kilpailijoitasi, kerää ja kirjoittaa tekstisisältöä ja muuta sopivaa lähdemateriaalia sivuihisi."
             />
             <TextBlock
               miniheader="Vaihe 3"
               header="Design"
-              text="Lähdemateriaalit yhdistetään rautalankamalliin josta tulee graaffinen representaatio verkkosivusta. Mallia hiotaan kunnes se vastaa odotuksia."
+              text="Lähdemateriaalit yhdistetään rautalankamalliin josta tulee graaffinen representaatio verkkosivusta. Mallia hiotaan kunnes se vastaa odotuksia ja sinä olet hyväksynyt sen."
             />
             <TextBlock
               miniheader="Vaihe 4"
               header="Kehitys"
-              text="Verkkosivu koodataan noudattaen parhaita käytäntöjä ja moderneja web-standardeja. Projektiin integroidaan samaa tekniikkaa jota teknologiajätit suosivat."
+              text="Verkkosivu luodaan noudattaen parhaita käytäntöjä ja moderneja web-standardeja. Projektiin integroidaan kehittynyttä web-app teknologiaa."
             />
             <TextBlock
               miniheader="Valmista!"
               header="Julkaisu"
-              text="Kaikki sivun ominaisuudet testatan vielä viimesein kerran ja domain osoitetaan palvelimelle. Saat opastuksen palveluihin joita verkkosivu käyttää."
+              text="Kaikki sivun ominaisuudet testatan vielä viimesein kerran ja domain osoitetaan palvelimelle. Asiakaspalvelulinjat pysyvät auki."
             />
           </div>
         </div>

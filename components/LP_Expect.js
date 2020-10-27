@@ -24,7 +24,7 @@ const LP_Expect = () => {
             items={[
               "Sisällönhallintaohjelman valinnanvapautta",
               "Parhainta optimointia",
-              "Lighthouse testausta",
+              "Laatutestausta",
               "Käyttäjäystävällisyyttä",
               "Virtaviivaista prosessia",
             ]}

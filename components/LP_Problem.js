@@ -22,9 +22,9 @@ const LP_Problem = () => {
             </p>
             <p>
               Kun ostat Wordpress nettisivut, et osta pelkästään valitsemaltasi
-              kehittäjältä, ostat myös hänen käyttämiltään sadoilta lisäosien
-              myyjiltä ja suunnittelijoilta, jotka eivät välitä yrityksestäsi
-              tai verkkosivuistasi.
+              kehittäjältä, ostat myös hänen käyttämiltään lisäosien myyjiltä ja
+              suunnittelijoilta, jotka eivät välitä yrityksestäsi tai
+              verkkosivuistasi.
             </p>
           </div>
           <h2 className={styles.header}>
@@ -36,7 +36,7 @@ const LP_Problem = () => {
             design-päätöksiä.
           </p>
           <p className="bold">
-            Mikään teknologiajätti ei käytä Wordpressia; nyt ei tarvitse
+            Mikään teknologiajätti ei käytä Wordpressia. Nyt ei tarvitse
             sinunkaan.
           </p>
         </Fade>

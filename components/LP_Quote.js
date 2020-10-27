@@ -8,11 +8,11 @@ const LP_Quote = () => {
       <div className={styles.flexWrapper}>
         <div className={styles.container}>
           <p className={styles.quoteText}>
-            Sivun latausnopeuden osoitetaan olevan tärkein tekijä käyttäjän
+            "Sivun latausnopeuden osoitetaan olevan tärkein tekijä käyttäjän
             mobiilikokemuksessa. Se on tärkeämpää kuin kuinka helppoa on löytää
             mitä etsii, se on tärkeämpää kuin sivuston käytön yksinkertaisuus ja
             mielenkiintoisesti, se on kolme kertaa tärkeämpi kuin miltä sivusto
-            näyttää.
+            näyttää."
           </p>
           <a
             href={sourceUrl}

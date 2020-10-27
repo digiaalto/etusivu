@@ -14,7 +14,8 @@ const Hero = () => {
           </h6>
           <h2 className={styles.header}>
             Verkkosuunnittelija Digiaalto on erikoistunut kehittämään
-            laatutestattuja markkinointisivuja.
+            optimaalisia markkinointisivuja{" "}
+            <span className="bold">avaimet käteen menetelmällä.</span>
           </h2>
         </div>
         <div className={styles.lueLisaaContainer}>
