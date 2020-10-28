@@ -2,7 +2,7 @@ import Layout from "../components/layout"
 import Hero from "../components/hero"
 import LP_Problem from "../components/LP_Problem"
 import LP_Solution from "../components/LP_Solution"
-import LP_RaceInfographic from "../components/LP_RaceInfographic"
+import LP_TrackInfographic from "../components/LP_TrackInfographic"
 import LP_Audit from "../components/LP_Audit"
 import LP_Quote from "../components/LP_Quote"
 import LP_Process from "../components/LP_Process"
@@ -18,7 +18,7 @@ const IndexPage = () => {
         <Hero />
         <LP_Problem />
         <LP_Solution />
-        <LP_RaceInfographic />
+        <LP_TrackInfographic />
         <LP_Audit />
         {/* <LP_Quote /> */}
         <LP_Process />

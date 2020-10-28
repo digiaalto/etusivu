@@ -1,4 +1,4 @@
-import styles from "../styles/LP_RaceInfographic.module.sass"
+import styles from "../styles/LP_TrackInfographic.module.sass"
 import { useState, useEffect, useRef } from "react"
 import { useInView } from "react-intersection-observer"
 
@@ -26,22 +26,19 @@ const LP_RaceInfoGraphic = () => {
       <div className={styles.content}>
         <Track
           inView={inView}
-          lines={[
-            "Uusi ratkaisu",
-            "Parempi optimointi",
-            "Pieni poistumisprosentti",
-          ]}
+          line="Tehokas, ei turha"
           xInPercentage={-50 + (y / initialY - 1) * 150}
         />
         <Track
           inView={inView}
-          lines={[
-            "Vanha metodologia",
-            "Huono käyttökokemus",
-            "Iso poistusmiprosentti",
-          ]}
+          line="Optimoitu, ei laiska"
           xInPercentage={(y / initialY - 1) * -100}
-          separator={" < "}
+          separator={" ← "}
+        />
+        <Track
+          inView={inView}
+          line="Räätälöity, Ei kopioitu"
+          xInPercentage={-50 + (y / initialY - 1) * 150}
         />
       </div>
     </section>
@@ -50,23 +47,26 @@ const LP_RaceInfoGraphic = () => {
 
 export default LP_RaceInfoGraphic
 
-const Track = ({ inView, lines, xInPercentage, separator = " > " }) => {
+const Track = ({ inView, line, xInPercentage, separator = " → " }) => {
   return (
     <div className={styles.track}>
       <div
         className={styles.lines}
-        style={inView ? { transform: `translateX(${xInPercentage}%)` } : null}
+        style={
+          inView
+            ? {
+                willChange: "transform",
+                transform: `translateX(${xInPercentage}%)`,
+              }
+            : null
+        }
       >
-        {[...Array(6)].map((e, i) =>
-          lines.map((line, index) => {
-            return (
-              <span className={styles.line} key={`line-${i}-${index}`}>
-                {line}
-                <span className={styles.seperator}>{separator}</span>
-              </span>
-            )
-          })
-        )}
+        {[...Array(12)].map((e, i) => (
+          <>
+            {line}
+            <span className={styles.seperator}>{separator}</span>
+          </>
+        ))}
       </div>
     </div>
   )
