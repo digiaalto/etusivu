@@ -1,5 +1,5 @@
 import styles from "../styles/LP_TrackInfographic.module.sass"
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect } from "react"
 import { useInView } from "react-intersection-observer"
 
 const LP_RaceInfoGraphic = () => {
@@ -19,7 +19,7 @@ const LP_RaceInfoGraphic = () => {
       setInitialY(0)
     }
     return () => window.removeEventListener("scroll", handleScroll)
-  })
+  }, [inView])
 
   return (
     <section className={styles.section} ref={ref}>
@@ -62,10 +62,10 @@ const Track = ({ inView, line, xInPercentage, separator = " → " }) => {
         }
       >
         {[...Array(12)].map((e, i) => (
-          <>
+          <span key={`${line}-${i}`}>
             {line}
             <span className={styles.seperator}>{separator}</span>
-          </>
+          </span>
         ))}
       </div>
     </div>

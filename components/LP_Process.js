@@ -1,11 +1,30 @@
 import styles from "../styles/LP_Process.module.sass"
+import { useEffect, useState } from "react"
+import { useInView } from "react-intersection-observer"
 
 const LP_Process = () => {
+  const { ref, inView, entry } = useInView()
+  const [initialY, setInitialY] = useState(0)
+  const [scrollY, setScrollY] = useState(0)
+
+  function handleScroll() {
+    setScrollY(window.scrollY)
+  }
+
+  useEffect(() => {
+    if (inView) {
+      if (initialY === 0) setInitialY(window.scrollY)
+      window.addEventListener("scroll", handleScroll)
+    } else setInitialY(0)
+
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [inView])
+
   return (
-    <section className={styles.section} id="toteutus">
+    <section className={styles.section} id="toteutus" ref={ref}>
       <div className={styles.content}>
         <div className={styles.column}>
-          <Images />
+          <Images inView={inView} dist={(scrollY / initialY - 1) * 100} />
         </div>
         <div className={styles.column}>
           <h4 className={styles.topHeader}>Prosessi</h4>
@@ -64,8 +83,22 @@ const TextBlock = ({ miniheader, header, text }) => {
   )
 }
 
-const Images = () => {
+const Images = ({ inView, dist }) => {
+  let rotation
+  if (inView) {
+    if (dist < 0) rotation = dist + 10
+    else rotation = dist - 10
+  }
   return [...Array(5)].map((value, index) => (
-    <img src={`process/${index + 1}.svg`} key={index} />
+    <img
+      src={`process/${index + 1}.svg`}
+      key={index}
+      style={{
+        willChange: "transform",
+        transform: `rotate(${
+          index === 1 || index === 4 ? rotation : rotation * -1
+        }deg)`,
+      }}
+    />
   ))
 }
