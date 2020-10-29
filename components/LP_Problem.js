@@ -3,7 +3,7 @@ import { Fade } from "react-awesome-reveal"
 
 const LP_Problem = () => {
   return (
-    <section className={styles.section} id="ongelma">
+    <section className={styles.section} id="parempaa-laatua">
       <div className={styles.content}>
         <Fade direction="up" triggerOnce>
           <div className={styles.headerWrapper}>

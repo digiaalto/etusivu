@@ -14,12 +14,11 @@ const Hero = () => {
           </h6>
           <h2 className={styles.header}>
             Verkkosuunnittelija Digiaalto on erikoistunut kehittämään
-            optimaalisia markkinointisivuja{" "}
-            <span className="bold">avaimet käteen menetelmällä.</span>
+            optimaalisia markkinointisivuja avaimet käteen menetelmällä.
           </h2>
         </div>
         <div className={styles.lueLisaaContainer}>
-          <Link href="#ongelma">
+          <Link href="#parempaa-laatua">
             <a>
               <img
                 src="lue-lisaa.svg"
