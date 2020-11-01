@@ -1,4 +1,4 @@
-import styles from "../styles/hero.module.sass"
+import styles from "../styles/LP_Hero.module.sass"
 import Link from "next/link"
 import { Zoom } from "react-awesome-reveal"
 

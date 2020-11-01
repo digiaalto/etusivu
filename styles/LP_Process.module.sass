@@ -64,6 +64,7 @@
 .blockMiniheader
 	display: block
 	font-weight: 800
+
 .emDash
 	display: inline-block
 	width: 1rem
@@ -130,6 +131,8 @@
 		max-width: 280px
 	
 @media (min-width: map-get($bp, desktop))
+	.section
+		padding: map-get($padding, desktop)
 	.column
 		&:first-of-type
 			margin-right: 25px

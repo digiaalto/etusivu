@@ -1,5 +1,5 @@
 import Layout from "../components/layout"
-import Hero from "../components/hero"
+import LP_Hero from "../components/LP_Hero"
 import LP_Problem from "../components/LP_Problem"
 import LP_Solution from "../components/LP_Solution"
 import LP_TrackInfographic from "../components/LP_TrackInfographic"
@@ -15,7 +15,7 @@ const IndexPage = () => {
   return (
     <div>
       <Layout infobar={<Infobar />}>
-        <Hero />
+        <LP_Hero />
         <LP_Problem />
         <LP_Solution />
         <LP_TrackInfographic />
