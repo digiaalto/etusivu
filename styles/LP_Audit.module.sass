@@ -32,23 +32,20 @@
 	vertical-align: middle
 	
 .button
-	text-transform: uppercase
+	display: inline-block
+	margin-top: 1rem
 	padding: 1rem 2rem
 	border-radius: 9999px
-	color: map-get($colors, textDark)
-	border: 2px solid map-get($colors, textDark)
-	font-weight: 800
+	background-color: map-get($colors, primary)
+	color: map-get($colors, textLight)
+	text-transform: uppercase
 	letter-spacing: 0.1rem
-	font-size: $h5Size
-	cursor: pointer
-	transition: all 0.1s ease
-	margin: 1.5rem 0
-	margin-bottom: 0.5rem
-	text-align: center
-
+	font-weight: 600
+	transition: 0.2s ease all
 	&:hover
-		border: 2px solid transparent
-		color: map-get($colors, textDark)
+		color: map-get($colors, textLight)
+		padding: 1rem 2.6rem
+
 
 @media (min-width: map-get($bp, tablet))
 	.content

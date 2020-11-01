@@ -21,20 +21,20 @@ const LP_Problem = () => {
             </p>
             <p>
               Siksi Google on kehittänyt automaattisen laatutestin joka käy
-              verkkosivusi läpi puolestasi ja jota Digiaalto käyttää
-              verkkokehityksessä.
+              verkkosivusi läpi puolestasi ja jota Digiaalto käyttää kehityksen
+              yhteydessä.
             </p>
           </div>
           <h2 className={styles.header}>
             Suomen PK-yrittäjien verkkosivut ovat pahkassa.
           </h2>
           <p>
-            Liian monet suomalaiset yrityssivut matelevat näytölle vanhalla ja
-            kehnosti optimoiduilla Wordpressillä.
+            Liian monet suomalaiset yrityssivut matelevat näytölle
+            vanhentuneella ja kehnosti optimoiduilla Wordpressillä.
           </p>
           <p>
-            Wordpress-kehittäjät sen sijaan jälleenmyyvät ulkoistettua koodia
-            teemojen ja vaaraantuneiden lisäosien muodossa.
+            Wordpress-kehittäjät jälleenmyyvät ulkoistettua koodia teemojen ja
+            vaaraantuneiden lisäosien muodossa.
           </p>
         </Fade>
       </div>

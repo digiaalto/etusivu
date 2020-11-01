@@ -1,5 +1,6 @@
 import styles from "../styles/LP_Solution.module.sass"
 import { Fade } from "react-awesome-reveal"
+import Link from "next/link"
 
 const reactLink = "https://nextjs.org/"
 
@@ -15,17 +16,20 @@ const LP_Solution = () => {
             </h1>
           </div>
           <p>
-            Noudattamalla hakukoneiden laatuvaatimuksia ja parhaita käytäntöjä{" "}
+            Seuraamalla hakukoneiden laatuvaatimuksia tarkasti,{" "}
             <span className="bold">
-              Digiaalto valmistaa supertehokkaan verkkosivun yrittäjälle jolla
-              on kalenteri täynnä.
+              Digiaalto luo superoptimoituja verkkosivuja yrittäjille kenen
+              kalenteri on täynnä.
             </span>
           </p>
           <p>
-            Kehitysvaihe yhdistetään automaattiseen laatutestaukseen ja korkeat
-            tulokset mahdollistavat parhaan potentiaalisen menestymisen
-            verkossa.
+            Kehitysvaihe yhdistetään automaattiseen laatutestaukseen, josta
+            selviää verkkosivujen suorituskyky, saavutettavuus ja
+            hakukoneoptimointi.
           </p>
+          <Link href="#onko-parantamisen-varaa?">
+            <a className={styles.linkToTest}>Lue testistä lisää</a>
+          </Link>
         </Fade>
       </div>
     </section>

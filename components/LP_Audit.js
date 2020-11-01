@@ -4,7 +4,7 @@ const auditLink = "https://www.web.dev/measure"
 
 const LP_Audit = () => {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="onko-parantamisen-varaa?">
       <div className={styles.content}>
         <span className={styles.preheader}>
           Vertaile kilpailijan sivuja omiisi
@@ -23,7 +23,7 @@ const LP_Audit = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Kokeile nopeaa testiä
+          Auditoi Sivu
         </a>
         <p className={styles.help}>
           <HiExclamation className={styles.helpIcon} /> Tulokset ovat

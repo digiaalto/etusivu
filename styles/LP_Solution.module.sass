@@ -13,6 +13,21 @@
 	font-weight: 800
 	max-width: $sectionHeaderWidth
 
+.linkToTest
+	display: inline-block
+	margin-top: 1rem
+	padding: 1rem 2rem
+	border-radius: 9999px
+	background-color: map-get($colors, primary)
+	color: map-get($colors, textLight)
+	text-transform: uppercase
+	letter-spacing: 0.1rem
+	font-weight: 600
+	transition: 0.2s ease all
+	&:hover
+		color: map-get($colors, textLight)
+		padding: 1rem 2.6rem
+
 @media (min-width: map-get($bp, laptop))
 	.section
 		padding: map-get($padding, laptop)

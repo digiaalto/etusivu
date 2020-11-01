@@ -39,27 +39,27 @@ const LP_Process = () => {
             <TextBlock
               miniheader="Aloitetaan"
               header="Kartoitus"
-              text="Digiaalto hahmoittaa verkkosivusi tavoitteet ja ominaisuudet ja mikä on sinun sivusi kannattavin kohderyhmä. Palveluhankinnat tehdään heti sopimuksen allekirjoitettua."
+              text="Hahmotamme verkkosivusi tavoitteet, kohderyhmä ja muut tarpeelliset palvelutarpeet ja ominaisuudet."
             />
             <TextBlock
               miniheader="Vaihe 2"
               header="Suunnittelu"
-              text="Keskitytään sisältöön. Digiaalto tutkii kilpailijoitasi, kerää ja kirjoittaa tekstisisältöä ja muuta sopivaa lähdemateriaalia sivuihisi."
+              text="Keskitytään sisältöön. Tutkitaan kilpailijoita, kerätään ja kirjoitetaan tekstisisältöä ja haetaan muuta sopivaa materiaalia."
             />
             <TextBlock
               miniheader="Vaihe 3"
               header="Design"
-              text="Lähdemateriaalit yhdistetään rautalankamalliin josta tulee graaffinen representaatio verkkosivusta. Mallia hiotaan kunnes se vastaa odotuksia ja sinä olet hyväksynyt sen."
+              text="Lähdemateriaalit yhdistetään rautalankamalliin ja luodaan graaffinen representaatio verkkosivusta."
             />
             <TextBlock
               miniheader="Vaihe 4"
               header="Kehitys"
-              text="Verkkosivu luodaan noudattaen parhaita käytäntöjä ja moderneja web-standardeja. Projektiin integroidaan kehittynyttä web-app teknologiaa."
+              text="Koodausvaiheessa verkkosivu realisoidaan sovitun mallin mukaisesti ja optimoidaan kymppiin."
             />
             <TextBlock
               miniheader="Valmista!"
               header="Julkaisu"
-              text="Kaikki sivun ominaisuudet testatan vielä viimesein kerran ja domain osoitetaan palvelimelle. Asiakaspalvelulinjat pysyvät auki."
+              text="Domain osoitetaan palvelimelle ja asiakaspalvelulinjat pidetään auki työn loputtuakin."
             />
           </div>
         </div>
