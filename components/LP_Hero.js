@@ -18,7 +18,7 @@ const Hero = () => {
           </h2>
         </div>
         <div className={styles.lueLisaaContainer}>
-          <Link href="#parempaa-laatua">
+          <Link href="#ongelmia-paratiisissa">
             <a>
               <img
                 src="lue-lisaa.svg"

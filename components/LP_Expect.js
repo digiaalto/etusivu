@@ -9,9 +9,9 @@ const LP_Expect = () => {
           <List
             items={[
               "Verkkokauppaa",
-              "Logon suunnittelua",
               "Työn ulkoistamista",
-              "Heikentynyttä laatua",
+              "Logon suunnittelua",
+              "Hutilointia",
               "Myöhäistä toimitusta",
             ]}
           />
@@ -22,9 +22,9 @@ const LP_Expect = () => {
           </h3>
           <List
             items={[
-              "Sisällönhallintapalvelua",
-              "Parhainta optimointia",
-              "Ankaraa laatutestausta",
+              "Mitä tahansa sisällönhallintapalvelua",
+              "A-luokan optimointia",
+              "Laatutestauksen tuloksia",
               "Käyttäjäystävällisyyttä",
               "Virtaviivaista prosessia",
             ]}

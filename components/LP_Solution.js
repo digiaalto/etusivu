@@ -1,7 +1,7 @@
 import styles from "../styles/LP_Solution.module.sass"
 import { Fade } from "react-awesome-reveal"
 
-const reactLink = "https://reactjs.org/"
+const reactLink = "https://nextjs.org/"
 
 const LP_Solution = () => {
   return (
@@ -15,18 +15,16 @@ const LP_Solution = () => {
             </h1>
           </div>
           <p>
-            Noudattamalla hakukoneiden suosimia web-standardeja ja parhaita
-            käytäntöjä Digiaalto voi valmistaa supertehokkaan verkkosivun
-            ideaaliselle{" "}
-            <a href={reactLink} target="_blank" rel="noopener noreferrer">
-              React-alustalle,{" "}
-            </a>
-            mikä on huolella optimoitu ja tarjoaa parhaan potentiaalin
-            menestymiselle.
+            Noudattamalla hakukoneiden laatuvaatimuksia ja parhaita käytäntöjä{" "}
+            <span className="bold">
+              Digiaalto valmistaa supertehokkaan verkkosivun yrittäjälle jolla
+              on kalenteri täynnä.
+            </span>
           </p>
           <p>
-            Kehitysvaihe yhdistetään automaattiseen laatutestaukseen, tuloksia
-            seurataan ja korjaukset toteutetaan hyvissä ajoin ennen julkaisua.
+            Kehitysvaihe yhdistetään automaattiseen laatutestaukseen ja korkeat
+            tulokset mahdollistavat parhaan potentiaalisen menestymisen
+            verkossa.
           </p>
         </Fade>
       </div>

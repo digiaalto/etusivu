@@ -3,36 +3,38 @@ import { Fade } from "react-awesome-reveal"
 
 const LP_Problem = () => {
   return (
-    <section className={styles.section} id="parempaa-laatua">
+    <section className={styles.section} id="ongelmia-paratiisissa">
       <div className={styles.content}>
         <Fade direction="up" triggerOnce>
           <div className={styles.headerWrapper}>
-            <span className={styles.preheader}>Ongelma</span>
+            <span className={styles.preheader}>Ongelmia</span>
             <h2 className={styles.header}>
-              Suomessa lähes kaikki verkkosivut pyörivät huonosti optimoidulla
-              Wordpressillä.
+              Yrittäjän elämä on kiireistä, silti nettisivut pitää löytyä.
             </h2>
           </div>
           <div className={styles.pWrapper}>
             <p>
-              Syy löytyy Wordpressin tuhansista ikääntyneistä lisäosista ja
-              valmiista teemoista, joita jälleenmyymällä Wordpress-kehittäjät
-              voivat vaivattomasti tarjota kopioituja, hitaita ja monimutkaisia
-              yrityssivuja ylihintaan.
+              Aika on kultaa arvokkaampaa niin kuin jokainen tietäjä tietää.
+              Yrittäjän elämää säätelee varovainen tasapaino univajeen ja urakan
+              välillä. Arvokkaita työtunteja ei sovi lapata muiden töiden
+              valvontaan.
             </p>
             <p>
-              Kun ostat Wordpress nettisivut, et osta pelkästään valitsemaltasi
-              kehittäjältä, ostat myös hänen käyttämiltään lisäosien myyjiltä ja
-              suunnittelijoilta, jotka eivät välitä yrityksestäsi tai
-              verkkosivuistasi.
+              Siksi Google on kehittänyt automaattisen laatutestin joka käy
+              verkkosivusi läpi puolestasi ja jota Digiaalto käyttää
+              verkkokehityksessä.
             </p>
           </div>
           <h2 className={styles.header}>
-            Valtaosa Wordpress-kehittäjien koodista on ulkoistettua.
+            Suomen PK-yrittäjien verkkosivut ovat pahkassa.
           </h2>
           <p>
-            Mikään teknologiajätti ei käytä Wordpressia. Nyt ei tarvitse
-            sinunkaan.
+            Liian monet suomalaiset yrityssivut matelevat näytölle vanhalla ja
+            kehnosti optimoiduilla Wordpressillä.
+          </p>
+          <p>
+            Wordpress-kehittäjät sen sijaan jälleenmyyvät ulkoistettua koodia
+            teemojen ja vaaraantuneiden lisäosien muodossa.
           </p>
         </Fade>
       </div>

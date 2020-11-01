@@ -11,9 +11,8 @@ const LP_Pricing = () => {
           3,200€.
         </h3>
         <p className={styles.note}>
-          Kaikki on hoidettu puolestasi, sinun tarvitsee vain täyttää
-          yksinkertainen haastattelulomake jonka saat antamaasi
-          sähköpostiosoitteeseen. Digiaalto laskuttaa 50% työn aloitettua.
+          Kaikki on hoidettu puolestasi, sinun tarvitsee vain täyttää yksi
+          haastattelulomake. Digiaalto laskuttaa 50% työn alkaessa.
         </p>
       </div>
     </section>
