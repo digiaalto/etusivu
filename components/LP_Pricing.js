@@ -8,11 +8,11 @@ const LP_Pricing = () => {
         <FaGift className={styles.giftIcon} />
         <h3 className={styles.header}>
           Valmiit kotisivut yrityksellesi tai vaikka lahjaksi, kiinteään hintaan
-          3,200€.
+          3,200 €.
         </h3>
         <p className={styles.note}>
           Kaikki on hoidettu puolestasi, sinun tarvitsee vain täyttää
-          haastattelulomake. Digiaalto laskuttaa 50% työn alkaessa.
+          haastattelulomake. Digiaalto laskuttaa 30% sopimuksen kanssa.
         </p>
       </div>
     </section>

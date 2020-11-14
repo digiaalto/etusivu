@@ -22,11 +22,11 @@ const LP_Expect = () => {
           </h3>
           <List
             items={[
-              "Mitä tahansa sisällönhallintapalvelua",
+              "Valitsemaasi sisällönhalintapalvelua",
               "A-luokan optimointia",
-              "Laatutestauksen tuloksia",
-              "Käyttäjäystävällisyyttä",
-              "Virtaviivaista prosessia",
+              "Ankaraa laatutestausta",
+              "Asiakkaan priorisointia",
+              "Sujuvaa toteutusprosessia",
             ]}
           />
         </div>

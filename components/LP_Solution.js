@@ -18,14 +18,14 @@ const LP_Solution = () => {
           <p>
             Seuraamalla hakukoneiden laatuvaatimuksia tarkasti,{" "}
             <span className="bold">
-              Digiaalto luo superoptimoituja verkkosivuja yrittäjille kenen
+              Digiaalto luo superoptimoituja verkkosivuja yrittäjälle kenen
               kalenteri on täynnä.
             </span>
           </p>
           <p>
-            Kehitysvaihe yhdistetään automaattiseen laatutestaukseen, josta
-            selviää verkkosivujen suorituskyky, saavutettavuus ja
-            hakukoneoptimointi.
+            Saat nykyaikaiset yrityssivut avaimet käteen menetelmällä. Sinun ei
+            tarvitse kuin täyttää haastattelulomake ja kaikki verkkokehitykseen
+            ja suunnitteluun liittyvät asiat testataan ja hoidetaan puolestasi.
           </p>
           <Link href="#onko-parantamisen-varaa?">
             <a className={styles.linkToTest}>Lue testistä lisää</a>

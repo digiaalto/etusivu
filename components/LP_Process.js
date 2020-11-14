@@ -39,27 +39,27 @@ const LP_Process = () => {
             <TextBlock
               miniheader="Aloitetaan"
               header="Kartoitus"
-              text="Hahmotamme verkkosivusi tavoitteet, kohderyhmä ja muut tarpeelliset palvelutarpeet ja ominaisuudet."
+              text="Täytät haastattelulomakkeen josta selviää tietosi, verkkosivusi tavoitteet ja kohderyhmä. Saat takaisin ehdotuksen projektin ominaisuuksista ja tarpeellisista palveluista."
             />
             <TextBlock
               miniheader="Vaihe 2"
               header="Suunnittelu"
-              text="Keskitytään sisältöön. Tutkitaan kilpailijoita, kerätään ja kirjoitetaan tekstisisältöä ja haetaan muuta sopivaa materiaalia."
+              text="Digiaalto keskittyy sisältöön. Tutkitaan kilpailijoita, kerätään ja kirjoitetaan tekstisisältöä ja haetaan muuta sopivaa materiaalia."
             />
             <TextBlock
               miniheader="Vaihe 3"
               header="Design"
-              text="Lähdemateriaalit yhdistetään rautalankamalliin ja luodaan graaffinen representaatio verkkosivusta."
+              text="Lähdemateriaalit yhdistetään rautalankamalliin ja luodaan graaffinen representaatio verkkosivusta jolla haetaan sinulta hyväksyntä."
             />
             <TextBlock
               miniheader="Vaihe 4"
               header="Kehitys"
-              text="Koodausvaiheessa verkkosivu realisoidaan sovitun mallin mukaisesti ja optimoidaan kymppiin."
+              text="Koodausvaiheessa verkkosivu realisoidaan sovitun mallin mukaisesti ja tuunataan optimaalisesti tarkoituksiisi."
             />
             <TextBlock
               miniheader="Valmista!"
               header="Julkaisu"
-              text="Domain osoitetaan palvelimelle ja asiakaspalvelulinjat pidetään auki työn loputtuakin."
+              text="Domain osoitetaan palvelimelle ja sivu on valmis. Asiakaspalvelulinjat pidetään auki kysymksille projektin jälkeenkin."
             />
           </div>
         </div>
