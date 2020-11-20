@@ -39,7 +39,7 @@ const LP_Process = () => {
             <TextBlock
               miniheader="Aloitetaan"
               header="Kartoitus"
-              text="Täytät haastattelulomakkeen josta selviää tietosi, verkkosivusi tavoitteet ja kohderyhmä. Saat takaisin ehdotuksen projektin ominaisuuksista ja tarpeellisista palveluista."
+              text="Lähetä sähköpostia ja saat haastattelulomakkeen johon kirjataan alustavat taustatiedot. Saat takaisin ehdotuksen projektin ominaisuuksista ja tarpeellisista palveluista."
             />
             <TextBlock
               miniheader="Vaihe 2"
