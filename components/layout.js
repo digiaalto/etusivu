@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Head from "next/head"
-import Nav from "../components/navigation"
+import Navigation from "../components/Navigation"
 
 const Layout = ({ title, children, infobar = null }) => {
   return (
@@ -15,6 +15,7 @@ const Layout = ({ title, children, infobar = null }) => {
         <title>{title}</title>
       </Head>
       {infobar}
+      <Navigation />
       {/* <Nav /> */}
       <main>{children}</main>
     </React.Fragment>

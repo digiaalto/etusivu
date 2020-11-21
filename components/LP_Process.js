@@ -21,7 +21,7 @@ const LP_Process = () => {
   }, [inView])
 
   return (
-    <section className={styles.section} id="toteutus" ref={ref}>
+    <section className={styles.section} id="toteutusprosessi" ref={ref}>
       <div className={styles.content}>
         <div className={styles.column}>
           <Images inView={inView} dist={(scrollY / initialY - 1) * 100} />

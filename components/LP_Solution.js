@@ -6,7 +6,7 @@ const reactLink = "https://nextjs.org/"
 
 const LP_Solution = () => {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="avaimet-kateen">
       <div className={styles.content}>
         <Fade direction="up" triggerOnce>
           <div className={styles.headerWrapper}>
@@ -27,9 +27,12 @@ const LP_Solution = () => {
             tarvitse kuin täyttää haastattelulomake ja kaikki verkkokehitykseen
             ja suunnitteluun liittyvät asiat testataan ja hoidetaan puolestasi.
           </p>
-          <Link href="#testaa-verkkosivuja">
-            <a className={styles.linkToTest}>Lue testistä lisää</a>
-          </Link>
+          <a
+            href="mailto:hei@digiaalto.fi?subject=Olen kiinnostunut Digiaallon palveluista"
+            className={styles.emailLink}
+          >
+            Ota yhteyttä &rarr;&nbsp; hei@digiaalto.fi
+          </a>
         </Fade>
       </div>
     </section>
