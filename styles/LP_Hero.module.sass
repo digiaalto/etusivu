@@ -1,39 +1,40 @@
 @import "_partials.sass"
 $tabletWidth: 37rem
 $laptopWidth: 50rem
-$desktopSize: 63rem
+$desktopWidth: 63rem
 
 .section
 	padding: map-get($padding, mobile)
+	position: fixed
+	left: 0
+	top: 0
+	height: $mobileHeroHeight
+	z-index: 0
+	display: flex
+	justify-content: center
+	flex-direction: column
 
 .content
-	z-index: 1
-	display: flex
-	flex-direction: column
-	align-items: center
 	color: map-get($colors, textDark)
-	text-align: center
 
 .salesPitch
 	display: block
-	font-size: $h1Size
+	font-size: $h2Size
 	line-height: 1.1
+	margin-bottom: 0
 	font-weight: 800
-	margin-top: 1rem
-	margin-bottom: 3rem
 	letter-spacing: -0.25rem
+	margin-top: 2rem
 
 .header
-	margin-top: 0
-	font-size: $h4Size
+	font-size: $h5Size
+	margin-top: 1.5rem
+	max-width: 480px
 
-.lueLisaaContainer
-	display: flex
-	justify-content: center
-
-.lueLisaaSvg
+.ctaBtn
+	display: inline-block
 	max-width: 6rem
-	margin: 2rem 0
+	margin-top: 2rem
 	transition: all .4s ease-in-out
 	&:hover
 		transform: rotate(180deg)
@@ -57,23 +58,25 @@ $desktopSize: 63rem
 // MEDIA QUERIES
 	
 @media (min-width: map-get($bp, tablet))
+	.content
+		max-width: $tabletWidth
 	.salesPitch
-		max-width: $tabletWidth
 		font-size: 4rem
-	.header
-		max-width: $tabletWidth
 
 @media (min-width: map-get($bp, laptop))
 	.section
+		height: $laptopHeroHeight
 		padding: map-get($padding, laptop)
+	.content
+		max-width: $laptopWidth
 	.salesPitch
-		max-width: $laptopWidth
 		font-size: 5rem
-	.header
-		max-width: $laptopWidth
 
 
 @media (min-width: map-get($bp, desktop))
+	.section
+		height: $desktopHeroHeight
+	.content
+		max-width: $desktopWidth
 	.salesPitch
-		max-width: $desktopSize
 		font-size: $h1Size * 2.2

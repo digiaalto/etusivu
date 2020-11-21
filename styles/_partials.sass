@@ -1,26 +1,31 @@
 // https://paletton.com/#uid=73D0u0k++kEZHx5+Wq6+Zf5+V7Y
 
-$colors: (primary: #007CF0, secondary: #00DFD8, highlight: #fdb750,	textLight: #ffffff, textDark: #00122a, textGray: #586069, link: #0074de, linkAlt: #3894e8, navElements: #0173BC, finBlue: #002F6C)
+$colors: (primary: #007CF0, secondary: #00DFD8, highlight: #fdb750,	textLight: #ffffff, bgLight: #ffffff, textDark: #00122a, textGray: #586069, link: #0074de, linkAlt: #3894e8, navElements: #0173BC, finBlue: #002F6C)
 
 $bp: (tablet: 768px, laptop: 1024px, desktop: 1440px)
 
 $padding: (mobile: 2rem 5vw, laptop: 5rem 10vw, desktop: 10rem 10vw)
 
-$size: (navHeight: 4rem)
-
 $font: "Open Sans", Arial, Helvetica, sans-serif
 
+// Fonts
 $h1Size: 3.052rem
 $h2Size: 2.441rem
 $h3Size: 1.953rem
 $h4Size: 1.563rem
 $h5Size: 1.25rem
-
 $headerLineHeight: 1.3
 $bodyLineHeight: 1.75
 
+// Arbitary sizes
+$navHeight: 5rem
+$infobarHeight: 3rem
 $sectionHeaderWidth: 30rem
 $sectionParagraphWidth: 580px
+
+$mobileHeroHeight: 600px
+$laptopHeroHeight: 900px
+$desktopHeroHeight: 100vh
 
 @mixin preheader
 	color: map-get($colors, highlight)

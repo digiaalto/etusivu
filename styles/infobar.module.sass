@@ -4,9 +4,15 @@ $textColor: map-get($colors, textLight)
 
 .infobar
   display: flex
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 10
+  height: $infobarHeight
   justify-content: space-between
   align-items: center
-  padding: 1rem 1rem
+  padding: 0 2rem
   //background-color: #fafafa
   background-color: map-get($colors, finBlue)
   letter-spacing: 0.06rem

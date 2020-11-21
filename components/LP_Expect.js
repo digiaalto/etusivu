@@ -8,9 +8,9 @@ const LP_Expect = () => {
           <h3 className={styles.header}>Älä odota</h3>
           <List
             items={[
-              "Verkkokauppaa",
-              "Työn ulkoistamista",
-              "Logon suunnittelua",
+              "Verkkokauppa-alustaa",
+              "Ulkoistettua työtä",
+              "Logoa",
               "Hutilointia",
               "Myöhäistä toimitusta",
             ]}

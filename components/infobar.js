@@ -16,10 +16,10 @@ const Infobar = ({ text, ctaHref = "/" }) => {
         <MdLocalPhone />
         <span className={styles.contactText}>+358505543395</span>
       </a>
-      <div className={styles.divider}></div>
+      {/* <div className={styles.divider}></div>
       <Link href={ctaHref}>
         <a className={styles.contactForm}>{text} →</a>
-      </Link>
+      </Link> */}
     </div>
   )
 }

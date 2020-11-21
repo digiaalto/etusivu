@@ -2,6 +2,9 @@
 
 .section
 	padding: map-get($padding, mobile)
+	position: relative
+	z-index: 1
+	background-color: map-get($colors, bgLight)
 
 .preheader
 	@include preheader
@@ -14,7 +17,7 @@
 	max-width: $sectionHeaderWidth
 
 .emailLink
-	letter-spacing: 0.25rem
+	letter-spacing: 0.1rem
 	
 @media (min-width: map-get($bp, laptop))
 	.section

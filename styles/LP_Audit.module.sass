@@ -4,11 +4,13 @@
 
 .section
 	padding: map-get($padding, mobile)
+	position: relative
+	z-index: 1
+	background-color: map-get($colors, bgLight)
 
 .content
 	display: flex
 	flex-direction: column
-
 
 .preheader
 	@include preheader

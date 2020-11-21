@@ -6,7 +6,6 @@ const Navigation = () => {
     <div className={styles.navigationBar}>
       <Logo />
       <Links />
-      <Logo />
     </div>
   )
 }
@@ -19,10 +18,10 @@ const Links = () => {
   )
   return (
     <ul className={styles.linkList}>
-      <DigiaaltoLink href="#avaimet-kateen" text="Avaimet käteen verkkosivu!" />
-      <DigiaaltoLink href="#testaa-verkkosivuja" text="Google Lighthouse" />
-      <DigiaaltoLink href="#toteutusprosessi" text="Toteutusprosessi" />
-      <DigiaaltoLink href="#paljonko-maksaa" text="Paljon maksaa?" />
+      <DigiaaltoLink href="#huippuluokan-sivut" text="Digiaalto" />
+      <DigiaaltoLink href="#testaa-verkkosivuja" text="Laatutesti" />
+      <DigiaaltoLink href="#toteutusprosessi" text="Prosessi" />
+      <DigiaaltoLink href="#hinta" text="Hinta" />
     </ul>
   )
 }

@@ -3,7 +3,7 @@ import { Fade } from "react-awesome-reveal"
 
 const LP_Problem = () => {
   return (
-    <section className={styles.section} id="ongelmia-verkossa">
+    <section className={styles.section} id="ongelmallisia-verkkosivuja">
       <div className={styles.content}>
         <Fade direction="up" triggerOnce>
           <div className={styles.headerWrapper}>
@@ -34,7 +34,7 @@ const LP_Problem = () => {
             lisäosia.
           </p>
           <p>
-            Tarvitaan nykyaikaista tekniikkaa joka toimii ja löytyy helpommin
+            Tarvitaan nykyaikaista tekniikkaa joka toimii ja löytyy paremmin
             verkosta.
           </p>
         </Fade>

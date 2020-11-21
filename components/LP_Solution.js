@@ -1,12 +1,11 @@
 import styles from "../styles/LP_Solution.module.sass"
 import { Fade } from "react-awesome-reveal"
-import Link from "next/link"
 
 const reactLink = "https://nextjs.org/"
 
 const LP_Solution = () => {
   return (
-    <section className={styles.section} id="avaimet-kateen">
+    <section className={styles.section} id="huippuluokan-sivut">
       <div className={styles.content}>
         <Fade direction="up" triggerOnce>
           <div className={styles.headerWrapper}>
@@ -25,7 +24,7 @@ const LP_Solution = () => {
           <p>
             Saat nykyaikaiset yrityssivut avaimet käteen menetelmällä. Sinun ei
             tarvitse kuin täyttää haastattelulomake ja kaikki verkkokehitykseen
-            ja suunnitteluun liittyvät asiat testataan ja hoidetaan puolestasi.
+            ja suunnitteluun liittyvät asiat hoidetaan puolestasi.
           </p>
           <a
             href="mailto:hei@digiaalto.fi?subject=Olen kiinnostunut Digiaallon palveluista"
