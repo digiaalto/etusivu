@@ -27,7 +27,7 @@ const LP_Solution = () => {
             tarvitse kuin täyttää haastattelulomake ja kaikki verkkokehitykseen
             ja suunnitteluun liittyvät asiat testataan ja hoidetaan puolestasi.
           </p>
-          <Link href="#onko-parantamisen-varaa?">
+          <Link href="#testaa-verkkosivuja">
             <a className={styles.linkToTest}>Lue testistä lisää</a>
           </Link>
         </Fade>

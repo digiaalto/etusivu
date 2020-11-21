@@ -4,18 +4,16 @@ const auditLink = "https://www.web.dev/measure"
 
 const LP_Audit = () => {
   return (
-    <section className={styles.section} id="onko-parantamisen-varaa?">
+    <section className={styles.section} id="testaa-verkkosivuja">
       <div className={styles.content}>
-        <span className={styles.preheader}>
-          Vertaile kilpailijan sivuja omiisi
-        </span>
-        <span className={styles.header}>Onko sivuissa parantamisen varaa?</span>
+        <span className={styles.preheader}>Vertaile tuloksia</span>
+        <span className={styles.header}>Testaa verkkosivuja</span>
         <p className={styles.info}>
           Google Lighthouse on ilmainen automaattinen työkalu verkkosivujen
           laadun mittaamiseen josta selviää kuinka hyvin näyt ja pärjäät
           verkossa. Sillä voidaan auditoida mikä tahansa verkkosivun
           suorituskyky, saavutettavuus ja hakukoneoptimointi muutamassa
-          sekunnissa.
+          sekunnissa ilmaiseksi, tarvitset testattavan sivun domain-osoitteen.
         </p>
         <a
           className={styles.button}
@@ -23,7 +21,7 @@ const LP_Audit = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Auditoi Sivu
+          Testaa
         </a>
         <p className={styles.help}>
           <HiExclamation className={styles.helpIcon} /> Tulokset ovat
