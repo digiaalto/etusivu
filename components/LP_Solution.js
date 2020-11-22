@@ -1,8 +1,6 @@
 import styles from "../styles/LP_Solution.module.sass"
 import { Fade } from "react-awesome-reveal"
 
-const reactLink = "https://nextjs.org/"
-
 const LP_Solution = () => {
   return (
     <section className={styles.section} id="huippuluokan-sivut">

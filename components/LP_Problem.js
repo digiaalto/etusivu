@@ -1,5 +1,6 @@
 import styles from "../styles/LP_Problem.module.sass"
 import { Fade } from "react-awesome-reveal"
+import Button from "./utility/Button"
 
 const LP_Problem = () => {
   return (
@@ -7,36 +8,34 @@ const LP_Problem = () => {
       <div className={styles.content}>
         <Fade direction="up" triggerOnce>
           <div className={styles.headerWrapper}>
-            <span className={styles.preheader}>Ongelmia</span>
+            <span className={styles.preheader}>Ongelma</span>
             <h2 className={styles.header}>
-              Yrittäjän elämä on kiireistä, silti hyvät nettisivut pitää löytyä.
+              Yrittäjän elämä on kiireistä, silti arvokasta aikaa pitää käyttää
+              verkkosivujen hankintaan.
             </h2>
           </div>
           <div className={styles.pWrapper}>
             <p>
-              Jokainen yrittäjä tietää, että aika on kultaa arvokkaampaa.
-              Työtunteja ei sovi lapata verkkokehittäjän työn laadun
-              tarkasteluun.
+              Laatu tarkoittaa sivua joka löytyy hakukoneesta, on
+              käyttäjäystävällinen, latautuu heti, toimii responsiivisesti eri
+              laitteilla ja näyttää hyvältä somessa. Myös tekstisisällön pitäisi
+              puhutella oikeata kohderyhmää varsinkin tulevina korona-aikoina.
             </p>
-            <p>
-              Siksi Google on kehittänyt automaattisen laatutestin joka käy
-              uuden verkkosivusi läpi puolestasi ja jonka tuloksia Digiaalto
-              valvoo kehityksen yhteydessä.
-            </p>
+            <div>
+              <p>
+                Valtaosa Suomen verkkotekijöistä jälleenmyy Wordpress-alustaa
+                vastauksena jokaiseen edellämainittuun haasteeseen, ja on tehnyt
+                niin lähes 20 vuotta. Valitettavasti tämä lähes aina tarkoittaa
+                kuluneita valmisteemoja, ulkoistettua koodia ja vanhaa
+                tekniikkaa johon mikään ajan hermolla surffaava yritys ei
+                koskisi edes toisen tietokoneella.
+              </p>
+              <Button
+                href="#huippuluokan-sivut"
+                text="Digiaalto hoitaa asiansa toisin."
+              />
+            </div>
           </div>
-          <h2 className={styles.header}>
-            Suomen PK-yrittäjien verkkosivut ovat pahkassa.
-          </h2>
-          <p>
-            Liian monet suomalaiset yrityssivut matelevat näytölle
-            vanhentuneella ja heikosti optimoiduilla Wordpressillä.
-            Wordpress-kehittäjät myyvät ulkoistettuja teemoja ja vaaraantuneita
-            lisäosia.
-          </p>
-          <p>
-            Tarvitaan nykyaikaista tekniikkaa joka toimii ja löytyy paremmin
-            verkosta.
-          </p>
         </Fade>
       </div>
     </section>

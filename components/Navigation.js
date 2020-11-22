@@ -29,15 +29,7 @@ const Links = () => {
 const Logo = () => (
   <div className={styles.logoContainer}>
     <a href="/" className={styles.logoContainerLink}>
-      <img src="brand/logo.svg" className={styles.logoImage} />
-      <div className={styles.logoTexts}>
-        <span className={styles.logoHeader}>Digiaalto</span>
-        <span className={styles.logoSubheader}>
-          Surffaa
-          <br />
-          aallonharjalla
-        </span>
-      </div>
+      <span className={styles.logoHeader}>Digiaalto.fi</span>
     </a>
   </div>
 )

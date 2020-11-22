@@ -6,7 +6,12 @@
 	padding: map-get($padding, mobile)
 	background-color: #fafafd
 	margin-top: $mobileHeroHeight
+	opacity: 1
 
+.content
+	z-index: 1
+	background-color: #fafafd
+	
 .column
 	flex: 1
 	&:last-of-type
@@ -15,6 +20,10 @@
 
 .preheader
 	@include preheader
+
+.covidIcon
+	height: 18px
+	display: inline-block
 
 .header
 	margin-top: 0
