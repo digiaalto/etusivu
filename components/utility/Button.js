@@ -39,7 +39,7 @@ const InnerButton = () => {
 const OutsideButton = () => {
   const value = useContext(buttonCtx)
   return (
-    <a href={value.href}>
+    <a href={value.href} target="_blank" rel="noopener noreferrer">
       {value.icon && value.icon} {value.text}
     </a>
   )

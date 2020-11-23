@@ -10,30 +10,33 @@ const LP_Problem = () => {
           <div className={styles.headerWrapper}>
             <span className={styles.preheader}>Ongelma</span>
             <h2 className={styles.header}>
-              Yrittäjän elämä on kiireistä, silti arvokasta aikaa pitää käyttää
-              verkkosivujen hankintaan.
+              Yrittäjän elämä on liian kiireistä verkkosivujen laadunvalvontaan.
             </h2>
           </div>
-          <div className={styles.pWrapper}>
-            <p>
-              Laadukas sivu löytyy hakukoneesta, on käyttäjäystävällinen,
-              latautuu heti, toimii responsiivisesti eri laitteilla ja näyttää
-              hyvältä somessa. Myös tekstisisällön pitäisi puhutella oikeata
-              kohderyhmää varsinkin, kun kilpailu asiakkaiden huomiosta koventuu
-              päivä päivältä.
-            </p>
+          <div className={styles.textContainer}>
             <div>
               <p>
-                Valtaosa Suomen verkkotekijöistä jälleenmyy Wordpress-alustaa
-                vastauksena jokaiseen edellämainittuun haasteeseen, ja on tehnyt
-                niin lähes 20 vuotta. Valitettavasti tämä lähes aina tarkoittaa
-                kuluneita valmisteemoja, ulkoistettua koodia ja vanhaa
-                tekniikkaa.
+                Kaikki yritykset tarvitsevat laadukkaan nettisivun joka löytyy
+                hakukoneesta, on käyttäjäystävällinen, latautuu heti, toimii
+                responsiivisesti eri laitteilla ja edustaa somessa
+                positiivisesti.
               </p>
-              <Button
-                href="#huippuluokan-sivut"
-                text="Digiaalto luo jotain parempaa."
-              />
+              <p>
+                Myös tekstisisällön pitäisi puhutella oikeata kohderyhmää
+                varsinkin nyt, kun kilpailu asiakkaiden huomiosta koventuu hetki
+                hetkeltä.
+              </p>
+            </div>
+            <div>
+              <p>
+                Yrittäjänä harvoin on aikaa seurata kaikkea sitä kehitystyötä ja
+                suunnittelua, ainakaan niin tarkasti kuin haluaisi.
+              </p>
+              <p>
+                Siksi Google on kehittänyt laatutestin joka auditoi verkkosivuja
+                ja raportoi niiden toteutuksen onnistumisen yksinkertaisilla
+                pistetuloksilla.
+              </p>
             </div>
           </div>
         </Fade>

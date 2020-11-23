@@ -1,5 +1,6 @@
 import styles from "../styles/LP_Solution.module.sass"
 import { Fade } from "react-awesome-reveal"
+import Button from "./utility/Button"
 
 const LP_Solution = () => {
   return (
@@ -9,27 +10,32 @@ const LP_Solution = () => {
           <div className={styles.headerWrapper}>
             <span className={styles.preheader}>Ratkaisu</span>
             <h1 className={styles.header}>
-              Digiaalto kehittää huippuluokan verkkosivuja, todistettavasti.
+              Digiaalto kehittää huippuluokan verkkosivuja,{" "}
+              <span style={{ textDecoration: "underline" }}>
+                todistettavasti.
+              </span>
             </h1>
           </div>
-          <p>
-            Seuraamalla hakukoneiden laatuvaatimuksia tarkasti,{" "}
-            <span className="bold">
-              Digiaalto luo superoptimoituja verkkosivuja yrittäjälle kenen
-              kalenteri on täynnä.
-            </span>
-          </p>
-          <p>
-            Saat nykyaikaiset yrityssivut avaimet käteen menetelmällä. Sinun ei
-            tarvitse kuin täyttää haastattelulomake ja kaikki verkkokehitykseen
-            ja suunnitteluun liittyvät asiat hoidetaan puolestasi.
-          </p>
-          <a
-            href="mailto:hei@digiaalto.fi?subject=Olen kiinnostunut Digiaallon palveluista"
-            className={styles.emailLink}
-          >
-            Ota yhteyttä &rarr;&nbsp; hei@digiaalto.fi
-          </a>
+          <div className={styles.textContainer}>
+            <div>
+              <p>
+                Pelkästään täyttämällä haastattelulomakkeen, saat internettiin
+                valmiit verkkosivut joiden toteutuksen takaa Googlen laatutesti
+                Lighthouse.
+              </p>
+              <p>
+                Kaikki suunnitteluun ja kehitykseen liittyvät työt hoidetaan
+                puolestasi.
+              </p>
+            </div>
+            <div>
+              <h2 className={styles.sideHeader}>
+                Käyttämällä kehittyneempää tekniikkaa ja seuraamalla uusimpia
+                web-standardeja, Digiaalto rakentaa kilpailua tehokkaampia ja
+                paremmin optimoituja verkkosivuja pk-yrityksille.
+              </h2>
+            </div>
+          </div>
         </Fade>
       </div>
     </section>
