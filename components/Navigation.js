@@ -27,11 +27,10 @@ const Links = () => {
 }
 
 const Logo = () => (
-  <div className={styles.logoContainer}>
-    <a href="/" className={styles.logoContainerLink}>
-      <span className={styles.logoHeader}>Digiaalto.fi</span>
-    </a>
-  </div>
+  <a href="/" className={styles.logoContainer}>
+    <img src="/brand/logo.png" className={styles.logoImage} />
+    <span className={styles.logoHeader}>Digiaalto.fi</span>
+  </a>
 )
 
 export default Navigation

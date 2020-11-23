@@ -16,10 +16,11 @@ const LP_Problem = () => {
           </div>
           <div className={styles.pWrapper}>
             <p>
-              Laatu tarkoittaa sivua joka löytyy hakukoneesta, on
-              käyttäjäystävällinen, latautuu heti, toimii responsiivisesti eri
-              laitteilla ja näyttää hyvältä somessa. Myös tekstisisällön pitäisi
-              puhutella oikeata kohderyhmää varsinkin tulevina korona-aikoina.
+              Laadukas sivu löytyy hakukoneesta, on käyttäjäystävällinen,
+              latautuu heti, toimii responsiivisesti eri laitteilla ja näyttää
+              hyvältä somessa. Myös tekstisisällön pitäisi puhutella oikeata
+              kohderyhmää varsinkin, kun kilpailu asiakkaiden huomiosta koventuu
+              päivä päivältä.
             </p>
             <div>
               <p>
@@ -27,12 +28,11 @@ const LP_Problem = () => {
                 vastauksena jokaiseen edellämainittuun haasteeseen, ja on tehnyt
                 niin lähes 20 vuotta. Valitettavasti tämä lähes aina tarkoittaa
                 kuluneita valmisteemoja, ulkoistettua koodia ja vanhaa
-                tekniikkaa johon mikään ajan hermolla surffaava yritys ei
-                koskisi edes toisen tietokoneella.
+                tekniikkaa.
               </p>
               <Button
                 href="#huippuluokan-sivut"
-                text="Digiaalto hoitaa asiansa toisin."
+                text="Digiaalto luo jotain parempaa."
               />
             </div>
           </div>
