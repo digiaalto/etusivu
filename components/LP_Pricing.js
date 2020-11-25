@@ -11,9 +11,8 @@ const LP_Pricing = () => {
           3,200 €.
         </h3>
         <p className={styles.note}>
-          Kaikki on hoidettu puolestasi, sinun tarvitsee vain täyttää
-          haastattelulomake jonka saat sähköpostista. Digiaalto laskuttaa 30%
-          sopimuksen kanssa.
+          Ole yhteydessä, sähköpostilla tai puhelimella. Täytä haastattelulomake
+          huolellisesti. Digiaalto laskuttaa 30% sopimuksen kanssa.
         </p>
       </div>
     </section>

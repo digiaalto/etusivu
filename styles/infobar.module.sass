@@ -3,47 +3,43 @@
 $textColor: map-get($colors, textLight)
 
 .infobar
-  position: relative
-  display: flex
-  z-index: 1
-  height: $infobarHeight
-  justify-content: space-between
-  align-items: center
-  padding: 0 2rem
-  //background-color: #fafafa
-  background-color: map-get($colors, finBlue)
-  letter-spacing: 0.06rem
-  font-size: 1rem
-
-.contactForm
-  font-weight: 500
-  color: $textColor
+	z-index: 998
+	display: flex
+	justify-content: space-between
+	align-items: center
+	position: fixed
+	left: 0
+	top: 0
+	right: 0
+	height: $infobarHeight
+	padding: 0 2rem
+	background-color: map-get($colors, finBlue)
+	font-size: 1rem
 
 .contactLink
-  display: flex
-  align-content: center
-  align-items: center
-  color: $textColor
+	display: flex
+	align-content: center
+	align-items: center
+	color: $textColor
 
 .contactText
-  display: none
+	margin-left: 0.25rem
 
 .divider
-  display: block
-  background-color: $textColor
-  width: 1px
-  height: 1.25rem
-  opacity: 0.15
-  content: ""
-  margin: 0 0.33rem
-  
+	display: block
+	background-color: $textColor
+	width: 1px
+	height: 1.25rem
+	opacity: 0.15
+	content: ""
+	margin: 0 0.33rem
+	
 @media (min-width: map-get($bp, tablet))
-  .divider
-    margin: 0 2rem
-  .contactText
-    display: inline-block
-    margin-left: 0.25rem
+	.infobar
+		justify-content: center
+	.divider
+		margin: 0 2rem
+	.contactText
+		display: inline-block
 
 @media (min-width: map-get($bp, laptop))
-  .infobar
-    justify-content: center

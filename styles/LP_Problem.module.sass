@@ -5,8 +5,8 @@
 	position: relative
 	padding: map-get($padding, mobile)
 	background-color: #fafafd
-	margin-top: $mobileHeroHeight
 	opacity: 1
+	margin-top: 100vh
 
 .content
 	z-index: 1
@@ -34,7 +34,6 @@
 @media (min-width: map-get($bp, laptop))
 	.section
 		padding: map-get($padding, laptop)
-		margin-top: $laptopHeroHeight
 	.headerWrapper
 		display: flex
 		flex-wrap: wrap
@@ -52,7 +51,6 @@
 @media (min-width: map-get($bp, desktop))
 	.section
 		padding: map-get($padding, desktop)
-		margin-top: $desktopHeroHeight
 	.header
 		font-size: $h1Size * 1.2
 		max-width: 40rem

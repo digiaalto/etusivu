@@ -7,16 +7,16 @@ const Hero = () => {
     <section className={styles.section}>
       <Zoom delay={200} triggerOnce>
         <div className={styles.content}>
-          <h6 className={styles.salesPitch}>
+          <span className={styles.salesPitch}>
             Haluatko <span className={styles.highlight}> löytyä </span>
             verkosta <span className={styles.highlight2}> helposti </span>
             sekä <span className={styles.highlight3}> nopeasti?</span>
-          </h6>
+          </span>
           <h1 className={styles.header}>
             Verkkokehittäjä Digiaalto on erikoistunut suunnittelemaan
             laatutestattuja verkkosivuja kiireisille yrittäjille.
           </h1>
-          <Link href="#ongelmallisia-verkkosivuja">
+          <Link href="#verkkosivujen-haasteita">
             <a>
               <img
                 src="lue-lisaa.svg"

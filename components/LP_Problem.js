@@ -4,37 +4,36 @@ import Button from "./utility/Button"
 
 const LP_Problem = () => {
   return (
-    <section className={styles.section} id="ongelmallisia-verkkosivuja">
+    <section className={styles.section} id="verkkosivujen-haasteita">
       <div className={styles.content}>
         <Fade direction="up" triggerOnce>
           <div className={styles.headerWrapper}>
             <span className={styles.preheader}>Ongelma</span>
-            <h2 className={styles.header}>
-              Yrittäjän elämä on liian kiireistä verkkosivujen laadunvalvontaan.
-            </h2>
+            <h2 className={styles.header}>Yrittäjän työtaakka on valtava.</h2>
           </div>
           <div className={styles.textContainer}>
             <div>
               <p>
-                Silti jokainen yritys tarvitsee oman laadukkaan verkkosivun joka
-                löytyy hakukoneesta, on käyttäjäystävällinen, toimii
-                responsiivisesti eri laitteilla ja edustaa yritystä somessa
-                positiivisesti.
+                Silti tarvitset oman yrityssivun joka löytyy hakukoneesta,
+                kasvattaa tuottoa, toimii responsiivisesti sadoilla eri
+                laitteilla ja edustaa sinua positiivisesti.
               </p>
               <p>
-                Tekstisisällönkin pitäisi puhutella oikeata kohderyhmää
-                varsinkin nyt, kun kilpailu asiakkaiden huomiosta on kasvanut.
+                On erityisen tärkeää, että sisältö puhuttelee oikeata
+                asiakasryhmää, varsinkin nyt kun kilpailu verkossa sen kuin
+                kasvaa.
               </p>
             </div>
             <div>
               <p>
-                Harvoin on aikaa seurata kaikkea sitä kehitystyötä ja
-                suunnittelua, ainakaan niin tarkasti kuin haluaisi.
+                Yrittäjänä on taloudellisesti järkevämpää keskittyä omaan
+                ydinosaamineen, eikä muiden toimittajien töiden
+                laadunvalvontaan.
               </p>
               <p>
-                Siksi Google on kehittänyt laatutestin joka auditoi verkkosivuja
-                ja raportoi niiden toteutuksen onnistumisen yksinkertaisilla
-                pistetuloksilla.
+                Tämän takia Digiaalto tarjoaa verkkosivun suunittelu- ja
+                kehityspalvelua jossa sinua ei vaivata turhilla kysymyksillä,
+                mutta lopputulos on silti kilpailua parempaa.
               </p>
             </div>
           </div>

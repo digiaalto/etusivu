@@ -4,7 +4,7 @@ import Link from "next/link"
 import PropTypes from "prop-types"
 import { MdEmail, MdLocalPhone } from "react-icons/md"
 
-const Infobar = ({ text, ctaHref = "/" }) => {
+const Infobar = () => {
   return (
     <div className={styles.infobar}>
       <a href="mailto:hei@digiaalto.fi" className={styles.contactLink}>
@@ -16,10 +16,6 @@ const Infobar = ({ text, ctaHref = "/" }) => {
         <MdLocalPhone />
         <span className={styles.contactText}>+358505543395</span>
       </a>
-      {/* <div className={styles.divider}></div>
-      <Link href={ctaHref}>
-        <a className={styles.contactForm}>{text} →</a>
-      </Link> */}
     </div>
   )
 }

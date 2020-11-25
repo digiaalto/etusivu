@@ -1,42 +1,44 @@
 @import "_partials.sass"
 $tabletWidth: 37rem
 $laptopWidth: 50rem
-$desktopWidth: 63rem
 
 .section
+	z-index: 0
 	padding: map-get($padding, mobile)
 	position: fixed
 	left: 0
 	top: 0
 	right: 0
-	height: $mobileHeroHeight
-	z-index: 0
 	display: flex
-	justify-content: center
 	flex-direction: column
+	justify-content: center
+	text-align: center
+	align-content: center
+	aligm-items: center
+	min-height: 60vh
 
 .content
+	display: block
+	margin: auto
+	margin-top: 80px
 	color: map-get($colors, textDark)
 
 .salesPitch
 	display: block
 	font-size: $h2Size
 	line-height: 1.1
-	margin-bottom: 0
 	font-weight: 800
 	letter-spacing: -0.25rem
-	margin-top: 2rem
 
 .header
 	font-size: $h5Size
-	margin-top: 1.5rem
-	max-width: 480px
+	margin-top: 1.2rem
 
 .ctaBtn
 	display: inline-block
 	max-width: 6rem
-	margin-top: 2rem
 	transition: all .4s ease-in-out
+	margin-top: 1rem
 	&:hover
 		transform: rotate(180deg)
 
@@ -63,21 +65,14 @@ $desktopWidth: 63rem
 		max-width: $tabletWidth
 	.salesPitch
 		font-size: 4rem
+	.header
+		font-size: $h4Size
 
 @media (min-width: map-get($bp, laptop))
 	.section
-		height: $laptopHeroHeight
 		padding: map-get($padding, laptop)
+		min-height: 90vh
 	.content
 		max-width: $laptopWidth
 	.salesPitch
 		font-size: 5rem
-
-
-@media (min-width: map-get($bp, desktop))
-	.section
-		height: $desktopHeroHeight
-	.content
-		max-width: $desktopWidth
-	.salesPitch
-		font-size: $h1Size * 2.2

@@ -1,6 +1,6 @@
 import styles from "../styles/LP_Solution.module.sass"
+import Link from "next/link"
 import { Fade } from "react-awesome-reveal"
-import Button from "./utility/Button"
 
 const LP_Solution = () => {
   return (
@@ -19,21 +19,25 @@ const LP_Solution = () => {
           <div className={styles.textContainer}>
             <div>
               <p>
-                Pelkästään täyttämällä haastattelulomakkeen, saat verkkoon
-                valmiit verkkosivut joiden toteutuksen takaa Googlen laatutesti
-                Lighthouse.
+                Pelkästään täyttämällä haastattelulomakkeen saat yrityssivut
+                joiden toteutuksen takaa Googlen kehittämä verkkosivujen
+                laatutesti &rarr;&nbsp;&nbsp;
+                <Link href="#laatutesti-google-lighthouse">
+                  <a>Lighthouse.</a>
+                </Link>
               </p>
               <p>
                 Halutessasi kaikki verkkosivun suunnitteluun ja kehitykseen
-                liittyvät työt hoidetaan puolestasi, jotta voit keskittyä omaan
-                toimialaasi.
+                liittyvät työt hoidetaan puolestasi, jotta voit yrittäjänä
+                keskittyä omaan osaamiseen ja toimialaan.
               </p>
             </div>
             <div>
               <h2 className={styles.sideHeader}>
                 Käyttämällä kehittyneempää tekniikkaa ja seuraamalla uusimpia
                 web-standardeja, Digiaalto rakentaa kilpailua tehokkaampia ja
-                paremmin optimoituja verkkosivuja pk-yrityksille.
+                paremmin optimoituja verkkosivuja pk-yrityksille,
+                kilpailukykyisesti.
               </h2>
             </div>
           </div>
