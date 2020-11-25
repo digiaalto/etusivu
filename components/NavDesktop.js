@@ -19,7 +19,7 @@ const Links = () => {
   return (
     <ul className={styles.linkList}>
       <DigiaaltoLink href="#huippuluokan-sivut" text="Digiaalto" />
-      <DigiaaltoLink href="#testaa-verkkosivuja" text="Laatutesti" />
+      <DigiaaltoLink href="#laatutesti-google-lighthouse" text="Laatutesti" />
       <DigiaaltoLink href="#toteutusprosessi" text="Prosessi" />
       <DigiaaltoLink href="#hinta" text="Hinta" />
     </ul>
