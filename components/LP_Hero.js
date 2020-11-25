@@ -13,7 +13,7 @@ const Hero = () => {
             sekä <span className={styles.highlight3}> nopeasti?</span>
           </h6>
           <h1 className={styles.header}>
-            Verkkokehittäjä Digiaalto on erikoistunut rkaentamaan
+            Verkkokehittäjä Digiaalto on erikoistunut suunnittelemaan
             laatutestattuja verkkosivuja kiireisille yrittäjille.
           </h1>
           <Link href="#ongelmallisia-verkkosivuja">

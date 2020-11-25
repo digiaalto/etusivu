@@ -16,8 +16,8 @@ const LP_Problem = () => {
           <div className={styles.textContainer}>
             <div>
               <p>
-                Lähes kaikki yritykset tarvitsevat oman yrityssivun joka löytyy
-                hakukoneesta, on käyttäjäystävällinen, latautuu heti, toimii
+                Silti jokainen yritys tarvitsee oman laadukkaan verkkosivun joka
+                löytyy hakukoneesta, on käyttäjäystävällinen, toimii
                 responsiivisesti eri laitteilla ja edustaa yritystä somessa
                 positiivisesti.
               </p>
