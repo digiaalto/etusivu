@@ -39,27 +39,27 @@ const LP_Process = () => {
             <TextBlock
               miniheader="Aloitetaan"
               header="Kartoitus"
-              text="Lähetä sähköpostia ja saat haastattelulomakkeen johon kirjataan alustavat taustatiedot. Saat takaisin ehdotuksen projektin ominaisuuksista ja tarpeellisista palveluista."
+              text="Ota yhteyttä ja sinulle lähetetään haastattelulomake jossa kerätään pakollisia taustatietoja. Saat takaisin ehdotuksen projektin ominaisuuksista ja tarpeellisista palveluista."
             />
             <TextBlock
               miniheader="Vaihe 2"
               header="Suunnittelu"
-              text="Digiaalto keskittyy sisältöön. Tutkitaan kilpailijoita, kerätään ja kirjoitetaan tekstisisältöä ja haetaan muuta sopivaa materiaalia."
+              text="Tutkitaan kilpailijoita, kerätään sopivaa lähdemateriaalia ja kirjoitetaan tekstisisältöä. Suunnittellaan alustava rautalankamalli."
             />
             <TextBlock
               miniheader="Vaihe 3"
               header="Design"
-              text="Lähdemateriaalit yhdistetään rautalankamalliin ja luodaan graaffinen representaatio verkkosivusta jolla haetaan sinulta hyväksyntä."
+              text="Lähdemateriaalit yhdistetään rautalankamalliin ja luodaan graaffinen representaatio verkkosivusta. Valmiilla mallilla haetaan sinun hyväksyntä."
             />
             <TextBlock
               miniheader="Vaihe 4"
               header="Kehitys"
-              text="Koodausvaiheessa verkkosivu realisoidaan sovitun mallin mukaisesti ja tuunataan optimaalisesti tarkoituksiisi."
+              text="Verkkosivu koodataan edellisen vaiheen mallin mukaisesti. Lopputulos testataan ja optimoidaan tarkasti."
             />
             <TextBlock
               miniheader="Valmista!"
               header="Julkaisu"
-              text="Domain osoitetaan palvelimelle ja sivu on valmis. Asiakaspalvelulinjat pidetään auki kysymksille projektin jälkeenkin."
+              text="Domain osoitetaan palvelimelle ja sivu on valmis julkiseen käyttöön. Asiakaspalvelulinjat pidetään auki mahdollisille kysymyksille."
             />
           </div>
         </div>

@@ -19,13 +19,14 @@ const LP_Solution = () => {
           <div className={styles.textContainer}>
             <div>
               <p>
-                Pelkästään täyttämällä haastattelulomakkeen, saat internettiin
+                Pelkästään täyttämällä haastattelulomakkeen, saat verkkoon
                 valmiit verkkosivut joiden toteutuksen takaa Googlen laatutesti
                 Lighthouse.
               </p>
               <p>
-                Kaikki suunnitteluun ja kehitykseen liittyvät työt hoidetaan
-                puolestasi.
+                Halutessasi kaikki verkkosivun suunnitteluun ja kehitykseen
+                liittyvät työt hoidetaan puolestasi, jotta voit keskittyä omaan
+                toimialaasi.
               </p>
             </div>
             <div>

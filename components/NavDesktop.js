@@ -1,4 +1,4 @@
-import styles from "../styles/Navigation.module.sass"
+import styles from "../styles/NavDesktop.module.sass"
 import Link from "next/link"
 
 const Navigation = () => {

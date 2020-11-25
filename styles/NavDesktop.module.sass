@@ -6,16 +6,12 @@
 	padding-left: 1rem
 	padding-right: 1rem
 	position: sticky
-	display: flex
-	flex: 1
-	flex-direction: row
-	justify-content: space-around
-	align-items: center
 	left: 0
 	top: 0
 	z-index: 10
 	background-color: #fff
 	box-shadow: 0 1px 2px 0 rgba(32, 33, 36, 0.28)
+	display: none
 
 .logoContainer
 	display: flex
@@ -59,3 +55,11 @@
 	&:hover
 		background-color: map-get($colors, primary)
 		color: #fff
+	
+@media (min-width: map-get($bp, laptop))
+	.navigationBar
+		display: flex
+		flex: 1
+		flex-direction: row
+		justify-content: space-around
+		align-items: center

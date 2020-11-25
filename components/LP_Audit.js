@@ -11,9 +11,10 @@ const LP_Audit = () => {
         <p className={styles.info}>
           Google Lighthouse on ilmainen automaattinen työkalu verkkosivujen
           laadun mittaamiseen josta selviää kuinka hyvin näyt ja pärjäät
-          verkossa. Sillä voidaan auditoida mikä tahansa verkkosivun
+          verkossa. Sillä voidaan auditoida minkä tahansa verkkosivun
           suorituskyky, saavutettavuus ja hakukoneoptimointi muutamassa
-          sekunnissa ilmaiseksi, tarvitset testattavan sivun domain-osoitteen.
+          sekunnissa ilmaiseksi, tarvitset vain testattavan sivun
+          domain-osoitteen.
         </p>
         <a
           className={styles.button}

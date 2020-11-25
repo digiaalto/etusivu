@@ -16,20 +16,19 @@ const LP_Problem = () => {
           <div className={styles.textContainer}>
             <div>
               <p>
-                Kaikki yritykset tarvitsevat laadukkaan nettisivun joka löytyy
+                Lähes kaikki yritykset tarvitsevat oman yrityssivun joka löytyy
                 hakukoneesta, on käyttäjäystävällinen, latautuu heti, toimii
-                responsiivisesti eri laitteilla ja edustaa somessa
+                responsiivisesti eri laitteilla ja edustaa yritystä somessa
                 positiivisesti.
               </p>
               <p>
-                Myös tekstisisällön pitäisi puhutella oikeata kohderyhmää
-                varsinkin nyt, kun kilpailu asiakkaiden huomiosta koventuu hetki
-                hetkeltä.
+                Tekstisisällönkin pitäisi puhutella oikeata kohderyhmää
+                varsinkin nyt, kun kilpailu asiakkaiden huomiosta on kasvanut.
               </p>
             </div>
             <div>
               <p>
-                Yrittäjänä harvoin on aikaa seurata kaikkea sitä kehitystyötä ja
+                Harvoin on aikaa seurata kaikkea sitä kehitystyötä ja
                 suunnittelua, ainakaan niin tarkasti kuin haluaisi.
               </p>
               <p>
