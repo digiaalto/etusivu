@@ -9,14 +9,16 @@ const LP_Problem = () => {
         <Fade direction="up" triggerOnce>
           <div className={styles.headerWrapper}>
             <span className={styles.preheader}>Ongelma</span>
-            <h2 className={styles.header}>Yrittäjän työtaakka on valtava.</h2>
+            <span className={styles.header}>
+              Yrittäjän työtaakka on valtava.
+            </span>
           </div>
           <div className={styles.textContainer}>
             <div>
               <p>
-                Silti tarvitset oman yrityssivun joka löytyy hakukoneesta,
-                kasvattaa tuottoa, toimii responsiivisesti sadoilla eri
-                laitteilla ja edustaa sinua positiivisesti.
+                Yrityssivun hankinta pitää sujua vaivatta. Sen pitää löytyä
+                hakukoneesta, kasvattaa tuottoa, toimia responsiivisesti
+                sadoilla eri laitteilla ja edustaa toimintaa positiivisesti.
               </p>
               <p>
                 On erityisen tärkeää, että sisältö puhuttelee oikeata
@@ -30,11 +32,11 @@ const LP_Problem = () => {
                 ydinosaamineen, eikä muiden toimittajien töiden
                 laadunvalvontaan.
               </p>
-              <p>
-                Tämän takia Digiaalto tarjoaa verkkosivun suunittelu- ja
-                kehityspalvelua jossa sinua ei vaivata turhilla kysymyksillä,
-                mutta lopputulos on silti kilpailua parempaa.
-              </p>
+              <h2 className={styles.highlight}>
+                Digiaalto tarjoaa verkkosivun suunittelu ja kehityspalvelua
+                jossa sinua ei vaivata turhilla kysymyksillä, mutta työn jälki
+                on kilpailua parempaa.
+              </h2>
             </div>
           </div>
         </Fade>

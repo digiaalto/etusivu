@@ -21,15 +21,23 @@
 .preheader
 	@include preheader
 
+.highlight
+	max-width: $sectionParagraphWidth
+	font-size: 1em
+	margin: 0
+	line-height: inherit
+	font-weight: 600
+
 .covidIcon
 	height: 18px
 	display: inline-block
 
 .header
-	margin-top: 0
 	font-size: 1.75rem
+	line-height: 1.3
 	font-weight: 800
 	max-width: $sectionHeaderWidth
+	margin: 3rem 0 1.38rem
 
 @media (min-width: map-get($bp, laptop))
 	.section
