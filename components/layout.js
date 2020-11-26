@@ -10,8 +10,8 @@ const Layout = ({ title, type, description, children, infobar = null }) => {
     type: type ? type : "website",
     description: description
       ? description
-      : `Digiaalto rakentaa laatutestattuja verkkosivuja kiireiselle yrittäjälle. Modernilla tekniikalla optimoitu verkkokehitys ja suunnittelupalvelu. Avaimet käteen.`,
-    image: "/brand/some-image.png",
+      : `Digiaalto rakentaa laatutestattuja verkkosivuja kiireiselle yrittäjälle uudella tekniikalla. Osta tehokkaat ja optimoidut verkkosivut, saat avaimet käteen.`,
+    image: "https://www.digiaalto.fi/brand/some-image.png",
   }
   return (
     <React.Fragment>
