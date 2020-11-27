@@ -1,6 +1,5 @@
 import styles from "../styles/LP_Problem.module.sass"
 import { Fade } from "react-awesome-reveal"
-import Button from "./utility/Button"
 
 const LP_Problem = () => {
   return (

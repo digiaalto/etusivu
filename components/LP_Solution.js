@@ -21,7 +21,7 @@ const LP_Solution = () => {
               <p>
                 Pelkästään täyttämällä haastattelulomakkeen saat yrityssivut
                 joiden toteutuksen takaa Googlen kehittämä verkkosivujen
-                laatutesti &rarr;&nbsp;&nbsp;
+                laatutesti{" "}
                 <Link href="#laatutesti-google-lighthouse">
                   <a>Lighthouse.</a>
                 </Link>

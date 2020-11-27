@@ -1,6 +1,7 @@
 import React from "react"
 import Head from "next/head"
 import DesktopNavigation from "./NavDesktop"
+import Footer from "../components/Footer"
 
 const Layout = ({ title, type, description, children, infobar = null }) => {
   const SEO = {
@@ -32,6 +33,7 @@ const Layout = ({ title, type, description, children, infobar = null }) => {
       {infobar}
       <DesktopNavigation />
       <main>{children}</main>
+      <Footer />
     </React.Fragment>
   )
 }

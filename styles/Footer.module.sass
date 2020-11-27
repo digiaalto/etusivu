@@ -1,0 +1,48 @@
+@import "partials"
+
+.footer
+  background-color: #fafafd
+  width: 100%
+  margin: auto
+  position: relative
+  z-index: 1
+  font-size: 1rem
+  padding: map-get($padding, mobile)
+
+  a
+    color: map-get($colors, textGray)
+    &:hover
+      color: map-get($colors, textDark)
+
+.wrapper
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-around
+
+.footerItem
+  margin-top: 2rem
+  min-width: 180px
+
+.footerHeader
+  display: block
+  font-weight: 600
+  margin-bottom: 1rem
+
+.itemList
+  list-style: none
+  margin: 0
+  padding: 0
+
+.logo
+  width: 10rem
+  margin: auto
+  margin-left: -26px
+
+@media (min-width: map-get($bp, laptop))
+  .footer
+    padding: map-get($padding, laptop)
+
+@media (min-width: map-get($bp, desktop))
+  .footer
+    padding: map-get($padding, desktop)

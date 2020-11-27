@@ -20,8 +20,8 @@ const Links = () => {
     <ul className={styles.linkList}>
       <DigiaaltoLink href="#huippuluokan-sivut" text="Digiaalto" />
       <DigiaaltoLink href="#laatutesti-google-lighthouse" text="Laatutesti" />
-      <DigiaaltoLink href="#toteutusprosessi" text="Prosessi" />
-      <DigiaaltoLink href="#hinta" text="Hinta" />
+      <DigiaaltoLink href="#kehitysprosessi" text="Kehitysprosessi" />
+      <DigiaaltoLink href="#hinnoittelu" text="Hinnoittelu" />
     </ul>
   )
 }
@@ -29,7 +29,6 @@ const Links = () => {
 const Logo = () => (
   <a href="/" className={styles.logoContainer}>
     <img src="/brand/logo.png" className={styles.logoImage} />
-    <span className={styles.logoHeader}>Digiaalto.fi</span>
   </a>
 )
 

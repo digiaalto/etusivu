@@ -3,7 +3,7 @@ import { FaGift } from "react-icons/fa"
 
 const LP_Pricing = () => {
   return (
-    <section id="hinta" className={styles.section}>
+    <section id="hinnoittelu" className={styles.section}>
       <div className={styles.content}>
         <FaGift className={styles.giftIcon} />
         <h3 className={styles.header}>
