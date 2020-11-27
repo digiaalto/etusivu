@@ -15,26 +15,25 @@ const LP_Problem = () => {
           <div className={styles.textContainer}>
             <div>
               <p>
-                Yrityssivun hankinta pitää sujua vaivatta. Sen pitää löytyä
-                hakukoneesta, kasvattaa tuottoa, toimia responsiivisesti
-                sadoilla eri laitteilla ja edustaa toimintaa positiivisesti.
+                Yrityssivun hankinta pitää sujua vaivatta. Verkkosivun pitää
+                löytyä hakukoneesta, kasvattaa tuottoa, toimia responsiivisesti
+                sadoilla eri laitteilla ja edustaa yrityksen toimintaa
+                positiivisesti.
               </p>
               <p>
-                On erityisen tärkeää, että sisältö puhuttelee oikeata
-                asiakasryhmää, varsinkin nyt kun kilpailu verkossa sen kuin
-                kasvaa.
+                On erityisen tärkeää että sisältö puhuttelee oikeaa
+                asiakasryhmää, sillä kilpailu verkossa sen kuin kasvaa.
               </p>
             </div>
             <div>
               <p>
                 Yrittäjänä on taloudellisesti järkevämpää keskittyä omaan
-                ydinosaamineen, eikä muiden toimittajien töiden
-                laadunvalvontaan.
+                ydinosaamineen eikä muiden toimittajien töiden laadunvalvontaan.
               </p>
               <h2 className={styles.highlight}>
                 Digiaalto tarjoaa verkkosivun suunittelu ja kehityspalvelua
-                jossa sinua ei vaivata turhilla kysymyksillä, mutta työn jälki
-                on kilpailua parempaa.
+                jossa sinua ei vaivata turhilla kysymyksillä ja työn jälki on
+                kilpailua korkealaatuisempaa.
               </h2>
             </div>
           </div>
