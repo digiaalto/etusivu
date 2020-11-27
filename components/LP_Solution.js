@@ -19,17 +19,17 @@ const LP_Solution = () => {
           <div className={styles.textContainer}>
             <div>
               <p>
-                Pelkästään täyttämällä haastattelulomakkeen saat yrityssivut
-                joiden toteutuksen takaa Googlen kehittämä verkkosivujen
-                laatutesti{" "}
+                Pelkästään täyttämällä haastattelulomakkeen saat avaimet käteen
+                yrityssivuusi joiden toteutuksen takaa Googlen kehittämä
+                verkkosivujen laatutesti,{" "}
                 <Link href="#laatutesti-google-lighthouse">
                   <a>Lighthouse.</a>
                 </Link>
               </p>
               <p>
-                Halutessasi kaikki verkkosivun suunnitteluun ja kehitykseen
-                liittyvät työt hoidetaan puolestasi, jotta voit yrittäjänä
-                keskittyä omaan osaamiseen ja toimialaan.
+                Voit ottaa niin suuren roolin verkkosivusi suunnittelu ja
+                kehitystyössä kuin haluat. Halutessasi kaikki hankinnat,
+                ominaisuudet ja päätökset hoidetaan puolestasi.
               </p>
             </div>
             <div>

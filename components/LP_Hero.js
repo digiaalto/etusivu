@@ -14,7 +14,7 @@ const Hero = () => {
           </span>
           <h1 className={styles.header}>
             Verkkokehittäjä Digiaalto on erikoistunut suunnittelemaan
-            laatutestattuja verkkosivuja kiireisille yrittäjille.
+            laatutestattuja verkkosivuja yrittäjälle kenen kalenteri on täynnä.
           </h1>
           <Link href="#verkkosivujen-haasteita">
             <a>

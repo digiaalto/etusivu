@@ -9,31 +9,31 @@ const LP_Problem = () => {
           <div className={styles.headerWrapper}>
             <span className={styles.preheader}>Ongelma</span>
             <span className={styles.header}>
-              Yrittäjän elämä on todella kiireistä.
+              Yrittäjän elämä on kiireistä, silti sivut pitää löytyä.
             </span>
           </div>
           <div className={styles.textContainer}>
             <div>
               <p>
-                Yrityssivun hankinta pitää sujua vaivatta ja sen pitää löytyä
-                hakukoneesta, kasvattaa tuottoa, toimia responsiivisesti
+                Verkkosivun hankinta kuuluu tapahtua vaivatta. Hyvä yrityssivu
+                löytyy hakukoneesta, kasvattaa tuottoa, toimii responsiivisesti
                 sadoilla eri laitteilla ja edustaa yrityksen toimintaa
                 positiivisesti.
               </p>
               <p>
-                On erityisen tärkeää että sisältö puhuttelee oikeaa
-                asiakasryhmää, sillä kilpailu verkossa on senkuin kovenee.
+                On myös erityisen tärkeää että sisältö puhuttelee oikeaa
+                asiakasryhmää, sillä kilpailu verkossa huomiosta on kovaa.
               </p>
             </div>
             <div>
               <p>
-                On taloudellisesti järkevämpää keskittyä omaan ydinosaamineen
-                eikä muiden toimittajien töiden laadunvalvontaan.
+                Yrittäjänä on taloudellisesti järkevämpää keskittyä omaan
+                ydinosaamineen eikä muiden toimittajien töiden laadunvalvontaan.
               </p>
               <h2 className={styles.highlight}>
                 Digiaalto tarjoaa verkkosivun suunittelu ja kehityspalvelua joka
                 ei kasvata työtaakkaasi. Sinua ei vaivata turhilla kysymyksillä
-                ja työn jälki on ankarasti laatutestattu.
+                ja työ laatutestataan tulikokeella.
               </h2>
             </div>
           </div>
