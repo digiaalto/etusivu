@@ -10,31 +10,39 @@ const LP_Solution = () => {
           <div className={styles.headerWrapper}>
             <span className={styles.preheader}>Ratkaisu</span>
             <h1 className={styles.header}>
-              Digiaalto kehittää huippuluokan verkkosivuja,{" "}
-              <span style={{ textDecoration: "underline" }}>
-                todistettavasti.
-              </span>
+              Digiaalto tarjoaa verkkosivun suunittelu- ja kehityspalvelua joka
+              ei kasvata työtaakkaasi.
             </h1>
           </div>
           <div className={styles.textContainer}>
             <div>
               <p>
-                Pelkästään täyttämällä haastattelulomakkeen saat avaimet käteen
-                yrityssivuusi joiden toteutuksen takaa Googlen kehittämä
-                verkkosivujen laatutesti,{" "}
-                <Link href="#laatutesti-google-lighthouse">
-                  <a>Lighthouse.</a>
-                </Link>
+                Sinua ei tulla vaivaamaan turhilla tiedusteluilla, ja
+                suunnittelupäätökset tehdään joko sinun henkilökohtaisten
+                toiveiden tai nykyisten web-standardien ja parhaiden käytäntöjen
+                mukaisesti.
               </p>
               <p>
-                Voit ottaa niin suuren roolin verkkosivusi suunnittelu ja
-                kehitystyössä kuin haluat. Halutessasi kaikki hankinnat,
-                ominaisuudet ja päätökset hoidetaan puolestasi.
+                Teknisesti sivut kehitetään Facebookin ylläpitämällä React
+                kehyksellä mikä on varma investointi josta verkossa toimiva
+                yrittäjä hyötyy heti ja tulevaisuudessa.
+              </p>
+              <p>
+                Reactia suosii yhtä lailla ajan hermolla surffaavat yritykset
+                kuin myös suuret teknologiajätit. Verkkosivustasi saadaan
+                teknisesti loistava ja niin helppokäyttöinen kuin haluat.
+              </p>
+              <p>
+                Yrittäjänä tulet hyötymään etulyöntiasemasta, joka taataan ennen
+                julkaisua{" "}
+                <Link href="#laatutesti-google-lighthouse">
+                  <a>ankaralla Google Lighthouse laatutestillä.</a>
+                </Link>
               </p>
             </div>
             <div>
               <h2 className={styles.sideHeader}>
-                Käyttämällä kehittyneempää tekniikkaa ja seuraamalla uusimpia
+                Hyödyntämällä kehittyneempää tekniikkaa ja seuraamalla tärkeitä
                 web-standardeja, Digiaalto rakentaa kilpailua tehokkaampia ja
                 paremmin optimoituja verkkosivuja pk-yrityksille,
                 kilpailukykyisesti.

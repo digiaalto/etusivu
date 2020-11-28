@@ -9,31 +9,38 @@ const LP_Problem = () => {
           <div className={styles.headerWrapper}>
             <span className={styles.preheader}>Ongelma</span>
             <span className={styles.header}>
-              Yrittäjän elämä on kiireistä, silti sivut pitää löytyä.
+              Yrittäjän elämä on kiireistä, silti laadukkaat sivut pitää löytyä.
             </span>
           </div>
           <div className={styles.textContainer}>
             <div>
               <p>
-                Verkkosivun hankinta kuuluu tapahtua vaivatta. Hyvä yrityssivu
-                löytyy hakukoneesta, kasvattaa tuottoa, toimii responsiivisesti
-                sadoilla eri laitteilla ja edustaa yrityksen toimintaa
-                positiivisesti.
+                Hyvin toteutettu verkkosivu löytyy hakukoneesta, kasvattaa
+                tuottoa, toimii sadoilla eri laitteilla ja edustaa yrityksen
+                toimintaa tarkoituksenmukaisesti tarkasti suunnitellulla
+                sisällöllä.
               </p>
               <p>
-                On myös erityisen tärkeää että sisältö puhuttelee oikeaa
-                asiakasryhmää, sillä kilpailu verkossa huomiosta on kovaa.
+                Verkkosivujen haasteet ja laadunvalvonta vie yrittäjän arvokasta
+                aikaa hänen oman ydinosaamisen harjoittamisesta. Useasti on
+                taloudellisesti viisampaa keskittyä omaan toimialaan ja etsiä
+                luotettava verkkokehittäjä.
               </p>
             </div>
             <div>
               <p>
-                Yrittäjänä on taloudellisesti järkevämpää keskittyä omaan
-                ydinosaamineen eikä muiden toimittajien töiden laadunvalvontaan.
+                Valitettavasti monet verkkotekijät käyttävät vanhentuneita
+                alustoja, kopioituja valmisteemoja ja ulkoistettua koodia
+                laadukkaan nykyaikaisen verkkosivun korvikkeena.
+              </p>
+              <p>
+                Tämä näkyy sivun poistumisprosentissa ja analyyttisten
+                laatutestien tuloksissa, mitkä vaikuttavat negatiivisesti
+                hakukoneiden algoritmeihin ja konversioon.
               </p>
               <h2 className={styles.highlight}>
-                Digiaalto tarjoaa verkkosivun suunittelu ja kehityspalvelua joka
-                ei kasvata työtaakkaasi. Sinua ei vaivata turhilla kysymyksillä
-                ja työ laatutestataan tulikokeella.
+                Jokaisen verkkokehittäjän työ olisi hyvä testata Googlen omalla
+                laatutestillä josta tulokset näkee itse.
               </h2>
             </div>
           </div>

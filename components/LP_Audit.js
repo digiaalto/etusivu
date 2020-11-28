@@ -17,7 +17,7 @@ const LP_Audit = () => {
           tarvitset vain testattavan sivun domain-osoitteen. Digiaalto varmistaa
           kehitystyön onnistumisen jatkuvalla laatutestauksella.
         </p>
-        <Button href={auditLink} text={"Suorita oma laatutesti"} outside />
+        <Button href={auditLink} text={"Testaa sivuja"} outside />
         <p className={styles.help}>
           <HiExclamation className={styles.helpIcon} /> Tulokset ovat
           englanniksi.
