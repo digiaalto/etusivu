@@ -10,39 +10,32 @@ const LP_Solution = () => {
           <div className={styles.headerWrapper}>
             <span className={styles.preheader}>Ratkaisu</span>
             <h1 className={styles.header}>
-              Vaivaton laatutestattu verkkokehitys ja suunnittelupalvelu.
+              Laatutestattu verkkokehitys ja suunnittelupalvelu.
             </h1>
           </div>
           <div className={styles.textContainer}>
             <div>
               <p>
                 Digiaalto panostaa verkkosivujen kehitystyöhön jotta yrityksesi
-                voi nauttia etulyöntiasemasta verkkokilpailussa.
+                saa nauttia harvinaisesta etulyöntiasemasta verkossa.
               </p>
               <p>
-                Eikä sinua häiritä turhilla tiedusteluilla. Kaikki
-                kehityspäätökset tehdään nykyisten web-standardien ja parhaiden
-                käytäntöjen mukaisesti joita hakukoneet suosivat.
+                Sinua ei häiritä turhilla tiedusteluilla, kaikki
+                kehitysjärjestelyt tehdään hakukoneiden suosimien
+                web-standardien ja parhaiden käytäntöjen mukaisesti.
               </p>
               <p>
-                Kehitys onnistuu ketterästi Facebookin ylläpitämällä React
-                kehyksellä mikä on varma investointi. Ennen julkaisua verkkosivu{" "}
-                <Link href="#laatutesti-google-lighthouse">
-                  <a>laatutestataan</a>
-                </Link>{" "}
-                ja tuloksista tehdään raportti.
-              </p>
-              <p>
-                Tätä teknologiaa suosii teknologiajättien lisäksi myös ajan
-                hermolla surffaavat yrittäjät.
+                Kehitys tapahtuu ketterästi Facebookin ylläpitämällä React
+                verkkokehyksellä ja Next.js kirjastolla, joita käyttää monet
+                teknologiajätit kuten Uber ja Airbnb sekä ajan hermolla
+                surffaavat pienyritykset.
               </p>
             </div>
             <div>
               <h2 className={styles.sideHeader}>
                 Hyödyntämällä uusinta tekniikkaa ja seuraamalla tärkeitä
-                web-standardeja, voidaan valmistaa kilpailua tehokkaampia ja
-                paremmin optimoituja verkkosivuja pk-yrityksille,
-                kilpailuhintaisesti.
+                web-standardeja, on mahdollista valmistaa kilpailijoita
+                tehokkaampia ja paremmin optimoituja verkkosivuja.
               </h2>
             </div>
           </div>

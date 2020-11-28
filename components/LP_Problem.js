@@ -16,26 +16,20 @@ const LP_Problem = () => {
             <div>
               <p>
                 Hyvin toteutettu verkkosivu on tärkeämpi nyt kuin koskaan.
-                Laadukkaat yrityssivut kasvattaa tuottoa ja edistää yrityksensä
+                Laadukas yrityssivu kasvattaa tuottoa ja edistää yrityksen
                 toimintaa tarkoituksenmukaisesti.
               </p>
               <p>
-                Tarvitaan verkkokehittäjä joka tietää mitä tekee, jotta sinä
-                yrittäjänä voit keskittyä oman yrityksesi ydinosaamisen
-                harjottamiseen.
+                Tarvitaan verkkokehittäjä joka tietää mitä hän tekee. Sen sijaan
+                valtaosa tekijöistä käyttää ikääntynyttä tekniikkaa, huonosti
+                optimoituja valmisteemoja ja ulkoistettua koodia.
               </p>
             </div>
             <div>
-              <p>
-                Verkkokehittäjiä on monia, mutta valitettavasti valtaosa meistä
-                käyttää vanhentunutta tekniikkaa, joka kärsii turhista
-                limitaatioista. Lopputulos on mitä on ja kukaan ei ole
-                viisaampi.
+              <p className="bold">
+                Jokaisen verkkokehittäjän työ olisi hyvä tarkistaa Googlen
+                kehittämällä laatutestillä jonka tulokset voi ymmärtää itse.
               </p>
-              <h2 className={styles.highlight}>
-                Jokaisen verkkokehittäjän työ olisi hyvä testata Googlen omalla
-                laatutestillä jonka tulokset näkee itse.
-              </h2>
             </div>
           </div>
         </Fade>
