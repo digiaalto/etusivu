@@ -18,26 +18,25 @@ const LP_Solution = () => {
             <div>
               <p>
                 Sinua ei tulla vaivaamaan turhilla tiedusteluilla, ja
-                suunnittelupäätökset tehdään joko sinun henkilökohtaisten
-                toiveiden tai nykyisten web-standardien ja parhaiden käytäntöjen
-                mukaisesti.
+                kehityspäätökset tehdään nykyisten web-standardien ja parhaiden
+                käytäntöjen mukaisesti.
+              </p>
+              <p>
+                Yrittäjänä tulet hyötymään etulyöntiasemasta, joka taataan jo
+                ennen julkaisua{" "}
+                <Link href="#laatutesti-google-lighthouse">
+                  <a>ankaralla laadunvalvonnalla.</a>
+                </Link>
               </p>
               <p>
                 Teknisesti sivut kehitetään Facebookin ylläpitämällä React
                 kehyksellä mikä on varma investointi josta verkossa toimiva
-                yrittäjä hyötyy heti ja tulevaisuudessa.
+                yrittäjä hyötyy heti ja tulevaisuudessakin.
               </p>
               <p>
-                Reactia suosii yhtä lailla ajan hermolla surffaavat yritykset
-                kuin myös suuret teknologiajätit. Verkkosivustasi saadaan
+                Samaa teknologiaa suosii yhtä lailla ajan hermolla surffaavat
+                yritykset kuin myös teknologiajätit. Verkkosivustasi saadaan
                 teknisesti loistava ja niin helppokäyttöinen kuin haluat.
-              </p>
-              <p>
-                Yrittäjänä tulet hyötymään etulyöntiasemasta, joka taataan ennen
-                julkaisua{" "}
-                <Link href="#laatutesti-google-lighthouse">
-                  <a>ankaralla Google Lighthouse laatutestillä.</a>
-                </Link>
               </p>
             </div>
             <div>
