@@ -9,38 +9,32 @@ const LP_Problem = () => {
           <div className={styles.headerWrapper}>
             <span className={styles.preheader}>Ongelma</span>
             <span className={styles.header}>
-              Yrittäjän elämä on kiireistä, silti laadukkaat sivut pitää löytyä.
+              Yrittäjän elämä on kiireistä, mutta yrityssivut pitää olla.
             </span>
           </div>
           <div className={styles.textContainer}>
             <div>
               <p>
-                Hyvin toteutettu verkkosivu löytyy hakukoneesta, kasvattaa
-                tuottoa, toimii sadoilla eri laitteilla ja edustaa yrityksen
-                toimintaa tarkoituksenmukaisesti tarkasti suunnitellulla
-                sisällöllä.
+                Hyvin toteutettu verkkosivu on tärkeämpi nyt kuin koskaan.
+                Laadukkaat yrityssivut kasvattaa tuottoa ja edistää yrityksensä
+                toimintaa tarkoituksenmukaisesti.
               </p>
               <p>
-                Verkkosivujen haasteet ja laadunvalvonta vie yrittäjän arvokasta
-                aikaa hänen oman ydinosaamisen harjoittamisesta. Useasti on
-                taloudellisesti viisampaa keskittyä omaan toimialaan ja etsiä
-                luotettava verkkokehittäjä.
+                Tarvitaan verkkokehittäjä joka tietää mitä tekee, jotta sinä
+                yrittäjänä voit keskittyä oman yrityksesi ydinosaamisen
+                harjottamiseen.
               </p>
             </div>
             <div>
               <p>
-                Valitettavasti monet verkkotekijät käyttävät vanhentuneita
-                alustoja, kopioituja valmisteemoja ja ulkoistettua koodia
-                laadukkaan nykyaikaisen verkkosivun korvikkeena.
-              </p>
-              <p>
-                Tämä näkyy sivun poistumisprosentissa ja analyyttisten
-                laatutestien tuloksissa, mitkä vaikuttavat negatiivisesti
-                hakukoneiden algoritmeihin ja konversioon.
+                Verkkokehittäjiä on monia, mutta valitettavasti valtaosa meistä
+                käyttää vanhentunutta tekniikkaa, joka kärsii turhista
+                limitaatioista. Lopputulos on mitä on ja kukaan ei ole
+                viisaampi.
               </p>
               <h2 className={styles.highlight}>
                 Jokaisen verkkokehittäjän työ olisi hyvä testata Googlen omalla
-                laatutestillä josta tulokset näkee itse.
+                laatutestillä jonka tulokset näkee itse.
               </h2>
             </div>
           </div>

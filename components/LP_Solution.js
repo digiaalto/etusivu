@@ -10,41 +10,39 @@ const LP_Solution = () => {
           <div className={styles.headerWrapper}>
             <span className={styles.preheader}>Ratkaisu</span>
             <h1 className={styles.header}>
-              Digiaalto tarjoaa verkkosivun suunittelu- ja kehityspalvelua joka
-              ei kasvata työtaakkaasi.
+              Vaivaton laatutestattu verkkokehitys ja suunnittelupalvelu.
             </h1>
           </div>
           <div className={styles.textContainer}>
             <div>
               <p>
-                Sinua ei tulla vaivaamaan turhilla tiedusteluilla, ja
+                Digiaalto panostaa verkkosivujen kehitystyöhön jotta yrityksesi
+                voi nauttia etulyöntiasemasta verkkokilpailussa.
+              </p>
+              <p>
+                Eikä sinua häiritä turhilla tiedusteluilla. Kaikki
                 kehityspäätökset tehdään nykyisten web-standardien ja parhaiden
-                käytäntöjen mukaisesti.
+                käytäntöjen mukaisesti joita hakukoneet suosivat.
               </p>
               <p>
-                Yrittäjänä tulet hyötymään etulyöntiasemasta, joka taataan jo
-                ennen julkaisua{" "}
+                Kehitys onnistuu ketterästi Facebookin ylläpitämällä React
+                kehyksellä mikä on varma investointi. Ennen julkaisua verkkosivu{" "}
                 <Link href="#laatutesti-google-lighthouse">
-                  <a>ankaralla laadunvalvonnalla.</a>
-                </Link>
+                  <a>laatutestataan</a>
+                </Link>{" "}
+                ja tuloksista tehdään raportti.
               </p>
               <p>
-                Teknisesti sivut kehitetään Facebookin ylläpitämällä React
-                kehyksellä mikä on varma investointi josta verkossa toimiva
-                yrittäjä hyötyy heti ja tulevaisuudessakin.
-              </p>
-              <p>
-                Samaa teknologiaa suosii yhtä lailla ajan hermolla surffaavat
-                yritykset kuin myös teknologiajätit. Verkkosivustasi saadaan
-                teknisesti loistava ja niin helppokäyttöinen kuin haluat.
+                Tätä teknologiaa suosii teknologiajättien lisäksi myös ajan
+                hermolla surffaavat yrittäjät.
               </p>
             </div>
             <div>
               <h2 className={styles.sideHeader}>
-                Hyödyntämällä kehittyneempää tekniikkaa ja seuraamalla tärkeitä
-                web-standardeja, Digiaalto rakentaa kilpailua tehokkaampia ja
+                Hyödyntämällä uusinta tekniikkaa ja seuraamalla tärkeitä
+                web-standardeja, voidaan valmistaa kilpailua tehokkaampia ja
                 paremmin optimoituja verkkosivuja pk-yrityksille,
-                kilpailukykyisesti.
+                kilpailuhintaisesti.
               </h2>
             </div>
           </div>
