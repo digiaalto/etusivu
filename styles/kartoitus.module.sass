@@ -1,0 +1,16 @@
+@import "partials"
+
+.section
+  display: flex
+  justify-content: center
+  align-items: center
+  min-height: 100vh
+  // background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)),url("/backgrounds/form-background.png")
+  background: url("/backgrounds/form-background.png")
+  background-size: cover
+  background-position: right center
+  background-repeat: no-repeat
+
+@media (min-width: map-get($bp, laptop))
+  .section
+    padding: map-get($padding, laptop)

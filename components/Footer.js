@@ -36,20 +36,23 @@ const FooterNav = () => {
       <span className={styles.footerHeader}>Linkit</span>
       <ul className={styles.itemList}>
         <li>
-          <a onClick={() => window.scrollTo(0, 0)}>Etusivu</a>
+          {/* <a onClick={() => window.scrollTo(0, 0)}>Etusivu</a> */}
+          <Link href="/">
+            <a>Etusivu</a>
+          </Link>
         </li>
         <li>
-          <Link href="#laatutesti-google-lighthouse">
+          <Link href="/#laatutesti-google-lighthouse">
             <a>Laatutesti</a>
           </Link>
         </li>
         <li>
-          <Link href="#kehitysprosessi">
+          <Link href="/#kehitysprosessi">
             <a>Kehitysprosessi</a>
           </Link>
         </li>
         <li>
-          <Link href="#hinnoittelu">
+          <Link href="/#hinnoittelu">
             <a>Hinnoittelu</a>
           </Link>
         </li>

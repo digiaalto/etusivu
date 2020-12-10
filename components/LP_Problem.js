@@ -20,8 +20,8 @@ const LP_Problem = () => {
                 toimintaa tarkoituksenmukaisesti.
               </p>
               <p>
-                Tarvitaan verkkokehittäjä joka tietää mitä hän tekee. Sen sijaan
-                valtaosa tekijöistä käyttää ikääntynyttä tekniikkaa, huonosti
+                Tarvitaan verkkokehittäjä joka tietää mitä hän tekee.
+                Valitettavan useasti käytetään ikääntynyttä tekniikkaa, huonosti
                 optimoituja valmisteemoja ja ulkoistettua koodia.
               </p>
             </div>

@@ -23,6 +23,7 @@
     "fontsource-open-sans": "^3.0.9",
     "next": "9.5.3",
     "next-on-netlify": "^2.4.0",
+    "node-fetch": "^2.6.1",
     "prop-types": "^15.7.2",
     "react": "16.13.1",
     "react-awesome-reveal": "^3.3.1",
@@ -31,6 +32,10 @@
     "react-icons": "^3.11.0",
     "react-intersection-observer": "^8.29.1",
     "react-lazyload": "^3.0.0",
+    "react-range": "^1.8.3",
+    "react-select": "^3.1.1",
+    "react-textarea-autosize": "^8.3.0",
+    "react-transition-group": "^4.4.1",
     "react-typography": "^0.16.19",
     "sass": "^1.26.11"
   },

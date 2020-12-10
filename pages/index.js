@@ -9,12 +9,11 @@ import LP_Process from "../components/LP_Process"
 import LP_Pricing from "../components/LP_Pricing"
 import LP_Expect from "../components/LP_Expect"
 // import ContactForm from "../components/ContactForm"
-import Infobar from "../components/infobar"
 
 const IndexPage = () => {
   return (
     <div>
-      <Layout infobar={<Infobar />}>
+      <Layout infobar>
         <LP_Hero />
         <LP_Problem />
         <LP_Solution />
