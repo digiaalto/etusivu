@@ -5,7 +5,8 @@ import FunctionButton from "../components/utility/FunctionButton"
 import { ImCheckmark } from "react-icons/im"
 import { AiOutlineEnter } from "react-icons/ai"
 import { GiMale, GiFemale } from "react-icons/gi"
-import { FaPlay } from "react-icons/fa"
+import { FaPlay, FaArrowDown } from "react-icons/fa"
+import { BsShift } from "react-icons/bs"
 import LoadingBar from "../components/utility/LoadingBar"
 import TextareaAutosize from "react-textarea-autosize"
 import Select from "react-select"
@@ -15,8 +16,8 @@ const FunctionsCtx = createContext(null)
 
 const ageOptions = [
   {
-    label: "Iällä ei väliä",
-    value: "Iällä ei väliä",
+    label: "En tiedä / ei väliä",
+    value: "En tiedä / ei väliä",
     hotkey: "a",
   },
   {
@@ -55,11 +56,10 @@ const ageOptions = [
     hotkey: "h",
   },
 ]
-
 const moneyOptions = [
   {
-    label: "Tulolla ei merkitystä",
-    value: "Tulolla ei merkitystä",
+    label: "En tiedä / ei väliä",
+    value: "En tiedä / ei väliä",
     hotkey: "a",
   },
   {
@@ -99,30 +99,115 @@ const NetlifyForm = () => {
   const [index, setIndex] = useState(0)
   const [nextIndex, setNextIndex] = useState(0)
   const [downKeys, setDownKeys] = useState([])
+  const [editorEnabled, setEditorEnabled] = useState(false)
+  const [errors, setFormErrors] = useState([])
   const [formData, setFormData] = useState({
-    yritysNimi: "",
-    toimiala: "",
-    kilpailijat: "",
-    ydinosaaminen: "",
-    brandiKuvaus: "",
-    brandiResurssit: "",
-    kohderyhmaIka: "",
-    kohderyhmaTulot: "",
-    kohderyhmaSukupuoli: [50],
-    kohderyhmaKuvaus: "",
-    verkkosivuTyyppi: "",
-    verkkosivuTavoite: "",
-    verkkosivuPalvelut: "",
-    etunimi: "",
-    sukunimi: "",
-    rooli: "",
-    sahkoposti: "",
-    puhelinnumero: "",
+    yritysNimi: {
+      name: "yritysNimi",
+      error: "Yritysnimi on pakollinen kenttä.",
+      value: "",
+      required: true,
+    },
+    toimiala: {
+      name: "toimiala",
+      error: "Toimiala on pakollinen kenttä.",
+      value: "",
+      required: true,
+    },
+    kilpailijat: {
+      name: "kilpailijat",
+      value: "",
+      required: false,
+    },
+    ydinosaaminen: {
+      name: "ydinosaaminen",
+      error: "Yrityksen ydinosaaminen on pakollinen kenttä.",
+      value: "",
+      required: true,
+    },
+    brandiKuvaus: {
+      name: "brandiKuvaus",
+      error: "Brändikuvaus on pakollinen kenttä.",
+      value: "",
+      required: true,
+    },
+    brandiResurssit: {
+      name: "brandiResurssit",
+      value: "",
+      required: false,
+    },
+    kohderyhmaIka: {
+      name: "kohderyhmaIka",
+      error: "Kohderyhmän ikä on pakollinen valinta.",
+      value: "",
+      required: true,
+    },
+    kohderyhmaTulot: {
+      name: "kohderyhmaTulot",
+      error: "Kohderyhmän tulot on pakollinen valinta.",
+      value: "",
+      required: true,
+    },
+    kohderyhmaSukupuoli: {
+      name: "kohderyhmaSukupuoli",
+      value: [50],
+      required: false,
+    },
+    kohderyhmaKuvaus: {
+      name: "kohderyhmaKuvaus",
+      error: "Kohderyhmän kuvaus on pakollinen kenttä.",
+      value: "",
+      required: true,
+    },
+    verkkosivuKuvaus: {
+      name: "verkkosivuKuvaus",
+      error: "Verkkosivun kuvaus on pakollinen kenttä.",
+      value: "",
+      required: true,
+    },
+    verkkosivuTavoite: {
+      name: "verkkosivuTavoite",
+      error: "Verkkosivun tavoite on pakollinen kenttä.",
+      value: "",
+      required: true,
+    },
+    verkkosivuPalvelut: {
+      name: "verkkosivuPalvelut",
+      error: "Verkkosivun palvelut on pakollinen kenttä.",
+      value: "",
+      required: true,
+    },
+    etunimi: {
+      name: "etunimi",
+      error: "Etunimi pakollinen kenttä.",
+      value: "",
+      required: true,
+    },
+    sukunimi: {
+      name: "sukunimi",
+      error: "Sukunimi on pakollinen kenttä.",
+      value: "",
+      required: true,
+    },
+    rooli: {
+      name: "rooli",
+      error: "Rooli on pakollinen kenttä.",
+      value: "",
+      required: true,
+    },
+    sahkoposti: {
+      name: "sahkoposti",
+      error: "Sähköposti on pakollinen kenttä.",
+      value: "",
+      required: true,
+    },
+    puhelinnumero: {
+      name: "puhelinnumero",
+      error: "Puhelinnumero on pakollinen kenttä.",
+      value: "",
+      required: true,
+    },
   })
-  const [editorEnabled, setEditorEnabled] = useState(true)
-
-  if (formData.puhelinnumero && formData.puhelinnumero.length > 0)
-    console.log(formData)
 
   const onInputChange = (e, selection) => {
     if (selection) {
@@ -137,13 +222,33 @@ const NetlifyForm = () => {
 
   const sliderChange = (props) => {
     const { name, values } = props
-    setFormData({ ...formData, [name]: values })
+    setFormData({ ...formData, [name]: { ...formData[name], value: values } })
   }
 
   const submitForm = (e) => {
-    console.log("submitForm")
-    console.log(e)
-    return false
+    const errors = []
+    const keys = Object.keys(formData)
+    let i
+
+    for (i = 0; i < keys.length; i++) {
+      const element = formData[keys[i]]
+      const required = element.required
+      const valid = element.value && element.value.length > 0
+      if (required && !valid) {
+        errors.push(element.error)
+      }
+    }
+
+    if (errors.length > 0) {
+      setFormErrors(errors)
+    }
+
+    const valid = errors.length === 0
+    console.log(`is form valid: ${valid}`)
+    if (!valid) {
+      e.preventDefault()
+    }
+    return valid
   }
 
   const changeQuestion = (e) => {
@@ -166,7 +271,10 @@ const NetlifyForm = () => {
   }
 
   const updateField = (fieldName, newValue) => {
-    setFormData({ ...formData, [fieldName]: newValue })
+    setFormData({
+      ...formData,
+      [fieldName]: { ...formData[fieldName], value: newValue },
+    })
   }
 
   const onInputKeyDown = (e, validated) => {
@@ -204,6 +312,15 @@ const NetlifyForm = () => {
     setDownKeys(newKeys)
   }
 
+  function isInputValid(name) {
+    const data = formData[name]
+    return (
+      errors.length === 0 ||
+      (data.required && data.value.length > 0) ||
+      !data.required
+    )
+  }
+
   /**
    * Question elements which appear in the form.
    */
@@ -214,46 +331,31 @@ const NetlifyForm = () => {
       buttonText="Ok"
     />,
     <Intermission header="Aloitetaan yrityksen perustiedoista." />,
-    <Question
-      label="Mikä on yrityksesi nimi?"
-      name="yritysNimi"
-      value={formData.yritysNimi}
-      required
-    />,
-    <Question
-      label="Yrityksesi toimiala?"
-      name="toimiala"
-      value={formData.toimiala}
-      required
-    />,
+    <Question label="Mikä on yrityksesi nimi?" data={formData.yritysNimi} />,
+    <Question label="Yrityksesi toimiala?" data={formData.toimiala} />,
     <Question
       label="Kuka on yrityksesi kovin kilpailija?"
       subLabel="Heidän ei tarvitse olla samalta toimialalta. Ilmoita myös verkkosivut."
-      name="kilpailijat"
-      value={formData.kilpailijat}
+      data={formData.kilpailijat}
     />,
     <Question
       label="Lopuksi, miten kuvailisit yrityksesi ydinosaamista?"
-      subLabel="Eli, miten erotut kilpailijoista ja mihin kilpailukykysi perustuu."
-      name="ydinosaaminen"
-      value={formData.ydinosaaminen}
-      required
+      subLabel="Eli miten erotut kilpailijoista ja mihin kilpailukykysi perustuu."
+      data={formData.ydinosaaminen}
     />,
     <Intermission
-      header="Seuraavaksi vähän tiedustelua brändistä."
+      header="Seuraavaksi bränditiedot."
       subheader="Brändi on mututuntuma yrityksestä."
     />,
     <Question
       label="Miten kuvailet brändiäsi?"
       subLabel="Jos yritykselläsi ei ole kehitetty brändiä keksi 3-5 adjektiivia jotka edustavat toimintaasi."
-      name="brandiKuvaus"
-      value={formData.brandiKuvaus}
+      data={formData.brandiKuvaus}
     />,
     <Question
       label="Onko sinulla omia brändiresursseja?"
       subLabel="Kuten suosikkifonttia, logoa, väriteemaa tms."
-      name="brandiResurssit"
-      value={formData.brandiResurssit}
+      data={formData.brandiResurssit}
     />,
     <Intermission
       header="Seuraavaksi mietitään verkkosivusi kohderyhmää."
@@ -261,89 +363,61 @@ const NetlifyForm = () => {
     />,
     <Selection
       label="Arvioi verkkosivusi kohderyhmän ikä."
-      value={formData.kohderyhmaIka}
-      name="kohderyhmaIka"
+      data={formData.kohderyhmaIka}
       options={ageOptions}
-      required
     />,
     <Selection
       label="Valitse asiakkaasi keskimääräinen tulo 12 kuukaudelta."
-      name="kohderyhmaTulot"
-      value={formData.kohderyhmaTulot}
+      data={formData.kohderyhmaTulot}
       options={moneyOptions}
-      required
     />,
     <RangeQuestion
       label="Arvioi kohderyhmäsi sukupuolijakauma."
       subLabel="Jätä 50 prosenttiin jos tällä ei ole merkitystä."
-      name="kohderyhmaSukupuoli"
-      values={formData.kohderyhmaSukupuoli}
+      data={formData.kohderyhmaSukupuoli}
       onChange={sliderChange}
     />,
     <Question
       label="Kirjoita vapaamuotoisesti tärkeitä asioita kohderyhmästäsi."
       subLabel="Esimerkiksi, mitä hän odottaa sinulta? Mikä on hänelle tärkeintä? Mitä huonoja kokemuksia toimialastasi?"
-      name="kohderyhmaKuvaus"
-      value={formData.kohderyhmaKuvaus}
-      required
+      data={formData.kohderyhmaKuvaus}
     />,
     <Intermission
-      label="Hienoa. Sitten siirrytään itse verkkosivun kartoittamiseen."
-      subheader="Seuraavaksi muutama kysymys itse verkkosivusta."
+      label="Kiitos. Sitten siirrytään itse verkkosivun kartoittamiseen."
+      buttonText="Ok"
     />,
     <Question
-      label="Kerro omin sanoin millaisen verkkosivun tarvitset."
+      label="Kerro omin sanoin millaisen verkkosivun haluat."
       subLabel="Kerro myös tyyppi: markkinointisivu, blogi, verkkokauppa, web-app... "
-      name="verkkosivuTyyppi"
-      value={formData.verkkosivuTyyppi}
-      required
+      data={formData.verkkosivuKuvaus}
     />,
     <Question
       label="Listaa verkkosivusi tärkeimmät tavoitteet."
       subLabel="Mitä haluat saavuttavasi sivun kautta ja miten?"
-      name="verkkosivuTavoite"
-      value={formData.verkkosivuTavoite}
-      required
+      data={formData.verkkosivuTavoite}
     />,
     <Question
       label="Mitä lisäpalveluita tarvitset?"
       subLabel="Aloitetaanko tyhjältä pöydältä vai oletko jo ostanut esimerkiksi domainin, palvelimen, yrityssähköpostin, tai muita palveluita?"
-      name="verkkosivuPalvelut"
-      value={formData.verkkosivuPalvelut}
-      required
+      data={formData.verkkosivuPalvelut}
     />,
     <Intermission
       header="Siinä olikin valtaosa kysymyksistä."
       subheader="Otetaan talteen vielä yhteystiedot."
     />,
+    <Question label="Teidän etunimi." data={formData.etunimi} />,
+    <Question label="Teidän sukunimi." data={formData.sukunimi} />,
     <Question
-      label="Teidän etunimi."
-      name="etunimi"
-      value={formData.etunimi}
-      required
-    />,
-    <Question
-      label="Teidän sukunimi."
-      name="sukunimi"
-      value={formData.sukunimi}
-      required
-    />,
-    <Question
-      label={`Hei, ${formData.etunimi}. Mikä rooli sinulla on yrityksessäsi?`}
-      name="rooli"
-      value={formData.rooli}
-      required
+      label={`Hei, ${formData.etunimi.value}. Mikä rooli sinulla on yrityksessäsi?`}
+      data={formData.rooli}
     />,
     <Question
       label="Mistä sähköpostiosoitteesta sinut saa parhaiten kiinni?"
-      name="sahkoposti"
-      value={formData.sahkoposti}
-      required
+      data={formData.sahkoposti}
     />,
     <Question
-      label="Ja vielä puhelinnumero."
-      name="puhelinnumero"
-      value={formData.puhelinnumero}
+      label="Ja viimeiseksi puhelinnumero."
+      data={formData.puhelinnumero}
     />,
     <Intermission
       header="Kiitos kartoittajan käytöstä!"
@@ -355,18 +429,23 @@ const NetlifyForm = () => {
   if (index + 1 === elements.length) percentCompleted = 100
 
   return (
-    <form className={styles.netlifyForm}>
+    <form className={styles.netlifyForm} onSubmit={(e) => submitForm(e)}>
       <FunctionsCtx.Provider
         value={{
           onInputChange: onInputChange,
           changeQuestion: changeQuestion,
           onInputKeyDown: onInputKeyDown,
           onInputKeyUp: onInputKeyUp,
+          isInputValid: isInputValid,
           editorEnabled: editorEnabled,
         }}
       >
         {editorEnabled ? (
-          <FinalEditor elements={elements} />
+          <FinalEditor
+            elements={elements}
+            submitForm={submitForm}
+            errors={errors}
+          />
         ) : (
           <>
             <Fader inProp={inProp} exitedCallback={updateQuestion}>
@@ -382,10 +461,11 @@ const NetlifyForm = () => {
 }
 
 /**
- * You're a fugboi.
+ * A Custom Range Slider.
  */
 const RangeQuestion = (props) => {
-  const { label, subLabel, name, values, onChange, required } = props
+  const { label, subLabel, data, onChange } = props
+  const { name, value, required } = data
   return (
     <Element>
       <QuestionLabel
@@ -399,7 +479,7 @@ const RangeQuestion = (props) => {
           <GiFemale />
         </div>
         <div className={styles.range}>
-          <Slider name={name} values={values} onChange={onChange} />
+          <Slider name={name} values={value} onChange={onChange} />
         </div>
         <div className={styles.rangeIcon}>
           <GiMale />
@@ -422,12 +502,11 @@ const RangeQuestion = (props) => {
 const Selection = ({
   label,
   subLabel,
-  name, // kohderyhmaIka
-  value,
+  data,
   options, // array of objects: { label, name, key }
-  required,
 }) => {
   const { onInputChange, editorEnabled } = useContext(FunctionsCtx)
+  const { name, value, required } = data
   const buttonRef = useRef(null)
   const hasValue = value && value.length > 0
   const buttonDisabled = required && !hasValue
@@ -461,15 +540,26 @@ export default NetlifyForm
 /**
  * Simplest question, uses TextareaAutosize in place of regular input field.
  */
-const Question = ({ label, subLabel, value, name, buttonText, required }) => {
+const Question = (props) => {
   const {
     onInputChange,
     onInputKeyDown,
     onInputKeyUp,
     editorEnabled,
+    isInputValid,
   } = useContext(FunctionsCtx)
+  const {
+    label,
+    subLabel,
+    data,
+    buttonText,
+    placeholder = "Kirjoita vastaus tähän...",
+  } = props
+  const { name, value, required } = data
   const hasValue = value && value.length > 0
   const buttonDisabled = required && !hasValue
+
+  const isValid = isInputValid(name)
 
   let btnIcon = !required && !hasValue ? <FaPlay /> : <ImCheckmark />
 
@@ -485,6 +575,10 @@ const Question = ({ label, subLabel, value, name, buttonText, required }) => {
         onKeyDown={(e) => onInputKeyDown(e, hasValue || !required)}
         onKeyUp={onInputKeyUp}
         autoFocus={!editorEnabled}
+        placeholder={placeholder}
+        className={`${styles.textInput} ${
+          isValid ? null : styles.textInputInvalid
+        }`}
       />
       <Buttons
         buttonText={buttonText}
@@ -512,12 +606,13 @@ const FinalSection = (props) => (
 const Intermission = (props) => {
   const { changeQuestion, editorEnabled } = useContext(FunctionsCtx)
   if (editorEnabled) return null
-  const { header, subheader, buttonText, btnIcon = <FaPlay /> } = props
+  const { header, subheader, buttonText = "Ok", btnIcon = <FaPlay /> } = props
   const buttonRef = useRef(null)
+
   return (
     <Element className={styles.finalEditor}>
       <Headers header={header} subheader={subheader} />
-      <div className={styles.buttons}>
+      <div className={styles.intermissionButtons}>
         <FunctionButton
           text={buttonText}
           name="next"
@@ -530,19 +625,41 @@ const Intermission = (props) => {
   )
 }
 
-const FinalEditor = ({ elements }) => (
-  <div className={styles.finalEditor}>
-    <Element>
-      <Headers
-        header={"Voit vielä muuttaa vastauksesi."}
-        subheader={"Lähetä tiedot sivun alaosassa olevasta painikkeesta."}
-      />
-    </Element>
-    {elements.map((section, index) => (
-      <div key={`section-${index}`}>{section}</div>
-    ))}
-  </div>
-)
+const FinalEditor = (props) => {
+  const { elements, submitForm, errors } = props
+  return (
+    <div className={styles.finalEditor}>
+      <Element>
+        <div className={styles.editorHeaderContainer}>
+          <span className={styles.editorHeader}>
+            Alla voit tarkistaa vastaukset vielä kerran ennen lähetystä.
+          </span>
+        </div>
+        <FaArrowDown className={styles.finalEditorIcon} />
+      </Element>
+      {elements.map((section, index) => (
+        <div className={styles.finalEditorSection} key={`section-${index}`}>
+          {section}
+        </div>
+      ))}
+      <div className={styles.buttons}>
+        <FunctionButton
+          type="submit"
+          text="Lähetä"
+          onClick={submitForm}
+          disabled={false}
+        />
+      </div>
+      {errors.length > 0 ? (
+        <div className={styles.errors}>
+          {errors.map((err, index) => (
+            <p key={`error-${index}`}>{err}</p>
+          ))}
+        </div>
+      ) : null}
+    </div>
+  )
+}
 
 /**
  * HELPERS - HELPERS - HELPERS
@@ -558,20 +675,27 @@ const Buttons = React.forwardRef((props, ref) => {
       className={styles.buttons}
       style={center && { justifyContent: "center" }}
     >
-      <FunctionButton
-        text={text}
-        name="next"
-        onClick={changeQuestion}
-        disabled={disabled}
-        icon={icon}
-        ref={ref}
-      />
-      {!noEnter && (
-        <span className={styles.enterGuide}>
-          <AiOutlineEnter />
-          paina Enter
-        </span>
-      )}
+      <span className={styles.shiftEnterGuide}>
+        Shift <BsShift /> + Enter <AiOutlineEnter />
+        <span className={styles.guideText}> tekee rivinvaihdon</span>
+      </span>
+      <div>
+        <FunctionButton
+          text={text}
+          name="next"
+          onClick={changeQuestion}
+          disabled={disabled}
+          icon={icon}
+          ref={ref}
+        />
+        {!noEnter && (
+          <span className={styles.enterGuide}>
+            <AiOutlineEnter />
+            <span className={styles.guideText}>paina </span>
+            Enter
+          </span>
+        )}
+      </div>
     </div>
   )
 })

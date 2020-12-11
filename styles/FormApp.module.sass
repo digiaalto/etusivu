@@ -1,32 +1,38 @@
 @import "partials"
 
+$color: map-get($colors, textDark)
+
 .netlifyForm
   width: 100%
   padding: 1rem
-  color: #000
+  color: $color
   background-color: #fafafd
   box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 12px 0px
   max-width: 800px
-
-  textarea
-    max-width: 100%
-    padding: 4px
-    background: none
-    color: #000
-    font-size: 22px
-    border: none
-    box-shadow: #000 0px 1px
-    &:focus
-      outline: none
-      box-shadow: #000
   p
     max-width: none
+  
+.textInput
+  display: block
+  max-width: 100%
+  padding: 4px 0
+  background: none
+  color: $color
+  font-size: 22px
+  border: none
+  box-shadow: $color 0px 1px
+  &:focus
+    outline: none
+    box-shadow: $color
+
+.textInputInvalid
+  box-shadow: map-get($colors, error) 0px 2px !important
 
 .labelContainer
   margin-bottom: 2rem
 
 .label
-  color: #000
+  color: $color
   font-weight: 600
   font-size: 1.5rem
   line-height: 1.6
@@ -64,17 +70,26 @@
   margin: 1rem 0
 
 .buttons
-  margin-top: 2rem
-  display: flex
-  flex-direction: row
-  align-items: center
-  vertical-align: middle
-  align-content: center
-  .enterGuide
-    font-size: 1rem
-    margin-left: 10px
-    svg
-      margin-right: 6px
+  margin-top: 0
+.intermissionButtons
+  margin-top: 1.5rem
+
+.shiftEnterGuide
+  font-size: 13px
+  font-weight: 800
+  margin-bottom: 10px
+  svg
+    margin-left: 2px
+
+.enterGuide
+  font-size: 13px
+  font-weight: 800
+  margin-left: 10px
+  svg
+    margin-right: 6px
+
+.guideText
+  font-weight: 400
     
 .rangeContainer
   display: flex
@@ -89,14 +104,48 @@
   flex: 1
 
 .rangeIcon
-  color: #000
+  color: $color
   font-size: 2rem
+
+.editorHeaderContainer
+  margin-bottom: 2rem
+  text-align: center
+  background-color: map-get($colors, primary)
+  color: #fff
+  letter-spacing: 1px
+  padding: 0.5rem
+  border-radius: 4px
+
+.editorHeader
+  font-size: 1.55rem
+  font-weight: 600
+
+.finalEditorIcon
+  margin: auto
+  font-size: 3rem
+  margin-bottom: 2rem
+  color: map-get($colors, primary)
+
+.finalEditorSection
+  margin: 3rem 0
+  
+.errors
+  margin-top: 1rem
+  p
+    margin: 0
+    color: map-get($colors, error)
 
 @media (min-width: map-get($bp, laptop))
   .netlifyForm
     padding: 2rem
     background-color: transparent
     box-shadow: none
+  
+  .editorHeaderContainer
+    padding: 2rem
+    
+  .editorHeader
+    font-size: 2.5rem
 
   .netlifyForm
     textarea
