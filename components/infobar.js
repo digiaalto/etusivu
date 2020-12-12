@@ -1,6 +1,5 @@
 import React from "react"
 import styles from "../styles/infobar.module.sass"
-import Link from "next/link"
 import PropTypes from "prop-types"
 import { MdEmail, MdLocalPhone } from "react-icons/md"
 

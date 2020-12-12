@@ -2,15 +2,16 @@ import styles from "../styles/FormApp.module.sass"
 import React, { useState, useContext, createContext, useRef } from "react"
 import Fader from "./utility/Fader"
 import FunctionButton from "../components/utility/FunctionButton"
-import { ImCheckmark } from "react-icons/im"
 import { AiOutlineEnter } from "react-icons/ai"
 import { GiMale, GiFemale } from "react-icons/gi"
-import { FaPlay, FaArrowDown } from "react-icons/fa"
+import { FaArrowDown } from "react-icons/fa"
 import { BsShift } from "react-icons/bs"
+import { GrPrevious, GrFormCheckmark } from "react-icons/gr"
 import LoadingBar from "../components/utility/LoadingBar"
 import TextareaAutosize from "react-textarea-autosize"
 import Select from "react-select"
 import Slider from "./utility/Slider"
+import { element } from "prop-types"
 
 const FunctionsCtx = createContext(null)
 
@@ -244,17 +245,14 @@ const NetlifyForm = () => {
     }
 
     const valid = errors.length === 0
-    console.log(`is form valid: ${valid}`)
     if (!valid) {
       e.preventDefault()
     }
     return valid
   }
 
-  const changeQuestion = (e) => {
-    e.preventDefault()
-    const name = e.target.name
-    switch (name) {
+  const changeQuestion = (direction) => {
+    switch (direction) {
       case "prev":
         setNextIndex(index - 1)
         break
@@ -263,11 +261,6 @@ const NetlifyForm = () => {
         break
     }
     setInProp(false)
-  }
-
-  function updateQuestion() {
-    setIndex(nextIndex)
-    setInProp(true)
   }
 
   const updateField = (fieldName, newValue) => {
@@ -297,7 +290,7 @@ const NetlifyForm = () => {
       updateField(e.target.name, e.target.value + "\n")
     } else if (key === "Enter") {
       e.preventDefault()
-      if (validated) changeQuestion(e)
+      if (validated) changeQuestion("next")
     } else if (key === "Alt") e.preventDefault()
   }
 
@@ -327,39 +320,45 @@ const NetlifyForm = () => {
   const elements = [
     <Intermission
       header="Kiitos että olet kiinnostunut käyttäjäystävällisistä verkkosivuista!"
-      subheader="Kysymme yrityksestäsi, brändistäsi, kohdemarkkinoistasi, tästä projektista ja lopuksi sinusta. Voit aina täydentää vastauksia sähköpostilla myöhemmin."
-      buttonText="Ok"
+      subheader="Ota yhteyttä vastaamalle muutamaan kysymykseen yrityksestäsi, brändistäsi, kohdemarkkinoistasi ja tästä projektista. Lopussa näet vastauksesi ja voit tehdä viimeiset muutokset ennen tietojen lähetystä. Kesto noin 10 minuuttia."
     />,
-    <Intermission header="Aloitetaan yrityksen perustiedoista." />,
+    <Intermission
+      header="Aloitetaan yrityksesi perustiedoista."
+      subheader="Alapalkista näkee kuinka pitkälle olet edistynyt haastattelussa."
+    />,
     <Question label="Mikä on yrityksesi nimi?" data={formData.yritysNimi} />,
     <Question label="Yrityksesi toimiala?" data={formData.toimiala} />,
     <Question
       label="Kuka on yrityksesi kovin kilpailija?"
       subLabel="Heidän ei tarvitse olla samalta toimialalta. Ilmoita myös verkkosivut."
       data={formData.kilpailijat}
+      showShiftEnter
     />,
     <Question
       label="Lopuksi, miten kuvailisit yrityksesi ydinosaamista?"
       subLabel="Eli miten erotut kilpailijoista ja mihin kilpailukykysi perustuu."
       data={formData.ydinosaaminen}
+      showShiftEnter
     />,
     <Intermission
       header="Seuraavaksi bränditiedot."
       subheader="Brändi on mututuntuma yrityksestä."
     />,
     <Question
-      label="Miten kuvailet brändiäsi?"
-      subLabel="Jos yritykselläsi ei ole kehitetty brändiä keksi 3-5 adjektiivia jotka edustavat toimintaasi."
+      label="Kuvaile yrityksesi brändiä vapaamuotoisesti."
+      subLabel="Jos brändiä ei ole vielä kehitetty, kirjoita 3-5 sanaa jotka edustavat toimintaasi."
       data={formData.brandiKuvaus}
+      showShiftEnter
     />,
     <Question
       label="Onko sinulla omia brändiresursseja?"
       subLabel="Kuten suosikkifonttia, logoa, väriteemaa tms."
       data={formData.brandiResurssit}
+      showShiftEnter
     />,
     <Intermission
       header="Seuraavaksi mietitään verkkosivusi kohderyhmää."
-      subheader="Alapalkista näet paljonko kysymyksiä on jäljellä. Olet noin 30% valmis."
+      subheader="Olet noin 30% valmis."
     />,
     <Selection
       label="Arvioi verkkosivusi kohderyhmän ikä."
@@ -373,33 +372,37 @@ const NetlifyForm = () => {
     />,
     <RangeQuestion
       label="Arvioi kohderyhmäsi sukupuolijakauma."
-      subLabel="Jätä 50 prosenttiin jos tällä ei ole merkitystä."
+      subLabel="Jätä liukusäädin 50 prosenttiin jos tällä ei ole merkitystä."
       data={formData.kohderyhmaSukupuoli}
       onChange={sliderChange}
     />,
     <Question
-      label="Kirjoita vapaamuotoisesti tärkeitä asioita kohderyhmästäsi."
-      subLabel="Esimerkiksi, mitä hän odottaa sinulta? Mikä on hänelle tärkeintä? Mitä huonoja kokemuksia toimialastasi?"
+      label="Kuvaile verkkosivun kohderyhmää."
+      subLabel="Mitä asiakkaasi odottaa sinulta, mikä on hänelle tärkeintä?"
       data={formData.kohderyhmaKuvaus}
+      showShiftEnter
     />,
     <Intermission
-      label="Kiitos. Sitten siirrytään itse verkkosivun kartoittamiseen."
-      buttonText="Ok"
+      header="Kiitos."
+      subheader="Seuraavaksi kerätään verkkosivun tietoja."
     />,
     <Question
-      label="Kerro omin sanoin millaisen verkkosivun haluat."
+      label="Kerro millaisen verkkosivun haluat omin sanoin?"
       subLabel="Kerro myös tyyppi: markkinointisivu, blogi, verkkokauppa, web-app... "
       data={formData.verkkosivuKuvaus}
+      showShiftEnter
     />,
     <Question
       label="Listaa verkkosivusi tärkeimmät tavoitteet."
       subLabel="Mitä haluat saavuttavasi sivun kautta ja miten?"
       data={formData.verkkosivuTavoite}
+      showShiftEnter
     />,
     <Question
       label="Mitä lisäpalveluita tarvitset?"
       subLabel="Aloitetaanko tyhjältä pöydältä vai oletko jo ostanut esimerkiksi domainin, palvelimen, yrityssähköpostin, tai muita palveluita?"
       data={formData.verkkosivuPalvelut}
+      showShiftEnter
     />,
     <Intermission
       header="Siinä olikin valtaosa kysymyksistä."
@@ -419,17 +422,28 @@ const NetlifyForm = () => {
       label="Ja viimeiseksi puhelinnumero."
       data={formData.puhelinnumero}
     />,
-    <Intermission
-      header="Kiitos kartoittajan käytöstä!"
-      sublabel="Antamasi vastaukset käydään läpi ja sinuun otetaan yhteyttä lähiaikoina."
-    />,
   ]
+
+  function updateQuestion() {
+    if (nextIndex >= elements.length) {
+      setEditorEnabled(true)
+    } else {
+      setIndex(nextIndex)
+      setInProp(true)
+    }
+  }
 
   let percentCompleted = (index / elements.length) * 100
   if (index + 1 === elements.length) percentCompleted = 100
 
   return (
-    <form className={styles.netlifyForm} onSubmit={(e) => submitForm(e)}>
+    <form
+      className={styles.netlifyForm}
+      onSubmit={(e) => submitForm(e)}
+      name="kartoittaja"
+      method="POST"
+      data-netlify="true"
+    >
       <FunctionsCtx.Provider
         value={{
           onInputChange: onInputChange,
@@ -438,6 +452,7 @@ const NetlifyForm = () => {
           onInputKeyUp: onInputKeyUp,
           isInputValid: isInputValid,
           editorEnabled: editorEnabled,
+          questionIndex: index,
         }}
       >
         {editorEnabled ? (
@@ -471,8 +486,8 @@ const RangeQuestion = (props) => {
       <QuestionLabel
         label={label}
         subLabel={subLabel}
-        center
         required={required}
+        center={true}
       />
       <div className={styles.rangeContainer}>
         <div className={styles.rangeIcon}>
@@ -487,10 +502,10 @@ const RangeQuestion = (props) => {
       </div>
       <Buttons
         disabled={false}
-        // ref={buttonRef}
-        icon={<ImCheckmark />}
+        icon={<GrFormCheckmark />}
         noEnter
-        center
+        showShiftEnter
+        center={true}
       />
     </Element>
   )
@@ -499,18 +514,12 @@ const RangeQuestion = (props) => {
 /**
  * An element which allows selection from pre-defined items.
  */
-const Selection = ({
-  label,
-  subLabel,
-  data,
-  options, // array of objects: { label, name, key }
-}) => {
+const Selection = (props) => {
+  const { label, subLabel, data, options } = props
   const { onInputChange, editorEnabled } = useContext(FunctionsCtx)
   const { name, value, required } = data
-  const buttonRef = useRef(null)
   const hasValue = value && value.length > 0
   const buttonDisabled = required && !hasValue
-  let btnIcon = !required && !hasValue ? <FaPlay /> : <ImCheckmark />
 
   return (
     <Element>
@@ -520,17 +529,9 @@ const Selection = ({
         instanceId={name}
         options={options}
         onChange={(e) => onInputChange(e, name)}
-        onMenuClose={() => {
-          if (buttonRef && buttonRef.current) buttonRef.current.focus()
-        }}
         autoFocus={!editorEnabled}
       />
-      <Buttons
-        disabled={buttonDisabled}
-        ref={buttonRef}
-        icon={btnIcon}
-        noEnter
-      />
+      <Buttons disabled={buttonDisabled} icon={<GrFormCheckmark />} noEnter />
     </Element>
   )
 }
@@ -554,14 +555,13 @@ const Question = (props) => {
     data,
     buttonText,
     placeholder = "Kirjoita vastaus tähän...",
+    showShiftEnter,
   } = props
   const { name, value, required } = data
   const hasValue = value && value.length > 0
   const buttonDisabled = required && !hasValue
 
   const isValid = isInputValid(name)
-
-  let btnIcon = !required && !hasValue ? <FaPlay /> : <ImCheckmark />
 
   return (
     <Element>
@@ -582,23 +582,13 @@ const Question = (props) => {
       />
       <Buttons
         buttonText={buttonText}
-        icon={btnIcon}
+        icon={<GrFormCheckmark />}
         disabled={buttonDisabled}
+        showShiftEnter={showShiftEnter}
       />
     </Element>
   )
 }
-
-const FinalSection = (props) => (
-  <Element>
-    <Headers
-      header={"Kiitos kartoittajan käytöstä!"}
-      subheader={
-        "Antamasi vastaukset käydään läpi ja sinuun otetaan yhteyttä lähiaikoina."
-      }
-    />
-  </Element>
-)
 
 /**
  * An element that doesn't ask a question. A kind of break for the user filling the form.
@@ -606,8 +596,7 @@ const FinalSection = (props) => (
 const Intermission = (props) => {
   const { changeQuestion, editorEnabled } = useContext(FunctionsCtx)
   if (editorEnabled) return null
-  const { header, subheader, buttonText = "Ok", btnIcon = <FaPlay /> } = props
-  const buttonRef = useRef(null)
+  const { header, subheader, buttonText = "Ok" } = props
 
   return (
     <Element className={styles.finalEditor}>
@@ -616,9 +605,8 @@ const Intermission = (props) => {
         <FunctionButton
           text={buttonText}
           name="next"
-          onClick={changeQuestion}
-          icon={btnIcon}
-          ref={buttonRef}
+          onClick={() => changeQuestion("next")}
+          icon={<GrFormCheckmark />}
         />
       </div>
     </Element>
@@ -664,32 +652,38 @@ const FinalEditor = (props) => {
 /**
  * HELPERS - HELPERS - HELPERS
  */
-const Buttons = React.forwardRef((props, ref) => {
+
+const Buttons = (props) => {
   const { changeQuestion, editorEnabled } = useContext(FunctionsCtx)
   if (editorEnabled) return null
 
-  const { text, icon, noEnter, center, disabled } = props
+  const { text, icon, noEnter, showShiftEnter, center, disabled } = props
 
   return (
-    <div
-      className={styles.buttons}
-      style={center && { justifyContent: "center" }}
-    >
-      <span className={styles.shiftEnterGuide}>
-        Shift <BsShift /> + Enter <AiOutlineEnter />
-        <span className={styles.guideText}> tekee rivinvaihdon</span>
-      </span>
-      <div>
+    <div className={styles.buttons}>
+      {showShiftEnter && (
+        <span className={styles.shiftEnterGuide}>
+          Shift <BsShift /> + Enter <AiOutlineEnter />
+          <span className={styles.guideText}> tekee rivinvaihdon</span>
+        </span>
+      )}
+      <div
+        className={styles.buttonRow}
+        style={center && { justifyContent: "center" }}
+      >
         <FunctionButton
           text={text}
           name="next"
-          onClick={changeQuestion}
+          onClick={() => changeQuestion("next")}
           disabled={disabled}
           icon={icon}
-          ref={ref}
         />
         {!noEnter && (
-          <span className={styles.enterGuide}>
+          <span
+            className={`${styles.enterGuide} ${
+              disabled && styles.enterGuideDisabled
+            }`}
+          >
             <AiOutlineEnter />
             <span className={styles.guideText}>paina </span>
             Enter
@@ -698,7 +692,7 @@ const Buttons = React.forwardRef((props, ref) => {
       </div>
     </div>
   )
-})
+}
 
 const QuestionLabel = (props) => {
   const { label, subLabel, center, required } = props
@@ -733,6 +727,28 @@ const Headers = (props) => {
   )
 }
 
-const Element = ({ children }) => {
-  return <div className={styles.element}>{children}</div>
+const PreviousButton = () => {
+  const { changeQuestion } = useContext(FunctionsCtx)
+  return (
+    <div className={styles.prevBtnContainer}>
+      <button
+        type="button"
+        onClick={() => changeQuestion("prev")}
+        className={styles.prevBtnLink}
+      >
+        <GrPrevious className={styles.prevBtnIcon} />{" "}
+        <span className={styles.prevBtnText}>edellinen</span>
+      </button>
+    </div>
+  )
+}
+
+const Element = (props) => {
+  const { children } = props
+  const { questionIndex } = useContext(FunctionsCtx)
+  return (
+    <div className={styles.element}>
+      {questionIndex > 0 && <PreviousButton />} {children}
+    </div>
+  )
 }

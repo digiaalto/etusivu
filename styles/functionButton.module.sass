@@ -1,14 +1,13 @@
 @import "partials"
 
 .functionButton
-  padding: 16px 32px
+  padding: 8px 16px
   display: inline-flex
   align-items: center
   font-family: $font
   text-align: center
   font-size: 1.66rem
-  font-weight: 800
-  letter-spacing: 2px
+  font-weight: 600
   text-transform: uppercase
   border: none
   outline: none
@@ -20,14 +19,15 @@
   pointer-events: auto
   cursor: pointer
   background-color: map-get($colors, primary)
+  // margin-top: 12px
   &:hover
     box-shadow: none
     background-color: map-get($colors, primaryLighter)
   &:focus
     background-color: map-get($colors, primaryLighter)
   svg
-    margin-left: 14px
-    path
+    margin-left: 4px
+    polyline  
       stroke: map-get($colors, textLight)
 
 .disabled
@@ -36,3 +36,7 @@
 .noText
   svg
     margin-left: 0
+  
+@media (min-width: map-get($bp, laptop))
+  .functionButton
+    padding: 6px 12px

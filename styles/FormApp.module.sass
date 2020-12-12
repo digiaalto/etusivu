@@ -11,14 +11,40 @@ $color: map-get($colors, textDark)
   max-width: 800px
   p
     max-width: none
-  
+
+.labelContainer
+  margin-bottom: 2rem
+
+.label
+  display: block
+  color: $color
+  font-size: 1.3em
+  line-height: 1.6
+
+.subLabel
+  display: block
+  color: map-get($colors, textGray)
+  font-size: 0.8em
+  margin-top: 1rem
+
+.header
+  display: block
+  margin: 0
+  margin-bottom: 1rem
+  line-height: 1.6
+  font-size: 1.5rem
+  font-weight: 800
+
+.subheader
+  font-size: 1.2rem
+
 .textInput
   display: block
   max-width: 100%
+  width: 100%
   padding: 4px 0
   background: none
   color: $color
-  font-size: 22px
   border: none
   box-shadow: $color 0px 1px
   &:focus
@@ -27,32 +53,6 @@ $color: map-get($colors, textDark)
 
 .textInputInvalid
   box-shadow: map-get($colors, error) 0px 2px !important
-
-.labelContainer
-  margin-bottom: 2rem
-
-.label
-  color: $color
-  font-weight: 600
-  font-size: 1.5rem
-  line-height: 1.6
-
-.subLabel
-  display: block
-  opacity: 0.75
-  font-size: 1.2rem
-  margin-top: 1rem
-
-.header
-  display: block
-  margin: 0
-  margin-bottom: 1.5rem
-  line-height: 1.6
-  font-size: 1.5rem
-  font-weight: 800
-
-.subheader
-  font-size: 1.2rem
 
 .intermission
   display: flex
@@ -64,20 +64,65 @@ $color: map-get($colors, textDark)
   a
     margin-top: 2rem
   
-.element
+.prevBtnContainer
+  display: inline-flex
+  position: absolute
+  left: 20px
+  top: 20px
+
+.prevBtnLink
+  color: map-get($colors, textDark) !important
+  border: 1px solid map-get($colors, textGray)
+  border-radius: 4px
+  padding: 0.5rem 1rem
+  text-align: center
   display: flex
+  justify-content: center
+  align-items: center
+  height: 100%
+  width: 100%
+  cursor: pointer
+  transition: all 0.1s ease-in-out
+  background-color: transparent
+  &:hover
+    border-color: transparent
+
+.prevBtnIcon
+  font-weight: 800
+  font-size: 1rem
+  margin-left: -2px
+  polyline
+    stroke: map-get($colors, textDark)
+
+.prevBtnText
+  margin-left: 2px
+  font-size: 14px
+  font-weight: 600
+
+.element
   flex-direction: column
   margin: 1rem 0
 
 .buttons
   margin-top: 0
-.intermissionButtons
+
+.buttonRow
+  display: flex
+  align-items: center
+  align-content: center
   margin-top: 1.5rem
+
+.intermissionButtons
+  margin-top: 2rem
+
+.shiftEnterGuide, .enterGuide
+  display: none
 
 .shiftEnterGuide
   font-size: 13px
   font-weight: 800
   margin-bottom: 10px
+
   svg
     margin-left: 2px
 
@@ -87,6 +132,9 @@ $color: map-get($colors, textDark)
   margin-left: 10px
   svg
     margin-right: 6px
+
+.enterGuideDisabled
+  color: map-get($colors, textGray)
 
 .guideText
   font-weight: 400
@@ -145,8 +193,10 @@ $color: map-get($colors, textDark)
     padding: 2rem
     
   .editorHeader
-    font-size: 2.5rem
+    font-size: 2.5em
+  
+  .label
+    font-size: 1.2em
 
-  .netlifyForm
-    textarea
-      font-size: 28px
+  .shiftEnterGuide, .enterGuide
+    display: inline
