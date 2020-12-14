@@ -466,6 +466,7 @@ const NetlifyForm = () => {
       className={styles.netlifyForm}
       onSubmit={(e) => submitForm(e)}
       name="haastattelulomake"
+      netlify
     >
       <FunctionsCtx.Provider
         value={{
