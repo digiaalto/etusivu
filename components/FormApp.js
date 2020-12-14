@@ -236,14 +236,16 @@ const NetlifyForm = () => {
   }
 
   const submitForm = (e) => {
+    e.preventDefault()
+
     const errors = []
     const keys = Object.keys(formData)
-    let formattedFormData = {}
+    let dataObject = {}
     let i
 
     for (i = 0; i < keys.length; i++) {
       const element = formData[keys[i]]
-      formattedFormData[element.name] = element.value
+      dataObject[element.name] = element.value
       const required = element.required
       const valid = element.value && element.value.length > 0
       if (required && !valid) {
@@ -258,7 +260,7 @@ const NetlifyForm = () => {
     const valid = errors.length === 0
     const body = encode({
       "form-name": "haastattelulomake",
-      ...formattedFormData,
+      ...dataObject,
     })
 
     if (valid) {
@@ -273,7 +275,6 @@ const NetlifyForm = () => {
         })
         .catch((error) => console.log(error))
     }
-    e.preventDefault()
   }
 
   const changeQuestion = (direction) => {
@@ -463,10 +464,11 @@ const NetlifyForm = () => {
 
   return (
     <form
-      className={styles.netlifyForm}
-      onSubmit={(e) => submitForm(e)}
       name="haastattelulomake"
-      netlify
+      data-netlify="true"
+      action="/kiitos"
+      onSubmit={(e) => submitForm(e)}
+      className={styles.netlifyForm}
     >
       <FunctionsCtx.Provider
         value={{
@@ -480,17 +482,13 @@ const NetlifyForm = () => {
         }}
       >
         {editorEnabled ? (
-          <FinalEditor
-            elements={elements}
-            submitForm={submitForm}
-            errors={errors}
-          />
+          <FinalEditor elements={elements} errors={errors} />
         ) : (
           <>
             <Fader inProp={inProp} exitedCallback={updateQuestion}>
               {elements[index]}
             </Fader>
-            <input name="filler" style={{ visibility: "hidden" }} />
+            <input name="filler" style={{ visibility: "hidden" }} hidden />
             <LoadingBar percent={percentCompleted} />
           </>
         )}
@@ -637,7 +635,7 @@ const Intermission = (props) => {
 }
 
 const FinalEditor = (props) => {
-  const { elements, submitForm, errors } = props
+  const { elements, errors } = props
   return (
     <div className={styles.finalEditor}>
       <Element>
@@ -653,7 +651,7 @@ const FinalEditor = (props) => {
         </div>
       ))}
       <div className={styles.buttons}>
-        <FunctionButton text="Lähetä" onClick={submitForm} disabled={false} />
+        <FunctionButton type="submit" text="Lähetä" disabled={false} />
       </div>
       {errors.length > 0 ? (
         <div className={styles.errors}>
