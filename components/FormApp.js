@@ -209,6 +209,14 @@ const NetlifyForm = () => {
     },
   })
 
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&")
+  }
+
   const onInputChange = (e, selection) => {
     if (selection) {
       updateField(selection, e.value)

@@ -1,6 +1,7 @@
 import styles from "../styles/LP_Process.module.sass"
 import { useEffect, useState } from "react"
 import { useInView } from "react-intersection-observer"
+import Link from "next/link"
 
 const LP_Process = () => {
   const { ref, inView, entry } = useInView()
@@ -29,8 +30,12 @@ const LP_Process = () => {
         <div className={styles.column}>
           <h4 className={styles.topHeader}>Prosessi</h4>
           <h3 className={styles.middleHeader}>
-            Virtaviivainen toteutusprosessi nopeuttaa tuotteen julkaisua. Voit
-            tulla pöytään ideat valmiina tai antaa Digiaallon hoitaa kaiken.
+            Verkkosivun hankinta tapahtuu mahdollisimman vaivattomasti. Voit
+            tulla pöytään ideat valmiina tai antaa Digiaallon vastata kaikesta.
+            Täytä vain
+            <Link href="/haastattelulomake">
+              <a> haastattelulomake.</a>
+            </Link>
           </h3>
           <h4 className={styles.bottomHeader}>
             Tehostetun Verkkosivun Toteutus
@@ -39,7 +44,7 @@ const LP_Process = () => {
             <TextBlock
               miniheader="Aloitetaan"
               header="Kartoitus"
-              text="Ota yhteyttä ja sinulle lähetetään haastattelulomake jossa kerätään pakollisia taustatietoja. Saat takaisin ehdotuksen projektin ominaisuuksista ja tarpeellisista palveluista."
+              text="Täytä yhteydenottolomake jossa kerätään pakolliset taustatiedot projektistasi ja sinusta."
             />
             <TextBlock
               miniheader="Vaihe 2"

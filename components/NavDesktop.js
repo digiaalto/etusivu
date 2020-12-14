@@ -22,7 +22,7 @@ const Links = () => {
       <DigiaaltoLink href="/#laatutesti-google-lighthouse" text="Laatutesti" />
       <DigiaaltoLink href="/#kehitysprosessi" text="Kehitysprosessi" />
       <DigiaaltoLink href="/#hinnoittelu" text="Hinnoittelu" />
-      <DigiaaltoLink href="/yhteydenottolomake" text="Yhteydenottolomake" />
+      <DigiaaltoLink href="/haastattelulomake" text="Haastattelulomake" />
     </ul>
   )
 }
