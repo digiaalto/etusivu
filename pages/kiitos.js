@@ -8,12 +8,12 @@ const Kiitos = () => {
       <section className={styles.section}>
         <div className={styles.container}>
           <span className={styles.header}>
+            Kiitos haastattelulomakeen käytöstä
             <FiThumbsUp />
-            Kiitos yhteydenotosta.
           </span>
           <span className={styles.subheader}>
-            Haastattelulomakkeen vastaukset käydään läpi ja teihin otetaan
-            yhteyttä 1-2 arkipäivissä.
+            Vastauksenne käydään läpi ja teihin otetaan yhteyttä mahdollisimman
+            pian.
           </span>
         </div>
       </section>

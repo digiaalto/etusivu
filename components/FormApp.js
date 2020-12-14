@@ -4,13 +4,13 @@ import Fader from "./utility/Fader"
 import FunctionButton from "../components/utility/FunctionButton"
 import { AiOutlineEnter } from "react-icons/ai"
 import { GiMale, GiFemale } from "react-icons/gi"
-import { FaArrowDown } from "react-icons/fa"
 import { BsShift } from "react-icons/bs"
 import { GrPrevious, GrFormCheckmark } from "react-icons/gr"
 import LoadingBar from "../components/utility/LoadingBar"
 import TextareaAutosize from "react-textarea-autosize"
 import Select from "react-select"
 import Slider from "./utility/Slider"
+import { useRouter } from "next/router"
 
 const FunctionsCtx = createContext(null)
 
@@ -208,7 +208,9 @@ const NetlifyForm = () => {
       required: true,
     },
   })
+  const router = useRouter()
 
+  // For submitting forms to Netlify
   const encode = (data) => {
     return Object.keys(data)
       .map(
@@ -236,10 +238,12 @@ const NetlifyForm = () => {
   const submitForm = (e) => {
     const errors = []
     const keys = Object.keys(formData)
+    let formattedFormData = {}
     let i
 
     for (i = 0; i < keys.length; i++) {
       const element = formData[keys[i]]
+      formattedFormData[element.name] = element.value
       const required = element.required
       const valid = element.value && element.value.length > 0
       if (required && !valid) {
@@ -252,10 +256,24 @@ const NetlifyForm = () => {
     }
 
     const valid = errors.length === 0
-    if (!valid) {
-      e.preventDefault()
+    const body = encode({
+      "form-name": "haastattelulomake",
+      ...formattedFormData,
+    })
+
+    if (valid) {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body,
+      })
+        .then(() => {
+          router.push("/kiitos")
+          // alert("success?")
+        })
+        .catch((error) => console.log(error))
     }
-    return valid
+    e.preventDefault()
   }
 
   const changeQuestion = (direction) => {
@@ -447,10 +465,7 @@ const NetlifyForm = () => {
     <form
       className={styles.netlifyForm}
       onSubmit={(e) => submitForm(e)}
-      name="yhteydenottolomake"
-      method="POST"
-      data-netlify="true"
-      action="/kiitos"
+      name="haastattelulomake"
     >
       <FunctionsCtx.Provider
         value={{
@@ -630,21 +645,14 @@ const FinalEditor = (props) => {
             Alla voit tarkistaa vastaukset vielä kerran ennen lähetystä.
           </span>
         </div>
-        <FaArrowDown className={styles.finalEditorIcon} />
       </Element>
       {elements.map((section, index) => (
         <div className={styles.finalEditorSection} key={`section-${index}`}>
           {section}
         </div>
       ))}
-      <input type="hidden" name="form-name" value="yhteydenottolomake" />
       <div className={styles.buttons}>
-        <FunctionButton
-          type="submit"
-          text="Lähetä"
-          onClick={submitForm}
-          disabled={false}
-        />
+        <FunctionButton text="Lähetä" onClick={submitForm} disabled={false} />
       </div>
       {errors.length > 0 ? (
         <div className={styles.errors}>
