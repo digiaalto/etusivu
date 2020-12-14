@@ -19,8 +19,9 @@ const LP_Solution = () => {
               isot teknologiajätit kuten Netflix, Airbnb, Facebook ja Amazon.
             </p>
             <p>
-              Koska suurin osa yrityssivuista pyörii vanhalla Wordpressillä ja
-              huonoilla valmisteemoilla on kilpailuetu taattu jo lähtöruudussa.
+              Koska Suomessa suurin osa pk-yrittäjien yrityssivuista pyörii
+              tehottomalla Wordpressillä ja vanhoilla valmisteemoilla on
+              kilpailuetu taattu jo lähtöruudussa.
             </p>
           </div>
           <div className={styles.textColumn}>
