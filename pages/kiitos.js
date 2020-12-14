@@ -12,7 +12,7 @@ const Kiitos = () => {
             Kiitos yhteydenotosta.
           </span>
           <span className={styles.subheader}>
-            Haastattelulomakkeen vastaukset käydään läpi ja sinuun otetaan
+            Haastattelulomakkeen vastaukset käydään läpi ja teihin otetaan
             yhteyttä 1-2 arkipäivissä.
           </span>
         </div>
