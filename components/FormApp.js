@@ -99,7 +99,7 @@ const NetlifyForm = () => {
   const [index, setIndex] = useState(0)
   const [nextIndex, setNextIndex] = useState(0)
   const [downKeys, setDownKeys] = useState([])
-  const [editorEnabled, setEditorEnabled] = useState(false)
+  const [editorEnabled, setEditorEnabled] = useState(true)
   const [errors, setFormErrors] = useState([])
   const [formData, setFormData] = useState({
     yritysNimi: {
@@ -641,10 +641,11 @@ const FinalEditor = (props) => {
       <Element>
         <div className={styles.editorHeaderContainer}>
           <span className={styles.editorHeader}>
-            Alla voit tarkistaa vastaukset vielä kerran ennen lähetystä.
+            Voit muuttaa antamasia vastauksia vielä ennen lähetystä.
           </span>
         </div>
       </Element>
+      <input type="hidden" name="form-name" value="haastattelulomake" />
       {elements.map((section, index) => (
         <div className={styles.finalEditorSection} key={`section-${index}`}>
           {section}
