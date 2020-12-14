@@ -10,14 +10,13 @@ const LP_Audit = () => {
         <span className={styles.preheader}>Laatumittari</span>
         <span className={styles.header}>Google Lighthouse</span>
         <p className={styles.info}>
-          Google Lighthouse on automaattinen työkalu verkkosivujen laadun
-          mittaamiseen josta selviää kuinka hyvin näyt ja pärjäät verkossa.
-          Sillä voidaan auditoida minkä tahansa verkkosivun suorituskyky,
-          saavutettavuus ja hakukoneoptimointi muutamassa sekunnissa ilmaiseksi,
-          tarvitset vain testattavan sivun domain-osoitteen. Digiaalto varmistaa
-          kehitystyön onnistumisen jatkuvalla laatutestauksella.
+          Automaattinen web-app verkkosivujen laadun mittaamiseen. Lighthousesta
+          selviää kuinka hyvin näyt ja pärjäät verkossa. Sillä voidaan auditoida
+          minkä tahansa verkkosivun suorituskyky, saavutettavuus ja
+          hakukoneoptimointi muutamassa sekunnissa ilmaiseksi. Tarvitaan vain
+          web-osoite.
         </p>
-        <Button href={auditLink} text={"Testaa sivuja"} outside />
+        <Button href={auditLink} text={"Testaa"} outside />
         <p className={styles.help}>
           <HiExclamation className={styles.helpIcon} /> Tulokset ovat
           englanniksi.

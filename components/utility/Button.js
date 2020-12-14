@@ -1,46 +1,42 @@
-import React, { useContext } from "react"
+import styles from "./Button.module.sass"
+import React from "react"
 import Link from "next/link"
 
-const buttonCtx = React.createContext({})
 /**
  *
  * @params {{href: string, text: string, icon: object, customStyle: object}}
  */
 
 const Button = (props) => {
-  function selectCorrectButtonType() {
-    if (!props.outside) {
-      return <InnerButton />
-    } else {
-      return <OutsideButton />
-    }
-  }
-
-  return (
-    <buttonCtx.Provider value={props}>
-      {selectCorrectButtonType()}
-    </buttonCtx.Provider>
+  const { outside } = props
+  return outside ? (
+    <ExternalButton value={props} />
+  ) : (
+    <InternalButton value={props} />
   )
 }
 
-export default Button
-
-const InnerButton = () => {
-  const value = useContext(buttonCtx)
+const InternalButton = ({ value }) => {
   return (
     <Link href={value.href}>
-      <a>
+      <a className={styles.buttonLink}>
         {value.icon && value.icon} {value.text}
       </a>
     </Link>
   )
 }
 
-const OutsideButton = () => {
-  const value = useContext(buttonCtx)
+const ExternalButton = ({ value }) => {
   return (
-    <a href={value.href} target="_blank" rel="noopener noreferrer">
+    <a
+      href={value.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={styles.buttonLink}
+    >
       {value.icon && value.icon} {value.text}
     </a>
   )
 }
+
+export default Button

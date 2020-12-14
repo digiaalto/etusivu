@@ -1,5 +1,5 @@
 import styles from "../styles/FormApp.module.sass"
-import React, { useState, useContext, createContext, useRef } from "react"
+import React, { useState, useContext, createContext } from "react"
 import Fader from "./utility/Fader"
 import FunctionButton from "../components/utility/FunctionButton"
 import { AiOutlineEnter } from "react-icons/ai"
@@ -11,7 +11,6 @@ import LoadingBar from "../components/utility/LoadingBar"
 import TextareaAutosize from "react-textarea-autosize"
 import Select from "react-select"
 import Slider from "./utility/Slider"
-import { element } from "prop-types"
 
 const FunctionsCtx = createContext(null)
 
@@ -252,6 +251,7 @@ const NetlifyForm = () => {
   }
 
   const changeQuestion = (direction) => {
+    setDownKeys([])
     switch (direction) {
       case "prev":
         setNextIndex(index - 1)
@@ -281,16 +281,15 @@ const NetlifyForm = () => {
     }
     setDownKeys(keys)
 
-    if (
-      keys.includes("Enter") &&
-      keys.includes("Shift") &&
+    if (keys.includes("Enter") && keys.includes("Shift")) {
+      e.preventDefault()
+      if (validated) changeQuestion("next")
+    } else if (
+      key === "Enter" &&
       e.target.nodeName.toLowerCase() === "textarea"
     ) {
       e.preventDefault()
       updateField(e.target.name, e.target.value + "\n")
-    } else if (key === "Enter") {
-      e.preventDefault()
-      if (validated) changeQuestion("next")
     } else if (key === "Alt") e.preventDefault()
   }
 
@@ -440,9 +439,10 @@ const NetlifyForm = () => {
     <form
       className={styles.netlifyForm}
       onSubmit={(e) => submitForm(e)}
-      name="kartoittaja"
+      name="yhteydenottolomake"
       method="POST"
       data-netlify="true"
+      action="/kiitos"
     >
       <FunctionsCtx.Provider
         value={{
@@ -504,7 +504,6 @@ const RangeQuestion = (props) => {
         disabled={false}
         icon={<GrFormCheckmark />}
         noEnter
-        showShiftEnter
         center={true}
       />
     </Element>
@@ -630,6 +629,7 @@ const FinalEditor = (props) => {
           {section}
         </div>
       ))}
+      <input type="hidden" name="form-name" value="yhteydenottolomake" />
       <div className={styles.buttons}>
         <FunctionButton
           type="submit"
@@ -662,8 +662,12 @@ const Buttons = (props) => {
   return (
     <div className={styles.buttons}>
       {showShiftEnter && (
-        <span className={styles.shiftEnterGuide}>
-          Shift <BsShift /> + Enter <AiOutlineEnter />
+        <span
+          className={`${styles.enterGuide} ${
+            disabled && styles.enterGuideDisabled
+          }`}
+        >
+          Enter <AiOutlineEnter />
           <span className={styles.guideText}> tekee rivinvaihdon</span>
         </span>
       )}
@@ -679,14 +683,8 @@ const Buttons = (props) => {
           icon={icon}
         />
         {!noEnter && (
-          <span
-            className={`${styles.enterGuide} ${
-              disabled && styles.enterGuideDisabled
-            }`}
-          >
-            <AiOutlineEnter />
-            <span className={styles.guideText}>paina </span>
-            Enter
+          <span className={styles.shiftEnterGuide}>
+            Shift <BsShift /> + Enter <AiOutlineEnter />
           </span>
         )}
       </div>

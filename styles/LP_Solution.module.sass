@@ -15,15 +15,9 @@
 	color: map-get($colors, primary)
 
 .header
-	margin-top: 0
 	font-size: 1.75rem
 	font-weight: 800
 	max-width: $sectionHeaderWidth
-
-.sideHeader
-	max-width: $sectionHeaderWidth
-	font-weight: 800
-	font-size: $h5Size
 
 .emailLink
 	letter-spacing: 0.1rem
@@ -42,6 +36,11 @@
 		max-width: 40rem
 		margin-top: 2rem
 		font-size: $h1Size
+	.textContainer
+		display: flex
+	.textColumn
+		&:last-of-type
+			margin-left: 4rem
 
 @media (min-width: map-get($bp, desktop))
 	.section
@@ -53,8 +52,3 @@
 	.header
 		font-size: $h1Size * 1.2
 		max-width: 46rem
-	.sideHeader
-		max-width: 50rem
-		margin-top: -5rem
-		padding-left: 15rem
-		font-size: $h4Size

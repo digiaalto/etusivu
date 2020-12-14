@@ -1,38 +1,35 @@
 import styles from "../styles/LP_Problem.module.sass"
-import { Fade } from "react-awesome-reveal"
 
 const LP_Problem = () => {
   return (
-    <section className={styles.section} id="verkkosivujen-haasteita">
+    <section className={styles.section} id="kehityksen-haasteita">
       <div className={styles.content}>
-        <Fade direction="up" triggerOnce>
-          <div className={styles.headerWrapper}>
-            <span className={styles.preheader}>Ongelma</span>
-            <span className={styles.header}>
-              Yrittäjän elämä on kiireistä, mutta yrityssivut pitää olla.
-            </span>
+        <div className={styles.headerWrapper}>
+          <span className={styles.preheader}>Ongelma</span>
+          <h1 className={styles.header}>
+            Kiireinenkin yrittäjä tarvitsee laadukkaan yrityssivun.
+          </h1>
+        </div>
+        <div className={styles.textContainer}>
+          <div className={styles.textColumn}>
+            <p>
+              Hyvän verkkosivun tarkoitus on toteuttaa sille asetetut
+              tavoitteet. Yrityksen näkökulmasta päätavoite voi olla esimerkiksi
+              asiakkaiden tiedottaminen palveluista ja tuoton kasvattaminen.
+            </p>
+            <p>
+              Yrityssivun tavoitteita vaikeuttaa tai helpottaa kaikki päätökset
+              teknisestä toteutuksesta sisällönsuunnitteluun.
+            </p>
           </div>
-          <div className={styles.textContainer}>
-            <div>
-              <p>
-                Hyvin toteutettu verkkosivu on tärkeämpi nyt kuin koskaan.
-                Laadukas yrityssivu kasvattaa tuottoa ja edistää yrityksen
-                toimintaa tarkoituksenmukaisesti.
-              </p>
-              <p>
-                Tarvitaan verkkokehittäjä joka tietää mitä hän tekee.
-                Valitettavan useasti käytetään ikääntynyttä tekniikkaa, huonosti
-                optimoituja valmisteemoja ja ulkoistettua koodia.
-              </p>
-            </div>
-            <div>
-              <p className="bold">
-                Jokaisen verkkokehittäjän työ olisi hyvä tarkistaa Googlen
-                kehittämällä laatutestillä jonka tulokset voi ymmärtää itse.
-              </p>
-            </div>
+          <div className={styles.textColumn}>
+            <p>
+              Kaikkien yrittäjien ei kuitenkaan ole taloudellisesti järkevää
+              käyttää omaa aikaa verkkosivun suunnittelun ja kehityksen
+              laadunvalvontaan.
+            </p>
           </div>
-        </Fade>
+        </div>
       </div>
     </section>
   )
