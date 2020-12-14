@@ -99,7 +99,7 @@ const NetlifyForm = () => {
   const [index, setIndex] = useState(0)
   const [nextIndex, setNextIndex] = useState(0)
   const [downKeys, setDownKeys] = useState([])
-  const [editorEnabled, setEditorEnabled] = useState(true)
+  const [editorEnabled, setEditorEnabled] = useState(false)
   const [errors, setFormErrors] = useState([])
   const [formData, setFormData] = useState({
     yritysNimi: {
