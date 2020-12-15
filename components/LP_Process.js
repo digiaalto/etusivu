@@ -30,9 +30,9 @@ const LP_Process = () => {
         <div className={styles.column}>
           <h4 className={styles.topHeader}>Prosessi</h4>
           <h3 className={styles.middleHeader}>
-            Verkkosivun hankinta tapahtuu mahdollisimman vaivattomasti. Voit
-            tulla pöytään ideat valmiina tai antaa Digiaallon vastata kaikesta.
-            Täytä vain
+            Verkkosivun hankinta tapahtuu vaivattomasti. Voit tulla pöytään
+            ideat valmiina tai antaa Digiaallon vastata kaikesta. Aloita
+            täyttämällä
             <Link href="/haastattelulomake">
               <a> haastattelulomake.</a>
             </Link>
@@ -44,27 +44,27 @@ const LP_Process = () => {
             <TextBlock
               miniheader="Aloitetaan"
               header="Kartoitus"
-              text="Täytä yhteydenottolomake jossa kerätään pakolliset taustatiedot projektistasi ja sinusta."
+              text="Kaikki alkaa yhteydenotosta. Valmistaudu antamaan perustietoja yrityksestäsi. Vapaaehtoisesti voit kertoa myös brändistäsi, haluamastasi verkkosivusta ja kohderyhmästä."
             />
             <TextBlock
               miniheader="Vaihe 2"
               header="Suunnittelu"
-              text="Tutkitaan kilpailijoita, kerätään sopivaa lähdemateriaalia ja kirjoitetaan tekstisisältöä. Suunnittellaan alustava rautalankamalli."
+              text="Taustatiedot käydään läpi ja pienen alustavan tutkimuksen jälkeen Digiaalto suunnittelee ja määrittelee käyttäjäystävällisen tietohierarkian sivusta."
             />
             <TextBlock
               miniheader="Vaihe 3"
               header="Design"
-              text="Lähdemateriaalit yhdistetään rautalankamalliin ja luodaan graaffinen representaatio verkkosivusta. Valmiilla mallilla haetaan sinun hyväksyntä."
+              text="Digiaalto laatii graafisen representaation verkkosivustasi josta näet valmiin ulkoasu. Ennen seuraavaa vaihetta tämä malli hyväksytetään."
             />
             <TextBlock
               miniheader="Vaihe 4"
               header="Kehitys"
-              text="Verkkosivu koodataan edellisen vaiheen mallin mukaisesti. Lopputulos testataan ja optimoidaan tarkasti."
+              text="Kehitystyö tehdään mallin mittojen mukaisesti. Säännöllisellä laatutestauksella varmistetaan parhaat tekniset päätökset ja ylivoimainen hakukoneoptimointi."
             />
             <TextBlock
               miniheader="Valmista!"
               header="Julkaisu"
-              text="Domain osoitetaan palvelimelle ja sivu on valmis julkiseen käyttöön. Asiakaspalvelulinjat pidetään auki mahdollisille kysymyksille."
+              text="Verkkosivu on valmis ja toimii itsenäisesti tästä päivästä eteenpäin. Sinulle toimitetaan ohjeet käyttöä varten sekä muihin mahdollisiin palveluihin. Edullisella lisäpalvelulla Digiaalto voi hoitaa sisällönhallinan ja muut pientyöt puolestasi."
             />
           </div>
         </div>

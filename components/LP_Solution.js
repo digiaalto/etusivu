@@ -19,14 +19,14 @@ const LP_Solution = () => {
               isot teknologiajätit kuten Netflix, Airbnb, Facebook ja Amazon.
             </p>
             <p>
-              Koska Suomessa suurin osa pk-yrittäjien yrityssivuista pyörii
-              tehottomalla Wordpressillä ja vanhoilla valmisteemoilla on
+              Koska Suomessa valtaosa pk-yrittäjien yrityssivuista on
+              valmistettu vanhentuneella Wordpressillä ja valmisteemoilla on
               kilpailuetu taattu jo lähtöruudussa.
             </p>
           </div>
           <div className={styles.textColumn}>
             <p>
-              Seuraamalla hakukoneiden suosituksia Digiaalto valmistaa
+              Seuraamalla hakukoneiden suosituksia Digiaalto rakentaa
               verkkosivuja jotka saavuttavat lähes täydet pisteet Googlen omassa
               verkkosivujen{" "}
               <Link href="/#laatutesti-google-lighthouse">

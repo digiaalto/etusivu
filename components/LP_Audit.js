@@ -10,11 +10,11 @@ const LP_Audit = () => {
         <span className={styles.preheader}>Laatumittari</span>
         <span className={styles.header}>Google Lighthouse</span>
         <p className={styles.info}>
-          Automaattinen web-app verkkosivujen laadun mittaamiseen. Lighthousesta
-          selviää kuinka hyvin näyt ja pärjäät verkossa. Sillä voidaan auditoida
-          minkä tahansa verkkosivun suorituskyky, saavutettavuus ja
+          Automaattinen työkalu verkkosivujen laadun mittaamiseen. Lighthouse
+          selvittää kuinka hyvin näyt ja pärjäät verkossa. Sillä voidaan
+          auditoida minkä tahansa verkkosivun suorituskyky, saavutettavuus ja
           hakukoneoptimointi muutamassa sekunnissa ilmaiseksi. Tarvitaan vain
-          web-osoite.
+          testikohteen domain.
         </p>
         <Button href={auditLink} text={"Testaa"} outside />
         <p className={styles.help}>

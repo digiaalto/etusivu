@@ -346,7 +346,7 @@ const NetlifyForm = () => {
   const elements = [
     <Intermission
       header="Kiitos että olet kiinnostunut käyttäjäystävällisistä verkkosivuista!"
-      subheader="Ota yhteyttä vastaamalle muutamaan kysymykseen yrityksestäsi, brändistäsi, kohdemarkkinoistasi ja tästä projektista. Lopussa näet vastauksesi ja voit tehdä viimeiset muutokset ennen tietojen lähetystä. Kesto noin 10 minuuttia."
+      subheader="Ota yhteyttä samalla kun vastaat muutamaan kysymykseen yrityksestäsi, brändistäsi, kohdemarkkinoistasi ja tästä projektista. Lopussa näet vastauksesi ja voit tehdä viimeiset muutokset ennen tietojen lähetystä. Kesto noin 15 minuuttia."
     />,
     <Intermission
       header="Aloitetaan yrityksesi perustiedoista."

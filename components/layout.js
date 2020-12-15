@@ -15,7 +15,7 @@ const Layout = ({
   const SEO = {
     title: title
       ? `${title} | Digiaalto.fi`
-      : `Optimoidut verkkosivut nettiin vaivattomasti | Digiaalto.fi`, // 60
+      : `Verkkosivut yritykselle nopeasti ja helposti | Digiaalto.fi`, // 60
     type: type ? type : "website",
     description: description
       ? description
