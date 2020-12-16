@@ -25,8 +25,8 @@ const LP_Problem = () => {
           <div className={styles.textColumn}>
             <p>
               Jokaisen yrittäjien ei kuitenkaan ole taloudellisesti kannattavaa
-              käyttää omaa aikaa verkkosivun suunnittelun ja kehityksen
-              laadunvalvontaan. Tarvitaan parempi ratkaisu.
+              kuluttaa omaa aikaa verkkosivun suunnittelun ja kehityksen
+              laadunvalvontaan.
             </p>
           </div>
         </div>

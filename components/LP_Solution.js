@@ -8,7 +8,7 @@ const LP_Solution = () => {
         <div className={styles.headerWrapper}>
           <span className={styles.preheader}>Ratkaisu</span>
           <h1 className={styles.header}>
-            Vaivaton ja laatutestattu verkkokehityspalvelu.
+            Vaivaton laatutestattu verkkokehityspalvelu.
           </h1>
         </div>
         <div className={styles.textContainer}>
