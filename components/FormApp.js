@@ -4,7 +4,6 @@ import Fader from "./utility/Fader"
 import FunctionButton from "../components/utility/FunctionButton"
 import { AiOutlineEnter } from "react-icons/ai"
 import { GiMale, GiFemale } from "react-icons/gi"
-import { BsShift } from "react-icons/bs"
 import { GrPrevious, GrFormCheckmark } from "react-icons/gr"
 import LoadingBar from "../components/utility/LoadingBar"
 import TextareaAutosize from "react-textarea-autosize"
@@ -98,7 +97,6 @@ const NetlifyForm = () => {
   const [inProp, setInProp] = useState(true) // Controls the question element transition stages.
   const [index, setIndex] = useState(0)
   const [nextIndex, setNextIndex] = useState(0)
-  const [downKeys, setDownKeys] = useState([])
   const [editorEnabled, setEditorEnabled] = useState(false)
   const [errors, setFormErrors] = useState([])
   const [formData, setFormData] = useState({
@@ -278,7 +276,6 @@ const NetlifyForm = () => {
   }
 
   const changeQuestion = (direction) => {
-    setDownKeys([])
     switch (direction) {
       case "prev":
         setNextIndex(index - 1)
@@ -297,38 +294,23 @@ const NetlifyForm = () => {
     })
   }
 
-  const onInputKeyDown = (e, validated) => {
-    const key = e.key
-    const keyExists = downKeys.indexOf(key) > -1
+  const onInputKeyDown = (e, allowNexting, enableLineBreak) => {
+    const isEnter = e.key === "Enter"
+    const isAlt = e.key === "Alt"
+    const isTextarea = e.target.nodeName.toLowerCase() === "textarea"
 
-    let keys = [...downKeys]
-
-    if (!keyExists) {
-      if (key === "Enter" || key === "Shift") keys.push(key)
-    }
-    setDownKeys(keys)
-
-    if (keys.includes("Enter") && keys.includes("Shift")) {
-      e.preventDefault()
-      if (validated) changeQuestion("next")
-    } else if (
-      key === "Enter" &&
-      e.target.nodeName.toLowerCase() === "textarea"
-    ) {
+    if (isEnter && isTextarea && enableLineBreak) {
+      // Add linebreak to textarea.
       e.preventDefault()
       updateField(e.target.name, e.target.value + "\n")
-    } else if (key === "Alt") e.preventDefault()
-  }
-
-  const onInputKeyUp = (e) => {
-    const key = e.key
-    let newKeys = [...downKeys]
-    let indexOf = newKeys.indexOf(key)
-    indexOf = indexOf > -1 ? indexOf : newKeys.indexOf(key.toUpperCase())
-    if (indexOf > -1) {
-      newKeys.splice(indexOf, 1)
+    } else if (isEnter && isTextarea && allowNexting) {
+      // Change question with Enter.
+      e.preventDefault()
+      changeQuestion("next")
+    } else if (isEnter || isAlt) {
+      // Sometimes enter submits and Alt unfocuses, disable event.
+      e.preventDefault()
     }
-    setDownKeys(newKeys)
   }
 
   function isInputValid(name) {
@@ -358,13 +340,13 @@ const NetlifyForm = () => {
       label="Kuka on yrityksesi kovin kilpailija?"
       subLabel="Heidän ei tarvitse olla samalta toimialalta. Ilmoita myös verkkosivut."
       data={formData.kilpailijat}
-      showShiftEnter
+      enableLineBreak
     />,
     <Question
       label="Lopuksi, miten kuvailisit yrityksesi ydinosaamista?"
       subLabel="Eli miten erotut kilpailijoista ja mihin kilpailukykysi perustuu."
       data={formData.ydinosaaminen}
-      showShiftEnter
+      enableLineBreak
     />,
     <Intermission
       header="Seuraavaksi bränditiedot."
@@ -374,13 +356,13 @@ const NetlifyForm = () => {
       label="Kuvaile yrityksesi brändiä vapaamuotoisesti."
       subLabel="Jos brändiä ei ole vielä kehitetty, kirjoita 3-5 sanaa jotka edustavat toimintaasi."
       data={formData.brandiKuvaus}
-      showShiftEnter
+      enableLineBreak
     />,
     <Question
       label="Onko sinulla omia brändiresursseja?"
       subLabel="Kuten suosikkifonttia, logoa, väriteemaa tms."
       data={formData.brandiResurssit}
-      showShiftEnter
+      enableLineBreak
     />,
     <Intermission
       header="Seuraavaksi mietitään verkkosivusi kohderyhmää."
@@ -406,7 +388,7 @@ const NetlifyForm = () => {
       label="Kuvaile verkkosivun kohderyhmää."
       subLabel="Mitä asiakkaasi odottaa sinulta, mikä on hänelle tärkeintä?"
       data={formData.kohderyhmaKuvaus}
-      showShiftEnter
+      enableLineBreak
     />,
     <Intermission
       header="Kiitos."
@@ -416,19 +398,19 @@ const NetlifyForm = () => {
       label="Kerro millaisen verkkosivun haluat omin sanoin?"
       subLabel="Kerro myös tyyppi: markkinointisivu, blogi, verkkokauppa, web-app... "
       data={formData.verkkosivuKuvaus}
-      showShiftEnter
+      enableLineBreak
     />,
     <Question
       label="Listaa verkkosivusi tärkeimmät tavoitteet."
       subLabel="Mitä haluat saavuttavasi sivun kautta ja miten?"
       data={formData.verkkosivuTavoite}
-      showShiftEnter
+      enableLineBreak
     />,
     <Question
       label="Mitä lisäpalveluita tarvitset?"
       subLabel="Aloitetaanko tyhjältä pöydältä vai oletko jo ostanut esimerkiksi domainin, palvelimen, yrityssähköpostin, tai muita palveluita?"
       data={formData.verkkosivuPalvelut}
-      showShiftEnter
+      enableLineBreak
     />,
     <Intermission
       header="Siinä olikin valtaosa kysymyksistä."
@@ -475,7 +457,6 @@ const NetlifyForm = () => {
           onInputChange: onInputChange,
           changeQuestion: changeQuestion,
           onInputKeyDown: onInputKeyDown,
-          onInputKeyUp: onInputKeyUp,
           isInputValid: isInputValid,
           editorEnabled: editorEnabled,
           questionIndex: index,
@@ -486,7 +467,7 @@ const NetlifyForm = () => {
         ) : (
           <>
             <Fader inProp={inProp} exitedCallback={updateQuestion}>
-              {elements[index]}
+              <div key={`element-${index}`}>{elements[index]}</div>
             </Fader>
             <input name="filler" style={{ visibility: "hidden" }} hidden />
             <LoadingBar percent={percentCompleted} />
@@ -522,12 +503,7 @@ const RangeQuestion = (props) => {
           <GiMale />
         </div>
       </div>
-      <Buttons
-        disabled={false}
-        icon={<GrFormCheckmark />}
-        noEnter
-        center={true}
-      />
+      <Buttons disabled={false} icon={<GrFormCheckmark />} center={true} />
     </Element>
   )
 }
@@ -552,7 +528,7 @@ const Selection = (props) => {
         onChange={(e) => onInputChange(e, name)}
         autoFocus={!editorEnabled}
       />
-      <Buttons disabled={buttonDisabled} icon={<GrFormCheckmark />} noEnter />
+      <Buttons disabled={buttonDisabled} icon={<GrFormCheckmark />} />
     </Element>
   )
 }
@@ -564,25 +540,25 @@ export default NetlifyForm
  */
 const Question = (props) => {
   const {
-    onInputChange,
-    onInputKeyDown,
-    onInputKeyUp,
-    editorEnabled,
-    isInputValid,
-  } = useContext(FunctionsCtx)
-  const {
     label,
     subLabel,
     data,
     buttonText,
     placeholder = "Kirjoita vastaus tähän...",
-    showShiftEnter,
+    enableLineBreak = false,
   } = props
-  const { name, value, required } = data
-  const hasValue = value && value.length > 0
-  const buttonDisabled = required && !hasValue
+  const { name, value, required } = data // from queston object
+  const {
+    onInputChange,
+    onInputKeyDown,
+    editorEnabled,
+    isInputValid,
+  } = useContext(FunctionsCtx)
 
   const isValid = isInputValid(name)
+  const hasValue = value && value.length > 0
+  const buttonDisabled = required && !hasValue
+  const allowNexting = !required || hasValue
 
   return (
     <Element>
@@ -593,8 +569,7 @@ const Question = (props) => {
         name={name}
         value={value}
         onChange={onInputChange}
-        onKeyDown={(e) => onInputKeyDown(e, hasValue || !required)}
-        onKeyUp={onInputKeyUp}
+        onKeyDown={(e) => onInputKeyDown(e, allowNexting, enableLineBreak)}
         autoFocus={!editorEnabled}
         placeholder={placeholder}
         className={`${styles.textInput} ${
@@ -605,7 +580,7 @@ const Question = (props) => {
         buttonText={buttonText}
         icon={<GrFormCheckmark />}
         disabled={buttonDisabled}
-        showShiftEnter={showShiftEnter}
+        enableLineBreak={enableLineBreak}
       />
     </Element>
   )
@@ -626,7 +601,10 @@ const Intermission = (props) => {
         <FunctionButton
           text={buttonText}
           name="next"
-          onClick={() => changeQuestion("next")}
+          onClick={(e) => {
+            e.currentTarget.blur()
+            changeQuestion("next")
+          }}
           icon={<GrFormCheckmark />}
         />
       </div>
@@ -673,16 +651,12 @@ const Buttons = (props) => {
   const { changeQuestion, editorEnabled } = useContext(FunctionsCtx)
   if (editorEnabled) return null
 
-  const { text, icon, noEnter, showShiftEnter, center, disabled } = props
+  const { text, icon, enableLineBreak, center, disabled } = props
 
   return (
     <div className={styles.buttons}>
-      {showShiftEnter && (
-        <span
-          className={`${styles.enterGuide} ${
-            disabled && styles.enterGuideDisabled
-          }`}
-        >
+      {enableLineBreak && (
+        <span className={`${styles.enterGuide}`}>
           Enter <AiOutlineEnter />
           <span className={styles.guideText}> tekee rivinvaihdon</span>
         </span>
@@ -694,15 +668,12 @@ const Buttons = (props) => {
         <FunctionButton
           text={text}
           name="next"
-          onClick={() => changeQuestion("next")}
+          onClick={(e) => {
+            changeQuestion("next")
+          }}
           disabled={disabled}
           icon={icon}
         />
-        {!noEnter && (
-          <span className={styles.shiftEnterGuide}>
-            Shift <BsShift /> + Enter <AiOutlineEnter />
-          </span>
-        )}
       </div>
     </div>
   )
