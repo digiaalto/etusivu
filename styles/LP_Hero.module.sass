@@ -1,6 +1,34 @@
 @import "_partials.sass"
 $tabletWidth: 37rem
 $laptopWidth: 50rem
+$desktopWidth: 60rem
+
+// Keyframes
+@keyframes fader
+	0%
+		opacity: 0
+	5%
+		opacity: 0.2
+	30%
+		opacity: 1
+	90%
+		opacity: 1
+	100%
+		opacity: 0
+
+@keyframes reverseFader
+	0%
+		opacity: 1
+	5%
+		opacity: 0.8
+	30%
+		opacity: 0
+	90%
+		opacity: 0
+	100%
+		opacity: 1
+
+$fadeSpeed: 2.5s
 
 .section
 	z-index: 0
@@ -15,17 +43,16 @@ $laptopWidth: 50rem
 .content
 	display: block
 	margin: auto
-	margin-top: 80px
+	margin-top: 40px
 	color: map-get($colors, textDark)
 
 .salesPitch
 	display: block
-	font-size: $h2Size
 	line-height: 1.1
 	font-weight: 800
-	letter-spacing: -0.25rem
+	margin: 0
 
-.header
+.subheader
 	font-size: $h5Size
 	margin-top: 1.2rem
 
@@ -37,30 +64,100 @@ $laptopWidth: 50rem
 	&:hover
 		transform: rotate(180deg)
 
-.highlight
-	@supports (background-clip: text) and (-webkit-text-fill-color: transparent) 
+// Salespitch Animations
+
+.fadeAnimation
+	animation: fader $fadeSpeed 1
+
+.reverseFadeAnimation
+	&::before
+		animation: reverseFader $fadeSpeed 1
+
+.highlightBackground // reveseFader
+	position: relative
+	display: block
+	user-select: none
+	&::before
+		position: absolute
+		display: block
+		user-select: none
+		width: 100%
+		top: 0
+		bottom: 0
+		left: 0
+		z-index: 0
+		content: "Suunnittelu."
+		color: #000
+
+.highlightBackground2
+	position: relative
+	display: block
+	user-select: none
+	&::before
+		position: absolute
+		display: block
+		user-select: none
+		width: 100%
+		top: 0
+		bottom: 0
+		left: 0
+		z-index: 0
+		content: "Kehitys."
+		color: #000
+	
+.highlightBackground3
+	position: relative
+	display: block
+	user-select: none
+	&::before
+		position: absolute
+		display: block
+		user-select: none
+		width: 100%
+		top: 0
+		bottom: 0
+		left: 0
+		z-index: 0
+		content: "Julkaisu."
+		color: #000
+
+.highlightForeground // fader
+	position: relative
+	z-index: 1
+	opacity: 0
+	@supports (background-clip: text) and (-webkit-text-fill-color: transparent)
 		background-image: linear-gradient(to right, #007CF0, #00DFD8)
 		background-clip: text
 		-webkit-text-fill-color: transparent
-.highlight2
+
+.highlightForeground2
+	position: relative
+	z-index: 1
+	opacity: 0
 	@supports (background-clip: text) and (-webkit-text-fill-color: transparent) 
 		background-image: linear-gradient(to right, #7928CA, #FF0080)
 		background-clip: text
 		-webkit-text-fill-color: transparent
-.highlight3
+
+.highlightForeground3
+	position: relative
+	z-index: 1
+	opacity: 0
 	@supports (background-clip: text) and (-webkit-text-fill-color: transparent) 
 		background-image: linear-gradient(to right, #FF4D4D, #F9CB28)
 		background-clip: text
-		-webkit-text-fill-color: transparent
-
+		-webkit-text-fill-color: transparent		
+	
 // MEDIA QUERIES
 	
 @media (min-width: map-get($bp, tablet))
+	.summaryHeader
+		font-size: $h3Size
 	.content
 		max-width: $tabletWidth
 	.salesPitch
 		font-size: 4rem
-	.header
+	.subheader
 		font-size: $h4Size
 
 @media (min-width: map-get($bp, laptop))
@@ -71,4 +168,11 @@ $laptopWidth: 50rem
 		max-width: $laptopWidth
 		margin-top: 120px
 	.salesPitch
-		font-size: 5rem
+		font-size: 6rem
+
+@media (min-width: map-get($bp, desktop))
+	.content
+		max-width: $desktopWidth
+
+	.salesPitch
+		font-size: 7rem

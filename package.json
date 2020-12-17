@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "disable-scroll": "^0.5.1",
-    "fontsource-lora": "^3.1.6",
+    "fontsource-inter": "^3.1.7",
     "fontsource-open-sans": "^3.1.5",
     "next": "9.5.3",
     "next-on-netlify": "^2.6.3",
@@ -35,7 +35,6 @@
     "react-select": "^3.1.1",
     "react-textarea-autosize": "^8.3.0",
     "react-transition-group": "^4.4.1",
-    "react-typography": "^0.16.19",
     "sass": "^1.30.0"
   },
   "devDependencies": {
