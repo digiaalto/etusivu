@@ -4,10 +4,10 @@ import LP_Problem from "../components/LP_Problem"
 import LP_Solution from "../components/LP_Solution"
 import LP_TrackInfographic from "../components/LP_TrackInfographic"
 import LP_Audit from "../components/LP_Audit"
-import LP_Quote from "../components/LP_Quote"
 import LP_Process from "../components/LP_Process"
 import LP_Pricing from "../components/LP_Pricing"
 import LP_Expect from "../components/LP_Expect"
+// import LP_Quote from "../components/LP_Quote"
 // import ContactForm from "../components/ContactForm"
 
 const IndexPage = () => {

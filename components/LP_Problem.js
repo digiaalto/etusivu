@@ -2,7 +2,7 @@ import styles from "../styles/LP_Problem.module.sass"
 
 const LP_Problem = () => {
   return (
-    <section className={styles.section} id="kehityksen-haasteita">
+    <section className={styles.section} id="ongelmia">
       <div className={styles.content}>
         <div className={styles.headerWrapper}>
           <span className={styles.preheader}>Ongelma</span>

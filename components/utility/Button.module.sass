@@ -1,11 +1,26 @@
 @import "../../styles/_partials"
 
-.buttonLink
-  background-color: map-get($colors, primary)
-  padding: 0.75rem 2.5rem
-  color: #fff  !important
+.anchor
+  display: inline-block
+  margin: 0.66rem 0
+  padding: 0.75rem
+  color: #fff
   border-radius: 4px
-  margin: 1rem 0
+  background-color: map-get($colors, textDark)
+  border: 1px solid map-get($colors, textDark)
+  transition: all 0.2s ease
+  min-width: 200px
+  font-size: 1.1rem
 
   &:hover
-    background-color: map-get($colors, primaryLighter)
+    color: map-get($colors, textDark)
+    background-color: transparent
+
+.secondary
+  color: map-get($colors, textDark)
+  background-color: transparent
+  border: 1px solid #ccc
+
+  &:hover
+    color: map-get($colors, textDark)
+    border: 1px solid map-get($colors, textDark)

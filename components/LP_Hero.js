@@ -1,6 +1,6 @@
 import styles from "../styles/LP_Hero.module.sass"
 import React, { useState, useEffect } from "react"
-import Link from "next/link"
+import Button from "./utility/Button"
 
 const Hero = () => {
   const [animElement, setAnimElement] = useState(0)
@@ -11,7 +11,6 @@ const Hero = () => {
       if (animElementIndex > 2) {
         animElementIndex = 0
       }
-      console.log(`setting animElement: ${animElementIndex}`)
       setAnimElement(animElementIndex)
     }, 2500)
     return () => clearInterval(animInterval)
@@ -61,19 +60,14 @@ const Hero = () => {
             </span>
           </div>
         </h1>
+        <div className={styles.ctaButtons}>
+          <Button href="/tilaa-verkkosivu" text="Tilaa Verkkosivu" />
+          <Button href="/#ongelmia" text="Lue Lisää" secondary={true} />
+        </div>
         <h1 className={styles.subheader}>
-          Laatutestattuja yrityssivuja vaivattomasti kiireisille Suomalaisille
-          yrittäjille.
+          Digiaalto on uusi verkkosuunnittelija joka kehittää laatutestattuja
+          nettisivuja kiireisille yrittäjille.
         </h1>
-        <Link href="#kehityksen-haasteita">
-          <a>
-            <img
-              src="lue-lisaa.svg"
-              className={styles.ctaBtn}
-              alt="Lue Lisää"
-            />
-          </a>
-        </Link>
       </div>
     </section>
   )

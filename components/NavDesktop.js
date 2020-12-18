@@ -11,11 +11,6 @@ const Navigation = () => {
 }
 
 const Links = () => {
-  const DigiaaltoLink = ({ href, text }) => (
-    <Link href={href}>
-      <a className={styles.link}>{text}</a>
-    </Link>
-  )
   return (
     <ul className={styles.linkList}>
       <DigiaaltoLink href="/#huippuluokan-sivut" text="Digiaalto" />
@@ -26,6 +21,12 @@ const Links = () => {
     </ul>
   )
 }
+
+const DigiaaltoLink = ({ href, text }) => (
+  <Link href={href}>
+    <a className={styles.link}>{text}</a>
+  </Link>
+)
 
 const Logo = () => (
   <a href="/" className={styles.logoContainer}>

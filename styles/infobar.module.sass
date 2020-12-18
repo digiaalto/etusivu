@@ -5,15 +5,11 @@ $textColor: map-get($colors, textLight)
 .infobar
 	z-index: 998
 	display: flex
-	justify-content: space-between
-	align-items: center
+	justify-content: space-around
 	position: sticky
-	left: 0
-	top: 0
-	right: 0
 	height: $infobarHeight
-	padding: 0 2rem
-	background-color: map-get($colors, primary)
+	padding: 0 1rem
+	background-color: map-get($colors, textDark)
 	font-size: 1rem
 
 .contactLink
@@ -21,9 +17,10 @@ $textColor: map-get($colors, textLight)
 	align-content: center
 	align-items: center
 	color: $textColor !important
+	font-size: 0.9rem
 
 .contactText
-	margin-left: 0.25rem
+	margin-left: 8px
 
 .divider
 	display: block

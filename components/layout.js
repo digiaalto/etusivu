@@ -1,17 +1,9 @@
 import React from "react"
 import Head from "next/head"
-import DesktopNavigation from "./NavDesktop"
 import Footer from "../components/Footer"
 import Infobar from "../components/infobar"
 
-const Layout = ({
-  title,
-  type,
-  description,
-  children,
-  infobar,
-  desktopNav = true,
-}) => {
+const Layout = ({ title, type, description, children, infobar }) => {
   const SEO = {
     title: title
       ? `${title} | Digiaalto.fi`
@@ -39,7 +31,6 @@ const Layout = ({
         <meta name="og:image" content={SEO.image} />
       </Head>
       {infobar && <Infobar />}
-      {desktopNav && <DesktopNavigation />}
       <main>{children}</main>
       <Footer />
     </React.Fragment>

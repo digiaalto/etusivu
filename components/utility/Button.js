@@ -9,32 +9,36 @@ import Link from "next/link"
 
 const Button = (props) => {
   const { outside } = props
-  return outside ? (
-    <ExternalButton value={props} />
-  ) : (
-    <InternalButton value={props} />
-  )
+  return outside ? <ExternalButton {...props} /> : <InternalButton {...props} />
 }
 
-const InternalButton = ({ value }) => {
+const InternalButton = (props) => {
+  const { href, text, icon, secondary, customStyle } = props
   return (
-    <Link href={value.href}>
-      <a className={styles.buttonLink}>
-        {value.icon && value.icon} {value.text}
+    <Link href={href}>
+      <a
+        className={`${styles.anchor} ${secondary && styles.secondary}`}
+        style={customStyle ? customStyle : null}
+      >
+        {icon && icon}
+        {text}
       </a>
     </Link>
   )
 }
 
-const ExternalButton = ({ value }) => {
+const ExternalButton = (props) => {
+  const { href, text, icon, secondary, customStyle } = props
   return (
     <a
-      href={value.href}
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={styles.buttonLink}
+      className={`${styles.anchor} ${secondary && styles.secondary}`}
+      style={customStyle ? customStyle : null}
     >
-      {value.icon && value.icon} {value.text}
+      {icon && icon}
+      {text}
     </a>
   )
 }

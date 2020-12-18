@@ -1,4 +1,4 @@
-import styles from "../styles/haastattelulomake.module.sass"
+import styles from "../styles/tilaa-verkkosivu.module.sass"
 import React from "react"
 import FormApp from "../components/FormApp"
 import Layout from "../components/layout"

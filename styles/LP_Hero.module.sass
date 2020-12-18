@@ -32,40 +32,33 @@ $fadeSpeed: 2.5s
 
 .section
 	z-index: 0
-	min-height: 60vh
+	display: flex
+	justify-content: center
 	padding: map-get($padding, mobile)
-	position: fixed
-	left: 0
-	top: 0
-	right: 0
 	text-align: center
 
 .content
 	display: block
-	margin: auto
-	margin-top: 40px
 	color: map-get($colors, textDark)
 
 .salesPitch
 	display: block
-	line-height: 1.1
+	font-size: 2.7rem
 	font-weight: 800
+	line-height: 1.2em
 	margin: 0
 
 .subheader
 	font-size: $h5Size
-	margin-top: 1.2rem
+	line-height: 1.6em
 
-.ctaBtn
-	display: inline-block
-	max-width: 6rem
-	transition: all .4s ease-in-out
-	margin-top: 1rem
-	&:hover
-		transform: rotate(180deg)
+.ctaButtons
+	display: flex
+	flex-direction: column
+	justify-content: center
+	margin: 3rem 0
 
-// Salespitch Animations
-
+// Animations
 .fadeAnimation
 	animation: fader $fadeSpeed 1
 
@@ -77,6 +70,7 @@ $fadeSpeed: 2.5s
 	position: relative
 	display: block
 	user-select: none
+
 	&::before
 		position: absolute
 		display: block
@@ -87,7 +81,7 @@ $fadeSpeed: 2.5s
 		left: 0
 		z-index: 0
 		content: "Suunnittelu."
-		color: #000
+		color: map-get($colors, textDark)
 
 .highlightBackground2
 	position: relative
@@ -103,7 +97,7 @@ $fadeSpeed: 2.5s
 		left: 0
 		z-index: 0
 		content: "Kehitys."
-		color: #000
+		color: map-get($colors, textDark)
 	
 .highlightBackground3
 	position: relative
@@ -119,7 +113,7 @@ $fadeSpeed: 2.5s
 		left: 0
 		z-index: 0
 		content: "Julkaisu."
-		color: #000
+		color: map-get($colors, textDark)
 
 .highlightForeground // fader
 	position: relative
@@ -151,28 +145,25 @@ $fadeSpeed: 2.5s
 // MEDIA QUERIES
 	
 @media (min-width: map-get($bp, tablet))
-	.summaryHeader
-		font-size: $h3Size
+	.ctaButtons
+		display: inline-flex
+		flex-direction: row
+		gap: 1rem
 	.content
 		max-width: $tabletWidth
 	.salesPitch
 		font-size: 4rem
-	.subheader
-		font-size: $h4Size
 
 @media (min-width: map-get($bp, laptop))
 	.section
 		padding: map-get($padding, laptop)
-		min-height: 90vh
 	.content
 		max-width: $laptopWidth
-		margin-top: 120px
 	.salesPitch
 		font-size: 6rem
 
 @media (min-width: map-get($bp, desktop))
 	.content
 		max-width: $desktopWidth
-
 	.salesPitch
 		font-size: 7rem
