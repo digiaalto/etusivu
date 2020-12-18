@@ -11,10 +11,13 @@
   transition: all 0.2s ease
   min-width: 200px
   font-size: 1.1rem
+  user-select: none
 
   &:hover
     color: map-get($colors, textDark)
     background-color: transparent
+  &:focus
+    outline: map-get($colors, secondary)
 
 .secondary
   color: map-get($colors, textDark)

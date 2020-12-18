@@ -2,7 +2,7 @@ import styles from "../styles/LP_Problem.module.sass"
 
 const LP_Problem = () => {
   return (
-    <section className={styles.section} id="ongelmia">
+    <section className={styles.section} id="verkkokehitys-ongelma">
       <div className={styles.content}>
         <div className={styles.headerWrapper}>
           <span className={styles.preheader}>Ongelma</span>
@@ -13,13 +13,13 @@ const LP_Problem = () => {
         <div className={styles.textContainer}>
           <div className={styles.textColumn}>
             <p>
-              Hyvän verkkosivun tarkoitus on toteuttaa sille asetetut
-              tavoitteet. Yrityksen näkökulmasta päätavoite voi olla esimerkiksi
-              asiakkaiden tiedottaminen palveluista ja tuoton kasvattaminen.
+              Onnistuneen verkkosivun tarkoitus on toteuttaa sille asetetut
+              tavoitteet. Yrityksen näkökulmasta se on yleensä asiakkaiden
+              tavoittaminen ja liikevaihdon kasvattaminen.
             </p>
             <p>
-              Yrityssivun tavoitteita vaikeuttaa tai helpottaa kaikki päätökset
-              teknisestä toteutuksesta sisällönsuunnitteluun.
+              Näiden tavoitteiden toteutumista vaikeuttaa tai helpottaa kaikki
+              päätökset sivun teknisestä toteutuksesta sisällönsuunnitteluun.
             </p>
           </div>
           <div className={styles.textColumn}>

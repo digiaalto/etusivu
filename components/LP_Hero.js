@@ -62,11 +62,15 @@ const Hero = () => {
         </h1>
         <div className={styles.ctaButtons}>
           <Button href="/tilaa-verkkosivu" text="Tilaa Verkkosivu" />
-          <Button href="/#ongelmia" text="Lue Lisää" secondary={true} />
+          <Button
+            href="/#verkkokehitys-ongelma"
+            text="Lue Lisää"
+            secondary={true}
+          />
         </div>
         <h1 className={styles.subheader}>
-          Digiaalto on uusi verkkosuunnittelija joka kehittää laatutestattuja
-          nettisivuja kiireisille yrittäjille.
+          Digiaalto on verkkosuunnittelija joka kehittää kilpailua paremmin
+          optimoituja ja laatutestattuja nettisivuja kiireisille yrittäjille.
         </h1>
       </div>
     </section>

@@ -11,6 +11,10 @@ $defaultFont: "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxyg
 	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
 
+::selection
+	color: #fff
+	background: map-get($colors, primary)
+
 // font styles and normalization
 html
 	scroll-behavior: smooth
@@ -20,6 +24,7 @@ body
 	font-weight: 400
 	line-height: 1.75
 	margin: 0
+
 input, textarea, button
 	font-family: $defaultFont
 	display: block

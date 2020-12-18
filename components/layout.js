@@ -1,5 +1,6 @@
 import React from "react"
 import Head from "next/head"
+// import Menu from "../components/Menu"
 import Footer from "../components/Footer"
 import Infobar from "../components/infobar"
 
@@ -31,6 +32,7 @@ const Layout = ({ title, type, description, children, infobar }) => {
         <meta name="og:image" content={SEO.image} />
       </Head>
       {infobar && <Infobar />}
+      {/* <Menu /> */}
       <main>{children}</main>
       <Footer />
     </React.Fragment>

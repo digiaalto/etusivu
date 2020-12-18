@@ -334,7 +334,11 @@ const NetlifyForm = () => {
       header="Aloitetaan yrityksesi perustiedoista."
       subheader="Alapalkista näkee kuinka pitkälle olet edistynyt haastattelussa."
     />,
-    <Question label="Mikä on yrityksesi nimi?" data={formData.yritysNimi} />,
+    <Question
+      label="Mikä on yrityksesi nimi?"
+      subLabel="Anna myös vanha nettiosoite jos sellainen on."
+      data={formData.yritysNimi}
+    />,
     <Question label="Yrityksesi toimiala?" data={formData.toimiala} />,
     <Question
       label="Kuka on yrityksesi kovin kilpailija?"
@@ -715,14 +719,13 @@ const Headers = (props) => {
 const PreviousButton = () => {
   const { changeQuestion } = useContext(FunctionsCtx)
   return (
-    <div className={styles.prevBtnContainer}>
+    <div className={styles.previousButtonWrapper}>
       <button
-        type="button"
         onClick={() => changeQuestion("prev")}
-        className={styles.prevBtnLink}
+        className={styles.previousButton}
       >
         <GrPrevious className={styles.prevBtnIcon} />{" "}
-        <span className={styles.prevBtnText}>edellinen</span>
+        <span className={styles.prevBtnText}>Edellinen</span>
       </button>
     </div>
   )

@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const LP_Solution = () => {
   return (
-    <section className={styles.section} id="huippuluokan-sivut">
+    <section className={styles.section} id="verkkokehitys-ratkaisu">
       <div className={styles.content}>
         <div className={styles.headerWrapper}>
           <span className={styles.preheader}>Ratkaisu</span>
