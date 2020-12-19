@@ -11,8 +11,9 @@ const LP_Pricing = () => {
           Valmiit kotisivut yrityksellesi tai vaikka lahjaksi 3,200€.
         </h3>
         <p className={styles.note}>
-          Digiaalto laskuttaa 30% sopimuksen kanssa. Ylläpitopalvelu hintaan
-          129,00€ / vuosi.
+          Digiaalto laskuttaa 30% etukäteen.
+          <br />
+          Ylläpito lisäpalvelu &rarr; 129,00€ / vuosi.
         </p>
       </div>
     </section>

@@ -12,7 +12,7 @@ const Hero = () => {
         animElementIndex = 0
       }
       setAnimElement(animElementIndex)
-    }, 2500)
+    }, 2100)
     return () => clearInterval(animInterval)
   })
 
@@ -63,14 +63,15 @@ const Hero = () => {
         <div className={styles.ctaButtons}>
           <Button href="/tilaa-verkkosivu" text="Tilaa Verkkosivu" />
           <Button
-            href="/#verkkokehitys-ongelma"
+            href="/#verkkopalvelu-ongelma"
             text="Lue Lisää"
             secondary={true}
           />
         </div>
         <h1 className={styles.subheader}>
-          Digiaalto on verkkosuunnittelija joka kehittää kilpailua paremmin
-          optimoituja ja laatutestattuja nettisivuja kiireisille yrittäjille.
+          Verkkosuunnittelija Digiaalto tarjoaa optimaalisia laatutestattuja
+          verkkosivuja kiireisille yrittäjille. Kaikilla haluamillasi
+          lisäpalveluilla.
         </h1>
       </div>
     </section>

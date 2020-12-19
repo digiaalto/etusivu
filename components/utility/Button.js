@@ -4,7 +4,7 @@ import Link from "next/link"
 
 /**
  *
- * @params {{href: string, text: string, icon: object, customStyle: object}}
+ * @params {{href: string, text: string, icon: object, secondary: object, customStyle: object}}
  */
 
 const Button = (props) => {
@@ -20,8 +20,8 @@ const InternalButton = (props) => {
         className={`${styles.anchor} ${secondary && styles.secondary}`}
         style={customStyle ? customStyle : null}
       >
-        {icon && icon}
         {text}
+        {icon && icon}
       </a>
     </Link>
   )
@@ -37,8 +37,8 @@ const ExternalButton = (props) => {
       className={`${styles.anchor} ${secondary && styles.secondary}`}
       style={customStyle ? customStyle : null}
     >
-      {icon && icon}
       {text}
+      {icon && icon}
     </a>
   )
 }

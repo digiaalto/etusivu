@@ -30,12 +30,8 @@ const LP_Process = () => {
         <div className={styles.column}>
           <h4 className={styles.topHeader}>Prosessi</h4>
           <h3 className={styles.middleHeader}>
-            Verkkosivun hankinta tapahtuu vaivattomasti. Voit tulla pöytään
-            ideat valmiina tai antaa Digiaallon vastata kaikesta. Aloita
-            täyttämällä
-            <Link href="/haastattelulomake">
-              <a> haastattelulomake.</a>
-            </Link>
+            Voit tulla pöytään ideat valmiina tai antaa Digiaallon hoitaa
+            kaiken.
           </h3>
           <h4 className={styles.bottomHeader}>
             Tehostetun Verkkosivun Toteutus
@@ -54,17 +50,17 @@ const LP_Process = () => {
             <TextBlock
               miniheader="Vaihe 3"
               header="Design"
-              text="Digiaalto laatii graafisen representaation verkkosivustasi josta näet valmiin ulkoasu. Ennen seuraavaa vaihetta tämä malli hyväksytetään."
+              text="Laaditaan graafinen representaatio verkkosivustasi mistä selviää ulkoasun pääpiirteet. Ennen seuraavaa vaihetta tämä malli hyväksytetään sinulla."
             />
             <TextBlock
               miniheader="Vaihe 4"
               header="Kehitys"
-              text="Kehitystyö tehdään mallin mittojen mukaisesti. Säännöllisellä laatutestauksella varmistetaan parhaat tekniset päätökset ja ylivoimainen hakukoneoptimointi."
+              text="Kehitystyö tehdään edellisen mallin mittojen mukaisesti. Säännöllisellä laatutestauksella varmistetaan parhaat tekniset päätökset ja ylivoimainen hakukoneoptimointi."
             />
             <TextBlock
               miniheader="Valmista!"
               header="Julkaisu"
-              text="Verkkosivu on valmis ja toimii itsenäisesti tästä päivästä eteenpäin. Sinulle toimitetaan ohjeet käyttöä varten sekä muihin mahdollisiin palveluihin. Edullisella lisäpalvelulla Digiaalto voi hoitaa sisällönhallinan ja muut pientyöt puolestasi."
+              text="Verkkosivu on valmis ja toimii itsenäisesti tästä päivästä eteenpäin. Sinulle toimitetaan ohjeet käyttöä varten sekä muihin mahdollisiin palveluihin."
             />
           </div>
         </div>
