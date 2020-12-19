@@ -175,6 +175,11 @@ const NetlifyForm = () => {
       value: "",
       required: true,
     },
+    digiaaltoLisapalvelu: {
+      name: "digiaaltoLisapalvelu",
+      value: "",
+      required: false,
+    },
     etunimi: {
       name: "etunimi",
       error: "Etunimi pakollinen kenttä.",
@@ -411,9 +416,15 @@ const NetlifyForm = () => {
       enableLineBreak
     />,
     <Question
-      label="Mitä lisäpalveluita tarvitset?"
-      subLabel="Aloitetaanko tyhjältä pöydältä vai oletko jo ostanut esimerkiksi domainin, palvelimen, yrityssähköpostin, tai muita palveluita?"
+      label="Mitä kolmannen osapuolen palveluita sinulla on?"
+      subLabel="Omistatko esimerkiksi domainin, palvelimen, yrityssähköpostin, tai muita palveluita?"
       data={formData.verkkosivuPalvelut}
+      enableLineBreak
+    />,
+    <Question
+      label="Oletko kiinnostunut Digiaallon ylläpitöpalvelusta?"
+      subLabel="Palveluun kuuluu satunnaiset sisällönmuutokset, mahdolliset ylläpitö askareet ja päivitykset."
+      data={formData.digiaaltoLisapalvelu}
       enableLineBreak
     />,
     <Intermission
@@ -585,6 +596,7 @@ const Question = (props) => {
         icon={<GrFormCheckmark />}
         disabled={buttonDisabled}
         enableLineBreak={enableLineBreak}
+        enableEnterGuide={!enableLineBreak}
       />
     </Element>
   )
@@ -655,7 +667,14 @@ const Buttons = (props) => {
   const { changeQuestion, editorEnabled } = useContext(FunctionsCtx)
   if (editorEnabled) return null
 
-  const { text, icon, enableLineBreak, center, disabled } = props
+  const {
+    text,
+    icon,
+    enableLineBreak,
+    enableEnterGuide,
+    center,
+    disabled,
+  } = props
 
   return (
     <div className={styles.buttons}>
@@ -678,6 +697,11 @@ const Buttons = (props) => {
           disabled={disabled}
           icon={icon}
         />
+        {enableEnterGuide && !disabled && (
+          <span className={`${styles.enterGuide} ${styles.animatedEnterGuide}`}>
+            Enter <AiOutlineEnter />
+          </span>
+        )}
       </div>
     </div>
   )

@@ -110,8 +110,16 @@ $color: map-get($colors, textDark)
   font-size: 13px
   font-weight: 800
 
-.enterGuideDisabled
-  color: map-get($colors, textGray)
+.animatedEnterGuide
+  margin-left: 8px
+  animation: fadeIn 1s 1
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+    
 
 .guideText
   font-weight: 400

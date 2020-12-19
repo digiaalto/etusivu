@@ -4,7 +4,9 @@ import Head from "next/head"
 import Footer from "../components/Footer"
 import Infobar from "../components/infobar"
 
-const Layout = ({ title, type, description, children, infobar }) => {
+const Layout = (props) => {
+  const { title, type, description, infobar, children } = props
+
   const SEO = {
     title: title
       ? `${title} | Digiaalto.fi`
