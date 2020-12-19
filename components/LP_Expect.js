@@ -9,9 +9,9 @@ const LP_Expect = () => {
           <List
             items={[
               "Loputtomasti revisioita",
-              "Ulkoistettua työtä",
-              "Hutilointia",
-              "Hidasta toimitusta",
+              "Ulkoistettua koodia",
+              "Hämmentävää ulkoasua",
+              "Turhaa viivyttelyä",
             ]}
           />
         </div>
@@ -21,10 +21,10 @@ const LP_Expect = () => {
           </h3>
           <List
             items={[
-              "A-luokan optimointia",
+              "Huippuluokan optimointia",
+              "Parhaita palvelusuosituksia",
               "Sisällönhallintapalvelua",
-              "Ankaraa laatutestausta",
-              "Asiakkaasi priorisointia",
+              "Kovaa laatutestausta",
             ]}
           />
         </div>
