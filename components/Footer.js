@@ -65,7 +65,7 @@ const Trademark = () => {
   return (
     <div className={styles.footerItem}>
       <Link href="/">
-        <a>
+        <a className={styles.logoAnchor}>
           <img src="brand/logo.png" className={styles.logo} />
         </a>
       </Link>
