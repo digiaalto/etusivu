@@ -35,9 +35,13 @@
   display: flex
   flex-direction: column
   text-align: center
+  gap: 1.2em
 
 .linkAnchor
-  color: #fff !important
+  color: #fff
   font-weight: 200
   font-size: 3.1rem
-  line-height: 1.5em
+  line-height: 1
+
+  &:hover
+    color: map-get($colors, primary)
