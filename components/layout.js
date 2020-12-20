@@ -18,6 +18,8 @@ const Layout = (props) => {
     setOverlayVisible(!overlayVisible)
   }
 
+  // Test 2
+
   const SEO = {
     title: title
       ? `${title} | Digiaalto.fi`
