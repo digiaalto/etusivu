@@ -4,6 +4,8 @@ const Overlay = (props) => {
   const { visible, toggle, children, zIndex = 99990 } = props
   if (!visible) return null
 
+  // Updated name...
+
   return (
     <Fragment>
       <div className="overlay">{children}</div>
