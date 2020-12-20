@@ -1,4 +1,4 @@
-import styles from "../styles/kiitos.module.sass"
+import styles from "../styles/pages/kiitos.module.sass"
 import Layout from "../components/layout"
 import { FiThumbsUp } from "react-icons/fi"
 

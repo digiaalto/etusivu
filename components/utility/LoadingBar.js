@@ -1,4 +1,4 @@
-import styles from "../../styles/LoadingBar.module.sass"
+import styles from "./LoadingBar.module.sass"
 
 const LoadingBar = ({ percent }) => {
   return (
