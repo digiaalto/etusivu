@@ -1,6 +1,7 @@
-import styles from "../styles/menu.module.sass"
+import styles from "../styles/Menu.module.sass"
 import { FiMenu } from "react-icons/fi"
 import { AiOutlineClose } from "react-icons/ai"
+import { useRouter } from "next/router"
 import Overlay from "./utility/Overlay"
 
 /**
@@ -10,6 +11,29 @@ import Overlay from "./utility/Overlay"
  * Overlay closes once user clicks a link or the overlay itself.
  * Overlay also contains a close button for UX.
  */
+
+const links = [
+  {
+    text: "Etusivu",
+    href: "/#",
+  },
+  {
+    text: "Digiaalto",
+    href: "/#verkkopalvelu-ratkaisu",
+  },
+  {
+    text: "Laatutesti",
+    href: "/#laatutesti-google-lighthouse",
+  },
+  {
+    text: "Kehitys",
+    href: "/#kehitys",
+  },
+  {
+    text: "Hinnat",
+    href: "/#hinnat",
+  },
+]
 
 const Menu = (props) => {
   const { menuOpen, toggleOverlay } = props
@@ -21,13 +45,34 @@ const Menu = (props) => {
           Menu
         </button>
       </div>
-      <Overlay toggle={toggleOverlay} visible={menuOpen} />
+      <Overlay
+        visible={menuOpen}
+        children={<LinkList links={links} toggleOverlay={toggleOverlay} />}
+      />
     </>
   )
 }
 
 export default Menu
 
-const LinkList = () => {
-  return null
+const LinkList = (props) => {
+  const { links, toggleOverlay } = props
+  const router = useRouter()
+
+  return (
+    <ul className={styles.linkList}>
+      {links.map((link, index) => (
+        <a
+          className={styles.linkAnchor}
+          key={`nav-link-${index}`}
+          onClick={(e) => {
+            toggleOverlay()
+            router.push(link.href)
+          }}
+        >
+          {link.text}
+        </a>
+      ))}
+    </ul>
+  )
 }

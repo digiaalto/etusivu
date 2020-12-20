@@ -6,21 +6,21 @@ const Overlay = (props) => {
 
   return (
     <Fragment>
-      <div className="overlay" onClick={toggle}>
-        {children}
-      </div>
+      <div className="overlay">{children}</div>
       <style jsx>
         {`
           .overlay {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             position: fixed;
             left: 0;
             top: 0;
-            height: 100vh;
-            width: 100vw;
             background-color: #323232;
             z-index: ${zIndex};
             animation: overlayAnimation 0.33s 1;
-            cursor: pointer;
           }
 
           @keyframes overlayAnimation {
