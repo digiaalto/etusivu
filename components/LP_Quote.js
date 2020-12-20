@@ -18,7 +18,7 @@ const LP_Quote = () => {
         rel="noreferrer noopener"
         className={styles.source}
       >
-        —Google I/O 2019
+        —Google I/O (youtube)
       </a>
     </div>
   )

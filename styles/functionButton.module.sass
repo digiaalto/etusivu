@@ -1,25 +1,38 @@
 @import "partials"
 
 .functionButton
+  min-width: 50px
+  margin: 0.66rem 0
+  padding: 0.75rem
   display: inline-flex
   align-items: center
   justify-content: center
-  min-width: 200px
-  margin: 0.66rem 0
-  padding: 0.75rem
-  font-size: 1.1rem
+  font-size: 1.5rem
   font-weight: 600
-  border-radius: 4px
   transition: all 0.1s ease
   border-radius: 4px
-  color: map-get($colors, textLight) !important
-  background-color: map-get($colors, textDark)
   border: 1px solid map-get($colors, textDark)
+  color: map-get($colors, textLight)
+  background-color: map-get($colors, textDark)
   transition: all 0.2s ease
-  border: none
   pointer-events: auto
   cursor: pointer
   user-select: none
+
+  &:disabled
+    background-color: #ccc !important
+    border-color: transparent !important
+    &:hover
+      svg
+        polyline
+          stroke: #fff !important
+
+  &:hover
+    background-color: transparent
+    color: map-get($colors, textDark)
+    svg
+      polyline
+        stroke: map-get($colors, textDark)
 
   &:focus
     outline-color: map-get($colors, secondary)
@@ -28,9 +41,6 @@
     margin-left: 4px
     polyline  
       stroke: map-get($colors, textLight)
-
-.disabled
-  background-color: map-get($colors, textGray) !important
 
 .noText
   svg

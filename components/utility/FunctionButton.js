@@ -7,7 +7,6 @@ const FunctionButton = (props) => {
     <button
       type={type}
       className={`${styles.functionButton} ${!text && styles.noText}`}
-      style={disabled ? { backgroundColor: "#ccc" } : null}
       onClick={onClick ? onClick : null}
       name={name}
       disabled={disabled}
