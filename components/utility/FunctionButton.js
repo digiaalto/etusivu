@@ -1,4 +1,4 @@
-import styles from "../../styles/functionButton.module.sass"
+import styles from "./FunctionButton.module.sass"
 
 const FunctionButton = (props) => {
   const { text, type = "button", name, onClick, icon, disabled } = props
