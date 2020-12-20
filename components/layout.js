@@ -1,11 +1,20 @@
-import React from "react"
+import React, { useState } from "react"
 import Head from "next/head"
-// import Menu from "../components/Menu"
-import Footer from "../components/Footer"
-import Infobar from "../components/infobar"
+import Footer from "./Footer"
+import Infobar from "./infobar"
+import Menu from "./Menu"
+import disableScroll from "disable-scroll"
 
 const Layout = (props) => {
   const { title, type, description, infobar, children } = props
+  const [overlayVisible, setOverlayVisible] = useState(false)
+
+  const toggleOverlay = () => {
+    const newOverlayVisible = !overlayVisible
+    if (newOverlayVisible) disableScroll.on()
+    else disableScroll.off()
+    setOverlayVisible(!overlayVisible)
+  }
 
   const SEO = {
     title: title
@@ -17,6 +26,7 @@ const Layout = (props) => {
       : `Digiaalto rakentaa laatutestattuja verkkosivuja kiireiselle yrittäjälle uudella tekniikalla. Osta tehokkaat ja optimoidut verkkosivut, saat avaimet käteen.`,
     image: "https://www.digiaalto.fi/brand/some-image.png",
   }
+
   return (
     <React.Fragment>
       <Head>
@@ -34,7 +44,7 @@ const Layout = (props) => {
         <meta name="og:image" content={SEO.image} />
       </Head>
       {infobar && <Infobar />}
-      {/* <Menu /> */}
+      <Menu menuOpen={overlayVisible} toggleOverlay={toggleOverlay} />
       <main>{children}</main>
       <Footer />
     </React.Fragment>

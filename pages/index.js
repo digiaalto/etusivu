@@ -1,4 +1,4 @@
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import LP_Hero from "../components/LP_Hero"
 import LP_Problem from "../components/LP_Problem"
 import LP_Solution from "../components/LP_Solution"

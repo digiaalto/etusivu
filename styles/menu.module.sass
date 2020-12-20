@@ -3,28 +3,29 @@
 .menu
   z-index: 99999
   position: fixed
-  top: 20px
+  bottom: 20px
   right: 20px
 
 .menuButton
+  padding: 0.5rem 1.5rem
   display: inline-flex
   align-items: center
-  border: 1px solid transparent
-  padding: 0.5rem 1.5rem
+  font-size: 1.1rem
+  border: 2px solid transparent
+  border-radius: 4px
   color: #fff
   background-color: map-get($colors, textDark)
   cursor: pointer
   transition: all 0.2s ease
-  font-size: 1.1rem
   user-select: none
 
   &:hover
-    border: 1px solid map-get($colors, textDark)
     background-color: #fff
     color: map-get($colors, textDark)
-
+    border: 2px solid map-get($colors, textDark)
+  
   &:focus
-    outline-color: map-get($colors, secondary)
+    outline: none
 
   svg
     margin-right: 8px

@@ -1,5 +1,7 @@
 import styles from "../styles/menu.module.sass"
 import { FiMenu } from "react-icons/fi"
+import { AiOutlineClose } from "react-icons/ai"
+import Overlay from "./utility/Overlay"
 
 /**
  * Navigation Menu for both desktop and mobile.
@@ -9,15 +11,23 @@ import { FiMenu } from "react-icons/fi"
  * Overlay also contains a close button for UX.
  */
 
-const Menu = () => {
+const Menu = (props) => {
+  const { menuOpen, toggleOverlay } = props
   return (
-    <div className={styles.menu}>
-      <button className={styles.menuButton}>
-        <FiMenu />
-        Menu
-      </button>
-    </div>
+    <>
+      <div className={styles.menu}>
+        <button className={styles.menuButton} onClick={toggleOverlay}>
+          {menuOpen ? <AiOutlineClose /> : <FiMenu />}
+          Menu
+        </button>
+      </div>
+      <Overlay toggle={toggleOverlay} visible={menuOpen} />
+    </>
   )
 }
 
 export default Menu
+
+const LinkList = () => {
+  return null
+}

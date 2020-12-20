@@ -1,10 +1,9 @@
 import styles from "../styles/LP_Pricing.module.sass"
 import { FaGift } from "react-icons/fa"
-import { Link } from "next/link"
 
 const LP_Pricing = () => {
   return (
-    <section id="hinnoittelu" className={styles.section}>
+    <section className={styles.section} id="hinnasto">
       <div className={styles.content}>
         <FaGift className={styles.giftIcon} />
         <h3 className={styles.header}>

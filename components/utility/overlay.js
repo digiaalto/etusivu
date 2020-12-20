@@ -1,11 +1,14 @@
 import { Fragment } from "react"
 
-const Overlay = ({ toggleSidebar, visible, zIndex = 1000 }) => {
+const Overlay = (props) => {
+  const { visible, toggle, children, zIndex = 99990 } = props
   if (!visible) return null
 
   return (
     <Fragment>
-      <div className="overlay" onClick={toggleSidebar}></div>
+      <div className="overlay" onClick={toggle}>
+        {children}
+      </div>
       <style jsx>
         {`
           .overlay {
@@ -14,17 +17,20 @@ const Overlay = ({ toggleSidebar, visible, zIndex = 1000 }) => {
             top: 0;
             height: 100vh;
             width: 100vw;
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: #323232;
             z-index: ${zIndex};
-            animation: fadeIn 0.33s;
+            animation: overlayAnimation 0.33s 1;
+            cursor: pointer;
           }
 
-          @keyframes fadeIn {
+          @keyframes overlayAnimation {
             from {
-              opacity: 0;
+              opacity: 0
+              transform: translateY(-100vh);
             }
             to {
-              opacity: 1;
+              opacity: 1
+              transform: translateY(0);
             }
           }
         `}

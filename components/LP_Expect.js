@@ -5,7 +5,7 @@ const LP_Expect = () => {
     <section className={styles.section}>
       <div className={styles.content}>
         <div className={styles.column}>
-          <h3 className={styles.header}>Älä odota</h3>
+          <h3 className={styles.header}>Mitä et saa</h3>
           <List
             items={[
               "Loputtomasti revisioita",
@@ -16,15 +16,13 @@ const LP_Expect = () => {
           />
         </div>
         <div className={styles.column}>
-          <h3 className={`${styles.header} ${styles.highlight}`}>
-            Voi odottaa
-          </h3>
+          <h3 className={`${styles.header} ${styles.highlight}`}>Mitä saat</h3>
           <List
             items={[
-              "Huippuluokan optimointia",
-              "Parhaita palvelusuosituksia",
-              "Sisällönhallintapalvelua",
-              "Kovaa laatutestausta",
+              "Huippuluokan optimoinnin",
+              "Laatutestin raportin",
+              "Parhaat palvelusuositukset",
+              "Halumasi sisällönhallintapalvelun",
             ]}
           />
         </div>
