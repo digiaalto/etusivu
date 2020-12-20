@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import Head from "next/head"
 import Footer from "./Footer"
-import Infobar from "./infobar"
+import Infobar from "./Infobar"
 import Menu from "./Menu"
 import disableScroll from "disable-scroll"
 
