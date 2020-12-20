@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import Head from "next/head"
 import Topbar from "./Topbar"
+import NavMenu from "./NavMenu"
 import Footer from "./Footer"
-import Menu from "./Menu"
 import disableScroll from "disable-scroll"
 
 const Layout = (props) => {
@@ -44,7 +44,7 @@ const Layout = (props) => {
         <meta name="og:image" content={SEO.image} />
       </Head>
       {topbar && <Topbar />}
-      <Menu menuOpen={overlayVisible} toggleOverlay={toggleOverlay} />
+      <NavMenu menuOpen={overlayVisible} toggleOverlay={toggleOverlay} />
       <main>{children}</main>
       <Footer />
     </React.Fragment>

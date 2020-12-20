@@ -1,4 +1,4 @@
-import styles from "../styles/Menu.module.sass"
+import styles from "../styles/NavMenu.module.sass"
 import { FiMenu } from "react-icons/fi"
 import { AiOutlineClose } from "react-icons/ai"
 import { useRouter } from "next/router"
@@ -35,7 +35,7 @@ const links = [
   },
 ]
 
-const Menu = (props) => {
+const NavMenu = (props) => {
   const { menuOpen, toggleOverlay } = props
   return (
     <>
@@ -53,7 +53,7 @@ const Menu = (props) => {
   )
 }
 
-export default Menu
+export default NavMenu
 
 const LinkList = (props) => {
   const { links, toggleOverlay } = props
