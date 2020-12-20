@@ -1,15 +1,16 @@
 import styles from "../styles/FormApp.module.sass"
 import React, { useState, useContext, createContext } from "react"
-import Fader from "./utility/Fader"
-import FunctionButton from "../components/utility/FunctionButton"
+import TextareaAutosize from "react-textarea-autosize"
+import Select from "react-select"
 import { AiOutlineEnter } from "react-icons/ai"
 import { GiMale, GiFemale } from "react-icons/gi"
 import { GrPrevious, GrFormCheckmark } from "react-icons/gr"
-import LoadingBar from "../components/utility/LoadingBar"
-import TextareaAutosize from "react-textarea-autosize"
-import Select from "react-select"
-import Slider from "./utility/Slider"
 import { useRouter } from "next/router"
+
+import FunctionButton from "../components/utility/FunctionButton"
+import LoadingBar from "../components/utility/LoadingBar"
+import Fader from "./utility/Fader"
+import Slider from "./utility/Slider"
 
 const FunctionsCtx = createContext(null)
 

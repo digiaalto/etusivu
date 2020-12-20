@@ -10,7 +10,7 @@ import Layout from "../components/Layout"
 
 const Tilaus = () => {
   return (
-    <Layout desktopNav={false}>
+    <Layout>
       <section className={styles.section}>
         <FormApp />
       </section>

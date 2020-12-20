@@ -1,11 +1,11 @@
+import styles from "../styles/Topbar.module.sass"
 import React from "react"
-import styles from "../styles/Infobar.module.sass"
 import PropTypes from "prop-types"
 import { MdEmail, MdLocalPhone } from "react-icons/md"
 
-const Infobar = () => {
+const Topbar = () => {
   return (
-    <div className={styles.infobar}>
+    <div className={styles.topbar}>
       <a href="mailto:hei@digiaalto.fi" className={styles.contactLink}>
         <MdEmail />
         <span className={styles.contactText}>hei@digiaalto.fi</span>
@@ -19,14 +19,14 @@ const Infobar = () => {
   )
 }
 
-export default Infobar
+export default Topbar
 
-Infobar.defaultProps = {
+Topbar.defaultProps = {
   text: "yhteydenottolomake",
   ctaHref: "/#yhteydenottolomake",
 }
 
-Infobar.propTypes = {
+Topbar.propTypes = {
   text: PropTypes.string.isRequired,
   ctaHref: PropTypes.string.isRequired,
 }

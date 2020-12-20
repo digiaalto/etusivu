@@ -11,17 +11,15 @@ import LP_Expect from "../components/LP_Expect"
 const IndexPage = () => {
   return (
     <div>
-      <Layout infobar>
+      <Layout topbar>
         <LP_Hero />
         <LP_Problem />
         <LP_Solution />
         <LP_TrackInfographic />
         <LP_Audit />
-        {/* <LP_Quote /> */}
         <LP_Process />
         <LP_Pricing />
         <LP_Expect />
-        {/* <ContactForm /> */}
       </Layout>
     </div>
   )

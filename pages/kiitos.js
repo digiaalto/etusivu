@@ -1,5 +1,5 @@
 import styles from "../styles/pages/kiitos.module.sass"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import { FiThumbsUp } from "react-icons/fi"
 
 const Kiitos = () => {

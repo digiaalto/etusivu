@@ -1,7 +1,6 @@
 import styles from "../styles/LP_Process.module.sass"
 import { useEffect, useState } from "react"
 import { useInView } from "react-intersection-observer"
-import Link from "next/link"
 
 const LP_Process = () => {
   const { ref, inView, entry } = useInView()

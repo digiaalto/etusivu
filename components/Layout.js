@@ -1,26 +1,20 @@
 import React, { useState } from "react"
 import Head from "next/head"
+import Topbar from "./Topbar"
 import Footer from "./Footer"
-import Infobar from "./Infobar"
 import Menu from "./Menu"
 import disableScroll from "disable-scroll"
 
 const Layout = (props) => {
-  const { title, type, description, infobar, children } = props
+  const { title, type, description, topbar, children } = props
   const [overlayVisible, setOverlayVisible] = useState(false)
-
-  // Test
 
   const toggleOverlay = () => {
     const newOverlayVisible = !overlayVisible
     if (newOverlayVisible) disableScroll.on()
     else disableScroll.off()
     setOverlayVisible(!overlayVisible)
-
-    // name chn
   }
-
-  // Test 2
 
   const SEO = {
     title: title
@@ -49,7 +43,7 @@ const Layout = (props) => {
         <meta name="og:title" content={SEO.title} />
         <meta name="og:image" content={SEO.image} />
       </Head>
-      {infobar && <Infobar />}
+      {topbar && <Topbar />}
       <Menu menuOpen={overlayVisible} toggleOverlay={toggleOverlay} />
       <main>{children}</main>
       <Footer />
