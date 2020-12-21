@@ -33,6 +33,10 @@ const links = [
     text: "Hinnat",
     href: "/#hinnat",
   },
+  {
+    text: "Yhteydenotto",
+    href: "/yhteydenotto",
+  },
 ]
 
 const NavMenu = (props) => {

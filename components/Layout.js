@@ -45,7 +45,7 @@ const Layout = (props) => {
       </Head>
       {topbar && <Topbar />}
       <NavMenu menuOpen={overlayVisible} toggleOverlay={toggleOverlay} />
-      <main>{children}</main>
+      <main style={{ marginTop: "3rem" }}>{children}</main>
       <Footer />
     </React.Fragment>
   )

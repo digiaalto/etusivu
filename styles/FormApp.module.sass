@@ -1,7 +1,7 @@
 @import "partials"
 
 $color: map-get($colors, textDark)
-
+    
 .netlifyForm
   width: 100%
   padding: 1rem
@@ -64,7 +64,7 @@ $color: map-get($colors, textDark)
 .previousButtonWrapper
   position: absolute
   left: 20px
-  top: 20px
+  top: 65px
 
 .previousButton
   padding: 0.5rem 1.5rem
@@ -115,7 +115,6 @@ $color: map-get($colors, textDark)
     opacity: 0
   100%
     opacity: 1
-    
 
 .guideText
   font-weight: 400
@@ -158,6 +157,19 @@ $color: map-get($colors, textDark)
   p
     margin: 0
     color: map-get($colors, error)
+
+// Start screen Help
+.helpContainer
+  display: inline-flex
+  align-content: center
+  color: map-get($colors, textDark)
+.help
+  font-size: 1rem
+  margin-top: 0
+.helpIcon
+  font-size: 1.5rem
+  margin-right: 0.5rem
+  vertical-align: middle
 
 @media (min-width: map-get($bp, laptop))
   .netlifyForm

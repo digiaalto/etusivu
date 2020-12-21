@@ -3,6 +3,7 @@ import React, { useState, useContext, createContext } from "react"
 import TextareaAutosize from "react-textarea-autosize"
 import Select from "react-select"
 import { AiOutlineEnter } from "react-icons/ai"
+import { MdTimer } from "react-icons/md"
 import { GiMale, GiFemale } from "react-icons/gi"
 import { GrPrevious, GrFormCheckmark } from "react-icons/gr"
 import { useRouter } from "next/router"
@@ -332,9 +333,10 @@ const NetlifyForm = () => {
    * Question elements which appear in the form.
    */
   const elements = [
+    <StartScreen />,
     <Intermission
       header="Kiitos että olet kiinnostunut käyttäjäystävällisistä verkkosivuista!"
-      subheader="Ota yhteyttä samalla kun vastaat muutamaan kysymykseen yrityksestäsi, brändistäsi, kohdemarkkinoistasi ja tästä projektista. Lopussa näet vastauksesi ja voit tehdä viimeiset muutokset ennen tietojen lähetystä. Kesto noin 15 minuuttia."
+      subheader="Valmistaudu vastamaan muutamaan tastakysymykseen yrityksestäsi, brändistäsi, kohdemarkkinoistasi ja tästä projektista. Voit muttaa vastauksia viimeisellä sivulla. Kesto noin 15 minuuttia."
     />,
     <Intermission
       header="Aloitetaan yrityksesi perustiedoista."
@@ -491,6 +493,27 @@ const NetlifyForm = () => {
         )}
       </FunctionsCtx.Provider>
     </form>
+  )
+}
+
+const StartScreen = (props) => {
+  const { editorEnabled } = useContext(FunctionsCtx)
+  if (editorEnabled) return null
+
+  return (
+    <Element className={styles.finalEditor}>
+      <Headers
+        header={"Lähetä sähköpostia, soita tai täytä haastattelulomake"}
+        subheader={
+          "Jos sinulla on kysyttävää Digiaallon palveluista ole hyvä ja lähetä sähköpostia, soita tai aloita tilausprosessi suoraan täyttämällä haastattelulomake."
+        }
+      />
+      <Buttons text="Haastattelu →" />
+      <div className={styles.helpContainer}>
+        <MdTimer className={styles.helpIcon} />
+        <p className={styles.help}>Kesto 15+ minuuttia.</p>
+      </div>
+    </Element>
   )
 }
 
@@ -726,7 +749,7 @@ const QuestionLabel = (props) => {
 }
 
 const Headers = (props) => {
-  const { header, subheader } = props
+  const { header, subheader, subheader2 } = props
 
   return (
     <div>
@@ -736,7 +759,7 @@ const Headers = (props) => {
       >
         {header}
       </span>
-      {subheader && <span className={styles.subheader}>{subheader}</span>}
+      {subheader && <p className={styles.subheader}>{subheader}</p>}
     </div>
   )
 }
@@ -750,7 +773,7 @@ const PreviousButton = () => {
         className={styles.previousButton}
       >
         <GrPrevious className={styles.prevBtnIcon} />{" "}
-        <span className={styles.prevBtnText}>Edellinen</span>
+        <span className={styles.prevBtnText}>Takaisin</span>
       </button>
     </div>
   )
