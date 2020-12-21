@@ -34,9 +34,9 @@ const LP_Solution = () => {
                 menestymisen verkkokisassa.
               </p>
               <p>
-                Pienemmät kehitysratkaisut perustuvat sinun projektisti
-                omakohtaisiin vaatimuksiin sekä hakukoneiden ja käyttäjien
-                arvostamiin standardeihin.
+                Kehitysratkaisut perustuvat sinun projektisti omakohtaisiin
+                vaatimuksiin sekä hakukoneiden ja käyttäjien arvostamiin
+                standardeihin.
               </p>
             </div>
           </div>

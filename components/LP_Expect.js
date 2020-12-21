@@ -10,7 +10,7 @@ const LP_Expect = () => {
             items={[
               "Loputtomasti revisioita",
               "Ulkoistettua koodia",
-              "Hämmentävää ulkoasua",
+              "Ylisuunniteltua ulkoasua",
               "Turhaa viivyttelyä",
             ]}
           />
