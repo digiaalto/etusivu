@@ -18,8 +18,8 @@ const links = [
     href: "/#",
   },
   {
-    text: "Digiaalto",
-    href: "/#verkkopalvelu-ratkaisu",
+    text: "Verkkopalvelu",
+    href: "/#verkkopalvelu",
   },
   {
     text: "Laatutesti",

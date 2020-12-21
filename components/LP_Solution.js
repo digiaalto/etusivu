@@ -4,56 +4,39 @@ import { Fade } from "react-awesome-reveal"
 
 const LP_Solution = () => {
   return (
-    <section className={styles.section} id="verkkopalvelu-ratkaisu">
+    <section className={styles.section} id="verkkopalvelu">
       <Fade delay={300} triggerOnce>
         <div className={styles.content}>
           <div className={styles.headerWrapper}>
             <span className={styles.preheader}>Ratkaisu</span>
             <h1 className={styles.header}>
-              Vaivaton laatutestattu kehityspalvelu joka suunnittelee ja
-              palvelee.
+              Itsenäinen täyden palvelun suunnittelija ja verkkokehittäjä.
             </h1>
           </div>
           <div className={styles.textContainer}>
             <div className={styles.textColumn}>
               <p>
-                Digiaalto on parempaan erikoistunut uusi verkkokehittäjä joka
-                tähtää tekniseen täydellisyyteen hartaasti seuraamalla
-                <Link href="/#laatutesti-google-lighthouse">
-                  <a> Google Lighthouse </a>
-                </Link>
-                laatutestin analyysiä ja sen tarjoamaa ohjenuoraa.
+                Digiaalto on erikoistunut omatoimiseen verkkosuunnitteluun ja
+                verkkokehitykseen, joka tarkoittaa ettei sinulta vaadita
+                haluamaasi suurempaa roolia sisällöntuotossa tai ulkoasun
+                kehityksessä.
               </p>
               <p>
-                Verkkosivujen silmämääräisellä tutkiskelulla saattaa paljastua
-                pintapuolen subjektiiviset hyvät ja huonot puolet, mutta
-                hakukoneiden algoritmit ja robotit eivät niistä pahemmin
-                piittaa.
-              </p>
-              <p>
-                Tarvitaan analyytikkaa ja nykyaikaisten web-standardien ja
-                parhaiden käytäntöjen tietämystä jos halutaan menestyä verkossa
-                näin korona-aikana, kilpailun kasvaessa.
+                Valinnaisen ylläpitopalvelun kautta hoituu myös muut valmiin
+                verkkosivun sisällönmuutokset, sekä päivitykset ja mahdolliset
+                pienehköt lisätyöt.
               </p>
             </div>
             <div className={styles.textColumn}>
               <p>
-                Koska Suomen pienyrittäjien sivut on rakennettu lähes
-                poikkeuksetta Wordpressin kaltaiselle PHP-sontakasalle, on
-                Digiaallon{" "}
-                <a
-                  href="https://jamstack.org/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Jamstack-verkkosivuissa
-                </a>{" "}
-                kilpailuetu taattu jo lähtöruudussa.
+                Yrityssivusi kehitetöön modernilla teknologialla joka takaa
+                rakenteellisen kilpailuedun ja parhaan potentiaalisen
+                menestymisen verkkokisassa.
               </p>
               <p>
-                Pienellä vuosittaisella lisämaksulla Digiaalto hoitaa
-                satunnaiset sisällönmuutokset, mahdolliset ylläpitö askareet ja
-                päivitykset puolestasi ilman häiriöitä.
+                Pienemmät kehitysratkaisut perustuvat sinun projektisti
+                omakohtaisiin vaatimuksiin sekä hakukoneiden ja käyttäjien
+                arvostamiin standardeihin.
               </p>
             </div>
           </div>
