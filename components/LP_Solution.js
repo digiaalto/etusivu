@@ -15,11 +15,7 @@ const LP_Solution = () => {
                 {" "}
                 suunnittelija{" "}
               </span>
-              ja
-              <span className={styles.kehittajaHighlight}>
-                {" "}
-                verkkokehittäjä.{" "}
-              </span>
+              ja verkkokehittäjä.
             </h1>
           </div>
           <div className={styles.textContainer}>
