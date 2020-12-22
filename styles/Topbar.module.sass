@@ -12,7 +12,7 @@ $textColor: map-get($colors, textLight)
 	justify-content: space-around
 	height: $infobarHeight
 	padding: 0 1rem
-	background-color: map-get($colors, textDark)
+	background-color: map-get($colors, primary)
 	font-size: 1rem
 
 .contactLink
@@ -24,6 +24,7 @@ $textColor: map-get($colors, textLight)
 
 .contactText
 	margin-left: 8px
+	display: none
 
 .divider
 	display: block
@@ -41,5 +42,12 @@ $textColor: map-get($colors, textLight)
 		margin: 0 2rem
 	.contactText
 		display: inline-block
+	.contactLink
+		font-weight: 400
+		&:last-of-type
+			font-weight: 800
+		&:hover
+			color: map-get($colors, secondary) !important
+
 
 @media (min-width: map-get($bp, laptop))

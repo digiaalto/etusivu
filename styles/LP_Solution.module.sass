@@ -12,7 +12,7 @@
 
 .preheader
 	@include preheader
-	color: map-get($colors, primary)
+	color: map-get($colors, trinary)
 
 .header
 	font-size: 1.75rem
@@ -21,6 +21,17 @@
 
 .emailLink
 	letter-spacing: 0.1rem
+
+.suunnitteluHighlight
+	@supports (background-clip: text) and (-webkit-text-fill-color: transparent)
+		background-image: linear-gradient(to right, #007CF0, #00DFD8)
+		background-clip: text
+		-webkit-text-fill-color: transparent
+.kehittajaHighlight
+	@supports (background-clip: text) and (-webkit-text-fill-color: transparent) 
+		background-image: linear-gradient(to right, #7928CA, #FF0080)
+		background-clip: text
+		-webkit-text-fill-color: transparent
 	
 @media (min-width: map-get($bp, laptop))
 	.section

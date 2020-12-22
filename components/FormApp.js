@@ -335,7 +335,7 @@ const NetlifyForm = () => {
   const elements = [
     <StartScreen />,
     <Intermission
-      header="Kiitos että olet kiinnostunut käyttäjäystävällisistä verkkosivuista!"
+      header="Haastattelulomake."
       subheader="Valmistaudu vastamaan muutamaan tastakysymykseen yrityksestäsi, brändistäsi, kohdemarkkinoistasi ja tästä projektista. Voit muttaa vastauksia viimeisellä sivulla. Kesto noin 15 minuuttia."
     />,
     <Intermission
@@ -502,12 +502,21 @@ const StartScreen = (props) => {
 
   return (
     <Element className={styles.finalEditor}>
-      <Headers
-        header={"Lähetä sähköpostia, soita tai täytä haastattelulomake"}
-        subheader={
-          "Jos sinulla on kysyttävää Digiaallon palveluista ole hyvä ja lähetä sähköpostia, soita tai aloita tilausprosessi suoraan täyttämällä haastattelulomake."
-        }
-      />
+      <span className={styles.header}>
+        Kiitos, että olet kiinnostunut käyttäjäystävällisistä verkkosivuista.
+      </span>
+      <p className={styles.subheader}>
+        Lähetä tiedustelut sähköpostiin{" "}
+        <a href="mailto:hei@digiaalto.fi" className={styles.s}>
+          hei@digiaalto.fi
+        </a>{" "}
+        tai soita numeroon{" "}
+        <a href="tel:+358505543395" className={styles.contactLink}>
+          +358505543395.
+        </a>{" "}
+        Voit myös aloittaa tilausprosessin täyttämällä alustavan
+        haastattelulomakeen.
+      </p>
       <Buttons text="Haastattelu →" />
       <div className={styles.helpContainer}>
         <MdTimer className={styles.helpIcon} />
@@ -749,7 +758,7 @@ const QuestionLabel = (props) => {
 }
 
 const Headers = (props) => {
-  const { header, subheader, subheader2 } = props
+  const { header, subheader } = props
 
   return (
     <div>

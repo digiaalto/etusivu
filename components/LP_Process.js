@@ -91,7 +91,7 @@ const Images = ({ inView, dist }) => {
   }
   return [...Array(5)].map((value, index) => (
     <img
-      src={`process/${index + 1}.svg`}
+      src={`/process/${index + 1}.svg`}
       alt={`Kehitysprosessi pallo ${index + 1}`}
       key={index}
       style={{

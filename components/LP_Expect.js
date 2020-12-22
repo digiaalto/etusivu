@@ -11,7 +11,7 @@ const LP_Expect = () => {
               "Loputtomasti revisioita",
               "Ulkoistettua koodia",
               "Ylisuunniteltua ulkoasua",
-              "Turhaa viivyttelyä",
+              "Viivyttelyä",
             ]}
           />
         </div>

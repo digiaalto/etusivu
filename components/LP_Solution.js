@@ -10,7 +10,16 @@ const LP_Solution = () => {
           <div className={styles.headerWrapper}>
             <span className={styles.preheader}>Ratkaisu</span>
             <h1 className={styles.header}>
-              Itsenäinen täyden palvelun suunnittelija ja verkkokehittäjä.
+              Itsenäinen täyden palvelun
+              <span className={styles.suunnitteluHighlight}>
+                {" "}
+                suunnittelija{" "}
+              </span>
+              ja
+              <span className={styles.kehittajaHighlight}>
+                {" "}
+                verkkokehittäjä.{" "}
+              </span>
             </h1>
           </div>
           <div className={styles.textContainer}>
