@@ -4,16 +4,17 @@ import { FiThumbsUp } from "react-icons/fi"
 
 const Kiitos = () => {
   return (
-    <Layout infobar={true}>
+    <Layout topbar={true}>
       <section className={styles.section}>
         <div className={styles.container}>
           <span className={styles.header}>
-            Kiitos haastattelulomakeen käytöstä
-            <FiThumbsUp />
+            <FiThumbsUp className={styles.icon} />
+            <br />
+            Kiitos haastattelulomakeen käytöstä!
           </span>
           <span className={styles.subheader}>
-            Vastauksenne käydään läpi ja teihin otetaan yhteyttä mahdollisimman
-            pian.
+            Vastauksesi käydään läpi tulevina arkipäivinä ja teihin ollaan
+            yhteydessä pian.
           </span>
         </div>
       </section>

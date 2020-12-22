@@ -94,7 +94,23 @@ const moneyOptions = [
     hotkey: "g",
   },
 ]
-
+const lisapalveluOptions = [
+  {
+    label: "Kyllä",
+    value: "Kyllä",
+    hotkey: "a",
+  },
+  {
+    label: "En",
+    value: "En",
+    hotkey: "b",
+  },
+  {
+    label: "Mahdollisesti",
+    value: "Mahdollisesti",
+    hotkey: "c",
+  },
+]
 const NetlifyForm = () => {
   const [inProp, setInProp] = useState(true) // Controls the question element transition stages.
   const [index, setIndex] = useState(0)
@@ -209,6 +225,11 @@ const NetlifyForm = () => {
     puhelinnumero: {
       name: "puhelinnumero",
       error: "Puhelinnumero on pakollinen kenttä.",
+      value: "",
+      required: true,
+    },
+    lisapalvelu: {
+      name: "lisapalvelu",
       value: "",
       required: true,
     },
@@ -388,7 +409,7 @@ const NetlifyForm = () => {
     />,
     <Question
       label="Onko sinulla omia brändiresursseja?"
-      subLabel="Kuten suosikkifonttia, logoa, väriteemaa tms."
+      subLabel="Kuten suosikkifonttia, logoa, väriteemaa, tms."
       data={formData.brandiResurssit}
       enableLineBreak
     />,
@@ -429,21 +450,20 @@ const NetlifyForm = () => {
       enableLineBreak
     />,
     <Question
-      label="Listaa verkkosivusi tärkeimmät tavoitteet."
-      subLabel="Mitä haluat saavuttaa sivusi kautta ja miten? Mitä spesifisempi vastauksesi, sitä parempi."
+      label="Listaa verkkosivusi tärkein tavoite."
+      subLabel="Mitä spesifisempi vastauksesi, sitä parempi."
       data={formData.verkkosivuTavoite}
       enableLineBreak
     />,
-    <Question
-      label="Mitä kolmannen osapuolen palveluita sinulla on?"
-      subLabel="Omistatko esimerkiksi domainin, palvelimen, yrityssähköpostin, tai muita palveluita?"
-      data={formData.verkkosivuPalvelut}
-      enableLineBreak
+    <Selection
+      label="Oletko kiinnostunut Digiaallon ylläpitopalveluksesta?"
+      data={formData.lisapalvelu}
+      options={lisapalveluOptions}
     />,
     <Question
-      label="Oletko kiinnostunut Digiaallon ylläpitöpalvelusta?"
-      subLabel="Palveluun kuuluu satunnaiset sisällönmuutokset, mahdolliset ylläpitö askareet ja päivitykset."
-      data={formData.digiaaltoLisapalvelu}
+      label="Omistatko muita palveluita?"
+      subLabel="Esimerkiksi domainin, palvelimen, yrityssähköpostin, tms."
+      data={formData.verkkosivuPalvelut}
       enableLineBreak
     />,
   ]
