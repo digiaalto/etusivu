@@ -322,6 +322,8 @@ const NetlifyForm = () => {
 
   function isInputValid(name) {
     const data = formData[name]
+    console.log(`isInputValid: ${name}, data; ${data}`)
+    console.log(`errors: ${errors}`)
     return (
       errors.length === 0 ||
       (data.required && data.value.length > 0) ||
@@ -335,12 +337,26 @@ const NetlifyForm = () => {
   const elements = [
     <StartScreen />,
     <Intermission
-      header="Haastatte joka kartoittaa yleisiä taustatietoja."
-      subheader="Valmistaudu vastamaan muutamaan kysymykseen yrityksestäsi, brändistäsi, kohdemarkkinoistasi ja tästä projektista. Voit muttaa vastauksia viimeisellä sivulla. Kesto noin 15 minuuttia."
+      header="Taustatietojen haastattelulomake."
+      subheader="Valmistaudu vastamaan muutamaan kysymykseen itsestäsi, yrityksestä ja sen  brändistä, kohderyhmästä ja tästä projektista. Voit muttaa vastauksia viimeisellä sivulla."
+    />,
+    <Question label="Teidän etunimi." data={formData.etunimi} />,
+    <Question label="Teidän sukunimi." data={formData.sukunimi} />,
+    <Question
+      label={`Hei, ${formData.etunimi.value}. Mikä rooli sinulla on yrityksessäsi?`}
+      data={formData.rooli}
+    />,
+    <Question
+      label="Mistä sähköpostiosoitteesta sinut saa parhaiten kiinni?"
+      data={formData.sahkoposti}
+    />,
+    <Question
+      label="Ja viimeiseksi puhelinnumero."
+      data={formData.puhelinnumero}
     />,
     <Intermission
-      header="Aloitetaan yrityksesi perustiedoista."
-      subheader="Alapalkista näkee kuinka pitkälle olet edistynyt haastattelussa."
+      header="Seuraavaksi yrityksesi perustiedoista."
+      subheader="Alapalkista näet kuinka pitkälle olet edennyt kyselyssä."
     />,
     <Question
       label="Mikä on yrityksesi nimi?"
@@ -349,8 +365,8 @@ const NetlifyForm = () => {
     />,
     <Question label="Yrityksesi toimiala?" data={formData.toimiala} />,
     <Question
-      label="Kuka on yrityksesi kovin kilpailija?"
-      subLabel="Heidän ei tarvitse olla samalta toimialalta. Ilmoita myös verkkosivut."
+      label="Yrityksesi kovimmat kilpailijat?"
+      subLabel="Ilmoita myös heidän verkkosivut."
       data={formData.kilpailijat}
       enableLineBreak
     />,
@@ -361,12 +377,12 @@ const NetlifyForm = () => {
       enableLineBreak
     />,
     <Intermission
-      header="Seuraavaksi bränditiedot."
-      subheader="Brändi on mututuntuma yrityksestä."
+      header="Jatketaan bränditiedojen keräämisestä."
+      subheader="Brändi on mielikuva yrityksestä joka syntyy tarkoitusella tai vahingossa."
     />,
     <Question
       label="Kuvaile yrityksesi brändiä vapaamuotoisesti."
-      subLabel="Jos brändiä ei ole vielä kehitetty, kirjoita 3-5 sanaa jotka edustavat toimintaasi."
+      subLabel="Jos brändiä ei ole vielä kehitetty, kirjoita 3-5 sanaa jotka kuvaavat yritystäsi."
       data={formData.brandiKuvaus}
       enableLineBreak
     />,
@@ -377,8 +393,8 @@ const NetlifyForm = () => {
       enableLineBreak
     />,
     <Intermission
-      header="Seuraavaksi mietitään verkkosivusi kohderyhmää."
-      subheader="Olet noin 30% valmis."
+      header="Seuraavaksi mietitään kohderyhmän taustatietoja."
+      subheader="Olet noin 60% valmis."
     />,
     <Selection
       label="Arvioi verkkosivusi kohderyhmän ikä."
@@ -397,24 +413,24 @@ const NetlifyForm = () => {
       onChange={sliderChange}
     />,
     <Question
-      label="Kuvaile verkkosivun kohderyhmää."
-      subLabel="Mitä asiakkaasi odottaa sinulta, mikä on hänelle tärkeintä?"
+      label="Kuvaile unelma-asiakastasi omin sanoin."
+      subLabel="Mikä on hänelle tärkeintä? Mitä hän pelkää? Mitä hän odottaa sinulta? Mitä negatiivisia kokemuksia hänellä on toimialastasi?"
       data={formData.kohderyhmaKuvaus}
       enableLineBreak
     />,
     <Intermission
-      header="Kiitos."
-      subheader="Seuraavaksi kerätään verkkosivun tietoja."
+      header="Kiitos antamista vastauksistasi, ne tulevat nopeuttamaan suunnittelua."
+      subheader="Viimeiseksi kysellään verkkosivuista."
     />,
     <Question
-      label="Kerro millaisen verkkosivun haluat omin sanoin?"
-      subLabel="Kerro myös tyyppi: markkinointisivu, blogi, verkkokauppa, web-app... "
+      label="Kuvaile omin sanoin millaisen verkkosivun haluat."
+      subLabel="Aloita tyypistä."
       data={formData.verkkosivuKuvaus}
       enableLineBreak
     />,
     <Question
       label="Listaa verkkosivusi tärkeimmät tavoitteet."
-      subLabel="Mitä haluat saavuttavasi sivun kautta ja miten?"
+      subLabel="Mitä haluat saavuttaa sivusi kautta ja miten? Mitä spesifisempi vastauksesi, sitä parempi."
       data={formData.verkkosivuTavoite}
       enableLineBreak
     />,
@@ -429,24 +445,6 @@ const NetlifyForm = () => {
       subLabel="Palveluun kuuluu satunnaiset sisällönmuutokset, mahdolliset ylläpitö askareet ja päivitykset."
       data={formData.digiaaltoLisapalvelu}
       enableLineBreak
-    />,
-    <Intermission
-      header="Siinä olikin valtaosa kysymyksistä."
-      subheader="Otetaan talteen vielä yhteystiedot."
-    />,
-    <Question label="Teidän etunimi." data={formData.etunimi} />,
-    <Question label="Teidän sukunimi." data={formData.sukunimi} />,
-    <Question
-      label={`Hei, ${formData.etunimi.value}. Mikä rooli sinulla on yrityksessäsi?`}
-      data={formData.rooli}
-    />,
-    <Question
-      label="Mistä sähköpostiosoitteesta sinut saa parhaiten kiinni?"
-      data={formData.sahkoposti}
-    />,
-    <Question
-      label="Ja viimeiseksi puhelinnumero."
-      data={formData.puhelinnumero}
     />,
   ]
 
@@ -684,9 +682,21 @@ const FinalEditor = (props) => {
   )
 }
 
-/**
- * HELPERS - HELPERS - HELPERS
- */
+const PreviousButton = () => {
+  const { changeQuestion } = useContext(FunctionsCtx)
+  return (
+    <div className={styles.previousButtonWrapper}>
+      <button
+        onClick={() => changeQuestion("prev")}
+        className={styles.previousButton}
+        type="button"
+      >
+        <GrPrevious className={styles.prevBtnIcon} />{" "}
+        <span className={styles.prevBtnText}>Takaisin</span>
+      </button>
+    </div>
+  )
+}
 
 const Buttons = (props) => {
   const { changeQuestion, editorEnabled } = useContext(FunctionsCtx)
@@ -761,21 +771,6 @@ const Headers = (props) => {
         {header}
       </span>
       {subheader && <p className={styles.subheader}>{subheader}</p>}
-    </div>
-  )
-}
-
-const PreviousButton = () => {
-  const { changeQuestion } = useContext(FunctionsCtx)
-  return (
-    <div className={styles.previousButtonWrapper}>
-      <button
-        onClick={() => changeQuestion("prev")}
-        className={styles.previousButton}
-      >
-        <GrPrevious className={styles.prevBtnIcon} />{" "}
-        <span className={styles.prevBtnText}>Takaisin</span>
-      </button>
     </div>
   )
 }
