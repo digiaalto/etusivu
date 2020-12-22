@@ -15,7 +15,7 @@ const LP_Problem = () => {
           <div className={styles.textContainer}>
             <div className={styles.textColumn}>
               <p>
-                Silti jokainen yritys tarvitsee olla nettisivun joka onnistuu
+                Silti jokainen yritys tarvitsee oman yrityssivun joka onnistuu
                 toteuttamaan sille asetetut tavoitteet. Tärkein päätavoite
                 saattaa olla esimerkiksi liikevaihdon kasvattaminen palvelemalla
                 vanhoja asiakkaita ja saavuttamalla uusia.
