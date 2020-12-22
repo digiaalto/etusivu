@@ -335,8 +335,8 @@ const NetlifyForm = () => {
   const elements = [
     <StartScreen />,
     <Intermission
-      header="Haastattelulomake."
-      subheader="Valmistaudu vastamaan muutamaan tastakysymykseen yrityksestäsi, brändistäsi, kohdemarkkinoistasi ja tästä projektista. Voit muttaa vastauksia viimeisellä sivulla. Kesto noin 15 minuuttia."
+      header="Haastatte joka kartoittaa yleisiä taustatietoja."
+      subheader="Valmistaudu vastamaan muutamaan kysymykseen yrityksestäsi, brändistäsi, kohdemarkkinoistasi ja tästä projektista. Voit muttaa vastauksia viimeisellä sivulla. Kesto noin 15 minuuttia."
     />,
     <Intermission
       header="Aloitetaan yrityksesi perustiedoista."
@@ -506,16 +506,8 @@ const StartScreen = (props) => {
         Kiitos, että olet kiinnostunut käyttäjäystävällisistä verkkosivuista.
       </span>
       <p className={styles.subheader}>
-        Lähetä tiedustelut sähköpostiin{" "}
-        <a href="mailto:hei@digiaalto.fi" className={styles.s}>
-          hei@digiaalto.fi
-        </a>{" "}
-        tai soita numeroon{" "}
-        <a href="tel:+358505543395" className={styles.contactLink}>
-          +358505543395.
-        </a>{" "}
-        Voit myös aloittaa tilausprosessin täyttämällä alustavan
-        haastattelulomakeen.
+        Aloita verkkosivujen hankintaprosessi vastaamalla haastatteluun. Muut
+        tiedustelut ja kyselyt sähköpostiin tai soittamalla.
       </p>
       <Buttons text="Haastattelu →" />
       <div className={styles.helpContainer}>
