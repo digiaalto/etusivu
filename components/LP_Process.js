@@ -27,7 +27,7 @@ const LP_Process = () => {
           <Images inView={inView} dist={(scrollY / initialY - 1) * 100} />
         </div>
         <div className={styles.column}>
-          <h4 className={styles.topHeader}>Prosessi</h4>
+          <span className={styles.topHeader}>Prosessi</span>
           <h3 className={styles.middleHeader}>
             Voit tulla pöytään ideat valmiina tai antaa Digiaallon hoitaa
             kaiken.
@@ -92,6 +92,7 @@ const Images = ({ inView, dist }) => {
   return [...Array(5)].map((value, index) => (
     <img
       src={`process/${index + 1}.svg`}
+      alt={`Kehitysprosessi pallo ${index + 1}`}
       key={index}
       style={{
         willChange: "transform",

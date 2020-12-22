@@ -8,7 +8,6 @@ const Footer = () => {
       <div className={styles.wrapper}>
         <FooterNav />
         <FooterContactInfo />
-        <Trademark />
       </div>
     </footer>
   )
@@ -36,7 +35,6 @@ const FooterNav = () => {
       <span className={styles.footerHeader}>Linkit</span>
       <ul className={styles.itemList}>
         <li>
-          {/* <a onClick={() => window.scrollTo(0, 0)}>Etusivu</a> */}
           <Link href="/">
             <a>Etusivu</a>
           </Link>
@@ -57,18 +55,6 @@ const FooterNav = () => {
           </Link>
         </li>
       </ul>
-    </div>
-  )
-}
-
-const Trademark = () => {
-  return (
-    <div className={styles.footerItem}>
-      <Link href="/">
-        <a className={styles.logoAnchor}>
-          <img src="brand/logo.png" className={styles.logo} />
-        </a>
-      </Link>
     </div>
   )
 }

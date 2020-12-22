@@ -21,7 +21,7 @@
     "disable-scroll": "^0.5.1",
     "fontsource-inter": "^3.1.7",
     "fontsource-open-sans": "^3.1.5",
-    "next": "9.5.3",
+    "next": "^10.0.3",
     "next-on-netlify": "^2.6.3",
     "node-fetch": "^2.6.1",
     "prop-types": "^15.7.2",
