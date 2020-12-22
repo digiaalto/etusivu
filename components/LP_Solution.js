@@ -29,7 +29,7 @@ const LP_Solution = () => {
             </div>
             <div className={styles.textColumn}>
               <p>
-                Yrityssivusi kehitetöön modernilla teknologialla joka takaa
+                Verkkosivut kehitetään modernilla teknologialla joka takaa
                 rakenteellisen kilpailuedun ja parhaan potentiaalisen
                 menestymisen verkkokisassa.
               </p>

@@ -15,8 +15,8 @@ const LP_Problem = () => {
           <div className={styles.textContainer}>
             <div className={styles.textColumn}>
               <p>
-                Silti jokaisella yrityksellä kannattaisi olla yrityssivu joka
-                onnistuu toteuttamaan sille asetetut tavoitteet. Päätavoite
+                Silti jokainen yritys tarvitsee olla nettisivun joka onnistuu
+                toteuttamaan sille asetetut tavoitteet. Tärkein päätavoite
                 saattaa olla esimerkiksi liikevaihdon kasvattaminen palvelemalla
                 vanhoja asiakkaita ja saavuttamalla uusia.
               </p>
@@ -25,8 +25,8 @@ const LP_Problem = () => {
               <p>
                 Kiireisen yrittäjän ei kuitenkaan aina ole taloudellisesti
                 kannattavaa investoida paljon työaikaa verkkosivun suunnitteluun
-                tai ylläpitoon, varsinkin jos se aika on pois oman
-                yritystoiminnan harjoittamisesta.
+                tai ylläpitoon, varsinkin jos se on pois oman yritystoiminnan
+                harjoittamisesta.
               </p>
             </div>
           </div>
