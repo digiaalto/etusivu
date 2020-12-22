@@ -21,13 +21,13 @@ const LP_Process = () => {
   }, [inView])
 
   return (
-    <section className={styles.section} id="kehitys" ref={ref}>
+    <section className={styles.section} id="valmistusprosessi" ref={ref}>
       <div className={styles.content}>
         <div className={styles.column}>
           <Images inView={inView} dist={(scrollY / initialY - 1) * 100} />
         </div>
         <div className={styles.column}>
-          <span className={styles.topHeader}>Prosessi</span>
+          <span className={styles.topHeader}>Valmistusprosessi</span>
           <h3 className={styles.middleHeader}>
             Voit tulla pöytään ideat valmiina tai antaa Digiaallon hoitaa
             kaiken.

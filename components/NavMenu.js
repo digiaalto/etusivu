@@ -26,8 +26,8 @@ const links = [
     href: "/#laatutesti-google-lighthouse",
   },
   {
-    text: "Kehitys",
-    href: "/#kehitys",
+    text: "Valmistusprosessi",
+    href: "/#valmistusprosessi",
   },
   {
     text: "Hinnat",
@@ -44,7 +44,11 @@ const NavMenu = (props) => {
   return (
     <>
       <div className={styles.menu}>
-        <button className={styles.menuButton} onClick={toggleOverlay}>
+        <button
+          className={styles.menuButton}
+          onClick={toggleOverlay}
+          type="button"
+        >
           {menuOpen ? <AiOutlineClose /> : <FiMenu />}
           Menu
         </button>

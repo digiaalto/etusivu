@@ -7,7 +7,7 @@ const LP_Pricing = () => {
       <div className={styles.content}>
         <FaGift className={styles.giftIcon} />
         <h3 className={styles.header}>
-          Valmiit kotisivut yrityksellesi tai vaikka lahjaksi 3,200€.
+          Verkkosivut omalle yritykselle tai lahjaksi 3,200€
         </h3>
         <p className={styles.note}>
           Digiaalto laskuttaa 30% etukäteen.

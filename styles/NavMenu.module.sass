@@ -26,6 +26,7 @@
     border: 2px solid map-get($colors, textDark)
   
   &:focus
+    border: 2px solid map-get($colors, secondary)
     outline: none
 
   svg
@@ -47,7 +48,7 @@
   line-height: 1
 
   &:hover
-    color: map-get($colors, primary)
+    color: map-get($colors, secondary)
   
 @media (min-width: map-get($bp, tablet))
   .linkAnchor
