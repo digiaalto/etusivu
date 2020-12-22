@@ -30,8 +30,8 @@ const links = [
     href: "/#valmistusprosessi",
   },
   {
-    text: "Hinnat",
-    href: "/#hinnat",
+    text: "Hinnoittelu",
+    href: "/#hinnoittelu",
   },
   {
     text: "Yhteydenotto",
