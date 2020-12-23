@@ -14,21 +14,23 @@ const IndexPage = () => {
   const problemRef = useRef(null)
   const solutionRef = useRef(null)
   const auditRef = useRef(null)
+  const processRef = useRef(null)
   const pricingRef = useRef(null)
 
   const sectionRefs = [
-    { section: "Hero", hoverText: "Digiaalto lyhyesti", ref: heroRef },
+    { section: "Hero", hoverText: "Digiaalto", ref: heroRef },
     {
       section: "Problem",
-      hoverText: "Verkkohankinnan ongelmia",
+      hoverText: "Ongelma",
       ref: problemRef,
     },
     {
       section: "Solution",
-      hoverText: "Verkkohankinnan ratkaisu",
+      hoverText: "Ratkaisu",
       ref: solutionRef,
     },
-    { section: "Audit", hoverText: "Googlen laatutesti", ref: auditRef },
+    { section: "Audit", hoverText: "Laatutesti", ref: auditRef },
+    { section: "Process", hoverText: "Prosessi", ref: processRef },
     { section: "Pricing", hoverText: "Hinta", ref: pricingRef },
   ]
 
@@ -40,7 +42,7 @@ const IndexPage = () => {
         <LP_Solution refs={solutionRef} />
         <LP_TrackInfographic />
         <LP_Audit refs={auditRef} />
-        <LP_Process />
+        <LP_Process refs={processRef} />
         <LP_Pricing refs={pricingRef} />
         <LP_Expect />
       </Layout>

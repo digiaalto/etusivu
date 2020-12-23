@@ -7,20 +7,20 @@ import Overlay from "./utility/Overlay"
 
 const links = [
   {
-    text: "Digiaalto lyhyesti",
-    href: "/#digiaalto-lyhyesti",
+    text: "Digiaalto",
+    href: "/",
   },
   {
-    text: "Verkkosivut",
-    href: "/#verkkohankinnan-ratkaisu",
+    text: "Palvelut",
+    href: "/#palvelut",
   },
   {
     text: "Laatutesti",
     href: "/#laatutesti-google-lighthouse",
   },
   {
-    text: "Valmistusprosessi",
-    href: "/#valmistusprosessi",
+    text: "Prosessi",
+    href: "/#prosessi",
   },
   {
     text: "Hinta",
@@ -158,7 +158,7 @@ const LinkList = (props) => {
     <ul className={styles.linkList}>
       {links.map((link, index) => (
         <a
-          className={styles.linkAnchor}
+          className={styles.linkItem}
           key={`nav-link-${index}`}
           onClick={(e) => {
             toggleOverlay()

@@ -5,11 +5,7 @@ const LP_Problem = (props) => {
   const { refs } = props
 
   return (
-    <section
-      className={styles.section}
-      id="verkkohankinnan-ongelmia"
-      ref={refs}
-    >
+    <section className={styles.section} id="kotisivujen-hankinta" ref={refs}>
       <Fade delay={300} triggerOnce>
         <div className={styles.content}>
           <div className={styles.headerWrapper}>

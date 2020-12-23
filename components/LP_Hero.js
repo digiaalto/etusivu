@@ -18,7 +18,7 @@ const Hero = (props) => {
   })
 
   return (
-    <section className={styles.section} id="digiaalto-lyhyesti" ref={refs}>
+    <section className={styles.section} id="digiaalto" ref={refs}>
       <div className={styles.content}>
         <h1 className={styles.salesPitch}>
           <span
@@ -64,7 +64,7 @@ const Hero = (props) => {
         <div className={styles.ctaButtons}>
           <Button href="/yhteydenotto" text="Ota yhteyttä" />
           <Button
-            href="/#verkkohankinnan-ongelmia"
+            href="/#kotisivujen-hankinta"
             text="Lue Lisää"
             secondary={true}
           />

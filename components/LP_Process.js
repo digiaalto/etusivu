@@ -1,34 +1,16 @@
 import styles from "../styles/LP_Process.module.sass"
-import { useEffect, useState } from "react"
-import { useInView } from "react-intersection-observer"
 
 const LP_Process = (props) => {
   const { refs } = props
-  const { ref, inView } = useInView()
-  const [initialY, setInitialY] = useState(0)
-  const [scrollY, setScrollY] = useState(0)
-
-  function handleScroll() {
-    setScrollY(window.scrollY)
-  }
-
-  useEffect(() => {
-    if (inView) {
-      if (initialY === 0) setInitialY(window.scrollY)
-      window.addEventListener("scroll", handleScroll)
-    } else setInitialY(0)
-
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [inView])
 
   return (
-    <section className={styles.section} id="valmistusprosessi" ref={ref}>
+    <section className={styles.section} id="prosessi" ref={refs}>
       <div className={styles.content}>
         <div className={styles.column}>
-          <Images inView={inView} dist={(scrollY / initialY - 1) * 100} />
+          <Images />
         </div>
         <div className={styles.column}>
-          <span className={styles.topHeader}>Valmistusprosessi</span>
+          <span className={styles.topHeader}>Prosessi</span>
           <h3 className={styles.middleHeader}>
             Voit tulla pöytään ideat valmiina tai antaa Digiaallon hoitaa
             kaiken.
@@ -84,23 +66,12 @@ const TextBlock = ({ miniheader, header, text }) => {
   )
 }
 
-const Images = ({ inView, dist }) => {
-  let rotation
-  if (inView) {
-    if (dist < 0) rotation = dist + 10
-    else rotation = dist - 10
-  }
+const Images = () => {
   return [...Array(5)].map((value, index) => (
     <img
       src={`/process/${index + 1}.svg`}
       alt={`Kehitysprosessi pallo ${index + 1}`}
       key={index}
-      style={{
-        willChange: "transform",
-        transform: `rotate(${
-          index === 1 || index === 4 ? rotation : rotation * -1
-        }deg)`,
-      }}
     />
   ))
 }
