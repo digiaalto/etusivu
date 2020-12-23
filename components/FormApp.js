@@ -445,7 +445,7 @@ const NetlifyForm = () => {
     />,
     <Question
       label="Kuvaile omin sanoin millaisen verkkosivun haluat."
-      subLabel="Aloita tyypistä."
+      subLabel="Aloita verkkosivun tyypistä, onko se kauppa, blogi, markkinointisivu, tms."
       data={formData.verkkosivuKuvaus}
       enableLineBreak
     />,

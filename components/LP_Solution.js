@@ -23,9 +23,9 @@ const LP_Solution = (props) => {
                 haluamaasi suurempaa roolia kotisivujesi luonnissa.
               </p>
               <p>
-                Valinnaisen ylläpitopalvelun kautta puolestasi hoidetaan myös
-                muut valmiin kotisivun lisätyöt, kuten sisällönmuutokset,
-                päivitykset ja ylläpitotoimet.
+                Valinnaisen lisäpalvelun kautta puolestasi hoidetaan myös muut
+                valmiin kotisivun lisätyöt, kuten sisällönmuutokset ja
+                päivitykset.
               </p>
             </div>
             <div className={styles.textColumn}>

@@ -11,7 +11,7 @@ const LP_Pricing = (props) => {
         <p className={styles.note}>
           Digiaalto laskuttaa 30% etukäteen.
           <br />
-          Ylläpito lisäpalvelu &rarr; 129,00€ / vuosi.
+          Sisällönhallinta lisäpalvelu &rarr; 129,00€ / vuosi.
         </p>
       </div>
     </section>
