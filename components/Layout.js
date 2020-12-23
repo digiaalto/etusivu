@@ -6,7 +6,14 @@ import Footer from "./Footer"
 import disableScroll from "disable-scroll"
 
 const Layout = (props) => {
-  const { title, type, description, topbar, children } = props
+  const {
+    title,
+    type,
+    description,
+    topbar,
+    footerHaastattelu,
+    children,
+  } = props
   const [overlayVisible, setOverlayVisible] = useState(false)
 
   const toggleOverlay = () => {
@@ -46,7 +53,7 @@ const Layout = (props) => {
       {topbar && <Topbar />}
       <NavMenu menuOpen={overlayVisible} toggleOverlay={toggleOverlay} />
       <main style={{ marginTop: "3rem" }}>{children}</main>
-      <Footer />
+      <Footer haastattelu={footerHaastattelu} />
     </React.Fragment>
   )
 }

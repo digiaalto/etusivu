@@ -69,8 +69,9 @@ const Hero = () => {
           />
         </div>
         <h1 className={styles.subheader}>
-          Verkkosuunnittelija Digiaalto rakentaa laatutestattuja verkkosivuja
-          kiireisille yrittäjille. Kaikilla valitsemillasi lisäpalveluilla.
+          Verkkokehittäjä Digiaalto rakentaa laatutestattuja, oikeasti moderneja
+          kotisivuja kiireisille yrittäjille. Kaikilla haluamillasi
+          lisäpalveluilla.
         </h1>
       </div>
     </section>

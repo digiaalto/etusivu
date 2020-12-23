@@ -4,8 +4,6 @@ const Overlay = (props) => {
   const { visible, toggle, children, zIndex = 99990 } = props
   if (!visible) return null
 
-  // Updated name...
-
   return (
     <Fragment>
       <div className="overlay">{children}</div>
@@ -20,7 +18,7 @@ const Overlay = (props) => {
             position: fixed;
             left: 0;
             top: 0;
-            background-color: #323232;
+            background-color: #000000;
             z-index: ${zIndex};
             animation: overlayAnimation 0.33s 1;
           }

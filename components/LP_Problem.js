@@ -9,22 +9,22 @@ const LP_Problem = () => {
           <div className={styles.headerWrapper}>
             <span className={styles.preheader}>Ongelma</span>
             <h1 className={styles.header}>
-              Yrittäjän elämä on kiireistä ja verkkosivut monimutkaisia.
+              Yrittäjyys on kiireistä ja kotisivujen hankinta monimutkaista.
             </h1>
           </div>
           <div className={styles.textContainer}>
             <div className={styles.textColumn}>
               <p>
-                Silti jokainen yritys tarvitsee oman yrityssivun joka onnistuu
-                toteuttamaan sille asetetut tavoitteet. Tärkein päätavoite
-                saattaa olla esimerkiksi liikevaihdon kasvattaminen palvelemalla
-                vanhoja asiakkaita ja saavuttamalla uusia.
+                Tästä huolimatta jokainen yritys tarvitsee oman kotisivun mikä
+                onnistuu toteuttamaan sille asetetut tavoitteet. Tärkein
+                päätavoite saattaa olla esimerkiksi liikevaihdon kasvattaminen
+                palvelemalla vanhoja asiakkaita ja saavuttamalla uusia.
               </p>
             </div>
             <div className={styles.textColumn}>
               <p>
                 Kiireisen yrittäjän ei kuitenkaan aina ole taloudellisesti
-                kannattavaa investoida paljon työaikaa verkkosivun suunnitteluun
+                kannattavaa investoida paljon työaikaa kotisivun suunnitteluun
                 tai ylläpitoon, varsinkin jos se on pois oman yritystoiminnan
                 harjoittamisesta.
               </p>

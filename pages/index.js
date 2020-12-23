@@ -11,7 +11,7 @@ import LP_Expect from "../components/LP_Expect"
 const IndexPage = () => {
   return (
     <div>
-      <Layout topbar>
+      <Layout topbar footerHaastattelu>
         <LP_Hero />
         <LP_Problem />
         <LP_Solution />

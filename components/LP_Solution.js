@@ -1,6 +1,7 @@
 import styles from "../styles/LP_Solution.module.sass"
-import Link from "next/link"
 import { Fade } from "react-awesome-reveal"
+
+import Benefits from "./Benefits"
 
 const LP_Solution = () => {
   return (
@@ -10,39 +11,24 @@ const LP_Solution = () => {
           <div className={styles.headerWrapper}>
             <span className={styles.preheader}>Ratkaisu</span>
             <h1 className={styles.header}>
-              Itsenäinen täyden palvelun
-              <span className={styles.suunnitteluHighlight}>
-                {" "}
-                suunnittelija{" "}
-              </span>
-              ja verkkokehittäjä.
+              Itsenäinen kotisivujen suunnittelija.
             </h1>
           </div>
           <div className={styles.textContainer}>
             <div className={styles.textColumn}>
               <p>
                 Digiaalto on erikoistunut omatoimiseen verkkosuunnitteluun ja
-                verkkokehitykseen, joka tarkoittaa ettei sinulta vaadita
-                haluamaasi suurempaa roolia sisällöntuotossa tai ulkoasun
-                kehityksessä.
+                verkkokehitykseen, joka tarkoittaa ettei sinulta tulla vaatimaan
+                haluamaasi suurempaa roolia kotisivujesi luonnissa.
               </p>
               <p>
-                Valinnaisen ylläpitopalvelun kautta hoituu myös muut valmiin
-                verkkosivun sisällönmuutokset, sekä päivitykset ja mahdolliset
-                pienehköt lisätyöt.
+                Valinnaisen ylläpitopalvelun kautta puolestasi hoidetaan myös
+                muut valmiin kotisivun lisätyöt, kuten sisällönmuutokset,
+                päivitykset ja ylläpitotoimet.
               </p>
             </div>
             <div className={styles.textColumn}>
-              <p>
-                Verkkosivut kehitetään modernilla teknologialla joka takaa
-                rakenteellisen kilpailuedun ja parhaan potentiaalisen
-                menestymisen verkkokisassa.
-              </p>
-              <p>
-                Kehitysratkaisut perustuvat sinun projektisti omakohtaisiin
-                vaatimuksiin sekä hakukoneiden ja käyttäjien arvostamiin
-                standardeihin.
-              </p>
+              <Benefits />
             </div>
           </div>
         </div>

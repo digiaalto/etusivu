@@ -2,8 +2,9 @@
 $tabletWidth: 37rem
 $laptopWidth: 50rem
 $desktopWidth: 60rem
+$fadeSpeed: 2.1s
 
-// Keyframes
+// Aniations.
 @keyframes fader
 	0%
 		opacity: 0
@@ -15,7 +16,6 @@ $desktopWidth: 60rem
 		opacity: 1
 	100%
 		opacity: 0
-
 @keyframes reverseFader
 	0%
 		opacity: 1
@@ -27,32 +27,33 @@ $desktopWidth: 60rem
 		opacity: 0
 	100%
 		opacity: 1
+.fadeAnimation
+	animation: fader $fadeSpeed 1
+.reverseFadeAnimation
+	&::before
+		animation: reverseFader $fadeSpeed 1
 
-$fadeSpeed: 2.1s
-
+// Layout.
 .section
 	z-index: 0
 	display: flex
 	justify-content: center
 	padding: map-get($padding, mobile)
 	text-align: center
-
 .content
 	display: block
 	color: map-get($colors, textDark)
 	margin-top: 2rem
 
-.highlightBackground, .highlightBackground2, .highlightBackground3, .salesPitch
-	letter-spacing: -0.3rem
-
-
+// Headers.
 .salesPitch
 	display: block
 	font-size: 2.7rem
 	font-weight: 800
 	line-height: 1.2em
 	margin: 0
-
+.highlightBackground, .highlightBackground2, .highlightBackground3, .salesPitch
+	letter-spacing: -0.2rem
 .subheader
 	font-size: $h5Size
 	line-height: 1.6em
@@ -62,14 +63,6 @@ $fadeSpeed: 2.1s
 	flex-direction: column
 	justify-content: center
 	margin: 3rem 0
-
-// Animations
-.fadeAnimation
-	animation: fader $fadeSpeed 1
-
-.reverseFadeAnimation
-	&::before
-		animation: reverseFader $fadeSpeed 1
 
 .highlightBackground // reveseFader
 	position: relative

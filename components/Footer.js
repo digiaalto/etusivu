@@ -2,14 +2,30 @@ import React from "react"
 import styles from "../styles/Footer.module.sass"
 import Link from "next/link"
 
-const Footer = () => {
+const Footer = (props) => {
+  const { haastattelu } = props
   return (
     <footer className={styles.footer}>
       <div className={styles.wrapper}>
+        {haastattelu && <HaastatteluLink />}
         <FooterNav />
         <FooterContactInfo />
       </div>
     </footer>
+  )
+}
+
+const HaastatteluLink = () => {
+  return (
+    <div className={styles.footerItem}>
+      <Link href="/yhteydenotto">
+        <a className={styles.haastatteluLink}>
+          Tilaa
+          <br />
+          Verkkosivu <span className={styles.haastatteluLinkArrow}>&rarr;</span>
+        </a>
+      </Link>
+    </div>
   )
 }
 

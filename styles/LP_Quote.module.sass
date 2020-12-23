@@ -1,22 +1,23 @@
 @import "_partials.sass"
 
-.container
+// Layout.
+.content
 	display: inline-flex
 	flex-direction: column
 	justify-content: center
 	color: map-get($colors, textDark)
-	border: 1px solid #eaeaea
-	padding: 2rem 1rem
 
-.quoteText
+// Content.
+.quote
 	font-style: italic
-
 .source
 	align-self: flex-end
 	font-style: italic
-	margin-right: 3rem
-
-@media (min-width: map-get($bp, laptop))
-	.section
-		color: map-get($colors, textDark)
-		padding: map-get($padding, laptop)
+	color: map-get($colors, textDark)
+	&:hover
+		color: inherit
+		text-decoration: underline
+	
+@include desktop
+	.content
+		margin-top: 20rem

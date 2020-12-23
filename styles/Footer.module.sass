@@ -1,44 +1,49 @@
 @import "partials"
 
+// Layout.
 .footer
-  background-color: #fafafd
+  background-color: #f0f0f0
   width: 100%
   margin: auto
   position: relative
   z-index: 1
   font-size: 1rem
   padding: map-get($padding, mobile)
-
   a
     color: map-get($colors, textGray)
     &:hover
       color: map-get($colors, textDark)
-
 .wrapper
   display: flex
-  flex-direction: row
+  flex-direction: column
+  align-items: center
   flex-wrap: wrap
-  justify-content: space-around
-
 .footerItem
+  min-width: 200px
   margin-top: 2rem
-  min-width: 180px
-
+  
+// Content.
+.haastatteluLink
+  position: relative
+  font-size: 1.5rem
+  font-weight: 900
 .footerHeader
   display: block
   margin-bottom: 1rem
   font-weight: 600
-
-
 .itemList
   list-style: none
   margin: 0
   padding: 0
 
-@media (min-width: map-get($bp, laptop))
+// Media queries.
+@include tablet
+.wrapper
+  flex-direction: row
+  justify-content: space-around
+@include laptop
   .footer
     padding: map-get($padding, laptop)
-
-@media (min-width: map-get($bp, desktop))
+@include desktop
   .footer
     padding: map-get($padding, desktop)

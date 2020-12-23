@@ -1,0 +1,34 @@
+@import "_partials"
+
+// Layout.
+.benefits
+	display: flex
+	flex-direction: column
+	margin-top: 2rem
+
+// Headers.
+.benefitHeader
+	font-size: 1.75rem
+	font-weight: 900
+	line-height: 1.3
+
+// Content.
+.benefitsList
+	list-style: square
+	padding: 1em
+.benefitSubheader
+	max-width: $sectionHeaderWidth
+	display: block
+	margin-bottom: 0.5rem
+	font-size: 1.5rem
+	font-weight: 600
+	line-height: 1.3
+.benefitItem
+	&::marker
+		font-size: 1.2em
+		color: map-get($colors, secondary)
+
+// Media queries.
+@include laptop
+	.benefits
+		margin-top: 6rem
