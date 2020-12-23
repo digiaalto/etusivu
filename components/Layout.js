@@ -21,11 +21,11 @@ const Layout = (props) => {
   const SEO = {
     title: title
       ? `${title} | Digiaalto.fi`
-      : `Verkkosivut yritykselle nopeasti ja helposti | Digiaalto.fi`, // 60 chars.
+      : `Kestävät kotisivut yritykselle helposti | Digiaalto.fi`, // 60 chars.
     type: type ? type : "website",
     description: description
       ? description
-      : `Digiaalto rakentaa laatutestattuja verkkosivuja kiireiselle yrittäjälle uudella tekniikalla. Osta tehokkaat ja optimoidut verkkosivut, saat avaimet käteen.`,
+      : `Verkkokehittäjä Digiaalto rakentaa modernilla tavalla oikeasti tehokkaita ja laatutestattuja kotisivuja kiireisille yrittäjille. Kaikilla lisäpalveluilla.`, // max 160 chars.
     image: "https://www.digiaalto.fi/brand/some-image.png",
   }
 

@@ -70,9 +70,9 @@ const Hero = (props) => {
           />
         </div>
         <h1 className={styles.subheader}>
-          Verkkokehittäjä Digiaalto rakentaa laatutestattuja, oikeasti moderneja
-          kotisivuja kiireisille yrittäjille. Kaikilla haluamillasi
-          lisäpalveluilla.
+          Verkkokehittäjä Digiaalto rakentaa modernilla tavalla oikeasti
+          tehokkaita ja laatutestattuja kotisivuja kiireisille yrittäjille.
+          Kaikilla lisäpalveluilla.
         </h1>
       </div>
     </section>

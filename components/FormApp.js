@@ -359,10 +359,10 @@ const NetlifyForm = () => {
     <StartScreen />,
     <Intermission
       header="Taustatietojen haastattelulomake."
-      subheader="Valmistaudu vastamaan muutamaan kysymykseen itsestäsi, yrityksestä ja sen  brändistä, kohderyhmästä ja tästä projektista. Voit muttaa vastauksia viimeisellä sivulla."
+      subheader="Valmistaudu vastamaan muutamaan kysymykseen itsestäsi, yrityksestä ja sen  brändistä, kohderyhmästä ja tästä projektista. Tämä lomake ei sido sinua mihinkään ja voit muttaa vastauksia viimeisellä sivulla."
     />,
-    <Question label="Teidän etunimi." data={formData.etunimi} />,
-    <Question label="Teidän sukunimi." data={formData.sukunimi} />,
+    <Question label="Aloitetaan etunimestäsi." data={formData.etunimi} />,
+    <Question label="Ja sukunimi." data={formData.sukunimi} />,
     <Question
       label={`Hei, ${formData.etunimi.value}. Mikä rooli sinulla on yrityksessäsi?`}
       data={formData.rooli}
@@ -524,8 +524,9 @@ const StartScreen = (props) => {
         Kiitos, että olet kiinnostunut käyttäjäystävällisistä verkkosivuista.
       </span>
       <p className={styles.subheader}>
-        Aloita verkkosivujen hankintaprosessi vastaamalla haastatteluun. Muut
-        tiedustelut ja kyselyt sähköpostiin tai soittamalla.
+        Tiedustelut ja kyselyt voi lähettää sähköpostiin tai soittamalla
+        arkipäivisin. On suositeltavaa että aloitat verkkosivujen
+        hankintaprosessin täyttämällä haastattelulomakeen.
       </p>
       <Buttons text="Haastattelu →" />
       <div className={styles.helpContainer}>
