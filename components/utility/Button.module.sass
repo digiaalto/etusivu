@@ -16,11 +16,9 @@
   user-select: none
   text-align: center
 
-  &:hover
+  &:hover, &:focus
     color: map-get($colors, textDark)
     background-color: transparent
-  &:focus
-    outline: map-get($colors, secondary)
 
   svg
     font-size: 1.2em
@@ -31,6 +29,6 @@
   background-color: transparent
   border: 1px solid #ccc
 
-  &:hover
+  &:hover, &:focus
     color: map-get($colors, textDark)
     border: 1px solid map-get($colors, textDark)

@@ -62,7 +62,7 @@ const Hero = (props) => {
           </div>
         </h1>
         <div className={styles.ctaButtons}>
-          <Button href="/yhteydenotto" text="Ota yhteyttä" />
+          <Button href="/tilaus" text="Tilauslomake" />
           <Button
             href="/#kotisivujen-hankinta"
             text="Lue Lisää"

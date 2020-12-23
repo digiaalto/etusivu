@@ -27,8 +27,8 @@ const links = [
     href: "/#hinta",
   },
   {
-    text: "Yhteydenotto",
-    href: "/yhteydenotto",
+    text: "Tilaus",
+    href: "/tilaus",
   },
 ]
 

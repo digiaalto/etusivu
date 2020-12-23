@@ -175,6 +175,18 @@ const NetlifyForm = () => {
       value: "",
       required: true,
     },
+    kohderyhmaKuvausPositiivinen: {
+      name: "kohderyhmaKuvausPositiivinen",
+      error: "Kohderyhmän kuvaus on pakollinen kenttä.",
+      value: "",
+      required: true,
+    },
+    kohderyhmaKuvausNegatiivinen: {
+      name: "kohderyhmaKuvausNegatiivinen",
+      error: "Kohderyhmän kuvaus on pakollinen kenttä.",
+      value: "",
+      required: true,
+    },
     verkkosivuKuvaus: {
       name: "verkkosivuKuvaus",
       error: "Verkkosivun kuvaus on pakollinen kenttä.",
@@ -357,10 +369,7 @@ const NetlifyForm = () => {
    */
   const elements = [
     <StartScreen />,
-    <Intermission
-      header="Taustatietojen haastattelulomake."
-      subheader="Valmistaudu vastamaan muutamaan kysymykseen itsestäsi, yrityksestä ja sen  brändistä, kohderyhmästä ja tästä projektista. Tämä lomake ei sido sinua mihinkään ja voit muttaa vastauksia viimeisellä sivulla."
-    />,
+    <SecondScreen />,
     <Question label="Aloitetaan etunimestäsi." data={formData.etunimi} />,
     <Question label="Ja sukunimi." data={formData.sukunimi} />,
     <Question
@@ -392,76 +401,88 @@ const NetlifyForm = () => {
       enableLineBreak
     />,
     <Question
-      label="Lopuksi, miten kuvailisit yrityksesi ydinosaamista?"
-      subLabel="Eli miten erotut kilpailijoista ja mihin kilpailukykysi perustuu."
+      label="Entäs, miten kuvailisit yrityksesi ydinosaamista?"
+      subLabel="Eli miten erotut kilpailijoistasi ja mihin kilpailukykysi perustuu."
       data={formData.ydinosaaminen}
       enableLineBreak
     />,
     <Intermission
-      header="Jatketaan bränditiedojen keräämisestä."
-      subheader="Brändi on mielikuva yrityksestä joka syntyy tarkoitusella tai vahingossa."
+      header="Muutama kysymys tavaramerkistä."
+      subheader="Tavaramerkki, eli brändi on mielikuva yrityksestä, joka syntyy tarkoituksella tai vahingossa."
     />,
     <Question
       label="Kuvaile yrityksesi brändiä vapaamuotoisesti."
-      subLabel="Jos brändiä ei ole vielä kehitetty, kirjoita 3-5 sanaa jotka kuvaavat yritystäsi."
+      subLabel="Jos sitä ei ole vielä kehitetty, kirjoita 3-5 sanaa jotka kuvaavat yritystäsi."
       data={formData.brandiKuvaus}
       enableLineBreak
     />,
     <Question
-      label="Onko sinulla omia brändiresursseja?"
-      subLabel="Kuten suosikkifonttia, logoa, väriteemaa, tms."
+      label="Mitä brändiresursseja sinulla on olemassa?"
+      subLabel="Kuten fonttia, logoa, väriteemaa, tms."
       data={formData.brandiResurssit}
       enableLineBreak
     />,
     <Intermission
-      header="Seuraavaksi mietitään kohderyhmän taustatietoja."
-      subheader="Olet noin 60% valmis."
+      header="Seuraavaksi kartoitetaan kohderyhmää."
+      subheader="Muista, antamasi vastaukset tehostavat suunnittelun vaikuttavuutta."
     />,
     <Selection
-      label="Arvioi verkkosivusi kohderyhmän ikä."
+      label="Arvioi kohderyhmän keskeisin ikähaarukka."
       data={formData.kohderyhmaIka}
       options={ageOptions}
     />,
     <Selection
-      label="Valitse asiakkaasi keskimääräinen tulo 12 kuukaudelta."
+      label="Valitse kohderyhmän keskimääräinen tulo 12 kuukaudelta."
       data={formData.kohderyhmaTulot}
       options={moneyOptions}
     />,
     <RangeQuestion
       label="Arvioi kohderyhmäsi sukupuolijakauma."
-      subLabel="Jätä liukusäädin 50 prosenttiin jos tällä ei ole merkitystä."
+      subLabel="Jätä liukusäädin 50% jos tällä ei ole merkitystä."
       data={formData.kohderyhmaSukupuoli}
       onChange={sliderChange}
     />,
     <Question
-      label="Kuvaile unelma-asiakastasi omin sanoin."
-      subLabel="Mikä on hänelle tärkeintä? Mitä hän pelkää? Mitä hän odottaa sinulta? Mitä negatiivisia kokemuksia hänellä on toimialastasi?"
+      label="Kuvaile kohderyhmääsi omin sanoin."
       data={formData.kohderyhmaKuvaus}
       enableLineBreak
     />,
-    <Intermission
-      header="Kiitos antamista vastauksistasi, ne tulevat nopeuttamaan suunnittelua."
-      subheader="Viimeiseksi kysellään verkkosivuista."
+    <Question
+      label="Kuvittele unelma-asiakastasi."
+      subLabel="Mikä on hänelle tärkeintä? Mitä hän odottaa sinulta?"
+      data={formData.kohderyhmaKuvausPositiivinen}
+      enableLineBreak
     />,
     <Question
-      label="Kuvaile omin sanoin millaisen verkkosivun haluat."
-      subLabel="Aloita verkkosivun tyypistä, onko se kauppa, blogi, markkinointisivu, tms."
+      label="Jatka unelma-asiakkaasi kuvittelua."
+      subLabel="Mitä hän pelkää? Mitä negatiivisia kokemuksia hänellä on toimialastasi?"
+      data={formData.kohderyhmaKuvausNegatiivinen}
+      enableLineBreak
+    />,
+    <Intermission
+      header="Kiitos paljon vastauksista."
+      subheader="Viimeiseksi vähän kotisivusta itsestään."
+    />,
+    <Question
+      label="Kuvaile omin sanoin millaisen kotisivun haluat."
+      subLabel="Aloita tyypistä. Puhutaanko verkkokaupasta, blogista, markkinointisivusta, web-appista, tms."
       data={formData.verkkosivuKuvaus}
       enableLineBreak
     />,
     <Question
-      label="Listaa verkkosivusi tärkein tavoite."
-      subLabel="Mitä spesifisempi vastauksesi, sitä parempi."
+      label="Listaa yrityssivusi tärkeimmät tavoitteet."
+      subLabel="Koita olla spesifinen, mutta toiveikas."
       data={formData.verkkosivuTavoite}
       enableLineBreak
     />,
     <Selection
-      label="Oletko kiinnostunut Digiaallon ylläpitopalveluksesta?"
+      label="Oletko kiinnostunut Digiaallon lisäpalvelusta?"
+      subLabel="Palveluun kuuluu sisällönhallinta, päivitykset, muut pienet muutostyöt."
       data={formData.lisapalvelu}
       options={lisapalveluOptions}
     />,
     <Question
-      label="Omistatko muita palveluita?"
+      label="Omistatko jo muita palveluita, mitä mielestäsi tarvitset?"
       subLabel="Esimerkiksi domainin, palvelimen, yrityssähköpostin, tms."
       data={formData.verkkosivuPalvelut}
       enableLineBreak
@@ -514,26 +535,59 @@ const NetlifyForm = () => {
   )
 }
 
-const StartScreen = (props) => {
-  const { editorEnabled } = useContext(FunctionsCtx)
+const StartScreen = () => {
+  const { editorEnabled, changeQuestion } = useContext(FunctionsCtx)
   if (editorEnabled) return null
 
   return (
     <Element className={styles.finalEditor}>
       <span className={styles.header}>
-        Kiitos, että olet kiinnostunut käyttäjäystävällisistä verkkosivuista.
+        Kiitos, että olet kiinnostunut suorityskykyisistä verkkosivuista.
       </span>
       <p className={styles.subheader}>
-        Tiedustelut ja kyselyt voi lähettää sähköpostiin tai soittamalla
-        arkipäivisin. On suositeltavaa että aloitat verkkosivujen
-        hankintaprosessin täyttämällä haastattelulomakeen.
+        Lähtölaukaise kotisivun tilausprosessi täyttämällä interaktiivinen
+        haastattelulomake. Muut kysyttävät ja tiedustelut onnistuvat parhaiten
+        sähköpostilla tai soittamalla arkipäivisin.
       </p>
-      <Buttons text="Haastattelu →" />
-      <div className={styles.helpContainer}>
-        <MdTimer className={styles.helpIcon} />
-        <p className={styles.help}>Kesto 15+ minuuttia.</p>
+      <div className={styles.buttonRow}>
+        <FunctionButton
+          text={"Tilauslomake →"}
+          name="next"
+          onClick={(e) => {
+            changeQuestion("next")
+          }}
+        />
       </div>
     </Element>
+  )
+}
+
+const SecondScreen = () => {
+  const { changeQuestion } = useContext(FunctionsCtx)
+  return (
+    <React.Fragment>
+      <Element className={styles.finalEditor}>
+        <Headers
+          header={"Nopeuta kotisivun hankintaa kätevällä haastattelulla."}
+          subheader={`Valmistaudu vastamaan muutamaan kysymykseen itsestäsi, yrityksestä ja brändistä, kohderyhmästä ja tästä projektista.`}
+        />
+        <div className={styles.intermissionButtons}>
+          <FunctionButton
+            text={"Ok"}
+            name="next"
+            onClick={(e) => {
+              e.currentTarget.blur()
+              changeQuestion("next")
+            }}
+            icon={<GrFormCheckmark />}
+          />
+        </div>
+        <div className={styles.helpContainer}>
+          <MdTimer className={styles.helpIcon} />
+          <p className={styles.help}>Kesto 15+ minuuttia.</p>
+        </div>
+      </Element>
+    </React.Fragment>
   )
 }
 

@@ -27,16 +27,13 @@
         polyline
           stroke: #fff !important
 
-  &:hover
+  &:hover, &:focus
     background-color: transparent
     color: map-get($colors, textDark)
     svg
       polyline
         stroke: map-get($colors, textDark)
 
-  &:focus
-    outline-color: map-get($colors, secondary)
-  
   svg
     margin-left: 4px
     polyline  
