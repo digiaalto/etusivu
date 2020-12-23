@@ -1,5 +1,6 @@
 @import "_partials"
 
+// Layout.
 .section
   padding: map-get($padding, mobile)
   padding-left: 0 !important
@@ -8,7 +9,6 @@
   z-index: 1
   background-color: map-get($colors, bgLight)
   user-select: none
-
 .content
   padding: 4rem 0
   width: 100%
@@ -19,6 +19,7 @@
   flex-wrap: nowrap
   background-color: map-get($colors, secondary)
 
+// Content.
 .track
   display: block
   transform: translate()
@@ -27,37 +28,21 @@
   font-weight: 400
   border-top: 2px solid black
   border-bottom: 2px solid black
-
-  // &:first-of-type
-  //   border-top: none
-  // &:last-of-type
-  //   border-bottom: none
-  
   &:nth-of-type(2)
     border: none
-
 .lines
   display: flex
   justify-content: center
   padding: 2rem 0
-
 .seperator
   margin: 0 0.5rem
 
-// ANIMATION
-@keyframes floatText
-  to
-    transform: translateX(-100%)
-    
-// MEDIA
-
-@media (min-width: map-get($bp, tablet))
+// Media.
+@include tablet
   .track
     font-size: $h2Size
 
-@media (min-width: map-get($bp, laptop))
-  .section
-    padding: map-get($padding, laptop)
+@include laptop
   .track
     font-size: $h1Size
   .seperator
