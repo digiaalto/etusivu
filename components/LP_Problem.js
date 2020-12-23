@@ -1,9 +1,15 @@
 import styles from "../styles/LP_Problem.module.sass"
 import { Fade } from "react-awesome-reveal"
 
-const LP_Problem = () => {
+const LP_Problem = (props) => {
+  const { refs } = props
+
   return (
-    <section className={styles.section} id="verkkopalvelu-ongelma">
+    <section
+      className={styles.section}
+      id="verkkohankinnan-ongelmia"
+      ref={refs}
+    >
       <Fade delay={300} triggerOnce>
         <div className={styles.content}>
           <div className={styles.headerWrapper}>

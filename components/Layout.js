@@ -1,9 +1,10 @@
 import React, { useState } from "react"
 import Head from "next/head"
+import disableScroll from "disable-scroll"
+
 import Topbar from "./Topbar"
 import NavMenu from "./NavMenu"
 import Footer from "./Footer"
-import disableScroll from "disable-scroll"
 
 const Layout = (props) => {
   const {
@@ -12,26 +13,27 @@ const Layout = (props) => {
     description,
     topbar,
     footerHaastattelu,
+    sectionRefs,
     children,
   } = props
   const [overlayVisible, setOverlayVisible] = useState(false)
+
+  const SEO = {
+    title: title
+      ? `${title} | Digiaalto.fi`
+      : `Verkkosivut yritykselle nopeasti ja helposti | Digiaalto.fi`, // 60 chars.
+    type: type ? type : "website",
+    description: description
+      ? description
+      : `Digiaalto rakentaa laatutestattuja verkkosivuja kiireiselle yrittäjälle uudella tekniikalla. Osta tehokkaat ja optimoidut verkkosivut, saat avaimet käteen.`,
+    image: "https://www.digiaalto.fi/brand/some-image.png",
+  }
 
   const toggleOverlay = () => {
     const newOverlayVisible = !overlayVisible
     if (newOverlayVisible) disableScroll.on()
     else disableScroll.off()
     setOverlayVisible(!overlayVisible)
-  }
-
-  const SEO = {
-    title: title
-      ? `${title} | Digiaalto.fi`
-      : `Verkkosivut yritykselle nopeasti ja helposti | Digiaalto.fi`, // 60
-    type: type ? type : "website",
-    description: description
-      ? description
-      : `Digiaalto rakentaa laatutestattuja verkkosivuja kiireiselle yrittäjälle uudella tekniikalla. Osta tehokkaat ja optimoidut verkkosivut, saat avaimet käteen.`,
-    image: "https://www.digiaalto.fi/brand/some-image.png",
   }
 
   return (
@@ -51,8 +53,12 @@ const Layout = (props) => {
         <meta name="og:image" content={SEO.image} />
       </Head>
       {topbar && <Topbar />}
-      <NavMenu menuOpen={overlayVisible} toggleOverlay={toggleOverlay} />
-      <main style={{ marginTop: "3rem" }}>{children}</main>
+      <NavMenu
+        menuOpen={overlayVisible}
+        toggleOverlay={toggleOverlay}
+        sectionRefs={sectionRefs}
+      />
+      <main>{children}</main>
       <Footer haastattelu={footerHaastattelu} />
     </React.Fragment>
   )

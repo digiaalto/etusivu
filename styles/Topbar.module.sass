@@ -2,6 +2,7 @@
 
 $textColor: map-get($colors, textLight)
 
+// Layout.
 .topbar
 	z-index: 998
 	position: fixed
@@ -14,18 +15,6 @@ $textColor: map-get($colors, textLight)
 	padding: 0 1rem
 	background-color: map-get($colors, primary)
 	font-size: 1rem
-
-.contactLink
-	display: flex
-	align-content: center
-	align-items: center
-	color: $textColor !important
-	font-size: 0.9rem
-
-.contactText
-	margin-left: 8px
-	display: none
-
 .divider
 	display: block
 	background-color: $textColor
@@ -34,8 +23,20 @@ $textColor: map-get($colors, textLight)
 	opacity: 0.15
 	content: ""
 	margin: 0 0.33rem
+
+// Content.
+.contactLink
+	display: flex
+	align-content: center
+	align-items: center
+	color: $textColor !important
+	font-size: 0.9rem
+.contactText
+	margin-left: 8px
+	display: none
 	
-@media (min-width: map-get($bp, tablet))
+// Media queries.
+@include tablet
 	.topbar
 		justify-content: center
 	.divider
@@ -48,6 +49,3 @@ $textColor: map-get($colors, textLight)
 			font-weight: 800
 		&:hover
 			color: map-get($colors, secondary) !important
-
-
-@media (min-width: map-get($bp, laptop))

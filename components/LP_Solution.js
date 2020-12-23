@@ -3,9 +3,14 @@ import { Fade } from "react-awesome-reveal"
 
 import Benefits from "./Benefits"
 
-const LP_Solution = () => {
+const LP_Solution = (props) => {
+  const { refs } = props
   return (
-    <section className={styles.section} id="verkkopalvelu">
+    <section
+      className={styles.section}
+      id="verkkohankinnan-ratkaisu"
+      ref={refs}
+    >
       <Fade delay={300} triggerOnce>
         <div className={styles.content}>
           <div className={styles.headerWrapper}>

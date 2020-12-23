@@ -5,9 +5,14 @@ import Quote from "./LP_Quote"
 
 const auditLink = "https://www.web.dev/measure"
 
-const LP_Audit = () => {
+const LP_Audit = (props) => {
+  const { refs } = props
   return (
-    <section className={styles.section} id="laatutesti-google-lighthouse">
+    <section
+      className={styles.section}
+      id="laatutesti-google-lighthouse"
+      ref={refs}
+    >
       <div className={styles.content}>
         <div className={styles.column}>
           <span className={styles.preheader}>Laatumittari</span>

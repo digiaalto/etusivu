@@ -1,25 +1,18 @@
 import styles from "../styles/NavMenu.module.sass"
+import React, { useState, useEffect } from "react"
+import { useRouter } from "next/router"
 import { FiMenu } from "react-icons/fi"
 import { AiOutlineClose } from "react-icons/ai"
-import { useRouter } from "next/router"
 import Overlay from "./utility/Overlay"
-
-/**
- * Navigation Menu for both desktop and mobile.
- *
- * Opens up an dark overlay with smooth animations on click.
- * Overlay closes once user clicks a link or the overlay itself.
- * Overlay also contains a close button for UX.
- */
 
 const links = [
   {
-    text: "Etusivu",
-    href: "/#",
+    text: "Digiaalto lyhyesti",
+    href: "/#digiaalto-lyhyesti",
   },
   {
-    text: "Verkkopalvelu",
-    href: "/#verkkopalvelu",
+    text: "Verkkosivut",
+    href: "/#verkkohankinnan-ratkaisu",
   },
   {
     text: "Laatutesti",
@@ -30,8 +23,8 @@ const links = [
     href: "/#valmistusprosessi",
   },
   {
-    text: "Hinnoittelu",
-    href: "/#hinnoittelu",
+    text: "Hinta",
+    href: "/#hinta",
   },
   {
     text: "Yhteydenotto",
@@ -40,28 +33,122 @@ const links = [
 ]
 
 const NavMenu = (props) => {
-  const { menuOpen, toggleOverlay } = props
+  const { menuOpen, toggleOverlay, sectionRefs } = props
+  const [visibleSection, setVisibleSection] = useState()
+
+  useEffect(() => {
+    if (sectionRefs) {
+      const handleScroll = () => {
+        const scrollPosition = window.scrollY
+
+        const selected = sectionRefs.find(({ ref }) => {
+          const ele = ref.current
+          if (ele) {
+            const { offsetTop, offsetBottom } = getDimensions(ele)
+            return (
+              scrollPosition + 10 >= offsetTop &&
+              scrollPosition <= offsetBottom - 10
+            )
+          }
+        })
+
+        if (selected && selected.section !== visibleSection)
+          setVisibleSection(selected.section)
+        // else if (!selected && visibleSection) setVisibleSection(undefined)
+      }
+
+      handleScroll()
+      window.addEventListener("scroll", handleScroll)
+      return () => {
+        window.removeEventListener("scroll", handleScroll)
+      }
+    }
+  }, [visibleSection])
+
+  function scrollTo(ele) {
+    ele.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    })
+  }
+
   return (
-    <>
-      <div className={styles.menu}>
-        <button
-          className={styles.menuButton}
-          onClick={toggleOverlay}
-          type="button"
-        >
-          {menuOpen ? <AiOutlineClose /> : <FiMenu />}
-          Menu
-        </button>
-      </div>
+    <React.Fragment>
+      <MenuContainer>
+        <MenuButton menuOpen={menuOpen} toggleOverlay={toggleOverlay} />
+        <Tracker menuOpen={menuOpen}>
+          {sectionRefs &&
+            sectionRefs.map(({ section, ref, hoverText }) => (
+              <TrackerItem
+                selected={section === visibleSection}
+                hoverText={hoverText}
+                scrollTo={() => scrollTo(ref.current)}
+                key={`section-dot-${section}`}
+              />
+            ))}
+        </Tracker>
+      </MenuContainer>
       <Overlay
         visible={menuOpen}
         children={<LinkList links={links} toggleOverlay={toggleOverlay} />}
       />
-    </>
+    </React.Fragment>
   )
 }
 
+const getDimensions = (ele) => {
+  const { height } = ele.getBoundingClientRect()
+  const offsetTop = ele.offsetTop
+  const offsetBottom = offsetTop + height
+
+  return {
+    height,
+    offsetTop,
+    offsetBottom,
+  }
+}
+
 export default NavMenu
+
+const MenuContainer = (props) => {
+  const { children } = props
+  return <div className={styles.menu}>{children}</div>
+}
+
+const MenuButton = (props) => {
+  const { menuOpen, toggleOverlay } = props
+  return (
+    <button className={styles.menuButton} onClick={toggleOverlay} type="button">
+      {menuOpen ? <AiOutlineClose /> : <FiMenu />}
+    </button>
+  )
+}
+
+const Tracker = (props) => {
+  const { menuOpen, children } = props
+  return (
+    <div
+      className={styles.tracker}
+      style={menuOpen ? { pointerEvents: "none" } : null}
+    >
+      {children}
+    </div>
+  )
+}
+
+const TrackerItem = (props) => {
+  const { selected, hoverText, scrollTo } = props
+  return (
+    <div className={styles.trackerItem}>
+      <div
+        className={`${styles.sectionDot} ${selected ? styles.selected : null}`}
+        onClick={scrollTo}
+      >
+        <span className={styles.hoverText}>{hoverText}</span>
+      </div>
+    </div>
+  )
+}
 
 const LinkList = (props) => {
   const { links, toggleOverlay } = props
@@ -75,7 +162,7 @@ const LinkList = (props) => {
           key={`nav-link-${index}`}
           onClick={(e) => {
             toggleOverlay()
-            router.push(link.href)
+            router.push(link.href).then(() => window.scrollTo(0, 0))
           }}
         >
           {link.text}

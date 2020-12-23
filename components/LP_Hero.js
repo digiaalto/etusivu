@@ -2,7 +2,8 @@ import styles from "../styles/LP_Hero.module.sass"
 import React, { useState, useEffect } from "react"
 import Button from "./utility/Button"
 
-const Hero = () => {
+const Hero = (props) => {
+  const { refs } = props
   const [animElement, setAnimElement] = useState(0)
 
   useEffect(() => {
@@ -17,7 +18,7 @@ const Hero = () => {
   })
 
   return (
-    <section className={styles.section} id="etusivu">
+    <section className={styles.section} id="digiaalto-lyhyesti" ref={refs}>
       <div className={styles.content}>
         <h1 className={styles.salesPitch}>
           <span
@@ -63,7 +64,7 @@ const Hero = () => {
         <div className={styles.ctaButtons}>
           <Button href="/yhteydenotto" text="Ota yhteyttä" />
           <Button
-            href="/#verkkopalvelu-ongelma"
+            href="/#verkkohankinnan-ongelmia"
             text="Lue Lisää"
             secondary={true}
           />

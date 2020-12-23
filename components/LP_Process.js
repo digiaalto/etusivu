@@ -2,8 +2,9 @@ import styles from "../styles/LP_Process.module.sass"
 import { useEffect, useState } from "react"
 import { useInView } from "react-intersection-observer"
 
-const LP_Process = () => {
-  const { ref, inView, entry } = useInView()
+const LP_Process = (props) => {
+  const { refs } = props
+  const { ref, inView } = useInView()
   const [initialY, setInitialY] = useState(0)
   const [scrollY, setScrollY] = useState(0)
 
