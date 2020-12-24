@@ -765,6 +765,7 @@ const PreviousButton = () => {
         onClick={() => changeQuestion("prev")}
         className={styles.previousButton}
         type="button"
+        tabIndex={-1}
       >
         <GrPrevious className={styles.prevBtnIcon} />{" "}
         <span className={styles.prevBtnText}>Takaisin</span>

@@ -6,10 +6,12 @@ const LP_Problem = (props) => {
 
   return (
     <section className={styles.section} id="kotisivujen-hankinta" ref={refs}>
-      <Fade delay={300} triggerOnce>
+      <Fade delay={400} triggerOnce>
         <div className={styles.content}>
           <div className={styles.headerWrapper}>
-            <span className={styles.preheader}>Ongelma</span>
+            <Fade delay={400} direction="left">
+              <span className={styles.preheader}>Ongelma</span>
+            </Fade>
             <h1 className={styles.header}>
               Yrittäjyys on kiireistä ja kotisivujen hankinta monimutkaista.
             </h1>

@@ -1,6 +1,5 @@
 import styles from "../styles/Topbar.module.sass"
 import React from "react"
-import PropTypes from "prop-types"
 import Link from "next/link"
 import { MdEmail, MdLocalPhone } from "react-icons/md"
 
@@ -17,7 +16,7 @@ const Topbar = () => {
         <span className={styles.contactText}>050 554 3395</span>
       </a>
       <div className={styles.divider} />
-      <Link href="/yhteydenotto">
+      <Link href="/tilaus">
         <a className={styles.contactLink}>Tilaa verkkosivu →</a>
       </Link>
     </div>
@@ -25,13 +24,3 @@ const Topbar = () => {
 }
 
 export default Topbar
-
-Topbar.defaultProps = {
-  text: "yhteydenottolomake",
-  ctaHref: "/#yhteydenottolomake",
-}
-
-Topbar.propTypes = {
-  text: PropTypes.string.isRequired,
-  ctaHref: PropTypes.string.isRequired,
-}
