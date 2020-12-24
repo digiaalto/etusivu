@@ -5,9 +5,10 @@ import Benefits from "./Benefits"
 
 const LP_Solution = (props) => {
   const { refs } = props
+
   return (
     <section className={styles.section} id="palvelut" ref={refs}>
-      <Fade fraction={0.8} delay={400} triggerOnce>
+      <Fade fraction={0.1} delay={400} triggerOnce>
         <div className={styles.content}>
           <div className={styles.headerWrapper}>
             <Fade delay={400} direction="left">
