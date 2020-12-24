@@ -15,7 +15,7 @@ const LP_Solution = (props) => {
               <span className={styles.preheader}>Ratkaisu</span>
             </Fade>
             <h1 className={styles.header}>
-              Itsenäinen kotisivujen suunnittelija.
+              Itsenäinen kotisivujen suunnittelupalvelu.
             </h1>
           </div>
           <div className={styles.textContainer}>

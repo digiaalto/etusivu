@@ -6,16 +6,20 @@ const Benefits = () => {
       <span className={styles.benefitHeader}>Syitä valita Digiaalto.</span>
       <ul className={styles.benefitsList}>
         <Benefit
-          benefitHeader="Hyödyt rakenteellisesta kilpailuedusta."
-          benefitText="Oikeasti uudenaikaiset kotisivut, kehitetty kilpailijasi Wordpressiä kehittyneemmällä React-teknologialla."
+          benefitHeader="Rakenteellinen kilpailuetu."
+          benefitText="Oikeasti uudenaikaiset kotisivut, kilpailijasi WordPressiä suorituskykyisempi ja turvallisempi."
+        />
+        <Benefit
+          benefitHeader="Skaalautuva ja kestävä."
+          benefitText="Digiaallon hyödyntämää arkkitehtuuria ei suosi pelkästään isot teknologiajätit, mutta myös ja ajan hermolla surffaavat pienyritykset."
         />
         <Benefit
           benefitHeader="Täydellinen valinnanvapaus."
-          benefitText="React on digijättien suosima alusta webissä, sillä sen toimintaa voi muuttaa perusteellisesti tarpeiden mukaan."
+          benefitText="Reactiin voi integroida minkä tahansa halutun palvelun tai ominaisuuden."
         />
         <Benefit
-          benefitHeader="Mitattava Laatuero muihin."
-          benefitText="Digiaalto pystyy todistamaan kehittävänsä huippulaadukkaita kotisivuja Googlen Lighthousen laatutestauksen raporteilla."
+          benefitHeader="Mitattava laatuero muihin."
+          benefitText="Digiaalto todistaa kehittävänsä huippulaadukkaita kotisivuja Googlen Lighthousen laatutestauksen auditoinnin kautta."
         />
       </ul>
     </div>

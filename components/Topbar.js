@@ -13,7 +13,7 @@ const Topbar = () => {
       <div className={styles.divider} />
       <a href="tel:+358505543395" className={styles.contactLink}>
         <MdLocalPhone />
-        <span className={styles.contactText}>050 554 3395</span>
+        <span className={styles.contactText}>050 5543 395</span>
       </a>
       <div className={styles.divider} />
       <Link href="/tilaus">
