@@ -15,10 +15,6 @@ const links = [
     href: "/#palvelut",
   },
   {
-    text: "Laatutesti",
-    href: "/#laatutesti-google-lighthouse",
-  },
-  {
     text: "Prosessi",
     href: "/#prosessi",
   },

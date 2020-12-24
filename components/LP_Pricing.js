@@ -6,7 +6,7 @@ const LP_Pricing = (props) => {
     <section className={styles.section} id="hinta" ref={refs}>
       <div className={styles.content}>
         <h3 className={styles.header}>
-          Yrityssivu avaimet käteen toimituksella kiinteään hintaan 3,200€
+          Yrityssivut avaimet käteen toimituksella kiinteään hintaan 3,200€
         </h3>
         <p className={styles.note}>
           Digiaalto laskuttaa 30% etukäteen.

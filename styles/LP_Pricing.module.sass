@@ -1,5 +1,6 @@
 @import "_partials.sass"
 
+// Layout.
 .section
 	padding: map-get($padding, mobile)
 	display: flex
@@ -7,7 +8,6 @@
 	position: relative
 	z-index: 1
 	background-color: map-get($colors, bgLight)
-
 .content
 	display: flex
 	flex-direction: column
@@ -16,31 +16,24 @@
 	text-align: center
 	max-width: 60rem
 
-.giftIcon
-	font-size: 3rem
-	color: map-get($colors, secondary)
-	align-self: center
-	
+// Headers.
 .header
 	font-size: $h3Size
 	margin-top: 0rem
 	font-weight: 800
 	line-height: $headerLineHeight
-
+	margin-bottom: 2rem
 .note
 	color: map-get($colors, textGray)
 	align-self: center
 
-@media (min-width: map-get($bp, tablet))
+// Media queries.
+@include tablet
 	.header
 		font-size: $h2Size
 
-@media (min-width: map-get($bp, laptop))
+@include laptop
 	.section
 		padding: map-get($padding, laptop)
-	.giftIcon
-		font-size: 6rem
-		margin-bottom: 2rem
 	.header
 		font-size: $h1Size * 1.2
-		margin-bottom: 0

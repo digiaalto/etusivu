@@ -4,7 +4,6 @@ import LP_Hero from "../components/LP_Hero"
 import LP_Problem from "../components/LP_Problem"
 import LP_Solution from "../components/LP_Solution"
 import LP_TrackInfographic from "../components/LP_TrackInfographic"
-import LP_Audit from "../components/LP_Audit"
 import LP_Process from "../components/LP_Process"
 import LP_Pricing from "../components/LP_Pricing"
 import LP_Expect from "../components/LP_Expect"
@@ -13,7 +12,6 @@ const IndexPage = () => {
   const heroRef = useRef(null)
   const problemRef = useRef(null)
   const solutionRef = useRef(null)
-  const auditRef = useRef(null)
   const processRef = useRef(null)
   const pricingRef = useRef(null)
 
@@ -29,7 +27,6 @@ const IndexPage = () => {
       hoverText: "Ratkaisu",
       ref: solutionRef,
     },
-    { section: "Audit", hoverText: "Laatutesti", ref: auditRef },
     { section: "Process", hoverText: "Prosessi", ref: processRef },
     { section: "Pricing", hoverText: "Hinta", ref: pricingRef },
   ]
@@ -41,7 +38,6 @@ const IndexPage = () => {
         <LP_Problem refs={problemRef} />
         <LP_Solution refs={solutionRef} />
         <LP_TrackInfographic />
-        <LP_Audit refs={auditRef} />
         <LP_Process refs={processRef} />
         <LP_Pricing refs={pricingRef} />
         <LP_Expect />

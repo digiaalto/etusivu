@@ -20,29 +20,29 @@ const LP_Process = (props) => {
           </h4>
           <div className={styles.textBlocks}>
             <TextBlock
-              miniheader="Aloitetaan"
+              miniheader="Aloitetaan, 2pv"
               header="Kartoitus"
-              text="Kaikki alkaa yhteydenotosta. Valmistaudu antamaan perustietoja yrityksestäsi. Vapaaehtoisesti voit kertoa myös brändistäsi, haluamastasi verkkosivusta ja kohderyhmästä."
+              text="Kaikki alkaa yhteydenotosta. Valmistaudu antamaan perustietoja yrityksestäsi. Vapaaehtoisesti voit kertoa myös brändistä, kohderyhmästä ja projektista."
             />
             <TextBlock
-              miniheader="Vaihe 2"
+              miniheader="Vaihe 2, 5pv"
               header="Suunnittelu"
-              text="Taustatiedot käydään läpi ja pienen alustavan tutkimuksen jälkeen Digiaalto suunnittelee ja määrittelee käyttäjäystävällisen tietohierarkian sivusta."
+              text="Antamasi taustatiedot käydään läpi ja tutkimuksen jälkeen suunnitellaan sisältö ja käyttäjäystävällinen tietohierarkia ja sivukartta."
             />
             <TextBlock
-              miniheader="Vaihe 3"
+              miniheader="Vaihe 3, 7pv"
               header="Design"
-              text="Laaditaan graafinen representaatio verkkosivustasi mistä selviää ulkoasun pääpiirteet. Ennen seuraavaa vaihetta tämä malli hyväksytetään sinulla."
+              text="Luodaan brändiisi sopiva tyylikokoelma ja graafinen representaatio sivusta mihin sovelletaan sisältö ja tyylielementit. Tätä mallia hiotaan kunnes olet tyytyväinen."
             />
             <TextBlock
-              miniheader="Vaihe 4"
+              miniheader="Vaihe 4, 10pv"
               header="Kehitys"
-              text="Kehitystyö tehdään edellisen mallin mittojen mukaisesti. Säännöllisellä laatutestauksella varmistetaan parhaat tekniset päätökset ja ylivoimainen hakukoneoptimointi."
+              text="Koodaus alkaa. Kotisivu valmistetaan mallista ja tekniset päätökset tehdään tapauskohtaisesti ja hakukoneiden suosimien standardien mukaisesti."
             />
             <TextBlock
               miniheader="Valmista!"
               header="Julkaisu"
-              text="Verkkosivu on valmis ja toimii itsenäisesti tästä päivästä eteenpäin. Sinulle toimitetaan ohjeet käyttöä varten sekä muihin mahdollisiin palveluihin."
+              text="Onneksi olkoon, yrityssivusi on valmis ja toimii itsenäisesti tästä päivästä eteenpäin!"
             />
           </div>
         </div>
