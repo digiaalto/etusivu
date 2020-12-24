@@ -18,7 +18,7 @@ const Footer = (props) => {
 const HaastatteluLink = () => {
   return (
     <div className={styles.footerItem}>
-      <Link href="/yhteydenotto">
+      <Link href="/tilaus">
         <a className={styles.haastatteluLink}>
           Tilaa
           <br />

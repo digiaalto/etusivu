@@ -61,7 +61,7 @@ const Track = ({ inView, line, xInPercentage, separator = " → " }) => {
             : null
         }
       >
-        {[...Array(12)].map((e, i) => (
+        {[...Array(16)].map((e, i) => (
           <span key={`${line}-${i}`}>
             {line}
             <span className={styles.seperator}>{separator}</span>
