@@ -1,18 +1,13 @@
 @import "_partials"
 
-.section
-  padding: map-get($padding, mobile)
-  padding-top: 0
-  position: relative
-  z-index: 1
-  background-color: map-get($colors, bgLight)
-
 .content
   display: flex
   flex-direction: row
   flex-wrap: wrap
   justify-content: center
   color: map-get($colors, textLight)
+  margin-top: 3rem
+  text-align: left
 
 .column
   flex: 1
@@ -43,10 +38,6 @@
     &:last-of-type
       padding-left: 0
 @media (min-width: map-get($bp, desktop))
-  .section
-    padding: map-get($padding, laptop)
-    padding-top: 0
-    padding-bottom: 8rem
   .column
     padding: 5rem 4rem
   .header

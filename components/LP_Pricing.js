@@ -1,4 +1,5 @@
 import styles from "../styles/LP_Pricing.module.sass"
+import Expect from "./LP_Expect"
 
 const LP_Pricing = (props) => {
   const { refs } = props
@@ -13,6 +14,7 @@ const LP_Pricing = (props) => {
           <br />
           Sisällönhallintapalvelu 129,00€ / vuosi.
         </p>
+        <Expect />
       </div>
     </section>
   )

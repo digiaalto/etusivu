@@ -2,32 +2,30 @@ import styles from "../styles/LP_Expect.module.sass"
 
 const LP_Expect = () => {
   return (
-    <section className={styles.section}>
-      <div className={styles.content}>
-        <div className={styles.column}>
-          <h3 className={styles.header}>Mitä et saa</h3>
-          <List
-            items={[
-              "Loputtomasti revisioita",
-              "Ulkoistettua koodia",
-              "Ylisuunniteltua ulkoasua",
-              "Viivyttelyä",
-            ]}
-          />
-        </div>
-        <div className={styles.column}>
-          <h3 className={`${styles.header} ${styles.highlight}`}>Mitä saat</h3>
-          <List
-            items={[
-              "Huippuluokan optimoinnin",
-              "Laatutestin raportin",
-              "Parhaat palvelusuositukset",
-              "Halumasi sisällönhallintapalvelun",
-            ]}
-          />
-        </div>
+    <div className={styles.content}>
+      <div className={styles.column}>
+        <h3 className={styles.header}>Mitä et saa</h3>
+        <List
+          items={[
+            "Loputtomasti revisioita",
+            "Ulkoistettua koodia",
+            "Ylisuunniteltua ulkoasua",
+            "Viivyttelyä",
+          ]}
+        />
       </div>
-    </section>
+      <div className={styles.column}>
+        <h3 className={`${styles.header} ${styles.highlight}`}>Mitä saat</h3>
+        <List
+          items={[
+            "Huippuluokan optimoinnin",
+            "Laatutestin raportin",
+            "Parhaat palvelusuositukset",
+            "Halumasi sisällönhallintapalvelun",
+          ]}
+        />
+      </div>
+    </div>
   )
 }
 

@@ -6,7 +6,7 @@ import LP_Solution from "../components/LP_Solution"
 import LP_TrackInfographic from "../components/LP_TrackInfographic"
 import LP_Process from "../components/LP_Process"
 import LP_Pricing from "../components/LP_Pricing"
-import LP_Expect from "../components/LP_Expect"
+// import LP_Expect from "../components/LP_Expect"
 
 const IndexPage = () => {
   const heroRef = useRef(null)
@@ -40,7 +40,7 @@ const IndexPage = () => {
         <LP_TrackInfographic />
         <LP_Process refs={processRef} />
         <LP_Pricing refs={pricingRef} />
-        <LP_Expect />
+        {/* <LP_Expect /> */}
       </Layout>
     </div>
   )
