@@ -8,35 +8,33 @@ const LP_Solution = (props) => {
 
   return (
     <section className={styles.section} id="palvelut" ref={refs}>
-      <Fade fraction={0.1} delay={200} triggerOnce>
-        <div className={styles.content}>
-          <div className={styles.headerWrapper}>
-            <Fade delay={200} direction="left">
-              <span className={styles.preheader}>Ratkaisu</span>
-            </Fade>
-            <h1 className={styles.header}>
-              Itsenäinen kotisivujen suunnittelupalvelu.
-            </h1>
+      <div className={styles.content}>
+        <div className={styles.headerWrapper}>
+          <Fade fraction={1} direction="left">
+            <span className={styles.preheader}>Ratkaisu</span>
+          </Fade>
+          <h1 className={styles.header}>
+            Itsenäinen kotisivujen suunnittelupalvelu.
+          </h1>
+        </div>
+        <div className={styles.textContainer}>
+          <div className={styles.textColumn}>
+            <p>
+              Digiaalto on erikoistunut omatoimiseen verkkosuunnitteluun ja
+              verkkokehitykseen, joka tarkoittaa ettei sinulta tulla vaatimaan
+              haluamaasi suurempaa roolia kotisivujesi luonnissa.
+            </p>
           </div>
-          <div className={styles.textContainer}>
-            <div className={styles.textColumn}>
-              <p>
-                Digiaalto on erikoistunut omatoimiseen verkkosuunnitteluun ja
-                verkkokehitykseen, joka tarkoittaa ettei sinulta tulla vaatimaan
-                haluamaasi suurempaa roolia kotisivujesi luonnissa.
-              </p>
-              <p>
-                Valinnaisen lisäpalvelun kautta puolestasi hoidetaan myös muut
-                valmiin kotisivun lisätyöt, kuten sisällönmuutokset ja
-                päivitykset.
-              </p>
-            </div>
-            <div className={styles.textColumn}>
-              <Benefits />
-            </div>
+          <div className={styles.textColumn}>
+            <p>
+              Valinnaisen lisäpalvelun kautta puolestasi hoidetaan myös muut
+              valmiin kotisivun lisätyöt, kuten sisällönmuutokset ja
+              päivitykset.
+            </p>
           </div>
         </div>
-      </Fade>
+      </div>
+      <Benefits />
     </section>
   )
 }

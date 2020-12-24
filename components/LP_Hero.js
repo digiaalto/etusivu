@@ -21,7 +21,7 @@ const Hero = (props) => {
   return (
     <section className={styles.section} id="digiaalto" ref={refs}>
       <div className={styles.content}>
-        <Fade delay={200} triggerOnce>
+        <Fade delay={400} triggerOnce>
           <StylizedHeaders animElement={animElement} />
           <CtaButtons />
         </Fade>
