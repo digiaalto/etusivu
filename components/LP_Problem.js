@@ -8,7 +8,7 @@ const LP_Problem = (props) => {
     <section className={styles.section} id="kotisivujen-hankinta" ref={refs}>
       <div className={styles.content}>
         <div className={styles.headerWrapper}>
-          <Fade fraction={1} direction="left">
+          <Fade delay={200} direction="left">
             <span className={styles.preheader}>Ongelma</span>
           </Fade>
           <h1 className={styles.header}>

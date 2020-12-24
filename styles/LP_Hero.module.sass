@@ -48,12 +48,12 @@ $fadeSpeed: 2.1s
 // Headers.
 .salesPitch
 	display: block
-	font-size: 2.7rem
+	font-size: 3rem
 	font-weight: 800
 	line-height: 1.2em
 	margin: 0
 .highlightBackground, .highlightBackground2, .highlightBackground3, .salesPitch
-	letter-spacing: -0.2rem
+	letter-spacing: -0.1rem
 .subheader
 	font-size: $h5Size
 	line-height: 1.6em
@@ -141,9 +141,8 @@ $fadeSpeed: 2.1s
 		background-clip: text
 		-webkit-text-fill-color: transparent		
 	
-// MEDIA QUERIES
-	
-@media (min-width: map-get($bp, tablet))
+// Media queries.
+@include tablet
 	.ctaButtons
 		display: inline-flex
 		flex-direction: row
@@ -151,11 +150,11 @@ $fadeSpeed: 2.1s
 	.content
 		max-width: $tabletWidth
 	.salesPitch
-		font-size: 4rem
+		font-size: 5rem
 	.subheader
 		font-weight: 400
 
-@media (min-width: map-get($bp, laptop))
+@include laptop
 	.section
 		padding: map-get($padding, laptop)
 	.content
@@ -164,7 +163,7 @@ $fadeSpeed: 2.1s
 	.salesPitch
 		font-size: 6rem
 
-@media (min-width: map-get($bp, desktop))
+@include desktop
 	.content
 		max-width: $desktopWidth
 	.salesPitch

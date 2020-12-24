@@ -4,7 +4,7 @@ import { Fade } from "react-awesome-reveal"
 const Benefits = () => {
   return (
     <div className={styles.benefits}>
-      <Fade delay={100} damping={0.2} cascade triggerOnce>
+      <Fade delay={50} damping={0.2} cascade triggerOnce>
         <span className={styles.benefitHeader}>Syitä valita Digiaalto.</span>
         <ul className={styles.benefitsList}>
           <Benefit

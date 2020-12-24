@@ -10,7 +10,7 @@ const LP_Solution = (props) => {
     <section className={styles.section} id="palvelut" ref={refs}>
       <div className={styles.content}>
         <div className={styles.headerWrapper}>
-          <Fade fraction={1} direction="left">
+          <Fade delay={200} direction="left">
             <span className={styles.preheader}>Ratkaisu</span>
           </Fade>
           <h1 className={styles.header}>
