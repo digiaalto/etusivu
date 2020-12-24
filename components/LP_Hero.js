@@ -22,10 +22,10 @@ const Hero = (props) => {
     <section className={styles.section} id="digiaalto" ref={refs}>
       <div className={styles.content}>
         <Fade delay={400} triggerOnce>
-          <StylizedHeaders />
+          <StylizedHeaders animElement={animElement} />
           <CtaButtons />
         </Fade>
-        <Fade delay={700} direction="up" triggerOnce>
+        <Fade delay={400} direction="up" triggerOnce>
           <h1 className={styles.subheader}>
             Verkkokehittäjä Digiaalto rakentaa modernilla tavalla oikeasti
             tehokkaita ja laatutestattuja kotisivuja kiireisille yrittäjille.

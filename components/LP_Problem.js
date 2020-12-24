@@ -6,7 +6,7 @@ const LP_Problem = (props) => {
 
   return (
     <section className={styles.section} id="kotisivujen-hankinta" ref={refs}>
-      <Fade delay={400} triggerOnce>
+      <Fade fraction={0.1} delay={400} triggerOnce>
         <div className={styles.content}>
           <div className={styles.headerWrapper}>
             <Fade delay={400} direction="left">
