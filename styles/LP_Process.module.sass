@@ -45,7 +45,8 @@
 
 		img
 			max-width: 180px
-
+			&:not(:first-of-type)
+				margin-top: 1rem
 	&:last-of-type
 		flex-direction: column
 
@@ -100,6 +101,7 @@
 			height: 700px
 
 			img
+				margin-top: 0
 				position: absolute
 				max-width: 280px
 				user-select: none
