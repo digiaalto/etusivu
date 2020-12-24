@@ -22,57 +22,10 @@ const Hero = (props) => {
     <section className={styles.section} id="digiaalto" ref={refs}>
       <div className={styles.content}>
         <Fade delay={400} triggerOnce>
-          <h1 className={styles.salesPitch}>
-            <span
-              className={`${styles.highlightBackground} ${
-                animElement === 0 ? styles.reverseFadeAnimation : null
-              }`}
-            >
-              <span
-                className={`${styles.highlightForeground} ${
-                  animElement === 0 ? styles.fadeAnimation : null
-                }`}
-              >
-                Suunnittelu.
-              </span>
-            </span>
-            <div
-              className={`${styles.highlightBackground2} ${
-                animElement === 1 ? styles.reverseFadeAnimation : null
-              }`}
-            >
-              <span
-                className={`${styles.highlightForeground2} ${
-                  animElement === 1 ? styles.fadeAnimation : null
-                }`}
-              >
-                Kehitys.
-              </span>
-            </div>
-            <div
-              className={`${styles.highlightBackground3} ${
-                animElement === 2 ? styles.reverseFadeAnimation : null
-              }`}
-            >
-              <span
-                className={`${styles.highlightForeground3} ${
-                  animElement === 2 ? styles.fadeAnimation : null
-                }`}
-              >
-                Julkaisu.
-              </span>
-            </div>
-          </h1>
-          <div className={styles.ctaButtons}>
-            <Button href="/tilaus" text="Uudet Kotisivut" />
-            <Button
-              href="/#kotisivujen-hankinta"
-              text="Lue Lisää"
-              secondary={true}
-            />
-          </div>
+          <StylizedHeaders />
+          <CtaButtons />
         </Fade>
-        <Fade delay={700} direction="up">
+        <Fade delay={700} direction="up" triggerOnce>
           <h1 className={styles.subheader}>
             Verkkokehittäjä Digiaalto rakentaa modernilla tavalla oikeasti
             tehokkaita ja laatutestattuja kotisivuja kiireisille yrittäjille.
@@ -85,3 +38,58 @@ const Hero = (props) => {
 }
 
 export default Hero
+
+const CtaButtons = () => {
+  return (
+    <div className={styles.ctaButtons}>
+      <Button href="/tilaus" text="Uudet Kotisivut" />
+      <Button href="/#kotisivujen-hankinta" text="Lue Lisää" secondary={true} />
+    </div>
+  )
+}
+
+const StylizedHeaders = ({ animElement }) => {
+  return (
+    <h1 className={styles.salesPitch}>
+      <span
+        className={`${styles.highlightBackground} ${
+          animElement === 0 ? styles.reverseFadeAnimation : null
+        }`}
+      >
+        <span
+          className={`${styles.highlightForeground} ${
+            animElement === 0 ? styles.fadeAnimation : null
+          }`}
+        >
+          Suunnittelu.
+        </span>
+      </span>
+      <div
+        className={`${styles.highlightBackground2} ${
+          animElement === 1 ? styles.reverseFadeAnimation : null
+        }`}
+      >
+        <span
+          className={`${styles.highlightForeground2} ${
+            animElement === 1 ? styles.fadeAnimation : null
+          }`}
+        >
+          Kehitys.
+        </span>
+      </div>
+      <div
+        className={`${styles.highlightBackground3} ${
+          animElement === 2 ? styles.reverseFadeAnimation : null
+        }`}
+      >
+        <span
+          className={`${styles.highlightForeground3} ${
+            animElement === 2 ? styles.fadeAnimation : null
+          }`}
+        >
+          Julkaisu.
+        </span>
+      </div>
+    </h1>
+  )
+}
