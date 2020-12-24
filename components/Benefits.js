@@ -19,7 +19,7 @@ const Benefits = () => {
         />
         <Benefit
           benefitHeader="Mitattava laatuero muihin."
-          benefitText="Digiaalto todistaa kehittävänsä huippulaadukkaita kotisivuja Googlen Lighthousen laatutestauksen auditoinnin kautta."
+          benefitText="Digiaalto tähtää kehittäjänä teknilliseen täydellisyyteen ja todistaa tulokset Google Lighthouse verkkosivun laatutestillä."
         />
       </ul>
     </div>

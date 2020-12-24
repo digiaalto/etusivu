@@ -21,7 +21,7 @@ const LP_Expect = () => {
             "Huippuluokan optimoinnin",
             "Laatutestin raportin",
             "Parhaat palvelusuositukset",
-            "Halumasi sisällönhallintapalvelun",
+            "Halumasi lisäpalvelut",
           ]}
         />
       </div>

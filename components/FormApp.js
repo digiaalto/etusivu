@@ -551,7 +551,7 @@ const StartScreen = () => {
       </p>
       <div className={styles.buttonRow}>
         <FunctionButton
-          text={"Tilauslomake →"}
+          text={"Aloita haastattelu"}
           name="next"
           onClick={(e) => {
             changeQuestion("next")
@@ -568,8 +568,8 @@ const SecondScreen = () => {
     <React.Fragment>
       <Element className={styles.finalEditor}>
         <Headers
-          header={"Nopeuta kotisivun hankintaa kätevällä haastattelulla."}
-          subheader={`Valmistaudu vastamaan muutamaan kysymykseen itsestäsi, yrityksestä ja brändistä, kohderyhmästä ja tästä projektista.`}
+          header={"Nopeuta kotisivun hankintaa kätevästi."}
+          subheader={`Haastatteluun sisältyy kysymyksiä sinusta, yrityksestä ja brändistä, kohderyhmästä ja haluamastasi nettisivusta.`}
         />
         <div className={styles.intermissionButtons}>
           <FunctionButton
