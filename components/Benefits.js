@@ -16,10 +16,6 @@ const Benefits = () => {
             benefitText="Digiaallon koodaama yrityssivu on ikiliikkuja joka ei kärsi turvallisuusriskeistä tai tarvitse ylläpitotoimia tai päivittelyä."
           />
           <Benefit
-            benefitHeader="Täydellinen valinnanvapaus."
-            benefitText="Reactiin voi integroida minkä tahansa halutun palvelun tai ominaisuuden."
-          />
-          <Benefit
             benefitHeader="Mitattava laatuero muihin."
             benefitText="Digiaalto tähtää kehittäjänä teknilliseen täydellisyyteen ja todistaa tulokset Google Lighthouse verkkosivun laatutestillä."
           />

@@ -28,8 +28,7 @@ const LP_Solution = (props) => {
           <div className={styles.textColumn}>
             <p>
               Valinnaisen lisäpalvelun kautta puolestasi hoidetaan myös muut
-              valmiin kotisivun lisätyöt, kuten sisällönmuutokset ja
-              päivitykset.
+              valmiin kotisivun lisätyöt kuten sisällönmuutokset.
             </p>
           </div>
         </div>
