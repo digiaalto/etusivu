@@ -42,8 +42,8 @@ export default Hero
 const CtaButtons = () => {
   return (
     <div className={styles.ctaButtons}>
-      <Button href="/tilaus" text="Uudet Kotisivut" />
-      <Button href="/#kotisivujen-hankinta" text="Lue Lisää" secondary={true} />
+      <Button href="/tilaus" text="Uudet nettisivut" />
+      <Button href="/#kotisivujen-hankinta" text="Lue lisää" secondary={true} />
     </div>
   )
 }

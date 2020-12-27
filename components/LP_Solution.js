@@ -24,16 +24,16 @@ const LP_Solution = (props) => {
               verkkokehitykseen, joka tarkoittaa ettei sinulta tulla vaatimaan
               haluamaasi suurempaa roolia kotisivujesi luonnissa.
             </p>
-          </div>
-          <div className={styles.textColumn}>
             <p>
               Valinnaisen lisäpalvelun kautta puolestasi hoidetaan myös muut
               valmiin kotisivun lisätyöt kuten sisällönmuutokset.
             </p>
           </div>
+          <div className={styles.textColumn}>
+            <Benefits />
+          </div>
         </div>
       </div>
-      <Benefits />
     </section>
   )
 }

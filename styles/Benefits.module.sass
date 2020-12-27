@@ -4,7 +4,6 @@
 .benefits
 	display: flex
 	flex-direction: column
-	margin-top: 2rem
 
 // Headers.
 .benefitHeader
@@ -16,9 +15,6 @@
 .benefitsList
 	list-style: square
 	padding: 1em
-	div
-		&:not(:first-of-type)
-			margin-top: 1.5rem
 .benefitSubheader
 	max-width: $sectionHeaderWidth
 	display: block
@@ -33,12 +29,5 @@
 
 // Media queries.
 @include laptop
-	.benefits
-		margin-top: 7rem
-		padding-left: 20%
-	.benefitsList
-		div
-			&:not(:first-of-type)
-				margin-top: 2rem
 	.benefitItem
 		max-width: 550px
