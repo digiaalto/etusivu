@@ -40,10 +40,11 @@ $fadeSpeed: 2.1s
 	justify-content: center
 	padding: map-get($padding, mobile)
 	text-align: center
+	background-color: map-get($colors, bgLight)
 .content
 	display: block
 	color: map-get($colors, textDark)
-	margin-top: 3rem + $infobarHeight
+	margin-top: $infobarHeight
 
 // Headers.
 .salesPitch
@@ -55,9 +56,8 @@ $fadeSpeed: 2.1s
 .highlightBackground, .highlightBackground2, .highlightBackground3, .salesPitch
 	letter-spacing: -0.1rem
 .subheader
-	font-size: $h5Size
+	font-size: $h4Size
 	line-height: 1.6em
-	font-weight: 200
 .ctaButtons
 	display: flex
 	flex-direction: column
@@ -155,8 +155,6 @@ $fadeSpeed: 2.1s
 		font-weight: 400
 
 @include laptop
-	.section
-		padding: map-get($padding, laptop)
 	.content
 		max-width: $laptopWidth
 		margin-top: $infobarHeight

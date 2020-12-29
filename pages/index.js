@@ -1,46 +1,38 @@
 import { useRef } from "react"
 import Layout from "../components/Layout"
-import LP_Hero from "../components/LP_Hero"
-import LP_Problem from "../components/LP_Problem"
-import LP_Solution from "../components/LP_Solution"
-import LP_TrackInfographic from "../components/LP_TrackInfographic"
-import LP_Process from "../components/LP_Process"
-import LP_Pricing from "../components/LP_Pricing"
-// import LP_Expect from "../components/LP_Expect"
+import Hero from "../components/Hero"
+import Palvelut from "../components/Palvelut"
+import HankintaProsessi from "../components/HankintaProsessi"
+import Hinnat from "../components/Hinnat"
 
 const IndexPage = () => {
   const heroRef = useRef(null)
-  const problemRef = useRef(null)
-  const solutionRef = useRef(null)
-  const processRef = useRef(null)
-  const pricingRef = useRef(null)
+  const palvelutRef = useRef(null)
+  const hankintaProsessiRef = useRef(null)
+  const hinnatRef = useRef(null)
 
   const sectionRefs = [
     { section: "Hero", hoverText: "Digiaalto", ref: heroRef },
     {
-      section: "Problem",
-      hoverText: "Ongelma",
-      ref: problemRef,
+      section: "Palvelut",
+      hoverText: "Palvelut",
+      ref: palvelutRef,
     },
     {
-      section: "Solution",
-      hoverText: "Ratkaisu",
-      ref: solutionRef,
+      section: "HankintaProsessi",
+      hoverText: "Hankintaprosessi",
+      ref: hankintaProsessiRef,
     },
-    { section: "Process", hoverText: "Prosessi", ref: processRef },
-    { section: "Pricing", hoverText: "Hinta", ref: pricingRef },
+    { section: "Hinnat", hoverText: "Hinnat", ref: hinnatRef },
   ]
 
   return (
     <div>
       <Layout topbar={true} footerHaastattelu={true} sectionRefs={sectionRefs}>
-        <LP_Hero refs={heroRef} />
-        <LP_Problem refs={problemRef} />
-        <LP_Solution refs={solutionRef} />
-        <LP_TrackInfographic />
-        <LP_Process refs={processRef} />
-        <LP_Pricing refs={pricingRef} />
-        {/* <LP_Expect /> */}
+        <Hero refs={heroRef} />
+        <Palvelut refs={palvelutRef} />
+        <HankintaProsessi refs={hankintaProsessiRef} />
+        <Hinnat refs={hinnatRef} />
       </Layout>
     </div>
   )

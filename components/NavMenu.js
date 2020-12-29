@@ -15,8 +15,8 @@ const links = [
     href: "/#palvelut",
   },
   {
-    text: "Prosessi",
-    href: "/#prosessi",
+    text: "Hankintaprosessi",
+    href: "/#hankintaprosessi",
   },
   {
     text: "Hinta",

@@ -1,43 +1,44 @@
-import styles from "../styles/LP_Process.module.sass"
+import styles from "../styles/HankintaProsessi.module.sass"
 
-const LP_Process = (props) => {
+const HankintaProsessi = (props) => {
   const { refs } = props
 
   return (
-    <section className={styles.section} id="prosessi" ref={refs}>
+    <section className={styles.section} id="hankintaprosessi" ref={refs}>
       <div className={styles.content}>
         <div className={styles.column}>
           <Images />
         </div>
         <div className={styles.column}>
-          <span className={styles.topHeader}>Prosessi</span>
+          <span className={styles.topHeader}>Hankintaprosessi</span>
           <h3 className={styles.middleHeader}>
-            Voit tulla pöytään ideat valmiina tai antaa Digiaallon hoitaa
-            kaiken.
+            Voit tulla pöytään ideat valmiina ja olla osa sivustosi luontia, tai
+            antaa Digiaallon hoitaa kaiken parhaiden käytäntöjen ja
+            nykystandardien mukaisesti.
           </h3>
           <h4 className={styles.bottomHeader}>
             Tehostetun Verkkosivun Toteutus
           </h4>
           <div className={styles.textBlocks}>
             <TextBlock
-              miniheader="Aloitetaan, 2pv"
+              miniheader="Aloitetaan, 1pv"
               header="Kartoitus"
-              text="Kaikki alkaa yhteydenotosta. Valmistaudu antamaan perustietoja yrityksestäsi. Vapaaehtoisesti voit kertoa myös brändistä, kohderyhmästä ja projektista."
+              text="Kaikki alkaa yhteydenotosta. Ole hyvä ja täytä kyselylomake tai ota yhteyttä tavanomaisesti. Kerro vähintään pakolliset taustatiedot yrityksestäsi ja itseästi."
             />
             <TextBlock
               miniheader="Vaihe 2, 5pv"
               header="Suunnittelu"
-              text="Antamasi taustatiedot käydään läpi ja tutkimuksen jälkeen suunnitellaan sisältö ja käyttäjäystävällinen tietohierarkia ja sivukartta."
+              text="Suunnittelu lähtee käyntiin tutkimalla kilpailijoitasi ja yrityksesi toimialaa. Kehitetään paras tietohierarkia, sivukartta ja kirjoitetaan sisältö."
             />
             <TextBlock
               miniheader="Vaihe 3, 7pv"
               header="Design"
-              text="Luodaan brändiisi sopiva tyylikokoelma ja graafinen representaatio sivusta mihin sovelletaan sisältö ja tyylielementit. Tätä mallia hiotaan kunnes olet tyytyväinen."
+              text="Jokainen sivustoon kuuluu oma tyyli joka on yhtenäinen yrityksen brändin kanssa. Luodaan tyylikansio johon lisätään mm. typografia, väripaletti, esimerkkejä, kuvia ja videoita. Kansiosta tehdään malli."
             />
             <TextBlock
               miniheader="Vaihe 4, 10pv"
               header="Kehitys"
-              text="Koodaus alkaa. Kotisivu valmistetaan mallista ja tekniset päätökset tehdään tapauskohtaisesti ja hakukoneiden suosimien standardien mukaisesti."
+              text="Kun olet hyväksynyt edellisen vaiheen mallin alkaa itse koodaus. Projekti valmistetaan huolellisesti, ajasta tinkimättä. Tekniset päätökset tehdään parhaiden standardien mukaisesti."
             />
             <TextBlock
               miniheader="Valmista!"
@@ -51,7 +52,7 @@ const LP_Process = (props) => {
   )
 }
 
-export default LP_Process
+export default HankintaProsessi
 
 const TextBlock = ({ miniheader, header, text }) => {
   return (

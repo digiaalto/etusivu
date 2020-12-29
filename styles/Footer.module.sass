@@ -2,51 +2,60 @@
 
 // Layout.
 .footer
-  background-color: #f0f0f0
-  width: 100%
-  margin: auto
-  position: relative
-  z-index: 1
-  font-size: 1rem
-  padding: map-get($padding, mobile)
-  padding-top: 6rem
-  a
-    color: map-get($colors, textGray)
-    &:hover
-      color: map-get($colors, textDark)
+	background-color: map-get($colors, bgLight)
+	width: 100%
+	margin: auto
+	position: relative
+	z-index: 1
+	font-size: 1rem
+	padding: map-get($padding, mobile)
+	padding-top: 6rem
+	a
+		color: map-get($colors, textGray)
+		&:hover
+			color: map-get($colors, textDark)
 .wrapper
-  display: flex
-  flex-direction: column
-  align-items: center
-  flex-wrap: wrap
+	display: flex
+	flex-direction: column
+	align-items: center
+	flex-wrap: wrap
 .footerItem
-  min-width: 200px
-  margin-top: 2rem
-  
+	min-width: 200px
+	margin-top: 2rem
+	
 // Content.
 .haastatteluLink
-  position: relative
-  font-size: 1.5rem
-  font-weight: 900
+	position: relative
+	font-size: 1.5rem
+	font-weight: 900
+	transition: color 0.1s ease
+	color: map-get($colors, primary) !important
+	&:hover
+		color: map-get($colors, secondary) !important
 .footerHeader
-  display: block
-  margin-bottom: 1rem
-  font-weight: 600
+	display: block
+	margin-bottom: 1rem
+	font-weight: 600
 .itemList
-  list-style: none
-  margin: 0
-  padding: 0
+	list-style: none
+	margin: 0
+	padding: 0
 
 // Media queries.
 @include tablet
-.wrapper
-  flex-direction: row
-  justify-content: space-around
+	.wrapper
+		flex-direction: row
+		justify-content: space-around
 @include laptop
-  .footer
-    padding: map-get($padding, laptop)
-    padding-top: 10rem
+	.footer
+		padding: map-get($padding, laptop)
+		padding-top: 10rem
+	.haastatteluLink
+		font-size: 2rem
 @include desktop
-  .footer
-    padding: map-get($padding, desktop)
-    padding-top: 12rem
+	.footer
+		padding: map-get($padding, desktop)
+		padding-top: 12rem
+	.haastatteluLink
+		font-size: 4rem
+		line-height: 1.3

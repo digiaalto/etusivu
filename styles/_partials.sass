@@ -1,17 +1,17 @@
 // https://paletton.com/#uid=73D0u0k++kEZHx5+Wq6+Zf5+V7Y
 
-$colors: (primary: #000000, secondary: #fdb750, tertiary: #2970b7, link: #2970b7, linkAlt: #5e9ddb, error: #f44336, textLight: #ffffff, textDark: #000000, textGray: rgb(83, 83, 83))
+$colors: (primary: #000000, secondary: #fdb750, tertiary: #2970b7, link: #2970b7, linkAlt: #5e9ddb, error: #f44336, bgLight: #f7f7f7, textLight: #ffffff, textDark: #000000, textGray: rgb(83, 83, 83))
 
 $bp: (tablet: 768px, laptop: 1024px, desktop: 1440px)
 
-$padding: (mobile: 2rem 5vw, laptop: 5rem 10vw, desktop: 10rem 10vw)
+$padding: (mobile: 5rem 5vw, laptop: 10rem 5vw, desktop: 20rem 9vw)
 
 // Fonts
-$h1Size: 3.052rem
-$h2Size: 2.441rem
-$h3Size: 1.953rem
-$h4Size: 1.563rem
-$h5Size: 1.25rem
+$h1Size: 2.441rem
+$h2Size: 1.953rem
+$h3Size: 1.563rem
+$h4Size: 1.25rem
+$h5Size: 1.15rem
 $headerLineHeight: 1.3
 $bodyLineHeight: 1.75
 
@@ -30,6 +30,7 @@ $desktopHeroHeight: 940px
 	display: block
 	color: map-get($colors, secondary)
 	text-transform: uppercase
+	line-height: 1.4
 	font-weight: 800
 	letter-spacing: 0.2rem
 
@@ -43,4 +44,8 @@ $desktopHeroHeight: 940px
 	
 @mixin desktop
 	@media (min-width: 1440px)
+		@content
+
+@mixin bigDesktop
+	@media (min-width: 1920px)
 		@content

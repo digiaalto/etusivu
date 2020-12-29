@@ -1,4 +1,4 @@
-import styles from "../styles/LP_Hero.module.sass"
+import styles from "../styles/Hero.module.sass"
 import React, { useState, useEffect } from "react"
 import Button from "./utility/Button"
 import { Fade } from "react-awesome-reveal"
@@ -25,11 +25,10 @@ const Hero = (props) => {
           <StylizedHeaders animElement={animElement} />
           <CtaButtons />
         </Fade>
-        <Fade delay={200} fraction={0.2} direction="up" triggerOnce>
+        <Fade delay={600} fraction={0.2} direction="up" triggerOnce>
           <h1 className={styles.subheader}>
-            Verkkokehittäjä Digiaalto rakentaa modernilla tavalla oikeasti
-            tehokkaita ja laatutestattuja kotisivuja kiireisille yrittäjille.
-            Kaikilla lisäpalveluilla.
+            Digiaalto rakentaa laatutestattuja nettisivuja kiireisille
+            pienyrittäjille.
           </h1>
         </Fade>
       </div>
@@ -43,7 +42,11 @@ const CtaButtons = () => {
   return (
     <div className={styles.ctaButtons}>
       <Button href="/tilaus" text="Uudet nettisivut" />
-      <Button href="/#kotisivujen-hankinta" text="Lue lisää" secondary={true} />
+      <Button
+        href="/#mita-digiaalto-tekee"
+        text="Miksi Digiaalto?"
+        secondary={true}
+      />
     </div>
   )
 }
