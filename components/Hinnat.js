@@ -4,7 +4,7 @@ import { Fade } from "react-awesome-reveal"
 const Hinnat = (props) => {
   const { refs } = props
   return (
-    <section className={styles.section} id="hinta" ref={refs}>
+    <section className={styles.section} id="hinnat" ref={refs}>
       <Fade delay={200} fraction={0.5} triggerOnce>
         <div className={styles.content}>
           <h3 className={styles.header}>

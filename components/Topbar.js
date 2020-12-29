@@ -2,8 +2,12 @@ import styles from "../styles/Topbar.module.sass"
 import React from "react"
 import Link from "next/link"
 import { MdEmail, MdLocalPhone } from "react-icons/md"
+import { useRouter } from "next/router"
 
-const Topbar = () => {
+const Topbar = (props) => {
+  const { toggleOverlay } = props
+  const router = useRouter()
+
   return (
     <div className={styles.topbar}>
       <a href="mailto:hei@digiaalto.fi" className={styles.contactLink}>
@@ -17,7 +21,16 @@ const Topbar = () => {
       </a>
       <div className={styles.divider} />
       <Link href="/tilaus">
-        <a className={styles.contactLink}>Tilaa verkkosivu →</a>
+        <a
+          href="/tilaus"
+          className={styles.contactLink}
+          onClick={(e) => {
+            toggleOverlay(false)
+            router.push("/tilaus").then(() => window.scrollTo(0, 0))
+          }}
+        >
+          Tilaa verkkosivu →
+        </a>
       </Link>
     </div>
   )

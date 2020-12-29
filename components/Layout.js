@@ -29,7 +29,8 @@ const Layout = (props) => {
     image: "https://www.digiaalto.fi/brand/some-image.png",
   }
 
-  const toggleOverlay = () => {
+  const toggleOverlay = (bool) => {
+    if (!bool && !overlayVisible) return
     const newOverlayVisible = !overlayVisible
     if (newOverlayVisible) disableScroll.on()
     else disableScroll.off()
@@ -52,7 +53,7 @@ const Layout = (props) => {
         <meta name="og:title" content={SEO.title} />
         <meta name="og:image" content={SEO.image} />
       </Head>
-      {topbar && <Topbar />}
+      {topbar && <Topbar toggleOverlay={toggleOverlay} />}
       <NavMenu
         menuOpen={overlayVisible}
         toggleOverlay={toggleOverlay}

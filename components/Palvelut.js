@@ -1,5 +1,4 @@
 import styles from "../styles/Palvelut.module.sass"
-import Button from "./utility/Button"
 import { Fade } from "react-awesome-reveal"
 import { BiArrowToBottom } from "react-icons/bi"
 import Link from "next/link"

@@ -12,15 +12,15 @@ const links = [
   },
   {
     text: "Palvelut",
-    href: "/#palvelut",
+    href: "/#mita-digiaalto-tekee",
   },
   {
     text: "Hankintaprosessi",
     href: "/#hankintaprosessi",
   },
   {
-    text: "Hinta",
-    href: "/#hinta",
+    text: "Hinnat",
+    href: "/#hinnat",
   },
   {
     text: "Tilaus",
@@ -50,7 +50,6 @@ const NavMenu = (props) => {
 
         if (selected && selected.section !== visibleSection)
           setVisibleSection(selected.section)
-        // else if (!selected && visibleSection) setVisibleSection(undefined)
       }
 
       handleScroll()

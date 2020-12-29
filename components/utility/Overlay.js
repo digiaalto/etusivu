@@ -1,7 +1,7 @@
 import { Fragment } from "react"
 
 const Overlay = (props) => {
-  const { visible, toggle, children, zIndex = 999 } = props
+  const { visible, children, zIndex = 999 } = props
   if (!visible) return null
 
   return (
