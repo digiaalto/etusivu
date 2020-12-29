@@ -11,7 +11,7 @@ const Palvelut = (props) => {
       <div className={styles.content}>
         <Fade direction="left" triggerOnce>
           <div className={styles.headers}>
-            <Fade delay={200} direction="left" triggerOnce>
+            <Fade fraction={0.2} delay={200} direction="left" triggerOnce>
               <span className={styles.preheader}>
                 Mitä Digiaalto
                 <br /> Tekee?
@@ -22,7 +22,7 @@ const Palvelut = (props) => {
             </h1>
           </div>
         </Fade>
-        <Fade direction="right" triggerOnce>
+        <Fade fraction={0.2} delay={200} direction="right" triggerOnce>
           <div className={styles.textWrapper}>
             <p>
               Yrityssivujen suunnittelupalvelu mihin sisältyy kaikki laadukkaan

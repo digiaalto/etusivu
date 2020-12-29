@@ -5,7 +5,7 @@ const Hinnat = (props) => {
   const { refs } = props
   return (
     <section className={styles.section} id="hinnat" ref={refs}>
-      <Fade delay={200} fraction={0.5} triggerOnce>
+      <Fade delay={200} fraction={0.2} triggerOnce>
         <div className={styles.content}>
           <h3 className={styles.header}>
             Yritykselle kotisivut, avaimet käteen toimituksella — alkaen 2,000€.
