@@ -542,7 +542,7 @@ const StartScreen = () => {
   return (
     <Element className={styles.finalEditor}>
       <span className={styles.header}>
-        Kiitos, että olet kiinnostunut suorityskykyisistä verkkosivuista.
+        Kiitos, että olet kiinnostunut käyttäjäystävällisistä verkkosivuista.
       </span>
       <p className={styles.subheader}>
         Lähtölaukaise kotisivun tilausprosessi täyttämällä interaktiivinen

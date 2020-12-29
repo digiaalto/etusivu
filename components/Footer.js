@@ -56,18 +56,18 @@ const FooterNav = () => {
           </Link>
         </li>
         <li>
-          <Link href="/#laatutesti-google-lighthouse">
-            <a>Laatutesti</a>
+          <Link href="/#mita-digiaalto-tekee">
+            <a>Palvelut</a>
           </Link>
         </li>
         <li>
-          <Link href="/#kehitysprosessi">
-            <a>Kehitysprosessi</a>
+          <Link href="/#hankintaprosessi">
+            <a>Hankintaprosessi</a>
           </Link>
         </li>
         <li>
-          <Link href="/#hinnoittelu">
-            <a>Hinnoittelu</a>
+          <Link href="/#hinnat">
+            <a>Hinnat</a>
           </Link>
         </li>
       </ul>
