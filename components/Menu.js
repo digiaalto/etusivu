@@ -7,7 +7,7 @@ import Overlay from "./utility/Overlay"
 
 const links = [
   {
-    text: "Digiaalto",
+    text: "Etusivu",
     href: "/",
   },
   {

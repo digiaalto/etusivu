@@ -43,7 +43,7 @@ $fadeSpeed: 2.1s
 	background-color: map-get($colors, bgLight)
 .content
 	display: block
-	color: map-get($colors, textDark)
+	color: $dark
 	margin-top: $infobarHeight
 
 // Headers.
@@ -56,8 +56,8 @@ $fadeSpeed: 2.1s
 .highlightBackground, .highlightBackground2, .highlightBackground3, .salesPitch
 	letter-spacing: -0.1rem
 .subheader
-	font-size: $h4Size
-	line-height: 1.6em
+	font-size: 1.3rem
+	line-height: 1.4em
 .ctaButtons
 	display: flex
 	flex-direction: column
@@ -79,7 +79,7 @@ $fadeSpeed: 2.1s
 		left: 0
 		z-index: 0
 		content: "Suunnittelu."
-		color: map-get($colors, textDark)
+		color: $dark
 
 .highlightBackground2
 	position: relative
@@ -96,7 +96,7 @@ $fadeSpeed: 2.1s
 		left: 0
 		z-index: 0
 		content: "Kehitys."
-		color: map-get($colors, textDark)
+		color: $dark
 	
 .highlightBackground3
 	position: relative
@@ -112,7 +112,7 @@ $fadeSpeed: 2.1s
 		left: 0
 		z-index: 0
 		content: "Julkaisu."
-		color: map-get($colors, textDark)
+		color: $dark
 
 .highlightForeground // fader
 	position: relative
@@ -158,8 +158,6 @@ $fadeSpeed: 2.1s
 		margin-top: $infobarHeight
 	.salesPitch
 		font-size: 6rem
-	.subheader
-		font-size: 1.2em
 
 @include desktop
 	.content

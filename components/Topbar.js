@@ -9,12 +9,10 @@ const Topbar = () => {
         <MdEmail />
         <span className={styles.contactText}>hei@digiaalto.fi</span>
       </a>
-      <div className={styles.divider} />
       <a href="tel:+358505543395" className={styles.contactLink}>
         <MdLocalPhone />
         <span className={styles.contactText}>050 554 3395</span>
       </a>
-      <div className={styles.divider} />
     </div>
   )
 }

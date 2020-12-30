@@ -12,9 +12,8 @@ const Prosessi = (props) => {
         <div className={styles.column}>
           <span className={styles.topHeader}>Prosessi</span>
           <p className={styles.middleHeader}>
-            Voit tulla pöytään ideat valmiina ja olla osa sivustosi luontia, tai
-            antaa Digiaallon hoitaa kaiken parhaiden käytäntöjen ja
-            nykystandardien mukaisesti.
+            Voit tulla pöytään ideat valmiina tai antaa Digiaallon hoitaa kaiken
+            nykyisten web-standardien mukaisesti.
           </p>
           <h4 className={styles.bottomHeader}>
             Tehostetun Verkkosivun Toteutus
@@ -33,12 +32,12 @@ const Prosessi = (props) => {
             <TextBlock
               miniheader="Vaihe 3, 7pv"
               header="Design"
-              text="Jokainen sivustoon kuuluu oma tyyli joka on yhtenäinen yrityksen brändin kanssa. Luodaan tyylikansio johon lisätään mm. typografia, väripaletti, esimerkkejä, kuvia ja videoita. Kansiosta tehdään malli."
+              text="Jokaiseen sivustoon kuuluu oma tyyli joka on yhtenäinen yrityksen brändin kanssa. Luodaan tyylikansio johon lisätään mm. typografia, väripaletti, esimerkkejä, kuvia ja videoita. Kansiosta tehdään rautalankamalli."
             />
             <TextBlock
               miniheader="Vaihe 4, 10pv"
               header="Kehitys"
-              text="Kun olet hyväksynyt edellisen vaiheen mallin alkaa itse koodaus. Projekti valmistetaan huolellisesti, ajasta tinkimättä. Tekniset päätökset tehdään parhaiden standardien mukaisesti."
+              text="Edellisen vaiheen mallin hyväksynnän jälkeen alkaa itse koodaus. Kehitys tapahtuu huolellisesti, ajasta tinkimättä. Tekniset päätökset tehdään parhaiden standardien mukaisesti."
             />
             <TextBlock
               miniheader="Valmista!"

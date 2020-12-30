@@ -8,8 +8,7 @@
 	position: relative
 	z-index: 1
 	font-size: 1rem
-	padding: map-get($padding, mobile)
-	padding-top: 6rem
+	@include spacing
 	a
 		color: map-get($colors, textGray)
 		&:hover
@@ -47,15 +46,9 @@
 		flex-direction: row
 		justify-content: space-around
 @include laptop
-	.footer
-		padding: map-get($padding, laptop)
-		padding-top: 10rem
 	.haastatteluLink
 		font-size: 2rem
 @include desktop
-	.footer
-		padding: map-get($padding, desktop)
-		padding-top: 12rem
 	.haastatteluLink
 		font-size: 4rem
 		line-height: 1.3

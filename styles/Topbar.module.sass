@@ -1,27 +1,27 @@
 @import "_partials.sass"
 
-$textColor: map-get($colors, textLight)
-
 // Layout.
 .topbar
 	z-index: 1000
+	display: none
 	position: fixed
 	top: 0
 	right: 0
 	left: 0
-	display: none
-	height: $infobarHeight
 	padding: 0 1rem
-	background-color: map-get($colors, primary)
-	font-size: 1rem
+	background-color: $dark
+	height: $infobarHeight
 
 // Content.
 .contactLink
 	display: flex
 	align-content: center
 	align-items: center
-	color: $textColor !important
 	font-size: 1rem
+	color: $light
+	&:hover
+		color: $light
+		text-decoration: underline
 .contactText
 	margin-left: 8px
 	display: none
@@ -33,15 +33,6 @@ $textColor: map-get($colors, textLight)
 	.topbar
 		display: flex
 		justify-content: center
-	.divider
-		margin: 0 2rem
+		gap: 5rem
 	.contactText
 		display: inline-block
-	.contactLink
-		font-size: 1rem
-		&:last-of-type
-			font-weight: 600
-			letter-spacing: 0.1rem
-		&:hover, &:focus
-			color: map-get($colors, secondary) !important
-			outline: none

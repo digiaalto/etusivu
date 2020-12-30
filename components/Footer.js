@@ -2,26 +2,14 @@ import React from "react"
 import styles from "../styles/Footer.module.sass"
 import Link from "next/link"
 
-const Footer = (props) => {
-  const { haastattelu } = props
+const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.wrapper}>
-        {haastattelu && <HaastatteluLink />}
         <FooterNav />
         <FooterContactInfo />
       </div>
     </footer>
-  )
-}
-
-const HaastatteluLink = () => {
-  return (
-    <div className={styles.footerItem}>
-      <Link href="/yhteydenotto">
-        <a className={styles.haastatteluLink}>Yhteydenotto &rarr;</a>
-      </Link>
-    </div>
   )
 }
 
@@ -59,11 +47,6 @@ const FooterNav = () => {
         <li>
           <Link href="/#prosessi">
             <a>Prosessi</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/#hinnat">
-            <a>Hinnat</a>
           </Link>
         </li>
       </ul>

@@ -1,3 +1,4 @@
+import styles from "./Overlay.module.sass"
 import { Fragment } from "react"
 
 const Overlay = (props) => {
@@ -6,35 +7,7 @@ const Overlay = (props) => {
 
   return (
     <Fragment>
-      <div className="overlay">{children}</div>
-      <style jsx>
-        {`
-          .overlay {
-            height: 100vh;
-            width: 100vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
-            left: 0;
-            top: 0;
-            background-color: #000000;
-            z-index: ${zIndex};
-            animation: overlayAnimation 0.33s 1;
-          }
-
-          @keyframes overlayAnimation {
-            from {
-              opacity: 0
-              transform: translateY(-100vh);
-            }
-            to {
-              opacity: 1
-              transform: translateY(0);
-            }
-          }
-        `}
-      </style>
+      <div className={styles.overlay}>{children}</div>
     </Fragment>
   )
 }

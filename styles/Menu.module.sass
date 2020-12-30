@@ -1,5 +1,7 @@
 @import "_partials"
 
+$elementColor: $dark
+
 // Layout.
 .menu
   z-index: 99999
@@ -13,22 +15,22 @@
   display: inline-flex
   align-items: center
   padding: 0.5rem
-  border: 2px solid transparent
+  border: 1px solid transparent
   border-radius: 9999px
   font-size: 1.2rem
-  color: #fff
-  background-color: map-get($colors, textDark)
+  color: $light
+  background-color: $elementColor
   cursor: pointer
   user-select: none
   transition: all 0.2s ease
   &:hover
-    background-color: #fff
-    color: map-get($colors, textDark)
-    border: 2px solid map-get($colors, textDark)
+    background-color: $elementColor
+    color: $light
+    border: 1px solid $elementColor
   &:focus
-    background-color: #fff
-    color: map-get($colors, textDark)
-    border: 2px solid map-get($colors, textDark)
+    background-color: $elementColor
+    color: $light
+    border: 1px solid $elementColor
     outline: none
 
 // Tracker stuff.
@@ -47,7 +49,7 @@
   align-items: center
   height: 20px
   width: 20px
-  border: 2px solid map-get($colors, textDark)
+  border: 1px solid $elementColor
   border-radius: 9999px
   cursor: pointer
   user-select: none
@@ -55,13 +57,13 @@
     .hoverText
       display: block !important
 .selected
-  background-color: map-get($colors, primary)
+  background-color: $elementColor
 .hoverText
   display: none
   padding: 0.5rem 1rem
   margin-right: 1.5rem
   color: #fff
-  background-color: #000
+  background-color: $elementColor
   border-radius: 20px
   white-space: nowrap
   font-size: 0.9rem
@@ -82,17 +84,17 @@
 .linkItem
   margin-top: 16px
   color: #fff
-  font-weight: 200
+  font-weight: 400
   font-size: 2.5rem
   line-height: 1
   user-select: none
   &:hover
-    color: map-get($colors, secondary)
+    color: $light
+    text-decoration: underline
 
 // Media queries.
 @include tablet
   .menu
-    top: 65px
     right: 20px
   .linkItem
     margin-top: 20px
