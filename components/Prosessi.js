@@ -1,16 +1,16 @@
-import styles from "../styles/HankintaProsessi.module.sass"
+import styles from "../styles/Prosessi.module.sass"
 
-const HankintaProsessi = (props) => {
+const Prosessi = (props) => {
   const { refs } = props
 
   return (
-    <section className={styles.section} id="hankintaprosessi" ref={refs}>
+    <section className={styles.section} id="prosessi" ref={refs}>
       <div className={styles.content}>
         <div className={styles.column}>
           <Images />
         </div>
         <div className={styles.column}>
-          <span className={styles.topHeader}>Hankintaprosessi</span>
+          <span className={styles.topHeader}>Prosessi</span>
           <h3 className={styles.middleHeader}>
             Voit tulla pöytään ideat valmiina ja olla osa sivustosi luontia, tai
             antaa Digiaallon hoitaa kaiken parhaiden käytäntöjen ja
@@ -52,7 +52,7 @@ const HankintaProsessi = (props) => {
   )
 }
 
-export default HankintaProsessi
+export default Prosessi
 
 const TextBlock = ({ miniheader, header, text }) => {
   return (

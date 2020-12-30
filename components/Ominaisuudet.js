@@ -9,19 +9,19 @@ const ominaisuudet = [
     header: "Laatutestaus ja tulokset",
     text:
       "Verkkosivun toteutuksen varmistaa Google Lighthousen ankara laatutestaus. Hyödy rakenteellisesta kilpailuedusta jo lähtöruudussa.",
-    icon: <SiPowerbi />,
+    icon: <SiPowerbi className={styles.growing} />,
   },
   {
     header: "Kestävä ja pitkäikäinen",
     text:
       "Julkaisun jälkeen kaikki toimii ikiliikkujan tavoin. Ei monoliitistä johtuvia tietoturva-aukkoja, päivityksiä tai muita yllättäviä ylläpitotoimia.",
-    icon: <FaCog />,
+    icon: <FaCog className={styles.spinning} />,
   },
   {
     header: "Mukautettu",
     text:
-      "Räätälöity verkkosivu, oman brändin mukainen. Ei valmisteemoja, kuluneita designperiaatteita tai ulkoistettuja päätöksiä.",
-    icon: <FaPaintBrush />,
+      "Räätälöity oman brändin mukainen sivusto. Ei valmisteemoja, kuluneita designperiaatteita tai ulkoistettuja päätöksiä.",
+    icon: <FaPaintBrush className={styles.bouncing} />,
   },
 ]
 
@@ -29,7 +29,7 @@ const Ominaisuudet = (props) => {
   const { refs } = props
   return (
     <section className={styles.ominaisuudet} ref={refs}>
-      <Fade delay={200} direction="up">
+      <Fade delay={200} direction="up" triggerOnce>
         {ominaisuudet.map((ominaisuus, index) => (
           <Ominaisuus
             header={ominaisuus.header}

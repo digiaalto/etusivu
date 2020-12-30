@@ -15,8 +15,8 @@ const links = [
     href: "/#mita-digiaalto-tekee",
   },
   {
-    text: "Hankintaprosessi",
-    href: "/#hankintaprosessi",
+    text: "Prosessi",
+    href: "/#prosessi",
   },
   {
     text: "Hinnat",
