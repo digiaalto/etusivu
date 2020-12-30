@@ -11,17 +11,17 @@ const Prosessi = (props) => {
         </div>
         <div className={styles.column}>
           <span className={styles.topHeader}>Prosessi</span>
-          <h3 className={styles.middleHeader}>
+          <p className={styles.middleHeader}>
             Voit tulla pöytään ideat valmiina ja olla osa sivustosi luontia, tai
             antaa Digiaallon hoitaa kaiken parhaiden käytäntöjen ja
             nykystandardien mukaisesti.
-          </h3>
+          </p>
           <h4 className={styles.bottomHeader}>
             Tehostetun Verkkosivun Toteutus
           </h4>
           <div className={styles.textBlocks}>
             <TextBlock
-              miniheader="Aloitetaan, 1pv"
+              miniheader="Vaihe 1, 1pv"
               header="Kartoitus"
               text="Kaikki alkaa yhteydenotosta. Ole hyvä ja täytä kyselylomake tai ota yhteyttä tavanomaisesti. Kerro vähintään pakolliset taustatiedot yrityksestäsi ja itseästi."
             />

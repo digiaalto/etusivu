@@ -2,11 +2,11 @@
 
 // Layout.
 .section
-	padding: map-get($padding, mobile)
 	background-repeat: repeat
 	background-position: center center
 	position: relative
 	z-index: 1
+	@include spacing
 .content
 	display: flex
 	flex-wrap: wrap
@@ -19,13 +19,14 @@
 	font-weight: 800
 	font-size: $h2Size
 .middleHeader
-	font-size: 1.1rem
-	margin-top: 0.5rem
+	font-size: 1.2rem
+	line-height: 1.6
 .bottomHeader
-	font-size: $h2Size
 	font-weight: 900
 	margin: 0
 	margin-bottom: 1.5rem
+	font-size: $h2Size
+	color: map-get($colors, secondary)
 .blockMiniheader
 	display: block
 	font-weight: 600

@@ -18,12 +18,8 @@ const Footer = (props) => {
 const HaastatteluLink = () => {
   return (
     <div className={styles.footerItem}>
-      <Link href="/tilaus">
-        <a className={styles.haastatteluLink}>
-          Tilaa
-          <br />
-          Verkkosivu <span className={styles.haastatteluLinkArrow}>&rarr;</span>
-        </a>
+      <Link href="/yhteydenotto">
+        <a className={styles.haastatteluLink}>Yhteydenotto &rarr;</a>
       </Link>
     </div>
   )
@@ -56,13 +52,13 @@ const FooterNav = () => {
           </Link>
         </li>
         <li>
-          <Link href="/#mita-digiaalto-tekee">
+          <Link href="/#palvelut">
             <a>Palvelut</a>
           </Link>
         </li>
         <li>
-          <Link href="/#hankintaprosessi">
-            <a>Hankintaprosessi</a>
+          <Link href="/#prosessi">
+            <a>Prosessi</a>
           </Link>
         </li>
         <li>

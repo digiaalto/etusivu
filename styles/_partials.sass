@@ -1,6 +1,6 @@
 // https://paletton.com/#uid=73D0u0k++kEZHx5+Wq6+Zf5+V7Y
 
-$colors: (primary: #000000, secondary: #fdb750, tertiary: #2970b7, link: #2970b7, linkAlt: #5e9ddb, error: #f44336, bgLight: #f7f7f7, textLight: #ffffff, textDark: #000000, textGray: rgb(83, 83, 83))
+$colors: (primary: #000000, secondary: #fa983a, tertiary: #27889A, link: #2970b7, linkAlt: #5e9ddb, error: #f44336, bgLight: #f7f7f7, textLight: #ffffff, textDark: #000000, textGray: rgb(83, 83, 83))
 
 $bp: (tablet: 768px, laptop: 1024px, desktop: 1440px)
 
@@ -48,3 +48,13 @@ $desktopHeroHeight: 940px
 @mixin bigDesktop
 	@media (min-width: 1920px)
 		@content
+	
+
+@mixin spacing
+	padding: 3rem 5vw
+	@include tablet
+		padding: 5rem 5vw
+	@include laptop
+		padding: 6rem 8vw
+	@include desktop
+		padding: 8rem 10vw

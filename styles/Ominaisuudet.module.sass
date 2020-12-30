@@ -4,8 +4,7 @@
   display: flex
   justify-content: center
   flex-direction: column
-  padding: map-get($padding, mobile)
-  padding-top: 0 !important
+  @include spacing
 
 .ominaisuus
   display: flex
@@ -56,8 +55,3 @@
   .ominaisuudet
     flex-direction: row
     gap: 4rem
-    padding: map-get($padding, laptop)
-  
-@include desktop
-  .ominaisuudet
-    padding: map-get($padding, desktop)

@@ -1,12 +1,11 @@
 import styles from "../styles/Palvelut.module.sass"
 import { Fade } from "react-awesome-reveal"
-import Link from "next/link"
 
 const Palvelut = (props) => {
   const { refs } = props
 
   return (
-    <section className={styles.section} id="mita-digiaalto-tekee" ref={refs}>
+    <section className={styles.section} id="palvelut" ref={refs}>
       <div className={styles.content}>
         <Fade direction="left" triggerOnce>
           <div className={styles.headers}>

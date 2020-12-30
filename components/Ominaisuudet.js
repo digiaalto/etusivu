@@ -25,10 +25,9 @@ const ominaisuudet = [
   },
 ]
 
-const Ominaisuudet = (props) => {
-  const { refs } = props
+const Ominaisuudet = () => {
   return (
-    <section className={styles.ominaisuudet} ref={refs}>
+    <section className={styles.ominaisuudet}>
       <Fade delay={200} direction="up" triggerOnce>
         {ominaisuudet.map((ominaisuus, index) => (
           <Ominaisuus

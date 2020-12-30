@@ -1,4 +1,4 @@
-import styles from "../styles/pages/tilaus.module.sass"
+import styles from "../styles/pages/yhteydenotto.module.sass"
 import React from "react"
 import Layout from "../components/Layout"
 import FormApp from "../components/FormApp"

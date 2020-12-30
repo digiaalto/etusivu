@@ -1,4 +1,4 @@
-import styles from "../styles/NavMenu.module.sass"
+import styles from "../styles/Menu.module.sass"
 import React, { useState, useEffect } from "react"
 import { useRouter } from "next/router"
 import { FiMenu } from "react-icons/fi"
@@ -12,23 +12,19 @@ const links = [
   },
   {
     text: "Palvelut",
-    href: "/#mita-digiaalto-tekee",
+    href: "/#palvelut",
   },
   {
     text: "Prosessi",
     href: "/#prosessi",
   },
   {
-    text: "Hinnat",
-    href: "/#hinnat",
-  },
-  {
-    text: "Tilaus",
-    href: "/tilaus",
+    text: "Yhteydenotto",
+    href: "/yhteydenotto",
   },
 ]
 
-const NavMenu = (props) => {
+const Menu = (props) => {
   const { menuOpen, toggleOverlay, sectionRefs } = props
   const [visibleSection, setVisibleSection] = useState()
 
@@ -103,7 +99,7 @@ const getDimensions = (ele) => {
   }
 }
 
-export default NavMenu
+export default Menu
 
 const MenuContainer = (props) => {
   const { children } = props

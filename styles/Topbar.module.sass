@@ -9,8 +9,7 @@ $textColor: map-get($colors, textLight)
 	top: 0
 	right: 0
 	left: 0
-	display: flex
-	justify-content: space-around
+	display: none
 	height: $infobarHeight
 	padding: 0 1rem
 	background-color: map-get($colors, primary)
@@ -26,10 +25,13 @@ $textColor: map-get($colors, textLight)
 .contactText
 	margin-left: 8px
 	display: none
+	&:first-of-type
+		letter-spacing: 0.05rem
 	
 // Media queries.
 @include tablet
 	.topbar
+		display: flex
 		justify-content: center
 	.divider
 		margin: 0 2rem
@@ -38,7 +40,7 @@ $textColor: map-get($colors, textLight)
 	.contactLink
 		font-size: 1rem
 		&:last-of-type
-			font-weight: 800
+			font-weight: 600
 			letter-spacing: 0.1rem
 		&:hover, &:focus
 			color: map-get($colors, secondary) !important

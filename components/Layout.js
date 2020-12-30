@@ -3,7 +3,7 @@ import Head from "next/head"
 import disableScroll from "disable-scroll"
 
 import Topbar from "./Topbar"
-import NavMenu from "./NavMenu"
+import Menu from "./Menu"
 import Footer from "./Footer"
 
 const Layout = (props) => {
@@ -54,7 +54,7 @@ const Layout = (props) => {
         <meta name="og:image" content={SEO.image} />
       </Head>
       {topbar && <Topbar toggleOverlay={toggleOverlay} />}
-      <NavMenu
+      <Menu
         menuOpen={overlayVisible}
         toggleOverlay={toggleOverlay}
         sectionRefs={sectionRefs}

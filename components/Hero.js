@@ -27,8 +27,8 @@ const Hero = (props) => {
         </Fade>
         <Fade delay={600} fraction={0.2} direction="up" triggerOnce>
           <h1 className={styles.subheader}>
-            Digiaalto rakentaa laatutestattuja nettisivuja kiireisille
-            pienyrittäjille.
+            Digiaalto suunnittelee ja kehittää laatutestattuja kotisivuja
+            kiireisille yrittäjille.
           </h1>
         </Fade>
       </div>
@@ -41,12 +41,8 @@ export default Hero
 const CtaButtons = () => {
   return (
     <div className={styles.ctaButtons}>
-      <Button href="/tilaus" text="Uudet nettisivut" />
-      <Button
-        href="/#mita-digiaalto-tekee"
-        text="Miksi Digiaalto?"
-        secondary={true}
-      />
+      <Button href="/yhteydenotto" text="Ota yhteyttä" />
+      <Button href="/#palvelut" text="Miksi Digiaalto?" secondary={true} />
     </div>
   )
 }
