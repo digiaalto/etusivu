@@ -1,0 +1,34 @@
+@import "_partials"
+
+.ominaisuudet
+  display: flex
+  justify-content: center
+  flex-direction: column
+  padding: map-get($padding, mobile)
+  padding-top: 0 !important
+
+.ominaisuus
+  display: flex
+  flex-direction: column
+
+.header
+  font-weight: 600
+  margin-top: 0
+
+.text
+  font-size: 1.1rem
+  max-width: 400px
+
+.icon
+  font-size: 2rem
+  margin: 0
+
+@include laptop
+  .ominaisuudet
+    flex-direction: row
+    gap: 4rem
+    padding: map-get($padding, laptop)
+  
+@include desktop
+  .ominaisuudet
+    padding: map-get($padding, desktop)

@@ -1,6 +1,5 @@
 import styles from "../styles/Palvelut.module.sass"
 import { Fade } from "react-awesome-reveal"
-import { BiArrowToBottom } from "react-icons/bi"
 import Link from "next/link"
 
 const Palvelut = (props) => {
@@ -34,13 +33,6 @@ const Palvelut = (props) => {
               hyödy rakenteellisesta kilpailuedusta nopeasti kasvavassa
               verkkokilpailussa.
             </p>
-            <Fade delay={800} direction="up">
-              <Link href="/#hankintaprosessi">
-                <a>
-                  <BiArrowToBottom className={styles.directionIcon} />
-                </a>
-              </Link>
-            </Fade>
           </div>
         </Fade>
       </div>
