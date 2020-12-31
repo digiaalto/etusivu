@@ -6,7 +6,7 @@ import { FaPaintBrush } from "react-icons/fa"
 
 const ominaisuudet = [
   {
-    header: "Laatutestaus ja tulokset",
+    header: "Laatutestaus ja raportti",
     text:
       "Verkkosivun toteutuksen varmistaa Google Lighthousen ankara laatutestaus. Hyödy rakenteellisesta kilpailuedusta jo lähtöruudussa.",
     icon: <SiPowerbi className={styles.growing} />,
@@ -27,24 +27,18 @@ const ominaisuudet = [
 
 const Ominaisuudet = () => {
   return (
-    <section className={styles.ominaisuudet}>
-      <Fade delay={200} direction="up" triggerOnce>
+    <Fade delay={200} direction="up" triggerOnce>
+      <section className={styles.ominaisuudet}>
         {ominaisuudet.map((ominaisuus, index) => (
-          <Ominaisuus
-            header={ominaisuus.header}
-            text={ominaisuus.text}
-            icon={ominaisuus.icon}
-            key={`ominaisuus-${index}`}
-          />
+          <Ominaisuus data={ominaisuus} key={`ominaisuus-${index}`} />
         ))}
-      </Fade>
-    </section>
+      </section>
+    </Fade>
   )
 }
 
 const Ominaisuus = (props) => {
-  const { icon, header, text } = props
-
+  const { icon, header, text } = props.data
   return (
     <div className={styles.ominaisuus}>
       <div className={styles.icon}>{icon}</div>

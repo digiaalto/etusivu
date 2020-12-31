@@ -23,9 +23,9 @@ const Palvelut = (props) => {
         <Fade fraction={0.2} delay={200} direction="right" triggerOnce>
           <div className={styles.textWrapper}>
             <p>
-              Yrityssivujen suunnittelupalvelu mihin sisältyy kaikki laadukkaan
-              nettisivun kehitysvaiheet alusta loppuun. Haluamillasi
-              ominaisuuksilla ja lisäpalvelu integroinneilla.
+              Digiaallon suunnittelu ja kehityspalveluun sisältyy kaikki
+              laadukkaan nettisivun valmistusvaiheet alusta loppuun.
+              Haluamillasi ominaisuuksilla ja integroinneilla.
             </p>
             <p>
               Valitse kilpailijoitasi kehittyneempi kehitysarkkitehtuuri ja

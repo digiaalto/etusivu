@@ -2,8 +2,8 @@ import { useRef } from "react"
 import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import Palvelut from "../components/Palvelut"
-import Prosessi from "../components/Prosessi"
 import Ominaisuudet from "../components/Ominaisuudet"
+import Prosessi from "../components/Prosessi"
 
 const IndexPage = () => {
   const heroRef = useRef(null)
