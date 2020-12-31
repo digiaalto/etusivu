@@ -1,55 +1,81 @@
 import React from "react"
 import styles from "../styles/Footer.module.sass"
 import Link from "next/link"
+import Logo from "./common/Logo"
+import Button from "./utility/Button"
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.wrapper}>
-        <FooterNav />
-        <FooterContactInfo />
-      </div>
+      <FirstColumn />
+      <SecondColumn />
     </footer>
   )
 }
 
-const FooterContactInfo = () => {
+const SecondColumn = () => {
   return (
-    <div className={styles.footerItem}>
-      <span className={styles.footerHeader}>Ota yhteyttä</span>
-      <ul className={styles.itemList}>
-        <li>
-          <a href="mailto:hei@digiaalto.fi">hei@digiaalto.fi</a>
-        </li>
-        <li>
-          <a href="tel:+358505543395">+358 50554 3395</a>
-        </li>
-      </ul>
+    <div className={styles.column}>
+      <SecondColumnFirstSection />
+      <SecondColumnSecondSection />
     </div>
   )
 }
-
-const FooterNav = () => {
+const SecondColumnFirstSection = () => {
   return (
-    <div className={styles.footerItem}>
-      <span className={styles.footerHeader}>Linkit</span>
-      <ul className={styles.itemList}>
-        <li>
+    <div>
+      <h4 className={styles.ctaHeader}>
+        Rakennetaan jotain mitä on mukava käyttää.
+      </h4>
+      <Button
+        href="/haastattelu"
+        text="Kickstarttaa projekti"
+        customStyle={{
+          paddingLeft: "3rem",
+          paddingRight: "3rem",
+          fontWeight: "600",
+          letterSpacing: "1px",
+        }}
+        inverted
+      />
+    </div>
+  )
+}
+const SecondColumnSecondSection = () => {
+  return (
+    <React.Fragment>
+      <div className={styles.row}>
+        <div className={styles.column}>
+          <span className={styles.subheader}>Aloita keskustelu</span>
+          <a className={styles.link} href="mailto:hei@digiaalto.fi">
+            hei@digiaalto.fi
+          </a>
+          <a className={styles.link} href="mailto:0505543395">
+            050 554 3395
+          </a>
+        </div>
+        <div className={styles.column}>
+          <span className={styles.subheader}>Navigointi</span>
           <Link href="/">
-            <a>Etusivu</a>
+            <a className={styles.link}>Etusivu</a>
           </Link>
-        </li>
-        <li>
-          <Link href="/#palvelut">
-            <a>Palvelut</a>
+          <Link href="/verkkosivut">
+            <a className={styles.link}>Verkkosivut</a>
           </Link>
-        </li>
-        <li>
-          <Link href="/#prosessi">
-            <a>Prosessi</a>
+          <Link href="/haastattelu">
+            <a className={styles.link}>Haastattelu</a>
           </Link>
-        </li>
-      </ul>
+        </div>
+      </div>
+    </React.Fragment>
+  )
+}
+
+const FirstColumn = () => {
+  return (
+    <div className={styles.column}>
+      <Logo invert />
+      <span className={styles.copyright}>© 2021 digiaalto.fi</span>
     </div>
   )
 }

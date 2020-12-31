@@ -1,4 +1,5 @@
 import styles from "../styles/Prosessi.module.sass"
+import { BsLightningFill } from "react-icons/bs"
 
 const Prosessi = (props) => {
   const { refs } = props
@@ -10,7 +11,9 @@ const Prosessi = (props) => {
           <Images />
         </div>
         <div className={styles.column}>
-          <span className={styles.topHeader}>Prosessi</span>
+          <span className={styles.topHeader}>
+            <BsLightningFill /> Prosessi
+          </span>
           <p className={styles.middleHeader}>
             Voit tulla pöytään ideat valmiina tai antaa Digiaallon hoitaa kaiken
             nykyisten web-standardien mukaisesti.

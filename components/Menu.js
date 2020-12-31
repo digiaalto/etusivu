@@ -19,8 +19,8 @@ const links = [
     href: "/#prosessi",
   },
   {
-    text: "Yhteydenotto",
-    href: "/yhteydenotto",
+    text: "Haastattelu",
+    href: "/haastattelu",
   },
 ]
 

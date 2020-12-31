@@ -1,6 +1,6 @@
 @import "partials"
 
-$color: map-get($colors, textDark)
+$color: $dark
     
 .netlifyForm
   width: 100%
@@ -21,7 +21,7 @@ $color: map-get($colors, textDark)
 
 .subLabel
   display: block
-  color: map-get($colors, textGray)
+  color: $gray
   font-size: 0.8em
   margin-top: 1rem
 
@@ -50,7 +50,7 @@ $color: map-get($colors, textDark)
     box-shadow: $color
 
 .textInputInvalid
-  box-shadow: map-get($colors, error) 0px 2px !important
+  box-shadow: $error 0px 2px !important
 
 .intermission
   display: flex
@@ -71,15 +71,15 @@ $color: map-get($colors, textDark)
   display: flex
   align-items: center
   cursor: pointer
-  background-color: #fff
-  color: map-get($colors, textDark)
+  background-color: $bglight
+  color: $dark
   border: 1px solid #ccc
   font-size: 1rem
   transition: all 0.1s ease
   border-radius: 4px
 
   &:hover
-    border: 1px solid map-get($colors, textDark)
+    border: 1px solid $dark
 
   svg
     margin-right: 8px
@@ -139,7 +139,7 @@ $color: map-get($colors, textDark)
   margin-bottom: 2rem
   text-align: center
   background-color: $primary
-  color: #fff
+  color: $light
   letter-spacing: 1px
   padding: 0.5rem
   border-radius: 4px
@@ -170,7 +170,11 @@ $color: map-get($colors, textDark)
   margin-right: 0.5rem
   vertical-align: middle
 
-@media (min-width: map-get($bp, laptop))
+@include tablet
+  .previousButtonWrapper
+    top: 65px
+
+@include laptop
   .netlifyForm
     padding: 2rem
     background-color: transparent

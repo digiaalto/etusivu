@@ -20,13 +20,10 @@
 	font-size: 1rem
 	color: $light
 	&:hover
-		color: $light
-		text-decoration: underline
+		color: $primary
 .contactText
 	margin-left: 8px
 	display: none
-	&:first-of-type
-		letter-spacing: 0.05rem
 	
 // Media queries.
 @include tablet
@@ -36,3 +33,5 @@
 		gap: 5rem
 	.contactText
 		display: inline-block
+		font-weight: 600
+		letter-spacing: 2px

@@ -2,43 +2,51 @@
 
 // Layout.
 .footer
-	background-color: $bglight
-	width: 100%
-	margin: auto
-	position: relative
-	z-index: 1
-	font-size: 1rem
 	@include spacing
+	z-index: 1
+	background-color: $dark
+	color: $light
 	a
-		color: $dark !important
-.wrapper
+		align-self: flex-start
+		color: $light
+		&:hover
+			color: $primary
+
+.column
 	display: flex
 	flex-direction: column
-	align-items: center
-	flex-wrap: wrap
-.footerItem
-	min-width: 200px
-	margin-top: 2rem
-	
+
+.row
+	display: flex
+	flex-direction: column
+
 // Content.
-.footerHeader
-	display: block
-	margin-bottom: 1rem
+.copyright
+	display: inline-block
+	color: $gray
+
+.ctaHeader
+	font-size: 1.5rem
 	font-weight: 600
-.itemList
-	list-style: none
-	margin: 0
-	padding: 0
+	letter-spacing: 0.3px
+	margin-bottom: 1rem
+
+.subheader
+	margin-top: 2rem
+	margin-bottom: 1rem
+	font-size: 1.3rem
+	color: $gray
+
+.link
+	font-weight: 600
+	font-size: 1.3rem
 
 // Media queries.
-@include tablet
-	.wrapper
-		flex-direction: row
-		justify-content: space-around
 @include laptop
-	.haastatteluLink
-		font-size: 2rem
-@include desktop
-	.haastatteluLink
-		font-size: 4rem
-		line-height: 1.3
+	.footer
+		display: flex
+		flex-direction: row
+		gap: 8rem
+	.row
+		flex-direction: row
+		gap: 8rem

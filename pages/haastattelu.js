@@ -1,4 +1,4 @@
-import styles from "../styles/pages/yhteydenotto.module.sass"
+import styles from "../styles/pages/haastattelu.module.sass"
 import React from "react"
 import Layout from "../components/Layout"
 import FormApp from "../components/FormApp"
@@ -8,7 +8,7 @@ import FormApp from "../components/FormApp"
  * Vuorovaikutteinen tilauslomake mahdollisille asiakkaille.
  */
 
-const Yhteydenotto = () => {
+const Haastattelu = () => {
   return (
     <Layout topbar={true}>
       <section className={styles.section}>
@@ -18,4 +18,4 @@ const Yhteydenotto = () => {
   )
 }
 
-export default Yhteydenotto
+export default Haastattelu

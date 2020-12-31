@@ -390,13 +390,13 @@ const NetlifyForm = () => {
     />,
     <Question
       label="Mikä on yrityksesi nimi?"
-      subLabel="Anna myös vanha nettiosoite jos sellainen on."
+      subLabel="Anna myös vanhan sivun osoite jos sellainen on."
       data={formData.yritysNimi}
     />,
     <Question label="Yrityksesi toimiala?" data={formData.toimiala} />,
     <Question
       label="Yrityksesi kovimmat kilpailijat?"
-      subLabel="Ilmoita myös heidän verkkosivut."
+      subLabel="Ilmoita myös heidän verkkosivut tutkimusta varten."
       data={formData.kilpailijat}
       enableLineBreak
     />,
@@ -546,12 +546,12 @@ const StartScreen = () => {
       </span>
       <p className={styles.subheader}>
         Lähtölaukaise kotisivun tilausprosessi täyttämällä interaktiivinen
-        haastattelulomake. Muut kysyttävät ja tiedustelut onnistuvat parhaiten
+        haastattelulomake. Kysymykset ja tiedustelut onnistuvat parhaiten
         sähköpostilla tai soittamalla arkipäivisin.
       </p>
       <div className={styles.buttonRow}>
         <FunctionButton
-          text={"Aloita haastattelu"}
+          text={"Aloita →"}
           name="next"
           onClick={(e) => {
             changeQuestion("next")
@@ -568,8 +568,8 @@ const SecondScreen = () => {
     <React.Fragment>
       <Element className={styles.finalEditor}>
         <Headers
-          header={"Nopeuta kotisivun hankintaa kätevästi."}
-          subheader={`Haastatteluun sisältyy kysymyksiä sinusta, yrityksestä ja brändistä, kohderyhmästä ja haluamastasi nettisivusta.`}
+          header={"Nopeuta kotisivun hankintaa."}
+          subheader={`Haastatteluun sisältyy kysymyksiä sinusta, yrityksestä ja brändistä, kohderyhmästä ja haluamastasi nettisivusta. Viimeisellä sivulla voit muuttaa vastaukset.`}
         />
         <div className={styles.intermissionButtons}>
           <FunctionButton

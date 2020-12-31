@@ -2,14 +2,9 @@
 
 .nav
   margin-top: $infobarHeight
-  background-color: map-get($colors, bgLight)
+  background-color: $bglight
   padding: 0.5rem
   display: none
-
-.logo
-  font-weight: 900
-  font-size: 2rem
-  color: $dark
 
 .navList
   display: flex
@@ -25,7 +20,7 @@
   font-weight: 600
   font-size: 1.2rem
 
-@include tablet
+@include laptop
   .nav
     display: flex
     justify-content: space-around

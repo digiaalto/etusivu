@@ -1,7 +1,8 @@
 @import "_partials"
 
-$tuloksetColor: #007CF0
-$toimintaColor: #7928CA
+$tuloksetColor: #05c46b
+// $toimintaColor: #7928CA
+$toimintaColor: $primary
 $mukautettuColor: #FF4D4D
 
 // Layout.
@@ -19,9 +20,11 @@ $mukautettuColor: #FF4D4D
     .icon
       background-color: $tuloksetColor
   &:nth-of-type(2)
+    margin-top: 2rem
     .icon
       background-color: $toimintaColor
   &:nth-of-type(3)
+    margin-top: 2rem
     .icon
       background-color: $mukautettuColor
 
@@ -69,4 +72,13 @@ $mukautettuColor: #FF4D4D
 @include laptop
   .ominaisuudet
     flex-direction: row
-    gap: 2rem
+    gap: 4rem
+  .ominaisuus
+    text-align: center
+    margin-top: 0 !important
+  .icon
+      align-self: center
+    
+@include desktop
+  .ominaisuudet
+    padding: 8rem 4rem

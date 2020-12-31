@@ -8,8 +8,8 @@
   padding: 0.75rem
   color: #fff
   background-color: $dark
-  border: 1px solid $dark
-  border-radius: 8px
+  border: 2px solid $dark
+  border-radius: 9999px
   transition: all 0.2s ease
   min-width: 200px
   font-size: 1rem
@@ -19,6 +19,7 @@
   &:hover, &:focus
     color: $dark
     background-color: transparent
+    outline: none
 
   svg
     font-size: 1.2em
@@ -27,8 +28,17 @@
 .secondary
   color: $dark
   background-color: transparent
-  border: 1px solid #ccc
+  border: 2px solid $gray
 
   &:hover, &:focus
-    color: $dark
-    border: 1px solid $dark
+    outline: none
+    border: 2px solid $dark
+
+.inverted
+  color: $light
+  background-color: $primary
+  border: 2px solid $primary
+  &:hover
+    background-color: transparent
+    color: $light !important
+    border: 2px solid $light

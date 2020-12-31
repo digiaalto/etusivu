@@ -41,7 +41,7 @@ export default Hero
 const CtaButtons = () => {
   return (
     <div className={styles.ctaButtons}>
-      <Button href="/yhteydenotto" text="Ota yhteyttä" />
+      <Button href="/haastattelu" text="Aloita projekti" />
       <Button href="/#palvelut" text="Miksi Digiaalto?" secondary={true} />
     </div>
   )

@@ -23,7 +23,7 @@ const Palvelut = (props) => {
         <Fade fraction={0.2} delay={200} direction="right" triggerOnce>
           <div className={styles.textWrapper}>
             <p>
-              Digiaallon suunnittelu ja kehityspalveluun sisältyy kaikki
+              Digiaallon suunnittelu- ja kehityspalveluun sisältyy kaikki
               laadukkaan nettisivun valmistusvaiheet alusta loppuun.
               Haluamillasi ominaisuuksilla ja integroinneilla.
             </p>
