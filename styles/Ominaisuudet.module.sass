@@ -14,6 +14,7 @@ $mukautettuColor: #FF4D4D
   display: flex
   flex-direction: column
   flex: 1
+  max-width: 400px
   &:first-of-type
     .icon
       background-color: $tuloksetColor
@@ -36,7 +37,6 @@ $mukautettuColor: #FF4D4D
   font-weight: 600
   margin-top: 0
 .text
-  max-width: 400px
   font-size: 1.1rem
   color: map-get($colors, textGray)
 .growing
@@ -69,4 +69,4 @@ $mukautettuColor: #FF4D4D
 @include laptop
   .ominaisuudet
     flex-direction: row
-    gap: 4rem
+    gap: 2rem

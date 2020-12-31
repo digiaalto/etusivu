@@ -2,7 +2,7 @@
 
 // Layout.
 .footer
-	background-color: map-get($colors, bgLight)
+	background-color: $bglight
 	width: 100%
 	margin: auto
 	position: relative
@@ -10,9 +10,7 @@
 	font-size: 1rem
 	@include spacing
 	a
-		color: map-get($colors, textGray)
-		&:hover
-			color: map-get($colors, textDark)
+		color: $dark !important
 .wrapper
 	display: flex
 	flex-direction: column
@@ -23,14 +21,6 @@
 	margin-top: 2rem
 	
 // Content.
-.haastatteluLink
-	position: relative
-	font-size: 1.5rem
-	font-weight: 900
-	transition: color 0.1s ease
-	color: map-get($colors, primary) !important
-	&:hover
-		opacity: 0.8 !important
 .footerHeader
 	display: block
 	margin-bottom: 1rem

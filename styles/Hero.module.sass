@@ -27,6 +27,7 @@ $fadeSpeed: 2.1s
 		opacity: 0
 	100%
 		opacity: 1
+
 .fadeAnimation
 	animation: fader $fadeSpeed 1
 .reverseFadeAnimation
@@ -38,13 +39,13 @@ $fadeSpeed: 2.1s
 	z-index: 0
 	display: flex
 	justify-content: center
+	align-items: center
 	padding: map-get($padding, mobile)
 	text-align: center
-	background-color: map-get($colors, bgLight)
+	background-color: $bglight
 .content
 	display: block
 	color: $dark
-	margin-top: $infobarHeight
 
 // Headers.
 .salesPitch
@@ -68,7 +69,6 @@ $fadeSpeed: 2.1s
 	position: relative
 	display: block
 	user-select: none
-
 	&::before
 		position: absolute
 		display: block
@@ -85,7 +85,6 @@ $fadeSpeed: 2.1s
 	position: relative
 	display: block
 	user-select: none
-
 	&::before
 		position: absolute
 		display: block
@@ -155,7 +154,6 @@ $fadeSpeed: 2.1s
 @include laptop
 	.content
 		max-width: $laptopWidth
-		margin-top: $infobarHeight
 	.salesPitch
 		font-size: 6rem
 
