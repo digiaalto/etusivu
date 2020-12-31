@@ -369,7 +369,6 @@ const NetlifyForm = () => {
    */
   const elements = [
     <StartScreen />,
-    <SecondScreen />,
     <Question label="Aloitetaan etunimestäsi." data={formData.etunimi} />,
     <Question label="Ja sukunimi." data={formData.sukunimi} />,
     <Question
@@ -541,14 +540,10 @@ const StartScreen = () => {
 
   return (
     <Element className={styles.finalEditor}>
-      <span className={styles.header}>
-        Kiitos, että olet kiinnostunut käyttäjäystävällisistä verkkosivuista.
-      </span>
-      <p className={styles.subheader}>
-        Lähtölaukaise kotisivun tilausprosessi täyttämällä interaktiivinen
-        haastattelulomake. Kysymykset ja tiedustelut onnistuvat parhaiten
-        sähköpostilla tai soittamalla arkipäivisin.
-      </p>
+      <Headers
+        header={"Nopeuta kotisivun hankintaa suorittamalla haastattelukysely."}
+        subheader={`Haastatteluun sisältyy kysymyksiä sinusta, yrityksestä ja brändistä, kohderyhmästä ja haluamastasi nettisivusta.`}
+      />
       <div className={styles.buttonRow}>
         <FunctionButton
           text={"Aloita →"}
@@ -558,38 +553,39 @@ const StartScreen = () => {
           }}
         />
       </div>
+      <div className={styles.helpContainer}>
+        <MdTimer className={styles.helpIcon} />
+        <span className={styles.helpText}>
+          Kesto 15+ minuuttia. <br />
+          Viimeisellä sivulla voit muuttaa antamasi vastaukset.
+        </span>
+      </div>
     </Element>
   )
 }
 
-const SecondScreen = () => {
-  const { changeQuestion } = useContext(FunctionsCtx)
-  return (
-    <React.Fragment>
-      <Element className={styles.finalEditor}>
-        <Headers
-          header={"Nopeuta kotisivun hankintaa."}
-          subheader={`Haastatteluun sisältyy kysymyksiä sinusta, yrityksestä ja brändistä, kohderyhmästä ja haluamastasi nettisivusta. Viimeisellä sivulla voit muuttaa vastaukset.`}
-        />
-        <div className={styles.intermissionButtons}>
-          <FunctionButton
-            text={"Ok"}
-            name="next"
-            onClick={(e) => {
-              e.currentTarget.blur()
-              changeQuestion("next")
-            }}
-            icon={<GrFormCheckmark />}
-          />
-        </div>
-        <div className={styles.helpContainer}>
-          <MdTimer className={styles.helpIcon} />
-          <p className={styles.help}>Kesto 15+ minuuttia.</p>
-        </div>
-      </Element>
-    </React.Fragment>
-  )
-}
+// const SecondScreen = () => {
+//   const { changeQuestion } = useContext(FunctionsCtx)
+//   return (
+//     <React.Fragment>
+//       <Element className={styles.finalEditor}>
+
+//         <div className={styles.intermissionButtons}>
+//           <FunctionButton
+//             text={"Ok"}
+//             name="next"
+//             onClick={(e) => {
+//               e.currentTarget.blur()
+//               changeQuestion("next")
+//             }}
+//             icon={<GrFormCheckmark />}
+//           />
+//         </div>
+
+//       </Element>
+//     </React.Fragment>
+//   )
+// }
 
 /**
  * A Custom Range Slider.
