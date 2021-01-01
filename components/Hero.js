@@ -3,6 +3,25 @@ import React, { useState, useEffect } from "react"
 import Button from "./utility/Button"
 import { Fade } from "react-awesome-reveal"
 
+const animCfg = {
+  header: {
+    delay: 400,
+    duration: 1500,
+    triggerOnce: true,
+  },
+  ctaBtns: {
+    delay: 600,
+    duration: 1500,
+    triggerOnce: true,
+  },
+  subheader: {
+    delay: 600,
+    duration: 1000,
+    direction: "up",
+    triggerOnce: true,
+  },
+}
+
 const Hero = (props) => {
   const { refs } = props
   const [animElement, setAnimElement] = useState(0)
@@ -21,11 +40,13 @@ const Hero = (props) => {
   return (
     <section className={styles.section} id="digiaalto" ref={refs}>
       <div className={styles.content}>
-        <Fade delay={400} triggerOnce>
+        <Fade {...animCfg.header}>
           <StylizedHeaders animElement={animElement} />
+        </Fade>
+        <Fade {...animCfg.ctaBtns}>
           <CtaButtons />
         </Fade>
-        <Fade delay={600} fraction={0.2} direction="up" triggerOnce>
+        <Fade {...animCfg.subheader}>
           <h1 className={styles.subheader}>
             Digiaalto suunnittelee ja kehittää laatutestattuja kotisivuja
             kiireisille yrittäjille.

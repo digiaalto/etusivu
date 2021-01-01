@@ -14,10 +14,10 @@ $defaultFont: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubu
 	background: map-get($colors, secondary)
 html
 	scroll-behavior: smooth
-	background-color: #ffffff
+	background-color: $bglight
 body
 	margin: 0
-	font-size: 16px
+	font-size: 18px
 	font-family: $defaultFont
 	color: $dark
 	font-weight: 400
@@ -25,7 +25,7 @@ body
 input, textarea, button
 	font-family: $defaultFont
 	display: block
-	font-size: 20px
+	font-size: 18px
 a
 	text-decoration: none
 	color: $dark
@@ -80,3 +80,5 @@ img
 	.header
 		font-size: $h1Size * 1.2
 		max-width: 40rem
+	.input, textarea, button
+		fonts-size: 22px

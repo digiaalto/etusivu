@@ -94,23 +94,7 @@ const moneyOptions = [
     hotkey: "g",
   },
 ]
-const lisapalveluOptions = [
-  {
-    label: "Kyllä",
-    value: "Kyllä",
-    hotkey: "a",
-  },
-  {
-    label: "En",
-    value: "En",
-    hotkey: "b",
-  },
-  {
-    label: "Mahdollisesti",
-    value: "Mahdollisesti",
-    hotkey: "c",
-  },
-]
+
 const NetlifyForm = () => {
   const [inProp, setInProp] = useState(true) // Controls the question element transition stages.
   const [index, setIndex] = useState(0)
@@ -199,17 +183,6 @@ const NetlifyForm = () => {
       value: "",
       required: true,
     },
-    verkkosivuPalvelut: {
-      name: "verkkosivuPalvelut",
-      error: "Verkkosivun palvelut on pakollinen kenttä.",
-      value: "",
-      required: true,
-    },
-    digiaaltoLisapalvelu: {
-      name: "digiaaltoLisapalvelu",
-      value: "",
-      required: false,
-    },
     etunimi: {
       name: "etunimi",
       error: "Etunimi pakollinen kenttä.",
@@ -237,11 +210,6 @@ const NetlifyForm = () => {
     puhelinnumero: {
       name: "puhelinnumero",
       error: "Puhelinnumero on pakollinen kenttä.",
-      value: "",
-      required: true,
-    },
-    lisapalvelu: {
-      name: "lisapalvelu",
       value: "",
       required: true,
     },
@@ -376,15 +344,15 @@ const NetlifyForm = () => {
       data={formData.rooli}
     />,
     <Question
-      label="Mistä sähköpostiosoitteesta sinut saa parhaiten kiinni?"
+      label="Mitä sähköpostia haluat käyttää asiointiin?"
       data={formData.sahkoposti}
     />,
     <Question
-      label="Ja viimeiseksi puhelinnumero."
+      label="Puhelinnumero mistä sinut saa kiinni arkipäivisin?"
       data={formData.puhelinnumero}
     />,
     <Intermission
-      header="Seuraavaksi yrityksesi perustiedoista."
+      header="Seuraavaksi perustietoja yrityksestäsi."
       subheader="Alapalkista näet kuinka pitkälle olet edennyt kyselyssä."
     />,
     <Question
@@ -395,29 +363,29 @@ const NetlifyForm = () => {
     <Question label="Yrityksesi toimiala?" data={formData.toimiala} />,
     <Question
       label="Yrityksesi kovimmat kilpailijat?"
-      subLabel="Ilmoita myös heidän verkkosivut tutkimusta varten."
+      subLabel="Ilmoita myös heidän verkkosivut taustatutkimusta varten."
       data={formData.kilpailijat}
       enableLineBreak
     />,
     <Question
-      label="Entäs, miten kuvailisit yrityksesi ydinosaamista?"
-      subLabel="Eli miten erotut kilpailijoistasi ja mihin kilpailukykysi perustuu."
+      label="Miten kuvailet yrityksesi ydinosaamista?"
+      subLabel="Miten erotut kilpailijoistasi, mihin kilpailukykysi perustuu?"
       data={formData.ydinosaaminen}
       enableLineBreak
     />,
     <Intermission
-      header="Muutama kysymys tavaramerkistä."
-      subheader="Tavaramerkki, eli brändi on mielikuva yrityksestä, joka syntyy tarkoituksella tai vahingossa."
+      header="Muutama kysymys brändistä."
+      subheader="Tavaramerkki on mielikuva yrityksestä joka syntyy tarkoituksella tai vahingossa."
     />,
     <Question
       label="Kuvaile yrityksesi brändiä vapaamuotoisesti."
-      subLabel="Jos sitä ei ole vielä kehitetty, kirjoita 3-5 sanaa jotka kuvaavat yritystäsi."
+      subLabel="Kirjoita vähintään 3-5 sanaa jotka kuvaavat yritystäsi."
       data={formData.brandiKuvaus}
       enableLineBreak
     />,
     <Question
-      label="Mitä brändiresursseja sinulla on olemassa?"
-      subLabel="Kuten fonttia, logoa, väriteemaa, tms."
+      label="Onko sinulla jo valmiita brändiresursseja?"
+      subLabel="Typografiaa, logoa, väripalettia, tms."
       data={formData.brandiResurssit}
       enableLineBreak
     />,
@@ -472,18 +440,6 @@ const NetlifyForm = () => {
       label="Listaa yrityssivusi tärkeimmät tavoitteet."
       subLabel="Koita olla spesifinen, mutta toiveikas."
       data={formData.verkkosivuTavoite}
-      enableLineBreak
-    />,
-    <Selection
-      label="Oletko kiinnostunut Digiaallon lisäpalvelusta?"
-      subLabel="Palveluun kuuluu sisällönhallinta, päivitykset, muut pienet muutostyöt."
-      data={formData.lisapalvelu}
-      options={lisapalveluOptions}
-    />,
-    <Question
-      label="Omistatko jo muita palveluita, mitä mielestäsi tarvitset?"
-      subLabel="Esimerkiksi domainin, palvelimen, yrityssähköpostin, tms."
-      data={formData.verkkosivuPalvelut}
       enableLineBreak
     />,
   ]
@@ -541,8 +497,11 @@ const StartScreen = () => {
   return (
     <Element className={styles.finalEditor}>
       <Headers
-        header={"Nopeuta kotisivun hankintaa suorittamalla haastattelukysely."}
-        subheader={`Haastatteluun sisältyy kysymyksiä sinusta, yrityksestä ja brändistä, kohderyhmästä ja haluamastasi nettisivusta.`}
+        header={
+          "Lähtölaukaise uusi projekti täyttämällä tämä haastattelulomake."
+        }
+        subheader={`Huolellisesti täytetty haastattelulomake eliminoioi alustavan palaveri vaiheen.
+          Kysymykset koskevat sinua, yritystäsi, kohderyhmää ja itse projektia.`}
       />
       <div className={styles.buttonRow}>
         <FunctionButton
@@ -555,10 +514,7 @@ const StartScreen = () => {
       </div>
       <div className={styles.helpContainer}>
         <MdTimer className={styles.helpIcon} />
-        <span className={styles.helpText}>
-          Kesto 15+ minuuttia. <br />
-          Viimeisellä sivulla voit muuttaa antamasi vastaukset.
-        </span>
+        <span className={styles.helpText}>Kesto 15+ minuuttia.</span>
       </div>
     </Element>
   )
