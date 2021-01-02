@@ -22,7 +22,7 @@ const Prosessi = (props) => {
           </div>
           <div className={styles.column}>
             <span className={styles.topHeader}>
-              <span className={styles.icon}>
+              <span className={styles.headerIcon}>
                 <BsLightningFill />
               </span>
               Prosessi
@@ -35,27 +35,27 @@ const Prosessi = (props) => {
               Tehostetun Verkkosivun Toteutus
             </h4>
             <div className={styles.textBlocks}>
-              <TextBlock
+              <Block
                 miniheader="Vaihe 1, 1pv"
                 header="Kartoitus"
                 text="Kaikki alkaa yhteydenotosta. Ole hyvä ja täytä kyselylomake tai ota yhteyttä tavanomaisesti. Kerro vähintään pakolliset taustatiedot yrityksestäsi ja itseästi."
               />
-              <TextBlock
+              <Block
                 miniheader="Vaihe 2, 5pv"
                 header="Suunnittelu"
                 text="Suunnittelu lähtee käyntiin tutkimalla kilpailijoitasi ja yrityksesi toimialaa. Kehitetään paras tietohierarkia, sivukartta ja kirjoitetaan sisältö."
               />
-              <TextBlock
+              <Block
                 miniheader="Vaihe 3, 7pv"
                 header="Design"
                 text="Jokaiseen sivustoon kuuluu oma tyyli joka on yhtenäinen yrityksen brändin kanssa. Luodaan tyylikansio johon lisätään mm. typografia, väripaletti, esimerkkejä, kuvia ja videoita. Kansiosta tehdään rautalankamalli."
               />
-              <TextBlock
+              <Block
                 miniheader="Vaihe 4, 10pv"
                 header="Kehitys"
                 text="Edellisen vaiheen mallin hyväksynnän jälkeen alkaa itse koodaus. Kehitys tapahtuu huolellisesti, ajasta tinkimättä. Tekniset päätökset tehdään parhaiden standardien mukaisesti."
               />
-              <TextBlock
+              <Block
                 miniheader="Valmista!"
                 header="Julkaisu"
                 text="Onneksi olkoon, yrityssivusi on valmis ja toimii itsenäisesti tästä päivästä eteenpäin!"
@@ -70,15 +70,15 @@ const Prosessi = (props) => {
 
 export default Prosessi
 
-const TextBlock = ({ miniheader, header, text }) => {
+const Block = ({ miniheader, header, text }) => {
   return (
-    <div className={styles.textBlock}>
+    <div className={styles.block}>
       <span className={styles.blockMiniheader}>
         {miniheader}
         <span className={styles.emDash}></span>
       </span>
       <h4 className={styles.blockHeader}>{header}</h4>
-      <p className={styles.blockText}>{text}</p>
+      <p className={styles.blockParagraph}>{text}</p>
     </div>
   )
 }

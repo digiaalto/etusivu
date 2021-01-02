@@ -12,33 +12,6 @@
 	flex-wrap: wrap
 	justify-content: center
 	gap: 2rem
-
-.icon
-	color: $accent1
-	margin-right: 0.5rem
-
-// Headers.
-.topHeader
-	margin-bottom: 0
-	font-weight: 800
-	font-size: $h2Size
-.middleHeader
-	line-height: 1.6
-.bottomHeader
-	font-weight: 900
-	margin: 0
-	margin-bottom: 1.5rem
-	font-size: $h2Size
-.blockMiniheader
-	display: block
-	font-size: 1rem
-	font-weight: 600
-.blockHeader
-	margin: 0
-	margin-bottom: 0.8rem
-	font-weight: 800
-
-// Content.
 .column
 	display: flex
 	flex-wrap: wrap
@@ -58,12 +31,36 @@
 	flex-direction: row
 	flex-wrap: wrap
 	gap: 1.5rem
-.textBlock
+.block
 	max-width: 400px
 	&:last-of-type
 		max-width: 500px
 
-// Styles.
+// Top headers.
+.headerIcon
+	color: $accent1
+	margin-right: 0.5rem
+.topHeader
+	margin-bottom: 0
+	font-weight: 800
+	font-size: $h2Size
+.middleHeader
+	line-height: 1.6
+.bottomHeader
+	font-weight: 900
+	margin: 0
+	margin-bottom: 1.5rem
+	font-size: $h2Size
+
+// Blocks.
+.blockMiniheader
+	display: block
+	font-size: 1rem
+	font-weight: 600
+.blockHeader
+	margin: 0
+	margin-bottom: 0.8rem
+	font-weight: 800
 .emDash
 	display: inline-block
 	width: 1rem
@@ -120,11 +117,11 @@
 @include laptop
 	.column
 		max-width: 600px
-	.textBlock
+	.block
 		max-width: 280px
 	
 @include desktop
-	.blockText
+	.blockParagraph
 		font-size: 1.1rem
 	.column
 		&:first-of-type
