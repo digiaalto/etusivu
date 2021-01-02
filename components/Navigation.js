@@ -10,9 +10,10 @@ const animCfg = {
   },
 }
 
-const Navigation = () => {
+const Navigation = (props) => {
+  const { topbar } = props
   return (
-    <nav className={styles.nav}>
+    <nav className={styles.nav} style={topbar ? null : { marginTop: "0" }}>
       <Fade {...animCfg.nav}>
         <Logo />
         <NavList />

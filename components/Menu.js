@@ -149,7 +149,7 @@ const LinkList = (props) => {
     <ul className={styles.linkList}>
       {links.map((link, index) => (
         <a
-          className={styles.linkItem}
+          className={styles.link}
           key={`nav-link-${index}`}
           onClick={(e) => {
             toggleOverlay()

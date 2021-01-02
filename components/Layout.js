@@ -55,7 +55,7 @@ const Layout = (props) => {
         <meta name="og:image" content={SEO.image} />
       </Head>
       {topbar && <Topbar toggleOverlay={toggleOverlay} />}
-      <Navigation />
+      <Navigation topbar={topbar} />
       <Menu
         menuOpen={overlayVisible}
         toggleOverlay={toggleOverlay}
