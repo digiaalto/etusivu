@@ -5,18 +5,26 @@
   display: flex
   flex-direction: column
   gap: 3rem
+  justify-content: center
+
+.views
+  max-width: 700px
 
 // Näyteinfo.
-.nayteInfo
+.infos
   order: -1
+  max-width: 600px
 .nayteHeader
   font-weight: 600
+.score
+  transform: translateX(-10px)
 
 // Näyte View.
 .inverted
   .views
     order: 1
 .views
+  position: relative
   display: flex
   flex-direction: column
 .desktopView
@@ -54,9 +62,9 @@
     display: block
     width: 100% !important
   .mobileView
-    transform: translateX(-45%)
-    margin-top: -12rem
-    align-self: flex-end
+    position: absolute
+    top: 30%
+    left: 65%
   
 @include laptop
   .desktopView
@@ -65,14 +73,11 @@
 @include desktop
   .tyonayte
     flex-direction: row
-    gap: 1rem
+    gap: 4rem
   .views
     display: flex
     flex-direction: row
     flex: 1
-  .nayteInfo
-    flex: 0.5
+  .infos
     order: 0
-  .mobileView
-    margin-top: 12rem
-    align-self: normal
+    flex: 0.7

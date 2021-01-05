@@ -5,7 +5,7 @@ const as16_9 = 0.5625
 const as9_16 = 1.777777777777778
 
 const Tyonaute = (props) => {
-  const { imgData, palette, header, paragraph, inverted } = props
+  const { imgData, palette, scoreSrc, header, paragraphs, inverted } = props
 
   return (
     <div className={`${styles.tyonayte} ${inverted && styles.inverted}`}>
@@ -17,10 +17,22 @@ const Tyonaute = (props) => {
         />
         <NayteView imgData={imgData.mobile} palette={palette} isMobile={true} />
       </div>
-      <div className={styles.nayteInfo}>
+      <div className={styles.infos}>
         <h3 className={styles.nayteHeader}>{header}</h3>
         <Palette palette={palette} />
-        <p className={styles.nayteParagraph}>{paragraph}</p>
+        <div className={styles.paragraphs}>
+          {paragraphs.map((p, index) => (
+            <p className={styles.nayteParagraph} key={`${header}-${index}`}>
+              {p}
+            </p>
+          ))}
+        </div>
+        <Image
+          src={scoreSrc}
+          width={288}
+          height={81}
+          className={styles.score}
+        />
       </div>
     </div>
   )

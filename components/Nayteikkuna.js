@@ -17,8 +17,13 @@ const digiaalto = {
     },
   },
   palette: ["#007CF0", "#ffffff", "#00122A", "#1e272e"],
-  header: "Digiaalto",
-  paragraph: `Digiaallon suunnittelu- ja kehityspalveluun sisältyy kaikki laadukkaan nettisivun valmistusvaiheet alusta loppuun. Haluamillasi ominaisuuksilla ja integroinneilla.`,
+  scoreSrc: "/tyonayte/digiaalto/scores.png",
+  header: "Digiaalto - Web-design & kehitys",
+  paragraphs: [
+    `Web-designerin verkkosivun ei pidä myydä pelkästään palveluita vaan myös itseään.`,
+    `Suunnittelu tapahtui asiakkaan tarpeita ajatellen ja uuden teknologian etuja korostettiin selkokielellä.`,
+    `Sivuston päätarkoitus on saada yrittäjä täyttämään haastattelulomake tai ottamaan yhteyttä.`,
+  ],
 }
 
 const majoitusroosa = {
@@ -27,18 +32,23 @@ const majoitusroosa = {
       src: "/tyonayte/majoitusroosa/desktop.png",
       alt: "Työnäyte - Majoitusroosa, PC",
       width: 1920 / 2.5,
-      height: 3792 / 2.5,
+      height: 6174 / 2.5,
     },
     mobile: {
       src: "/tyonayte/majoitusroosa/mobile.png",
       alt: "Työnäyte - Majoitusroosa, Mobiili",
       width: 411 / 2,
-      height: 5212 / 2,
+      height: 8533 / 2,
     },
   },
-  palette: ["#007CF0", "#ffffff", "#00122A", "#1e272e"],
-  header: "Majoitusroosa",
-  paragraph: `Digiaallon suunnittelu- ja kehityspalveluun sisältyy kaikki laadukkaan nettisivun valmistusvaiheet alusta loppuun. Haluamillasi ominaisuuksilla ja integroinneilla.`,
+  palette: ["#d66686", "#eee", "#edebe5", "#222222"],
+  scoreSrc: "/tyonayte/majoitusroosa/scores.png",
+  header: "Majoitusroosa - Majoituspaikka",
+  paragraphs: [
+    `Majoitusalan yritys Lammen luonnossa, varattavissa pääsääntöisesti isoille ryhmille.`,
+    `Sivuston päätarkoitus on esitellä maisemia ja rakennuksia isoilla kuvilla joiden optimointia hoitaa Gatsbyn kuva-komponentti.`,
+    `Vierailijaa kehotetaan tiedustelemaan sesonki- ja ryhmätarjouksista.`,
+  ],
 }
 
 const Nayteikkuna = (props) => {
