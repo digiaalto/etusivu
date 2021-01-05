@@ -1,0 +1,78 @@
+@import "../../styles/_partials"
+
+// Työnäyte.
+.tyonayte
+  display: flex
+  flex-direction: column
+  gap: 3rem
+
+// Näyteinfo.
+.nayteInfo
+  order: -1
+.nayteHeader
+  font-weight: 600
+
+// Näyte View.
+.inverted
+  .views
+    order: 1
+.views
+  display: flex
+  flex-direction: column
+.desktopView
+  display: none
+  overflow: scroll
+  box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.33)
+  -ms-overflow-style: none
+  scrollbar-width: none
+  &::-webkit-scrollbar
+    display: none
+.mobileView
+  display: block
+  overflow: scroll
+  box-shadow: 0px 0px 36px rgba(0, 0,0, 0.33)
+  -ms-overflow-style: none
+  scrollbar-width: none
+  z-index: 1
+  border-radius: 8px
+  &::-webkit-scrollbar
+    display: none
+  
+// Palette.
+.palette
+  display: flex
+  gap: 1rem
+  margin: 1rem 0
+.paletteBall
+  width: 2rem
+  height: 2rem
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5)
+  border-radius: 9999px
+  
+@include tablet
+  .desktopView
+    display: block
+    width: 100% !important
+  .mobileView
+    transform: translateX(-45%)
+    margin-top: -12rem
+    align-self: flex-end
+  
+@include laptop
+  .desktopView
+    width: auto !important
+
+@include desktop
+  .tyonayte
+    flex-direction: row
+    gap: 1rem
+  .views
+    display: flex
+    flex-direction: row
+    flex: 1
+  .nayteInfo
+    flex: 0.5
+    order: 0
+  .mobileView
+    margin-top: 12rem
+    align-self: normal

@@ -36,7 +36,7 @@ const SecondColumnFirstSection = () => {
           fontWeight: "600",
           letterSpacing: "1px",
         }}
-        inverted
+        inverted={true}
       />
     </div>
   )

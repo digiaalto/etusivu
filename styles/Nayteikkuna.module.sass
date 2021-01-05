@@ -1,0 +1,23 @@
+@import "_partials"
+
+.section
+	@include spacing
+	display: flex
+	flex-direction: column
+
+.wrapper
+	display: flex
+	flex-direction: column
+	gap: 3rem
+	position: relative
+
+.header
+	@include mainHeader
+	margin: 0
+
+@include desktop
+	.wrapper
+		gap: 6rem
+	.header
+		margin: auto
+		margin-bottom: 3rem

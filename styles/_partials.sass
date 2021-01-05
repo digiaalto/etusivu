@@ -1,13 +1,11 @@
 // https://flatuicolors.com/palette/se
 
-$colors: (primary: #000000, secondary: #002F6C, error: #f44336, bgLight: #f7f7f7, textLight: #ffffff, textDark: #00122A, textGray: rgb(83, 83, 83))
 
 $bp: (tablet: 768px, laptop: 1024px, desktop: 1440px)
 
 $padding: (mobile: 5rem 5vw, laptop: 10rem 5vw, desktop: 15rem 9vw)
 
 $primary: #007CF0
-$secondary: #DA202B
 $dark: #1e272e
 $darkGray: #00122A
 $gray: #808e9b
@@ -65,7 +63,17 @@ $desktopHeroHeight: 940px
 		transition: background-position 275ms ease
 		&:hover
 			background-position: 0 100%
-	
+
+@mixin mainHeader
+	font-size: 1.75rem
+	font-weight: 900
+	max-width: $sectionHeaderWidth
+	@include laptop
+		max-width: $sectionHeaderWidth * 1.1
+		font-size: $h1Size
+	@include desktop
+		font-size: $h1Size * 1.2
+
 @mixin spacing
 	padding: 3rem 5vw
 	@include tablet

@@ -15,14 +15,12 @@
 	margin-bottom: 1rem
 	color: $primary
 .header
-	font-size: 1.75rem
-	font-weight: 800
-	max-width: $sectionHeaderWidth
+	@include mainHeader
 
 // Styles.
 .directionIcon
 	font-size: 2rem
-	color: map-get($colors, textDark)
+	color: $dark
 	transition: all 0.1s ease
 	&:hover
 		transform: scale(1.2, 1.2)
@@ -39,9 +37,7 @@
 		writing-mode: tb-rl
 		margin-left: 2rem
 	.header
-		max-width: $sectionHeaderWidth * 1.1
 		margin-top: 2rem	
-		font-size: $h1Size
 
 @include desktop
 	.content
@@ -50,5 +46,4 @@
 		justify-content: space-around
 		gap: 2rem
 	.header
-		font-size: $h1Size * 1.2
 		margin-top: 0

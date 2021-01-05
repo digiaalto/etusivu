@@ -19,14 +19,14 @@
   },
   "dependencies": {
     "disable-scroll": "^0.5.1",
-    "next": "^10.0.3",
+    "next": "^10.0.4",
     "next-on-netlify": "^2.6.3",
     "node-fetch": "^2.6.1",
     "prop-types": "^15.7.2",
     "react": "16.13.1",
     "react-awesome-reveal": "3.4.0",
     "react-cookie": "^4.0.3",
-    "react-device-detect": "^1.14.0",
+    "react-device-detect": "^1.15.0",
     "react-dom": "16.13.1",
     "react-icons": "^3.11.0",
     "react-intersection-observer": "^8.31.0",
@@ -35,7 +35,7 @@
     "react-select": "^3.1.1",
     "react-textarea-autosize": "^8.3.0",
     "react-transition-group": "^4.4.1",
-    "sass": "^1.30.0"
+    "sass": "^1.32.0"
   },
   "devDependencies": {
     "prettier": "^2.2.1"
