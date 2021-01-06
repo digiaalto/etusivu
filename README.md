@@ -1,14 +1,7 @@
-# [Digiaalto.fi](https://pensive-franklin-94cab3.netlify.app/) - surffaa aallon harjalla.
+# [Digiaalto.fi](https://pensive-franklin-94cab3.netlify.app/)
 
-## Design
+## Digiaalto suunnittelee ja kehittää laatutestattuja kotisivuja kiireisille yrittäjille.
 
-- [ ] navigaatio menu isoille näytöille
-- [ ] "tiesitkö että..." taustakuva
-- [ ] toteutus osio re-design
-- [ ] buunaus
+Digiaallon suunnittelu- ja kehityspalveluun sisältyy kaikki laadukkaan nettisivun valmistusvaiheet alusta loppuun. Haluamillasi ominaisuuksilla ja integroinneilla.
 
-## Backend ja palvelut
-
-- [ ] toimiva lomake
-- [ ] g-suite (sähköposti)
-- [ ] domain ohjaus
+Valitse kilpailijoitasi kehittyneempi kehitysarkkitehtuuri ja hyödy rakenteellisesta kilpailuedusta nopeasti kasvavassa verkkokilpailussa.

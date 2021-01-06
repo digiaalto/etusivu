@@ -27,7 +27,6 @@ const Tyonaute = (props) => {
             </p>
           ))}
         </div>
-
         <Image
           src={scoreSrc}
           width={288}

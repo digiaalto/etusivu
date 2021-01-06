@@ -16,7 +16,7 @@ const Navigation = (props) => {
     <nav className={styles.nav} style={topbar ? null : { marginTop: "0" }}>
       <Fade {...animCfg.nav}>
         <Logo />
-        <NavList />
+        {/* <NavList /> */}
       </Fade>
     </nav>
   )
@@ -26,7 +26,6 @@ const NavList = () => {
   return (
     <ul className={styles.navList}>
       <NavLink href={"/verkkosivut"} text="Verkkosivut" />
-      <NavLink href={"/haastattelu"} text="Haastattelu" />
     </ul>
   )
 }

@@ -15,13 +15,17 @@ const links = [
     href: "/#palvelut",
   },
   {
+    text: "Työnäytteet",
+    href: "/#tyonaytteet",
+  },
+  {
     text: "Prosessi",
     href: "/#prosessi",
   },
-  {
-    text: "Haastattelu",
-    href: "/haastattelu",
-  },
+  // {
+  //   text: "Haastattelu",
+  //   href: "/haastattelu",
+  // },
 ]
 
 const Menu = (props) => {
