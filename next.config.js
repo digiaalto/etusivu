@@ -1,6 +1,6 @@
 module.exports = {
-	target: "serverless",
-	devIndicators: {
-		autoPrerender: false,
-	},
+  // target: "serverless",
+  devIndicators: {
+    autoPrerender: false,
+  },
 }
