@@ -7,21 +7,22 @@
     "digiaalto",
     "verkkosuunnittelija",
     "verkkokehittäjä",
-    "web-design"
+    "web-design",
+    "kotisivut yritykselle",
+    "nettisivut yritykselle",
+    "verkkosivut yritykselle"
   ],
   "license": "UNLICENSED",
   "author": "Digiaalto.fi",
   "scripts": {
     "dev": "next dev",
     "start": "next start",
-    "build": "next build",
-    "postbuild": "next-on-netlify"
+    "build": "next build"
   },
   "dependencies": {
     "disable-scroll": "^0.5.1",
     "imagemin-optipng": "^8.0.0",
     "next": "^10.0.4",
-    "next-on-netlify": "^2.7.0",
     "node-fetch": "^2.6.1",
     "prop-types": "^15.7.2",
     "react": "16.13.1",
