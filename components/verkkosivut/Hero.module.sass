@@ -1,0 +1,76 @@
+@import "../../styles/_partials"
+
+.section
+  @include spacing
+  padding-top: 5rem !important
+.background
+  display: flex
+  flex-direction: row
+  align-items: flex-end
+  gap: 1rem
+  height: 50vh
+.block
+  background-color: $primary
+  display: block
+  width: 100%
+  transition: all 0.2s ease
+  &:first-of-type
+    height: 55%
+  &:nth-of-type(2)
+    height: 70%
+  &:nth-of-type(3)
+    height: 83%
+  &:nth-of-type(4)
+    height: 89%
+  &:hover
+    cursor: pointer
+    height: 100%
+    &:last-of-type
+      background-color: $secondary
+
+.content
+  background-color: #ffffff
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1)
+  padding: 2em 2rem
+  margin-left: 5%
+  margin-right: 5%
+  margin-top: -8rem
+.header
+  font-size: $h2Size
+  font-weight: 900
+  text-align: center
+  margin-top: 0
+.sisaltoLinkit
+  display: flex
+  text-align: center
+  gap: 2rem
+  list-style: none
+  padding: 0
+  margin: 2rem 0
+  justify-content: center
+  gap: 3remx
+.ctaContainer
+  display: flex
+  justify-content: center
+
+@include tablet
+  .background
+    gap: 2rem
+    min-height: 60vh
+  
+@include laptop
+  .header
+    font-size: $h1Size
+  .block
+
+@include desktop
+  .section
+    padding-top: 3em !important
+  .content
+    margin-top: -12rem
+    margin-left: 10%
+    margin-right: 10%
+  .header
+    font-size: 4rem
+    max-width: 800px
+    margin: auto

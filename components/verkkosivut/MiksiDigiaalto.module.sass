@@ -1,0 +1,45 @@
+@import "../../styles/_partials"
+
+.section
+  @include spacing
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  gap: 2rem
+
+.header
+  @include mainHeader
+  padding: 0
+  margin: 0
+
+.column
+  max-width: 700px
+
+.lighthouseWrapper
+  max-width: 300px
+  text-align: center
+  p
+    margin-top: 1rem
+    font-size: 1rem
+    svg
+      vertical-align: middle
+      margin-right: 5px
+      margin-bottom: 3px
+      font-size: 1.2rem
+      color: $secondary
+    
+@include laptop
+  .section
+    flex-direction: row
+    gap: 4rem
+  .lighthouseWrapper
+    filter: saturate(0%)
+    transition: filter 0.2s ease
+    cursor: pointer
+    &:hover
+      filter: saturate(100%)
+    
+@include desktop
+  .section
+    gap: 6rem

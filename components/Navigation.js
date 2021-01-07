@@ -16,7 +16,7 @@ const Navigation = (props) => {
     <nav className={styles.nav} style={topbar ? null : { marginTop: "0" }}>
       <Fade {...animCfg.nav}>
         <Logo />
-        {/* <NavList /> */}
+        <NavList />
       </Fade>
     </nav>
   )

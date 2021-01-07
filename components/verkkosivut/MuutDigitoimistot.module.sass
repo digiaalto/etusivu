@@ -1,0 +1,38 @@
+@import "../../styles/_partials"
+
+.section
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  @include spacing
+  padding-top: 3rem !important
+  gap: 2rem
+
+.header
+  @include mainHeader
+  margin: 0
+
+.column
+  position: relative
+  width: 100%
+  max-width: 700px
+  &:last-of-type
+    order: -1
+    width: 125px
+    align-self: flex-start
+
+@include laptop
+  .section
+    flex-direction: row
+  .column
+    &:last-of-type
+      order: 1
+      width: 400px
+      align-self: center
+  
+@include desktop
+  .column
+    &:last-of-type
+      width: 500px

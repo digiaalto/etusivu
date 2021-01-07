@@ -13,13 +13,21 @@ const Button = (props) => {
 }
 
 const InternalButton = (props) => {
-  const { href, text, icon, secondary, customStyle, inverted } = props
+  const {
+    href,
+    text,
+    icon,
+    secondary,
+    customStyle,
+    important,
+    inverted,
+  } = props
   return (
     <Link href={href}>
       <a
         className={`${styles.anchor} ${secondary && styles.secondary} ${
           inverted && styles.inverted
-        }`}
+        } ${important && styles.important}`}
         style={customStyle ? customStyle : null}
       >
         {text}
@@ -30,7 +38,15 @@ const InternalButton = (props) => {
 }
 
 const ExternalButton = (props) => {
-  const { href, text, icon, secondary, customStyle, inverted } = props
+  const {
+    href,
+    text,
+    icon,
+    secondary,
+    customStyle,
+    important,
+    inverted,
+  } = props
   return (
     <a
       href={href}
@@ -38,7 +54,7 @@ const ExternalButton = (props) => {
       rel="noopener noreferrer"
       className={`${styles.anchor} ${secondary && styles.secondary} ${
         inverted && styles.inverted
-      }`}
+      } ${important && styles.important}`}
       style={customStyle ? customStyle : null}
     >
       {text}

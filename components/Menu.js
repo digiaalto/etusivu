@@ -11,21 +11,9 @@ const links = [
     href: "/",
   },
   {
-    text: "Palvelut",
-    href: "/#palvelut",
+    text: "Verkkosivut",
+    href: "/verkkosivut",
   },
-  {
-    text: "Työnäytteet",
-    href: "/#tyonaytteet",
-  },
-  {
-    text: "Prosessi",
-    href: "/#prosessi",
-  },
-  // {
-  //   text: "Haastattelu",
-  //   href: "/haastattelu",
-  // },
 ]
 
 const Menu = (props) => {
