@@ -1,6 +1,9 @@
 @import "_partials.sass"
+@import "@fontsource/open-sans"
+@import "@fontsource/open-sans/600.css"
+@import "@fontsource/open-sans/800.css"
 
-$defaultFont: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif
+$defaultFont: -apple-system,BlinkMacSystemFont,"Open Sans","Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif
 
 *
 	box-sizing: border-box
@@ -18,10 +21,9 @@ html
 	background-color: $bglight
 body
 	margin: 0
-	font-size: 18px
+	font-size: $defaultFontSize
 	font-family: $defaultFont
 	color: $dark
-	font-weight: 400
 	line-height: 1.75
 input, textarea, button
 	font-family: $defaultFont
@@ -67,13 +69,17 @@ img
 	font-weight: 800
 	max-width: $sectionHeaderWidth
 .divider
-	background-color: $primary
-	height: 1rem
+	display: block
+	height: 0.5rem
 	width: 5rem
 	margin: 1rem 0
-	margin-bottom: 2rem
+	background-color: $primary
 .divider-secondary
 	background-color: $secondary
+.subheader
+	font-size: 1.5rem
+	font-weight: 600
+	max-width: 600px
 
 // MEDIA QUERIES
 @include laptop
@@ -82,12 +88,7 @@ img
 		margin-top: 2rem	
 		font-size: $h1Size
 @include desktop
-	body
-		font-size: 22px
 	p
 		max-width: 40rem
-	.header
-		font-size: $h1Size * 1.2
-		max-width: 40rem
 	.input, textarea, button
-		fonts-size: 22px
+		fonts-size: $defaultFontSize

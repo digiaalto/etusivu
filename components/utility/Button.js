@@ -19,7 +19,9 @@ const InternalButton = (props) => {
     icon,
     secondary,
     customStyle,
+    customClass,
     important,
+    primaryColor,
     inverted,
   } = props
   return (
@@ -27,7 +29,9 @@ const InternalButton = (props) => {
       <a
         className={`${styles.anchor} ${secondary && styles.secondary} ${
           inverted && styles.inverted
-        } ${important && styles.important}`}
+        } ${important && styles.important} ${
+          primaryColor && styles.primaryColor
+        } ${customClass && customClass}`}
         style={customStyle ? customStyle : null}
       >
         {text}
@@ -44,7 +48,9 @@ const ExternalButton = (props) => {
     icon,
     secondary,
     customStyle,
+    customClass,
     important,
+    primaryColor,
     inverted,
   } = props
   return (
@@ -54,7 +60,9 @@ const ExternalButton = (props) => {
       rel="noopener noreferrer"
       className={`${styles.anchor} ${secondary && styles.secondary} ${
         inverted && styles.inverted
-      } ${important && styles.important}`}
+      } ${important && styles.important} ${
+        primaryColor && styles.primaryColor
+      } ${customClass && customClass}`}
       style={customStyle ? customStyle : null}
     >
       {text}

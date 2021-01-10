@@ -8,12 +8,17 @@ $padding: (mobile: 5rem 5vw, laptop: 10rem 5vw, desktop: 15rem 9vw)
 $primary: #007CF0
 $secondary: #DA202B
 $dark: #1e272e
-$darkGray: #00122A
+$darkGray: #1e272e
 $gray: #808e9b
 $light: #ffffff
 $bglight: #ffffff
 $error: #f44336
 $accent1: #ffd32a
+
+$green: #05c46b
+$blue: #007CF0
+$red: #DA202B
+$yellow: #ffd32a
 
 // Fonts
 $h1Size: 2.441rem
@@ -23,6 +28,7 @@ $h4Size: 1.25rem
 $h5Size: 1.15rem
 $headerLineHeight: 1.3
 $bodyLineHeight: 1.75
+$defaultFontSize: 18px
 
 // Arbitary sizes
 $navHeight: 50px
@@ -69,12 +75,13 @@ $desktopHeroHeight: 940px
 	font-size: 1.75rem
 	font-weight: 900
 	max-width: $sectionHeaderWidth
+	@include tablet
+		font-size: 2rem
 	@include laptop
 		max-width: $sectionHeaderWidth * 1.1
-		font-size: $h1Size
-	@include desktop
 		font-size: $h1Size * 1.2
 
+// Layout.
 @mixin spacing
 	padding: 3rem 5vw
 	@include tablet
@@ -82,4 +89,4 @@ $desktopHeroHeight: 940px
 	@include laptop
 		padding: 7rem 8vw
 	@include desktop
-		padding: 10rem 10vw
+		padding: 9rem 10vw

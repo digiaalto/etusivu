@@ -14,6 +14,10 @@ const links = [
     text: "Verkkosivut",
     href: "/verkkosivut",
   },
+  {
+    text: "Meistä",
+    href: "/meista",
+  },
 ]
 
 const Menu = (props) => {

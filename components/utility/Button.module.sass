@@ -5,21 +5,22 @@
   justify-content: center
   align-items: center
   margin: 0.66rem 0
-  padding: 0.75rem
+  padding: 0.75rem 1.75rem
   color: #fff
   background-color: $dark
   border: 2px solid $dark
   border-radius: 9999px
   transition: all 0.2s ease
-  min-width: 200px
+  min-width: 150px
   font-size: 1rem
   user-select: none
   text-align: center
-
+  font-weight: 600
+  
   &:hover, &:focus
     color: $dark
-    background-color: transparent
     outline: none
+    background-color: #fff
 
   svg
     font-size: 1.2em
@@ -33,6 +34,7 @@
   &:hover, &:focus
     outline: none
     border: 2px solid $dark
+    background-color: #fff
 
 .inverted
   color: $light
@@ -42,6 +44,14 @@
     background-color: transparent
     color: $light !important
     border: 2px solid $light
+  
+.primaryColor
+  background-color: $primary
+  color: $light
+  border: 2px solid $primary
+  &:hover, &:focus
+    color: $primary
+    background-color: #fff
   
 .important
   background-color: $secondary

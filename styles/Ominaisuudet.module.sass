@@ -1,10 +1,5 @@
 @import "_partials"
 
-$tuloksetColor: #05c46b
-// $toimintaColor: #7928CA
-$toimintaColor: $primary
-$mukautettuColor: #FF4D4D
-
 // Layout.
 .ominaisuudet
   @include spacing
@@ -19,15 +14,15 @@ $mukautettuColor: #FF4D4D
 .fadeWrapper
   &:first-of-type
     .icon
-      background-color: $tuloksetColor
+      background-color: $green
   &:nth-of-type(2)
     margin-top: 2rem
     .icon
-      background-color: $toimintaColor
+      background-color: $blue
   &:nth-of-type(3)
     margin-top: 2rem
     .icon
-      background-color: $mukautettuColor
+      background-color: $red
 
 // Ominaisuus.
 .icon

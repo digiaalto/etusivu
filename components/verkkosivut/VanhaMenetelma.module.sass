@@ -14,28 +14,26 @@
   width: 100%
   max-width: 700px
 
-.lighthouse
-  display: flex
-  flex-direction: column
-  max-width: 250px
-  text-align: center
-  align-items: center
-.lighthouseCTA
-  display: flex
-  flex-direction: column
-  margin-top: -4rem
+.headerContainer
+  max-width: 420px
+  
+.imageWrapper
+  filter: saturate(20%)
+  max-width: 550px
+
 .header
   @include mainHeader
-  margin-bottom: 0
+  margin-top: 0 !important
+
+@include tablet
+  .section
+    align-items: flex-start
+    justify-content: center
 
 @include desktop
   .section
+    gap: 4rem
     flex-direction: row
-    align-items: flex-start
     justify-content: center
-    gap: 8rem
-  .column
-    order: 1
-  .lighthouse
-    order: 0
-    align-self: center
+  .textContainer
+    margin-top: 12rem

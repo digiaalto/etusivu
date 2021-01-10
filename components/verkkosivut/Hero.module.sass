@@ -1,76 +1,81 @@
 @import "../../styles/_partials"
 
+// Layout.
 .section
   @include spacing
-  padding-top: 5rem !important
+  padding-bottom: 3rem !important
+.content
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background-color: #ffffff
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1)
+  padding: 1rem
+  margin-left: 5%
+  margin-right: 5%
+  margin-top: -8rem
+// Background.
 .background
   display: flex
   flex-direction: row
   align-items: flex-end
-  gap: 1rem
-  height: 50vh
+  gap: 0.5rem
+  height: 40vh
 .block
-  background-color: $primary
+  background-color: $dark
   display: block
   width: 100%
-  transition: all 0.2s ease
+  transition: all 0.45s ease
   &:first-of-type
     height: 55%
+    background-color: $red
   &:nth-of-type(2)
     height: 70%
+    background-color: $yellow
   &:nth-of-type(3)
     height: 83%
+    background-color: $green
   &:nth-of-type(4)
     height: 89%
+    background-color: $blue
   &:hover
-    cursor: pointer
     height: 100%
-    &:last-of-type
-      background-color: $secondary
-
-.content
-  background-color: #ffffff
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1)
-  padding: 2em 2rem
-  margin-left: 5%
-  margin-right: 5%
-  margin-top: -8rem
+// Content.
 .header
-  font-size: $h2Size
   font-weight: 900
   text-align: center
-  margin-top: 0
+  line-height: 1.2
+  margin: 1rem 0
 .sisaltoLinkit
   display: flex
+  justify-content: center
+  gap: 1rem
   text-align: center
-  gap: 2rem
   list-style: none
   padding: 0
-  margin: 2rem 0
-  justify-content: center
-  gap: 3remx
-.ctaContainer
-  display: flex
-  justify-content: center
+  margin: 0
+.linkItem
+  font-size: 1rem
 
+// Media queries.
 @include tablet
   .background
-    gap: 2rem
+    gap: 1rem
     min-height: 60vh
-  
+  .header
+    max-width: 70vw
 @include laptop
   .header
     font-size: $h1Size
-  .block
-
 @include desktop
   .section
-    padding-top: 3em !important
+    padding-top: 1rem !important
   .content
     margin-top: -12rem
     margin-left: 10%
     margin-right: 10%
+    padding: 3rem 0
   .header
     font-size: 4rem
     max-width: 800px
-    margin: auto

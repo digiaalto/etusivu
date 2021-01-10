@@ -1,0 +1,23 @@
+@import "../../styles/_partials"
+
+.wrapper
+  display: flex
+  align-items: center
+  gap: 1rem
+
+.label
+  font-size: 1rem
+  cursor: pointer
+  user-select: none
+
+.input
+  display: inline-block
+  cursor: pointer
+
+  &[type="checkbox"]
+    width: 20px
+    height: 20px
+  
+@include desktop
+  .label
+    font-size: 22px

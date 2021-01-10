@@ -4,7 +4,7 @@ const TextBar = () => {
   return (
     <div className={styles.bar}>
       <p className={styles.text}>
-        Investoi moderniin teknologiaan ja kasva rauhassa.
+        Investoi moderniin teknologiaan ja kasva huoletta.
       </p>
     </div>
   )

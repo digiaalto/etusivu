@@ -26,6 +26,7 @@ const NavList = () => {
   return (
     <ul className={styles.navList}>
       <NavLink href={"/verkkosivut"} text="Verkkosivut" />
+      <NavLink href={"/meista"} text="Meistä" />
     </ul>
   )
 }
