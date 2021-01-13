@@ -5,16 +5,12 @@ $bp: (tablet: 768px, laptop: 1024px, desktop: 1440px)
 
 $padding: (mobile: 5rem 5vw, laptop: 10rem 5vw, desktop: 15rem 9vw)
 
-$primary: #007CF0
+$primary: #3c40c6
 $secondary: #DA202B
 $dark: #1e272e
-$darkGray: #4c565e
-$gray: #808e9b
-$lightGray: #fafafa
+$gray: #4c565e
 $light: #ffffff
 $bglight: #ffffff
-$error: #f44336
-$accent1: #ffd32a
 
 $green: #05c46b
 $blue: #007CF0
@@ -42,13 +38,6 @@ $laptopHeroHeight: 900px
 $desktopHeroHeight: 940px
 
 // Mixins.
-@mixin preheader
-	display: block
-	text-transform: uppercase
-	line-height: 1.4
-	font-weight: 800
-	letter-spacing: 0.2rem
-
 @mixin tablet
 	@media (min-width: 768px)
 		@content
@@ -61,6 +50,14 @@ $desktopHeroHeight: 940px
 @mixin bigDesktop
 	@media (min-width: 1920px)
 		@content
+
+@mixin preheader
+	display: block
+	font-weight: 800
+	line-height: 1.3
+	letter-spacing: 1px
+	text-transform: uppercase
+
 @mixin hoverFill($baseColor)
 	@supports (background-clip: text) and (-webkit-text-fill-color: transparent)
 		background: linear-gradient(to right, $primary, $primary 50%, $baseColor 50%)
@@ -82,7 +79,6 @@ $desktopHeroHeight: 940px
 		max-width: $sectionHeaderWidth * 1.1
 		font-size: $h1Size * 1.2
 
-// Layout.
 @mixin spacing
 	padding: 3rem 5vw
 	@include tablet

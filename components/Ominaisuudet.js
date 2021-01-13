@@ -31,7 +31,7 @@ const ominaisuudet = [
   {
     header: "Mukautettu",
     text:
-      "Räätälöity oman brändin mukaisesti. Ei sinun rahoilla ostettuja valmisteemoja tai kuluneita designperiaatteita.",
+      "Räätälöity oman brändin mukaisesti. Teidän rahoja ei käytetä kopioidun valmisteeman hankintaan kulissien takana.",
     icon: <FaPaintBrush className={styles.bouncing} />,
   },
 ]

@@ -14,16 +14,6 @@ const Footer = () => {
   )
 }
 
-const LogoRow = () => {
-  return (
-    <div className={styles.column}>
-      <div className={styles.row}>
-        <Logo invert />
-        <span className={styles.copyright}>© 2021 digiaalto.fi</span>
-      </div>
-    </div>
-  )
-}
 const ContactRow = () => {
   return (
     <div className={styles.column}>
@@ -56,6 +46,17 @@ const NavigationRow = () => {
         <Link href="/haastattelu">
           <a className={styles.link}>Haastattelu</a>
         </Link>
+      </div>
+    </div>
+  )
+}
+
+const LogoRow = () => {
+  return (
+    <div className={styles.column}>
+      <div className={styles.row}>
+        <Logo invert />
+        <span className={styles.copyright}>© 2021 digiaalto.fi</span>
       </div>
     </div>
   )

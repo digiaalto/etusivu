@@ -4,22 +4,20 @@ import Image from "next/image"
 const as16_9 = 0.5625
 const as9_16 = 1.777777777777778
 
-const Tyonaute = (props) => {
+const Tyonayte = (props) => {
   const { imgData, palette, scoreSrc, header, paragraphs, inverted } = props
 
   return (
     <div className={`${styles.tyonayte} ${inverted && styles.inverted}`}>
       <div className={styles.views}>
-        <NayteView
-          imgData={imgData.desktop}
-          palette={palette}
-          isMobile={false}
-        />
-        <NayteView imgData={imgData.mobile} palette={palette} isMobile={true} />
+        <Screens imgData={imgData.desktop} palette={palette} isMobile={false} />
+        <Screens imgData={imgData.mobile} palette={palette} isMobile={true} />
       </div>
-      <div className={styles.infos}>
-        <h3 className={styles.nayteHeader}>{header}</h3>
-        <Palette palette={palette} />
+      <div className={styles.infoWrapper}>
+        <div className={styles.headerLine}>
+          <Palette palette={palette} />
+          <h3 className={styles.nayteHeader}>{header}</h3>
+        </div>
         <div className={styles.paragraphs}>
           {paragraphs.map((p, index) => (
             <p className={styles.nayteParagraph} key={`${header}-${index}`}>
@@ -27,18 +25,17 @@ const Tyonaute = (props) => {
             </p>
           ))}
         </div>
-        <Image
-          src={scoreSrc}
-          width={288}
-          height={81}
-          className={styles.score}
-        />
+        <Score src={scoreSrc} />
       </div>
     </div>
   )
 }
 
-const NayteView = (props) => {
+const Score = ({ src }) => {
+  return <Image src={src} width={288} height={81} className={styles.score} />
+}
+
+const Screens = (props) => {
   const { imgData, isMobile } = props
   return (
     <div
@@ -72,4 +69,4 @@ const Palette = (props) => {
     </div>
   )
 }
-export default Tyonaute
+export default Tyonayte

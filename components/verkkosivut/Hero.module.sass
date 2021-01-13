@@ -15,10 +15,11 @@
   margin-left: 5%
   margin-right: 5%
   margin-top: -8rem
+
 // Background.
 .background
-  display: flex
-  flex-direction: row
+  display: grid
+  grid-auto-flow: column
   align-items: flex-end
   gap: 0.5rem
   height: 40vh
@@ -41,12 +42,14 @@
     background-color: $blue
   &:hover
     height: 100%
+    
 // Content.
 .header
   font-weight: 900
   text-align: center
   line-height: 1.2
-  margin: 1rem 0
+  margin-top: 1rem
+  margin-bottom: 0.33rem
 .sisaltoLinkit
   display: flex
   justify-content: center

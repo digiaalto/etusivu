@@ -7,6 +7,10 @@ const animCfg = {
   image: {
     triggerOnce: true,
   },
+  header: {
+    direction: "up",
+    triggerOnce: true,
+  },
   text: {
     direction: "up",
     damping: 0.1,
@@ -19,13 +23,17 @@ const MiksiDigiaalto = () => {
   return (
     <section className={styles.section} id="miksi-digiaalto">
       <div className={styles.column}>
+        <Fade {...animCfg.header}>
+          <div>
+            <h2 className={styles.header}>Miksi Digiaalto?</h2>
+            <h3 className="subheader">
+              Digiaallon hybrid-verkkosivut ovat tavallisia verkkosivuja
+              suorituskykyisempiä, turvallisempia ja kestävät ajan koettelua
+              ilman erityisiä ylläpitotoimia.
+            </h3>
+          </div>
+        </Fade>
         <Fade {...animCfg.text}>
-          <h2 className={styles.header}>Miksi Digiaalto?</h2>
-          <h3 className="subheader">
-            Digiaallon hybrid-verkkosivut ovat tavallisia verkkosivuja
-            suorituskykyisempiä, turvallisempia ja kestävät ajan koettelua ilman
-            erityisiä ylläpitotoimia.
-          </h3>
           <p>
             React-pohjaiset Next.js sivustot ovat tavanomaisesti olleet vain
             isojen digijättien ulottuvissa. Digiaallon tehtävä on tuoda nämä
@@ -61,13 +69,14 @@ const MiksiDigiaalto = () => {
           />
           <LinkButton
             href="https://web.dev/measure/"
-            text="Testaa sivuja"
+            text="Vertaile sivuja"
             external={true}
+            primary
             customStyle={{ marginTop: "1rem", marginBottom: "1rem" }}
           />
-          <small>
+          <span className={styles.lighthouseHelp}>
             Käytä täydellistä apex-verkkotunnusta. (esim. https://digiaalto.fi/)
-          </small>
+          </span>
         </Fade>
       </div>
     </section>

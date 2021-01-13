@@ -2,19 +2,20 @@
 
 .section
 	@include spacing
-	display: flex
-	flex-direction: column
-	justify-content: center
 
 .wrapper
 	position: relative
 	display: grid
 	grid-auto-flow: row
-	gap: 3rem
+	gap: 4rem
 
 .header
 	@include mainHeader
-	margin: 0
+	margin-top: 0
+
+@include tablet
+	.wrapper
+		gap: 8rem
 
 @include desktop
 	.header

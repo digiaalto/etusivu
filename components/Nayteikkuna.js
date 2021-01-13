@@ -1,13 +1,15 @@
 import styles from "../styles/Nayteikkuna.module.sass"
 import Tyonayte from "./common/Tyonayte"
 
+const desktopDivider = 3
+
 const digiaalto = {
   imgData: {
     desktop: {
       src: "/tyonayte/digiaalto/desktop.png",
       alt: "Työnäyte - Digiaalto, PC",
-      width: 1920 / 2.5,
-      height: 3792 / 2.5,
+      width: 1920 / desktopDivider,
+      height: 3792 / desktopDivider,
     },
     mobile: {
       src: "/tyonayte/digiaalto/mobile.png",
@@ -20,9 +22,8 @@ const digiaalto = {
   scoreSrc: "/tyonayte/digiaalto/scores.png",
   header: "Digiaalto",
   paragraphs: [
-    `Web-designerin verkkosivun ei pidä myydä pelkästään palveluita vaan myös itseään.`,
-    `Suunnittelu tapahtui asiakkaan tarpeita ajatellen ja uuden teknologian etuja korostettiin selkokielellä.`,
-    `Sivuston päätarkoitus on saada yrittäjä täyttämään haastattelulomake tai ottamaan yhteyttä.`,
+    `Supertehokkaita ja kehittyneitä verkkosivuja yrittäjille jotka eivät halua verkkosivun hallinan kasvattavan heidän työtaakkaansa.`,
+    `Sivuston päätarkoitus on saada vierailija lähettämään tarjouspyynöön tai ottamaan suoraan yhteyttä.`,
   ],
 }
 
@@ -31,8 +32,8 @@ const majoitusroosa = {
     desktop: {
       src: "/tyonayte/majoitusroosa/desktop.png",
       alt: "Työnäyte - Majoitusroosa, PC",
-      width: 1920 / 2.5,
-      height: 6174 / 2.5,
+      width: 1920 / desktopDivider,
+      height: 6174 / desktopDivider,
     },
     mobile: {
       src: "/tyonayte/majoitusroosa/mobile.png",

@@ -32,13 +32,13 @@ const Palvelut = (props) => {
           <div className={styles.textWrapper}>
             <p>
               Digiaallon suunnittelu- ja kehityspalveluun sisältyy kaikki
-              laadukkaan nettisivun valmistusvaiheet alusta loppuun.
-              Haluamillasi ominaisuuksilla ja integroinneilla.
+              laadukkaan nettisivun valmistusvaiheet alusta loppuun,
+              haluamillasi ominaisuuksilla ja integroinneilla.
             </p>
             <p>
               Valitse kilpailijoitasi kehittyneempi kehitysarkkitehtuuri ja
-              hyödy rakenteellisesta kilpailuedusta nopeasti kasvavassa
-              verkkokilpailussa.
+              hyödy rakenteellisesta kilpailuedusta, mikä ei lisää työtaakkaasi,
+              vaadi ylläpitotoimia tai sisällä piilokustannuksia.
             </p>
           </div>
         </Fade>
