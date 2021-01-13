@@ -2,9 +2,9 @@
 
 // Työnäyte.
 .tyonayte
-  display: flex
-  flex-direction: column
-  gap: 3rem
+  display: grid
+  gap: 2rem
+  grid-auto-flow: row
   justify-content: center
 
 .views
@@ -48,13 +48,15 @@
   
 // Palette.
 .palette
-  display: flex
+  display: grid
+  grid-auto-flow: column
+  justify-content: flex-start
   gap: 1rem
-  margin: 1rem 0
+  margin-bottom: 2rem
 .paletteBall
   width: 2rem
   height: 2rem
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5)
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2)
   border-radius: 9999px
   
 @include tablet
@@ -72,8 +74,8 @@
 
 @include desktop
   .tyonayte
-    flex-direction: row
-    gap: 4rem
+    grid-auto-flow: column
+    gap: 6rem
   .views
     display: flex
     flex-direction: row

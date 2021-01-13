@@ -1,7 +1,7 @@
 import styles from "./Hero.module.sass"
 import Link from "next/link"
 import { Fade } from "react-awesome-reveal"
-import Button from "../utility/Button"
+import { LinkButton } from "../common/button"
 
 const animCfg = {
   section: {
@@ -27,10 +27,11 @@ const Hero = () => {
           <h1 className={styles.header}>
             Hyödylliset verkkosivut yritykselle.
           </h1>
-          <Button
+          <LinkButton
             href="/verkkosivut#tarjouspyynto"
             text="Tarjouspyyntö"
-            primaryColor
+            primary
+            customStyle={{ margin: "2rem" }}
           />
         </div>
       </Fade>

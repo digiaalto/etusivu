@@ -1,7 +1,7 @@
 import styles from "./MiksiDigiaalto.module.sass"
 import Image from "next/image"
-import Button from "../utility/Button"
 import { Fade } from "react-awesome-reveal"
+import { LinkButton } from "../common/button"
 
 const animCfg = {
   image: {
@@ -26,7 +26,6 @@ const MiksiDigiaalto = () => {
             suorituskykyisempiä, turvallisempia ja kestävät ajan koettelua ilman
             erityisiä ylläpitotoimia.
           </h3>
-          <div className="divider" />
           <p>
             React-pohjaiset Next.js sivustot ovat tavanomaisesti olleet vain
             isojen digijättien ulottuvissa. Digiaallon tehtävä on tuoda nämä
@@ -60,18 +59,15 @@ const MiksiDigiaalto = () => {
             height={400}
             alt="Lighthouse Link"
           />
-          <div className={styles.lighthouseCTA}>
-            <Button
-              href="https://web.dev/measure/"
-              text="Testaa verkkosivu"
-              primaryColor
-              outside
-            />
-            <small>
-              Käytä täydellistä apex-verkkotunnusta. (esim.
-              https://digiaalto.fi/)
-            </small>
-          </div>
+          <LinkButton
+            href="https://web.dev/measure/"
+            text="Testaa sivuja"
+            external={true}
+            customStyle={{ marginTop: "1rem", marginBottom: "1rem" }}
+          />
+          <small>
+            Käytä täydellistä apex-verkkotunnusta. (esim. https://digiaalto.fi/)
+          </small>
         </Fade>
       </div>
     </section>

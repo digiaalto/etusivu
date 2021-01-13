@@ -22,10 +22,7 @@ const Palvelut = (props) => {
       <div className={styles.content}>
         <Fade {...animCfg.header}>
           <div className={styles.headers}>
-            <span className={styles.preheader}>
-              Mitä Digiaalto
-              <br /> Tekee?
-            </span>
+            <span className={styles.preheader}>Mitä saat?</span>
             <h1 className={styles.header}>
               Kestävät kotisivut yritykselle mittavalla laatutestauksella.
             </h1>

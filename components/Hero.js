@@ -1,6 +1,6 @@
 import styles from "../styles/Hero.module.sass"
 import React, { useState, useEffect } from "react"
-import Button from "./utility/Button"
+import { LinkButton } from "./common/button"
 import { Fade } from "react-awesome-reveal"
 
 const animCfg = {
@@ -62,8 +62,8 @@ export default Hero
 const CtaButtons = () => {
   return (
     <div className={styles.ctaButtons}>
-      <Button href="/haastattelu" text="Aloita projekti" />
-      <Button href="/#palvelut" text="Miksi Digiaalto?" secondary={true} />
+      <LinkButton href="/verkkosivut#tarjouspyynto" text="Aloita projekti" />
+      <LinkButton href="/#palvelut" text="Miksi Digiaalto?" alternative />
     </div>
   )
 }

@@ -54,14 +54,13 @@ $fadeSpeed: 2.1s
 	line-height: 1.1em
 	margin: 0
 .highlightBackground, .highlightBackground2, .highlightBackground3, .salesPitch
-	letter-spacing: -0.4rem
+	letter-spacing: -2px
 .subheader
 	font-size: 1.3rem
 	line-height: 1.4em
 .ctaButtons
-	display: flex
-	flex-direction: column
-	justify-content: center
+	display: grid
+	gap: 1rem
 	margin: 2rem 0
 .highlightBackground // reveseFader
 	position: relative
@@ -141,9 +140,11 @@ $fadeSpeed: 2.1s
 // Media queries.
 @include tablet
 	.ctaButtons
-		display: inline-flex
-		flex-direction: row
-		gap: 1rem
+		grid-auto-flow: column
+		div
+			justify-self: flex-start
+			&:first-of-type
+				justify-self: flex-end
 	.content
 		max-width: $tabletWidth
 	.salesPitch
@@ -160,3 +161,5 @@ $fadeSpeed: 2.1s
 		max-width: $desktopWidth
 	.salesPitch
 		font-size: 8rem
+	.highlightBackground, .highlightBackground2, .highlightBackground3, .salesPitch
+		letter-spacing: -8px

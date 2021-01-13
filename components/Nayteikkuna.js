@@ -18,7 +18,7 @@ const digiaalto = {
   },
   palette: ["#007CF0", "#ffffff", "#00122A", "#1e272e"],
   scoreSrc: "/tyonayte/digiaalto/scores.png",
-  header: "Digiaalto - Web-design & kehitys",
+  header: "Digiaalto",
   paragraphs: [
     `Web-designerin verkkosivun ei pidä myydä pelkästään palveluita vaan myös itseään.`,
     `Suunnittelu tapahtui asiakkaan tarpeita ajatellen ja uuden teknologian etuja korostettiin selkokielellä.`,
@@ -43,7 +43,7 @@ const majoitusroosa = {
   },
   palette: ["#d66686", "#eee", "#edebe5", "#222222"],
   scoreSrc: "/tyonayte/majoitusroosa/scores.png",
-  header: "Majoitusroosa - Majoituspaikka",
+  header: "Majoitusroosa",
   paragraphs: [
     `Majoitusalan yritys Lammen luonnossa, varattavissa pääsääntöisesti isoille ryhmille.`,
     `Sivuston päätarkoitus on esitellä maisemia ja rakennuksia isoilla kuvilla joiden optimointia hoitaa Gatsbyn kuva-komponentti.`,

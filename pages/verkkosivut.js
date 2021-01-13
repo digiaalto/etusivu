@@ -3,8 +3,7 @@ import Hero from "../components/verkkosivut/Hero"
 import VanhaMenetelma from "../components/verkkosivut/VanhaMenetelma"
 import TextBar from "../components/verkkosivut/TextBar"
 import MiksiDigiaalto from "../components/verkkosivut/MiksiDigiaalto"
-import CompanyLogoSlider from "../components/common/CompanyLogoSlider"
-// import Tarjouspyynto from "../components/common/Tarjouspyynto"
+import LogoSlider from "../components/verkkosivut/LogoSlider"
 
 const Verkkosivut = () => {
   return (
@@ -13,8 +12,7 @@ const Verkkosivut = () => {
       <VanhaMenetelma />
       <TextBar />
       <MiksiDigiaalto />
-      <CompanyLogoSlider />
-      {/* <Tarjouspyynto /> */}
+      <LogoSlider />
     </Layout>
   )
 }

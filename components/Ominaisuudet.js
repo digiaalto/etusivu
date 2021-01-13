@@ -19,7 +19,7 @@ const ominaisuudet = [
   {
     header: "Laatutestaus ja raportti",
     text:
-      "Verkkosivun toteutuksen varmistaa Google Lighthousen ankara laatutestaus. Hyödy rakenteellisesta kilpailuedusta jo lähtöruudussa.",
+      "Sivun toteutuksen varmistaa Google Lighthousen verkkosivun laatutestaus. Digiaalto lupaa kilpailijoita paremman pisteytyksen.",
     icon: <SiPowerbi className={styles.growing} />,
   },
   {
@@ -31,7 +31,7 @@ const ominaisuudet = [
   {
     header: "Mukautettu",
     text:
-      "Räätälöity oman brändin mukainen sivusto. Ei valmisteemoja, kuluneita designperiaatteita tai ulkoistettuja päätöksiä.",
+      "Räätälöity oman brändin mukaisesti. Ei sinun rahoilla ostettuja valmisteemoja tai kuluneita designperiaatteita.",
     icon: <FaPaintBrush className={styles.bouncing} />,
   },
 ]

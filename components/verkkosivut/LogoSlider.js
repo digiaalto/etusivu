@@ -1,4 +1,4 @@
-import styles from "./CompanyLogoSlider.module.sass"
+import styles from "./LogoSlider.module.sass"
 import Image from "next/image"
 
 const logoPath = "/images/logos/"
@@ -29,7 +29,7 @@ const secondRowSources = [
   "svg22.svg",
 ]
 
-const CompanyLogoSlider = () => {
+const LogoSlider = () => {
   return (
     <section className={styles.section}>
       <span className={styles.bgHeader}>Kuka käyttää Nextiä?</span>
@@ -42,7 +42,7 @@ const CompanyLogoSlider = () => {
   )
 }
 
-export default CompanyLogoSlider
+export default LogoSlider
 
 const Slider = (props) => {
   return (
@@ -64,6 +64,7 @@ const SliderInner = ({ logoSources }) => {
               layout="intrinsic"
               width={150}
               height={50}
+              priority
             />
           </div>
         )

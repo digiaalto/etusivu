@@ -7,16 +7,18 @@
 	justify-content: center
 
 .wrapper
-	display: flex
-	flex-direction: column
-	gap: 3rem
 	position: relative
+	display: grid
+	grid-auto-flow: row
+	gap: 3rem
 
 .header
 	@include mainHeader
 	margin: 0
 
 @include desktop
+	.header
+		margin-bottom: 4rem !important
 	.wrapper
 		gap: 10rem
 	.header

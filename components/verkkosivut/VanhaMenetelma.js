@@ -19,18 +19,17 @@ const VanhaMenetelma = () => {
           <h2 className={styles.header}>Vanha tekniikka — WordPress.</h2>
           <div className={styles.imageWrapper}>
             <Image
-              src={"/images/under_constructions.svg"}
+              src={"/images/typewriter.svg"}
               layout="intrinsic"
-              width={600}
-              height={320}
-              alt="Maalattu aalto"
+              width={490}
+              height={370}
+              alt="Hidas WordPress kuvaus"
             />
           </div>
         </Fade>
       </div>
       <div className={`${styles.column} ${styles.textContainer}`}>
         <Fade {...animCfg.cascadeFade}>
-          <div className="divider" />
           <h3 className="subheader">
             WordPressiä markkinoidaan parhaana verkkoratkaisuna asiakkaalle,
             mutta todellisuudessa sen käytöstä hyötyy myyntimies eikä asiakas
