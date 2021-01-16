@@ -42,12 +42,7 @@
 	margin-right: 0.5rem
 	font-size: 2rem
 .topHeader
-	margin-bottom: 0
-	margin-top: 1rem
-	font-weight: 800
-	font-size: $h2Size
-.middleHeader
-	line-height: 1.6
+	@include mainHeader
 .bottomHeader
 	font-weight: 900
 	margin: 0
@@ -123,8 +118,6 @@
 		max-width: 280px
 	
 @include desktop
-	.topHeader
-		@include mainHeader
 	.blockParagraph
 		font-size: 1.1rem
 	.column

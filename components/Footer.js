@@ -6,7 +6,7 @@ import LahetaViesti from "./common/LahetaViesti"
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} id="laheta-viesti">
       <ContactRow />
       <NavigationRow />
       <LogoRow />
@@ -17,9 +17,7 @@ const Footer = () => {
 const ContactRow = () => {
   return (
     <div className={styles.column}>
-      <LahetaViesti
-        header={"Rakennetaan jotain mitä on mukava käyttää. Ota yheyttä!"}
-      />
+      <LahetaViesti header={"Rakennetaan jotain mitä on mukava käyttää."} />
     </div>
   )
 }
@@ -43,8 +41,8 @@ const NavigationRow = () => {
         <Link href="/verkkosivut">
           <a className={styles.link}>Verkkosivut</a>
         </Link>
-        <Link href="/haastattelu">
-          <a className={styles.link}>Haastattelu</a>
+        <Link href="/verkkosivut#tarjouspyynto">
+          <a className={styles.link}>Tarjouspyyntö</a>
         </Link>
       </div>
     </div>

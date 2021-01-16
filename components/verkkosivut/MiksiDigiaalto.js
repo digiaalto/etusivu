@@ -26,7 +26,7 @@ const MiksiDigiaalto = () => {
         <Fade {...animCfg.header}>
           <div>
             <h2 className={styles.header}>Miksi Digiaalto?</h2>
-            <h3 className="subheader">
+            <h3 className={styles.subheader}>
               Digiaallon hybrid-verkkosivut ovat tavallisia verkkosivuja
               suorituskykyisempiä, turvallisempia ja kestävät ajan koettelua
               ilman erityisiä ylläpitotoimia.

@@ -1,47 +1,49 @@
 @import "../../styles/_partials"
 
 .section
-  @include spacing
-  min-height: 100vh
-  position: relative
-  display: flex
-  flex-direction: column
-  align-items: center
-  gap: 2rem
+	@include spacing
+	min-height: 100vh
+	position: relative
+	display: flex
+	flex-direction: column
+	align-items: center
+	gap: 2rem
 
 .column
-  position: relative
-  width: 100%
-  max-width: 700px
+	position: relative
+	width: 100%
+	max-width: 700px
 
 .lighthouse
-  display: flex
-  flex-direction: column
-  max-width: 250px
-  text-align: center
-  align-items: center
+	display: flex
+	flex-direction: column
+	max-width: 250px
+	text-align: center
+	align-items: center
 
 .lighthouseCTA
-  display: flex
-  flex-direction: column
-  margin-top: -1rem
+	display: flex
+	flex-direction: column
+	margin-top: -1rem
 
 .lighthouseHelp
-  font-size: 0.8rem
-  display: inline-block
+	font-size: 0.8rem
+	display: inline-block
 
 .header
-  @include mainHeader
-  margin-bottom: 0
+	@include mainHeader
+
+.subheader
+	@include subheader
 
 @include desktop
-  .section
-    flex-direction: row
-    align-items: flex-start
-    justify-content: center
-    gap: 8rem
-  .column
-    order: 1
-  .lighthouse
-    order: 0
-    align-self: center
+	.section
+		flex-direction: row
+		align-items: flex-start
+		justify-content: center
+		gap: 8rem
+	.column
+		order: 1
+	.lighthouse
+		order: 0
+		align-self: center

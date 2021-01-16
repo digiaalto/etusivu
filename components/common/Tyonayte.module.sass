@@ -1,77 +1,76 @@
 @import "../../styles/_partials"
 
 @mixin windowStyle
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.2)
-  border-radius: 6px
-  overflow-y: scroll
-  -ms-overflow-style: none
-  scrollbar-width: none
-  &::-webkit-scrollbar
-    display: none
+	box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.2)
+	border-radius: 6px
+	overflow-y: scroll
+	-ms-overflow-style: none
+	scrollbar-width: none
+	&::-webkit-scrollbar
+		display: none
 
 // Työnäyte.
 .tyonayte
-  display: grid
-  gap: 2rem
-  grid-auto-flow: row
+	display: grid
+	gap: 2rem
+	grid-auto-flow: row
 
 // Näyteinfo.
 .infoWrapper
-  order: -1
-  max-width: 600px
+	order: -1
+	max-width: 600px
 .headerLine
-  display: flex
-  flex-direction: column
+	display: flex
+	flex-direction: column
 .nayteHeader
-  font-weight: 900
-  text-transform: uppercase
-  letter-spacing: 1px
+	font-size: 1.4rem
+	font-weight: 600
 .nayteParagraph
-  max-width: 500px
+	max-width: 500px
 .score
-  transform: translateX(-10px)
+	transform: translateX(-10px)
 
 // Palette.
 .palette
-  display: grid
-  grid-auto-flow: column
-  justify-content: flex-start
-  gap: 0.66rem
+	display: grid
+	grid-auto-flow: column
+	justify-content: flex-start
+	gap: 0.66rem
 .paletteBall
-  width: 1.5rem
-  height: 1.5rem
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2)
-  border-radius: 9999px
+	width: 1.5rem
+	height: 1.5rem
+	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2)
+	border-radius: 9999px
 
 // View Screens.
 .inverted
-  .views
-    order: 1
+	.views
+		order: 1
 .views
-  position: relative
-  display: inline-flex
-  flex-direction: column
+	position: relative
+	display: inline-flex
+	flex-direction: column
 .desktopView
-  @include windowStyle
-  display: none
+	@include windowStyle
+	display: none
 .mobileView
-  @include windowStyle
-  z-index: 1
-  display: inline-block
+	@include windowStyle
+	z-index: 1
+	display: inline-block
 
 @include tablet
-  .desktopView
-    display: inline-block // Make visible.
-  .mobileView
-    position: absolute
-    top: 30%
-    left: 65%
-  
+	.desktopView
+		display: inline-block // Make visible.
+	.mobileView
+		position: absolute
+		top: 30%
+		left: 65%
+	
 @include desktop
-  .tyonayte
-    grid-auto-flow: column
-    justify-content: center
-    gap: 6rem
-  .infoWrapper
-    order: 0
-    flex: 0.7
+	.tyonayte
+		grid-auto-flow: column
+		justify-content: center
+		gap: 6rem
+	.infoWrapper
+		order: 0
+		flex: 0.7

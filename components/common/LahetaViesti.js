@@ -114,7 +114,7 @@ const LahetaViesti = (props) => {
               <span className={styles.error}>Viesti unohtui.</span>
             )}
           </div>
-          <ButtonStyler primary customStyle={{ marginTop: "2rem" }}>
+          <ButtonStyler secondary customStyle={{ marginTop: "2rem" }}>
             <button type="submit">Lähetä viesti</button>
           </ButtonStyler>
         </form>

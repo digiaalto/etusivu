@@ -4,6 +4,7 @@ import VanhaMenetelma from "../components/verkkosivut/VanhaMenetelma"
 import TextBar from "../components/verkkosivut/TextBar"
 import MiksiDigiaalto from "../components/verkkosivut/MiksiDigiaalto"
 import LogoSlider from "../components/verkkosivut/LogoSlider"
+import TarjousOsio from "../components/verkkosivut/TarjousOsio"
 
 const Verkkosivut = () => {
   return (
@@ -13,6 +14,7 @@ const Verkkosivut = () => {
       <TextBar />
       <MiksiDigiaalto />
       <LogoSlider />
+      <TarjousOsio />
     </Layout>
   )
 }

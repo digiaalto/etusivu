@@ -3,25 +3,23 @@
 .section
 	@include spacing
 
-.wrapper
+.naytteet
 	position: relative
 	display: grid
 	grid-auto-flow: row
 	gap: 4rem
+	margin-top: 3rem
 
 .header
 	@include mainHeader
-	margin-top: 0
 
 @include tablet
-	.wrapper
+	.naytteet
 		gap: 8rem
 
 @include desktop
-	.header
-		margin-bottom: 4rem !important
-	.wrapper
+	.naytteet
 		gap: 10rem
 	.header
-		margin: auto
-		margin-bottom: 3rem
+		margin-left: auto
+		margin-right: auto

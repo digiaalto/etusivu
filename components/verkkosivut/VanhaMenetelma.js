@@ -30,7 +30,7 @@ const VanhaMenetelma = () => {
       </div>
       <div className={`${styles.column} ${styles.textContainer}`}>
         <Fade {...animCfg.cascadeFade}>
-          <h3 className="subheader">
+          <h3 className={styles.subheader}>
             WordPressiä markkinoidaan parhaana verkkoratkaisuna asiakkaalle,
             mutta todellisuudessa sen käytöstä hyötyy myyntimies eikä asiakas
             itse.

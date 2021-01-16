@@ -25,7 +25,7 @@ const ominaisuudet = [
   {
     header: "Kestävä ja pitkäikäinen",
     text:
-      "Julkaisun jälkeen kaikki toimii ikiliikkujan tavoin. Ei monoliitistä johtuvia tietoturva-aukkoja, päivityksiä tai muita yllättäviä ylläpitotoimia.",
+      "Julkaisun jälkeen kaikki toimii ikiliikkujan tavoin. Ei monoliitistä johtuvia tietoturva-aukkoja, päivityksiä tai muita ylläpitotoimia.",
     icon: <FaCog className={styles.spinning} />,
   },
   {

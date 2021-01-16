@@ -57,7 +57,7 @@ const Nayteikkuna = (props) => {
   return (
     <section className={styles.section} ref={refs} id="tyonaytteet">
       <h3 className={styles.header}>Viimeisimmät työt.</h3>
-      <div className={styles.wrapper}>
+      <div className={styles.naytteet}>
         <Tyonayte {...digiaalto} />
         <Tyonayte {...majoitusroosa} inverted={true} />
       </div>

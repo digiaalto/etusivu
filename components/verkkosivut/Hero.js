@@ -31,7 +31,7 @@ const Hero = () => {
             href="/verkkosivut#tarjouspyynto"
             text="Tarjouspyyntö"
             primary
-            customStyle={{ margin: "2rem" }}
+            customStyle={{ marginTop: "2rem", marginBottom: "1rem" }}
           />
         </div>
       </Fade>
@@ -53,7 +53,7 @@ const SisaltoLinkit = () => {
         </Link>
       </li>
       <li className={styles.linkItem}>
-        <Link href="/verkkosivut#tarjouspyynto">
+        <Link href="/verkkosivut#paljonko-maksaa">
           <a className={styles.link}>Paljonko maksaa</a>
         </Link>
       </li>
