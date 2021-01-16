@@ -1,20 +1,37 @@
-import Layout from "../components/Layout"
+import { useRef } from "react"
+import Layout from "../components/layouts"
 import Hero from "../components/verkkosivut/Hero"
-import VanhaMenetelma from "../components/verkkosivut/VanhaMenetelma"
+import OldTech from "../components/verkkosivut/OldTech"
 import TextBar from "../components/verkkosivut/TextBar"
-import MiksiDigiaalto from "../components/verkkosivut/MiksiDigiaalto"
+import NewTech from "../components/verkkosivut/NewTech"
 import LogoSlider from "../components/verkkosivut/LogoSlider"
-import TarjousOsio from "../components/verkkosivut/TarjousOsio"
+import Tarjouspyynto from "../components/verkkosivut/Tarjouspyynto"
 
 const Verkkosivut = () => {
+  const heroRef = useRef(null)
+  const oldTechRef = useRef(null)
+  const newTechRef = useRef(null)
+  const tarjouspyyntoRef = useRef(null)
+
+  const sectionRefs = [
+    { section: "Hero", hoverText: "Ylös", ref: heroRef },
+    { section: "OldTech", hoverText: "Vanha tekniikka", ref: oldTechRef },
+    { section: "NewTech", hoverText: "Uusi tekniikka", ref: newTechRef },
+    {
+      section: "Tarjouspyyntö",
+      hoverText: "Tarjouspyyntö",
+      ref: tarjouspyyntoRef,
+    },
+  ]
+
   return (
-    <Layout topbar={true}>
-      <Hero />
-      <VanhaMenetelma />
+    <Layout topbar={true} sectionRefs={sectionRefs}>
+      <Hero refs={heroRef} />
+      <OldTech refs={oldTechRef} />
       <TextBar />
-      <MiksiDigiaalto />
+      <NewTech refs={newTechRef} />
       <LogoSlider />
-      <TarjousOsio />
+      <Tarjouspyynto refs={tarjouspyyntoRef} />
     </Layout>
   )
 }

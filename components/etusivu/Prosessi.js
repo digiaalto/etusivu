@@ -1,4 +1,4 @@
-import styles from "../styles/Prosessi.module.sass"
+import styles from "./Prosessi.module.sass"
 import { BsLightningFill } from "react-icons/bs"
 import { Fade } from "react-awesome-reveal"
 

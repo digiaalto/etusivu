@@ -1,5 +1,5 @@
-import styles from "../styles/Nayteikkuna.module.sass"
-import Tyonayte from "./common/Tyonayte"
+import styles from "./Nayteikkuna.module.sass"
+import Tyonayte from "../common/Tyonayte"
 
 const desktopDivider = 3
 
@@ -22,8 +22,9 @@ const digiaalto = {
   scoreSrc: "/tyonayte/digiaalto/scores.png",
   header: "Digiaalto",
   paragraphs: [
-    `Supertehokkaita ja kehittyneitä verkkosivuja yrittäjille jotka eivät halua verkkosivun hallinan kasvattavan heidän työtaakkaansa.`,
-    `Sivuston päätarkoitus on saada vierailija lähettämään tarjouspyynöön tai ottamaan suoraan yhteyttä.`,
+    `Web-designer ja verkkokehittäjä Digiaalto rakentaa huipputehokkaita ja kestäviä verkkosivuja pk-yrittäjille.`,
+    `Tarjontaan kuuluu blogeja, verkkokauppoja, verkkosivuja, web-appeja ja sisältöpalveluita.`,
+    `Digiaallon palvelut sopivat yhteen yrittäjän kanssa, kuka etsii kestäviä verkkosivuja ilman piilokustannuksia.`,
   ],
 }
 
@@ -46,9 +47,9 @@ const majoitusroosa = {
   scoreSrc: "/tyonayte/majoitusroosa/scores.png",
   header: "Majoitusroosa",
   paragraphs: [
-    `Majoitusalan yritys Lammen luonnossa, varattavissa pääsääntöisesti isoille ryhmille.`,
-    `Sivuston päätarkoitus on esitellä maisemia ja rakennuksia isoilla kuvilla joiden optimointia hoitaa Gatsbyn kuva-komponentti.`,
-    `Vierailijaa kehotetaan tiedustelemaan sesonki- ja ryhmätarjouksista.`,
+    `Majoitusalan yritys Kanta-Hämeessä, lähellä rantaa. Varattavissa pääsääntöisesti isomille ryhmille ja juhlille.`,
+    `Sivustossa esitellään maisemia, patikkapolkuja, kotoja, rantaa ja rakennuksen yksityishuoneita ja oleskelutiloja isoilla kuvilla.`,
+    `Roosalta saa myös mielekkeitä sesonki- ja ryhmätarjouksista.`,
   ],
 }
 

@@ -1,7 +1,8 @@
-import styles from "../styles/Navigation.module.sass"
+import styles from "./Navigation.module.sass"
 import Link from "next/link"
-import Logo from "./common/Logo"
 import { Fade } from "react-awesome-reveal"
+
+import Logo from "./Logo"
 
 const animCfg = {
   nav: {

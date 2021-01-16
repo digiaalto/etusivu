@@ -1,4 +1,4 @@
-import styles from "../styles/Ominaisuudet.module.sass"
+import styles from "./Ominaisuudet.module.sass"
 import React from "react"
 import { Fade } from "react-awesome-reveal"
 import { SiPowerbi } from "react-icons/si"
@@ -17,36 +17,34 @@ const animCfg = {
 
 const ominaisuudet = [
   {
-    header: "Laatutestaus ja raportti",
+    header: "Laatutestaus ja tulokset",
     text:
-      "Sivun toteutuksen varmistaa Google Lighthousen verkkosivun laatutestaus. Digiaalto lupaa kilpailijoita paremman pisteytyksen.",
+      "Sivuston toteutetaan tavalla joka takaa kilpailijoitasi paremmat tulokset laatutestissä. Kääteen jää helposti ymmärettävät tulokset.",
     icon: <SiPowerbi className={styles.growing} />,
   },
   {
     header: "Kestävä ja pitkäikäinen",
     text:
-      "Julkaisun jälkeen kaikki toimii ikiliikkujan tavoin. Ei monoliitistä johtuvia tietoturva-aukkoja, päivityksiä tai muita ylläpitotoimia.",
+      "Julkaisun jälkeen verkkosivu pyörii ikiliikkujan tavoin. Ei jatkuvia tietoturvaongelmia tai ylläpitotoimia joiden hoidosta pitää maksaa.",
     icon: <FaCog className={styles.spinning} />,
   },
   {
     header: "Mukautettu",
     text:
-      "Räätälöity oman brändin mukaisesti. Teidän rahoja ei käytetä kopioidun valmisteeman hankintaan kulissien takana.",
+      "Design ja ulkoasu räätälöidään oman yrityksen brändin mukaisesti, yhteiset tavoitteet tähtäimessä.",
     icon: <FaPaintBrush className={styles.bouncing} />,
   },
 ]
 
 const Ominaisuudet = () => {
   return (
-    <section>
-      <div className={styles.ominaisuudet}>
-        <Fade {...animCfg.ominaisuudet} className={styles.fadeWrapper}>
-          {ominaisuudet.map((ominaisuus, index) => (
-            <Ominaisuus data={ominaisuus} key={`ominaisuus-${index}`} />
-          ))}
-        </Fade>
-      </div>
-    </section>
+    <div className={styles.ominaisuudet}>
+      <Fade {...animCfg.ominaisuudet} className={styles.fadeWrapper}>
+        {ominaisuudet.map((ominaisuus, index) => (
+          <Ominaisuus data={ominaisuus} key={`ominaisuus-${index}`} />
+        ))}
+      </Fade>
+    </div>
   )
 }
 

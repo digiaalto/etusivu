@@ -1,10 +1,9 @@
 import { useRef } from "react"
-import Layout from "../components/Layout"
-import Hero from "../components/Hero"
-import Palvelut from "../components/Palvelut"
-import Ominaisuudet from "../components/Ominaisuudet"
-import Nayteikkuna from "../components/Nayteikkuna"
-import Prosessi from "../components/Prosessi"
+import Layout from "../components/layouts/"
+import Hero from "../components/etusivu/Hero"
+import Palvelut from "../components/etusivu/Palvelut"
+import Nayteikkuna from "../components/etusivu/Nayteikkuna"
+import Prosessi from "../components/etusivu/Prosessi"
 
 const IndexPage = () => {
   const heroRef = useRef(null)
@@ -13,7 +12,7 @@ const IndexPage = () => {
   const prosessiRef = useRef(null)
 
   const sectionRefs = [
-    { section: "Hero", hoverText: "Digiaalto", ref: heroRef },
+    { section: "Hero", hoverText: "Ylös", ref: heroRef },
     {
       section: "Palvelut",
       hoverText: "Palvelut",
@@ -33,10 +32,9 @@ const IndexPage = () => {
 
   return (
     <div>
-      <Layout topbar={true} footerHaastattelu={true} sectionRefs={sectionRefs}>
+      <Layout topbar={true} sectionRefs={sectionRefs}>
         <Hero refs={heroRef} />
         <Palvelut refs={palvelutRef} />
-        <Ominaisuudet />
         <Nayteikkuna refs={nayteikkunaRef} />
         <Prosessi refs={prosessiRef} />
       </Layout>

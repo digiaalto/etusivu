@@ -1,0 +1,76 @@
+@import "../../styles/_partials"
+
+// Layout.
+.ominaisuudet
+	display: grid
+	grid-auto-flow: row
+	gap: 2rem
+
+.ominaisuus
+	display: flex
+	flex-direction: column
+	max-width: 400px
+
+.fadeWrapper
+	&:first-of-type
+		.icon
+			background-color: $green
+	&:nth-of-type(2)
+		.icon
+			background-color: $blue
+	&:nth-of-type(3)
+		.icon
+			background-color: $red
+
+// Ominaisuus.
+.icon
+	align-self: flex-start
+	margin-bottom: 1rem
+	font-size: 1.5rem
+	padding: 0.3em 0.6em 0.2em 0.6em
+	border-radius: 4px
+	color: $light
+.header
+	font-weight: 600
+	margin-top: 0
+	margin-bottom: 0.6rem
+.text
+	font-size: 1.1rem
+	color: $gray
+.growing
+	animation: grow 1s infinite linear
+.spinning
+	animation: rotation 3s infinite linear
+.bouncing
+	animation: bounce 1s infinite ease-in-out
+@keyframes rotation
+	0%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(360deg)
+@keyframes bounce
+	0%
+		transform: translateY(0px)
+	50%
+		transform: translateY(8px)
+	100%
+		transform: translate(0px)
+@keyframes grow
+	0%
+		transform: scale(1)
+	50%
+		transform: scale(1.2)
+	100%
+		transform: scale(1)
+	
+// Media queries.
+@include laptop
+	.ominaisuudet
+		grid-auto-flow: column
+		justify-content: space-around
+	.fadeWrapper
+		margin-top: 0 !important
+		
+@include desktop
+	.ominaisuudet
+		gap: 4rem

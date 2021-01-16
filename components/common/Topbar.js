@@ -1,4 +1,4 @@
-import styles from "../styles/Topbar.module.sass"
+import styles from "./Topbar.module.sass"
 import React from "react"
 import { MdEmail, MdLocalPhone } from "react-icons/md"
 

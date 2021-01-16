@@ -2,83 +2,88 @@
 
 // Layout.
 .section
-  @include spacing
-  padding-bottom: 3rem !important
+	@include spacing
+	padding-bottom: 3rem !important
 .content
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
-  background-color: #ffffff
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1)
-  padding: 1rem
-  margin-left: 5%
-  margin-right: 5%
-  margin-top: -8rem
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	background-color: #ffffff
+	box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1)
+	padding: 1rem
+	margin-left: 5%
+	margin-right: 5%
+	margin-top: -8rem
 
 // Background.
 .background
-  display: grid
-  grid-auto-flow: column
-  align-items: flex-end
-  gap: 0.5rem
-  height: 40vh
+	display: grid
+	grid-auto-flow: column
+	align-items: flex-end
+	gap: 0.5rem
+	height: 40vh
 .block
-  background-color: $dark
-  display: block
-  width: 100%
-  transition: all 0.45s ease
-  &:first-of-type
-    height: 55%
-    background-color: $red
-  &:nth-of-type(2)
-    height: 70%
-    background-color: $yellow
-  &:nth-of-type(3)
-    height: 83%
-    background-color: $green
-  &:nth-of-type(4)
-    height: 89%
-    background-color: $blue
-  &:hover
-    height: 100%
-    
-// Content.
+	background-color: $dark
+	display: block
+	width: 100%
+	transition: all 0.45s ease
+	&:first-of-type
+		height: 55%
+		background-color: $red
+	&:nth-of-type(2)
+		height: 70%
+		background-color: $yellow
+	&:nth-of-type(3)
+		height: 83%
+		background-color: $green
+	&:nth-of-type(4)
+		height: 89%
+		background-color: $blue
+	&:hover
+		height: 100%
+		
+// Headers.
 .header
-  font-weight: 900
-  text-align: center
-  line-height: 1.2
-  margin-top: 1rem
-  margin-bottom: 0.33rem
+	font-weight: 900
+	text-align: center
+	line-height: 1.2
+	margin-top: 1rem
+	margin-bottom: 0.33rem
+
+// Sisältölinkit.
 .sisaltoLinkit
-  display: flex
-  justify-content: center
-  gap: 1rem
-  text-align: center
-  list-style: none
-  padding: 0
-  margin: 0
+	display: grid
+	grid-auto-flow: column
+	gap: 2rem
+	text-align: center
+	list-style: none
+	padding: 0
+	margin: 0
 .linkItem
-  font-size: 1rem
+	@include hoverFill($dark)
+	font-size: 1rem
+	font-weight: 600
 
 // Media queries.
 @include tablet
-  .background
-    gap: 1rem
-    min-height: 60vh
-  .header
-    max-width: 70vw
+	.background
+		gap: 1rem
+		min-height: 60vh
+	.content
+		padding: 4rem 2rem
+	.header
+		max-width: 70vw
 @include laptop
-  .header
-    font-size: $h1Size
+	.header
+		font-size: $h1Size
 @include desktop
-  .section
-    padding-top: 1rem !important
-  .content
-    margin-top: -12rem
-    margin-left: 10%
-    margin-right: 10%
-    padding: 3rem 0
-  .header
-    font-size: 4rem
-    max-width: 800px
+	.section
+		padding-top: 1rem !important
+	.content
+		margin-top: -12rem
+		margin-left: 10%
+		margin-right: 10%
+	.header
+		font-size: 4rem
+		max-width: 800px

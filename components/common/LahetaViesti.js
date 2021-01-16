@@ -74,7 +74,7 @@ const LahetaViesti = (props) => {
   }
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id="laheta-viesti">
       <h5 className={styles.header}>{header}</h5>
       {status.info.msg === null && (
         <form onSubmit={handleSubmit(onSubmit)}>

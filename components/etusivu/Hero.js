@@ -1,6 +1,6 @@
-import styles from "../styles/Hero.module.sass"
+import styles from "./Hero.module.sass"
 import React, { useState, useEffect } from "react"
-import { LinkButton } from "./common/button"
+import { LinkButton } from "../common/button"
 import { Fade } from "react-awesome-reveal"
 
 const animCfg = {

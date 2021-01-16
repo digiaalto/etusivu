@@ -1,9 +1,9 @@
-import styles from "../styles/Menu.module.sass"
+import styles from "./Menu.module.sass"
 import React, { useState, useEffect } from "react"
 import { useRouter } from "next/router"
 import { FiMenu } from "react-icons/fi"
 import { AiOutlineClose } from "react-icons/ai"
-import Overlay from "./common/Overlay"
+import Overlay from "./Overlay"
 
 const links = [
   {
@@ -16,7 +16,7 @@ const links = [
   },
   {
     text: "Tarjouspyyntö",
-    href: "/verkkosivut#tarjoispyyntö",
+    href: "/verkkosivut#tarjouspyynto",
   },
   {
     text: "Meistä",
@@ -79,10 +79,9 @@ const Menu = (props) => {
             ))}
         </Tracker>
       </MenuContainer>
-      <Overlay
-        visible={menuOpen}
-        children={<LinkList links={links} toggleOverlay={toggleOverlay} />}
-      />
+      <Overlay visible={menuOpen}>
+        <LinkList links={links} toggleOverlay={toggleOverlay} />
+      </Overlay>
     </React.Fragment>
   )
 }

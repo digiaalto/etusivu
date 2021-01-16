@@ -1,5 +1,6 @@
-import styles from "../styles/Palvelut.module.sass"
+import styles from "./Palvelut.module.sass"
 import { Fade } from "react-awesome-reveal"
+import Ominaisuudet from "./Ominaisuudet"
 
 const animCfg = {
   header: {
@@ -19,7 +20,7 @@ const Palvelut = (props) => {
 
   return (
     <section className={styles.section} id="palvelut" ref={refs}>
-      <div className={styles.content}>
+      <div className={styles.topContent}>
         <Fade {...animCfg.header}>
           <div className={styles.headers}>
             <span className={styles.preheader}>Mitä saat?</span>
@@ -43,6 +44,7 @@ const Palvelut = (props) => {
           </div>
         </Fade>
       </div>
+      <Ominaisuudet />
     </section>
   )
 }

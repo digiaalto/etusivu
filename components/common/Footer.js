@@ -1,8 +1,9 @@
+import styles from "./Footer.module.sass"
 import React from "react"
-import styles from "../styles/Footer.module.sass"
 import Link from "next/link"
-import Logo from "./common/Logo"
-import LahetaViesti from "./common/LahetaViesti"
+
+import Logo from "./Logo"
+import LahetaViesti from "./LahetaViesti"
 
 const Footer = () => {
   return (

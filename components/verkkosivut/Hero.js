@@ -15,9 +15,10 @@ const animCfg = {
   },
 }
 
-const Hero = () => {
+const Hero = (props) => {
+  const { refs } = props
   return (
-    <section className={styles.section}>
+    <section className={styles.section} ref={refs}>
       <Fade {...animCfg.section}>
         <Background />
       </Fade>
@@ -48,13 +49,13 @@ const SisaltoLinkit = () => {
         </Link>
       </li>
       <li className={styles.linkItem}>
-        <Link href="/verkkosivut#miksi-digiaalto">
-          <a className={styles.link}>Miksi Digiaalto</a>
+        <Link href="/verkkosivut#uusi-tekniikka">
+          <a className={styles.link}>Uusi tekniikka</a>
         </Link>
       </li>
       <li className={styles.linkItem}>
-        <Link href="/verkkosivut#paljonko-maksaa">
-          <a className={styles.link}>Paljonko maksaa</a>
+        <Link href="/verkkosivut#tarjouspyynto">
+          <a className={styles.link}>Paljonko maksaa?</a>
         </Link>
       </li>
     </ul>

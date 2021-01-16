@@ -62,7 +62,7 @@ const sisalto = {
     },
     projektiKuvaus: {
       name: "projektiKuvaus",
-      label: "Kuvaile projektia omin sanoin.",
+      label: "Kuvaile projektia omin sanoin",
     },
   },
   palvelut: {
@@ -102,10 +102,6 @@ const sisalto = {
     yritys: {
       name: "yritys",
       label: "Yritys / Järjestö",
-    },
-    viesti: {
-      name: "viesti",
-      label: "Viesti",
     },
   },
 }
@@ -276,9 +272,7 @@ const TyyppiSection = ({
     <FormSection>
       <Header text={"Valitse projektin tyypit."} refs={typeRef} />
       {showError && (
-        <span className={styles.error}>
-          Valitse ainakin yksin tyyppi projektille.
-        </span>
+        <span className={styles.error}>Valitse ainakin yksin tyyppi.</span>
       )}
       <RowGrid>
         <Checkbox
@@ -300,7 +294,7 @@ const TyyppiSection = ({
 const Yhteystiedot = ({ register, data, errors }) => {
   return (
     <FormSection>
-      <Header text="Yhteystiedot" />
+      <Header text="Yhteystiedot." />
       <RowGrid>
         <TextInput
           {...data.nimi}
@@ -328,7 +322,6 @@ const Yhteystiedot = ({ register, data, errors }) => {
           error={errors.yritys}
           required
         />
-        <TextArea {...data.viesti} refs={register} />
       </RowGrid>
       <ButtonStyler primary customStyle={{ marginTop: "2rem" }}>
         <button type="submit">Lähetä</button>

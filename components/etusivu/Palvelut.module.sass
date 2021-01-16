@@ -1,13 +1,12 @@
-@import "_partials.sass"
+@import "../../styles/_partials.sass"
 
 // Layout.
 .section
 	z-index: 1
-	position: relative
 	@include spacing
-	padding-bottom: 0 !important
-.content
-	z-index: 1
+	display: grid
+	grid-auto-flow: row
+	gap: 4rem
 
 // Headers.
 .preheader
@@ -27,9 +26,6 @@
 
 // Media queries.
 @include laptop
-	.section
-		display: flex
-		justify-content: center
 	.headers
 		display: flex
 		gap: 2rem
@@ -40,8 +36,9 @@
 		margin-top: 2rem	
 
 @include desktop
-	.content
-		display: flex
-		align-items: center
-		justify-content: space-around
+	.section
+		gap: 10rem
+	.topContent
+		display: grid
+		grid-auto-flow: column
 		gap: 4rem

@@ -2,21 +2,13 @@ import React, { useState } from "react"
 import Head from "next/head"
 import disableScroll from "disable-scroll"
 
-import Topbar from "./Topbar"
-import Navigation from "../components/Navigation"
-import Menu from "./Menu"
-import Footer from "./Footer"
+import Topbar from "../common/Topbar"
+import Navigation from "../common/Navigation"
+import Menu from "../common/Menu"
+import Footer from "../common/Footer"
 
-const Layout = (props) => {
-  const {
-    title,
-    type,
-    description,
-    topbar,
-    footerHaastattelu,
-    sectionRefs,
-    children,
-  } = props
+const DefaultLayout = (props) => {
+  const { title, type, description, topbar, sectionRefs, children } = props
   const [overlayVisible, setOverlayVisible] = useState(false)
 
   const SEO = {
@@ -62,9 +54,9 @@ const Layout = (props) => {
         sectionRefs={sectionRefs}
       />
       <main>{children}</main>
-      <Footer haastattelu={footerHaastattelu} />
+      <Footer />
     </React.Fragment>
   )
 }
 
-export default Layout
+export default DefaultLayout

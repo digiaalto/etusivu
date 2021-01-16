@@ -1,5 +1,5 @@
-import styles from "./TarjousOsio.module.sass"
-import TarjousApp from "../tarjousApp/"
+import styles from "./Tarjouspyynto.module.sass"
+import TarjousApp from "../tarjousApp"
 import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
 import { FaArrowDown } from "react-icons/fa"
@@ -7,20 +7,32 @@ import { Fade } from "react-awesome-reveal"
 import { AiOutlineLoading3Quarters } from "react-icons/ai"
 import { MdThumbUp, MdThumbDown } from "react-icons/md"
 
-const vahvistusViesti = {
-  success: {
-    header: "Kiitos mielenkiinnosta!",
-    subheader:
-      "Luemme antamasi tiedot läpi ja vastaamme sähköpostiisi kohtapian.",
-  },
-  error: {
-    header: "Kaikki ei mennyt kuin Strömsössä...",
-    subheader:
-      "Auringonpurkaus keskeytti lähetyksen, onneksi sähköposti toimii aina.",
+const animCfg = {
+  form: {
+    triggerOnce: true,
   },
 }
 
-const TarjousOsio = () => {
+const sisalto = {
+  header: "Aloitetaanko hommat?",
+  subheader:
+    "Vai mietityttääkö hinta? Täytä tarjouspyyntö ja näet samalla alustavan hinta-arvion.",
+  vahvistusViesti: {
+    success: {
+      header: "Kiitos mielenkiinnosta!",
+      subheader:
+        "Luemme antamasi tiedot läpi ja vastaamme sähköpostiisi kohtapian.",
+    },
+    error: {
+      header: "Kaikki ei mennyt kuin Strömsössä...",
+      subheader:
+        "Auringonpurkaus keskeytti lähetyksen, onneksi sähköposti toimii aina.",
+    },
+  },
+}
+
+const Tarjouspyynto = (props) => {
+  const { refs } = props
   const [status, setStatus] = useState({
     submitting: false,
     submitted: false,
@@ -36,11 +48,11 @@ const TarjousOsio = () => {
   }, [status])
 
   return (
-    <section className={styles.section} id="tarjouspyynto">
-      {(status.error && <FormFailed {...vahvistusViesti.error} />) ||
+    <section className={styles.section} id="tarjouspyynto" ref={refs}>
+      {(status.error && <FormFailed {...sisalto.vahvistusViesti.error} />) ||
         (status.submitting && <FormSubmitting />) ||
         (status.submitted && (
-          <FormSubmitted {...vahvistusViesti.success} />
+          <FormSubmitted {...sisalto.vahvistusViesti.success} />
         )) || <DefaultForm status={status} setStatus={setStatus} />}
     </section>
   )
@@ -48,13 +60,10 @@ const TarjousOsio = () => {
 
 const DefaultForm = ({ status, setStatus }) => {
   return (
-    <Fade>
+    <Fade {...animCfg.form}>
       <div className={styles.headers}>
-        <h2 className={styles.header}>Mietityttääkö hinnat?</h2>
-        <h3 className={styles.subheader}>
-          Vai haluatko aloittaa hommat? Täytä tarjouspyyntö ja saat samalla
-          alustavan hinta-arvion.
-        </h3>
+        <h2 className={styles.header}>{sisalto.header}</h2>
+        <h3 className={styles.subheader}>{sisalto.subheader}</h3>
         <FaArrowDown className={`${styles.icon} ${styles.bouncing}`} />
       </div>
       <TarjousApp status={status} setStatus={setStatus} />
@@ -64,7 +73,7 @@ const DefaultForm = ({ status, setStatus }) => {
 
 const FormSubmitting = () => {
   return (
-    <Fade>
+    <Fade {...animCfg.form}>
       <div className={styles.headers}>
         <AiOutlineLoading3Quarters
           className={`${styles.icon} ${styles.spinning}`}
@@ -76,7 +85,7 @@ const FormSubmitting = () => {
 
 const FormSubmitted = ({ header, subheader }) => {
   return (
-    <Fade>
+    <Fade {...animCfg.form}>
       <div className={styles.headers}>
         <MdThumbUp className={styles.icon} />
         <h2 className={styles.header}>{header}</h2>
@@ -88,7 +97,7 @@ const FormSubmitted = ({ header, subheader }) => {
 
 const FormFailed = ({ header, subheader }) => {
   return (
-    <Fade>
+    <Fade {...animCfg.form}>
       <div className={styles.headers}>
         <MdThumbDown className={styles.icon} />
         <h2 className={styles.header}>{header}</h2>
@@ -98,4 +107,4 @@ const FormFailed = ({ header, subheader }) => {
   )
 }
 
-export default TarjousOsio
+export default Tarjouspyynto
