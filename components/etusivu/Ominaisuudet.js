@@ -19,7 +19,7 @@ const ominaisuudet = [
   {
     header: "Laatutestaus ja tulokset",
     text:
-      "Moderni kehitys takaa kilpailijoitasi paremmat tulokset Googlen laatutestissä. Käteen jää helposti ymmärettävät tulokset.",
+      "Moderni kehitys takaa kilpailijoitasi paremmat tulokset Googlen laatutestissä. Käteen jää helposti ymmärettävät tulokset ja etulyöntiasema verkossa.",
     icon: <SiPowerbi className={styles.growing} />,
   },
   {
@@ -31,7 +31,7 @@ const ominaisuudet = [
   {
     header: "Mukautettu",
     text:
-      "Erottaudu massasta brändisi mukaisesti räätälöidyllä ulkoasulla ja UX-designilla jolla realisoidaan tärkeimmät tavoitteesi.",
+      "Erottaudu massasta brändisi mukaisesti räätälöidyllä sivuston ulkoasulla ja UX-designilla jolla realisoidaan tärkeimmät tavoitteesi.",
     icon: <FaPaintBrush className={styles.bouncing} />,
   },
 ]

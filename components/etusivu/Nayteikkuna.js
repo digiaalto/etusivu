@@ -59,7 +59,7 @@ const Nayteikkuna = (props) => {
     <section className={styles.section} ref={refs} id="tyonaytteet">
       <div className={styles.headers}>
         <h3 className={styles.header}>Viimeisimmät työt.</h3>
-        <span className={styles.help}>Vieritä näyteikkunaa.</span>
+        <span className={styles.help}>Vieritä näyteikkunoita.</span>
       </div>
       <div className={styles.naytteet}>
         <Tyonayte {...digiaalto} />

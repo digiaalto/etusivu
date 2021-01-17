@@ -24,7 +24,7 @@ const Palvelut = (props) => {
       <div className={styles.topContent}>
         <Fade {...animCfg.header}>
           <div className={styles.headers}>
-            <span className={styles.preheader}>Mitä saat?</span>
+            <span className={styles.preheader}>Mitä tehdään ?</span>
             <h1 className={styles.header}>
               Kestävät kotisivut yritykselle mittavalla laatutestauksella.
             </h1>
@@ -35,18 +35,13 @@ const Palvelut = (props) => {
             <p>
               Digiaallon palveluihin sisältyy kaikki laadukkaiden nettisivujen,
               verkkokauppojen, web-appejen ja blogejen valmistusvaiheet ja
-              integraatiot alusta loppuun ja vähän pidemmällekin.
+              palveluintegroinnit alusta loppuun.
             </p>
             <p>
-              Vältä{" "}
-              <Link href="/verkkosivut#vanha-tekniikka">
-                <a>ansoja</a>
-              </Link>{" "}
-              johon useat Suomalaiset yrittäjät ovat tietämättään astuneet, ja
-              hyödy rakenteellisesta kilpailuedusta valitsemalla nykyaikainen ja{" "}
-              <Link href="/verkkosivut#uusi-tekniikka">
-                <a>tehokas kehitysarkkitehtuuri.</a>
-              </Link>
+              Vältä yleisiä verkkoansoja johon monet kilpailijasi ovat
+              tietämättään astuneet. Hyödy rakenteellisesta kilpailuedusta
+              valitsemalla nykyaikainen ja tehokas kehitysarkkitehtuuri mikä
+              toimii ikiliikkujan tavoin!
             </p>
           </div>
         </Fade>

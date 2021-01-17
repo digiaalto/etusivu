@@ -43,17 +43,17 @@ const Prosessi = (props) => {
               <Block
                 miniheader="Vaihe 2, 5pv"
                 header="Suunnittelu"
-                text="Suunnitellaan käyttäjävirta, sivuston tietohierarkia ja lähdetään kirjoittamaan valittua kohderyhmää puhuttelevaa sisältöä brändisi omalla kielellä."
+                text="Suunnitellaan käyttäjävirta, sivuston tietohierarkia ja lähdetään kirjoittamaan valittua kohderyhmää puhuttelevaa sisältöä, brändisi omalla kielellä. Verkosta etsitään samalla inspiraatiota ja luodaan tyylikansio."
               />
               <Block
                 miniheader="Vaihe 3, 7pv"
                 header="Design"
-                text="Valitaan brändisi mukainen typografia ja väripaletti. Figmaan sommitellaan lopullista sivustoa vastaava malli. Pystyt seuraamaan töitä linkistä."
+                text="Brändisi henki kaapataan ja esitetään sopivalla typografialla, väripaletilla ja muilla resursseilla. Figmaan sommitellaan lopullista sivustoa vastaava malli jota voi seurata linkistä."
               />
               <Block
                 miniheader="Vaihe 4, 10pv"
                 header="Kehitys"
-                text="Kehitysvaiheessa hyväksytty malli realisoidaan oikeaksi sivustoksi. Kehitys luonnistuu uusimpien standardien mukaisesti ja laatutestauksella varmistetaan oikeat päätökset pellin alla."
+                text="Kehitysvaiheessa hyväksytty malli muutetaan oikeaksi sivuksi. Kehitys luonnistuu uusimpien standardien mukaisesti ja laatutestauksella varmistetaan oikeat päätökset pellin alla."
               />
               <Block
                 miniheader="Valmista!"

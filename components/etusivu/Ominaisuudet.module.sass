@@ -28,7 +28,7 @@
 	margin-bottom: 1rem
 	font-size: 1.5rem
 	padding: 0.3em 0.6em 0.2em 0.6em
-	border-radius: 4px
+	border-radius: 9999px
 	color: $light
 .header
 	font-weight: 600
@@ -50,11 +50,11 @@
 		transform: rotate(360deg)
 @keyframes bounce
 	0%
-		transform: translateY(0px)
+		transform: translateY(-2px)
 	50%
-		transform: translateY(8px)
+		transform: translateY(6px)
 	100%
-		transform: translate(0px)
+		transform: translateY(-2px)
 @keyframes grow
 	0%
 		transform: scale(1)
@@ -63,14 +63,22 @@
 	100%
 		transform: scale(1)
 	
+	
 // Media queries.
 @include laptop
 	.ominaisuudet
 		grid-auto-flow: column
-		justify-content: space-around
+		justify-content: space-evenly
+		text-align: center
+	.icon
+		align-self: center
+		font-size: 2rem
+		margin-bottom: 2rem
 	.fadeWrapper
 		margin-top: 0 !important
 		
 @include desktop
 	.ominaisuudet
 		gap: 4rem
+	.icon
+		margin-top: -2rem

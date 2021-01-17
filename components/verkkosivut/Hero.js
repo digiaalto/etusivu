@@ -26,7 +26,7 @@ const Hero = (props) => {
         <div className={styles.content}>
           <SisaltoLinkit />
           <h1 className={styles.header}>
-            Hyödylliset verkkosivut yritykselle.
+            Verkkosivu joka kasvaa yrityksesi kanssa.
           </h1>
           <LinkButton
             href="/verkkosivut#tarjouspyynto"
@@ -45,12 +45,12 @@ const SisaltoLinkit = () => {
     <ul className={styles.sisaltoLinkit}>
       <li className={styles.linkItem}>
         <Link href="/verkkosivut#vanha-tekniikka">
-          <a className={styles.link}>Vanha tekniikka</a>
+          <a className={styles.link}>Vanha tekniikka &rarr;</a>
         </Link>
       </li>
       <li className={styles.linkItem}>
         <Link href="/verkkosivut#uusi-tekniikka">
-          <a className={styles.link}>Uusi tekniikka</a>
+          <a className={styles.link}>Uusi tekniikka &rarr;</a>
         </Link>
       </li>
       <li className={styles.linkItem}>
