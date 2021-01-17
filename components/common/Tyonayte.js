@@ -15,8 +15,8 @@ const Tyonayte = (props) => {
       </div>
       <div className={styles.infoWrapper}>
         <div className={styles.headerLine}>
-          <Palette palette={palette} />
           <h3 className={styles.nayteHeader}>{header}</h3>
+          <Palette palette={palette} />
         </div>
         <div className={styles.paragraphs}>
           {paragraphs.map((p, index) => (
@@ -32,7 +32,11 @@ const Tyonayte = (props) => {
 }
 
 const Score = ({ src }) => {
-  return <Image src={src} width={288} height={81} className={styles.score} />
+  return (
+    <div className={styles.scoreWrapper}>
+      <Image src={src} width={288} height={81} className={styles.score} />
+    </div>
+  )
 }
 
 const Screens = (props) => {

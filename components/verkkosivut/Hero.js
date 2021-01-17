@@ -18,7 +18,7 @@ const animCfg = {
 const Hero = (props) => {
   const { refs } = props
   return (
-    <section className={styles.section} ref={refs}>
+    <section className={styles.section} ref={refs} id="verkkosivut">
       <Fade {...animCfg.section}>
         <Background />
       </Fade>

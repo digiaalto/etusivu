@@ -40,12 +40,12 @@ const Palvelut = (props) => {
             <p>
               Vältä{" "}
               <Link href="/verkkosivut#vanha-tekniikka">
-                <a>yleisiä verkkoansoja</a>
+                <a>ansoja</a>
               </Link>{" "}
               johon useat Suomalaiset yrittäjät ovat tietämättään astuneet, ja
-              hyödy rakenteellisesta kilpailuedusta valitsemalla{" "}
+              hyödy rakenteellisesta kilpailuedusta valitsemalla nykyaikainen ja{" "}
               <Link href="/verkkosivut#uusi-tekniikka">
-                <a>nykyaikainen ja tehokas kehitysarkkitehtuuri.</a>
+                <a>tehokas kehitysarkkitehtuuri.</a>
               </Link>
             </p>
           </div>

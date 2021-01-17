@@ -1,5 +1,5 @@
 import styles from "../styles/pages/404.module.sass"
-import Layout from "../components/Layout"
+import Layout from "../components/layouts"
 import Link from "next/link"
 
 const Page404 = () => {

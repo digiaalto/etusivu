@@ -18,7 +18,7 @@ const Footer = () => {
 const ContactRow = () => {
   return (
     <div className={styles.column}>
-      <LahetaViesti header={"Rakennetaan jotain mitä on mukava käyttää."} />
+      <LahetaViesti header={"Onko kysyttävää? Pistä viesti tulemaan."} />
     </div>
   )
 }

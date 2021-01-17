@@ -18,10 +18,6 @@ const links = [
     text: "Tarjouspyyntö",
     href: "/verkkosivut#tarjouspyynto",
   },
-  {
-    text: "Meistä",
-    href: "/meista",
-  },
 ]
 
 const Menu = (props) => {

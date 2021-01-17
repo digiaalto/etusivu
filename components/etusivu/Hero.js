@@ -24,7 +24,7 @@ const animCfg = {
 
 const sisalto = {
   header:
-    "Kovemman luokan verkkosivut yrittäjälle kuka arvostaa omaa aikaansa. Välittävällä palvelulla ilman julkaisun jälkeisiä ylläpitokustannuksia tai vaivoja.",
+    "Kovemman luokan verkkosivut pk-yrittäjälle. Välittävällä palvelulla ilman julkaisun jälkeisiä ylläpitokustannuksia.",
 }
 
 const Hero = (props) => {

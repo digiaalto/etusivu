@@ -2,15 +2,20 @@ import styles from "./LueVerkkosivut.module.sass"
 import { LinkButton } from "../common/button"
 
 const sisalto = {
-  header: "Lisää tietoa?",
-  cta: "Paina tästä",
+  header: "Rakennetaan jotain mitä on mukava käyttää.",
+  cta: "Verkkosivut",
 }
 
 const LueVerkkosivut = () => {
   return (
     <section className={styles.section}>
       <h2 className={styles.header}>{sisalto.header}</h2>
-      <LinkButton href="/verkkosivut" text={sisalto.cta} primary />
+      <LinkButton
+        href="/verkkosivut"
+        text={sisalto.cta}
+        primary
+        customClass={styles.buttonWidth}
+      />
     </section>
   )
 }

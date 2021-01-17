@@ -28,7 +28,6 @@ const NavList = () => {
     <ul className={styles.navList}>
       <NavLink href={"/verkkosivut"} text="Verkkosivut" />
       <NavLink href={"/verkkosivut#tarjouspyynto"} text="Tarjouspyyntö" />
-      <NavLink href={"/meista"} text="Meistä" />
     </ul>
   )
 }
