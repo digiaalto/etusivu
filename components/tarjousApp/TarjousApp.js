@@ -324,7 +324,7 @@ const Yhteystiedot = ({ register, data, errors }) => {
         />
       </RowGrid>
       <ButtonStyler primary customStyle={{ marginTop: "2rem" }}>
-        <button type="submit">Lähetä</button>
+        <button type="submit">Lähetä tarjouspyyntö</button>
       </ButtonStyler>
     </FormSection>
   )

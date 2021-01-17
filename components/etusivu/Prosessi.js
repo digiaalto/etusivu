@@ -58,7 +58,7 @@ const Prosessi = (props) => {
               <Block
                 miniheader="Valmista!"
                 header="Julkaisu"
-                text="Onneksi olkoon, yrityssivusi on valmis ja toimii itsenäisesti tästä päivästä eteenpäin!"
+                text="Sivusto on valmis ja on aika julkaista työmme hedelmät. Toimitamme sinulle kuvaohjeet jokaiseen integroituun ohjelmaan ja asiakaspalvelulinjat pysyvät auki tulevaisuudessakin."
               />
             </div>
           </div>

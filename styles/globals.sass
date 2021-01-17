@@ -16,75 +16,72 @@ $defaultFont: -apple-system,BlinkMacSystemFont,"Open Sans","Segoe UI","Roboto","
 ::selection
 	color: #fff
 	background: $primary
+
 html
 	// scroll-behavior: smooth
 	background-color: $bglight
+
 body
 	margin: 0
 	font-size: $defaultFontSize
 	font-family: $defaultFont
-	color: $dark
 	line-height: 1.75
+	color: $dark
+	
 input, textarea, button
-	font-family: $defaultFont
 	display: block
-	font-size: 18px
+	font-family: $defaultFont
+	font-size: $defaultFontSize
+
 a
 	text-decoration: none
 	color: $primary
 	cursor: pointer
 	&:hover
 		color: $primaryLight
+
 p
 	max-width: $sectionParagraphWidth
 	margin-bottom: 1rem
 	margin-top: 0
+
 h1, h2, h3, h4, h5
 	font-weight: 400
 	line-height: 1.3
+
 h1
 	margin-top: 0
 	font-size: $h1Size
+
 h2
 	font-size: $h2Size
+
 h3
 	font-size: $h3Size
+
 h4
 	font-size: $h4Size
+
 h5
 	font-size: $h5Size
+
 small, .text_small
 	font-size: 0.8rem
+
 img
 	display: block
 	margin: 0
 	padding: 0
 
-// Custom classes.
-.bold
-	font-weight: 600
-.header
-	font-size: 1.75rem
-	line-height: 1.3
-	font-weight: 800
-	max-width: $sectionHeaderWidth
-.divider
-	display: block
-	height: 1rem
-	width: 5rem
-	margin: 1rem 0
-	background-color: $primary
-.divider-secondary
-	background-color: $secondary
-
-// MEDIA QUERIES
+// Global media queries.
 @include laptop
+	body, input, textarea, button
+		font-size: $bigFontSize
 	.header
 		max-width: 40rem
 		margin-top: 2rem	
 		font-size: $h1Size
+
 @include desktop
 	p
 		max-width: 40rem
-	.input, textarea, button
-		fonts-size: $defaultFontSize
