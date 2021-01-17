@@ -1,35 +1,39 @@
 @import "../../styles/_partials"
 
 .bar
-  @include spacing
-  background-color: $primary
-  position: relative
-  overflow: hidden
+	@include spacing
+	background-color: $primary
+	position: relative
+	overflow: hidden
+	padding-left: 1rem
+	padding-right: 1rem
 
 .text
-  z-index: 2
-  position: relative
-  margin: auto
-  font-size: $h3Size
-  line-height: 1.5
-  letter-spacing: 1px
-  font-weight: 900
-  text-align: center
-  user-select: none
-  color: $light
+	z-index: 2
+	position: relative
+	margin: auto
+	font-size: $h4Size
+	line-height: 1.5
+	letter-spacing: 0.5px
+	font-weight: 600
+	text-align: center
+	user-select: none
+	color: $light
 
 @include tablet
-  .text
-    font-size: $h2Size
+	.text
+		font-size: $h2Size
 
 @include laptop
-  .text
-    font-size: $h1Size
-    max-width: 100%
+	.text
+		font-size: $h1Size
+		max-width: 100%
+		font-weight: 900
 
 @include desktop
-  .bar
-    padding-top: 5rem
-    padding-bottom: 5rem
-  .text
-    font-size: 3rem
+	.bar
+		padding-top: 5rem
+		padding-bottom: 5rem
+	.text
+		font-size: 3rem
+		letter-spacing: 1px

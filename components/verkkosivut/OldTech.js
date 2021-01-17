@@ -32,29 +32,31 @@ const OldTech = (props) => {
       <div className={`${styles.column} ${styles.textContainer}`}>
         <Fade {...animCfg.cascadeFade}>
           <h3 className={styles.subheader}>
-            WordPressiä markkinoidaan parhaana verkkoratkaisuna pk-yrittäjille,
-            mutta todellisuudessa siitä hyötyy enemmän myyntimies kuin asiakas
-            itse.
+            WordPressiä markkinoidaan parhaana verkkoratkaisuna suomalaisille
+            yrittäjille, mutta todellisuudessa siitä hyötyy enemmän myyntimies
+            kuin asiakas itse.
           </h3>
           <p>
-            WordPress on tehoton monoliitti joka helpoittaa verkkosivun
-            kehittäjän työtä kloonatuilla valmisteemoilla, tuhansilla kehnosti
-            koodatuilla plugineilla, raahaa ja pudota ominaisuuksilla, ja
-            vanhentuneella julkaisualustallaan.
+            WordPress on valinnanvapautta rajoittava monoliitti joka helpoittaa
+            verkkosivun kehittäjän työtä kloonatuilla valmisteemoilla,
+            plugineilla, "raahaa ja pudota" -ominaisuuksilla, ja vanhentuneella
+            julkaisualustalla.
           </p>
           <p>
             Näiden oikoteiden hyväksikäyttö johtaa pakostakin tavalla tai
-            toisella vialliseen, epävakaaseen tuotteeseen. WordPress aloitti
-            yksinkertaisena bloggaamisalustana, ja vuosien mittaan se on
-            kehittynyt sellaiseksi mitä sen ei koskaan pitänyt olla, aiheuttaen
-            lukuisia ongelmia suorituskyvyssä, skaalautuvuudessa ja
-            ohjelmistokehityksessä.
+            toisella vialliseen, epävakaaseen tuotteeseen josta sivun omistaja
+            joutuu maksamaan menetettyinä asiakkaina ja rahallisesti.
+          </p>
+          <p>
+            WordPress aloitti yksinkertaisena bloggaamisalustana, ja vuosien
+            mittaan se on kehittynyt sellaiseksi mitä sen ei koskaan pitänyt
+            olla, aiheuttaen lukuisia ongelmia suorituskyvyssä,
+            skaalautuvuudessa ja ohjelmistokehityksessä.
           </p>
           <p>
             WordPress sivustoja kiusaa myös jatkuvat tietoturva-aukot ja
-            ylläpitotoimet joiden hoitamisesta myyjä kyllä muistaa laskuttaa. Ei
-            ole harvinaista kuulla että tuhansien yrittäjien käyttämässä
-            lisäosassa on havaittu vakava bugi tai haavoittuvuus.
+            ylläpitotoimet joiden hoidosta WordPress kauppias varmasti laskuttaa
+            erikseen.
           </p>
         </Fade>
       </div>

@@ -27,31 +27,30 @@ const NewTech = (props) => {
       <div className={styles.column}>
         <Fade {...animCfg.header}>
           <div>
-            <h2 className={styles.header}>Uusi tekniikka — React & Next.</h2>
-            <h3 className={styles.subheader}>
-              Digiaalto ei rakenna vain verkkosivustoja. Tarjoamme huolellista
-              suunnittelua, kilpailijoita kovempaa teknologiaa ja tinkimätöntä
-              palvelua.
-            </h3>
+            <h2 className={styles.header}>
+              Uusi tekniikka <br />— React & Next.
+            </h2>
           </div>
         </Fade>
         <Fade {...animCfg.text}>
           <p>
-            Jamstack arkkitehtuuri on tavanomaisesti ollut vain isojen
-            digijättien ulottuvissa. Meidän tehtävä on tuoda nämä kilpailuetua
-            tarjoavat teknologiat kaikille jotka haluavat asiakkailleen parempaa
-            käyttökokemusta verkossa ja itselleen vaivattomampaa
+            React ja Nextjs perustuvat Jamstack arkkitehtuuriin joka on
+            tavanomaisesti ollut vain isojen digijättien ulottuvissa.
+          </p>
+          <p>
+            Digiaallon tarkoitus on tuoda nämä kehittyneet verkkoratkaisut
+            kaikille jotka haluavat asiakkailleen turvallisempaa ja mukavampaa
+            käyttökokemusta ja itselleen vaivattomampaa, kustannustehokkaampaa
             sivustonhallintaa.
           </p>
           <p>
             Enään ei puhuta web-hotelleista tai palvelimista ollenkaan, koska
             voimme abstraktoida kaikki palvelintuotteet kolmannen osapuolen
-            palveluille, edullisesti, useasti jopa ilmaiseksi. Tämä verkkosivu
-            toimii täysin ilman vuosikustannuksia.
+            palveluille, edullisesti, jopa veloituksetta.
           </p>
           <p>
-            Jos et ole varma onko Digiaallon hybrid-verkkosivut paras vaihtoehto
-            seuraavaan projektiisi voimme auttaa —{" "}
+            Jos et ole varma onko Digiaallon hybrid-verkkosivu paras vaihtoehto
+            seuraavaan projektiisi ota yhteyttä ja vastaamme pian —{" "}
             <Link href="/verkkosivut#tarjouspyynto">
               <a>aloita keskustelu.</a>
             </Link>
