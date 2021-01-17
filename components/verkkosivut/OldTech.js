@@ -52,7 +52,7 @@ const OldTech = (props) => {
           </p>
           <p>
             WordPress sivustoja kiusaa myös jatkuvat tietoturva-aukot ja
-            ylläpitotoimet joiden hoitamisesta myyjä kyllä muistaa laskutaa. Ei
+            ylläpitotoimet joiden hoitamisesta myyjä kyllä muistaa laskuttaa. Ei
             ole harvinaista kuulla että tuhansien yrittäjien käyttämässä
             lisäosassa on havaittu vakava bugi tai haavoittuvuus.
           </p>

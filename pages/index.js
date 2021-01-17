@@ -4,6 +4,7 @@ import Hero from "../components/etusivu/Hero"
 import Palvelut from "../components/etusivu/Palvelut"
 import Nayteikkuna from "../components/etusivu/Nayteikkuna"
 import Prosessi from "../components/etusivu/Prosessi"
+import LueVerkkosivut from "../components/etusivu/LueVerkkosivut"
 
 const IndexPage = () => {
   const heroRef = useRef(null)
@@ -37,6 +38,7 @@ const IndexPage = () => {
         <Palvelut refs={palvelutRef} />
         <Nayteikkuna refs={nayteikkunaRef} />
         <Prosessi refs={prosessiRef} />
+        <LueVerkkosivut />
       </Layout>
     </div>
   )

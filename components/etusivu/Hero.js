@@ -22,6 +22,11 @@ const animCfg = {
   },
 }
 
+const sisalto = {
+  header:
+    "Kovemman luokan verkkosivut yrittäjälle kuka arvostaa omaa aikaansa. Välittävällä palvelulla ilman julkaisun jälkeisiä ylläpitokustannuksia tai vaivoja.",
+}
+
 const Hero = (props) => {
   const { refs } = props
   const [animElement, setAnimElement] = useState(0)
@@ -47,10 +52,7 @@ const Hero = (props) => {
           <CtaButtons />
         </Fade>
         <Fade {...animCfg.subheader}>
-          <h1 className={styles.subheader}>
-            Digiaalto suunnittelee ja kehittää laatutestattuja kotisivuja
-            kiireisille yrittäjille.
-          </h1>
+          <h1 className={styles.subheader}>{sisalto.header}</h1>
         </Fade>
       </div>
     </section>

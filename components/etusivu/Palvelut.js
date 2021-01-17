@@ -1,4 +1,5 @@
 import styles from "./Palvelut.module.sass"
+import Link from "next/link"
 import { Fade } from "react-awesome-reveal"
 import Ominaisuudet from "./Ominaisuudet"
 
@@ -32,14 +33,20 @@ const Palvelut = (props) => {
         <Fade {...animCfg.text}>
           <div className={styles.textWrapper}>
             <p>
-              Digiaallon suunnittelu- ja kehityspalveluun sisältyy kaikki
-              laadukkaan nettisivun valmistusvaiheet alusta loppuun,
-              haluamillasi ominaisuuksilla ja integroinneilla.
+              Digiaallon palveluihin sisältyy kaikki laadukkaiden nettisivujen,
+              verkkokauppojen, web-appejen ja blogejen valmistusvaiheet ja
+              integraatiot alusta loppuun ja vähän pidemmällekin.
             </p>
             <p>
-              Valitse kilpailijoitasi kehittyneempi kehitysarkkitehtuuri ja
-              hyödy rakenteellisesta kilpailuedusta, mikä ei lisää työtaakkaasi,
-              vaadi ylläpitotoimia tai sisällä piilokustannuksia.
+              Vältä{" "}
+              <Link href="/verkkosivut#vanha-tekniikka">
+                <a>yleisiä verkkoansoja</a>
+              </Link>{" "}
+              johon useat Suomalaiset yrittäjät ovat tietämättään astuneet, ja
+              hyödy rakenteellisesta kilpailuedusta valitsemalla{" "}
+              <Link href="/verkkosivut#uusi-tekniikka">
+                <a>nykyaikainen ja tehokas kehitysarkkitehtuuri.</a>
+              </Link>
             </p>
           </div>
         </Fade>

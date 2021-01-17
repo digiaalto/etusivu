@@ -16,7 +16,7 @@ const animCfg = {
 const sisalto = {
   header: "Aloitetaanko hommat?",
   subheader:
-    "Vai mietityttääkö hinta? Täytä tarjouspyyntö ja näet samalla alustavan hinta-arvion.",
+    "Vai mietityttääkö hinta? Täytä tarjouspyyntö ja katso samalla alustava hinta-arvio.",
   vahvistusViesti: {
     success: {
       header: "Kiitos mielenkiinnosta!",

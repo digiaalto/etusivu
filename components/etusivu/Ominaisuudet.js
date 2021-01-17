@@ -19,19 +19,19 @@ const ominaisuudet = [
   {
     header: "Laatutestaus ja tulokset",
     text:
-      "Sivuston toteutetaan tavalla joka takaa kilpailijoitasi paremmat tulokset laatutestissä. Kääteen jää helposti ymmärettävät tulokset.",
+      "Moderni kehitys takaa kilpailijoitasi paremmat tulokset Googlen laatutestissä. Käteen jää helposti ymmärettävät tulokset.",
     icon: <SiPowerbi className={styles.growing} />,
   },
   {
     header: "Kestävä ja pitkäikäinen",
     text:
-      "Julkaisun jälkeen verkkosivu pyörii ikiliikkujan tavoin. Ei jatkuvia tietoturvaongelmia tai ylläpitotoimia joiden hoidosta pitää maksaa.",
+      "Valmis sivusto ei kärsi tietoturvaongelmista tai vaadi jatkuvia ylläpitotoimia tai päivittelyitä joista pitää pulittaa extraa.",
     icon: <FaCog className={styles.spinning} />,
   },
   {
     header: "Mukautettu",
     text:
-      "Design ja ulkoasu räätälöidään oman yrityksen brändin mukaisesti, yhteiset tavoitteet tähtäimessä.",
+      "Erottaudu massasta brändisi mukaisesti räätälöidyllä ulkoasulla ja UX-designilla jolla realisoidaan tärkeimmät tavoitteesi.",
     icon: <FaPaintBrush className={styles.bouncing} />,
   },
 ]

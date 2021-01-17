@@ -24,14 +24,6 @@
 				margin-top: 0.5rem
 	&:last-of-type
 		flex-direction: column
-.textBlocks
-	display: grid
-	grid-template-columns: 1fr 1fr
-	gap: 1.5rem
-.block
-	max-width: 400px
-	&:last-of-type
-		max-width: 500px
 
 // Top headers.
 .headerIcon
@@ -47,6 +39,13 @@
 	font-size: $h2Size
 
 // Blocks.
+.textBlocks
+	display: grid
+	gap: 1.5rem
+.block
+	max-width: 400px
+	&:last-of-type
+		max-width: 500px
 .blockMiniheader
 	display: block
 	font-size: 1rem
@@ -110,10 +109,20 @@
 
 @include laptop
 	.column
-		max-width: 600px
+		max-width: 700px
+	.textBlocks
+		// grid-template-columns: 1fr 1fr
+		// grid-template: "a b" 1fr 1fr "c d" 1fr 1fr "e e" 1fr
+		grid-template-areas: "a b" "c d" "e e"
+		gap: 3rem
 	.block
-		max-width: 280px
-	
+		max-width: 600px
+		&:first-of-type
+			grid-area: a
+		&:nth-of-type(2)
+			grid-area: b
+		&:last-of-type
+			grid-area: e
 @include desktop
 	.content
 		grid-auto-flow: column

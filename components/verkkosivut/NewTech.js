@@ -29,9 +29,9 @@ const NewTech = (props) => {
           <div>
             <h2 className={styles.header}>Uusi tekniikka — React & Next.</h2>
             <h3 className={styles.subheader}>
-              Digiaalto ei rakenna vain verkkosivustoja. Tarjoamme tarkasti
-              ajateltua suunnittelua, kilpailijoita kovempaa teknologiaa ja
-              tinkimätöntä palvelua.
+              Digiaalto ei rakenna vain verkkosivustoja. Tarjoamme huolellista
+              suunnittelua, kilpailijoita kovempaa teknologiaa ja tinkimätöntä
+              palvelua.
             </h3>
           </div>
         </Fade>
