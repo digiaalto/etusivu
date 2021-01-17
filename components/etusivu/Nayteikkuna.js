@@ -47,9 +47,9 @@ const majoitusroosa = {
   scoreSrc: "/tyonayte/majoitusroosa/scores.png",
   header: "Majoitusroosa",
   paragraphs: [
-    `Majoitusalan yritys Kanta-Hämeessä, lähellä rantaa. Varattavissa pääsääntöisesti isomille ryhmille ja juhlille.`,
-    `Sivustossa esitellään maisemia, patikkapolkuja, kotoja, rantaa ja rakennuksen yksityishuoneita ja oleskelutiloja isoilla kuvilla.`,
-    `Roosalta saa myös mielekkeitä sesonki- ja ryhmätarjouksista.`,
+    `Majoitusalan yritys Kanta-Hämeessä. Varattavissa pääsääntöisesti isomille ryhmille kuten seurakunnille ja muille tapahtumille.`,
+    `Sivustossa esitellään maisemia, patikkapolkuja, kotoja, rantaa, rakennuksen yksityishuoneita ja oleskelutiloja isoilla kuvilla.`,
+    `Roosalta saa myös mielekkeitä sesonki- ja ryhmätarjouksia.`,
   ],
 }
 

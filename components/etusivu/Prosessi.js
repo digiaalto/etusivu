@@ -29,7 +29,7 @@ const Prosessi = (props) => {
             </span>
             <p className={styles.middleHeader}>
               Voit tulla pöytään ideat valmiina tai antaa Digiaallon hoitaa
-              kaiken nykyisten web-standardien mukaisesti.
+              kaiken.
             </p>
             <h4 className={styles.bottomHeader}>
               Tehostetun Verkkosivun Toteutus
@@ -38,22 +38,22 @@ const Prosessi = (props) => {
               <Block
                 miniheader="Vaihe 1, 1pv"
                 header="Kartoitus"
-                text="Kaikki alkaa yhteydenotosta. Ole hyvä ja täytä kyselylomake tai ota yhteyttä tavanomaisesti. Kerro vähintään pakolliset taustatiedot yrityksestäsi ja itseästi."
+                text="Ota yhteyttä lähettämällä viesti tai täyttämällä tarjouspyyntö. Määritetään sivuston tavoitteet, brändin vahvuus ja sivuston kohderyhmä. Digiaalto tutkii toimialaasi ja kilpailijoitasi."
               />
               <Block
                 miniheader="Vaihe 2, 5pv"
                 header="Suunnittelu"
-                text="Suunnittelu lähtee käyntiin tutkimalla kilpailijoitasi ja yrityksesi toimialaa. Kehitetään paras tietohierarkia, sivukartta ja kirjoitetaan sisältö."
+                text="Suunnitellaan käyttäjävirta, sivuston tietohierarkia ja lähdetään kirjoittamaan valittua kohderyhmää puhuttelevaa sisältöä brändisi omalla kielellä."
               />
               <Block
                 miniheader="Vaihe 3, 7pv"
                 header="Design"
-                text="Jokaiseen sivustoon kuuluu oma tyyli joka on yhtenäinen yrityksen brändin kanssa. Luodaan tyylikansio johon lisätään mm. typografia, väripaletti, esimerkkejä, kuvia ja videoita. Kansiosta tehdään rautalankamalli."
+                text="Valitaan brändisi mukainen typografia ja väripaletti. Figmaan sommitellaan lopullista sivustoa vastaava malli. Pystyt seuraamaan töitä linkistä."
               />
               <Block
                 miniheader="Vaihe 4, 10pv"
                 header="Kehitys"
-                text="Edellisen vaiheen mallin hyväksynnän jälkeen alkaa itse koodaus. Kehitys tapahtuu huolellisesti, ajasta tinkimättä. Tekniset päätökset tehdään parhaiden standardien mukaisesti."
+                text="Kehitysvaiheessa hyväksytty malli realisoidaan oikeaksi sivustoksi. Kehitys luonnistuu uusimpien standardien mukaisesti ja laatutestauksella varmistetaan oikeat päätökset pellin alla."
               />
               <Block
                 miniheader="Valmista!"
