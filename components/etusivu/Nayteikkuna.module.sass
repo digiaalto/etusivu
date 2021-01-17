@@ -3,6 +3,15 @@
 .section
 	@include spacing
 
+.headers
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+
+.help
+	font-style: italic
+
 .naytteet
 	position: relative
 	display: grid
@@ -12,6 +21,7 @@
 
 .header
 	@include mainHeader
+	margin-bottom: 0 !important
 
 @include tablet
 	.naytteet
@@ -20,8 +30,5 @@
 @include desktop
 	.naytteet
 		gap: 10rem
-	.header
-		margin-left: auto
-		margin-right: auto
-	.header
+	.headers
 		margin-bottom: 5rem

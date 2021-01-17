@@ -57,7 +57,10 @@ const Nayteikkuna = (props) => {
   const { refs } = props
   return (
     <section className={styles.section} ref={refs} id="tyonaytteet">
-      <h3 className={styles.header}>Viimeisimmät työt.</h3>
+      <div className={styles.headers}>
+        <h3 className={styles.header}>Viimeisimmät työt.</h3>
+        <span className={styles.help}>Vieritä näyteikkunaa.</span>
+      </div>
       <div className={styles.naytteet}>
         <Tyonayte {...digiaalto} />
         <Tyonayte {...majoitusroosa} inverted={true} />
