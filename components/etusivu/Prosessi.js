@@ -21,9 +21,7 @@ const Prosessi = (props) => {
             <Images />
           </div>
           <div className={styles.column}>
-            <span className={styles.topHeader}>
-              Sivujen valmistus lyhyesti.
-            </span>
+            <span className={styles.topHeader}>Sivut helposti.</span>
             <p className={styles.middleHeader}>
               Voit tulla pöytään ideat valmiina tai antaa Digiaallon hoitaa
               kaiken. Aloita{" "}
