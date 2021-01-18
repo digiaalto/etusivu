@@ -38,7 +38,7 @@ const Palvelut = (props) => {
               palveluintegroinnit alusta loppuun.
             </p>
             <p>
-              Vältä yleisiä verkkoansoja johon monet kilpailijasi ovat
+              Vältä yleisiä suodenkoppia johon monet kilpailijasi ovat
               tietämättään astuneet. Hyödy rakenteellisesta kilpailuedusta
               valitsemalla nykyaikainen ja tehokas kehitysarkkitehtuuri mikä
               toimii ikiliikkujan tavoin!

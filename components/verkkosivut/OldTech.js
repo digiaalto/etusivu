@@ -37,15 +37,15 @@ const OldTech = (props) => {
             kuin asiakas itse.
           </h3>
           <p>
-            WordPress on valinnanvapautta rajoittava monoliitti joka helpoittaa
-            verkkosivun kehittäjän työtä kloonatuilla valmisteemoilla,
-            plugineilla, "raahaa ja pudota" -ominaisuuksilla, ja vanhentuneella
-            julkaisualustalla.
+            WordPress on valinnanvapautta rajoittava monoliitti jonka päätehtävä
+            on helpoittaa verkkosivun kehittäjän työtä kloonatuilla
+            valmisteemoilla, plugineilla, "raahaa ja pudota" -ominaisuuksilla,
+            ja vanhentuneella julkaisualustalla.
           </p>
           <p>
-            Näiden oikoteiden hyväksikäyttö johtaa pakostakin tavalla tai
-            toisella vialliseen, epävakaaseen tuotteeseen josta sivun omistaja
-            joutuu maksamaan menetettyinä asiakkaina ja rahallisesti.
+            Näiden oikoteiden hyväksikäyttö johtaa pakostakin vialliseen,
+            tehottomaan tuotteeseen, josta sivun omistaja joutuu maksamaan
+            tavalla tai toisella.
           </p>
           <p>
             WordPress aloitti yksinkertaisena bloggaamisalustana, ja vuosien

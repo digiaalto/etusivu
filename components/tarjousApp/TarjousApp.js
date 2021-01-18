@@ -2,7 +2,7 @@ import styles from "./TarjousApp.module.sass"
 import React, { useState, useEffect, useRef } from "react"
 import axios from "axios"
 import { useForm } from "react-hook-form"
-import { Checkbox, TextArea, Selection, TextInput, PriceWidget } from "./index"
+import { Checkbox, TextArea, Selection, TextInput } from "./index"
 import { ButtonStyler } from "../common/button"
 
 // Content. Get from CMS?
@@ -30,8 +30,8 @@ const sisalto = {
     verkkokauppa: {
       name: "verkkokauppa",
       label: "Verkkokauppa",
-      info: `Verkkokaupan avulla yritys voi toimia melkein kokonaan verkossa ja korvata toimistojen tarpeen jossa on myynti- ja johtohenkilökunta.
-			Verkkokauppaan integroidaan varastojen hallinta ja maksuportaali.`,
+      info: `Verkkokaupan avulla yritys voi toimia melkein kokonaan verkossa ja pystyy korvaamaan toimistojen tarpeen jossa on myynti- ja johtohenkilökunta.
+			Verkkokauppaan integroidaan varastonhallinta ja maksuportaali.`,
       defaultChecked: false,
     },
     blogi: {
@@ -142,7 +142,6 @@ const validation = {
  */
 const TarjousApp = (props) => {
   const { register, handleSubmit, errors } = useForm()
-  const [price, setPrice] = useState(0)
   const [enabledProducts, setEnabledProducts] = useState({
     verkkosivu: sisalto.tyypit.verkkosivu.defaultChecked,
     verkkokauppa: sisalto.tyypit.verkkokauppa.defaultChecked,
@@ -154,7 +153,7 @@ const TarjousApp = (props) => {
     sisallontuotto: sisalto.palvelut.sisallontuotto.defaultChecked,
     sisallonhallinta: sisalto.palvelut.sisallonhallinta.defaultChecked,
   })
-  const { status, setStatus } = props
+  const { status, setStatus, setPrice } = props
   const [validType, setValidType] = useState(true)
   const typeRef = useRef(null)
 
@@ -231,7 +230,6 @@ const TarjousApp = (props) => {
 
   return (
     <div className={styles.container}>
-      <PriceWidget price={price} />
       <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
         <TyyppiSection
           register={register}

@@ -2,10 +2,10 @@ import styles from "./Tarjouspyynto.module.sass"
 import TarjousApp from "../tarjousApp"
 import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
-import { FaArrowDown } from "react-icons/fa"
 import { Fade } from "react-awesome-reveal"
 import { AiOutlineLoading3Quarters } from "react-icons/ai"
 import { MdThumbUp, MdThumbDown } from "react-icons/md"
+import { PriceWidget } from "../tarjousApp/index"
 
 const animCfg = {
   form: {
@@ -16,12 +16,12 @@ const animCfg = {
 const sisalto = {
   header: "Aloitetaanko hommat?",
   subheader:
-    "Vai mietityttääkö hinta? Täytä tarjouspyyntö ja katso samalla alustava hinta-arvio.",
+    "Vai mietityttääkö hinta? Täyttele tarjouspyyntö ja katso samalla alustava hinta-arvio.",
   vahvistusViesti: {
     success: {
-      header: "Kiitos mielenkiinnosta!",
+      header: "Kiitos tarjouspyynnöstä!",
       subheader:
-        "Luemme antamasi tiedot läpi ja vastaamme sähköpostiisi kohtapian.",
+        "Luemme antamasi tiedot läpi ja vastaamme sähköpostiisi muutamassa arkipäivässä.",
     },
     error: {
       header: "Kaikki ei mennyt kuin Strömsössä...",
@@ -33,6 +33,7 @@ const sisalto = {
 
 const Tarjouspyynto = (props) => {
   const { refs } = props
+  const [price, setPrice] = useState(0)
   const [status, setStatus] = useState({
     submitting: false,
     submitted: false,
@@ -53,21 +54,26 @@ const Tarjouspyynto = (props) => {
         (status.submitting && <FormSubmitting />) ||
         (status.submitted && (
           <FormSubmitted {...sisalto.vahvistusViesti.success} />
-        )) || <DefaultForm status={status} setStatus={setStatus} />}
+        )) || (
+          <DefaultForm
+            status={status}
+            setStatus={setStatus}
+            price={price}
+            setPrice={setPrice}
+          />
+        )}
     </section>
   )
 }
 
-const DefaultForm = ({ status, setStatus }) => {
+const DefaultForm = ({ status, setStatus, price, setPrice }) => {
   return (
-    <Fade {...animCfg.form}>
-      <div className={styles.headers}>
-        <h2 className={styles.header}>{sisalto.header}</h2>
-        <h3 className={styles.subheader}>{sisalto.subheader}</h3>
-        <FaArrowDown className={`${styles.icon} ${styles.bouncing}`} />
-      </div>
-      <TarjousApp status={status} setStatus={setStatus} />
-    </Fade>
+    <div>
+      <h2 className={styles.header}>{sisalto.header}</h2>
+      <h3 className={styles.subheader}>{sisalto.subheader}</h3>
+      <PriceWidget price={price} />
+      <TarjousApp status={status} setStatus={setStatus} setPrice={setPrice} />
+    </div>
   )
 }
 

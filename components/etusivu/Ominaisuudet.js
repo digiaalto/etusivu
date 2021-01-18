@@ -25,13 +25,13 @@ const ominaisuudet = [
   {
     header: "Kestävä ja pitkäikäinen",
     text:
-      "Valmis sivusto ei kärsi tietoturvaongelmista tai vaadi jatkuvia ylläpitotoimia tai päivittelyitä joista pitää pulittaa extraa.",
+      "Digiaallon valmistamat sivustot ei kärsi tietoturvaongelmista tai vaadi jatkuvia ylläpitotoimia tai päivittelyitä joista pitää pulittaa extraa.",
     icon: <FaCog className={styles.spinning} />,
   },
   {
     header: "Mukautettu",
     text:
-      "Erottaudu massasta brändisi mukaisesti räätälöidyllä sivuston ulkoasulla ja UX-designilla jolla realisoidaan tärkeimmät tavoitteesi.",
+      "Erottaudu markkinoilla brändisi mukaisesti räätälöidyllä ulkoasulla joka tuo vahvuutesi esille, sekä näppärällä UX-designilla jolla realisoidaan tavoitteesi.",
     icon: <FaPaintBrush className={styles.bouncing} />,
   },
 ]

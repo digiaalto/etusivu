@@ -5,17 +5,12 @@
 	@include spacing
 	display: flex
 	flex-direction: column
-	justify-content: center
 	align-items: center
 
 // Headers.
 .headers
-	display: flex
-	flex-direction: column
-	align-items: center
-	align-items: center
+	position: relative
 	max-width: 600px
-	text-align: center
 .header
 	@include mainHeader
 .subheader
@@ -25,10 +20,10 @@
 .icon
 	font-size: $h1Size
 	margin-bottom: 1.5rem
-.bouncing
-	animation: bounce 1.33s infinite
 .spinning
 	animation: rotate 0.75s infinite linear
+
+// Animations.
 @keyframes bounce
 	0%
 		transform: translateY(0%)
@@ -39,3 +34,7 @@
 @keyframes rotate
 	100%
 		transform: rotate(360deg)
+
+@include laptop
+	.header
+		max-width: 100% !important

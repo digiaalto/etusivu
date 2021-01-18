@@ -1,6 +1,6 @@
 import styles from "./Prosessi.module.sass"
-import { BsLightningFill } from "react-icons/bs"
 import { Fade } from "react-awesome-reveal"
+import Link from "next/link"
 
 const animCfg = {
   content: {
@@ -22,14 +22,19 @@ const Prosessi = (props) => {
           </div>
           <div className={styles.column}>
             <span className={styles.topHeader}>
-              <span className={styles.headerIcon}>
-                <BsLightningFill />
-              </span>
-              Prosessi
+              Sivujen valmistus lyhyesti.
             </span>
             <p className={styles.middleHeader}>
               Voit tulla pöytään ideat valmiina tai antaa Digiaallon hoitaa
-              kaiken.
+              kaiken. Aloita{" "}
+              <Link href="#laheta-viesti">
+                <a>lähettämällä viesti</a>
+              </Link>{" "}
+              tai tsekkaa alustava hinta-arvio{" "}
+              <Link href="/verkkosivut#tarjouspyynto">
+                <a>tarjouspyynnön</a>
+              </Link>{" "}
+              ohella.
             </p>
             <h4 className={styles.bottomHeader}>
               Tehostetun Verkkosivun Toteutus
@@ -38,27 +43,27 @@ const Prosessi = (props) => {
               <Block
                 miniheader="Vaihe 1, 1pv"
                 header="Kartoitus"
-                text="Ota yhteyttä lähettämällä viesti tai täyttämällä tarjouspyyntö. Määritetään sivuston tavoitteet, brändin vahvuus ja sivuston kohderyhmä. Digiaalto tutkii toimialaasi ja kilpailijoitasi."
+                text="Homma lähtee käyntiin mahdollisimman tarkasti määrittelemällä projektin tavoitteet, brändin vahvuudet ja sivuston tärkeimmät kohderyhmät. Tehdään myös pieni taustatutkimusta kilpailijoihisi."
               />
               <Block
                 miniheader="Vaihe 2, 5pv"
                 header="Suunnittelu"
-                text="Suunnitellaan käyttäjävirta, sivuston tietohierarkia ja lähdetään kirjoittamaan valittua kohderyhmää puhuttelevaa sisältöä, brändisi omalla kielellä. Verkosta etsitään samalla inspiraatiota ja luodaan tyylikansio."
+                text="Suunnitellaan käyttäjävirta, sivuston tietohierarkia ja aloitetaan kirjoittelemaan valittua kohderyhmää puhuttelevaa sisältöä brändisi omalla kielellä. Etsitään inspiraatiota."
               />
               <Block
                 miniheader="Vaihe 3, 7pv"
                 header="Design"
-                text="Brändisi henki kaapataan ja esitetään sopivalla typografialla, väripaletilla ja muilla resursseilla. Figmaan sommitellaan lopullista sivustoa vastaava malli jota voi seurata linkistä."
+                text="Luodaan tyylikansio johon luodaan brändisi henki sopivalla estetiikalla. Valitaan typografia, väripaletti, elementit, kuvitus ja muut resurssit. Sommitellaan Figmaan lopullista sivustoa vastaava malli jota voi seurata kätevästi linkistä."
               />
               <Block
                 miniheader="Vaihe 4, 10pv"
                 header="Kehitys"
-                text="Kehitysvaiheessa hyväksytty malli muutetaan oikeaksi sivuksi. Kehitys luonnistuu uusimpien standardien mukaisesti ja laatutestauksella varmistetaan oikeat päätökset pellin alla."
+                text="Kehitysvaiheessa verkkokehittäjä tekee edellisen vaiheen mallista toimivan verkkosivun. Kehitys luonnistuu uusimpien standardien mukaisesti ja laatutestauksella varmistetaan optimaaliset valinnat pellin alla."
               />
               <Block
                 miniheader="Valmista!"
                 header="Julkaisu"
-                text="Sivusto on valmis ja on aika julkaista työmme hedelmät. Toimitamme sinulle kuvaohjeet jokaiseen integroituun ohjelmaan ja asiakaspalvelulinjat pysyvät auki tulevaisuudessakin."
+                text="Sivusto on valmis ja on aika julkaista työmme hedelmät. Toimitamme sinulle kuvaohjeet jokaiseen integroituun palveluun ja tietenkin asiakaspalvelulinjat pysyvät auki."
               />
             </div>
           </div>
@@ -70,7 +75,7 @@ const Prosessi = (props) => {
 
 export default Prosessi
 
-const Block = ({ miniheader, header, text }) => {
+const Block = ({ miniheader, header, text, customParagraph }) => {
   return (
     <div className={styles.block}>
       <span className={styles.blockMiniheader}>
@@ -78,7 +83,11 @@ const Block = ({ miniheader, header, text }) => {
         <span className={styles.emDash}></span>
       </span>
       <h4 className={styles.blockHeader}>{header}</h4>
-      <p className={styles.blockParagraph}>{text}</p>
+      {customParagraph ? (
+        customParagraph
+      ) : (
+        <p className={styles.blockParagraph}>{text}</p>
+      )}
     </div>
   )
 }

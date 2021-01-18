@@ -40,7 +40,7 @@ const NewTech = (props) => {
           <p>
             Digiaallon tarkoitus on tuoda nämä kehittyneet verkkoratkaisut
             kaikille jotka haluavat asiakkailleen turvallisempaa ja mukavampaa
-            käyttökokemusta ja itselleen vaivattomampaa, kustannustehokkaampaa
+            käyttökokemusta ja itselleen vaivatonta, kustannustehokasta
             sivustonhallintaa.
           </p>
           <p>
@@ -50,7 +50,7 @@ const NewTech = (props) => {
           </p>
           <p>
             Jos et ole varma onko Digiaallon hybrid-verkkosivu paras vaihtoehto
-            seuraavaan projektiisi ota yhteyttä ja vastaamme pian —{" "}
+            seuraavaan projektiisi ota yhteyttä ja selvitetään asia —{" "}
             <Link href="/verkkosivut#tarjouspyynto">
               <a>aloita keskustelu.</a>
             </Link>
