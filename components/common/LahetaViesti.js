@@ -77,12 +77,15 @@ const LahetaViesti = (props) => {
     <div className={styles.wrapper} id="laheta-viesti">
       <h5 className={styles.header}>{header}</h5>
       {status.info.msg === null && (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
           <div>
+            <label forhtml="viesti_nimi" className={styles.label}>
+              Nimi
+            </label>
             <input
-              name="nimi"
+              name="viesti_nimi"
+              id="viesti_nimi"
               ref={register({ required: true })}
-              placeholder="Nimi"
               className={styles.input}
             />
             {errors.nimi && errors.nimi.type === "required" && (
@@ -90,10 +93,13 @@ const LahetaViesti = (props) => {
             )}
           </div>
           <div>
+            <label forhtml="viesti_sahkoposti" className={styles.label}>
+              Sähköposti
+            </label>
             <input
-              name="sahkoposti"
+              name="viesti_sahkoposti"
+              id="viesti_sahkoposti"
               ref={register({ required: true })}
-              placeholder="Sähköposti"
               className={styles.input}
             />
             {errors.sahkoposti && errors.sahkoposti.type === "required" && (
@@ -103,11 +109,14 @@ const LahetaViesti = (props) => {
             )}
           </div>
           <div>
+            <label forhtml="viesti" className={styles.label}>
+              Mikä painaa mieltä?
+            </label>
             <TextareaAutosize
               name="viesti"
+              id="viesti"
               minRows={6}
               ref={register({ required: true })}
-              placeholder="Mikä painaa mieltä?"
               className={styles.input}
             />
             {errors.viesti && errors.viesti.type && (

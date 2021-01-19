@@ -16,7 +16,7 @@ const sisalto = {
     sivustoKeskisuuri: 650,
     sivustoSuuri: 1450,
     sisallontuotto: 700,
-    sisallonhallinta: 60,
+    sisallonhallinta: 20,
     kansainvalistaminen: 800,
   },
   tyypit: {
@@ -76,7 +76,7 @@ const sisalto = {
     sisallonhallinta: {
       name: "sisallonhallinta",
       label: "Sisällönhallinta",
-      info: `Digiaalto hoitaa kaikki haluamasi muutostyöt sopimuksen mukaisesti ympäri vuoden.`,
+      info: `Digiaalto hoitaa halumasi tekstisisällön muutostyöt ympäri vuoden, 20€ / muutostyö. Uudelleensuunnittelut sopimuksen mukaisesti.`,
       defaultChecked: false,
     },
     kansainvalistaminen: {
@@ -378,7 +378,7 @@ const FormSection = ({ children }) => {
 }
 const Header = ({ text, refs }) => {
   return (
-    <h5 className={styles.projectHeader} ref={refs}>
+    <h5 className={styles.overheader} ref={refs}>
       {text}
     </h5>
   )

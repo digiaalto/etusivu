@@ -1,9 +1,11 @@
 import styles from "./PriceWidget.module.sass"
 
-const PriceWidget = ({ price }) => (
-  <div className={styles.widget}>
+const PriceWidget = ({ price, hideIfDesktop }) => (
+  <div className={`${styles.widget} ${hideIfDesktop && styles.hideIfDesktop}`}>
     <span className={styles.price}>
-      ~{price} €<span className={styles.alv}> + alv</span>
+      ~{price} €
+      <br />
+      <span className={styles.alv}>+ alv</span>
     </span>
   </div>
 )

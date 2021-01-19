@@ -1,10 +1,8 @@
 import styles from "./Label.module.sass"
 
-const Label = ({ name, label }) => {
-  return (
-    <label htmlFor={name} className={styles.label}>
-      {label}
-    </label>
-  )
-}
+const Label = ({ name, label }) => (
+  <label htmlFor={name} className={styles.label}>
+    {label}
+  </label>
+)
 export default Label

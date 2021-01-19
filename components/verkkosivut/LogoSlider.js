@@ -32,7 +32,7 @@ const secondRowSources = [
 const LogoSlider = () => {
   return (
     <section className={styles.section}>
-      <span className={styles.bgHeader}>Kuka käyttää Nextiä?</span>
+      <span className={styles.bgHeader}>Nextin asiakkaita.</span>
       <div className={styles.slider}>
         <Slider logoSources={firstRowSources} />
         <div className={styles.spacer} />

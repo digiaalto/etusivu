@@ -1,13 +1,8 @@
 import styles from "./NewTech.module.sass"
-import Image from "next/image"
 import { Fade } from "react-awesome-reveal"
-import { LinkButton } from "../common/button"
-import Link from "next/link"
+import Takuut from "./Takuut"
 
 const animCfg = {
-  image: {
-    triggerOnce: true,
-  },
   header: {
     direction: "up",
     triggerOnce: true,
@@ -16,6 +11,9 @@ const animCfg = {
     direction: "up",
     damping: 0.1,
     cascade: true,
+    triggerOnce: true,
+  },
+  takuut: {
     triggerOnce: true,
   },
 }
@@ -34,48 +32,25 @@ const NewTech = (props) => {
         </Fade>
         <Fade {...animCfg.text}>
           <p>
-            React ja Nextjs perustuvat Jamstack arkkitehtuuriin joka on
-            tavanomaisesti ollut vain isojen digijättien ulottuvissa.
+            Next.js on ohjelmistokehys Facebookin luomalle React-kirjastolle
+            jolla voidaan rakentaa fiksusti pyöriviä hybrid-verkkosivuja.
           </p>
           <p>
-            Digiaallon tarkoitus on tuoda nämä kehittyneet verkkoratkaisut
-            kaikille jotka haluavat asiakkailleen turvallisempaa ja mukavampaa
-            käyttökokemusta ja itselleen vaivatonta, kustannustehokasta
-            sivustonhallintaa.
+            Sen sijaan että web-palvelin lähtee hakemaan dataa tietokannasta
+            vasta vierailijan astuessa sivulle, hybrid-sivusto on rakennettu jo
+            etukäteen ja lähetetty asiakkaan iloksi.
           </p>
           <p>
-            Enään ei puhuta web-hotelleista tai palvelimista ollenkaan, koska
-            voimme abstraktoida kaikki palvelintuotteet kolmannen osapuolen
-            palveluille, edullisesti, jopa veloituksetta.
-          </p>
-          <p>
-            Jos et ole varma onko Digiaallon hybrid-verkkosivu paras vaihtoehto
-            seuraavaan projektiisi ota yhteyttä ja selvitetään asia —{" "}
-            <Link href="/verkkosivut#tarjouspyynto">
-              <a>aloita keskustelu.</a>
-            </Link>
+            Käytännössä hybrid-sivusto johtaa pienempään poistumisprosenttiin,
+            bugittomaan verkkopalveluun, parhaaseen tekniseen
+            hakukoneoptimointiin, pitkäikäisyyteen, ja ylläpitotöistä johtuvien
+            migreenien eliminointiin.
           </p>
         </Fade>
       </div>
-      <div className={`${styles.column} ${styles.lighthouse}`}>
-        <Fade {...animCfg.image}>
-          <Image
-            src={"/images/lighthouse.svg"}
-            layout="intrinsic"
-            width={400}
-            height={400}
-            alt="Lighthouse Link"
-          />
-          <LinkButton
-            href="https://web.dev/measure/"
-            text="Vertaile sivuja"
-            external={true}
-            primary
-            customStyle={{ marginTop: "1rem", marginBottom: "1rem" }}
-          />
-          <span className={styles.lighthouseHelp}>
-            Käytä täydellistä apex-verkkotunnusta. (esim. https://digiaalto.fi/)
-          </span>
+      <div className={styles.column}>
+        <Fade {...animCfg.takuut}>
+          <Takuut />
         </Fade>
       </div>
     </section>

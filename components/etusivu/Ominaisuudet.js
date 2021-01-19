@@ -53,7 +53,7 @@ const Ominaisuus = (props) => {
   return (
     <div className={styles.ominaisuus}>
       <div className={styles.icon}>{icon}</div>
-      <h4 className={styles.header}>{header}</h4>
+      <h3 className={styles.header}>{header}</h3>
       <p className={styles.text}>{text}</p>
     </div>
   )

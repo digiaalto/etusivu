@@ -7,12 +7,22 @@
 	flex-direction: column
 	align-items: center
 
+.defaultForm
+	display: flex
+	
+.defaultFormColumn
+	&:last-of-type
+		display: none
+
 // Headers.
 .headers
 	position: relative
 	max-width: 600px
+
 .header
 	@include mainHeader
+	margin-bottom: 1rem !important
+
 .subheader
 	@include subheader
 
@@ -20,6 +30,7 @@
 .icon
 	font-size: $h1Size
 	margin-bottom: 1.5rem
+
 .spinning
 	animation: rotate 0.75s infinite linear
 
@@ -31,6 +42,7 @@
 		transform: translateY(15%)
 	0%
 		transform: translateY(0%)
+
 @keyframes rotate
 	100%
 		transform: rotate(360deg)
@@ -38,3 +50,10 @@
 @include laptop
 	.header
 		max-width: 100% !important
+	
+@include desktop
+	.defaultForm
+		gap: 2rem
+	.defaultFormColumn
+		&:last-of-type
+			display: block !important

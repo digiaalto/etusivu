@@ -52,17 +52,6 @@ $desktopHeroHeight: 940px
 	@media (min-width: 1920px)
 		@content
 
-@mixin hoverFill($baseColor)
-	@supports (background-clip: text) and (-webkit-text-fill-color: transparent)
-		background: linear-gradient(to right, $primary, $primary 50%, $baseColor 50%)
-		background-clip: text
-		-webkit-text-fill-color: transparent
-		background-size: 200% 100%
-		background-position: 100%
-		transition: background-position 275ms ease
-		&:hover
-			background-position: 0 100%
-
 @mixin preheader
 	display: block
 	font-weight: 900
@@ -70,7 +59,7 @@ $desktopHeroHeight: 940px
 	letter-spacing: 1px
 	text-transform: uppercase
 	
-@mixin mainHeader
+@mixin mainHeader()
 	max-width: $sectionHeaderWidth
 	margin-bottom: 1.5rem
 	margin-top: 0 !important
@@ -82,11 +71,12 @@ $desktopHeroHeight: 940px
 	@include laptop
 		max-width: $sectionHeaderWidth * 1.1
 		font-size: $h1Size * 1.2
+		margin-bottom: 2rem
 	
 @mixin subheader
 	max-width: 600px
 	margin-top: 0
-	font-size: 1.33rem
+	font-size: 1.1rem
 	line-height: 1.5
 	font-weight: 600
 	@include tablet
@@ -100,3 +90,14 @@ $desktopHeroHeight: 940px
 		padding: 7rem 8vw
 	@include desktop
 		padding: 10rem 10vw
+	
+@mixin hoverFill($baseColor)
+	@supports (background-clip: text) and (-webkit-text-fill-color: transparent)
+		background: linear-gradient(to right, $primary, $primary 50%, $baseColor 50%)
+		background-clip: text
+		-webkit-text-fill-color: transparent
+		background-size: 200% 100%
+		background-position: 100%
+		transition: background-position 275ms ease
+		&:hover
+			background-position: 0 100%

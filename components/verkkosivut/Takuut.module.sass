@@ -1,0 +1,39 @@
+@import "../../styles/_partials"
+
+.container
+	display: grid
+	grid-auto-flow: row
+	grid-template: auto / 1fr 1fr
+	align-self: flex-start
+
+.takuu
+	display: grid
+	grid-auto-flow: row
+	justify-content: center
+	justify-items: center
+	text-align: center
+	gap: 1rem
+
+.iconWrapper
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 50px
+	height: 50px
+	font-size: 2rem
+	background-color: $primary
+	border-radius: 9999px
+	color: $light
+
+.header
+	@include subheader
+	font-size: 1rem
+	max-width: 200px
+
+@inclde tablet
+	.iconWrapper
+		height: 100px
+		width: 100px
+		font-size: 2.5rem
+	.takuu
+		gap: 1.5rem

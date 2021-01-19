@@ -14,9 +14,9 @@ const animCfg = {
 }
 
 const sisalto = {
-  header: "Aloitetaanko hommat?",
+  header: "Lähetä tarjouspyyntö!",
   subheader:
-    "Vai mietityttääkö hinta? Täyttele tarjouspyyntö ja katso samalla alustava hinta-arvio.",
+    "Vai haluatko tietää paljonko maksaa? Täyttele tarjouspyyntö ja saat alustavan hinta-arvion.",
   vahvistusViesti: {
     success: {
       header: "Kiitos tarjouspyynnöstä!",
@@ -68,11 +68,16 @@ const Tarjouspyynto = (props) => {
 
 const DefaultForm = ({ status, setStatus, price, setPrice }) => {
   return (
-    <div>
-      <h2 className={styles.header}>{sisalto.header}</h2>
-      <h3 className={styles.subheader}>{sisalto.subheader}</h3>
-      <PriceWidget price={price} />
-      <TarjousApp status={status} setStatus={setStatus} setPrice={setPrice} />
+    <div className={styles.defaultForm}>
+      <div className={styles.defaultFormColumn}>
+        <h2 className={styles.header}>{sisalto.header}</h2>
+        <h3 className={styles.subheader}>{sisalto.subheader}</h3>
+        <PriceWidget price={price} hideIfDesktop />
+        <TarjousApp status={status} setStatus={setStatus} setPrice={setPrice} />
+      </div>
+      <div className={styles.defaultFormColumn}>
+        <PriceWidget price={price} />
+      </div>
     </div>
   )
 }

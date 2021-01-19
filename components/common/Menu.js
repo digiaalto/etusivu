@@ -104,7 +104,12 @@ const MenuContainer = (props) => {
 const MenuButton = (props) => {
   const { menuOpen, toggleOverlay } = props
   return (
-    <button className={styles.menuButton} onClick={toggleOverlay} type="button">
+    <button
+      className={styles.menuButton}
+      onClick={toggleOverlay}
+      type="button"
+      aria-label="Menu"
+    >
       {menuOpen ? <AiOutlineClose /> : <FiMenu />}
     </button>
   )

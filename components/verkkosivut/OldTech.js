@@ -37,10 +37,9 @@ const OldTech = (props) => {
             kuin asiakas itse.
           </h3>
           <p>
-            WordPress on valinnanvapautta rajoittava monoliitti jonka päätehtävä
-            on helpoittaa verkkosivun kehittäjän työtä kloonatuilla
-            valmisteemoilla, plugineilla, "raahaa ja pudota" -ominaisuuksilla,
-            ja vanhentuneella julkaisualustalla.
+            WordPressin peitetty tarkoitus on helpoittaa verkkosivun kehittäjän
+            työtä kloonatuilla valmisteemoilla, plugineilla, "raahaa ja pudota"
+            ominaisuuksilla, ja kätevällä mutta ikääntyneellä julkaisualustalla.
           </p>
           <p>
             Näiden oikoteiden hyväksikäyttö johtaa pakostakin vialliseen,
@@ -55,7 +54,7 @@ const OldTech = (props) => {
           </p>
           <p>
             WordPress sivustoja kiusaa myös jatkuvat tietoturva-aukot ja
-            ylläpitotoimet joiden hoidosta WordPress kauppias varmasti laskuttaa
+            ylläpitotoimet joiden hoidosta WordPress kauppias tottakai laskuttaa
             erikseen.
           </p>
         </Fade>

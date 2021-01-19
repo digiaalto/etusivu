@@ -3,43 +3,24 @@
 .section
 	@include spacing
 	min-height: 100vh
-	position: relative
-	display: flex
-	flex-direction: column
-	align-items: center
-	gap: 2rem
+	display: grid
+	gap: 3rem
 
 .column
 	position: relative
 	width: 100%
 	max-width: 700px
 
-.lighthouse
-	display: flex
-	flex-direction: column
-	max-width: 250px
-	text-align: center
-	align-items: center
-
-.lighthouseCTA
-	display: flex
-	flex-direction: column
-	margin-top: -1rem
-
-.lighthouseHelp
-	font-size: 0.8rem
-	display: inline-block
-
 .header
 	@include mainHeader
+.subheader
+	@include subheader
 
 @include desktop
 	.section
-		flex-direction: row
-		align-items: flex-start
-		justify-content: center
-		gap: 4rem
+		display: grid
+		grid-auto-flow: column
+		gap: 5rem
 	.column
-		order: 0
-	.lighthouse
-		order: 1
+		&:first-of-type
+			order: 1

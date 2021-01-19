@@ -1,11 +1,12 @@
 @import "../../styles/_partials"
-$animDuration: 14s
+$animDuration: 12s
 $logoWidth: 100px
 $rowGap: 2rem
 
 .section
 	position: relative
 	margin: 5rem 0
+	margin-bottom: 2rem !important
 
 .bgHeader
 	font-size: $h3Size
@@ -30,7 +31,6 @@ $rowGap: 2rem
 .row
 	display: grid
 	grid-auto-flow: column
-	gap: $rowGap
 	opacity: 0.5
 	&:last-of-type
 		&>.rowInner
@@ -58,7 +58,6 @@ $rowGap: 2rem
 
 @include desktop
 	.row
-		gap: $rowGap * 2
 		&:last-of-type
 			&>.rowInner
 				animation-duration: $animDuration * 3

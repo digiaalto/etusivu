@@ -1,5 +1,6 @@
 import PropTypes from "prop-types"
 import styles from "./Checkbox.module.sass"
+import Label from "./Label"
 
 const TypeSelection = (props) => {
   return (
@@ -25,11 +26,6 @@ const Input = ({ name, refs, defaultChecked, onChange }) => (
     className={styles.checkbox}
     defaultChecked={defaultChecked}
   />
-)
-const Label = ({ name, label }) => (
-  <label htmlFor={name} className={styles.headerLabel}>
-    {label}
-  </label>
 )
 const Info = ({ name, info }) => (
   <label htmlFor={name} className={styles.infoLabel}>
