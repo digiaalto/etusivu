@@ -18,7 +18,6 @@ const digiaalto = {
       height: 5212 / 2,
     },
   },
-  palette: ["#007CF0", "#ffffff", "#00122A", "#1e272e"],
   scoreSrc: "/tyonayte/digiaalto/scores.png",
   header: "Digiaalto",
   paragraphs: [
@@ -43,7 +42,6 @@ const majoitusroosa = {
       height: 8533 / 2,
     },
   },
-  palette: ["#d66686", "#eee", "#edebe5", "#222222"],
   scoreSrc: "/tyonayte/majoitusroosa/scores.png",
   header: "Majoitusroosa",
   paragraphs: [
@@ -58,7 +56,7 @@ const Nayteikkuna = (props) => {
   return (
     <section className={styles.section} ref={refs} id="tyonaytteet">
       <div className={styles.headers}>
-        <h3 className={styles.header}>Viimeisimmät työt.</h3>
+        <h3 className={styles.header}>Uusimmat työt.</h3>
         <span className={styles.help}>Vieritä näyteikkunoita.</span>
       </div>
       <div className={styles.naytteet}>

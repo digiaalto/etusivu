@@ -3,7 +3,7 @@ import { LinkButton } from "../common/button"
 
 const sisalto = {
   header: "Rakennetaan jotain mitä on mukava käyttää.",
-  cta: "Eteenpäin kiitos!",
+  cta: "Lue verkkosivuista",
 }
 
 const LueVerkkosivut = () => {
