@@ -28,6 +28,11 @@ const Hero = (props) => {
           <h1 className={styles.header}>
             Verkkosivu joka kasvaa yrityksesi kanssa.
           </h1>
+          <h2 className={styles.subheader}>
+            Vanhan ja uuden vertailu.
+            <br />
+            Spoileri: <span className={styles.spoiler}>Uusi on parempi.</span>
+          </h2>
           <LinkButton
             href="/verkkosivut#tarjouspyynto"
             text="Tarjouspyyntö"
