@@ -1,5 +1,4 @@
-import { useRef } from "react"
-import mobileDetect from "mobile-detect"
+import { useRef, useState, useEffect } from "react"
 import Layout from "../components/layouts"
 import Hero from "../components/verkkosivut/Hero"
 import OldTech from "../components/verkkosivut/OldTech"
@@ -14,12 +13,16 @@ const sisalto = {
   textBar2: `Digiaallon tehtävä on tuoda parhaat verkkoratkaisut yrittäjille jotka haluavat asiakkailleen turvallisempaa ja mukavampaa käyttökokemusta ja itselleen vaivatonta, kustannustehokasta sivustonhallintaa.`,
 }
 
-const Verkkosivut = (props) => {
-  const { isMobile } = props
+const Verkkosivut = () => {
   const heroRef = useRef(null)
   const oldTechRef = useRef(null)
   const newTechRef = useRef(null)
   const tarjouspyyntoRef = useRef(null)
+  const [isMobile, setMobile] = useState(false)
+
+  useEffect(() => {
+    if (window) setMobile(window.innerWidth < 769)
+  }, [])
 
   const sectionRefs = [
     { section: "Hero", hoverText: "Ylös", ref: heroRef },
@@ -47,8 +50,3 @@ const Verkkosivut = (props) => {
 }
 
 export default Verkkosivut
-
-Verkkosivut.getInitialProps = ({ req }) => {
-  const md = new mobileDetect(req.headers["user-agent"])
-  return { isMobile: md.mobile() ? true : false }
-}

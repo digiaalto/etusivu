@@ -24,7 +24,6 @@
     "axios": "^0.21.1",
     "disable-scroll": "^0.5.1",
     "imagemin-optipng": "^8.0.0",
-    "mobile-detect": "^1.4.4",
     "next": "^10.0.5",
     "node-fetch": "^2.6.1",
     "prop-types": "^15.7.2",
