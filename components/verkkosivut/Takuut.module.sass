@@ -1,39 +1,46 @@
 @import "../../styles/_partials"
 
-.container
+.takuut
 	display: grid
 	grid-auto-flow: row
 	grid-template: auto / 1fr 1fr
-	align-self: flex-start
+	gap: 2rem 1rem
 
 .takuu
 	display: grid
 	grid-auto-flow: row
-	justify-content: center
+	align-content: start
+	justify-self: center
 	justify-items: center
 	text-align: center
 	gap: 1rem
-
+	width: 100%
+	max-width: 150px
+	
 .iconWrapper
 	display: flex
 	justify-content: center
 	align-items: center
 	width: 50px
 	height: 50px
+	border-radius: 9999px
 	font-size: 2rem
 	background-color: $primary
-	border-radius: 9999px
 	color: $light
 
 .header
-	@include subheader
-	font-size: 1rem
-	max-width: 200px
+	display: block
+	font-weight: 600
 
-@inclde tablet
-	.iconWrapper
-		height: 100px
-		width: 100px
-		font-size: 2.5rem
+@include tablet
+	.takuut
+		grid-template: auto / 1fr 1fr 1fr
+		gap: 2rem
 	.takuu
-		gap: 1.5rem
+		justify-items: start
+		justify-self: start
+		text-align: left
+		gap: 2rem
+	.iconWrapper
+		height: 75px
+		width: 75px

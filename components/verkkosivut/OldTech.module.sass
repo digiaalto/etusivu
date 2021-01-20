@@ -9,6 +9,10 @@
 	align-items: center
 	gap: 2rem
 
+.textContainer
+	display: grid
+	grid-auto-flow: row
+	gap: 2rem
 .column
 	position: relative
 	width: 100%
@@ -31,6 +35,8 @@
 	.section
 		align-items: flex-start
 		justify-content: center
+	.textContainer
+		gap: 3rem
 
 @include desktop
 	.section

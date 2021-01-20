@@ -1,0 +1,31 @@
+@import "../../styles/_partials"
+
+.section
+	@include spacing
+	padding-top: 0 !important
+	display: flex
+	justify-content: center
+
+.content
+	display: grid
+	grid-auto-flow: row
+	gap: 2rem
+
+.scoreContent
+	display: grid
+	grid-auto-flow: row
+	justify-self: center
+	justify-items: center
+	grid-template: auto / 1fr 1fr
+	
+.header
+	@include mainHeader
+
+@include tablet
+	.content
+		gap: 4rem
+	.scoreContent
+		grid-auto-flow: column
+		justify-self: normal
+		justify-items: start
+		grid-template: auto / auto

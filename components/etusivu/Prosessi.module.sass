@@ -60,8 +60,6 @@
 
 // Media queries.
 @include tablet
-	.content
-		gap: 4rem
 	.middleHeader
 		max-width: 480px
 	.bottomHeader
@@ -107,10 +105,8 @@
 	.column
 		max-width: 700px
 	.textBlocks
-		// grid-template-columns: 1fr 1fr
-		// grid-template: "a b" 1fr 1fr "c d" 1fr 1fr "e e" 1fr
 		grid-template-areas: "a b" "c d" "e e"
-		gap: 3rem
+		gap: 1rem 2rem
 	.block
 		max-width: 600px
 		&:first-of-type

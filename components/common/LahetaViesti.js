@@ -75,11 +75,11 @@ const LahetaViesti = (props) => {
 
   return (
     <div className={styles.wrapper} id="laheta-viesti">
-      <h5 className={styles.header}>{header}</h5>
+      <span className={styles.header}>{header}</span>
       {status.info.msg === null && (
         <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
           <div>
-            <label forhtml="viesti_nimi" className={styles.label}>
+            <label htmlFor="viesti_nimi" className={styles.label}>
               Nimi
             </label>
             <input
@@ -93,7 +93,7 @@ const LahetaViesti = (props) => {
             )}
           </div>
           <div>
-            <label forhtml="viesti_sahkoposti" className={styles.label}>
+            <label htmlFor="viesti_sahkoposti" className={styles.label}>
               Sähköposti
             </label>
             <input
@@ -109,7 +109,7 @@ const LahetaViesti = (props) => {
             )}
           </div>
           <div>
-            <label forhtml="viesti" className={styles.label}>
+            <label htmlFor="viesti" className={styles.label}>
               Mikä painaa mieltä?
             </label>
             <TextareaAutosize
@@ -139,5 +139,5 @@ LahetaViesti.propTypes = {
 }
 
 LahetaViesti.defaultProps = {
-  header: "Onko kysyttävää? Ota yhteyttä!",
+  header: "Onko kysyttävää? Pistä viestiä tulemaan.",
 }

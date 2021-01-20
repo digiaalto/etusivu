@@ -1,36 +1,24 @@
 import styles from "./NewTech.module.sass"
+import Scorebar from "../common/Scorebar"
 import { Fade } from "react-awesome-reveal"
-import Takuut from "./Takuut"
+import { cascadeFade } from "../../vars/"
 
-const animCfg = {
-  header: {
-    direction: "up",
-    triggerOnce: true,
-  },
-  text: {
-    direction: "up",
-    damping: 0.1,
-    cascade: true,
-    triggerOnce: true,
-  },
-  takuut: {
-    triggerOnce: true,
-  },
+const progress = {
+  suorituskyky: 91,
+  esteettomyys: 94,
+  parhaatKaytannot: 98,
+  seo: 100,
 }
 
 const NewTech = (props) => {
-  const { refs } = props
+  const { refs, isMobile } = props
   return (
     <section className={styles.section} id="uusi-tekniikka" ref={refs}>
       <div className={styles.column}>
-        <Fade {...animCfg.header}>
-          <div>
-            <h2 className={styles.header}>
-              Uusi tekniikka <br />— React & Next.
-            </h2>
-          </div>
-        </Fade>
-        <Fade {...animCfg.text}>
+        <Fade {...cascadeFade}>
+          <h2 className={styles.header}>
+            Uusi tekniikka <br />— React & Next.
+          </h2>
           <p>
             Next.js on ohjelmistokehys Facebookin luomalle React-kirjastolle
             jolla voidaan rakentaa fiksusti pyöriviä hybrid-verkkosivuja.
@@ -48,11 +36,9 @@ const NewTech = (props) => {
           </p>
         </Fade>
       </div>
-      <div className={styles.column}>
-        <Fade {...animCfg.takuut}>
-          <Takuut />
-        </Fade>
-      </div>
+      <Fade {...cascadeFade}>
+        <Scorebar progress={progress} isMobile={isMobile} />
+      </Fade>
     </section>
   )
 }

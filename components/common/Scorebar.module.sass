@@ -1,0 +1,15 @@
+@import "../../styles/_partials"
+
+.container
+	display: grid
+	grid-auto-flow: row
+	justify-self: center
+	justify-items: center
+	grid-template: auto / 1fr 1fr
+	
+@include tablet
+	.container
+		grid-auto-flow: column
+		justify-self: normal
+		justify-items: start
+		grid-template: auto / auto
