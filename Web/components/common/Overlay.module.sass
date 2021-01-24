@@ -1,0 +1,22 @@
+@import "../../styles/_partials"
+
+.overlay
+	height: 100vh
+	width: 100vw
+	display: flex
+	justify-content: center
+	align-items: center
+	position: fixed
+	left: 0
+	top: 0
+	background-color: $dark
+	z-index: 999
+	animation: overlayAnimation 0.33s 1
+
+@keyframes overlayAnimation
+	from 
+		opacity: 0
+		transform: translateY(-100vh)
+	to 
+		opacity: 1
+		transform: translateY(0)

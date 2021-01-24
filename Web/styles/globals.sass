@@ -1,0 +1,48 @@
+@import "_partials.sass"
+@import "@fontsource/inter"
+@import "@fontsource/inter/600.css"
+@import "@fontsource/inter/700.css"
+@import "@fontsource/inter/800.css"
+
+// Global styles.
+*
+	box-sizing: border-box
+	text-rendering: optimizeLegibility
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	font-smooth: auto
+
+::selection
+	color: #fff
+	background: $primary
+
+body
+	margin: 0
+	padding: 0
+	font-family: "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif
+	line-height: $bodyLineheight
+	color: $dark
+
+img
+	display: block
+	margin: 0
+	padding: 0
+
+// Typografia.
+h1, h2, h3
+	@include bigHeader
+
+h4, h5, h6
+	@include smallHeader
+
+a
+	text-decoration: none
+	
+p
+	@include laptop
+		max-width: 540px
+
+// Custom classes.
+
+.bold
+	font-weight: 600

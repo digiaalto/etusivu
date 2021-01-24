@@ -1,0 +1,59 @@
+@import "../../styles/_partials"
+
+// Layout.
+.section
+	@include spacing
+	display: flex
+	justify-content: center
+
+.defaultFormColumn
+	&:last-of-type
+		display: none
+
+// Headers.
+.headers
+	position: relative
+	max-width: 600px
+
+.header
+	@include bigHeader
+
+.subheader
+	@include descriptionHeader
+	max-width: 540px
+
+// Icons.
+.icon
+	font-size: 2rem
+	margin-bottom: 1.5rem
+
+.spinning
+	animation: rotate 0.75s infinite linear
+
+// Animations.
+@keyframes bounce
+	0%
+		transform: translateY(0%)
+	50%
+		transform: translateY(15%)
+	0%
+		transform: translateY(0%)
+
+@keyframes rotate
+	100%
+		transform: rotate(360deg)
+
+@include laptop
+	.header
+		max-width: 100% !important
+	.defaultForm
+		display: grid
+		grid-template: auto / 1fr auto
+		gap: 5rem
+	.defaultFormColumn
+		&:last-of-type
+			display: block !important
+
+@include desktop
+	.defaultForm
+		gap: 7rem

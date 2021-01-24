@@ -1,0 +1,166 @@
+@import "../../styles/_partials.sass"
+$tabletWidth: 37rem
+$laptopWidth: 50rem
+$desktopWidth: 60rem
+$fadeSpeed: 2.1s
+
+// Keyframes and animations.
+@keyframes fader
+	0%
+		opacity: 0
+	5%
+		opacity: 0.2
+	30%
+		opacity: 1
+	90%
+		opacity: 1
+	100%
+		opacity: 0
+@keyframes reverseFader
+	0%
+		opacity: 1
+	5%
+		opacity: 0.8
+	30%
+		opacity: 0
+	90%
+		opacity: 0
+	100%
+		opacity: 1
+
+.fadeAnimation
+	animation: fader $fadeSpeed 1
+.reverseFadeAnimation
+	&::before
+		animation: reverseFader $fadeSpeed 1
+
+// Layout.
+.section
+	@include spacing
+	padding-top: 5rem !important
+	z-index: 0
+	display: flex
+	justify-content: center
+	align-items: center
+	text-align: center
+.content
+	display: block
+	color: $dark
+
+// Headers.
+.salesPitch
+	display: block
+	font-size: 3rem
+	font-weight: 900
+	line-height: 1.1em
+	margin: 0
+.highlightBackground, .highlightBackground2, .highlightBackground3, .salesPitch
+	letter-spacing: -2px
+.description
+	@include descriptionHeader
+.ctaButtons
+	display: grid
+	gap: 1rem
+	margin: 2rem 0
+.highlightBackground // reveseFader
+	position: relative
+	display: block
+	user-select: none
+	&::before
+		position: absolute
+		display: block
+		user-select: none
+		width: 100%
+		top: 0
+		bottom: 0
+		left: 0
+		z-index: 0
+		content: "Suunnittelu."
+		color: $dark
+
+.highlightBackground2
+	position: relative
+	display: block
+	user-select: none
+	&::before
+		position: absolute
+		display: block
+		user-select: none
+		width: 100%
+		top: 0
+		bottom: 0
+		left: 0
+		z-index: 0
+		content: "Kehitys."
+		color: $dark
+
+.highlightBackground3
+	position: relative
+	display: block
+	user-select: none
+	&::before
+		position: absolute
+		display: block
+		user-select: none
+		width: 100%
+		top: 0
+		bottom: 0
+		left: 0
+		z-index: 0
+		content: "Julkaisu."
+		color: $dark
+
+.highlightForeground // fader
+	position: relative
+	z-index: 1
+	opacity: 0
+	@supports (background-clip: text) and (-webkit-text-fill-color: transparent)
+		background-image: linear-gradient(to right, #007CF0, #00DFD8)
+		background-clip: text
+		-webkit-text-fill-color: transparent
+
+.highlightForeground2
+	position: relative
+	z-index: 1
+	opacity: 0
+	@supports (background-clip: text) and (-webkit-text-fill-color: transparent) 
+		background-image: linear-gradient(to right, #7928CA, #FF0080)
+		background-clip: text
+		-webkit-text-fill-color: transparent
+
+.highlightForeground3
+	position: relative
+	z-index: 1
+	opacity: 0
+	@supports (background-clip: text) and (-webkit-text-fill-color: transparent) 
+		background-image: linear-gradient(to right, #FF4D4D, #F9CB28)
+		background-clip: text
+		-webkit-text-fill-color: transparent		
+	
+// Media queries.
+@include tablet
+	.ctaButtons
+		grid-auto-flow: column
+		margin: 3rem 0
+		div
+			justify-self: flex-start
+			&:first-of-type
+				justify-self: flex-end
+	.content
+		max-width: $tabletWidth
+	.salesPitch
+		font-size: 5rem
+
+@include laptop
+	.content
+		max-width: $laptopWidth
+	.salesPitch
+		font-size: 6rem
+
+@include desktop
+	.content
+		max-width: $desktopWidth
+	.salesPitch
+		font-size: 8rem
+	.highlightBackground, .highlightBackground2, .highlightBackground3, .salesPitch
+		letter-spacing: -8px

@@ -1,0 +1,124 @@
+@import "../../styles/_partials.sass"
+
+// Layout.
+.section
+	@include spacing
+	background-repeat: repeat
+	background-position: center center
+	position: relative
+.content
+	display: grid
+	grid-auto-flow: row
+	justify-items: center
+	gap: 4rem
+.column
+	display: flex
+	flex-wrap: wrap
+	&:first-of-type
+		position: relative
+		flex-direction: column
+		align-items: center
+		display: none
+		img
+			max-width: 120px
+			&:not(:first-of-type)
+				margin-top: 0.5rem
+	&:last-of-type
+		flex-direction: column
+
+// Top headers.
+.topHeader
+	@include mainHeader
+.bottomHeader
+	font-weight: 900
+	margin: 1.5rem 0
+	font-size: $h3Size
+
+// Blocks.
+.textBlocks
+	display: grid
+	gap: 1rem
+.block
+	max-width: 400px
+	&:last-of-type
+		max-width: 500px
+.blockMiniheader
+	display: block
+	font-size: 1rem
+	font-weight: 600
+.blockHeader
+	margin: 0
+	margin-bottom: 0.8rem
+	font-weight: 800
+.emDash
+	display: inline-block
+	width: 1rem
+	height: 0.25rem
+	margin-left: 0.25rem
+	vertical-align: middle
+	background-color: $primary
+
+// Media queries.
+@include tablet
+	.middleHeader
+		max-width: 480px
+	.bottomHeader
+		max-width: 380px
+	.column
+		&:first-of-type
+			display: block
+			flex-direction: column
+			align-items: center
+			justify-content: center
+			width: 380px
+			height: 700px
+			img
+				margin-top: 0
+				position: absolute
+				max-width: 280px
+				user-select: none
+				&:nth-of-type(1)
+					z-index: 5
+					transform: rotateZ(-10deg)
+				&:nth-of-type(2)
+					z-index: 3
+					top: 200px
+					left: -140px
+					transform: rotateZ(20deg)
+				&:nth-of-type(3)
+					z-index: 4
+					top: 210px
+					right: 0
+					transform: rotateZ(-15deg)
+				&:nth-of-type(4)
+					z-index: 2
+					top: 390px
+					left: -100px
+					transform: rotateZ(20deg)
+				&:nth-of-type(5)
+					z-index: 1
+					top: 440px
+					right: 0
+					transform: rotateZ(-5deg)
+
+@include laptop
+	.column
+		max-width: 700px
+	.textBlocks
+		grid-template-areas: "a b" "c d" "e e"
+		gap: 1rem 2rem
+	.block
+		max-width: 600px
+		&:first-of-type
+			grid-area: a
+		&:nth-of-type(2)
+			grid-area: b
+		&:last-of-type
+			grid-area: e
+@include desktop
+	.content
+		grid-auto-flow: column
+		justify-content: center
+		gap: 5rem
+	.blockParagraph
+		font-size: 1.1rem

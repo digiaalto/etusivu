@@ -1,0 +1,89 @@
+// Colors settings.
+$primary: #0A72EF
+$primaryLight: #66a7ff
+$secondary: #DA202B
+$dark: #1e272e
+$lighterDark: #38444D
+$gray: #444
+$light: #ffffff
+$bglight: #ffffff
+$green: #05c46b
+$blue: #007CF0
+$red: #DA202B
+$yellow: #ffd32a
+$gradient1: linear-gradient(to right, #007CF0, #00DFD8)
+$gradient2: linear-gradient(to right, #7928CA, #FF0080)
+$gradient3: linear-gradient(to right, #FF4D4D, #F9CB28)
+
+// Typography settings.
+$bodyLineheight: 1.6
+$headerLineheight: 1.45
+$headerLineheightSmall: 1.3
+
+// Shadows settings.
+$shadowSmallest: 0px 4px 8px rgba(0,0,0,0.12)
+$shadowSmall: 0 8px 30px rgba(0,0,0,0.12)
+$shadowMedium: 0 8px 30px rgba(0,0,0,0.12)
+$shadowLarge: 0 30px 60px rgba(0,0,0,0.12)
+
+// Mixins.
+@mixin tablet
+	@media (min-width: 768px)
+		@content
+@mixin laptop
+	@media (min-width: 1024px)
+		@content
+@mixin desktop
+	@media (min-width: 1440px)
+		@content
+@mixin bigDesktop
+	@media (min-width: 1920px)
+		@content	
+	
+@mixin spacing
+	padding: 3rem 5vw
+	@include tablet
+		padding: 5rem 5vw
+	@include laptop
+		padding: 7rem 8vw
+	@include desktop
+		padding: 10rem 10vw
+	
+@mixin bigHeader
+	font-size: 2.25rem
+	letter-spacing: -0.05em
+	line-height: $headerLineheightSmall
+	@include tablet
+		font-size: 3.5rem
+	
+@mixin mediumHeader
+	font-size: 2rem
+	line-height: $headerLineheight
+	letter-spacing: -0.025em
+	
+@mixin smallHeader
+	font-size: 1.5rem
+	font-weight: 600
+	line-height: $headerLineheight
+	letter-spacing: 0.01em
+
+@mixin tinyHeader
+	font-size: 1.25rem
+	font-weight: 600
+	line-height: $headerLineheight
+
+@mixin descriptionHeader
+	line-height: 1.6em
+	font-size: 1.25rem
+	font-weight: 400
+
+@mixin hoverFill($baseColor)
+	@supports (background-clip: text) and (-webkit-text-fill-color: transparent)
+		background: linear-gradient(to right, $primary, $primary 50%, $baseColor 50%)
+		background-clip: text
+		-webkit-text-fill-color: transparent
+		background-size: 200% 100%
+		background-position: 100%
+		transition: background-position 275ms ease
+		&:hover
+			background-position: 0 100%

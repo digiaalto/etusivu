@@ -1,0 +1,19 @@
+@import "../../styles/_partials.sass"
+
+// Layout.
+.section
+	@include spacing
+
+.header
+	text-align: center
+
+@include laptop
+	.column
+		display: grid
+		grid-auto-flow: column
+		gap: 2rem
+		grid-template: auto / 1fr auto auto 1fr
+	.header
+		max-width: 800px
+		margin-left: auto
+		margin-right: auto

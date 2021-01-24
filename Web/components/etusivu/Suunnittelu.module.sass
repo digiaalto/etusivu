@@ -1,0 +1,54 @@
+@import "../../styles/_partials"
+
+.column
+	display: grid
+	justify-items: center
+	p:last-of-type
+		margin-bottom: 0
+		padding-bottom: 0
+.list
+	list-style: none
+	margin: 0
+	padding: 0
+.listHeader
+	font-weight: 700
+	margin-bottom: 1rem
+	font-size: 1.3rem
+.listParagraph
+	font-size: 1rem
+	color: $gray
+	max-width: 500px
+.textContent
+	font-size: 1rem
+	color: $gray
+.imgWrapper
+	margin-top: 3rem
+	margin-bottom: 3rem
+	box-shadow: $shadowLarge
+
+// Media queries.
+@include laptop
+	.list
+		margin-top: 2rem
+		padding-left: 2rem
+	.imgWrapper
+		min-width: 280px
+		align-self: flex-start
+	.column
+		grid-auto-flow: column
+		justify-items: center
+		gap: 1rem
+		p:first-of-type
+			justify-self: flex-end
+		p:last-of-type
+			justify-self: flex-start
+		ul
+			justify-self: flex-start
+		
+@include desktop
+	.imgWrapper
+		justify-self: flex-end
+		padding: 1rem
+	.column
+		&:last-of-type
+			gap: 3rem

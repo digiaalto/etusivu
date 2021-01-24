@@ -1,0 +1,191 @@
+@import "partials"
+
+$color: $dark
+    
+.netlifyForm
+  width: 100%
+  padding: 1rem
+  color: $color
+  max-width: 800px
+  p
+    max-width: none
+
+.labelContainer
+  margin-bottom: 2rem
+
+.label
+  display: block
+  color: $color
+  font-size: 1.3em
+  line-height: 1.6
+
+.subLabel
+  display: block
+  color: $gray
+  font-size: 0.8em
+  margin-top: 1rem
+
+.header
+  display: block
+  margin: 0
+  margin-bottom: 1rem
+  line-height: 1.6
+  font-size: 1.5rem
+  font-weight: 800
+
+.subheader
+  font-size: 1.2rem
+
+.textInput
+  display: block
+  max-width: 100%
+  width: 100%
+  padding: 4px 0
+  background: none
+  color: $color
+  border: none
+  box-shadow: 0px 1px $gray
+  &:focus
+    outline: none
+    box-shadow: 0px 1px $color
+
+.textInputInvalid
+  box-shadow: 0px 2px $error !important
+
+.intermission
+  display: flex
+  flex-direction: column
+  flex-grow: 1
+  flex: 1
+  margin: 1.5rem 0
+  a
+    margin-top: 2rem
+
+.previousButtonWrapper
+  position: absolute
+  left: 20px
+  top: 25px
+
+.previousButton
+  padding: 0.5rem 1.5rem
+  display: flex
+  align-items: center
+  cursor: pointer
+  background-color: $bglight
+  color: $dark
+  border: 1px solid #ccc
+  font-size: 1rem
+  transition: all 0.1s ease
+  border-radius: 4px
+
+  &:hover
+    border: 1px solid $dark
+
+  svg
+    margin-right: 8px
+    margin-left: -6px
+
+
+.element
+  flex-direction: column
+  margin: 1rem 0
+
+.buttons
+  margin-top: 0
+
+.buttonRow
+  display: flex
+  align-items: center
+  align-content: center
+  margin-top: 1.5rem
+
+.intermissionButtons
+  margin-top: 2rem
+
+.enterGuide
+  font-size: 13px
+  font-weight: 800
+
+.animatedEnterGuide
+  margin-left: 8px
+  animation: fadeIn 1s 1
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+.guideText
+  font-weight: 400
+    
+.rangeContainer
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  text-align: center
+  flex: 1
+  gap: 1rem
+
+.range
+  flex: 1
+
+.rangeIcon
+  color: $color
+  font-size: 2rem
+
+.editorHeaderContainer
+  margin-bottom: 2rem
+  text-align: center
+  background-color: $primary
+  color: $light
+  letter-spacing: 1px
+  padding: 0.5rem
+  border-radius: 4px
+  line-height: 1.5
+
+.editorHeader
+  font-size: 1.55rem
+  font-weight: 600
+
+.finalEditorSection
+  margin: 3rem 0
+  
+.errors
+  margin-top: 1rem
+  p
+    margin: 0
+    color: $error
+
+// Start Screen
+.helpContainer
+  display: flex
+  align-items: flex-start
+.helpText
+  font-size: 1rem
+.helpIcon
+  font-size: 1.5rem
+  margin-right: 0.5rem
+  vertical-align: middle
+  margin-top: 3px
+
+@include tablet
+  .previousButtonWrapper
+    top: 65px
+
+@include laptop
+  .netlifyForm
+    padding: 2rem
+    background-color: transparent
+    box-shadow: none
+  
+  .editorHeaderContainer
+    padding: 2rem
+    margin-bottom: 6rem
+    
+  .editorHeader
+    font-size: 2.5em
+  
+  .label
+    font-size: 1.2em

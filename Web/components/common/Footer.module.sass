@@ -1,0 +1,48 @@
+@import "../../styles/_partials"
+
+$lightColor: #8595A1
+
+// Layout.
+.footer
+	@include spacing
+	z-index: 1
+	display: grid
+	justify-items: center
+	text-align: center
+	grid-auto-flow: row
+	gap: 2rem
+	background-color: $dark
+	color: $light
+
+// Content.
+.copyright
+	display: inline-block
+	opacity: 0.5
+
+.ctaHeader
+	font-size: 1.5rem
+	font-weight: 600
+	letter-spacing: 0.3px
+
+.linkHeader
+	@include tinyHeader
+	display: block
+	opacity: 75%
+	margin: 1rem 0	
+
+.link
+	@include hoverFill($light)
+	display: block
+	font-weight: 600
+
+// Media queries.
+@include desktop
+	.footer
+		grid-auto-flow: column
+		grid-template-columns: 600px 200px 200px
+		gap: 4rem
+		justify-content: space-around
+		text-align: left
+	.subheader
+		&:first-of-type
+			margin-top: 0.66rem

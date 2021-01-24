@@ -1,0 +1,39 @@
+@import "../../styles/_partials"
+
+.section
+	@include spacing
+	padding-top: 0 !important
+	display: flex
+	justify-content: center
+
+.wrapper
+	display: grid
+	grid-auto-flow: row
+	gap: 2rem
+
+.column
+	display: grid
+	grid-auto-flow: row
+	gap: 2rem
+
+.texts
+	order: 2
+
+.header
+	@include tinyHeader
+
+@include tablet
+	.header
+		@include mediumHeader
+
+@include laptop
+	.column
+		gap: 4rem
+		grid-template: auto / 1fr 1fr
+	.header
+		@include bigHeader
+		text-align: center
+	
+@include desktop
+	.wrapper
+		justify-items: center
