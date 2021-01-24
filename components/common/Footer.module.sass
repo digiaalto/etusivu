@@ -14,9 +14,6 @@ $lightColor: #8595A1
 	background-color: $dark
 	color: $light
 
-.row
-	display: grid
-
 // Content.
 .copyright
 	display: inline-block
@@ -27,17 +24,16 @@ $lightColor: #8595A1
 	font-weight: 600
 	letter-spacing: 0.3px
 
-.subheader
-	margin-top: 1.5rem
-	margin-bottom: .33rem
-	font-size: 1.3rem
-	font-weight: 600
-	opacity: 0.5
+.linkHeader
+	@include tinyHeader
+	display: block
+	opacity: 75%
+	margin: 1rem 0	
 
 .link
 	@include hoverFill($light)
+	display: block
 	font-weight: 600
-	font-size: 1.3rem
 
 // Media queries.
 @include desktop

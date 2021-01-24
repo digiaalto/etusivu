@@ -1,16 +1,10 @@
 {
   "name": "digiaalto-etusivu",
-  "version": "0.1.0",
+  "version": "0.8.5",
   "private": true,
-  "description": "Digiaalto.fi - surffaa aallon harjalla",
+  "description": "Digiaalto.fi - Web-Designer, Web-developer",
   "keywords": [
-    "digiaalto",
-    "verkkosuunnittelija",
-    "verkkokehittäjä",
-    "web-design",
-    "kotisivut yritykselle",
-    "nettisivut yritykselle",
-    "verkkosivut yritykselle"
+    "digiaalto"
   ],
   "license": "UNLICENSED",
   "author": "Digiaalto.fi",
@@ -20,9 +14,13 @@
     "build": "next build"
   },
   "dependencies": {
-    "@fontsource/open-sans": "^4.1.0",
+    "@fontsource/inter": "^4.1.0",
+    "@sanity/block-content-to-react": "^2.0.7",
+    "@sanity/client": "^2.1.4",
+    "@sanity/image-url": "^0.140.19",
     "axios": "^0.21.1",
     "disable-scroll": "^0.5.1",
+    "groq": "^2.1.4",
     "imagemin-optipng": "^8.0.0",
     "next": "^10.0.5",
     "node-fetch": "^2.6.1",
@@ -37,8 +35,11 @@
     "react-lazyload": "^3.1.0",
     "react-range": "^1.8.6",
     "react-select": "^3.2.0",
+    "react-spring": "^8.0.27",
     "react-textarea-autosize": "^8.3.0",
+    "react-tooltip": "^4.2.13",
     "react-transition-group": "^4.4.1",
+    "react-use": "^15.3.8",
     "sass": "^1.32.4"
   },
   "devDependencies": {

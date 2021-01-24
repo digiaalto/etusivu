@@ -1,42 +1,30 @@
-// https://flatuicolors.com/palette/se
-
-
-$bp: (tablet: 768px, laptop: 1024px, desktop: 1440px, bigDesktop: 2560px)
-
-$padding: (mobile: 5rem 5vw, laptop: 10rem 5vw, desktop: 15rem 9vw)
-
-// $primary: #3c40c6
+// Colors settings.
 $primary: #0A72EF
 $primaryLight: #66a7ff
 $secondary: #DA202B
 $dark: #1e272e
-$gray: #4c565e
+$lighterDark: #38444D
+$gray: #444
 $light: #ffffff
 $bglight: #ffffff
-
 $green: #05c46b
 $blue: #007CF0
 $red: #DA202B
 $yellow: #ffd32a
+$gradient1: linear-gradient(to right, #007CF0, #00DFD8)
+$gradient2: linear-gradient(to right, #7928CA, #FF0080)
+$gradient3: linear-gradient(to right, #FF4D4D, #F9CB28)
 
-// Fonts
-$h1Size: 2.441rem
-$h2Size: 1.953rem
-$h3Size: 1.563rem
-$h4Size: 1.25rem
-$h5Size: 1.15rem
-$defaultFontSize: 16px
-$bigFontSize: 18px
+// Typography settings.
+$bodyLineheight: 1.6
+$headerLineheight: 1.45
+$headerLineheightSmall: 1.3
 
-// Arbitary sizes
-$navHeight: 50px
-$infobarHeight: 3rem
-$sectionHeaderWidth: 30rem
-$sectionParagraphWidth: 580px
-
-$mobileHeroHeight: 600px
-$laptopHeroHeight: 900px
-$desktopHeroHeight: 940px
+// Shadows settings.
+$shadowSmallest: 0px 4px 8px rgba(0,0,0,0.12)
+$shadowSmall: 0 8px 30px rgba(0,0,0,0.12)
+$shadowMedium: 0 8px 30px rgba(0,0,0,0.12)
+$shadowLarge: 0 30px 60px rgba(0,0,0,0.12)
 
 // Mixins.
 @mixin tablet
@@ -50,38 +38,8 @@ $desktopHeroHeight: 940px
 		@content
 @mixin bigDesktop
 	@media (min-width: 1920px)
-		@content
-
-@mixin preheader
-	display: block
-	font-weight: 900
-	line-height: 1.3
-	letter-spacing: 1px
-	text-transform: uppercase
+		@content	
 	
-@mixin mainHeader()
-	max-width: $sectionHeaderWidth
-	margin-bottom: 1.5rem
-	margin-top: 0 !important
-	font-size: 1.75rem
-	font-weight: 900
-	line-height: 1.3
-	@include tablet
-		font-size: 2rem
-	@include laptop
-		max-width: $sectionHeaderWidth * 1.1
-		font-size: $h1Size * 1.2
-		margin-bottom: 2rem
-	
-@mixin subheader
-	max-width: 600px
-	margin-top: 0
-	font-size: 1.1rem
-	line-height: 1.5
-	font-weight: 600
-	@include tablet
-		font-size: 1.3rem
-
 @mixin spacing
 	padding: 3rem 5vw
 	@include tablet
@@ -91,6 +49,34 @@ $desktopHeroHeight: 940px
 	@include desktop
 		padding: 10rem 10vw
 	
+@mixin bigHeader
+	font-size: 2.25rem
+	letter-spacing: -0.05em
+	line-height: $headerLineheightSmall
+	@include tablet
+		font-size: 3.5rem
+	
+@mixin mediumHeader
+	font-size: 2rem
+	line-height: $headerLineheight
+	letter-spacing: -0.025em
+	
+@mixin smallHeader
+	font-size: 1.5rem
+	font-weight: 600
+	line-height: $headerLineheight
+	letter-spacing: 0.01em
+
+@mixin tinyHeader
+	font-size: 1.25rem
+	font-weight: 600
+	line-height: $headerLineheight
+
+@mixin descriptionHeader
+	line-height: 1.6em
+	font-size: 1.25rem
+	font-weight: 400
+
 @mixin hoverFill($baseColor)
 	@supports (background-clip: text) and (-webkit-text-fill-color: transparent)
 		background: linear-gradient(to right, $primary, $primary 50%, $baseColor 50%)

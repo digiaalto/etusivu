@@ -26,18 +26,15 @@ const Hero = (props) => {
         <div className={styles.content}>
           <SisaltoLinkit />
           <h1 className={styles.header}>
-            Verkkosivu joka kasvaa yrityksesi kanssa.
+            Nettisivu joka kasvaa yrityksesi kanssa.
           </h1>
-          <h2 className={styles.subheader}>
-            Vanhan ja uuden vertailu.
-            <br />
-            Spoileri: <span className={styles.spoiler}>Uusi on parempi.</span>
+          <h2 className={styles.description}>
+            Laadukkaalla nettisivulla kilpailuetuja verkossa.
           </h2>
           <LinkButton
             href="/verkkosivut#tarjouspyynto"
             text="Tarjouspyyntö"
             primary
-            customStyle={{ marginTop: "2rem", marginBottom: "1rem" }}
           />
         </div>
       </Fade>
@@ -49,18 +46,18 @@ const SisaltoLinkit = () => {
   return (
     <ul className={styles.sisaltoLinkit}>
       <li className={styles.linkItem}>
-        <Link href="/verkkosivut#vanha-tekniikka">
-          <a className={styles.link}>Vanha tekniikka &rarr;</a>
+        <Link href="/verkkosivut#vanhat-verkkosivut">
+          <a className={styles.link}>Vanhat sivut</a>
         </Link>
       </li>
       <li className={styles.linkItem}>
-        <Link href="/verkkosivut#uusi-tekniikka">
-          <a className={styles.link}>Uusi tekniikka &rarr;</a>
+        <Link href="/verkkosivut#uudet-verkkosivut">
+          <a className={styles.link}>Uudet sivut</a>
         </Link>
       </li>
       <li className={styles.linkItem}>
-        <Link href="/verkkosivut#tarjouspyynto">
-          <a className={styles.link}>Paljonko maksaa?</a>
+        <Link href="/verkkosivut#usein-kysyttya">
+          <a className={styles.link}>Usein kysyttyä</a>
         </Link>
       </li>
     </ul>

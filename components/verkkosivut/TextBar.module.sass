@@ -2,40 +2,37 @@
 
 .bar
 	@include spacing
-	background-color: $primary
 	position: relative
 	overflow: hidden
 	padding-left: 1rem
 	padding-right: 1rem
 
 .text
-	z-index: 2
-	position: relative
+	@include tinyHeader
 	margin: auto
-	font-size: $h4Size
-	line-height: 1.5
-	letter-spacing: 0.5px
-	font-weight: 600
 	text-align: center
-	color: $light
 
-.alt
-	background-color: $green
+.arrow
+	z-index: 3
+	position: absolute
+	left: 50%
+	bottom: 30px
+	transform: translateX(-50%)
 
 @include tablet
 	.text
-		font-size: $h2Size
-
+		@include mediumHeader
+		
 @include laptop
 	.text
-		font-size: $h1Size
+		@include bigHeader
 		max-width: 100%
-		font-weight: 900
 
 @include desktop
 	.bar
-		padding-top: 5rem
-		padding-bottom: 5rem
+		padding-top: 1em	
+		padding-bottom: 1em
+		
 	.text
-		font-size: 3rem
-		letter-spacing: 1px
+		border-top: 5px dashed $dark
+		padding: 1em 0

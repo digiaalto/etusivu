@@ -4,31 +4,30 @@
 	overflow-y: scroll
 	-ms-overflow-style: none
 	scrollbar-width: none
-	&::-webkit-scrollbar
-		display: none
-	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+	box-shadow: $shadowMedium
 	border-radius: 2px
 	transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1)
 	webkit-overflow-scrolling: touch
+	transition: transform 0.3s ease-in-out
+	&::-webkit-scrollbar
+		display: none
 	&:hover
-		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
-		z-index: 2
+		transform: scale(1.1)
 
 // Työnäyte.
 .tyonayte
 	display: grid
-	gap: 2rem
 	grid-auto-flow: row
+	justify-items: center
+	gap: 3rem
+	text-align: center
 
 // Näyteinfo.
 .infoWrapper
 	order: -1
 	max-width: 600px
 .nayteHeader
-	font-size: 1.4rem
-	font-weight: 600
-.nayteParagraph
-	max-width: 500px
+	@include smallHeader
 .score
 	transform: translateX(-10px)
 
@@ -57,11 +56,11 @@
 		top: 30%
 		left: 73%
 	
-@include desktop
-	.tyonayte
-		grid-auto-flow: column
-		justify-content: center
-		gap: 6rem
-	.infoWrapper
-		order: 0
-		flex: 0.7
+// @include desktop
+// 	.tyonayte
+// 		grid-auto-flow: column
+// 		justify-content: center
+// 		gap: 6rem
+// 	.infoWrapper
+// 		order: 0
+// 		flex: 0.7

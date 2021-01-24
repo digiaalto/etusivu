@@ -3,32 +3,22 @@
 .section
 	@include spacing
 
-.headers
-	display: flex
-	flex-direction: column
-	justify-content: center
-	align-items: center
-
 .help
 	font-style: italic
 
 .naytteet
-	position: relative
 	display: grid
 	grid-auto-flow: row
-	gap: 6rem
-	margin-top: 3rem
+	gap: 4rem
 
 .header
-	@include mainHeader
-	margin-bottom: 0 !important
+	text-align: center
 
 @include tablet
 	.naytteet
-		gap: 8rem
+		gap: 6rem
 
 @include desktop
 	.naytteet
 		gap: 10rem
-	.headers
-		margin-bottom: 5rem
+		

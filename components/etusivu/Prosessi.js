@@ -19,7 +19,7 @@ const Prosessi = (props) => {
           <Images />
         </div>
         <div className={styles.column}>
-          <span className={styles.topHeader}>Sivut helposti.</span>
+          <span className={styles.topHeader}>Miten?</span>
           <p className={styles.middleHeader}>
             Voit tulla pöytään ideat valmiina tai antaa Digiaallon hoitaa
             kaiken. Aloita{" "}
@@ -39,17 +39,17 @@ const Prosessi = (props) => {
             <Block
               miniheader="Vaihe 1, 1pv"
               header="Kartoitus"
-              text="Homma lähtee käyntiin mahdollisimman tarkasti määrittelemällä projektin tavoitteet, brändin vahvuudet ja sivuston tärkeimmät kohderyhmät. Tehdään myös pieni taustatutkimusta kilpailijoihisi."
+              text="Kaikki lähtee käyntiin määrittelemällä projektin tavoitteet mahdollisimman tarkasti. Selvitetään brändin vahvuudet ja sivuston tärkeimmät kohderyhmät. Suoritetaan taustatutkimus yrityksesi toimialaan ja kilpailijoihin."
             />
             <Block
               miniheader="Vaihe 2, 5pv"
               header="Suunnittelu"
-              text="Suunnitellaan käyttäjävirta, sivuston tietohierarkia ja aloitetaan kirjoittelemaan valittua kohderyhmää puhuttelevaa sisältöä brändisi omalla kielellä. Etsitään inspiraatiota."
+              text="Laaditaan käyttäjävirta, sivuston tietohierarkia ja kirjoitetaan alas kohderyhmää puhuttelevaa sisältöä sen perusteella mitä tiedämme heistä. Sisältö on brändin tarkoituksenmukaista vuorovaikutusta kohderyhmän kanssa."
             />
             <Block
               miniheader="Vaihe 3, 7pv"
               header="Design"
-              text="Luodaan tyylikansio johon luodaan brändisi henki sopivalla estetiikalla. Valitaan typografia, väripaletti, elementit, kuvitus ja muut resurssit. Sommitellaan Figmaan lopullista sivustoa vastaava malli jota voi seurata kätevästi linkistä."
+              text="Valitaan sivuston estetiikka ja haetaan inspiraatiota verkosta. Tehdään päätökset typografiasta, väripalettista, peruselementeistä, kuvituksista ja muista lähdemateriaaleista. Sommitellaan Figmaan lopullista sivustoa vastaava malli."
             />
             <Block
               miniheader="Vaihe 4, 10pv"

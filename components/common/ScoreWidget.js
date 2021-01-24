@@ -71,6 +71,10 @@ const ScoreWidget = (props) => {
 export default ScoreWidget
 
 ScoreWidget.defaultProps = {
+  hoverText: "Lighthouse tulokset.",
+}
+
+ScoreWidget.defaultProps = {
   circleOneStroke: gray,
   circleTwoStroke: gray,
 }

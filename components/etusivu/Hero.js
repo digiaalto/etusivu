@@ -14,7 +14,7 @@ const animCfg = {
     duration: 1500,
     triggerOnce: true,
   },
-  subheader: {
+  description: {
     delay: 600,
     duration: 1000,
     direction: "up",
@@ -51,8 +51,8 @@ const Hero = (props) => {
         <Fade {...animCfg.ctaBtns}>
           <CtaButtons />
         </Fade>
-        <Fade {...animCfg.subheader}>
-          <h1 className={styles.subheader}>{sisalto.header}</h1>
+        <Fade {...animCfg.description}>
+          <h1 className={styles.description}>{sisalto.header}</h1>
         </Fade>
       </div>
     </section>

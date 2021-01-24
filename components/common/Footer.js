@@ -8,25 +8,18 @@ import LahetaViesti from "./LahetaViesti"
 const Footer = () => {
   return (
     <footer className={styles.footer} id="laheta-viesti">
-      <ContactRow />
+      <LahetaViesti />
       <NavigationRow />
       <LogoRow />
     </footer>
   )
 }
 
-const ContactRow = () => {
-  return (
-    <div className={styles.column}>
-      <LahetaViesti />
-    </div>
-  )
-}
 const NavigationRow = () => {
   return (
     <div className={styles.column}>
-      <div className={styles.row}>
-        <span className={styles.subheader}>Aloita keskustelu</span>
+      <div className={styles.linkBlock}>
+        <span className={styles.linkHeader}>Aloita keskustelu</span>
         <a className={styles.link} href="mailto:hei@digiaalto.fi">
           hei@digiaalto.fi
         </a>
@@ -34,8 +27,8 @@ const NavigationRow = () => {
           050 554 3395
         </a>
       </div>
-      <div className={styles.row}>
-        <span className={styles.subheader}>Navigointi</span>
+      <div className={styles.linkBlock}>
+        <span className={styles.linkHeader}>Navigointi</span>
         <Link href="/">
           <a className={styles.link}>Etusivu</a>
         </Link>
@@ -53,10 +46,8 @@ const NavigationRow = () => {
 const LogoRow = () => {
   return (
     <div className={styles.column}>
-      <div className={styles.row}>
-        <Logo invert />
-        <span className={styles.copyright}>© 2021 digiaalto.fi</span>
-      </div>
+      <Logo invert />
+      <span className={styles.copyright}>© 2021 digiaalto.fi</span>
     </div>
   )
 }

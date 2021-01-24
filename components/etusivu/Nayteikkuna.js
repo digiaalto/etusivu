@@ -1,5 +1,6 @@
 import styles from "./Nayteikkuna.module.sass"
 import Tyonayte from "../common/Tyonayte"
+import Overline from "../common/Overline"
 
 const desktopDivider = 3
 
@@ -22,8 +23,7 @@ const digiaalto = {
   header: "Digiaalto",
   paragraphs: [
     `Web-designer ja verkkokehittäjä Digiaalto rakentaa huipputehokkaita ja kestäviä verkkosivuja pk-yrittäjille.`,
-    `Tarjontaan kuuluu blogeja, verkkokauppoja, verkkosivuja, web-appeja ja sisältöpalveluita.`,
-    `Digiaallon palvelut sopivat yhteen yrittäjän kanssa, kuka etsii kestäviä verkkosivuja ilman piilokustannuksia.`,
+    `Digiaallon palvelut sopivat kiireisille yrittäjille jotka haluavat pitkäikäisen verkkotuotteen.`,
   ],
 }
 
@@ -45,9 +45,8 @@ const majoitusroosa = {
   scoreSrc: "/tyonayte/majoitusroosa/scores.png",
   header: "Majoitusroosa",
   paragraphs: [
-    `Majoitusalan yritys Kanta-Hämeessä. Varattavissa pääsääntöisesti isomille ryhmille kuten seurakunnille ja muille tapahtumille.`,
-    `Sivustossa esitellään maisemia, patikkapolkuja, kotoja, rantaa, rakennuksen yksityishuoneita ja oleskelutiloja isoilla kuvilla.`,
-    `Roosalta saa myös mielekkeitä sesonki- ja ryhmätarjouksia.`,
+    `Lammen kauniissa luonnossa sijaitseva majoitusyrityksen majoitustila joka palvelee pääsääntöisesti seurakuntia, yrityksiä ja muita isoja ryhmiä.`,
+    `Roosan sivuilla esitellään rauhallista luontoa ja tarjotaan sesonkitarjouksia.`,
   ],
 }
 
@@ -56,8 +55,8 @@ const Nayteikkuna = (props) => {
   return (
     <section className={styles.section} ref={refs} id="tyonaytteet">
       <div className={styles.headers}>
-        <h3 className={styles.header}>Uusimmat työt.</h3>
-        <span className={styles.help}>Vieritä näyteikkunoita.</span>
+        <Overline text="Vieritä näyteikkunoita" />
+        <h1 className={styles.header}>Uusien yritysten nettisivuja.</h1>
       </div>
       <div className={styles.naytteet}>
         <Tyonayte {...digiaalto} />

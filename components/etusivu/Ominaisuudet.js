@@ -17,13 +17,13 @@ const animCfg = {
 
 const ominaisuudet = [
   {
-    header: "Laadukas ja todistettu",
+    header: "Todistettavasti laadukas",
     text:
       "Nykyaikainen kehitys takaa kilpailijoitasi paremmat tulokset Googlen laatutestissä. Käteen jää helposti ymmärettävät pisteet ja etulyöntiasema verkossa.",
     icon: <SiPowerbi className={styles.growing} />,
   },
   {
-    header: "Kestävä ja pitkäikäinen",
+    header: "Kestävä ja ongelmaton",
     text:
       "Hybrid-verkkosivut eivät kärsi tietoturvaongelmista, bugeista, tai vaadi jatkuvia ylläpitotoimia joista laskutetaan ympäri vuoden.",
     icon: <FaCog className={styles.spinning} />,
@@ -52,9 +52,9 @@ const Ominaisuus = (props) => {
   const { icon, header, text } = props.data
   return (
     <div className={styles.ominaisuus}>
-      <div className={styles.icon}>{icon}</div>
-      <h3 className={styles.header}>{header}</h3>
-      <p className={styles.text}>{text}</p>
+      <div className={styles.iconWrapper}>{icon}</div>
+      <span className={styles.header}>{header}</span>
+      <p className={styles.paragraph}>{text}</p>
     </div>
   )
 }

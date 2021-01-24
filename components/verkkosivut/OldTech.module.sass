@@ -2,46 +2,45 @@
 
 .section
 	@include spacing
-	min-height: 100vh
-	position: relative
+
+.wrapper
 	display: flex
 	flex-direction: column
 	align-items: center
-	gap: 2rem
-
-.textContainer
-	display: grid
-	grid-auto-flow: row
-	gap: 2rem
-.column
-	position: relative
-	width: 100%
-	max-width: 700px
-
-.headerContainer
-	max-width: 420px
+	align-content: center
 	
 .imageWrapper
+	margin-top: 2rem
 	filter: saturate(20%)
 	max-width: 550px
 
+.texts
+	margin-bottom: 1.33rem
+
 .header
-	@include mainHeader
+	@include bigHeader
+	text-align: center
 
-.subheader
-	@include subheader
+.description
+	@include descriptionHeader
+	font-weight: 600
+	text-align: center
 
+// Media queries.
 @include tablet
-	.section
-		align-items: flex-start
-		justify-content: center
-	.textContainer
-		gap: 3rem
-
-@include desktop
-	.section
+	.imageWrapper
+		margin-left: auto
+		margin-right: auto
+		transform: translateX(8%)
+	.texts
+		margin-bottom: 2rem
+	
+@include laptop
+	.texts
+		display: grid
+		grid-template: auto / 1fr 1fr
 		gap: 4rem
-		flex-direction: row
-		justify-content: center
-	.textContainer
-		margin-top: 12rem
+	
+@include desktop
+	.description
+		max-width: 720px

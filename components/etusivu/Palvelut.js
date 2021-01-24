@@ -1,7 +1,5 @@
 import styles from "./Palvelut.module.sass"
-import Link from "next/link"
-import { Fade } from "react-awesome-reveal"
-import Ominaisuudet from "./Ominaisuudet"
+import Overline from "../common/Overline"
 
 const animCfg = {
   header: {
@@ -21,32 +19,24 @@ const Palvelut = (props) => {
 
   return (
     <section className={styles.section} id="palvelut" ref={refs}>
-      <div className={styles.topContent}>
-        <Fade {...animCfg.header}>
-          <div className={styles.headers}>
-            <span className={styles.preheader}>Mitä tehdään ?</span>
-            <h1 className={styles.header}>
-              Kestävät kotisivut yritykselle mittavalla laatutestauksella.
-            </h1>
-          </div>
-        </Fade>
-        <Fade {...animCfg.text}>
-          <div className={styles.textWrapper}>
-            <p>
-              Digiaallon palveluihin sisältyy kaikki laadukkaiden nettisivujen,
-              verkkokauppojen, web-appejen ja blogejen valmistusvaiheet ja
-              palveluintegroinnit alusta loppuun.
-            </p>
-            <p>
-              Vältä yleisiä suodenkoppia johon monet kilpailijasi ovat
-              tietämättään astuneet. Hyödy rakenteellisesta kilpailuedusta
-              valitsemalla nykyaikainen ja tehokas kehitysarkkitehtuuri mikä
-              toimii ikiliikkujan tavoin!
-            </p>
-          </div>
-        </Fade>
+      <Overline text="Miksi Digiaalto?" />
+      <h1 className={styles.header}>
+        Kestävät kotisivut yritykselle mittavalla laatutestauksella.
+      </h1>
+      <div className={styles.column}>
+        <div />
+        <p>
+          Digiaallon palveluihin sisältyy kaikki laadukkaiden nettisivujen,
+          verkkokauppojen, web-appejen ja blogejen valmistusvaiheet ja
+          palveluintegroinnit alusta loppuun.
+        </p>
+        <p>
+          Vältä yleisiä suodenkoppia johon monet kilpailijasi ovat tietämättään
+          pudonneet. Hyödy rakenteellisesta kilpailuedusta valitsemalla
+          nykyaikainen ja tehokas kehitysarkkitehtuuri mikä kannattaa.
+        </p>
+        <div />
       </div>
-      <Ominaisuudet />
     </section>
   )
 }

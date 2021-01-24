@@ -6,19 +6,20 @@ import TextBar from "../components/verkkosivut/TextBar"
 import NewTech from "../components/verkkosivut/NewTech"
 import NewTech2 from "../components/verkkosivut/NewTech2"
 import LogoSlider from "../components/verkkosivut/LogoSlider"
-import Tarjouspyynto from "../components/verkkosivut/Tarjouspyynto"
+import FAQ from "../components/common/FAQ"
 
 const sisalto = {
-  textBar1: `Investoi moderniin teknologiaan ja kasva huoletta. Digiaalto ei rakenna vain nettisivuja. Tarjoamme huolellista suunnittelua, kilpailijoita kovempaa teknologiaa ja tinkimätöntä palvelua.`,
-  textBar2: `Digiaallon tehtävä on tuoda parhaat verkkoratkaisut yrittäjille jotka haluavat asiakkailleen turvallisempaa ja mukavampaa käyttökokemusta ja itselleen vaivatonta, kustannustehokasta sivustonhallintaa.`,
+  textBar1: `Digiaalto ei rakenna vain nettisivuja. Tarjoamme huolellista suunnittelua, kilpailijoita kovempaa teknologiaa ja tinkimätöntä palvelua, edullisesti.`,
+  textBar2: ``,
 }
 
 const Verkkosivut = () => {
+  const [isMobile, setMobile] = useState(false)
+
   const heroRef = useRef(null)
   const oldTechRef = useRef(null)
   const newTechRef = useRef(null)
-  const tarjouspyyntoRef = useRef(null)
-  const [isMobile, setMobile] = useState(false)
+  const FAQRef = useRef(null)
 
   useEffect(() => {
     if (window) setMobile(window.innerWidth < 769)
@@ -26,12 +27,12 @@ const Verkkosivut = () => {
 
   const sectionRefs = [
     { section: "Hero", hoverText: "Ylös", ref: heroRef },
-    { section: "OldTech", hoverText: "Vanha tekniikka", ref: oldTechRef },
-    { section: "NewTech", hoverText: "Uusi tekniikka", ref: newTechRef },
+    { section: "OldTech", hoverText: "Vanhat sivut", ref: oldTechRef },
+    { section: "NewTech", hoverText: "Uudet sivut", ref: newTechRef },
     {
-      section: "Tarjouspyyntö",
-      hoverText: "Tarjouspyyntö",
-      ref: tarjouspyyntoRef,
+      section: "usein-kysyttya",
+      hoverText: "Usein kysyttyä",
+      ref: FAQRef,
     },
   ]
 
@@ -42,9 +43,8 @@ const Verkkosivut = () => {
       <TextBar text={sisalto.textBar1} />
       <NewTech refs={newTechRef} isMobile={isMobile} />
       <NewTech2 />
+      <FAQ refs={FAQRef} />
       <LogoSlider />
-      <TextBar text={sisalto.textBar2} alt />
-      <Tarjouspyynto refs={tarjouspyyntoRef} />
     </Layout>
   )
 }

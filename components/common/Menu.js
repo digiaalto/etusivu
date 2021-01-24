@@ -16,7 +16,15 @@ const links = [
   },
   {
     text: "Tarjouspyyntö",
-    href: "/verkkosivut#tarjouspyynto",
+    href: "/tarjouspyynto",
+  },
+  {
+    text: "Usein kysyttyä",
+    href: "/usein-kysyttya",
+  },
+  {
+    text: "Blogi",
+    href: "/blogi",
   },
 ]
 
@@ -94,8 +102,6 @@ const getDimensions = (ele) => {
   }
 }
 
-export default Menu
-
 const MenuContainer = (props) => {
   const { children } = props
   return <div className={styles.menu}>{children}</div>
@@ -162,3 +168,5 @@ const LinkList = (props) => {
     </ul>
   )
 }
+
+export default Menu

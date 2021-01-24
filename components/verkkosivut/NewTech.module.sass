@@ -2,17 +2,31 @@
 
 .section
 	@include spacing
-	display: grid
-	grid-auto-flow: row
-	justify-content: center
-	gap: 2rem
+
+.wrapper
+	display: flex
+	flex-direction: column
+	align-items: center
+	align-content: center
+
+.texts
+	margin-bottom: 1.33rem
 
 .header
-	@include mainHeader
+	@include bigHeader
+	text-align: center
 	
-.subheader
-	@include subheader
+.description
+	@include descriptionHeader
+	text-align: center
 
 @include tablet
 	.section
 		gap: 3rem
+	.texts
+		margin-bottom: 2rem
+	
+@include laptop
+	.texts
+		display: grid
+		grid-template: auto / 1fr 1fr

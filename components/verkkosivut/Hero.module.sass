@@ -11,10 +11,10 @@
 	align-items: center
 	background-color: #ffffff
 	box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1)
-	padding: 1rem
-	margin-left: 5%
-	margin-right: 5%
-	margin-top: -8rem
+	padding: 2rem 1rem
+	margin-left: 3%
+	margin-right: 3%
+	margin-top: -6rem
 
 // Background.
 .background
@@ -45,29 +45,15 @@
 		
 // Headers.
 .header
-	font-weight: 900
+	@include bigHeader
+	margin-top: 0.5em
+	margin-bottom: 0
 	text-align: center
-	line-height: 1.2
-	margin-top: 1rem
-	margin-bottom: 0.33rem
-	font-size: 2rem
-.subheader
+.description
+	@include descriptionHeader
+	margin-top: 1em
+	margin-bottom: 2em
 	text-align: center
-	font-size: 1.44rem
-	margin-bottom: 0.75rem
-	line-height: 1.5
-	font-weight: 600
-.spoiler
-	color: $dark
-	background-position: right
-	background-size: 100% 100%
-	background-image: linear-gradient($dark, $dark) 
-	display: inline
-	background-repeat: no-repeat
-	transition: background-size 300ms ease-in-out
-	&:hover
-		color: $dark
-		background-size: 0% 100%
 
 // Sisältölinkit.
 .sisaltoLinkit
@@ -94,9 +80,6 @@
 		gap: 2rem
 	.header
 		max-width: 70vw
-@include laptop
-	.header
-		font-size: $h1Size
 @include desktop
 	.section
 		padding-top: 1rem !important
@@ -105,5 +88,4 @@
 		margin-left: 10%
 		margin-right: 10%
 	.header
-		font-size: 4rem
-		max-width: 800px
+		max-width: 700px

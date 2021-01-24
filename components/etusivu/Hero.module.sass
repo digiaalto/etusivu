@@ -36,11 +36,12 @@ $fadeSpeed: 2.1s
 
 // Layout.
 .section
+	@include spacing
+	padding-top: 5rem !important
 	z-index: 0
 	display: flex
 	justify-content: center
 	align-items: center
-	padding: map-get($padding, mobile)
 	text-align: center
 .content
 	display: block
@@ -55,9 +56,8 @@ $fadeSpeed: 2.1s
 	margin: 0
 .highlightBackground, .highlightBackground2, .highlightBackground3, .salesPitch
 	letter-spacing: -2px
-.subheader
-	font-size: 1.3rem
-	line-height: 1.4em
+.description
+	@include descriptionHeader
 .ctaButtons
 	display: grid
 	gap: 1rem

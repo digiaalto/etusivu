@@ -1,26 +1,15 @@
 import React, { useState } from "react"
-import Head from "next/head"
 import disableScroll from "disable-scroll"
 
+import SEO from "../common/SEO"
 import Topbar from "../common/Topbar"
 import Navigation from "../common/Navigation"
 import Menu from "../common/Menu"
 import Footer from "../common/Footer"
 
 const DefaultLayout = (props) => {
-  const { title, type, description, topbar, sectionRefs, children } = props
+  const { topbar, sectionRefs, children } = props
   const [overlayVisible, setOverlayVisible] = useState(false)
-
-  const SEO = {
-    title: title
-      ? `${title} | Digiaalto.fi`
-      : `Kestävät kotisivut yritykselle helposti | Digiaalto.fi`, // 60 chars.
-    type: type ? type : "website",
-    description: description
-      ? description
-      : `Verkkokehittäjä Digiaalto rakentaa modernilla tavalla oikeasti tehokkaita ja laatutestattuja kotisivuja kiireisille yrittäjille. Kaikilla lisäpalveluilla.`, // max 160 chars.
-    image: "https://www.digiaalto.fi/brand/some-image.png",
-  }
 
   const toggleOverlay = (bool) => {
     if (!bool && !overlayVisible) return
@@ -32,20 +21,7 @@ const DefaultLayout = (props) => {
 
   return (
     <React.Fragment>
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="robots" content="noindex,follow" />
-        <meta name="googlebot" content="noindex,follow" />
-
-        <title>{SEO.title}</title>
-        <meta name="description" content={SEO.description} />
-        <meta name="og:url" content="https://www.digiaalto.fi" />
-        <meta name="og:type" content={SEO.type} />
-        <meta name="og:title" content={SEO.title} />
-        <meta name="og:image" content={SEO.image} />
-      </Head>
+      <SEO {...props} />
       {topbar && <Topbar toggleOverlay={toggleOverlay} />}
       <Navigation topbar={topbar} />
       <Menu

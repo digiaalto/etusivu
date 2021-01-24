@@ -9,8 +9,7 @@ $rowGap: 2rem
 	margin-bottom: 2rem !important
 
 .bgHeader
-	font-size: $h3Size
-	font-weight: 900
+	@include mediumHeader
 	width: 100%
 	text-align: center
 	position: absolute
@@ -67,6 +66,6 @@ $rowGap: 2rem
 	.logo
 		min-width: $logoWidth * 1.33
 
-@media (min-width: map-get($bp, bigDesktop))
+@include bigDesktop
 	.logo
 		min-width: $logoWidth * 3
