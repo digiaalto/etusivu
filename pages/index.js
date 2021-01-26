@@ -10,24 +10,36 @@ const IndexPage = () => {
   const heroRef = useRef(null)
   const palvelutRef = useRef(null)
   const nayteikkunaRef = useRef(null)
-  const creationRef = useRef(null)
+  const suunnitteluRef = useRef(null)
+  const kehitysRef = useRef(null)
+  const julkaisuRef = useRef(null)
 
   const sectionRefs = [
-    { section: "Hero", hoverText: "Ylös", ref: heroRef },
+    { section: "", hoverText: `Ylös`, ref: heroRef },
     {
-      section: "Palvelut",
+      section: "#palvelut",
       hoverText: "Palvelut",
       ref: palvelutRef,
     },
     {
-      section: "Nayteikkuna",
+      section: "#nayteikkuna",
       hoverText: "Työnäytteet",
       ref: nayteikkunaRef,
     },
     {
-      section: "Prosessi",
-      hoverText: "Prosessi",
-      ref: creationRef,
+      section: "#suunnittelu",
+      hoverText: "Suunnittelu",
+      ref: suunnitteluRef,
+    },
+    {
+      section: "#kehitys",
+      hoverText: "Kehitys",
+      ref: kehitysRef,
+    },
+    {
+      section: "#julkaisu",
+      hoverText: "Julkaisu",
+      ref: julkaisuRef,
     },
   ]
 
@@ -38,7 +50,13 @@ const IndexPage = () => {
         <Palvelut refs={palvelutRef} />
         <Ominaisuudet />
         <Nayteikkuna refs={nayteikkunaRef} />
-        <Creation refs={creationRef} />
+        <Creation
+          refs={{
+            suunnitteluRef: suunnitteluRef,
+            kehitysRef: kehitysRef,
+            julkaisuRef: julkaisuRef,
+          }}
+        />
       </Layout>
     </div>
   )

@@ -1,0 +1,51 @@
+@import "../../styles/_partials"
+
+// Layout & Hover.
+.wrapper
+	max-width: 420px
+	text-align: center
+	margin-top: -6rem
+	&:hover
+		.imageWrapper
+			filter: saturate(100%)
+	&:hover
+		.price::after
+			top: 0%
+
+.imageWrapper
+	max-width: 300px
+	filter: saturate(0%)
+	transition: filter 200ms ease-in-out
+	margin: auto
+	transform: translateY(20%)
+
+.headerContainer
+	text-align: center
+	margin: 0
+
+.header
+	@include smallHeader
+	display: inline-block
+
+.priceWrapper
+	text-align: center
+	display: inline-block
+	border-radius: 10%
+	padding: 0.5rem 1rem
+	transition: 200ms ease-in-out
+
+.price
+	@include smallHeader
+	position: relative
+	overflow: hidden
+	&::after
+		z-index: -1
+		position: absolute
+		content: ""
+		top: 80%
+		left: 0
+		right: 0
+		bottom: 0
+		background-color: #F9CB28
+		width: 100%
+		transition: top 100ms ease-in-out

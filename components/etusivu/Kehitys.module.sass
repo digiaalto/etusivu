@@ -1,0 +1,48 @@
+@import "../../styles/_partials"
+
+.section
+	@include spacing
+	padding-top: 2rem !important
+
+.content
+	display: grid
+	justify-items: center
+
+.ctaButton
+	text-align: center
+	margin-top: 1rem
+	a
+		z-index: 1
+		position: relative
+		border: none !important
+		padding: 0.8rem 1.6rem
+		background: $gradient2
+		box-shadow: $shadowSmall
+
+		&::before
+			z-index: -1
+			position: absolute
+			content: ""
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: linear-gradient(to right,#FF0080, #7928CA)
+			opacity: 0
+			transition: opacity 250ms ease-in-out
+
+		&:hover, &:focus
+			color: $light
+			&::before
+				opacity: 1
+
+
+@include laptop
+	.content
+		grid-auto-flow: column
+		justify-items: center
+		gap: 1rem
+		p:first-of-type
+			justify-self: flex-end
+		p:last-of-type
+			justify-self: flex-start

@@ -3,26 +3,26 @@ import StepIndicator from "../common/StepIndicator"
 import Overline from "../common/Overline"
 import Image from "next/image"
 
-const Suunnittelu = () => {
+const Suunnittelu = (props) => {
+  const { refs } = props
   return (
-    <section className={styles.suunnittelu}>
+    <section className={styles.section} ref={refs} id="suunnittelu">
       <Overline text="Miten hommat etenee" />
       <StepIndicator
         overline="Suunnittelu"
-        header="UX & UI -designista tuloksiin."
+        header="Web-designista tuloksiin."
         first
       />
       <div className={styles.column}>
         <p>
-          Hyvin suunniteltu sivusto luo vaikutelman joka saa asiakkaan pysymään
+          Hyvin suunniteltu kotisivu luo vaikutelman joka saa asiakkaan pysymään
           sivullasi ja oppimaan yrityksestäsi. Huonosti suunnitteltu sivusto saa
           heidät poistumaan ennenaikaisesti ja kääntymään kilpailijan puoleen.
         </p>
         <p>
           Jotta suunnittelu onnistuisi tarvitsee meidän ensitöiksi määritellä
-          mahdollisimman tarkasti projektisi tavoitteet, brändisi vahvuudet, ja
-          sivuston tärkein kohderyhmä kenelle sisältö suunnataan brändisi
-          sopivalla tavalla.
+          haastattelussa mahdollisimman tarkasti projektisi tavoitteet, brändisi
+          vahvuudet, ja nettisivun tärkein kohderyhmä.
         </p>
       </div>
       <div className={styles.column}>
@@ -41,32 +41,27 @@ const Suunnittelu = () => {
           <li>
             <h2 className={styles.listHeader}>Vuorovaikutussuunnittelu</h2>
             <p>
-              Luodaan positiivinen keskustelu ihmisen ja tietokoneen välille
-              valmistamalla looginen sivukartta, tarkoituksenmukainen
-              käyttäjävirta ja hyödyllinen tietohierarkia.
+              Luodaan positiivinen keskustelu verkkosivusi ja asiakkaasi välille
+              loogisella sivukartalla, tarkoituksenmukaisella käyttäjävirralla
+              ja hyödyllisellä tietohierarkialla.
             </p>
           </li>
           <li>
             <h2 className={styles.listHeader}>Tyylisuunnittelu</h2>
             <p>
-              Luodaan haluttua tunnelmaa edustava tyylikollaasi, mihin lisätään
-              typografia, kuvia, väripaletti ja muita pienempiä sivuston
-              elementtejä.
+              Suunnitellaan sivustolle brändisi mukainen tyylikollaasi. Valitaan
+              sopiva typografia, kuvat, väripaletti ja luodaan pieniä mutta
+              uudelleenkäytettäviä sivuelementtejä.
             </p>
           </li>
           <li>
             <h2 className={styles.listHeader}>Sisältösuunnittelu</h2>
             <p>
-              Kirjoitetaan asiakasta puhuttelevaa tekstiä millä saadaan heidät
-              tekemään tarvittavia toimia sivuston tavoitteiden saavuttamiseksi.
-            </p>
-          </li>
-          <li>
-            <h2 className={styles.listHeader}>Mallintaminen</h2>
-            <p>
-              Piirretään valmista verkkosivustoa vastaava visuaalinen malli joka
-              rakennetaan vuorovaikutussuunnitelman määritelmien mukaisesti,
-              tyylikkäillä elementeillä jotka pakataan sisällöllä.
+              Vakuuttava yrityssivu tarvitsee tuloksia tuottavaa tekstiä joka
+              puhuttelee juuri sinun unelma-asiakastasi. Sisältö on loistava
+              paikka korostaa avainsanoja luonnollisella, osuvalla tavalla ja
+              auttaa hakukoneita ja asiakkaita valitsemaan sinut eikä
+              kilpailijaasi.
             </p>
           </li>
         </ul>

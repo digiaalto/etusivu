@@ -1,0 +1,52 @@
+@import "../../styles/_partials"
+
+.section
+	@include spacing
+	padding-top: 2rem !important
+	display: grid
+	justify-items: center
+
+.description
+	@include descriptionHeader
+	max-width: 900px !important
+	font-size: 20px !important
+	text-align: center
+
+.ctaButton
+	text-align: center
+	margin-top: 1rem
+	a
+		z-index: 1
+		position: relative
+		border: none !important
+		padding: 0.8rem 1.6rem
+		background: $gradient3
+		box-shadow: $shadowSmall
+
+		&::before
+			z-index: -1
+			position: absolute
+			content: ""
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: linear-gradient(to right, #F9CB28, #FF4D4D)
+			opacity: 0
+			transition: opacity 250ms ease-in-out
+
+		&:hover, &:focus
+			color: $light
+			&::before
+				opacity: 1
+
+.plans
+	display: grid
+	grid-auto-flow: row
+	gap: 2rem
+	margin-top: 7rem
+
+@include desktop
+	.plans
+		grid-template: auto / 1fr 1fr 1fr
+		gap: 4rem

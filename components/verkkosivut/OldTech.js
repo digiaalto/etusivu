@@ -53,7 +53,8 @@ const OldTech = (props) => {
                 WordPress aloitti yksinkertaisena bloggaamisalustana, ja vuosien
                 mittaan se on kehittynyt sellaiseksi mitä sen ei koskaan pitänyt
                 olla, aiheuttaen lukuisia ongelmia suorituskyvyssä,
-                skaalautuvuudessa ja ohjelmistokehityksessä.
+                skaalautuvuudessa ja ohjelmistokehityksessä, mitkä heijastuvat
+                asiakkaalle asti.
               </p>
               <p>
                 WordPress sivustoja kiusaa myös jatkuvat tietoturvaongelmat ja

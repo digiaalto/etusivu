@@ -53,7 +53,7 @@ const majoitusroosa = {
 const Nayteikkuna = (props) => {
   const { refs } = props
   return (
-    <section className={styles.section} ref={refs} id="tyonaytteet">
+    <section className={styles.section} ref={refs} id="nayteikkuna">
       <div className={styles.headers}>
         <Overline text="Vieritä näyteikkunoita" />
         <h1 className={styles.header}>Uusien yritysten nettisivuja.</h1>

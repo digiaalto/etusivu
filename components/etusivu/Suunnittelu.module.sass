@@ -1,5 +1,7 @@
 @import "../../styles/_partials"
 
+.section
+	@include spacing
 .column
 	display: grid
 	justify-items: center
@@ -21,10 +23,6 @@
 .textContent
 	font-size: 1rem
 	color: $gray
-.imgWrapper
-	margin-top: 3rem
-	margin-bottom: 3rem
-	box-shadow: $shadowLarge
 
 // Media queries.
 @include laptop
@@ -48,7 +46,6 @@
 @include desktop
 	.imgWrapper
 		justify-self: flex-end
-		padding: 1rem
 	.column
 		&:last-of-type
 			gap: 3rem

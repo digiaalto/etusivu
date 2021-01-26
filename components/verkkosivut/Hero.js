@@ -26,14 +26,14 @@ const Hero = (props) => {
         <div className={styles.content}>
           <SisaltoLinkit />
           <h1 className={styles.header}>
-            Nettisivu joka kasvaa yrityksesi kanssa.
+            Kestävä verkkosivu joka kasvaa yrityksesi kanssa.
           </h1>
           <h2 className={styles.description}>
             Laadukkaalla nettisivulla kilpailuetuja verkossa.
           </h2>
           <LinkButton
             href="/verkkosivut#tarjouspyynto"
-            text="Tarjouspyyntö"
+            text="Heti tarjouspyyntö"
             primary
           />
         </div>

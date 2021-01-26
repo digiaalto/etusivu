@@ -19,9 +19,13 @@
 body
 	margin: 0
 	padding: 0
-	font-family: "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif
+	font-family: $font 
 	line-height: $bodyLineheight
-	color: $dark
+
+button
+	font-size: inherit
+	font-family: $font
+	line-height: $bodyLineheight
 
 img
 	display: block
@@ -31,14 +35,19 @@ img
 // Typografia.
 h1, h2, h3
 	@include bigHeader
+	color: $dark
 
 h4, h5, h6
 	@include smallHeader
 
 a
 	text-decoration: none
+	color: $primary
+	&:hover
+		color: $primaryLight
 	
 p
+	color: $gray
 	@include laptop
 		max-width: 540px
 

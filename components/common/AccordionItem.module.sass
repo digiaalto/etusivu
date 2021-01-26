@@ -2,7 +2,7 @@
 
 .button
 	width: 100%
-	padding: 1rem 2rem
+	padding: 0.5rem 1rem
 	background-color: $dark
 	color: $light
 	border: none
@@ -23,3 +23,9 @@
 
 .paragraph
 	max-width: 100%
+	margin-top: 0
+	margin-bottom: 1.6rem
+
+@include tablet
+	.button
+		padding: 1rem

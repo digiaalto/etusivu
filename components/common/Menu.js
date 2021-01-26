@@ -60,7 +60,11 @@ const Menu = (props) => {
     }
   }, [visibleSection])
 
-  function scrollTo(ele) {
+  function scrollTo(ele, section) {
+    if (window && window.location) {
+      const href = window.location.origin + "/" + section
+      history.pushState(null, "", href)
+    }
     ele.scrollIntoView({
       behavior: "smooth",
       block: "start",
@@ -77,8 +81,8 @@ const Menu = (props) => {
               <TrackerItem
                 selected={section === visibleSection}
                 hoverText={hoverText}
-                scrollTo={() => scrollTo(ref.current)}
-                key={`section-dot-${section}`}
+                scrollTo={() => scrollTo(ref.current, section)}
+                key={`tracker-item-${section}`}
               />
             ))}
         </Tracker>

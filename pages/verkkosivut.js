@@ -10,7 +10,6 @@ import FAQ from "../components/common/FAQ"
 
 const sisalto = {
   textBar1: `Digiaalto ei rakenna vain nettisivuja. Tarjoamme huolellista suunnittelua, kilpailijoita kovempaa teknologiaa ja tinkimätöntä palvelua, edullisesti.`,
-  textBar2: ``,
 }
 
 const Verkkosivut = () => {
@@ -26,11 +25,19 @@ const Verkkosivut = () => {
   }, [])
 
   const sectionRefs = [
-    { section: "Hero", hoverText: "Ylös", ref: heroRef },
-    { section: "OldTech", hoverText: "Vanhat sivut", ref: oldTechRef },
-    { section: "NewTech", hoverText: "Uudet sivut", ref: newTechRef },
+    { section: "verkkosivut", hoverText: "Ylös", ref: heroRef },
     {
-      section: "usein-kysyttya",
+      section: "verkkosivut#vanhat-verkkosivut",
+      hoverText: "Vanhat sivut",
+      ref: oldTechRef,
+    },
+    {
+      section: "verkkosivut#uudet-verkkosivut",
+      hoverText: "Uudet sivut",
+      ref: newTechRef,
+    },
+    {
+      section: "verkkosivut#usein-kysyttya",
       hoverText: "Usein kysyttyä",
       ref: FAQRef,
     },

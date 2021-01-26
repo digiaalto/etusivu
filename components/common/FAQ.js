@@ -3,7 +3,7 @@ import Accordion from "./Accordion"
 
 const sisalto = [
   {
-    button: "Kuinka kauan verkkosivuston valmistus kestää?",
+    button: "Kuinka kauan verkkosivuston rakennus kestää?",
     content: `Riippuen projektin laajuudesta sivusto voi valmistua viikossa tai töihin voi mennä monta kuukautta. Karkeasti sanottuna tavallinen verkkosivu valmistuu alle kuukaudessa. Tarjoamme myös MVP-palvelun, jolloin kiirehdimme markkinoille minimituotteella.`,
   },
   {
@@ -21,11 +21,11 @@ const sisalto = [
   },
   {
     button: "Pyörisikö sivustoni oikeasti ilman kustannuksia?",
-    content: `Digiaalto käyttää kansainvälisesti menestyneitä palveluita jotka pitävät hengissä maailman Internet-infrastruktuurin ilman taukoja. Pienen suomalaisen yrityksen vaatimukset eivät yleensä ylitä edes palveluiden maksurajaa.`,
+    content: `Digiaalto käyttää kansainvälisesti menestyneitä palveluita jotka pitävät hengissä ison osan maailman internet-infrastruktuuria ilman taukoja. Pienen suomalaisen yrityksen vaatimukset eivät yleensä ylitä edes palveluiden maksurajaa.`,
   },
   {
     button: "Uudistatteko verkkosivuja?",
-    content: `Jos verkkosivusi pyörii vanhalla ja huonosti optimoidulla WordPressillä on meidän henkilökohtainen kutsumus auttaa sinua. Ota yhteyttä ja laaditaan sopiva suunnitelma.`,
+    content: `Jos verkkosivusi pyörii vanhalla ja huonosti optimoidulla WordPressillä on meidän henkilökohtainen kutsumus auttaa sinua. Ota yhteyttä ja laaditaan sopiva lähestymistapa.`,
   },
   {
     button: "Tarjoatteko hosting-palvelua?",
@@ -34,12 +34,12 @@ const sisalto = [
   {
     button:
       "Kuinka voit kirjoittaa tekstisisältöä tuntematta yritystäni yhtä intiimisti kuten minä?",
-    content: `Emme voi; kukaan ei tunne yritystäsi ja brändiäsi paremmin kuin sinä. Me voimme kuitenkin perustaa kirjoitukset arvokkaisiin tietoihin joita keräämme haastattelemalla sinua, tutkimalla kilpailijoitasi ja perehtymällä toimialaasi.`,
+    content: `Kukaan ei tunne yritystäsi ja brändiäsi paremmin kuin sinä. Sen takia keräämme arvokkaita tietoja haastattelemalla sinua, tutkimalla kilpailijoitasi ja perehtymällä toimialaasi.`,
   },
   {
     button: "Voitteko auttaa sosiaalisen mediani kanssa?",
     content:
-      "Emme suoranaisesti tarjoa somepalveluita, saatat tarvita markkinointitoimiston. Mutta autamme mielellämme jos pystymme.",
+      "Emme ole markkinointitoimisto, silti autamme mielellämme jos keretään.",
   },
 ]
 
@@ -48,7 +48,7 @@ const FAQ = (props) => {
   return (
     <section className={styles.section} id="usein-kysyttya" ref={refs}>
       <div>
-        <h3 className={styles.fadedHeader}>Usein kysyttyä — FAQ</h3>
+        <h3 className={styles.header}>Usein kysyttyä — FAQ</h3>
         <Accordion items={sisalto} />
       </div>
     </section>

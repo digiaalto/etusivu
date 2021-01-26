@@ -15,7 +15,8 @@ $rowGap: 2rem
 	position: absolute
 	top: -50%
 	left: 50%
-	opacity: 0.12
+	opacity: 0.2
+	font-weight: 900
 	transform: translateX(-50%)
 	text-transform: uppercase
 	user-select: none
@@ -54,18 +55,20 @@ $rowGap: 2rem
 @include tablet
 	.bgHeader
 		top: -55%
-
+	
 @include desktop
 	.row
 		&:last-of-type
 			&>.rowInner
-				animation-duration: $animDuration * 3
+				animation-duration: $animDuration * 2.5
 	.rowInner
 		gap: $rowGap * 2
 		animation-duration: $animDuration * 2
 	.logo
-		min-width: $logoWidth * 1.33
+		min-width: $logoWidth * 1.22
 
-@include bigDesktop
+@include biggestDesktop
+	.rowInner
+		gap: $rowGap * 4
 	.logo
-		min-width: $logoWidth * 3
+		min-width: $logoWidth * 2
