@@ -3,22 +3,24 @@
 .section
 	@include spacing
 
-.help
-	font-style: italic
+.content
+	display: grid
 
-.naytteet
+.naytteetWrap
 	display: grid
 	grid-auto-flow: row
 	gap: 4rem
+	margin-top: 1.33rem
 
 .header
-	text-align: center
+	@include headerBig
 
 @include tablet
-	.naytteet
+	.naytteetWrap
 		gap: 6rem
 
 @include desktop
-	.naytteet
+	.naytteetWrap
 		gap: 10rem
-		
+	.content
+		place-items: center

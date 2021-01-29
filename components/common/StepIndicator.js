@@ -30,7 +30,7 @@ const StepIndicator = (props) => {
       <div className={`${styles.line} ${lineBg}`} />
       <span className={`${styles.sphere} ${bgColor}`}>{string}</span>
       <span className={`${styles.overline} ${overlineBg}`}>{overline}</span>
-      <h1 className={styles.header}>{header}</h1>
+      <h1 className={styles.headerMain}>{header}</h1>
     </div>
   )
 }

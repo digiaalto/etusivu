@@ -23,7 +23,7 @@ const digiaalto = {
   header: "Digiaalto",
   paragraphs: [
     `Web-designer ja verkkokehittäjä Digiaalto rakentaa huipputehokkaita ja kestäviä verkkosivuja pk-yrittäjille.`,
-    `Digiaallon palvelut sopivat kiireisille yrittäjille jotka haluavat pitkäikäisen verkkotuotteen.`,
+    `Digiaallon palvelut sopivat täydellisesti yrittäjälle joka haluaa pitkäikäisen verkkosivuston.`,
   ],
 }
 
@@ -53,14 +53,18 @@ const majoitusroosa = {
 const Nayteikkuna = (props) => {
   const { refs } = props
   return (
-    <section className={styles.section} ref={refs} id="nayteikkuna">
-      <div className={styles.headers}>
-        <Overline text="Vieritä näyteikkunoita" />
-        <h1 className={styles.header}>Uusien yritysten nettisivuja.</h1>
-      </div>
-      <div className={styles.naytteet}>
-        <Tyonayte {...digiaalto} />
-        <Tyonayte {...majoitusroosa} inverted={true} />
+    <section
+      className={styles.section}
+      ref={refs}
+      id="viimeisimmat-tyonaytteet"
+    >
+      <div className={styles.content}>
+        <Overline text="Vieritä ikkunoita" />
+        <h1 className="headerMain">Viimeisimmät työnäytteet.</h1>
+        <div className={styles.naytteetWrap}>
+          <Tyonayte {...digiaalto} />
+          <Tyonayte {...majoitusroosa} inverted={true} />
+        </div>
       </div>
     </section>
   )

@@ -20,30 +20,31 @@ const Palvelut = (props) => {
 
   return (
     <section className={styles.section} id="palvelut" ref={refs}>
-      <Overline text="Miksi Digiaalto?" />
-      <h1 className={styles.header}>
-        Kestävät nettisivut yritykselle mittavalla laatutestauksella.
-      </h1>
-      <div className={styles.column}>
-        <div />
-        <p>
-          Digiaallon palveluihin sisältyy kaikki laadukkaiden nettisivujen,
-          verkkokauppojen, web-appejen ja blogejen valmistusvaiheet ja
-          palveluintegroinnit alusta loppuun älykkäällä{" "}
-          <Link href="/verkkosivut#uudet-verkkosivut">
-            <a>hybrid-teknologialla.</a>
-          </Link>
-        </p>
-        <p>
-          Vältä yleisiä{" "}
-          <Link href="/verkkosivut#vanhat-verkkosivut">
-            <a>suodenkoppia</a>
-          </Link>{" "}
-          johon monet kilpailijasi ovat tietämättään pudonneet. Hyödy
-          rakenteellisesta kilpailuedusta valitsemalla nykyaikainen ja tehokas
-          kehitysarkkitehtuuri mikä kannattaa.
-        </p>
-        <div />
+      <div className={styles.content}>
+        <Overline text="Mitä valmistamme?" />
+        <h1 className={styles.headerMain}>
+          Kestävät nettisivut yritykselle mittavalla testauksella.
+        </h1>
+        <div className={styles.textContent}>
+          <p>
+            Suunnittelemme ja kehitämme
+            <Link href="/verkkosivut#uudet-verkkosivut">
+              <a> älykkäitä hybrid-sivustoja, </a>
+            </Link>
+            jotka tekevät kaiken mitä normaalit sivustot tekevät,
+            suorituskykyisesti, skaalautuvasti, turvallisesti ja täysin ilman
+            julkaisun jälkeisiä ylläpitokustannuksia.
+          </p>
+          <p>
+            Tehdään verkkopalveluistasi luotettavia ja helppokäyttöisiä. Kierrä
+            petollisten markkinointitoimistojen pk-yrittäjille asetettuja
+            <Link href="/verkkosivut#vanhat-verkkosivut">
+              <a> sudenkuoppia. </a>
+            </Link>
+            Investoi uuteen laadukkaaseen tekniikkaan ja hyödy rakenteellisesta
+            kilpailuedusta.
+          </p>
+        </div>
       </div>
     </section>
   )

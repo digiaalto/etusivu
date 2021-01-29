@@ -21,15 +21,14 @@ const Kehitys = (props) => {
           käyttäjäkokemuksesta.
         </p>
         <p>
-          Digiaallon tehtävä on tuoda tehokkaita ja nykyaikaisia
-          verkkoratkaisuja yrittäjille jotka haluavat asiakkailleen
-          turvallisempaa ja mukavampaa käyttökokemusta, sekä itselleen
-          vaivatonta, kustannustehokasta sivustonhallintaa.
+          Tuomme tehokkaita ja nykyaikaisia verkkoratkaisuja yrittäjille jotka
+          haluavat asiakkailleen turvallisempaa ja mukavampaa käyttökokemusta,
+          sekä itselleen vaivatonta, kustannustehokasta sivustonhallintaa.
         </p>
       </div>
       <LinkButton
         href="/verkkosivut"
-        text="Lisätietoja"
+        text="Lisätietoa"
         customClass={styles.ctaButton}
       />
     </section>

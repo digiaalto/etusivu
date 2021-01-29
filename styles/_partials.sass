@@ -18,8 +18,6 @@ $gradient3: linear-gradient(to right, #FF4D4D, #F9CB28)
 // Typography settings.
 $font: "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif
 $bodyLineheight: 1.6
-$headerLineheight: 1.45
-$headerLineheightSmall: 1.3
 
 // Shadows settings.
 $shadowSmall: 0 8px 30px rgba(0,0,0,0.12)
@@ -27,6 +25,12 @@ $shadowMedium: 0 8px 30px rgba(0,0,0,0.12)
 $shadowLarge: 0 30px 60px rgba(0,0,0,0.12)
 
 // Mixins.
+@mixin mdPhone
+	@media (min-width: 360px)
+		@content
+@mixin bigPhone
+	@media (min-width: 425px)
+		@content
 @mixin tablet
 	@media (min-width: 768px)
 		@content
@@ -51,43 +55,66 @@ $shadowLarge: 0 30px 60px rgba(0,0,0,0.12)
 		padding: 7rem 8vw
 	@include desktop
 		padding: 10rem 10vw
-	
-@mixin bigHeader
-	font-size: 2.25rem
-	letter-spacing: -0.05em
-	line-height: $headerLineheightSmall
+
+// Headers.
+@mixin headerDescription
+	font-size: 1.15rem
+	font-weight: 400
+	letter-spacing: -0.02em
+	line-height: 1.45
 	color: $dark
+	max-width: 800px
+	@include bigPhone
+		font-size: 1.3rem
+
+@mixin headerMain
+	font-size: 2rem
+	font-weight: 800
+	letter-spacing: -0.02em
+	line-height: 1.3
+	color: $dark
+	margin-top: 0
+	margin-bottom: 0.5em
+	@include laptop
+		font-size: 3.5rem
+
+@mixin headerBig
+	font-size: 1.3rem
+	font-weight: 800
+	letter-spacing: -0.02em
+	line-height: 1.45
+	color: $dark
+	margin-top: 0
+	margin-bottom: 0.5em
+	@include bigPhone
+		font-size: 1.5rem
 	@include tablet
+		font-size: 2.3rem
+		line-height: 1.3
+	@include laptop
 		font-size: 3.5rem
 	
-@mixin mediumHeader
-	font-size: 2rem
-	line-height: $headerLineheight
-	letter-spacing: -0.025em
-	font-weight: 600
+@mixin headerMedium
+	font-size: 1.2rem
+	font-weight: 700
+	letter-spacing: -0.02em
+	line-height: 1.45
 	color: $dark
+	@include bigPhone
+		font-size: 1.4rem
+	@include tablet
+		font-size: 1.7rem
 	
-@mixin smallHeader
-	font-size: 1.5rem
+@mixin headerSmall
+	font-size: 1.1rem
 	font-weight: 600
-	line-height: $headerLineheight
-	letter-spacing: 0.01em
+	line-height: 1.45
 	color: $dark
-
-@mixin tinyHeader
-	font-size: 1.25rem
-	font-weight: 600
-	line-height: $headerLineheight
-	color: $dark
-
-@mixin descriptionHeader
-	line-height: 1.6em
-	font-size: 1.25rem
-	letter-spacing: -0.05em
-	line-height: $headerLineheightSmall
-	font-weight: 400 !important
-	color: $dark
-
+	@include bigPhone
+		font-size: 1.2rem
+	@include tablet
+		font-size: 1.3rem
+	
 @mixin hoverFill($baseColor)
 	@supports (background-clip: text) and (-webkit-text-fill-color: transparent)
 		background: linear-gradient(to right, $primary, $primary 50%, $baseColor 50%)

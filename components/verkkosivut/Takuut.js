@@ -4,12 +4,12 @@ import { Fade } from "react-awesome-reveal"
 import { cascadeFade } from "../../vars"
 
 const sisalto = [
-  "Rakennettu tukemaan tavoitteitasi.",
-  "Laatutestattu ja kestävä.",
-  "Teknisesti ylivoimainen.",
-  "Täysi responsiivisuus.",
-  "Moderni ja helppokäyttöinen.",
-  "Parhaat suositukset.",
+  "Laatutestattu.",
+  "Responsiivinen.",
+  "Moderni.",
+  "Turvallinen.",
+  "Skaalautuva.",
+  "Kestävä.",
 ]
 
 const Takuut = () => {

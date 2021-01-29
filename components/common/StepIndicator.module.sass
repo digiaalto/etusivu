@@ -9,31 +9,32 @@
 .line
 	display: inline-flex
 	height: 100px
-	width: 2px
+	width: 1px
+	margin-top: 1rem
 
 .sphere
 	display: inline-flex
 	color: $light
 	font-weight: 600
-	width: 50px
-	height: 50px
+	width: 40px
+	height: 40px
 	border-radius: 100%
-	font-size: 1.32rem
+	font-size: 1.1rem
 	justify-content: center
 	align-items: center
 	user-select: none
 
 .overline
 	margin-top: 1.33rem
-	margin-bottom: 1rem
-	font-size: 1.75rem
+	margin-bottom: 0.4rem
+	font-size: 1.9rem
+	letter-spacing: -0.03em
 	font-weight: 700
 	text-transform: capitalize
 	user-select: none
 
-.header
-	font-weight: 900
-	max-width: 100% !important
+.headerMain
+	@include headerMain
 	text-align: center
 
 .line1

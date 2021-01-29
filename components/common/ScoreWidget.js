@@ -36,33 +36,35 @@ const ScoreWidget = (props) => {
   }, [setOffset, circumference, progress, offset])
 
   return (
-    <div className={styles.container}>
-      <div className={styles.wrapper}>
-        <svg className={styles.svg} width={size} height={size}>
-          <circle
-            ref={bgRef}
-            className={styles.background}
-            stroke={circleOneStroke}
-            cx={center}
-            cy={center}
-            r={radius}
-            strokeWidth={strokeWidth}
-          />
-          <circle
-            ref={fgRef}
-            className={styles.foreground}
-            stroke={circleTwoStroke}
-            cx={center}
-            cy={center}
-            r={radius}
-            strokeWidth={strokeWidth}
-            strokeDasharray={circumference}
-            strokeDashoffset={offset}
-            strokeLinecap="round"
-          />
-        </svg>
+    <div>
+      <div className={styles.outerWrapper}>
+        <div className={styles.innerWrapper}>
+          <svg className={styles.svg} width={size} height={size}>
+            <circle
+              ref={bgRef}
+              className={styles.background}
+              stroke={circleOneStroke}
+              cx={center}
+              cy={center}
+              r={radius}
+              strokeWidth={strokeWidth}
+            />
+            <circle
+              ref={fgRef}
+              className={styles.foreground}
+              stroke={circleTwoStroke}
+              cx={center}
+              cy={center}
+              r={radius}
+              strokeWidth={strokeWidth}
+              strokeDasharray={circumference}
+              strokeDashoffset={offset}
+              strokeLinecap="round"
+            />
+          </svg>
+        </div>
+        <span className={styles.progressText}>{progress}%</span>
       </div>
-      <span className={styles.progressText}>{progress}%</span>
       {label && <span className={styles.label}>{label}</span>}
     </div>
   )

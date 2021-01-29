@@ -7,7 +7,7 @@ const Suunnittelu = (props) => {
   const { refs } = props
   return (
     <section className={styles.section} ref={refs} id="suunnittelu">
-      <Overline text="Miten hommat etenee" />
+      <Overline text="Miten työt etenee" center margin />
       <StepIndicator
         overline="Suunnittelu"
         header="Web-designista tuloksiin."
@@ -36,7 +36,6 @@ const Suunnittelu = (props) => {
             className={styles.image}
           />
         </div>
-
         <ul className={styles.list}>
           <li>
             <h2 className={styles.listHeader}>Vuorovaikutussuunnittelu</h2>

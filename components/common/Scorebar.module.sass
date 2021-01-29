@@ -2,16 +2,16 @@
 
 .container
 	display: grid
-	grid-auto-flow: row
-	justify-self: center
-	justify-items: center
-	grid-template: auto / 1fr 1fr
-	gap: 2rem
+	grid-template: auto / auto auto
+	justify-content: flex-start
+	gap: 1rem
+	text-align: center
+
+@include mdPhone
+	.container
+		gap: 2rem
 	
 @include tablet
 	.container
 		grid-auto-flow: column
-		justify-self: normal
-		justify-items: start
-		grid-template: auto / auto
-		gap: 3rem
+		gap: 2rem

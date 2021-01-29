@@ -1,7 +1,9 @@
 import styles from "./Hero.module.sass"
 import React, { useState, useEffect } from "react"
+import Link from "next/link"
 import { LinkButton } from "../common/button"
 import { Fade } from "react-awesome-reveal"
+import { AiOutlineArrowDown } from "react-icons/ai"
 
 const animCfg = {
   header: {
@@ -20,8 +22,11 @@ const animCfg = {
     direction: "up",
     triggerOnce: true,
   },
+  delayedAppear: {
+    delay: 1200,
+    triggerOnce: true,
+  },
 }
-
 const sisalto = {
   header:
     "Huippuluokan verkkosivut kiireiselle yrittäjälle. Välittävällä palvelulla ilman julkaisun jälkeisiä ylläpitokustannuksia.",
@@ -53,6 +58,13 @@ const Hero = (props) => {
         </Fade>
         <Fade {...animCfg.description}>
           <h1 className={styles.description}>{sisalto.header}</h1>
+          <Fade {...animCfg.delayedAppear}>
+            <Link href="/#palvelut">
+              <a className={styles.nextArrow}>
+                <AiOutlineArrowDown />
+              </a>
+            </Link>
+          </Fade>
         </Fade>
       </div>
     </section>

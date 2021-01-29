@@ -34,11 +34,10 @@ img
 
 // Typografia.
 h1, h2, h3
-	@include bigHeader
-	color: $dark
+	@include headerBig
 
 h4, h5, h6
-	@include smallHeader
+	@include headerMedium
 
 a
 	text-decoration: none
@@ -48,10 +47,16 @@ a
 	
 p
 	color: $gray
-	@include laptop
-		max-width: 540px
+	@include tablet
+		max-width: 640px
 
 // Custom classes.
-
 .bold
 	font-weight: 600
+
+.headerMain
+	@include headerMain
+.headerDescription
+	@include headerDescription
+.headerBig
+	@include headerBig

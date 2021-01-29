@@ -3,7 +3,7 @@ import FAQ from "../components/common/FAQ"
 
 const UseinKysyttya = () => {
   return (
-    <Layout>
+    <Layout topbar={true}>
       <FAQ />
     </Layout>
   )

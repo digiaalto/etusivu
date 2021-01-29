@@ -1,32 +1,43 @@
 @import "../../styles/_partials"
 
-.section
+.firstSection
 	@include spacing
-
-.wrapper
 	display: flex
 	flex-direction: column
-	align-items: center
-	align-content: center
 
-.texts
-	margin-bottom: 1.33rem
+.middleSection
+	@include spacing
+	padding-top: 0 !important
+	display: flex
+	flex-direction: column
 
-.header
-	@include bigHeader
-	text-align: center
-	
-.description
-	@include descriptionHeader
-	text-align: center
+.overlineIcon
+	display: inline-block
+	margin-bottom: 0.33rem
+	font-size: 1.33rem
+
+.takuutWrap
+	margin-top: 2rem
+	margin-bottom: 1.5rem
+
+// Features.
+.features
+	display: grid
+
+.featureHeader
+	@include headerSmall
+	max-width: 720px
 
 @include tablet
-	.section
-		gap: 3rem
-	.texts
-		margin-bottom: 2rem
+	.description
+		display: inline-block
+		margin-top: 0
+		max-width: 800px
 	
-@include laptop
-	.texts
-		display: grid
-		grid-template: auto / 1fr 1fr
+@include desktop
+	.features
+		grid-template: auto auto / auto auto
+		gap: 1rem 3rem
+	.takuutWrap
+		margin-top: 3rem
+		margin-bottom: 3rem

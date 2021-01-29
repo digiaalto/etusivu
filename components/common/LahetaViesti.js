@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form"
 import { AiOutlineLoading3Quarters } from "react-icons/ai"
 import { MdThumbUp, MdThumbDown } from "react-icons/md"
 import TextareaAutosize from "react-textarea-autosize"
-import { ButtonStyler, FunctionButton } from "./button"
+import { ButtonStyler } from "./button"
 
 const LahetaViesti = (props) => {
   const { header } = props
@@ -139,5 +139,5 @@ LahetaViesti.propTypes = {
 }
 
 LahetaViesti.defaultProps = {
-  header: "Muuta kysyttävää? Pistä viestiä tulemaan.",
+  header: "Kysyttävää? Pistä viestiä tulemaan.",
 }

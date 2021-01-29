@@ -36,7 +36,7 @@ const Julkaisu = (props) => {
         />
         <ServicePlan
           header="Sisällönhallintaohjelma"
-          text="Integroimme verkkosivuun suosittelemanne tai haluamasi sisällönhallintaohjelman millä pystyt itsenäisesti muuttamaan ennaltamäärättyjä kohtia, kirjoittamaan blogeja, uutisia ja muuta dynaamista sisältöä."
+          text="Integroimme verkkosivuun suosittelemamme tai haluamasi sisällönhallintaohjelman millä pystyt itsenäisesti muuttamaan ennaltamäärättyjä kohtia, kirjoittamaan blogeja, uutisia ja muuta dynaamista sisältöä."
           price="320€"
           image={
             <Image

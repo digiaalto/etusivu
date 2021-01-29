@@ -23,18 +23,17 @@ const Hero = (props) => {
         <Background />
       </Fade>
       <Fade {...animCfg.content}>
-        <div className={styles.content}>
-          <SisaltoLinkit />
+        <div className={styles.headersWrap}>
           <h1 className={styles.header}>
-            Kestävä verkkosivu joka kasvaa yrityksesi kanssa.
+            Älykäs kotisivu joka tukee liiketoimintaasi perusteellisesti.
           </h1>
           <h2 className={styles.description}>
-            Laadukkaalla nettisivulla kilpailuetuja verkossa.
+            Yritystä ei kannata edustaa verkossa 20 vuotta vanhalla
+            teknologialla.
           </h2>
           <LinkButton
-            href="/verkkosivut#tarjouspyynto"
-            text="Heti tarjouspyyntö"
-            primary
+            href="/verkkosivut#vanhat-verkkosivut"
+            text="Selvitä miksi"
           />
         </div>
       </Fade>
@@ -44,23 +43,25 @@ const Hero = (props) => {
 
 const SisaltoLinkit = () => {
   return (
-    <ul className={styles.sisaltoLinkit}>
-      <li className={styles.linkItem}>
-        <Link href="/verkkosivut#vanhat-verkkosivut">
-          <a className={styles.link}>Vanhat sivut</a>
-        </Link>
-      </li>
-      <li className={styles.linkItem}>
-        <Link href="/verkkosivut#uudet-verkkosivut">
-          <a className={styles.link}>Uudet sivut</a>
-        </Link>
-      </li>
-      <li className={styles.linkItem}>
-        <Link href="/verkkosivut#usein-kysyttya">
-          <a className={styles.link}>Usein kysyttyä</a>
-        </Link>
-      </li>
-    </ul>
+    <nav role="navigation">
+      <ol className={styles.navList}>
+        <li>
+          <Link href="/verkkosivut#vanhat-verkkosivut">
+            <a className={styles.navLink}>Vanhat sivut</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/verkkosivut#uudet-verkkosivut">
+            <a className={styles.navLink}>Uudet sivut</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/verkkosivut#usein-kysyttya">
+            <a className={styles.navLink}>Usein kysyttyä</a>
+          </Link>
+        </li>
+      </ol>
+    </nav>
   )
 }
 
@@ -70,7 +71,7 @@ const Background = () => {
       <div className={styles.block} />
       <div className={styles.block} />
       <div className={styles.block} />
-      <div className={styles.block} />
+      {/* <div className={styles.block} /> */}
     </div>
   )
 }

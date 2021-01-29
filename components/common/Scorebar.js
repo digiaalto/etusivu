@@ -1,6 +1,5 @@
 import styles from "./Scorebar.module.sass"
 import ScoreWidget from "./ScoreWidget"
-import ReactTooltip from "react-tooltip"
 import React from "react"
 
 const mobileCfg = {
@@ -8,13 +7,9 @@ const mobileCfg = {
   strokeWidth: 10,
 }
 const desktopCfg = {
-  size: 120,
-  strokeWidth: 15,
+  size: 100,
+  strokeWidth: 12,
 }
-/**
- *
- * Have to track ismounted for tooltip to not throw errors.
- */
 
 class Scorebar extends React.Component {
   constructor(props) {
@@ -45,7 +40,7 @@ class Scorebar extends React.Component {
         <ScoreWidget
           {...this.config}
           progress={this.progress.parhaatKaytannot}
-          label="Parhaat käytännöt"
+          label="Käytännöt"
         />
         <ScoreWidget
           {...this.config}

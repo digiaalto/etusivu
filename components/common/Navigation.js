@@ -14,7 +14,11 @@ const animCfg = {
 const Navigation = (props) => {
   const { topbar } = props
   return (
-    <nav className={styles.nav} style={topbar ? null : { marginTop: "0" }}>
+    <nav
+      role="navigation"
+      className={styles.nav}
+      style={topbar ? null : { marginTop: "0" }}
+    >
       <Fade {...animCfg.nav}>
         <Logo />
         <NavList />
@@ -25,12 +29,12 @@ const Navigation = (props) => {
 
 const NavList = () => {
   return (
-    <ul className={styles.navList}>
+    <ol className={styles.navList}>
       <NavLink href={"/verkkosivut"} text="Verkkosivut" />
       <NavLink href={"/tarjouspyynto"} text="Tarjouspyyntö" />
       <NavLink href={"/usein-kysyttya"} text="Usein kysyttyä" />
       <NavLink href={"/blogi"} text="Blogi" />
-    </ul>
+    </ol>
   )
 }
 

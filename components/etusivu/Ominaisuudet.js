@@ -17,21 +17,21 @@ const animCfg = {
 
 const ominaisuudet = [
   {
-    header: "Todistettavasti laadukas",
+    header: "Laatutestattu",
     text:
       "Nykyaikainen kehitys takaa kilpailijoitasi paremmat tulokset Googlen laatutestissä. Käteen jää helposti ymmärettävät pisteet ja etulyöntiasema verkossa.",
     icon: <SiPowerbi className={styles.growing} />,
   },
   {
-    header: "Kestävä ja ongelmaton",
+    header: "Ongelmaton",
     text:
-      "Hybrid-verkkosivut eivät kärsi tietoturvaongelmista, bugeista, tai vaadi jatkuvia ylläpitotoimia joista laskutetaan ympäri vuoden.",
+      "Hybrid-verkkosivut eivät kärsi tietoturvaongelmista, lisäosista johtuvista bugeista, tai vaadi jatkuvia ylläpitotoimia joista laskutetaan ympäri vuoden.",
     icon: <FaCog className={styles.spinning} />,
   },
   {
     header: "Mukautettu",
     text:
-      "Erottaudu markkinoilla brändisi mukaisesti räätälöidyllä ulkoasulla joka tuo vahvuutesi esille. Näppärällä UX-designilla realisoidaan tavoitteesi.",
+      "Erottaudu markkinoilla brändisi mukaisesti räätälöidyllä ulkoasulla joka tuo personnasi ja vahvuutesi esille.",
     icon: <FaPaintBrush className={styles.bouncing} />,
   },
 ]

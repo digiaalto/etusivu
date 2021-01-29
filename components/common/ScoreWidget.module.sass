@@ -1,15 +1,11 @@
 @import "../../styles/_partials"
 
-.container
+.outerWrapper
 	position: relative
-	display: flex
-	flex-direction: column
-	max-width: 120px
 
-.wrapper
+.innerWrapper
 	position: relative
 	transform: rotate(-90deg)
-	user-select: none
 
 .svg
 	display: block
@@ -22,19 +18,15 @@
 	transition: stroke-dashoffset 850ms ease-in-out
 
 .progressText
-	display: inline-block
 	position: absolute
 	left: 50%
-	top: 29%
-	transform: translateX(-50%)
+	top: 50%
+	transform: translate(-50%, -50%)
 	font-size: 1rem
-	font-weight: 900
-	letter-spacing: 0.3px
-	opacity: 80%
-	user-select: none
+	font-weight: 600
 
 .label
+	dipslay: block
 	text-align: center
 	font-weight: 600
 	word-wrap: wrap
-	user-select: none
