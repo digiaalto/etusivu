@@ -31,7 +31,7 @@ const ominaisuudet = [
   {
     header: "Mukautettu",
     text:
-      "Erottaudu markkinoilla brändisi mukaisesti räätälöidyllä ulkoasulla joka tuo personnasi ja vahvuutesi esille.",
+      "Erottaudu markkinoilla brändisi mukaisesti räätälöidyllä ulkoasulla joka tuo yrityksesi personaasi ja vahvuutesi esille.",
     icon: <FaPaintBrush className={styles.bouncing} />,
   },
 ]

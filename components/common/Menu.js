@@ -41,10 +41,6 @@ const Menu = (props) => {
           const ele = ref.current
           if (ele) {
             const { offsetTop, offsetBottom } = getDimensions(ele)
-            // return (
-            //   scrollPosition + 10 >= offsetTop &&
-            //   scrollPosition <= offsetBottom - 10
-            // )
             return (
               scrollPosition + 10 >= offsetTop &&
               scrollPosition <= offsetBottom - 10
