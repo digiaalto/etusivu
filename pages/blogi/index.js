@@ -10,7 +10,7 @@ const Blogi = (props) => {
   const { posts } = props
 
   return (
-    <Layout>
+    <Layout topbar={true}>
       <div className={styles.container}>
         <div className={styles.headers}>
           <h1 className={styles.overline}>Tervetuloa Digiaallon blogiin!</h1>

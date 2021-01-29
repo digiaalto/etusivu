@@ -8,7 +8,7 @@ import { BlogLayout } from "../../components/layouts"
 const Post = (props) => {
   const { title, body, name, categories, authorImage } = props
   return (
-    <BlogLayout>
+    <BlogLayout topbar={true}>
       <div className={styles.container}>
         <article className={styles.blogArticle}>
           <BlogMetadata
