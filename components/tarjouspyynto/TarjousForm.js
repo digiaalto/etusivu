@@ -8,45 +8,41 @@ import { ButtonStyler } from "../common/button"
 // Content. Get from CMS?
 const sisalto = {
   hinnasto: {
-    verkkosivu: 2000,
-    verkkokauppa: 3100,
+    verkkosivu: 2200,
+    verkkokauppa: 3200,
     blogi: 1200,
-    webApp: 500,
-    sivustoPieni: 250,
-    sivustoKeskisuuri: 650,
-    sivustoSuuri: 1450,
-    sisallontuotto: 700,
-    sisallonhallinta: 20,
-    kansainvalistaminen: 800,
+    webApp: 2000,
+    sivustoPieni: 300,
+    sivustoKeskisuuri: 700,
+    sivustoSuuri: 2000,
+    sisallontuotto: 800,
+    sisallonhallintaohjelma: 800,
+    sisallonhallintapalvelu: 25,
+    kansainvalistaminen: 1000,
   },
   tyypit: {
     verkkosivu: {
       name: "verkkosivu",
       label: "Verkkosivu",
-      info: `Yrityksen verkkosivun tarkoitus on vakuuttaa verkkosivuston vierailijan siitä, että hänen tulisi tulla yrityksen asiakkaaksi. 
-			Verkkosivusto tarvitsee vähitään yhden sivun, yleensä etusivun.`,
+      info: `Rakennamme verkkosivuston jonka päätarkoitus on vakuuttaa vierailijat ostamaan sinun palveluitasi. Jokainen sivusto tarvitsee vähintään markkinoitisivun tai aloitussivun.`,
       defaultChecked: true,
     },
     verkkokauppa: {
       name: "verkkokauppa",
       label: "Verkkokauppa",
-      info: `Verkkokaupan avulla yritys voi toimia melkein kokonaan verkossa ja pystyy korvaamaan toimistojen tarpeen jossa on myynti- ja johtohenkilökunta.
-			Verkkokauppaan integroidaan varastonhallinta ja maksuportaali.`,
+      info: `Kehitämme verkkokaupan jolla myyt tuotteitasi tehokaasti 24/7. Integroimme sivustoon maksuportaalin ja varastonhallintapalvelun.`,
       defaultChecked: false,
     },
     blogi: {
       name: "blogi",
       label: "Blogi",
-      info: `Blogin tarkoitus on houkutella kävijöitä sivustoosi. 
-			Bloggaus on kannattavaa jos uskot että pystyt kirjoittamaan mieleenkiintoisia artikkeleita joita ihmiset etsivät verkosta.`,
+      info: `Yritysblogin tarkoitus on houkutella kävijöitä pääsivullesi kirjoittamalla kiinnostavilla artikkeleilla.`,
       defaultChecked: false,
     },
     webApp: {
       name: "webApp",
       label: "Web-app",
-      info: `Yritykset luovat ja integroivat verkkosovelluksia sivustoihinsa palvellakseen asiakkaita uusilla menetelmillä.
-			Web-appit voivat olla täysin tilaustyönä tehtyjä progressiivisia verkkosovelluksia, tai useasti SaaS-integrointeja, 
-			kuten kalentereita, karttoja ja live-chatteja.`,
+      info: `Hyötyykö yrityksesi React-pohjaisesta web-appista, joka palvelee asiakkaitasi uusilla menetelmillä? Teemme tilaustyönnä vaatimusten mukaisia verkkotuotteita ja palveluita.`,
       defaultChecked: false,
     },
   },
@@ -69,14 +65,19 @@ const sisalto = {
     sisallontuotto: {
       name: "sisallontuotto",
       label: "Sisällöntuotto",
-      info: `Digiaalto kirjoittaa sivuston sisällön brändin mukaisesti ja tavalla joka maksimoi tavoitteiden toteutumisen.
-			Palveluun sisältyy taustatutkimus yrityksen toimialaan ja kilpailijoihin.`,
+      info: `Kirjoitamme tekstit haastattelun ja toimialasi perusteella. Sisältöä on mahdollista editoida ennen julkaisua.`,
       defaultChecked: true,
     },
-    sisallonhallinta: {
-      name: "sisallonhallinta",
-      label: "Sisällönhallinta",
-      info: `Digiaalto hoitaa halumasi tekstisisällön muutostyöt ympäri vuoden, 20€ / muutostyö. Uudelleensuunnittelut sopimuksen mukaisesti.`,
+    sisallonhallintapalvelu: {
+      name: "sisallonhallintapalvelu",
+      label: "Sisällönhallintapalvelu",
+      info: `Digiaalto hoitaa satunnaiset sisällönmuutokset puolestasi kertahintaan 25€ / muutos. Sopii yrityksille jotka eivät ennusta tarvitsevansa kokonaista sisällönhalintaohjelmaa.`,
+      defaultChecked: false,
+    },
+    sisallonhallintaohjelma: {
+      name: "sisallonhallintaohjelma",
+      label: "Sisällönhallintaohjelma",
+      info: `Integroimme sivustoon sisällönhallintaohjelman minkä kautta pystytte itsenäisesti muuttamaan tekstisisältöä.`,
       defaultChecked: false,
     },
     kansainvalistaminen: {
@@ -151,7 +152,8 @@ const TarjousApp = (props) => {
     sivustoKeskisuuri: false,
     sivustoSuuri: false,
     sisallontuotto: sisalto.palvelut.sisallontuotto.defaultChecked,
-    sisallonhallinta: sisalto.palvelut.sisallonhallinta.defaultChecked,
+    sisallonhallintapalvelu:
+      sisalto.palvelut.sisallonhallintapalvelu.defaultChecked,
   })
   const { status, setStatus, setPrice } = props
   const [validType, setValidType] = useState(true)
@@ -350,7 +352,7 @@ const LisatiedotSection = ({ register, onPriceChange, data }) => {
 const PalvelutSection = ({ register, onPriceChange, data }) => {
   return (
     <FormSection>
-      <Header text="Valitse mieleiset sisältöpalvelut." />
+      <Header text="Valitse sisältöpalvelut." />
       <RowGrid>
         <Checkbox
           {...data.sisallontuotto}
@@ -358,7 +360,12 @@ const PalvelutSection = ({ register, onPriceChange, data }) => {
           onChange={onPriceChange}
         />
         <Checkbox
-          {...data.sisallonhallinta}
+          {...data.sisallonhallintapalvelu}
+          refs={register}
+          onChange={onPriceChange}
+        />
+        <Checkbox
+          {...data.sisallonhallintaohjelma}
           refs={register}
           onChange={onPriceChange}
         />

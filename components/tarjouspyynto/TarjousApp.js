@@ -16,7 +16,7 @@ const animCfg = {
 const sisalto = {
   header: "Lähetä tarjouspyyntö!",
   subheader:
-    "Tarjouspyynnön ohella näet alustava hinnan, todellisen arvion saat sähköpostiisi.",
+    "Tämä tarjouspyyntö ei maksa mitään eikä sido sinua mihinkään. Vastaamme sähköpostiisi parissa arkipäivässä.",
   vahvistusViesti: {
     success: {
       header: "Kiitos tarjouspyynnöstä!",

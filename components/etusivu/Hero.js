@@ -29,7 +29,7 @@ const animCfg = {
 }
 const sisalto = {
   header:
-    "Huippuluokan verkkosivut kiireiselle yrittäjälle. Välittävällä palvelulla ilman julkaisun jälkeisiä ylläpitokustannuksia.",
+    "Huippuluokan verkkosivut tulevaisuuten panostavalle yritykselle. Aikaanne arvostavalla asiakaspalvelulla.",
 }
 
 const Hero = (props) => {

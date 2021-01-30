@@ -3,25 +3,20 @@ import Accordion from "./Accordion"
 
 const sisalto = [
   {
-    button: "Kuinka kauan verkkosivuston rakennus kestää?",
-    content: `Riippuen projektin laajuudesta sivusto voi valmistua viikossa tai töihin voi mennä monta kuukautta. Karkeasti sanottuna tavallinen verkkosivu valmistuu alle kuukaudessa. Tarjoamme myös MVP-palvelun, jolloin kiirehdimme markkinoille minimituotteella.`,
+    button: "Kauanko verkoksivun valmistukseen menee?",
+    content: `Riippuen projektin laajuudesta sivusto voi valmistua viikossa tai töihin voi mennä monta kuukautta. Yleinen verkkosivu valmistuu alle kuukaudessa. Aikakriittisissä tilanteissa voimme kiirehtiä markkinoille minimituotteella.`,
   },
   {
-    button: "Kuinka paljon tälläiset verkkosivut maksavat?",
-    content: `Sivujen hinnat vaihtelevat projektin vaatimusten mukaisesti tuhannesta eurosta kymmeniin tuhansiin. Alustava hinta-arvio esitetään tarjouspyynnön ohella.`,
+    button: "Paljon tälläiset verkkosivut maksavat?",
+    content: `Sivujen hinnat vaihtelevat projektin vaatimusten mukaisesti noin tuhannesta eurosta kymmeneen tuhanteen. Voit katsoa alustavia hinta-arvioita tarjouspyynnön ohella.`,
   },
   {
-    button: "Voiko nettisivut oikeasti toimia ilman minkäänlaista ylläpitoa?",
-    content:
-      "Ei, mutta modernin Jamstack arkkitehtuurin kanssa voimme jättää huoltotyöt niihin erikoistuneille palveluntarjoajille. Kun Nextjs sivusto generoidaan ja potkaistaan käyntiin lähettämällä se palvelulle, ei sen kirjastoihin tarvitse koskea. Kaikki tarvittavat muutokset ja sisältöpäivitykset tapahtuvat Webhookeilla; mutta jos jotain todella epätodennäköistä tapahtuu lupaamme selvittää asian maksutta.",
+    button: "Voiko hybrid-sivustot toimia ilman minkäänlaista ylläpitoa?",
+    content: `Ei, mutta modernin Jamstack arkkitehtuurin kanssa voimme jättää huoltotyöt niihin erikoistuneille palveluntarjoajille. Harva asia voi mennä rikki hybrid-sivustossa mikä generoidaan etukäteen.`,
   },
   {
-    button: "Pystynkö itse muuttamaan sivustoni sisältöä?",
-    content: `Tietenkin! Integroimme minkä tahansa haluamasi sisällönhallintaohjelmiston sivustoosi "päättömästi", eli ilman turhia ominaisuuksia. Suosittelemme itse käyttämäämme Sanity.io palvelua joka on helppo ja maksuton anteliaaseen rajaan asti. Vaihtoehtoisesti Digiaalto hoitaa muutostyöt puolestasi halvalla.`,
-  },
-  {
-    button: "Pyörisikö sivustoni oikeasti ilman kustannuksia?",
-    content: `Digiaalto käyttää kansainvälisesti menestyneitä palveluita jotka pitävät hengissä ison osan maailman internet-infrastruktuuria ilman taukoja. Pienen suomalaisen yrityksen vaatimukset eivät yleensä ylitä edes palveluiden maksurajaa.`,
+    button: "Toimiiko sivustoni ilman palvelukustannuksia?",
+    content: `Digiaalto käyttää kansainvälisesti menestyneitä palveluita jotka pitävät hengissä ison osan maailman internet-infrastruktuuria ilman taukoja. Pienen suomalaisen yrityksen vaatimukset eivät yleensä ylitä edes maksurajaa.`,
   },
   {
     button: "Uudistatteko verkkosivuja?",
@@ -29,17 +24,15 @@ const sisalto = [
   },
   {
     button: "Tarjoatteko hosting-palvelua?",
-    content: `Meidän palveluun kuuluu kaikkien sivuston tarvitsemien palveluiden hankinta puolestasi. Laskutamme mahdollisista menoista erikseen.`,
+    content: `Teemme kaikki tarpeelliset palvelutilit puolestanne.`,
   },
   {
-    button:
-      "Kuinka voit kirjoittaa tekstisisältöä tuntematta yritystäni yhtä intiimisti kuten minä?",
-    content: `Kukaan ei tunne yritystäsi ja brändiäsi paremmin kuin sinä. Sen takia keräämme arvokkaita tietoja haastattelemalla sinua, tutkimalla kilpailijoitasi ja perehtymällä toimialaasi.`,
+    button: `Kuinka voit kirjoittaa tekstisisältöä tuntematta yritystäni yhtä intiimisti kuten minä?`,
+    content: `Kukaan ei tunne yritystäsi ja brändiäsi paremmin kuin sinä. Tästä syystä haastattelemme teitä ja perehdymme toimialaasi.`,
   },
   {
     button: "Voitteko auttaa sosiaalisen mediani kanssa?",
-    content:
-      "Emme ole markkinointitoimisto, silti autamme mielellämme jos keretään.",
+    content: `Emme ole markkinointitoimisto. Mutta, pidämme huolen että sivustonne on yhteensopiva kaikkien some-alustojen kanssa meta-tägeillä.`,
   },
 ]
 

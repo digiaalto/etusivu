@@ -14,16 +14,16 @@ const Kehitys = (props) => {
       />
       <div className={styles.content}>
         <p>
-          Laadukas nettisivu koostuu harkitun suunnittelun ja sopivan tekniikan
-          yhdistelmästä. On tärkeää ymmärtää, että sivusto joka on julkaistu
-          verkkoon vanhalla tekniikalla ja jota kiusaa suorituskykyongelmat
-          kärsii myös isosta poistumisprosentista ja huonosta
-          käyttäjäkokemuksesta.
+          Laadukas verkkosivu koostuu harkitun suunnittelun ja oikean
+          teknologian yhdistelmästä. Verkkosivu joka on julkaistu vanhalla
+          teknologialla on tekniikkansa kahleissa, mikä aiheuttaa rajoittavia
+          pullonkauloja sivuston tavoitteiden toteutumiseen.
         </p>
         <p>
-          Tuomme tehokkaita ja nykyaikaisia verkkoratkaisuja yrittäjille jotka
-          haluavat asiakkailleen turvallisempaa ja mukavampaa käyttökokemusta,
-          sekä itselleen vaivatonta, kustannustehokasta sivustonhallintaa.
+          Rakennamme tehokkaita ja nykyaikaisia verkkosivuja, verkkokauppoja,
+          blogeja ja kustomoituja web-appeja ajan hermolla surffaaville
+          yrityksille. React-kirjaston ja Next.js kehyksen kanssa mikään ei ole
+          mahdotonta.
         </p>
       </div>
       <LinkButton

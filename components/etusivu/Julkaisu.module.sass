@@ -2,7 +2,7 @@
 
 .section
 	@include spacing
-	padding-top: 2rem !important
+	padding-top: 0 !important
 	display: grid
 	justify-items: center
 
@@ -12,9 +12,15 @@
 	font-size: 20px !important
 	text-align: center
 
+.lisapalvelutHeader
+	@include headerMedium
+	margin-bottom: 0
+	margin-top: 4rem
+	text-align: center
+
 .ctaButton
 	text-align: center
-	margin-top: 1rem
+	margin-top: 2rem
 	a
 		z-index: 1
 		position: relative
@@ -43,10 +49,12 @@
 .plans
 	display: grid
 	grid-auto-flow: row
+	place-items: center
 	gap: 2rem
-	margin-top: 7rem
 
 @include desktop
 	.plans
-		grid-template: auto / 1fr 1fr 1fr
+		grid-auto-flow: column
 		gap: 4rem
+	.lisapalvelutHeader
+		margin-top: 6rem

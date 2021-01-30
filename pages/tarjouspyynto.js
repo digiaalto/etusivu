@@ -1,9 +1,9 @@
 import Layout from "../components/layouts"
 import TarjousApp from "../components/tarjouspyynto"
 
-const Tarjouspyynto = (props) => {
+const Tarjouspyynto = () => {
   return (
-    <Layout>
+    <Layout topbar={true}>
       <TarjousApp />
     </Layout>
   )

@@ -19,19 +19,19 @@ const ominaisuudet = [
   {
     header: "Laatutestattu",
     text:
-      "Nykyaikainen kehitys takaa kilpailijoitasi paremmat tulokset Googlen laatutestissä. Käteen jää helposti ymmärettävät pisteet ja etulyöntiasema verkossa.",
+      "Nykyaikaiset kehitystekniikat takaavat etulyöntiaseman ikuisesti kasvavassa verkkokilpailussa ja huippuluokan tulokset Googlen laatutestissä ja algoritmissä.",
     icon: <SiPowerbi className={styles.growing} />,
   },
   {
     header: "Ongelmaton",
     text:
-      "Hybrid-verkkosivut eivät kärsi tietoturvaongelmista, lisäosista johtuvista bugeista, tai vaadi jatkuvia ylläpitotoimia joista laskutetaan ympäri vuoden.",
+      "Hybrid-verkkosivut eivät kärsi lisäosista johtuvista bugeista, vaadi jatkuvia ylläpitotoimia, eivätkä kärsi tietoturvaongelmista pienen hyökkäyspinnansa takia.",
     icon: <FaCog className={styles.spinning} />,
   },
   {
     header: "Mukautettu",
     text:
-      "Erottaudu markkinoilla brändisi mukaisesti räätälöidyllä ulkoasulla joka tuo yrityksesi personaasi ja vahvuutesi esille.",
+      "Erottaudu markkinoilla brändisi mukaisesti räätälöidyllä ulkoasulla, joka tuo yrityksesi persoonan ja vahvuuden esille tyylikkäästi.",
     icon: <FaPaintBrush className={styles.bouncing} />,
   },
 ]

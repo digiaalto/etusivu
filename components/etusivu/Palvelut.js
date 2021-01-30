@@ -21,28 +21,34 @@ const Palvelut = (props) => {
   return (
     <section className={styles.section} id="palvelut" ref={refs}>
       <div className={styles.content}>
-        <Overline text="Mitä valmistamme?" />
+        <Overline text="Mitä täällä tapahtuu?" />
         <h1 className={styles.headerMain}>
-          Kestävät nettisivut yritykselle mittavalla testauksella.
+          Kestäviä verkkosivuja yrityksille, mittavalla laatutestauksella.
         </h1>
         <div className={styles.textContent}>
           <p>
-            Suunnittelemme ja kehitämme
-            <Link href="/verkkosivut#uudet-verkkosivut">
-              <a> älykkäitä hybrid-sivustoja, </a>
-            </Link>
-            jotka tekevät kaiken mitä normaalit sivustot tekevät,
-            suorituskykyisesti, skaalautuvasti, turvallisesti ja täysin ilman
-            julkaisun jälkeisiä ylläpitokustannuksia.
+            Digiaalto on erikoistunut tuomaan tuloksia tuottavaa web-teknologiaa
+            Suomalaisten yrittäjien ja kuluttajien hyödyksi. Uudenaikaisen
+            kustannustehokkaan{" "}
+            <a
+              href="https://jamstack.org/"
+              rel="noopener noreferrer"
+              target="_blanK"
+            >
+              kehitysarkkitehtuuriin
+            </a>{" "}
+            siivittämänä saavutamme lukuisia mitattavia hyötyjä internetin
+            ihmeellisestä maailmassa.
           </p>
           <p>
-            Tehdään verkkopalveluistasi luotettavia ja helppokäyttöisiä. Kierrä
-            petollisten markkinointitoimistojen pk-yrittäjille asetettuja
-            <Link href="/verkkosivut#vanhat-verkkosivut">
-              <a> sudenkuoppia. </a>
+            Suunnittelemme ja kehitämme
+            <Link href="/verkkosivut#uudet-verkkosivut">
+              <a> älykkäitä hybrid-sivustoja. </a>
             </Link>
-            Investoi uuteen laadukkaaseen tekniikkaan ja hyödy rakenteellisesta
-            kilpailuedusta.
+            Meidän verkkosivut eivät vaadi ylläpitotoimia, ja ylittävät
+            nykymaailman verkkokäyttäjän odotukset palvelemalla häntä
+            suorituskykyisesti, turvallisesti, ja nopeasti skaalautumalla kovan
+            paikan tullessa.
           </p>
         </div>
       </div>

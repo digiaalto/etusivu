@@ -15,14 +15,16 @@ const Suunnittelu = (props) => {
       />
       <div className={styles.column}>
         <p>
-          Hyvin suunniteltu kotisivu luo vaikutelman joka saa asiakkaan pysymään
-          sivullasi ja oppimaan yrityksestäsi. Huonosti suunnitteltu sivusto saa
-          heidät poistumaan ennenaikaisesti ja kääntymään kilpailijan puoleen.
+          Hyvin suunniteltu kotisivu luo vaikutelman joka saa vierailijan
+          jatkamaan selailua ja oppimaan yrityksestä ja kiinnostumaan
+          palveluistasi. Huonosti suunnitteltu sivusto saa heidät poistumaan
+          ennenaikaisesti ja kääntymään kilpailijan puoleen.
         </p>
         <p>
-          Jotta suunnittelu onnistuisi tarvitsee meidän ensitöiksi määritellä
+          Jotta suunnittelu tuottaa hedelmää kuuluu meidän ensitöiksi määritellä
           haastattelussa mahdollisimman tarkasti projektisi tavoitteet, brändisi
-          vahvuudet, ja nettisivun tärkein kohderyhmä.
+          vahvuudet, ja unelma-asiakkaasi, eli tärkein kohderyhmä jolle sisältö
+          suunnataan.
         </p>
       </div>
       <div className={styles.column}>
@@ -59,8 +61,7 @@ const Suunnittelu = (props) => {
               Vakuuttava yrityssivu tarvitsee tuloksia tuottavaa tekstiä joka
               puhuttelee juuri sinun unelma-asiakastasi. Sisältö on loistava
               paikka korostaa avainsanoja luonnollisella, osuvalla tavalla ja
-              auttaa hakukoneita ja asiakkaita valitsemaan sinut eikä
-              kilpailijaasi.
+              auttaa hakukoneita ja asiakkaita valitsemaan sinut.
             </p>
           </li>
         </ul>

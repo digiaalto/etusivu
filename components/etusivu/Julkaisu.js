@@ -10,20 +10,23 @@ const Julkaisu = (props) => {
     <section className={styles.section} ref={refs} id="julkaisu">
       <StepIndicator overline="Julkaisu" header="D-day." third />
       <p className={styles.description}>
-        Optimoimme ja laatutestaamme sivustosi viimeisen kerran ja lähetämme sen
-        globaaliin sisällönjulkaisuverkkoon. Saat sähköpostiohjeet sivuston
-        käytöstä ja muista mahdollisista mikropalveluista. Asiakaspalvelulinjat
-        pysyvät auki jos jokin jää mietityttämään.
+        Optimoimme ja lähetämme kaikki sivustomme globaaliin
+        sisällönjulkaisuverkkoon joka skaalautuu kävijöiden mukaisesti. Saat
+        sähköpostiohjeet sivuston käytöstä, sekä muista käyttöönotetuista
+        mikropalveluista. Pidämme myös asiakaspalvelulinjat ikuisesti auki.
       </p>
       <p className={styles.description}>
-        Sivusto ei vaadi päivityksiä tai ylläpitotoimia, sillä uudenaikainen
-        kehitysarkkitehtuuri takaa hybrid-verkkosivuston pitkäikäisen toiminnan
-        inkrementaalisella staattisella regeneroinnilla.
+        Sivustomme ovat rakennettu pyörimään pitkäikäisesti ilman häiriöitä,
+        jotta asiakkaamme voivat keskittyä yrityksensä toimintaan
+        sataprosenttisesti.
       </p>
+      <h2 className={styles.lisapalvelutHeader}>
+        Julkaistun jälkeiset lisäpalvelut.
+      </h2>
       <div className={styles.plans}>
         <ServicePlan
           header="Hakukonetarkistus"
-          text="Varmistamme julkaisun jälkeen että SEO-strategiamme on ohjannut sivustolle orgaanista liikennettä. Analysoimme Google hakukonsolin tuloksia ja tarvittaessa asetamme uudet avainsanat."
+          text="Varmistamme että sivustosi on napannut vierailijoita orgaanisesti. Analysoimme Google hakukonsolin arvoja ja optimoimme avainsanat."
           price="80€"
           image={
             <Image
@@ -35,21 +38,8 @@ const Julkaisu = (props) => {
           }
         />
         <ServicePlan
-          header="Sisällönhallintaohjelma"
-          text="Integroimme verkkosivuun suosittelemamme tai haluamasi sisällönhallintaohjelman millä pystyt itsenäisesti muuttamaan ennaltamäärättyjä kohtia, kirjoittamaan blogeja, uutisia ja muuta dynaamista sisältöä."
-          price="320€"
-          image={
-            <Image
-              src="/images/creation/cms.svg"
-              layout="responsive"
-              width="200"
-              height="200"
-            />
-          }
-        />
-        <ServicePlan
           header="Sisällönhallintapalvelu"
-          text="Tarjoamme kertahintaista sisällönmuutospalvelua pk-yrittäjille jotka eivät ennusta tarvitsevansa laajamittaista sisällönhallintaa. Sopii pieniin satunnaisiin muutostarpeisiin, kuten yhteystietojen, aukioloaikojen ja hintojen vaihtumisiin."
+          text="Kertahintainen sisällönmuutospalvelu pk-yrittäjille jotka eivät ennusta tarvitsevansa laajamittaista sisällönhallintaa. Sopii pieniin satunnaisiin muutostarpeisiin, kuten yhteystietojen, aukioloaikojen ja hintojen vaihtumisiin."
           price="25€"
           image={
             <Image
