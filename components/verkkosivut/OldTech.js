@@ -13,8 +13,8 @@ const OldTech = (props) => {
         <Overline text="Mennyttä maailmaa" />
         <h1>
           WordPressiä markkinoidaan täydellisenä verkkoratkaisuna suomalaiselle
-          yrittäjälle, mutta todellisuudessa sen käytöstä hyötyy enemmän
-          myyntimies kuin asiakas.
+          yrittäjälle, mutta todellisuudessa siitä hyötyy myyntimies enemmän
+          kuin asiakas.
         </h1>
         <div className={styles.column}>
           <div className={styles.imgWrap}>
@@ -28,33 +28,27 @@ const OldTech = (props) => {
           </div>
           <div className={styles.texts}>
             <h2 className="headerDescription">
-              WordPress on vanhentunut ratkaisu ongelmiin jotka ovat jo aikoja
-              sitten ratkaistu tehokkaammin.
-            </h2>
-            <h2 className="headerDescription">
-              Suomalaiset markkinointitoimistot myyvät WordPress-sivuja koska he
-              ovat riippuvaisia sen isosta, mutta huonolaatuisesta
+              WordPress on vanhentunut ratkaisu ongelmiin, millä ei ole enään
+              väliä. Suomalaiset markkinointitoimistot myyvät WordPress-sivuja
+              sillä he ovat riippuvaisia sen isosta, mutta huonolaatuisesta
               ohjelmistoekosysteemistä. Käyttämällä kopioituja teemoja,
               ulkoistettuja lisäosia, raahaa ja pudota ominaisuuksia,
               WordPress-toimistot voivat kaupata liukuhinan nopeudella
-              nettisivuja asiakkailleen.
+              yrityssivuja.
             </h2>
             <p>
-              WordPressin tarjoamien oikopolkujen hyödyntäminen johtaa useasti
-              rakenteellisiin vikoihin, jotka pullonkaulattaa tai jopa estää
-              yrityksen menestymistä verkossa.
+              WordPressin oikoreittien hyväksikäyttö johtaa perusteellisiin
+              vikoihin suorituskyvyssä, turvallisuudessa ja renderöintitekniikan
+              rajoittuneisuudessa, mikä pullonkaulattaa tai jopa estää yrityksen
+              menestymistä verkossa.
             </p>
             <p>
               WordPress aloitti yksinkertaisena bloggaamisalustana, ja vuosien
               mittaan se on kehittynyt sellaiseksi mitä sen ei koskaan pitänyt
               olla, aiheuttaen lukuisia ongelmia suorituskyvyssä,
-              skaalautuvuudessa ja ohjelmistokehityksessä. WordPress sivustot
-              vaativat myös säännöllisiä ylläpitotoimia ja päivityksiä
-              pysyäkseen elossa.
-            </p>
-            <p className="bold">
-              Suosittelemme laatutestamaan toimistojen sivustoja Google
-              Lighthousella ennen ostopäätöstä. Se on ilmaista ja nopeaa.
+              skaalautuvuudessa ja ohjelmistokehityksessä. Nämä sivustot
+              vaativat säännöllisiä ylläpitotoimia ja päivityksiä pysyäkseen
+              elossa.
             </p>
           </div>
         </div>
