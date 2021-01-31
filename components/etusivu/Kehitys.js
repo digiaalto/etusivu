@@ -1,6 +1,7 @@
 import styles from "./Kehitys.module.sass"
 import StepIndicator from "../common/StepIndicator"
 import { LinkButton } from "../common/button"
+import LogosWeUse from "../common/LogosWeUse"
 
 const Kehitys = (props) => {
   const { refs } = props
@@ -11,7 +12,11 @@ const Kehitys = (props) => {
         overline="Kehitys"
         header="Verkkosivusi moottori."
         second
+        cc={styles.marginBottomRemover}
       />
+      <div className={styles.logosWeUse}>
+        <LogosWeUse />
+      </div>
       <div className={styles.content}>
         <p>
           Laadukas verkkosivu koostuu harkitun suunnittelun ja oikean
@@ -28,8 +33,8 @@ const Kehitys = (props) => {
       </div>
       <LinkButton
         href="/verkkosivut"
-        text="Lisätietoa"
-        customClass={styles.ctaButton}
+        text="Kerro Lisää"
+        customClass={styles.buttonCustomClass}
       />
     </section>
   )

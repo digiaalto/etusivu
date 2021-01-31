@@ -1,16 +1,11 @@
 import styles from "./Textbar.module.sass"
 import { Fade } from "react-awesome-reveal"
-
-const config = {
-  delay: 200,
-  duration: 1200,
-  fraction: 0.15,
-}
+import { basicFade } from "../../vars"
 
 const Textbar = () => {
   return (
     <section className={styles.section}>
-      <Fade {...config}>
+      <Fade {...basicFade}>
         <h3 className={styles.text}>
           Jos yrityksesi verkkopalvelut tehdään edelleen vanhojen tekniikoiden
           varassa, kannattaa päivittää ne nykyaikaisiin standardeihin. Turvaa

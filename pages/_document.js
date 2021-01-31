@@ -9,7 +9,14 @@ class CustomDocument extends Document {
   render() {
     return (
       <Html lang="fi">
-        <Head />
+        <Head>
+          <link
+            rel="preload"
+            href="/fonts/inter.ttf"
+            as="font"
+            crossOrigin=""
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />

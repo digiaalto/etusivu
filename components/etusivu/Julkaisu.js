@@ -1,7 +1,5 @@
 import styles from "./Julkaisu.module.sass"
 import StepIndicator from "../common/StepIndicator"
-import ServicePlan from "../common/ServicePlan"
-import Image from "next/image"
 import { LinkButton } from "../common/button"
 
 const Julkaisu = (props) => {
@@ -22,8 +20,8 @@ const Julkaisu = (props) => {
       </p>
       <LinkButton
         href="/tarjouspyynto"
-        text="Tee tarjouspyyntö"
-        customClass={styles.ctaButton}
+        text="Lähetä Tarjouspyyntö"
+        customClass={styles.ccButton}
       />
     </section>
   )

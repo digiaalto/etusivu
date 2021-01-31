@@ -30,11 +30,12 @@ const Palvelut = (props) => {
           <p>
             Suunnittelemamme tuotteet ovat älykkäitä
             <Link href="/verkkosivut#uudet-verkkosivut">
-              <a> hybrid-sivustoja tai web-appeja. </a>
+              <a aria-label="Nuoli alaspäin"> hybrid-sivustoja </a>
             </Link>
-            Emme tarjoa ylläpitopalveluita sillä sivustomme eivät tarvitse
-            niitä. Haluamme ylittää verkkopalveluiden käyttäjien odotukset
-            palvelemalla heitä erityisen suorituskykyisesti ja helposti.
+            ja web-appeja. Emme tarjoa ylläpitopalveluita sillä sivustomme eivät
+            tarvitse niitä. Haluamme ylittää verkkopalveluiden käyttäjien
+            odotukset palvelemalla heitä erityisen suorituskykyisesti ja
+            helposti.
           </p>
         </div>
       </div>

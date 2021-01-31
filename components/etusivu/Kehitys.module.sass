@@ -2,40 +2,22 @@
 
 .section
 	@include spacing
+	display: grid
+	justify-items: center
 
 .content
 	display: grid
 	justify-items: center
 
-.ctaButton
-	text-align: center
+.buttonCustomClass
 	margin-top: 1rem
-	a
-		z-index: 1
-		position: relative
-		border: none !important
-		padding: 0.8rem 1.6rem
-		background: $gradient2
-		box-shadow: $shadowSmall
 
-		&::before
-			z-index: -1
-			position: absolute
-			content: ""
-			top: 0
-			left: 0
-			right: 0
-			bottom: 0
-			background: linear-gradient(to right,#FF0080, #7928CA)
-			opacity: 0
-			transition: opacity 250ms ease-in-out
+.marginBottomRemover
+	h1
+		margin-bottom: 0 !important
 
-		&:hover, &:focus
-			color: $light
-			&::before
-				opacity: 1
-
-
+// MEDIA QUERIES.
+@include tablet
 @include laptop
 	.content
 		grid-auto-flow: column

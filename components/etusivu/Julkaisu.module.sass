@@ -4,6 +4,7 @@
 	@include spacing
 	display: grid
 	justify-items: center
+	padding-bottom: 6rem !important
 
 .description
 	@include headerDescription
@@ -17,30 +18,5 @@
 	margin-top: 4rem
 	text-align: center
 
-.ctaButton
-	text-align: center
+.ccButton
 	margin-top: 1rem
-	a
-		z-index: 1
-		position: relative
-		border: none !important
-		padding: 0.8rem 1.6rem
-		background: $gradient3
-		box-shadow: $shadowSmall
-
-		&::before
-			z-index: -1
-			position: absolute
-			content: ""
-			top: 0
-			left: 0
-			right: 0
-			bottom: 0
-			background: linear-gradient(to right, #F9CB28, #FF4D4D)
-			opacity: 0
-			transition: opacity 250ms ease-in-out
-
-		&:hover, &:focus
-			color: $light
-			&::before
-				opacity: 1

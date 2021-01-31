@@ -29,7 +29,7 @@ const animCfg = {
 }
 const sisalto = {
   header:
-    "Myymme modernilla teknologialla tehostettuja verkkosivuja yrityksille jotka arvostavat kestävyyttä. Välittävällä ja aikaanne arvostavalla asiakaspalvelulla.",
+    "Koodaamme modernilla teknologialla tehostettuja verkkosivuja yrityksille jotka arvostavat kestävyyttä.",
 }
 
 const Hero = (props) => {
@@ -76,8 +76,8 @@ export default Hero
 const CtaButtons = () => {
   return (
     <div className={styles.ctaButtons}>
-      <LinkButton href="/verkkosivut#tarjouspyynto" text="Aloita projekti" />
-      <LinkButton href="/#palvelut" text="Miksi Digiaalto?" alternative />
+      <LinkButton href="/verkkosivut#tarjouspyynto" text="Aloita Projekti" />
+      <LinkButton href="/#palvelut" text="Miksi Digiaalto" alternative />
     </div>
   )
 }

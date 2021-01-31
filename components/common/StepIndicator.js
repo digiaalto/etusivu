@@ -1,7 +1,7 @@
 import styles from "./StepIndicator.module.sass"
 
 const StepIndicator = (props) => {
-  const { overline, header, first, second, third } = props
+  const { overline, header, first, second, third, cc } = props
   // TODO: better class detection???
   const string = first ? "1" : second ? "2" : third ? "3" : "0"
   const bgColor = first
@@ -26,7 +26,7 @@ const StepIndicator = (props) => {
     ? styles.line3
     : null
   return (
-    <div className={styles.indicator}>
+    <div className={`${styles.indicator} ${cc}`}>
       <div className={`${styles.line} ${lineBg}`} />
       <span className={`${styles.sphere} ${bgColor}`}>{string}</span>
       <span className={`${styles.overline} ${overlineBg}`}>{overline}</span>
