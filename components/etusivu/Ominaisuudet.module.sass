@@ -11,29 +11,22 @@
 // Ominaisuus.
 .ominaisuudet
 	display: grid
-	gap: 1.5rem
 
 .ominaisuus
 	max-width: 380px
 	height: 100%
+	margin-top: 2rem
 	p
 		margin-bottom: 0
-
-.iconWrapper
-	display: inline-flex
-	justify-content: center
-	align-items: center
-	width: 50px
-	height: 50px
-	margin-right: 1rem
-	border-radius: 100%
-	font-size: 1.5rem
-	background-color: colors.$dark
-	color: colors.$light
 
 // Content.
 .header
 	@include typography.headerSmall
+	display: inline-block
+	border-radius: 9999px
+	padding: 0.5rem 1rem
+	background-color: colors.$dark
+	color: colors.$light
 	
 // Animations and keyframes.
 .growing
@@ -63,16 +56,13 @@
 		transform: scale(1.2)
 	100%
 		transform: scale(1)
-
-	
-@include breakpoints.tablet
-	.ominaisuudet
-		gap: 2rem
 	
 @include breakpoints.laptop
 	.ominaisuudet
 		grid-auto-flow: column
 		gap: 3rem
+	.ominaisuus
+		margin-top: 0
 
 @include breakpoints.desktop
 	.ominaisuudet
