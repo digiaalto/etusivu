@@ -32,50 +32,50 @@ const Menu = (props) => {
   const { menuOpen, toggleOverlay, sectionRefs } = props
   const [visibleSection, setVisibleSection] = useState()
 
-  useEffect(() => {
-    if (sectionRefs) {
-      const handleScroll = () => {
-        const scrollPosition = window.scrollY
+  // useEffect(() => {
+  //   if (sectionRefs) {
+  //     const handleScroll = () => {
+  //       const scrollPosition = window.scrollY
 
-        const selected = sectionRefs.find(({ ref }) => {
-          const ele = ref.current
-          if (ele) {
-            const { offsetTop, offsetBottom } = getDimensions(ele)
-            return (
-              scrollPosition + 10 >= offsetTop &&
-              scrollPosition <= offsetBottom - 10
-            )
-          }
-        })
+  //       const selected = sectionRefs.find(({ ref }) => {
+  //         const ele = ref.current
+  //         if (ele) {
+  //           const { offsetTop, offsetBottom } = getDimensions(ele)
+  //           return (
+  //             scrollPosition + 10 >= offsetTop &&
+  //             scrollPosition <= offsetBottom - 10
+  //           )
+  //         }
+  //       })
 
-        if (selected && selected.section !== visibleSection)
-          setVisibleSection(selected.section)
-      }
+  //       if (selected && selected.section !== visibleSection)
+  //         setVisibleSection(selected.section)
+  //     }
 
-      handleScroll()
-      window.addEventListener("scroll", handleScroll)
-      return () => {
-        window.removeEventListener("scroll", handleScroll)
-      }
-    }
-  }, [visibleSection])
+  //     handleScroll()
+  //     window.addEventListener("scroll", handleScroll)
+  //     return () => {
+  //       window.removeEventListener("scroll", handleScroll)
+  //     }
+  //   }
+  // }, [visibleSection])
 
-  function scrollTo(ele, section) {
-    if (window && window.location) {
-      const href = window.location.origin + "/" + section
-      history.pushState(null, "", href)
-    }
-    ele.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    })
-  }
+  // function scrollTo(ele, section) {
+  //   if (window && window.location) {
+  //     const href = window.location.origin + "/" + section
+  //     history.pushState(null, "", href)
+  //   }
+  //   ele.scrollIntoView({
+  //     behavior: "smooth",
+  //     block: "start",
+  //   })
+  // }
 
   return (
     <React.Fragment>
       <MenuContainer>
         <MenuButton menuOpen={menuOpen} toggleOverlay={toggleOverlay} />
-        <Tracker menuOpen={menuOpen}>
+        {/* <Tracker menuOpen={menuOpen}>
           {sectionRefs &&
             sectionRefs.map(({ section, ref, hoverText }) => (
               <TrackerItem
@@ -85,7 +85,7 @@ const Menu = (props) => {
                 key={`tracker-item-${section}`}
               />
             ))}
-        </Tracker>
+        </Tracker> */}
       </MenuContainer>
       <Overlay visible={menuOpen}>
         <LinkList links={links} toggleOverlay={toggleOverlay} />
@@ -94,17 +94,17 @@ const Menu = (props) => {
   )
 }
 
-const getDimensions = (ele) => {
-  const { height } = ele.getBoundingClientRect()
-  const offsetTop = ele.offsetTop
-  const offsetBottom = offsetTop + height
+// const getDimensions = (ele) => {
+//   const { height } = ele.getBoundingClientRect()
+//   const offsetTop = ele.offsetTop
+//   const offsetBottom = offsetTop + height
 
-  return {
-    height,
-    offsetTop,
-    offsetBottom,
-  }
-}
+//   return {
+//     height,
+//     offsetTop,
+//     offsetBottom,
+//   }
+// }
 
 const MenuContainer = (props) => {
   const { children } = props
@@ -125,31 +125,31 @@ const MenuButton = (props) => {
   )
 }
 
-const Tracker = (props) => {
-  const { menuOpen, children } = props
-  return (
-    <div
-      className={styles.tracker}
-      style={menuOpen ? { pointerEvents: "none" } : null}
-    >
-      {children}
-    </div>
-  )
-}
+// const Tracker = (props) => {
+//   const { menuOpen, children } = props
+//   return (
+//     <div
+//       className={styles.tracker}
+//       style={menuOpen ? { pointerEvents: "none" } : null}
+//     >
+//       {children}
+//     </div>
+//   )
+// }
 
-const TrackerItem = (props) => {
-  const { selected, hoverText, scrollTo } = props
-  return (
-    <div className={styles.trackerItem}>
-      <div
-        className={`${styles.sectionDot} ${selected ? styles.selected : null}`}
-        onClick={scrollTo}
-      >
-        <span className={styles.hoverText}>{hoverText}</span>
-      </div>
-    </div>
-  )
-}
+// const TrackerItem = (props) => {
+//   const { selected, hoverText, scrollTo } = props
+//   return (
+//     <div className={styles.trackerItem}>
+//       <div
+//         className={`${styles.sectionDot} ${selected ? styles.selected : null}`}
+//         onClick={scrollTo}
+//       >
+//         <span className={styles.hoverText}>{hoverText}</span>
+//       </div>
+//     </div>
+//   )
+// }
 
 const LinkList = (props) => {
   const { links, toggleOverlay } = props

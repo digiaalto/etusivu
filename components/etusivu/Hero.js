@@ -1,13 +1,8 @@
 import styles from "./Hero.module.sass"
 import React, { useState, useEffect } from "react"
-import Link from "next/link"
+// import Link from "next/link"
 import { LinkButton } from "../common/button"
-import { ImArrowDown } from "react-icons/im"
-
-const sisalto = {
-  header:
-    "Koodaamme modernilla teknologialla tehostettuja verkkosivuja yrityksille jotka arvostavat kestävyyttä.",
-}
+// import { ImArrowDown } from "react-icons/im"
 
 const Hero = (props) => {
   const { refs } = props
@@ -29,12 +24,15 @@ const Hero = (props) => {
       <div className={styles.content}>
         <StylizedHeaders animElement={animElement} />
         <CtaButtons />
-        <h1 className={styles.description}>{sisalto.header}</h1>
-        <Link href="/#palvelut">
+        <h1 className={styles.description}>
+          Koodaamme modernilla teknologialla tehostettuja verkkosivuja
+          yrityksille jotka arvostavat kestävyyttä.
+        </h1>
+        {/* <Link href="/#palvelut">
           <a className={styles.nextArrow} aria-label="Linkki alempaan osioon">
             <ImArrowDown />
           </a>
-        </Link>
+        </Link> */}
       </div>
     </section>
   )
