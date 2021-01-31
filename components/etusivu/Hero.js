@@ -50,22 +50,22 @@ const Hero = (props) => {
   return (
     <section className={styles.section} id="digiaalto" ref={refs}>
       <div className={styles.content}>
-        <Fade {...animCfg.header}>
-          <StylizedHeaders animElement={animElement} />
-        </Fade>
-        <Fade {...animCfg.ctaBtns}>
-          <CtaButtons />
-        </Fade>
-        <Fade {...animCfg.description}>
-          <h1 className={styles.description}>{sisalto.header}</h1>
-          <Fade {...animCfg.delayedAppear}>
-            <Link href="/#palvelut">
-              <a className={styles.nextArrow}>
-                <ImArrowDown />
-              </a>
-            </Link>
-          </Fade>
-        </Fade>
+        {/* <Fade {...animCfg.header}> */}
+        <StylizedHeaders animElement={animElement} />
+        {/* </Fade> */}
+        {/* <Fade {...animCfg.ctaBtns}> */}
+        <CtaButtons />
+        {/* </Fade> */}
+        {/* <Fade {...animCfg.description}> */}
+        <h1 className={styles.description}>{sisalto.header}</h1>
+        {/* <Fade {...animCfg.delayedAppear}> */}
+        <Link href="/#palvelut">
+          <a className={styles.nextArrow}>
+            <ImArrowDown />
+          </a>
+        </Link>
+        {/* </Fade> */}
+        {/* </Fade> */}
       </div>
     </section>
   )

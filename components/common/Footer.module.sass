@@ -16,7 +16,7 @@ $lightColor: #8595A1
 
 // Content.
 .copyright
-	display: inline-block
+	display: block
 	opacity: 0.5
 
 .ctaHeader
@@ -28,13 +28,15 @@ $lightColor: #8595A1
 	@include headerSmall
 	display: block
 	color: $light
-	opacity: 50%
+	opacity: 66%
 	margin: 1rem 0
 
 .link
 	@include hoverFill($light)
 	display: block
 	font-weight: 600
+	padding: 0.8rem 0rem
+	border-bottom: 1px dashed #fff
 
 // Media queries.
 @include desktop
@@ -44,6 +46,9 @@ $lightColor: #8595A1
 		gap: 4rem
 		justify-content: space-around
 		text-align: left
+	.link
+		border-bottom: none
+		padding: 0.1rem 0rem
 	.subheader
 		&:first-of-type
 			margin-top: 0.66rem
