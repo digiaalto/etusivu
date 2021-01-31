@@ -1,6 +1,5 @@
 import styles from "./BlogLayout.module.sass"
 import React, { useState } from "react"
-import disableScroll from "disable-scroll"
 
 import SEO from "../common/SEO"
 import Topbar from "../common/Topbar"
@@ -14,9 +13,6 @@ const BlogLayout = (props) => {
 
   const toggleOverlay = (bool) => {
     if (!bool && !overlayVisible) return
-    const newOverlayVisible = !overlayVisible
-    if (newOverlayVisible) disableScroll.on()
-    else disableScroll.off()
     setOverlayVisible(!overlayVisible)
   }
 

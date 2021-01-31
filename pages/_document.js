@@ -10,12 +10,12 @@ class CustomDocument extends Document {
     return (
       <Html lang="fi">
         <Head>
-          <link
+          {/* <link
             rel="preload"
             href="/fonts/inter.ttf"
             as="font"
             crossOrigin=""
-          />
+          /> */}
         </Head>
         <body>
           <Main />
