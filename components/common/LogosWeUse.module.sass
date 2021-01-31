@@ -1,4 +1,4 @@
-@import "../../styles/_partials"
+@use "@/partials/colors"
 
 .wrap
 	position: relative
@@ -12,7 +12,7 @@
 	a
 		position: relative
 		display: inline-block
-		color: $dark !important
+		color: colors.$dark !important
 		&:hover
 			.hoverText
 				opacity: 1
@@ -25,5 +25,5 @@
 	right: 0
 	font-size: 0.9rem
 	text-align: center
-	color: $dark
+	color: colors.$dark
 	transition: opacity 200ms ease-in-out

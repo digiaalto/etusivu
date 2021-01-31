@@ -1,11 +1,15 @@
-@import "../../styles/_partials"
+@use "@/partials/colors"
+@use "@/partials/shadows"
+@use "@/partials/breakpoints"
+@use "@/partials/typography"
+
 
 @mixin windowStyle
 	overflow-y: scroll
 	-ms-overflow-style: none
 	scrollbar-width: none
 	border-radius: 4px
-	box-shadow: $shadowSmall
+	box-shadow: shadows.$shadowSmall
 	transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1)
 	webkit-overflow-scrolling: touch
 	transition: all 400ms ease-in-out
@@ -25,7 +29,7 @@
 
 // Näyteinfo.
 .nayteHeader
-	@include headerSmall
+	@include typography.headerSmall
 	text-transform: uppercase
 	font-weight: 800
 	letter-spacing: 0.03em
@@ -46,13 +50,13 @@
 	z-index: 1
 	display: inline-block
 
-@include tablet
+@include breakpoints.tablet
 	.desktopView
 		display: inline-block // Make visible.
 	.mobileView
 		display: none
 	
-@include desktop
+@include breakpoints.desktop
 	.tyonayte
 		gap: 10rem
 		grid-auto-flow: column
@@ -68,6 +72,6 @@
 		justify-self: center
 		align-self: center
 	
-@include bigDesktop
+@include breakpoints.bigDesktop
 	.tyonayte
 		gap: 13em

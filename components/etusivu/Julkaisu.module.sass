@@ -1,19 +1,21 @@
-@import "../../styles/_partials"
+@use "@/partials/breakpoints"
+@use "@/partials/typography"
+@use "@/partials/spacing"
 
 .section
-	@include spacing
+	@include spacing.section
 	display: grid
 	justify-items: center
 	padding-bottom: 6rem !important
 
 .description
-	@include headerDescription
+	@include typography.headerDescription
 	max-width: 900px !important
 	font-size: 20px !important
 	text-align: center
 
 .lisapalvelutHeader
-	@include headerMedium
+	@include typography.headerMedium
 	margin-bottom: 0
 	margin-top: 4rem
 	text-align: center

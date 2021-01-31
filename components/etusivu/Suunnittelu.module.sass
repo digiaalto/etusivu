@@ -1,7 +1,10 @@
-@import "../../styles/_partials"
+@use "@/partials/breakpoints"
+@use "@/partials/typography"
+@use "@/partials/colors"
+@use "@/partials/spacing"
 
 .section
-	@include spacing
+	@include spacing.section
 	margin-top: 3rem
 
 .column
@@ -21,15 +24,15 @@
 		max-width: 460px
 
 .listHeader
-	@include headerMedium
+	@include typography.headerMedium
 
 .listParagraph
 	font-size: 1rem
-	color: $gray
+	color: colors.$gray
 	max-width: 500px
 
 // Media queries.
-@include laptop
+@include breakpoints.laptop
 	.list
 		margin-top: 2rem
 		padding-left: 2rem
@@ -47,7 +50,7 @@
 		ul
 			justify-self: flex-start
 		
-@include desktop
+@include breakpoints.desktop
 	.imgWrapper
 		justify-self: end
 		transform: translateX(-30px)

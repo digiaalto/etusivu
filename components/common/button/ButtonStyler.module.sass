@@ -1,4 +1,4 @@
-@import "../../../styles/_partials"
+@use "@/partials/colors"
 
 .wrapper
 	display: block
@@ -9,44 +9,44 @@
 		padding: 0.6rem 1.5rem
 		border: 2px solid transparent
 		border-radius: 2px
-		background-color: $dark
-		color: $light
+		background-color: colors.$dark
+		color: colors.$light
 		font-weight: 600
 		text-align: center
 		transition: all 400ms ease-in-out
 		cursor: pointer
 		&:hover, &:focus
 			outline: none
-			border: 2px solid $dark
-			background-color: $light
-			color: $dark
+			border: 2px solid colors.$dark
+			background-color: colors.$light
+			color: colors.$dark
 		
 .primary // blue
 	a, button
-		border: 2px solid $primary
-		background-color: $primary
+		border: 2px solid colors.$primary
+		background-color: colors.$primary
 
 		&:hover, &:focus
-			border: 2px solid $primary
+			border: 2px solid colors.$primary
 			background-color: transparent
-			color: $primary
+			color: colors.$primary
 	
 .secondary // red
 	a, button
-		border: 2px solid $secondary
-		background-color: $secondary
+		border: 2px solid colors.$secondary
+		background-color: colors.$secondary
 
 		&:hover, &:focus
-			border: 2px solid $secondary
+			border: 2px solid colors.$secondary
 			background-color: transparent
-			color: $secondary
+			color: colors.$secondary
 		
 .alternative
 	a, button
 		border: 2px solid rgba(0, 0, 0, 0.33)
 		background-color: transparent
-		color: $dark
+		color: colors.$dark
 
 		&:hover, &:focus
-			background-color: 2px solid $dark
+			background-color: 2px solid colors.$dark
 		

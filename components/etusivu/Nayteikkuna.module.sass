@@ -1,7 +1,9 @@
-@import "../../styles/_partials"
+@use "@/partials/spacing"
+@use "@/partials/typography"
+@use "@/partials/breakpoints"
 
 .section
-	@include spacing
+	@include spacing.section
 
 .content
 	display: grid
@@ -13,13 +15,13 @@
 	margin-top: 1.33rem
 
 .header
-	@include headerBig
+	@include typography.headerBig
 
-@include tablet
+@include breakpoints.tablet
 	.naytteetWrap
 		gap: 6rem
 
-@include desktop
+@include breakpoints.desktop
 	.naytteetWrap
 		gap: 10rem
 	.content

@@ -1,4 +1,6 @@
-@import "../../styles/_partials"
+@use "@/partials/colors"
+@use "@/partials/breakpoints"
+@use "@/partials/misc"
 
 .nav
 	display: none
@@ -13,14 +15,14 @@
 	list-style: none
 
 .navLink
-	color: $dark
+	color: colors.$dark
 	font-weight: 600
 	font-size: 1.2rem
-	@include hoverFill($dark)
+	@include misc.hoverFill(colors.$dark)
 
-@include laptop
+@include breakpoints.laptop
 	.nav
-		background-color: $bglight
+		background-color: colors.$bglight
 		padding: 0.5rem
 		display: flex
 		justify-content: space-around

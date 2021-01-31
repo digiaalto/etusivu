@@ -1,0 +1,62 @@
+@use "@/partials/colors"
+@use "@/partials/breakpoints"
+
+@mixin headerDescription
+	font-size: 1.15rem
+	font-weight: 400
+	letter-spacing: -0.02em
+	line-height: 1.45
+	color: colors.$gray
+	max-width: 800px
+	@include breakpoints.lgPhone
+		font-size: 1.3rem
+
+@mixin headerMain
+	font-size: 2rem
+	font-weight: 800
+	letter-spacing: -0.02em
+	line-height: 1.3
+	color: colors.$dark
+	margin-top: 0
+	margin-bottom: 0.5em
+	@include breakpoints.tablet
+		font-size: 3rem
+	@include breakpoints.laptop
+		font-size: 3.5rem
+
+@mixin headerBig
+	font-size: 1.3rem
+	font-weight: 800
+	letter-spacing: -0.02em
+	line-height: 1.45
+	color: colors.$dark
+	margin-top: 0
+	margin-bottom: 0.5em
+	@include breakpoints.lgPhone
+		font-size: 1.5rem
+	@include breakpoints.tablet
+		font-size: 2.3rem
+		line-height: 1.3
+	@include breakpoints.laptop
+		font-size: 3.5rem
+	
+@mixin headerMedium
+	font-size: 1.2rem
+	font-weight: 700
+	letter-spacing: -0.02em
+	line-height: 1.45
+	color: colors.$dark
+	@include breakpoints.lgPhone
+		font-size: 1.4rem
+	@include breakpoints.tablet
+		font-size: 1.7rem
+	
+@mixin headerSmall
+	font-size: 1.1rem
+	font-weight: 600
+	line-height: 1.45
+	color: colors.$dark
+	@include breakpoints.lgPhone
+		font-size: 1.2rem
+	@include breakpoints.tablet
+		font-size: 1.3rem

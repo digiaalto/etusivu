@@ -1,7 +1,8 @@
-@import "../../styles/_partials"
+@use "@/partials/breakpoints"
+@use "@/partials/spacing"
 
 .section
-	@include spacing
+	@include spacing.section
 	display: grid
 	justify-items: center
 
@@ -17,8 +18,7 @@
 		margin-bottom: 0 !important
 
 // MEDIA QUERIES.
-@include tablet
-@include laptop
+@include breakpoints.laptop
 	.content
 		grid-auto-flow: column
 		justify-items: center

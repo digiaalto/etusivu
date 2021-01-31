@@ -1,11 +1,14 @@
 // @import "../../styles/partials"
-@use "../../styles/partials"
+@use "@/partials/spacing"
+@use "@/partials/breakpoints"
+@use "@/partials/typography"
+@use "@/partials/colors"
 
 $fadeSpeed: 2500ms
 
 // Layout.
 .section
-	@include partials.spacing
+	@include spacing.section
 	margin-top: 3rem
 	min-height: 100vh
 	display: grid
@@ -130,7 +133,7 @@ $fadeSpeed: 2500ms
 	
 // Content.
 .description
-	@include partials.headerDescription
+	@include typography.headerDescription
 	max-width: 720px
 
 .ctaButtons
@@ -142,13 +145,13 @@ $fadeSpeed: 2500ms
 	display: inline-block
 	margin-top: 1rem
 	font-size: 2rem
-	color: partials.$dark !important
+	color: colors.$dark !important
 	transition: transform 200ms ease-in-out
 	&:hover
 		transform: scale(1.2) translateY(10%)
 
 // Media queries.
-@include partials.tablet
+@include breakpoints.tablet
 	.salesPitch
 		font-size: 5rem
 	.ctaButtons
@@ -156,13 +159,13 @@ $fadeSpeed: 2500ms
 		justify-content: center
 		margin: 3rem 0
 
-@include partials.laptop
+@include breakpoints.laptop
 	.section
 		margin-top: 6rem
 	.salesPitch
 		font-size: 6rem
 
-@include partials.desktop
+@include breakpoints.desktop
 	.section
 		margin-top: 5rem
 	.salesPitch

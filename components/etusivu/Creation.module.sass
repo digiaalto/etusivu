@@ -1,4 +1,5 @@
-@import "../../styles/_partials"
+@use "@/partials/breakpoints"
+@use "@/partials/colors"
 
 // Layout.
 .container
@@ -6,9 +7,9 @@
 	flex-direction: column
 	justify-content: center
 	text-align: centera
-	color: $gray
+	color: colors.$gray
 
 // Media queries.
-@include laptop
+@include breakpoints.laptop
 	.container
 		text-align: left

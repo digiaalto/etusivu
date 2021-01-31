@@ -1,4 +1,5 @@
-@import "../../styles/_partials"
+@use "@/partials/colors"
+@use "@/partials/breakpoints"
 
 .overline
 	display: block
@@ -7,12 +8,12 @@
 	letter-spacing: 0.1rem
 	text-transform: uppercase
 	margin-bottom: 1.5rem
-	color: $dark
+	color: colors.$dark
 
 .center
 	display: block
 	text-align: center
 
-@include tablet
+@include breakpoints.tablet
 	.overline
 		margin-bottom: 2rem

@@ -1,8 +1,11 @@
-@import "../../styles/_partials"
+@use "@/partials/colors"
+@use "@/partials/typography"
+@use "@/partials/breakpoints"
+@use "@/partials/spacing"
 
 // Layout.
 .section
-	@include spacing
+	@include spacing.section
 	padding-top: 0 !important
 
 // Ominaisuus.
@@ -25,12 +28,12 @@
 	margin-right: 1rem
 	border-radius: 100%
 	font-size: 1.5rem
-	background-color: $dark
-	color: $light
+	background-color: colors.$dark
+	color: colors.$light
 
 // Content.
 .header
-	@include headerSmall
+	@include typography.headerSmall
 	
 // Animations and keyframes.
 .growing
@@ -62,16 +65,16 @@
 		transform: scale(1)
 
 	
-@include tablet
+@include breakpoints.tablet
 	.ominaisuudet
 		gap: 2rem
 	
-@include laptop
+@include breakpoints.laptop
 	.ominaisuudet
 		grid-auto-flow: column
 		gap: 3rem
 
-@include desktop
+@include breakpoints.desktop
 	.ominaisuudet
 		place-content: center
 		gap: 4rem

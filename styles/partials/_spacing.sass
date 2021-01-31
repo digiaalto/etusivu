@@ -1,0 +1,10 @@
+@use "@/partials/breakpoints"
+
+@mixin section
+	padding: 2em 5vw
+	@include breakpoints.tablet
+		padding: 3rem 5vw
+	@include breakpoints.laptop
+		padding: 4rem 8vw
+	@include breakpoints.desktop
+		padding: 5rem 10vw

@@ -1,4 +1,5 @@
-@import "../../styles/_partials.sass"
+@use "@/partials/colors"
+@use "@/partials/breakpoints"
 
 // Layout.
 .topbar
@@ -9,7 +10,7 @@
 	right: 0
 	left: 0
 	padding: 0 1rem
-	background-color: $dark
+	background-color: colors.$dark
 	height: 3rem
 
 // Content.
@@ -18,15 +19,15 @@
 	align-content: center
 	align-items: center
 	font-size: 1rem
-	color: $light
+	color: colors.$light
 	&:hover
-		color: $primary
+		color: colors.$primary
 .contactText
 	margin-left: 8px
 	display: none
 	
 // Media queries.
-@include tablet
+@include breakpoints.tablet
 	.topbar
 		display: flex
 		justify-content: center

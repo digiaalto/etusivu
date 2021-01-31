@@ -1,6 +1,8 @@
-@import "../../styles/_partials"
+@use "@/partials/colors"
+@use "@/partials/breakpoints"
+@use "@/partials/misc"
 
-$elementColor: $dark
+$elementColor: colors.$dark
 
 // Layout.
 .menu
@@ -18,19 +20,19 @@ $elementColor: $dark
 	border: 1px solid transparent
 	border-radius: 9999px
 	font-size: 1.5rem
-	color: $light
+	color: colors.$light
 	background-color: $elementColor
 	cursor: pointer
 	user-select: none
 	transition: all 0.2s ease
 	&:hover
-		background-color: $primary
-		color: $light
-		border: 1px solid $primary
+		background-color: colors.$primary
+		color: colors.$light
+		border: 1px solid colors.$primary
 	&:focus
-		background-color: $primary
-		color: $light
-		border: 1px solid $primary
+		background-color: colors.$primary
+		color: colors.$light
+		border: 1px solid colors.$primary
 		outline: none
 
 // Tracker stuff.
@@ -54,7 +56,7 @@ $elementColor: $dark
 	cursor: pointer
 	user-select: none
 	&:hover
-		border: 2px solid $primary
+		border: 2px solid colors.$primary
 		.hoverText
 			display: block !important
 .selected
@@ -70,6 +72,7 @@ $elementColor: $dark
 	font-size: 0.9rem
 	user-select: none
 	animation: fadeIn 0.33s 1
+
 @keyframes fadeIn
 	0%
 		opacity: 0
@@ -82,15 +85,15 @@ $elementColor: $dark
 	grid-auto-flow: row
 	padding: 0
 .link
-	@include hoverFill($light)
+	@include misc.hoverFill(colors.$light)
 	justify-self: center
 	font-size: 2.5rem
 	line-height: 1.3
 	user-select: none
-	color: $light
+	color: colors.$light
 
 // Media queries.
-@include tablet
+@include breakpoints.tablet
 	.menu
 		right: 20px
 	.link

@@ -1,6 +1,6 @@
 import styles from "./Kehitys.module.sass"
-import StepIndicator from "../common/StepIndicator"
 import { LinkButton } from "../common/button"
+import StepIndicator from "../common/StepIndicator"
 import LogosWeUse from "../common/LogosWeUse"
 
 const Kehitys = (props) => {

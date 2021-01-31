@@ -1,0 +1,12 @@
+@use "@/partials/colors"
+
+@mixin hoverFill($baseColor)
+	@supports (background-clip: text) and (-webkit-text-fill-color: transparent)
+		background: linear-gradient(to right, colors.$primary, colors.$primary 50%, $baseColor 50%)
+		background-clip: text
+		-webkit-text-fill-color: transparent
+		background-size: 200% 100%
+		background-position: 100%
+		transition: background-position 275ms ease
+		&:hover
+			background-position: 0 100%

@@ -1,4 +1,7 @@
-@import "../../styles/_partials"
+@use "@/partials/colors"
+@use "@/partials/typography"
+@use "@/partials/gradients"
+@use "@/partials/breakpoints"
 
 .indicator
 	display: flex
@@ -14,7 +17,7 @@
 
 .sphere
 	display: inline-flex
-	color: $light
+	color: colors.$light
 	font-weight: 600
 	width: 40px
 	height: 40px
@@ -34,7 +37,7 @@
 	user-select: none
 
 .headerMain
-	@include headerMain
+	@include typography.headerMain
 	text-align: center
 
 .line1
@@ -61,12 +64,12 @@
 		-webkit-text-fill-color: transparent		
 
 .first
-	background: $gradient1
+	background: gradients.$gradient1
 .second
-	background: $gradient2
+	background: gradients.$gradient2
 .third
-	background: $gradient3
+	background: gradients.$gradient3
 
-@include laptop
+@include breakpoints.laptop
 	.header
 		text-align: left
