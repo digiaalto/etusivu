@@ -34,7 +34,7 @@ const Hero = (props) => {
             teknologialla.
           </h2>
           <Link href="/verkkosivut#vanhat-verkkosivut">
-            <a className={styles.link}>
+            <a className={styles.link} aria-label="Linkki alempaan osioon">
               <ImArrowDown />
             </a>
           </Link>

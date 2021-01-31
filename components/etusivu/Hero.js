@@ -60,7 +60,7 @@ const Hero = (props) => {
         <h1 className={styles.description}>{sisalto.header}</h1>
         {/* <Fade {...animCfg.delayedAppear}> */}
         <Link href="/#palvelut">
-          <a className={styles.nextArrow}>
+          <a className={styles.nextArrow} aria-label="Linkki alempaan osioon">
             <ImArrowDown />
           </a>
         </Link>
