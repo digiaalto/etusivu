@@ -36,7 +36,7 @@ const ScoreWidget = (props) => {
   }, [setOffset, circumference, progress, offset])
 
   return (
-    <div>
+    <div className={styles.container}>
       <div className={styles.outerWrapper}>
         <div className={styles.innerWrapper}>
           <svg className={styles.svg} width={size} height={size}>
@@ -63,7 +63,7 @@ const ScoreWidget = (props) => {
             />
           </svg>
         </div>
-        <span className={styles.progressText}>{progress}%</span>
+        <span className={styles.centerLabel}>{progress}%</span>
       </div>
       {label && <span className={styles.label}>{label}</span>}
     </div>

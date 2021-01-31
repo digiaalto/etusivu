@@ -10,7 +10,10 @@
 .headerMain
 	@include headerMain
 	max-width: 900px
-	text-align: center
+
+@include tablet
+	.section
+		padding-bottom: 4rem !important
 
 @include laptop
 	.header

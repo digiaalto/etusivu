@@ -29,7 +29,7 @@ $shadowLarge: 0 30px 60px rgba(0,0,0,0.12)
 @mixin mdPhone
 	@media (min-width: 360px)
 		@content
-@mixin bigPhone
+@mixin lgPhone
 	@media (min-width: 425px)
 		@content
 @mixin tablet
@@ -65,7 +65,7 @@ $shadowLarge: 0 30px 60px rgba(0,0,0,0.12)
 	line-height: 1.45
 	color: $gray
 	max-width: 800px
-	@include bigPhone
+	@include lgPhone
 		font-size: 1.3rem
 
 @mixin headerMain
@@ -87,7 +87,7 @@ $shadowLarge: 0 30px 60px rgba(0,0,0,0.12)
 	color: $dark
 	margin-top: 0
 	margin-bottom: 0.5em
-	@include bigPhone
+	@include lgPhone
 		font-size: 1.5rem
 	@include tablet
 		font-size: 2.3rem
@@ -101,7 +101,7 @@ $shadowLarge: 0 30px 60px rgba(0,0,0,0.12)
 	letter-spacing: -0.02em
 	line-height: 1.45
 	color: $dark
-	@include bigPhone
+	@include lgPhone
 		font-size: 1.4rem
 	@include tablet
 		font-size: 1.7rem
@@ -111,7 +111,7 @@ $shadowLarge: 0 30px 60px rgba(0,0,0,0.12)
 	font-weight: 600
 	line-height: 1.45
 	color: $dark
-	@include bigPhone
+	@include lgPhone
 		font-size: 1.2rem
 	@include tablet
 		font-size: 1.3rem

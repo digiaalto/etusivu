@@ -1,7 +1,7 @@
 import styles from "./Takuut.module.sass"
 import { GoCheck } from "react-icons/go"
 import { Fade } from "react-awesome-reveal"
-import { cascadeFade } from "../../vars"
+import { fadeCascade } from "../../vars"
 
 const sisalto = [
   "Laatutestattu.",
@@ -15,7 +15,7 @@ const sisalto = [
 const Takuut = () => {
   return (
     <div className={styles.takuut}>
-      <Fade {...cascadeFade}>
+      <Fade {...fadeCascade}>
         {sisalto.map((header) => (
           <Takuu header={header} key={`takuu-${header}`} />
         ))}

@@ -2,6 +2,7 @@ import { useRef, useState, useEffect } from "react"
 import Layout from "../components/layouts"
 import Hero from "../components/verkkosivut/Hero"
 import OldTech from "../components/verkkosivut/OldTech"
+import Textbar from "../components/verkkosivut/Textbar"
 import NewTech from "../components/verkkosivut/NewTech"
 import LogoSlider from "../components/verkkosivut/LogoSlider"
 
@@ -33,8 +34,9 @@ const Verkkosivut = () => {
   return (
     <Layout topbar={true} sectionRefs={sectionRefs}>
       <Hero refs={heroRef} />
-      <OldTech refs={oldTechRef} isMobile={isMobile} />
-      <NewTech refs={newTechRef} isMobile={isMobile} />
+      <OldTech refs={oldTechRef} />
+      <Textbar />
+      <NewTech refs={newTechRef} />
       <LogoSlider />
     </Layout>
   )

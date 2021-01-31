@@ -1,18 +1,18 @@
 @import "../../styles/_partials"
 
 .overline
+	display: block
 	font-size: 0.9rem
 	font-weight: 700
 	letter-spacing: 0.1rem
 	text-transform: uppercase
-	margin-bottom: 0.6rem
+	margin-bottom: 1.5rem
 	color: $dark
 
 .center
 	display: block
 	text-align: center
 
-// .margin
-// 	margin-bottom: 2rem
-// 	@include tablet
-// 		margin-bottom: 3rem
+@include tablet
+	.overline
+		margin-bottom: 2rem

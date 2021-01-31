@@ -1,32 +1,27 @@
 @import "../../styles/_partials"
 
+.container
+	font-size: 0.9rem
+
 .outerWrapper
 	position: relative
 
 .innerWrapper
-	position: relative
 	transform: rotate(-90deg)
-
-.svg
-	display: block
-	margin: 1rem auto
 
 .background, .foreground
 	fill: none
 
 .foreground
-	transition: stroke-dashoffset 850ms ease-in-out
+	transition: stroke-dashoffset 3000ms ease-in-out
 
-.progressText
+.centerLabel
 	position: absolute
 	left: 50%
 	top: 50%
 	transform: translate(-50%, -50%)
-	font-size: 1rem
-	font-weight: 600
 
 .label
-	dipslay: block
+	display: inline-block
 	text-align: center
-	font-weight: 600
-	word-wrap: wrap
+	margin-top: 0.33rem
