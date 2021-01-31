@@ -5,8 +5,8 @@ import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { AiOutlineLoading3Quarters } from "react-icons/ai"
 import { MdThumbUp, MdThumbDown } from "react-icons/md"
-import TextareaAutosize from "react-textarea-autosize"
 import { ButtonStyler } from "./button"
+import TextareaAutosize from "react-textarea-autosize"
 
 const LahetaViesti = (props) => {
   const { header } = props

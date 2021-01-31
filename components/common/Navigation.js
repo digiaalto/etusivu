@@ -1,15 +1,6 @@
 import styles from "./Navigation.module.sass"
 import Link from "next/link"
-import { Fade } from "react-awesome-reveal"
-
 import Logo from "./Logo"
-
-const animCfg = {
-  nav: {
-    direction: "down",
-    duration: 750,
-  },
-}
 
 const Navigation = (props) => {
   const { topbar } = props
@@ -19,10 +10,8 @@ const Navigation = (props) => {
       className={styles.nav}
       style={topbar ? null : { marginTop: "0" }}
     >
-      <Fade {...animCfg.nav}>
-        <Logo />
-        <NavList />
-      </Fade>
+      <Logo />
+      <NavList />
     </nav>
   )
 }

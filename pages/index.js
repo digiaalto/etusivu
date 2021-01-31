@@ -2,7 +2,7 @@ import { useRef } from "react"
 import Layout from "../components/layouts/"
 import Hero from "../components/etusivu/Hero"
 import Palvelut from "../components/etusivu/Palvelut"
-// import Nayteikkuna from "../components/etusivu/Nayteikkuna"
+import Nayteikkuna from "../components/etusivu/Nayteikkuna"
 import Creation from "../components/etusivu/Creation"
 
 const IndexPage = () => {
@@ -47,7 +47,7 @@ const IndexPage = () => {
       <Layout topbar={true} sectionRefs={sectionRefs}>
         <Hero refs={heroRef} />
         <Palvelut refs={palvelutRef} />
-        {/* <Nayteikkuna refs={nayteikkunaRef} /> */}
+        <Nayteikkuna refs={nayteikkunaRef} />
         <Creation
           refs={{
             suunnitteluRef: suunnitteluRef,

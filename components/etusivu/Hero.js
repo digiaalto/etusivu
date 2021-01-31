@@ -2,31 +2,8 @@ import styles from "./Hero.module.sass"
 import React, { useState, useEffect } from "react"
 import Link from "next/link"
 import { LinkButton } from "../common/button"
-import { Fade } from "react-awesome-reveal"
 import { ImArrowDown } from "react-icons/im"
 
-const animCfg = {
-  header: {
-    delay: 400,
-    duration: 1500,
-    triggerOnce: true,
-  },
-  ctaBtns: {
-    delay: 600,
-    duration: 1500,
-    triggerOnce: true,
-  },
-  description: {
-    delay: 600,
-    duration: 1000,
-    direction: "up",
-    triggerOnce: true,
-  },
-  delayedAppear: {
-    delay: 1200,
-    triggerOnce: true,
-  },
-}
 const sisalto = {
   header:
     "Koodaamme modernilla teknologialla tehostettuja verkkosivuja yrityksille jotka arvostavat kestävyyttä.",
@@ -50,22 +27,14 @@ const Hero = (props) => {
   return (
     <section className={styles.section} id="digiaalto" ref={refs}>
       <div className={styles.content}>
-        {/* <Fade {...animCfg.header}> */}
         <StylizedHeaders animElement={animElement} />
-        {/* </Fade> */}
-        {/* <Fade {...animCfg.ctaBtns}> */}
         <CtaButtons />
-        {/* </Fade> */}
-        {/* <Fade {...animCfg.description}> */}
         <h1 className={styles.description}>{sisalto.header}</h1>
-        {/* <Fade {...animCfg.delayedAppear}> */}
         <Link href="/#palvelut">
           <a className={styles.nextArrow} aria-label="Linkki alempaan osioon">
             <ImArrowDown />
           </a>
         </Link>
-        {/* </Fade> */}
-        {/* </Fade> */}
       </div>
     </section>
   )

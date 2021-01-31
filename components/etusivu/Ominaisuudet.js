@@ -1,19 +1,8 @@
 import styles from "./Ominaisuudet.module.sass"
 import React from "react"
-import { Fade } from "react-awesome-reveal"
 import { SiPowerbi } from "react-icons/si"
 import { FaCog } from "react-icons/fa"
 import { FaPaintBrush } from "react-icons/fa"
-
-const animCfg = {
-  ominaisuudet: {
-    duration: 800,
-    damping: 0.2,
-    direction: "up",
-    cascade: true,
-    triggerOnce: true,
-  },
-}
 
 const ominaisuudet = [
   {
@@ -38,13 +27,11 @@ const ominaisuudet = [
 
 const Ominaisuudet = () => {
   return (
-    <Fade {...animCfg.ominaisuudet}>
-      <div className={styles.ominaisuudet}>
-        {ominaisuudet.map((ominaisuus, index) => (
-          <Ominaisuus data={ominaisuus} key={`ominaisuus-${index}`} />
-        ))}
-      </div>
-    </Fade>
+    <div className={styles.ominaisuudet}>
+      {ominaisuudet.map((ominaisuus, index) => (
+        <Ominaisuus data={ominaisuus} key={`ominaisuus-${index}`} />
+      ))}
+    </div>
   )
 }
 

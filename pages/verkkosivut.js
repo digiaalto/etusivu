@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react"
+import { useRef } from "react"
 import Layout from "../components/layouts"
 import Hero from "../components/verkkosivut/Hero"
 import OldTech from "../components/verkkosivut/OldTech"
@@ -7,15 +7,9 @@ import NewTech from "../components/verkkosivut/NewTech"
 import LogoSlider from "../components/verkkosivut/LogoSlider"
 
 const Verkkosivut = () => {
-  const [isMobile, setMobile] = useState(false)
-
   const heroRef = useRef(null)
   const oldTechRef = useRef(null)
   const newTechRef = useRef(null)
-
-  useEffect(() => {
-    if (window) setMobile(window.innerWidth < 769)
-  }, [])
 
   const sectionRefs = [
     { section: "verkkosivut", hoverText: "Ylös", ref: heroRef },

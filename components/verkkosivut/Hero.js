@@ -1,45 +1,27 @@
 import styles from "./Hero.module.sass"
+import Link from "next/link"
 import { useState } from "react"
-import { Fade } from "react-awesome-reveal"
 import { animated, useSpring } from "react-spring"
 import { ImArrowDown } from "react-icons/im"
-import Link from "next/link"
-
-const animCfg = {
-  section: {
-    direction: "up",
-    triggerOnce: true,
-  },
-  content: {
-    direction: "up",
-    delay: 400,
-    triggerOnce: true,
-  },
-}
 
 const Hero = (props) => {
   const { refs } = props
   return (
     <section className={styles.section} ref={refs} id="verkkosivut">
-      <Fade {...animCfg.section}>
-        <Background />
-      </Fade>
-      <Fade {...animCfg.content}>
-        <div className={styles.headersWrap}>
-          <h1 className={styles.header}>
-            Älykäs kotisivu joka tukee liiketoimintaasi perusteellisesti.
-          </h1>
-          <h2 className={styles.description}>
-            Yritystä ei kannata edustaa verkossa 20 vuotta vanhalla
-            teknologialla.
-          </h2>
-          <Link href="/verkkosivut#vanhat-verkkosivut">
-            <a className={styles.link} aria-label="Linkki alempaan osioon">
-              <ImArrowDown />
-            </a>
-          </Link>
-        </div>
-      </Fade>
+      <Background />
+      <div className={styles.headersWrap}>
+        <h1 className={styles.header}>
+          Älykäs kotisivu joka tukee liiketoimintaasi perusteellisesti.
+        </h1>
+        <h2 className={styles.description}>
+          Yritystä ei kannata edustaa verkossa 20 vuotta vanhalla teknologialla.
+        </h2>
+        <Link href="/verkkosivut#vanhat-verkkosivut">
+          <a className={styles.link} aria-label="Linkki alempaan osioon">
+            <ImArrowDown />
+          </a>
+        </Link>
+      </div>
     </section>
   )
 }

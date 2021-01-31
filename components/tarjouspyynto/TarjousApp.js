@@ -2,16 +2,9 @@ import styles from "./TarjousApp.module.sass"
 import TarjousForm from "./TarjousForm"
 import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
-import { Fade } from "react-awesome-reveal"
 import { AiOutlineLoading3Quarters } from "react-icons/ai"
 import { MdThumbUp, MdThumbDown } from "react-icons/md"
 import { PriceWidget } from "./index"
-
-const animCfg = {
-  form: {
-    triggerOnce: true,
-  },
-}
 
 const sisalto = {
   header: "Lähetä tarjouspyyntö!",
@@ -88,37 +81,31 @@ const DefaultForm = ({ status, setStatus, price, setPrice }) => {
 
 const FormSubmitting = () => {
   return (
-    <Fade {...animCfg.form}>
-      <div className={styles.headers}>
-        <AiOutlineLoading3Quarters
-          className={`${styles.icon} ${styles.spinning}`}
-        />
-      </div>
-    </Fade>
+    <div className={styles.headers}>
+      <AiOutlineLoading3Quarters
+        className={`${styles.icon} ${styles.spinning}`}
+      />
+    </div>
   )
 }
 
 const FormSubmitted = ({ header, subheader }) => {
   return (
-    <Fade {...animCfg.form}>
-      <div className={styles.headers}>
-        <MdThumbUp className={styles.icon} />
-        <h2 className={styles.header}>{header}</h2>
-        <h3 className={styles.subheader}>{subheader}</h3>
-      </div>
-    </Fade>
+    <div className={styles.headers}>
+      <MdThumbUp className={styles.icon} />
+      <h2 className={styles.header}>{header}</h2>
+      <h3 className={styles.subheader}>{subheader}</h3>
+    </div>
   )
 }
 
 const FormFailed = ({ header, subheader }) => {
   return (
-    <Fade {...animCfg.form}>
-      <div className={styles.headers}>
-        <MdThumbDown className={styles.icon} />
-        <h2 className={styles.header}>{header}</h2>
-        <h3 className={styles.subheader}>{subheader}</h3>
-      </div>
-    </Fade>
+    <div className={styles.headers}>
+      <MdThumbDown className={styles.icon} />
+      <h2 className={styles.header}>{header}</h2>
+      <h3 className={styles.subheader}>{subheader}</h3>
+    </div>
   )
 }
 
