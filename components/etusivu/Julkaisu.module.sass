@@ -2,7 +2,6 @@
 
 .section
 	@include spacing
-	padding-top: 0 !important
 	display: grid
 	justify-items: center
 
@@ -20,7 +19,7 @@
 
 .ctaButton
 	text-align: center
-	margin-top: 2rem
+	margin-top: 1rem
 	a
 		z-index: 1
 		position: relative
@@ -45,16 +44,3 @@
 			color: $light
 			&::before
 				opacity: 1
-
-.plans
-	display: grid
-	grid-auto-flow: row
-	place-items: center
-	gap: 2rem
-
-@include desktop
-	.plans
-		grid-auto-flow: column
-		gap: 4rem
-	.lisapalvelutHeader
-		margin-top: 6rem

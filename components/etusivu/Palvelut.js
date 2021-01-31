@@ -1,19 +1,7 @@
 import styles from "./Palvelut.module.sass"
 import Overline from "../common/Overline"
 import Link from "next/link"
-
-const animCfg = {
-  header: {
-    duration: 1200,
-    direction: "left",
-    triggerOnce: true,
-  },
-  text: {
-    duration: 1200,
-    direction: "right",
-    triggerOnce: true,
-  },
-}
+import Ominaisuudet from "./Ominaisuudet"
 
 const Palvelut = (props) => {
   const { refs } = props
@@ -23,13 +11,12 @@ const Palvelut = (props) => {
       <div className={styles.content}>
         <Overline text="Mitä teemme?" />
         <h1 className={styles.headerMain}>
-          Kestävä verkkosivu yritykselle, mittavalla laatutestauksella.
+          Pitkäikäinen verkkosivu yritykselle, mittavalla laatutestauksella.
         </h1>
         <div className={styles.textContent}>
           <p>
-            Digiaalto on erikoistunut tuomaan tehokasta web-teknologiaa
-            Suomalaisten yrittäjien ja kuluttajien hyödyksi. Uudenaikaisen
-            kustannustehokkaan{" "}
+            Digiaalto on erikoistunut tuomaan uutta, laadukasta web-teknologiaa
+            Suomalaisten yrittäjien ja kuluttajien hyödyksi. Kustannustehokkaan{" "}
             <a
               href="https://jamstack.org/"
               rel="noopener noreferrer"
@@ -37,21 +24,21 @@ const Palvelut = (props) => {
             >
               kehitysarkkitehtuuriin
             </a>{" "}
-            siivittämänä saavutamme lukuisia mitattavia hyötyjä internetin
-            ihmeellisestä maailmassa.
+            siivittämänä pystymme saavuttamaan lukuisia mitattavia hyötyjä
+            verkossa.
           </p>
           <p>
-            Suunnittelemme ja kehitämme
+            Suunnittelemamme tuotteet ovat älykkäitä
             <Link href="/verkkosivut#uudet-verkkosivut">
-              <a> älykkäitä hybrid-sivustoja. </a>
+              <a> hybrid-sivustoja tai web-appeja. </a>
             </Link>
-            Meidän verkkosivut eivät vaadi ylläpitotoimia, ja ylittävät
-            nykymaailman verkkokäyttäjän odotukset palvelemalla häntä
-            suorituskykyisesti, turvallisesti, ja nopeasti skaalautumalla kovan
-            paikan tullessa.
+            Emme tarjoa ylläpitopalveluita sillä sivustomme eivät tarvitse
+            niitä. Haluamme ylittää verkkopalveluiden käyttäjien odotukset
+            palvelemalla heitä erityisen suorituskykyisesti ja helposti.
           </p>
         </div>
       </div>
+      <Ominaisuudet />
     </section>
   )
 }

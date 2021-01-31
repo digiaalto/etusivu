@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react"
 import Link from "next/link"
 import { LinkButton } from "../common/button"
 import { Fade } from "react-awesome-reveal"
-import { AiOutlineArrowDown } from "react-icons/ai"
+import { ImArrowDown } from "react-icons/im"
 
 const animCfg = {
   header: {
@@ -29,7 +29,7 @@ const animCfg = {
 }
 const sisalto = {
   header:
-    "Huippuluokan verkkosivut tulevaisuuten panostavalle yritykselle. Aikaanne arvostavalla asiakaspalvelulla.",
+    "Myymme modernilla teknologialla tehostettuja verkkosivuja yrityksille jotka arvostavat kestävyyttä. Välittävällä ja aikaanne arvostavalla asiakaspalvelulla.",
 }
 
 const Hero = (props) => {
@@ -61,7 +61,7 @@ const Hero = (props) => {
           <Fade {...animCfg.delayedAppear}>
             <Link href="/#palvelut">
               <a className={styles.nextArrow}>
-                <AiOutlineArrowDown />
+                <ImArrowDown />
               </a>
             </Link>
           </Fade>

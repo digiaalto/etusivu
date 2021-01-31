@@ -2,10 +2,10 @@
 
 $fadeSpeed: 2500ms
 
-
 // Layout.
 .section
 	@include spacing
+	margin-top: 3rem
 	min-height: 100vh
 	display: grid
 	place-items: center
@@ -13,7 +13,6 @@ $fadeSpeed: 2500ms
 .content
 	display: grid
 	text-align: center
-
 
 // Display animations.
 @keyframes fader
@@ -143,13 +142,13 @@ $fadeSpeed: 2500ms
 
 .nextArrow
 	display: inline-block
+	margin-top: 1rem
 	font-size: 2rem
 	color: $dark !important
-	margin-top: 1rem
-	transition: transform 150ms linear
+	transition: transform 200ms ease-in-out
 	&:hover
-		transform: scale(1.1)
-	
+		transform: scale(1.2) translateY(10%)
+
 // Media queries.
 @include tablet
 	.salesPitch
@@ -160,10 +159,14 @@ $fadeSpeed: 2500ms
 		margin: 3rem 0
 
 @include laptop
+	.section
+		margin-top: 6rem
 	.salesPitch
 		font-size: 6rem
 
 @include desktop
+	.section
+		margin-top: 5rem
 	.salesPitch
 		font-size: 8rem
 	.highlightBackground, .highlightBackground2, .highlightBackground3, .salesPitch

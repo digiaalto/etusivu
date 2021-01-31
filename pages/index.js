@@ -2,7 +2,6 @@ import { useRef } from "react"
 import Layout from "../components/layouts/"
 import Hero from "../components/etusivu/Hero"
 import Palvelut from "../components/etusivu/Palvelut"
-import Ominaisuudet from "../components/etusivu/Ominaisuudet"
 import Nayteikkuna from "../components/etusivu/Nayteikkuna"
 import Creation from "../components/etusivu/Creation"
 
@@ -48,7 +47,6 @@ const IndexPage = () => {
       <Layout topbar={true} sectionRefs={sectionRefs}>
         <Hero refs={heroRef} />
         <Palvelut refs={palvelutRef} />
-        <Ominaisuudet />
         <Nayteikkuna refs={nayteikkunaRef} />
         <Creation
           refs={{

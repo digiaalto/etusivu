@@ -7,8 +7,8 @@ const PriceWidget = ({ price, hideIfDesktop }) => {
 
   const spring = useSpring({
     ...config.gentle,
-    to: { number: price },
     from: { number: currentPrice },
+    to: { number: price },
     onRest: () => {
       if (price !== currentPrice) setCurrentPrice(price)
     },

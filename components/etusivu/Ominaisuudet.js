@@ -19,32 +19,32 @@ const ominaisuudet = [
   {
     header: "Laatutestattu",
     text:
-      "Nykyaikaiset kehitystekniikat takaavat etulyöntiaseman ikuisesti kasvavassa verkkokilpailussa ja huippuluokan tulokset Googlen laatutestissä ja algoritmissä.",
+      "Pidämme huolen että verkkosivumme ovat optimoitu ja tehostettu maailman suosituimman verkkosivujen laatutestin mukaisesti. Sivustoja ei julkaista ennen kun jokainen epäonnistumisen indikaattori on hiottu kuntoon.",
     icon: <SiPowerbi className={styles.growing} />,
   },
   {
     header: "Ongelmaton",
     text:
-      "Hybrid-verkkosivut eivät kärsi lisäosista johtuvista bugeista, vaadi jatkuvia ylläpitotoimia, eivätkä kärsi tietoturvaongelmista pienen hyökkäyspinnansa takia.",
+      "Uskomme että verkkosivujen kuuluu toimia itsenäisesti ja pitkäikäisesti julkaisun jälkeenkin. Sivustomme rakentavat ja uudelleenrakentavat itseään regeneroimalla staattiset osansa ja minimoimalla hyökkäyspinnan.",
     icon: <FaCog className={styles.spinning} />,
   },
   {
-    header: "Mukautettu",
+    header: "Suunniteltu",
     text:
-      "Erottaudu markkinoilla brändisi mukaisesti räätälöidyllä ulkoasulla, joka tuo yrityksesi persoonan ja vahvuuden esille tyylikkäästi.",
+      "Luomme yksilöityjä kotisivuja joilla tuomme yrityksesi persoonan ja vahvuudet esille. Suunnittelussa olemme mahdollisimman asiakaslähtöisiä, sivustomme toimivat käyttäjäystävällisesti ja herättävät luottamusta.",
     icon: <FaPaintBrush className={styles.bouncing} />,
   },
 ]
 
 const Ominaisuudet = () => {
   return (
-    <div className={styles.ominaisuudet}>
-      <Fade {...animCfg.ominaisuudet} className={styles.fadeWrapper}>
+    <Fade {...animCfg.ominaisuudet}>
+      <div className={styles.ominaisuudet}>
         {ominaisuudet.map((ominaisuus, index) => (
           <Ominaisuus data={ominaisuus} key={`ominaisuus-${index}`} />
         ))}
-      </Fade>
-    </div>
+      </div>
+    </Fade>
   )
 }
 
@@ -54,7 +54,7 @@ const Ominaisuus = (props) => {
     <div className={styles.ominaisuus}>
       <div className={styles.iconWrapper}>{icon}</div>
       <span className={styles.header}>{header}</span>
-      <p className={styles.paragraph}>{text}</p>
+      <p className={styles.textWrap}>{text}</p>
     </div>
   )
 }

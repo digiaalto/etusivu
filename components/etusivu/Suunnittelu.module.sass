@@ -2,7 +2,7 @@
 
 .section
 	@include spacing
-	padding-bottom: 2rem !important
+	margin-top: 3rem
 
 .column
 	display: grid
@@ -39,7 +39,7 @@
 	.column
 		grid-auto-flow: column
 		justify-items: center
-		gap: 2rem
+		gap: 3rem
 		p:first-of-type
 			justify-self: flex-end
 		p:last-of-type
@@ -49,7 +49,9 @@
 		
 @include desktop
 	.imgWrapper
-		justify-self: flex-end
+		justify-self: end
+		transform: translateX(-30px)
+		align-self: center
 	.column
 		&:last-of-type
 			gap: 3rem

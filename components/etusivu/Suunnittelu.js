@@ -8,7 +8,7 @@ const Suunnittelu = (props) => {
   return (
     <section className={styles.section} ref={refs} id="suunnittelu">
       <Overline
-        text="Miten työt etenee"
+        text="Miten työskentelemme"
         customStyle={{ textAlign: "center" }}
       />
       <StepIndicator

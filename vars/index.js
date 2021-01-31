@@ -1,6 +1,7 @@
 const common = {
   delay: 400,
   duration: 1200,
+  triggerOnce: true,
 }
 
 const basicFade = {

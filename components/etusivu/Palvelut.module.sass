@@ -3,6 +3,8 @@
 // Layout.
 .section
 	@include spacing
+	min-height: 100vh
+	display: grid
 
 .content
 	display: grid
@@ -13,12 +15,14 @@
 @include tablet
 	.section
 		padding-bottom: 4rem !important
+	.section
+		gap: 4rem
 
 @include laptop
 	.textContent
 		display: grid
 		grid-auto-flow: column
-		gap: 2rem
+		gap: 3rem
 
 @include desktop
 	.content
