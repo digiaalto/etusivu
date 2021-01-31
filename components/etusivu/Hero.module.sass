@@ -1,10 +1,11 @@
-@import "../../styles/_partials.sass"
+// @import "../../styles/partials"
+@use "../../styles/partials"
 
 $fadeSpeed: 2500ms
 
 // Layout.
 .section
-	@include spacing
+	@include partials.spacing
 	margin-top: 3rem
 	min-height: 100vh
 	display: grid
@@ -69,7 +70,6 @@ $fadeSpeed: 2500ms
 		left: 0
 		z-index: 0
 		content: "Suunnittelu."
-		color: $dark
 
 .highlightBackground2
 	position: relative
@@ -85,7 +85,6 @@ $fadeSpeed: 2500ms
 		left: 0
 		z-index: 0
 		content: "Kehitys."
-		color: $dark
 
 .highlightBackground3
 	position: relative
@@ -101,7 +100,6 @@ $fadeSpeed: 2500ms
 		left: 0
 		z-index: 0
 		content: "Julkaisu."
-		color: $dark
 
 .highlightForeground
 	position: relative
@@ -132,7 +130,7 @@ $fadeSpeed: 2500ms
 	
 // Content.
 .description
-	@include headerDescription
+	@include partials.headerDescription
 	max-width: 720px
 
 .ctaButtons
@@ -144,13 +142,13 @@ $fadeSpeed: 2500ms
 	display: inline-block
 	margin-top: 1rem
 	font-size: 2rem
-	color: $dark !important
+	color: partials.$dark !important
 	transition: transform 200ms ease-in-out
 	&:hover
 		transform: scale(1.2) translateY(10%)
 
 // Media queries.
-@include tablet
+@include partials.tablet
 	.salesPitch
 		font-size: 5rem
 	.ctaButtons
@@ -158,13 +156,13 @@ $fadeSpeed: 2500ms
 		justify-content: center
 		margin: 3rem 0
 
-@include laptop
+@include partials.laptop
 	.section
 		margin-top: 6rem
 	.salesPitch
 		font-size: 6rem
 
-@include desktop
+@include partials.desktop
 	.section
 		margin-top: 5rem
 	.salesPitch

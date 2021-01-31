@@ -1,8 +1,8 @@
-@import "../../styles/_partials.sass"
+@use "../../styles/_partials.sass"
 
 // Layout.
 .section
-	@include spacing
+	@include partials.spacing
 	min-height: 100vh
 	display: grid
 
@@ -10,21 +10,21 @@
 	display: grid
 
 .headerMain
-	@include headerMain
+	@include partials.headerMain
 
-@include tablet
+@include partials.tablet
 	.section
 		padding-bottom: 4rem !important
 	.section
 		gap: 4rem
 
-@include laptop
+@include partials.laptop
 	.textContent
 		display: grid
 		grid-auto-flow: column
 		gap: 3rem
 
-@include desktop
+@include partials.desktop
 	.content
 		place-items: center
 	.headerMain
