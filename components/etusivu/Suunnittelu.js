@@ -18,10 +18,10 @@ const Suunnittelu = (props) => {
       />
       <div className={styles.column}>
         <p>
-          Hyvin suunniteltu kotisivu luo vaikutelman joka saa vierailijan
-          jatkamaan selailua ja oppimaan yrityksestä ja kiinnostumaan
-          palveluistasi. Huonosti suunnitteltu sivusto saa heidät poistumaan
-          ennenaikaisesti ja kääntymään kilpailijan puoleen.
+          Hyvin suunniteltu kotisivu luo vaikutelman joka saa käyttäjän pysymään
+          sivulla, oppimaan yrityksestäsi ja kiinnostumaan palveluistasi.
+          Huonosti suunnitteltu sivusto saa heidät poistumaan ennenaikaisesti ja
+          kääntymään kilpailijan puoleen.
         </p>
         <p>
           Jotta suunnittelu tuottaa hedelmää kuuluu meidän ensitöiksi määritellä

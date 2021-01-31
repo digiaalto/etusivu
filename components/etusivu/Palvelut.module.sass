@@ -9,15 +9,12 @@
 
 .headerMain
 	@include headerMain
-	max-width: 900px
 
 @include tablet
 	.section
 		padding-bottom: 4rem !important
 
 @include laptop
-	.header
-		max-width: 800px
 	.textContent
 		display: grid
 		grid-auto-flow: column
@@ -26,5 +23,5 @@
 @include desktop
 	.content
 		place-items: center
-	.textContent
-		gap: 4rem
+	.headerMain
+		text-align: center

@@ -21,13 +21,13 @@ const Palvelut = (props) => {
   return (
     <section className={styles.section} id="palvelut" ref={refs}>
       <div className={styles.content}>
-        <Overline text="Mitä täällä tapahtuu?" />
+        <Overline text="Mitä teemme?" />
         <h1 className={styles.headerMain}>
-          Kestäviä verkkosivuja yrityksille, mittavalla laatutestauksella.
+          Kestävä verkkosivu yritykselle, mittavalla laatutestauksella.
         </h1>
         <div className={styles.textContent}>
           <p>
-            Digiaalto on erikoistunut tuomaan tuloksia tuottavaa web-teknologiaa
+            Digiaalto on erikoistunut tuomaan tehokasta web-teknologiaa
             Suomalaisten yrittäjien ja kuluttajien hyödyksi. Uudenaikaisen
             kustannustehokkaan{" "}
             <a
