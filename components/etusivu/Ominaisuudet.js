@@ -15,7 +15,7 @@ const ominaisuudet = [
   {
     header: "Suunniteltu",
     text:
-      "Luomme yksilöityjä kotisivuja joilla tuomme yrityksesi persoonan ja vahvuudet esille. Suunnittelussa olemme mahdollisimman asiakaslähtöisiä, sivustomme ovat käyttäjäystävällisiä ja luottamusta herättäviä.",
+      "Luomme yksilöityjä kotisivuja joilla tuomme yrityksen uniikin persoonan ja vahvuudet esille. Suunnittelussa olemme mahdollisimman asiakaslähtöisiä, sivustomme tehdään käyttäjäystävällisiksi ja luottamusta herättäviksi.",
   },
 ]
 

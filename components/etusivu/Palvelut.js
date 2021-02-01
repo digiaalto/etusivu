@@ -8,40 +8,36 @@ const Palvelut = (props) => {
 
   return (
     <section className={styles.section} id="palvelut" ref={refs}>
-      <div className={styles.content}>
+      <HeadersWrap>
         <Overline text="Mitä teemme?" />
         <h1 className={styles.headerMain}>
-          Pitkäikäinen verkkosivu yritykselle, mittavalla laatutestauksella.
+          Suunnittelemme ja kehitämme kestäviä verkkosivuja, mittavalla
+          laatutestauksella.
         </h1>
-        <div className={styles.textContent}>
-          <p>
-            Digiaalto on erikoistunut tuomaan uutta, laadukasta web-teknologiaa
-            Suomalaisten yrittäjien ja kuluttajien hyödyksi. Kustannustehokkaan{" "}
-            <a
-              href="https://jamstack.org/"
-              rel="noopener noreferrer"
-              target="_blanK"
-            >
-              kehitysarkkitehtuuriin
-            </a>{" "}
-            siivittämänä pystymme saavuttamaan lukuisia mitattavia hyötyjä
-            verkossa.
-          </p>
-          <p>
-            Suunnittelemamme tuotteet ovat älykkäitä
-            <Link href="/verkkosivut#uudet-verkkosivut">
-              <a aria-label="Nuoli alaspäin"> hybrid-sivustoja </a>
-            </Link>
-            ja web-appeja. Emme tarjoa ylläpitopalveluita sillä sivustomme eivät
-            tarvitse niitä. Haluamme ylittää verkkopalveluiden käyttäjien
-            odotukset palvelemalla heitä erityisen suorituskykyisesti ja
-            helposti.
-          </p>
-        </div>
-      </div>
+      </HeadersWrap>
+      <TextsWrapper>
+        <p className={styles.headerDescription}>
+          Haluamme edistää suomalaisten yritysten verkkoläsnäoloa tuorreella
+          teknologialla, millä pystymme parantamaan meidän kaikkien
+          käyttäjäkokemusta verkossa.
+          <Link href="/verkkosivut#uudet-verkkosivut">
+            <a aria-label="Hybrid-sivustoja"> Hybrid-sivustomme </a>
+          </Link>
+          ovat ultratehokkaita, turvallisia, skaalautuvat automaattisesti,
+          eivätkä tarvitse ympärivuotisia ylläpitotoimia.
+        </p>
+      </TextsWrapper>
       <Ominaisuudet />
     </section>
   )
 }
+
+const HeadersWrap = ({ children }) => (
+  <div className={styles.headersWrap}>{children}</div>
+)
+
+const TextsWrapper = ({ children }) => (
+  <div className={styles.paragraphsWrap}>{children}</div>
+)
 
 export default Palvelut

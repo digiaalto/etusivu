@@ -5,11 +5,7 @@ import Logo from "./Logo"
 const Navigation = (props) => {
   const { topbar } = props
   return (
-    <nav
-      role="navigation"
-      className={styles.nav}
-      style={topbar ? null : { marginTop: "0" }}
-    >
+    <nav role="navigation" className={styles.nav}>
       <Logo />
       <NavList />
     </nav>

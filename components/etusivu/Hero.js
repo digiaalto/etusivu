@@ -1,8 +1,8 @@
 import styles from "./Hero.module.sass"
 import React, { useState, useEffect } from "react"
-// import Link from "next/link"
+import Link from "next/link"
 import { LinkButton } from "../common/button"
-// import { ImArrowDown } from "react-icons/im"
+import { ImArrowDown } from "react-icons/im"
 
 const Hero = (props) => {
   const { refs } = props
@@ -25,14 +25,15 @@ const Hero = (props) => {
         <StylizedHeaders animElement={animElement} />
         <CtaButtons />
         <h1 className={styles.description}>
-          Koodaamme modernilla teknologialla tehostettuja verkkosivuja
-          yrityksille jotka arvostavat kestävyyttä.
+          Hei. Emme ole markkinointitoimisto. Haluamme vain rakentaa tehokkaalla
+          teknologialla verkkosivuja yrityksille jotka arvostavat nykyaikaista
+          teknologiaa ja sivuston vaivatonta toimintaa.
         </h1>
-        {/* <Link href="/#palvelut">
+        <Link href="/#palvelut">
           <a className={styles.nextArrow} aria-label="Linkki alempaan osioon">
             <ImArrowDown />
           </a>
-        </Link> */}
+        </Link>
       </div>
     </section>
   )

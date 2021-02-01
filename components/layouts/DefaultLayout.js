@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import SEO from "../common/SEO"
 import Topbar from "../common/Topbar"
-// import Navigation from "../common/Navigation"
+import Navigation from "../common/Navigation"
 import Menu from "../common/Menu"
 import Footer from "../common/Footer"
 
@@ -18,7 +18,7 @@ const DefaultLayout = (props) => {
     <React.Fragment>
       <SEO {...props} />
       {topbar && <Topbar toggleOverlay={toggleOverlay} />}
-      {/* <Navigation topbar={topbar} /> */}
+      <Navigation topbar={topbar} />
       <Menu
         menuOpen={overlayVisible}
         toggleOverlay={toggleOverlay}

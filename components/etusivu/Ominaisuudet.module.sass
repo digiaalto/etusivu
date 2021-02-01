@@ -22,9 +22,10 @@
 // Content.
 .header
 	@include typography.headerSmall
-	display: inline-block
-	border-radius: 9999px
+	display: block
 	padding: 0.5rem 1rem
+	text-align: center
+	border-radius: 9999px
 	background-color: colors.$dark
 	color: colors.$light
 	
@@ -60,11 +61,11 @@
 @include breakpoints.laptop
 	.ominaisuudet
 		grid-auto-flow: column
-		gap: 3rem
+		gap: 4rem
 	.ominaisuus
 		margin-top: 0
 
 @include breakpoints.desktop
 	.ominaisuudet
 		place-content: center
-		gap: 4rem
+		gap: 5rem
