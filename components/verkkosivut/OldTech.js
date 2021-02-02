@@ -60,16 +60,16 @@ const OldTech = (props) => {
           </span>
           <p>
             Wordpressin ohjelmistoekosysteemistä riippuvaiset
-            markkinointitoimistot ovat erikoistuneet kokoamaan liukuhihnalla
-            valmisteemoista ja lisäosista sivustoja, joita he kauppaavat
-            pk-yrittäjille jotka eivät tiedä paremmista vaihtoehdoista.
+            markkinointitoimistot ovat erikoistuneet kokoamaan valmisteemoista
+            ja lisäosista sivustoja, joita he kauppaavat pk-yrittäjille jotka
+            eivät tiedä paremmista vaihtoehdoista.
           </p>
           <p>
-            Valmisteemoista tehdyt sivustot ovat aina rajoittuneita
-            ominaisuuksiltaan ja kärsivät ärsyttävistä pullonkauloista, joista
-            ei maksa pelkästään yritys, mutta myös yrityksen pettynyt asiakas.
+            Teemasivut ovat aina rajoittuneita ominaisuuksiltaan ja kärsivät
+            huonon suorituskyvyn aiheuttamista pullonkauloista, joista ei maksa
+            pelkästään yritys, mutta myös yrityksen pettynyt asiakas.
           </p>
-          <p>
+          <p className="important">
             Verkkokäyttäjillä ei ole kärsivällisyyttä tai mielenkiintoa selata
             hitaita mitäänsanomattomia yrityssivuja. Meidän pitää ylittää hänen
             odotukset, ja Wordpress alustana ei enään riitä... 😔

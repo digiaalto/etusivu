@@ -1,6 +1,6 @@
 import styles from "./ScoreWidget.module.sass"
 import React, { useEffect, useState, useRef } from "react"
-// import { aniamted, useSpring } from "react-spring"
+import { animated, useSpring } from "react-spring"
 
 const gray = "#bdc1c6"
 const green = "#18b663"
@@ -23,18 +23,23 @@ const ScoreWidget = (props) => {
   const center = size / 2
   const radius = size / 2 - strokeWidth / 2
   const circumference = 2 * Math.PI * radius
-  const [offset, setOffset] = useState(0) // Controls the length.
+  const [progressOffset, setProgressOffset] = useState(0) // Controls the length.
   const bgRef = useRef(null)
   const fgRef = useRef(null)
 
   useEffect(() => {
     const progressOffset = ((100 - progress) / 100) * circumference
-    setOffset(progressOffset)
+    setProgressOffset(progressOffset)
     const bgColor = progress < 50 ? bgRed : progress < 90 ? bgOrange : bgGreen
     const fgColor = progress < 50 ? red : progress < 90 ? orange : green
     bgRef.current.style = `stroke: ${bgColor}`
     fgRef.current.style = `stroke: ${fgColor}`
-  }, [setOffset, circumference, progress, offset])
+  }, [])
+
+  const spring = useSpring({
+    from: { strokeDashoffset: 0 },
+    to: { strokeDashoffset: progressOffset },
+  })
 
   return (
     <div className={styles.container}>
@@ -50,7 +55,7 @@ const ScoreWidget = (props) => {
               r={radius}
               strokeWidth={strokeWidth}
             />
-            <circle
+            <animated.circle
               ref={fgRef}
               className={styles.foreground}
               stroke={circleTwoStroke}
@@ -59,7 +64,7 @@ const ScoreWidget = (props) => {
               r={radius}
               strokeWidth={strokeWidth}
               strokeDasharray={circumference}
-              strokeDashoffset={offset}
+              style={spring}
               strokeLinecap="round"
             />
           </svg>

@@ -1,0 +1,13 @@
+@use "@/partials/breakpoints"
+
+.tracker
+	position: fixed
+	left: 10px
+	bottom: 10px
+	font-weight: 600
+	font-size: 0.9rem
+	display: none
+
+@include breakpoints.laptop
+	.tracker
+		display: inline-block

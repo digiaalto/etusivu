@@ -8,19 +8,14 @@ const Kehitys = (props) => {
 
   return (
     <section className={styles.section} ref={refs} id="kehitys">
-      <StepIndicator
-        overline="Kehitys"
-        header="Verkkosivusi moottori."
-        second
-      />
+      <StepIndicator overline="Kehitys" header="Tehokkaampi moottori." second />
       <div className={styles.logosWeUse}>
         <LogosWeUse />
       </div>
       <p className={styles.description}>
         Verkkosivumme syntyvät harkitun suunnittelun ja käsinvalittujen
-        teknologien ja mikropalveluiden yhdistelmästä. Käytämme oikeasti
-        huippuluokan teknologia-stäkkiä jota suosii digijätit, mutta myös ajan
-        hermolla surffaavat pienyritykset.
+        teknologien ja mikropalveluiden yhdistelmästä. Käytämme tekniikoita jota
+        suosii digijätit ja muut ajan hermolla surffaavat yritykset.
       </p>
       <LinkButton href="/verkkosivut" text="Lisää Verkkosivuista" />
     </section>

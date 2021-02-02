@@ -34,7 +34,7 @@ const Background = () => {
   let springProps = {
     config: {
       mass: 1,
-      friction: 15,
+      friction: 7,
     },
     delay: delay,
     from: { height: from },
