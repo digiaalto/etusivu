@@ -5,8 +5,7 @@ const Textbar = () => {
     <section className={styles.section}>
       <h3 className={styles.text}>
         Jos yrityksesi verkkopalvelut tehdään edelleen vanhojen tekniikoiden
-        varassa, kannattaa päivittää ne nykyaikaisiin standardeihin. Turvaa
-        yrityksesi potentiaali verkossa.
+        varassa, kannattaa päivittää ne nykyaikaisiin standardeihin.
       </h3>
     </section>
   )

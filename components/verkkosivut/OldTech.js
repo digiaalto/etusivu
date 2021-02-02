@@ -7,50 +7,72 @@ const progress = {
   suorituskyky: 33,
   esteettomyys: 69,
   parhaatKaytannot: 82,
-  seo: 89,
+  seo: 70,
 }
 
 const OldTech = (props) => {
   const { refs } = props
   return (
     <section className={styles.section} id="vanhat-verkkosivut" ref={refs}>
-      <div className={styles.overlineWrap}>
-        <span className={styles.overlineIcon}>🙈</span>
-        <Overline text="Mennyttä maailmaa" />
+      <div className={styles.headers}>
+        <div className={styles.overlineWrap}>
+          <Overline text="Totuus WordPressistä" />
+        </div>
+        <h1 className={styles.headerMain}>
+          WordPressiä kaupataan parhaana verkkoratkaisuna suomalaisille
+          yrittäjille, todellisuudessa siitä tykkää vain markkinointitoimistot.
+        </h1>
       </div>
-      <h1 className={styles.headerMain}>
-        WordPressiä markkinoidaan parhaana verkkoratkaisuna suomalaiselle
-        yrittäjälle. Oikeasti siitä hyötyy enemmän WordPress-toimisto kuin
-        kukaan muu.
-      </h1>
       <div className={styles.column}>
         <div className={styles.imgWrap}>
           <Image
-            src={"/images/typewriter.svg"}
+            src={"/images/verkkosivut/wp-poop.png"}
             layout="intrinsic"
-            width={408}
-            height={308}
-            alt="Hidas WordPress kuvaus"
+            width={506}
+            height={512}
+            alt="Wordpressiä kuvaava kakkakasa."
           />
+          <span className={styles.imgNote}>Taiteilijan tulkinta.</span>
         </div>
         <div className={styles.textWrap}>
-          <h2 className={styles.headerDescription}>
-            WordPress on vastaus ongelmaan, mikä on ratkaisu paremmin jo ajat
-            sitten. Silti markkinointitoimistot myyvät WordPressiä, he ovat
-            riippuvaisia sen isosta vanhasta ohjelmistoekosysteemistä.
+          <h2 className={styles.mediumHeader}>
+            WordPress on vanha ratkaisu ongelmaan mikä on sittemmin ratkaisu
+            tehokkaammin.
           </h2>
-          <p>
-            Käyttämällä kopioituja teemoja, ulkoistettuja lisäosia, raahaa ja
-            pudota ominaisuuksia, WordPress-toimistot voivat myydä
-            keskivertoisia kotisivuja liukuhihnanopeudella.
-          </p>
           <p>
             WordPress aloitti yksinkertaisena bloggaamisalustana, ja vuosien
             mittaan se on kehittynyt sellaiseksi mitä sen ei koskaan pitänyt
             olla, aiheuttaen lukuisia ongelmia suorituskyvyssä,
-            skaalautuvuudessa ja ohjelmistokehityksessä. Kaiken lisäksi nämä
-            sivustot vaativat säännöllisiä ylläpitotoimia ja päivityksiä
-            pysyäkseen toiminnassa.
+            skaalautuvuudessa ja ohjelmistokehityksessä.
+          </p>
+          <p>
+            Verkkoalustojen rakenteelliset ongelmat heijastuvat käyttäjiin
+            saakka tönkkönä ja bugisena käyttökokemuksena, mikä taas tahrii
+            yrittäjän tuotemerkkiä ja kyseenalaistaa hänen luotettavuutta.
+          </p>
+          <p>
+            Piilevistä vioista johtuvia haittoja yritetään mitigoida jatkuvilla
+            ylläpitotoimilla ja päivityksillä, mutta Wordpressin heikkoudet
+            menevät todella syvälle.
+          </p>
+          <span className={styles.mediumHeader}>
+            Vanhasta ratkaisusta on tullut uusi ongelma.
+          </span>
+          <p>
+            Wordpressin ohjelmistoekosysteemistä riippuvaiset
+            markkinointitoimistot ovat erikoistuneet kokoamaan liukuhihnalla
+            valmisteemoista ja lisäosista sivustoja, joita he kauppaavat
+            pk-yrittäjille jotka eivät tiedä paremmista vaihtoehdoista.
+          </p>
+          <p>
+            Valmisteemoista tehdyt sivustot ovat aina rajoittuneita
+            ominaisuuksiltaan ja kärsivät ärsyttävistä pullonkauloista, joista
+            ei maksa pelkästään yritys, mutta myös yrityksen pettynyt asiakas.
+          </p>
+          <p>
+            Verkkokäyttäjillä ei ole kärsivällisyyttä tai mielenkiintoa selata
+            hitaita mitäänsanomattomia yrityssivuja. Meidän pitää ylittää hänen
+            odotukset, ja Wordpress alustana ei enään riitä... 😔
           </p>
         </div>
         <div className={styles.scoreWrap}>

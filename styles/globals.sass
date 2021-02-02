@@ -14,6 +14,9 @@ html
 	box-sizing: border-box
 *, *:before, *:after
 	box-sizing: inherit
+	text-rendering: optimizeLegibility
+	-webkit-font-smoothing: antialiased
+	text-shadow: rgba(0,0,0,.01) 0 0 1px
 body
 	margin: 0
 	padding: 0
@@ -26,12 +29,6 @@ ol, ul
 img
 	max-width: 100%
 	height: auto
-
-// *
-// 	text-rendering: optimizeLegibility
-// 	-webkit-font-smoothing: antialiased
-// 	-moz-osx-font-smoothing: grayscale
-// 	font-smooth: auto
 
 ::selection
 	color: #fff
@@ -67,9 +64,9 @@ p
 		max-width: 520px
 
 // Custom classes.
-.bold
+.important
 	font-weight: 600
-
+	color: $dark
 .headerMain
 	@include headerMain
 .headerDescription

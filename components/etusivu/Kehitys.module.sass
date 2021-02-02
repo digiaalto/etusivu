@@ -1,29 +1,18 @@
 @use "@/partials/breakpoints"
 @use "@/partials/spacing"
+@use "@/partials/typography"
 
 .section
 	@include spacing.section
 	display: grid
 	justify-items: center
 
-.content
-	display: grid
-	justify-items: center
-
-.buttonCustomClass
+.description
+	@include typography.headerDescription
 	margin-top: 1rem
-
-.marginBottomRemover
-	h1
-		margin-bottom: 0 !important
+	margin-bottom: 3rem
 
 // MEDIA QUERIES.
-@include breakpoints.laptop
-	.content
-		grid-auto-flow: column
-		justify-items: center
-		gap: 3rem
-		p:first-of-type
-			justify-self: flex-end
-		p:last-of-type
-			justify-self: flex-start
+@include breakpoints.tablet
+	.description
+		text-align: center

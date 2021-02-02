@@ -4,20 +4,24 @@
 	display: block
 	user-select: none
 	a, button
-		display: inline-block
-		min-width: 225px
-		padding: 0.6rem 1.5rem
-		border: 2px solid transparent
+		display: inline-flex
+		justify-content: center
+		align-items: center
+		padding: 0 25px 0 25px
+		min-width: 200px
+		height: 50px
+		border: 1px solid transparent
 		border-radius: 2px
+		font-size: 1rem
+		font-weight: 500
+		text-transform: capitalize
 		background-color: colors.$dark
 		color: colors.$light
-		font-weight: 600
-		text-align: center
-		transition: all 400ms ease-in-out
+		transition: all 200ms ease
 		cursor: pointer
 		&:hover, &:focus
 			outline: none
-			border: 2px solid colors.$dark
+			border: 1px solid colors.$dark
 			background-color: colors.$light
 			color: colors.$dark
 		
@@ -43,10 +47,9 @@
 		
 .alternative
 	a, button
-		border: 2px solid rgba(0, 0, 0, 0.33)
+		border: 1px solid #eaeaea
 		background-color: transparent
 		color: colors.$dark
-
 		&:hover, &:focus
-			background-color: 2px solid colors.$dark
+			background-color: 1px solid colors.$dark
 		

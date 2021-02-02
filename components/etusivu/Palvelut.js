@@ -11,20 +11,19 @@ const Palvelut = (props) => {
       <HeadersWrap>
         <Overline text="Mitä teemme?" />
         <h1 className={styles.headerMain}>
-          Suunnittelemme ja kehitämme kestäviä verkkosivuja, mittavalla
-          laatutestauksella.
+          Toteutamme suomalaisten yrittäjien tavoitteita käytännöllisillä, aikaa
+          säästävillä verkkopalveluilla.
         </h1>
       </HeadersWrap>
       <TextsWrapper>
         <p className={styles.headerDescription}>
-          Haluamme edistää suomalaisten yritysten verkkoläsnäoloa tuorreella
-          teknologialla, millä pystymme parantamaan meidän kaikkien
-          käyttäjäkokemusta verkossa.
+          Suunnittelemme kestäviä verkkosivuja, mittavalla laatutestauksella.
           <Link href="/verkkosivut#uudet-verkkosivut">
             <a aria-label="Hybrid-sivustoja"> Hybrid-sivustomme </a>
           </Link>
-          ovat ultratehokkaita, turvallisia, skaalautuvat automaattisesti,
-          eivätkä tarvitse ympärivuotisia ylläpitotoimia.
+          ovat ultratehokkaita, turvallisia, eivät vaadi ympärivuotista
+          ylläpitoa, sekä pystyvät skaalautumaan automaattisesti ja
+          kustannustehokkaasti.
         </p>
       </TextsWrapper>
       <Ominaisuudet />

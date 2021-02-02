@@ -6,21 +6,16 @@ const Julkaisu = (props) => {
   const { refs } = props
   return (
     <section className={styles.section} ref={refs} id="julkaisu">
-      <StepIndicator overline="Julkaisu" header="D-day." third />
+      <StepIndicator overline="Julkaisu" header="Hetki on koittanut." third />
       <p className={styles.description}>
-        Optimoimme ja lähetämme kaikki sivustomme globaaliin
-        sisällönjulkaisuverkkoon joka skaalautuu kävijöiden mukaisesti. Saat
-        sähköpostiohjeet sivuston käytöstä, sekä muista käyttöönotetuista
-        mikropalveluista. Pidämme myös asiakaspalvelulinjat ikuisesti auki.
-      </p>
-      <p className={styles.description}>
-        Sivustomme ovat rakennettu pyörimään pitkäikäisesti ilman häiriöitä,
-        jotta asiakkaamme voivat keskittyä yrityksensä toimintaan
-        sataprosenttisesti.
+        Lähetämme sivustosi globaaliin sisällönjulkaisuverkkoon joka skaalautuu
+        kävijöiden mukaisesti. Saat sähköpostiohjeet sivuston käytöstä, sekä
+        muista käyttöönotetuista mikropalveluista, ja asiakaspalvelulinjamme
+        pysyvät teille aina auki.
       </p>
       <LinkButton
         href="/tarjouspyynto"
-        text="Lähetä Tarjouspyyntö"
+        text="Hinta-arvio"
         customClass={styles.ccButton}
       />
     </section>

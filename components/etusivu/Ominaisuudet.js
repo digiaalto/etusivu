@@ -3,19 +3,19 @@ import React from "react"
 
 const ominaisuudet = [
   {
-    header: "Laatutestattu",
+    header: "Optimoitu",
     text:
-      "Kutsumuksemme on valmistaa tarkasti optimoituja, tehokkaita verkkosivuja, jotka erottuvat omaan luokkaansa maailman suosituimman verkkosivujen laatutestin sadoissa eri testeissä.",
+      "Kutsumuksemme on rakentaa tuloksia tuottavia yrityssivuja. Työtämme siivittää älykäs kehitysarkkitehtuuri, mistä yrityksesi saa mitattavia hyötyjä ja etulyöntiaseman verkossa.",
   },
   {
     header: "Ongelmaton",
     text:
-      "Uskomme että verkkosivujen kuuluu toimia itsenäisesti ja pitkäikäisesti julkaisun jälkeenkin. Sivustomme rakentavat ja uudelleenrakentavat itseään regeneroimalla staattiset osansa ja minimoimalla hyökkäyspinnan.",
+      "Uskomme että verkkosivujen kuuluu toimia itsenäisesti ja pitkäikäisesti julkaisun jälkeenkin. Sivustomme eivät vaadi ympärivuotista huoltotyötä tai jatkuvaa päivittelyä.",
   },
   {
-    header: "Suunniteltu",
+    header: "Mukautettu",
     text:
-      "Luomme yksilöityjä kotisivuja joilla tuomme yrityksen uniikin persoonan ja vahvuudet esille. Suunnittelussa olemme mahdollisimman asiakaslähtöisiä, sivustomme tehdään käyttäjäystävällisiksi ja luottamusta herättäviksi.",
+      "Suunnittelemme personoituja markkinointikanavia, joilla korostamme yrityksenne vahvuuksia ja hyötyjä. Samalla noudatamme parhaita käytäntöjä ja saavutettavuusstandardeja.",
   },
 ]
 

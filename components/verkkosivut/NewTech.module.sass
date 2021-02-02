@@ -1,22 +1,17 @@
-@import "../../styles/_partials"
+// @import "../../styles/_partials"
+@use "@/partials/spacing"
+@use "@/partials/colors"
+@use "@/partials/typography"
+@use "@/partials/breakpoints"
 
 .firstSection
-	@include spacing
-	display: flex
-	flex-direction: column
+	@include spacing.section
 
 .middleSection
-	@include spacing
-	padding-top: 0 !important
-	display: flex
-	flex-direction: column
+	@include spacing.section
 
 .overlineWrap
-	text-align: center
-
-.overlineIcon
-	display: block
-	font-size: 1.33rem
+	margin-bottom: 1.5rem
 
 .takuutWrap
 	margin-top: 2rem
@@ -29,20 +24,31 @@
 .scoreWrap
 	margin: 1rem 0
 
+.featuresHeader
+	@include typography.headerMedium
+	border-bottom: 2px dotted colors.$dark
+	padding-bottom: 0.33rem
+	margin-bottom: 1em
+
 .featureHeader
-	@include headerSmall
+	@include typography.headerSmall
 	max-width: 720px
 
-@include tablet
+@include breakpoints.tablet
 	.description
 		display: inline-block
 		margin-top: 0
 		max-width: 800px
+	.overlineWrap
+		margin-bottom: 4rem
+		text-align: center
 	
-@include desktop
+@include breakpoints.desktop
 	.features
 		grid-template: auto auto / auto auto
 		gap: 1rem 3rem
 	.takuutWrap
 		margin-top: 3rem
 		margin-bottom: 3rem
+	.featuresHeader
+		border-bottom: 4px dotted colors.$dark

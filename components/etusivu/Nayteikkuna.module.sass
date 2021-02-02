@@ -4,6 +4,7 @@
 
 .section
 	@include spacing.section
+	margin-bottom: 2rem
 
 .content
 	display: grid
@@ -22,6 +23,8 @@
 		gap: 6rem
 
 @include breakpoints.desktop
+	.section
+		margin-bottom: 10rem
 	.naytteetWrap
 		gap: 10rem
 	.content

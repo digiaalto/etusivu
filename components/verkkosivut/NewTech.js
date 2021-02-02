@@ -24,29 +24,50 @@ const Hybrid = ({ refs }) => {
   return (
     <section className={styles.firstSection} id="uudet-verkkosivut" ref={refs}>
       <div className={styles.overlineWrap}>
-        <span className={styles.overlineIcon}>💡</span>
         <Overline text="Piilaaksosta uutta koodia" />
       </div>
       <h1>
-        Rakennamme älykkäistä hybrid-verkkosivuista optimoituja myyntikanavia
-        yrityksille.
+        Rakennamme älykkäistä hybrid-verkkosivuista optimoituja myyntikanavia.
       </h1>
       <h2 className="headerDescription">
-        Jamstack arkkitehtuuria hyödyntävä Next.js käyttöliittymäkehys soveltuu
-        sekä yksinkertaisten kotisivujen, mutta myös laajempien web-appejen
-        rakentamiseen.
+        {/* <a
+          href="https://jamstack.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Jamstack-arkkitehtuuria
+        </a>{" "}
+        käyttävä{" "}
+        <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">
+          Next.js-käyttöliittymäkehys
+        </a>{" "}
+        soveltuu sekä yksinkertaisten kotisivujen, verkkokauppojen, sekä
+        laajempien web-appejen rakentamiseen. */}
+        Digiaallon hybrid-sivustot rakennetaan käyttäen tuorretta teknologiaa
+        suoraan Piilaaksosta. JAMstack-arkkitehtuuri kehitettiin jotta
+        internetin käyttökokemus kohenisi ja olisi turvallista. Tuomme tätä
+        edistynyttä kustannustehokasta tekniikkaa suomalaisten hyödyksi
+        kilpailuhintaisesti.
       </h2>
       <div className={styles.takuutWrap}>
         <Takuut />
       </div>
       <div className={styles.contentWrap}>
+        <h2 className={styles.featuresHeader}>Käytännön etuja.</h2>
         <div className={styles.features}>
           <div className={styles.feature}>
             <h3 className={styles.featureHeader}>
-              Suorituskyky on erityisen tärkeää käyttäjien mobiilikokemuksessa,
-              Googlen mukaan jopa ulkoasua tärkeämpi. Pidemmät latausajat
-              johtavat ennenaikaiseen poistumiseen ja vaikuttaa negatiivisesti
-              brändin imagoon.
+              Suorituskyky on erityisen tärkeää käyttäjien mobiilikokemuksessa,{" "}
+              <a
+                href="https://youtu.be/mLjxXPHuIJo?t=72"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Googlen mukaan
+              </a>{" "}
+              jopa ulkoasua tärkeämpi. Pidemmät latausajat johtavat
+              ennenaikaiseen poistumiseen ja vaikuttaa negatiivisesti brändin
+              imagoon.
             </h3>
             <p>
               Meille on kunniakysymys valmistaa teknisesti ylivoimaisia
@@ -55,15 +76,15 @@ const Hybrid = ({ refs }) => {
             </p>
             <p>
               Siinä missä vanhanaikaiset verkkosivut joutuvat jatkuvasti
-              kuormittamaan palvelintaan tietokantakyselyillä ennen
-              renderöintiä, hybrid-sivut ovat generoitu etukäteen, ennen hänen
-              saapumista, jotta ne voidaan lähettää hänelle ilman kiertoteitä.
+              kuormittamaan palvelintaan tietokantakyselyillä, hybrid-sivut ovat
+              generoitu etukäteen ja voidaan lähettää käyttäjälle ilman
+              kiertoteitä.
             </p>
             <p>
-              Hyödynnämme myös esiladattuja linkkejä, mitä käyttämällä
-              vierailijan sivun sisäinen navigointi on välitöntä ilman
-              näennäistä latausaikaa. Jaamme koodimme pieniin osiin ja
-              optimoimme kuvat laatua menettämättä.
+              Käytämme esiladattuja linkkejä, mitkä tekevät käyttäjän
+              navigoinnista välitöntä ilman näennäisiä latausaikoja. Jaamme
+              koodimme järkeviin kimpaleisiin ettei sitä tarvitse ladata
+              kerralla ja optimoimme isotkin kuvat laatua menettämättä.
             </p>
           </div>
           <div className={styles.feature}>
@@ -72,18 +93,26 @@ const Hybrid = ({ refs }) => {
               kansainvälisille vesille, markkinavaatimuset muuttuvat, tai
               äkillinen some-ilmiö tuhatkertaistaa pienen verkkopalvelimen
               käyttäjävirran? Ilman nopeaa skaalautuvuutta nämä kultaiset
-              tilaisuudet ovat vaikeita tai kokonaan hukattuja.
+              tilaisuudet ovat mahdottomia.
             </h3>
             <p>
-              Vastauksena tähän haasteeseen sivustomme levitetään globaaliin
-              sisällönjulkaisuverkostoon, Amazonin pivipalveluun. On käytännössä
-              mahdotonta, että mikään määrä liikennettä kaataisi yhdenkään
-              hybrid-sivustoistamme, twiittasi osoitteen kuka tahansa.
+              Vastauksena tähän haasteeseen sivustomme levitetään{" "}
+              <a
+                href="https://www.netlify.com/products/edge/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                globaaliin sisällönjulkaisuverkostoon.
+              </a>{" "}
+              On käytännössä mahdotonta, että mikään määrä liikennettä kaataisi
+              yhdenkään hybrid-sivustoistamme, twiittasi niistä kuka tahansa.
             </p>
             <p>
-              Käyttämämme pilvialusta tarjoaa 100gb:n ilmaista kaistaa joka
-              kuukausi, mikä tavanomaisessa Suomalaisessa mittakaavassa
-              tarkoittaa käytännössä maksutonta palvelua.
+              Sivustomme saavat 100gb ilmaista kaistaa joka kuukausi, mikä
+              tavanomaisessa suomalaisessa mittakaavassa käytännössä tarkoittaa
+              maksutonta palvelua. Maksurajan ylittyessä 19€/kk laskutus
+              tapahtuu automaattisesti ja sivusto purskuttaa eteenpäin niin kuin
+              mitään ei olisi tapahtunut.
             </p>
           </div>
         </div>
@@ -96,7 +125,6 @@ const Palvelut = () => {
   return (
     <section className={styles.middleSection}>
       <div className={styles.overlineWrap}>
-        <span className={styles.overlineIcon}>👀</span>
         <Overline text="Tulevaisuus" />
       </div>
       <h1>

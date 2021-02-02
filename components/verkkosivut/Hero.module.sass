@@ -1,4 +1,7 @@
-@import "../../styles/_partials"
+@use "@/partials/colors"
+@use "@/partials/typography"
+@use "@/partials/breakpoints"
+@use "@/partials/spacing"
 
 @mixin blockText($content)
 	&::before
@@ -9,17 +12,17 @@
 		bottom: 10%
 		transform: translate(-50%, -10%)
 		font-weight: 700
-		color: $light
+		color: colors.$light
 		font-size: 0.8rem
-		@include mdPhone
+		@include breakpoints.mdPhone
 			font-size: 1rem
-		@include lgPhone
+		@include breakpoints.lgPhone
 			font-size: 1.2rem
-		@include tablet
+		@include breakpoints.tablet
 			font-size: 1.33rem
-		@include desktop
+		@include breakpoints.desktop
 			font-size: 1.66rem
-		@include bigDesktop
+		@include breakpoints.bigDesktop
 			font-size: 2rem
 
 // Background.
@@ -28,7 +31,7 @@
 	grid-auto-flow: column
 	align-items: flex-end
 	gap: 0.5rem
-	height: 25vh
+	min-height: 25vh
 	box-shadow: 0 30px 30px -30px rgba(0,0,0,0.25)
 
 .block
@@ -36,23 +39,21 @@
 	display: block
 	width: 100%
 	text-align: center
-	// transition: height 200ms ease-in-out
 	cursor: crosshair
-	height: 30%
+	min-height: 30%
 	&:first-of-type
-		background-color: $red
+		background-color: colors.$red
 		@include blockText("Tehokkuus")
 	&:nth-of-type(2)
-		background-color: $green
-		@include blockText("Mukavuus")
+		background-color: colors.$green
+		@include blockText("Skaalautuvuus")
 	&:nth-of-type(3)
-		background-color: $blue
+		background-color: colors.$blue
 		@include blockText("Turvallisuus")
 
 // Layout.
 .section
-	@include spacing
-	margin-top: 2rem
+	@include spacing.section
 
 .headersWrap
 	display: grid
@@ -61,30 +62,24 @@
 
 // Headers.
 .header
-	@include headerMain
+	@include typography.headerMain
 	margin: 1em 0
 	margin-bottom: 0.8em
 
 .link
 	font-size: 2rem
-	color: $dark !important
+	color: colors.$dark !important
 	transition: transform 200ms ease-in-out
 	&:hover
 		transform: scale(1.2) translateY(10%)
 
 .description
-	@include headerDescription
+	@include typography.headerDescription
 	margin-bottom: 2rem
 
-@include tablet
-	.section
-		margin-top: 5rem
+@include breakpoints.tablet
 	.header
 		margin-bottom: 0.5em
 	.background
 		gap: 1rem
-		height: 40vh
-	
-@include laptop
-	.section
-		margin-top: 6rem
+		min-height: 35vh

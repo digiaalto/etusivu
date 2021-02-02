@@ -1,18 +1,19 @@
-@import "../../styles/_partials"
+@use "@/partials/colors"
+@use "@/partials/misc"
 
 .logo // a
+  @include misc.hoverFill(colors.$dark)
   position: relative
   display: inline-block
-  font-weight: 900
   font-size: 2rem
+  font-weight: 900
   letter-spacing: 1px
-  color: $dark
+  color: colors.$dark
   user-select: none
   overflow: hidden
   &:hover
-    color: $primary
-  @include hoverFill($dark)
+    color: colors.$primary
 
 .invert
-  color: $light
-  @include hoverFill($light)
+  color: colors.$light
+  @include misc.hoverFill(colors.$light)

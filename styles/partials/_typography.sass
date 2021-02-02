@@ -19,6 +19,8 @@
 	color: colors.$dark
 	margin-top: 0
 	margin-bottom: 0.5em
+	@include breakpoints.lgPhone
+		font-size: 2.5rem
 	@include breakpoints.tablet
 		font-size: 3rem
 	@include breakpoints.laptop
@@ -47,13 +49,13 @@
 	line-height: 1.45
 	color: colors.$dark
 	@include breakpoints.lgPhone
-		font-size: 1.3rem
-	@include breakpoints.tablet
 		font-size: 1.5rem
+	@include breakpoints.tablet
+		font-size: 1.8rem
 	
 @mixin headerSmall
 	font-size: 1.1rem
-	font-weight: 600
+	font-weight: 500
 	line-height: 1.45
 	color: colors.$dark
 	@include breakpoints.lgPhone

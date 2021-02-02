@@ -1,5 +1,6 @@
 import styles from "./ScoreWidget.module.sass"
 import React, { useEffect, useState, useRef } from "react"
+// import { aniamted, useSpring } from "react-spring"
 
 const gray = "#bdc1c6"
 const green = "#18b663"
@@ -22,7 +23,7 @@ const ScoreWidget = (props) => {
   const center = size / 2
   const radius = size / 2 - strokeWidth / 2
   const circumference = 2 * Math.PI * radius
-  const [offset, setOffset] = useState(0)
+  const [offset, setOffset] = useState(0) // Controls the length.
   const bgRef = useRef(null)
   const fgRef = useRef(null)
 

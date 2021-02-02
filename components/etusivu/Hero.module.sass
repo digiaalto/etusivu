@@ -5,17 +5,6 @@
 
 $fadeSpeed: 2500ms
 
-// Layout.
-.section
-	@include spacing.section
-	display: grid
-	place-items: center
-	margin-top: 3rem
-
-.content
-	display: grid
-	text-align: center
-
 // Display animations.
 @keyframes fader
 	0%
@@ -141,16 +130,38 @@ $fadeSpeed: 2500ms
 	gap: 1rem
 
 .nextArrow
-	display: inline-block
+	display: block
 	margin-top: 1rem
 	font-size: 2rem
+	width: 48px
+	height: 48px
 	color: colors.$dark !important
 	transition: transform 200ms ease-in-out
 	&:hover
 		transform: scale(1.2) translateY(10%)
 
+// Layout.
+.section
+	@include spacing.section
+	display: grid
+	place-items: center
+	padding-top: 4rem
+
+.content
+	display: grid
+	place-items: center
+	text-align: center
+
 // Media queries.
+@include breakpoints.mdPhone
+	.salesPitch
+		font-size: 3.5rem
+@include breakpoints.lgPhone
+	.salesPitch
+		font-size: 4rem
 @include breakpoints.tablet
+	.section
+		padding-top: 6rem
 	.salesPitch
 		font-size: 5rem
 	.ctaButtons
@@ -159,14 +170,10 @@ $fadeSpeed: 2500ms
 		margin: 3rem 0
 
 @include breakpoints.laptop
-	.section
-		margin-top: 8rem
 	.salesPitch
 		font-size: 6rem
 
 @include breakpoints.desktop
-	.section
-		margin-top: 5rem
 	.salesPitch
 		font-size: 8rem
 	.highlightBackground, .highlightBackground2, .highlightBackground3, .salesPitch

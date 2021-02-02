@@ -1,48 +1,69 @@
-@import "../../styles/_partials"
-
-.headerMain
-	@include headerBig
-.headerDescription
-	@include headerDescription
-	font-weight: 600
-	color: $dark
-.overlineWrap
-	text-align: center
-.overlineIcon
-	display: block
-	font-size: 1.33rem
+@use "@/partials/breakpoints"
+@use "@/partials/spacing"
+@use "@/partials/typography"
+@use "@/partials/colors"
 
 // Layouts.
 .section
-	@include spacing
+	@include spacing.section
 	overflow: hidden
 .column
 	display: grid
 	gap: 1rem
 	grid-template-areas: "img" "text" "score"
 
+.headerMain
+	@include typography.headerBig
+
+.mediumHeader
+	@include typography.headerMedium
+	max-width: 600px
+	
+.overlineWrap
+	margin-bottom: 1.5rem
+
 .imgWrap
 	grid-area: img
 	max-width: 200px
 	margin: 1rem 0
+.imgNote
+	text-align: center
+	font-weight: 600
+	letter-spacing: 0.01em
+	display: block
 .textWrap
 	grid-area: text
 .scoreWrap
 	grid-area: score
 
 // Media queries.
-@include tablet
-	.column
-		justify-content: start
-	.imgWrap
-		max-width: 320px
-@include laptop
+@include breakpoints.tablet
+	.overlineWrap
+		text-align: center
+		margin-bottom: 4rem
+	.textWrap
+		span
+			display: inline-block
+			margin-top: 1.5rem
 	.column
 		margin-top: 2rem
 		gap: 3rem 2rem
-		grid-template-areas: "score score" "img text"
-@include desktop
-	.headersWrap
+		grid-template-areas: "score score" "text img"
+		place-content: center
+		place-items: center
+	.imgWrap
+		align-self: center
+
+@include breakpoints.desktop
+	.column
+		grid-template-areas: "score score" "text img"
+		gap: 3rem 4rem
+	.headers
 		text-align: center
+	.imgWrap
+		max-width: 408px
+		align-self: start
+	.column
+		margin-top: 3rem
 	.scoreWrap
-		margin-top: 1rem
+		justify-self: start

@@ -4,11 +4,11 @@ import { SiNextDotJs, SiReact, SiNetlify } from "react-icons/si"
 const LogosWeUse = () => {
   return (
     <div className={styles.wrap}>
-      <LinkWrap href="https://nextjs.org/" hoverText="Next.js">
-        <SiNextDotJs />
-      </LinkWrap>
       <LinkWrap href="https://reactjs.org/" hoverText="React">
         <SiReact />
+      </LinkWrap>
+      <LinkWrap href="https://nextjs.org/" hoverText="Next.js">
+        <SiNextDotJs />
       </LinkWrap>
       <LinkWrap href="https://www.netlify.com/" hoverText="Netlify">
         <SiNetlify />
