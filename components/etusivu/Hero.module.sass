@@ -142,10 +142,9 @@ $fadeSpeed: 2500ms
 
 // Layout.
 .section
-	@include spacing.section
+	@include spacing.hero
 	display: grid
 	place-items: center
-	padding-top: 4rem
 
 .content
 	display: grid
@@ -160,8 +159,6 @@ $fadeSpeed: 2500ms
 	.salesPitch
 		font-size: 4rem
 @include breakpoints.tablet
-	.section
-		padding-top: 6rem
 	.salesPitch
 		font-size: 5rem
 	.ctaButtons

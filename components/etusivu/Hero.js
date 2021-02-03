@@ -25,8 +25,8 @@ const Hero = (props) => {
         <StylizedHeaders animElement={animElement} />
         <CtaButtons />
         <h1 className={styles.description}>
-          Luomme uudella teknologialla vaivattomia verkkosivuja yrityksille.
-          Arvostatko aikaasi ja suorapuheisuutta? Voimme auttaa.
+          Luomme parempia verkkosivuja. Arvostatko aikaasi ja suorapuheisuutta?
+          Olet oikeassa paikassa.
         </h1>
         <Link href="/#palvelut">
           <a className={styles.nextArrow} aria-label="Linkki alempaan osioon">
@@ -43,8 +43,8 @@ export default Hero
 const CtaButtons = () => {
   return (
     <div className={styles.ctaButtons}>
-      <LinkButton href="/tarjouspyynto" text="Uusi verkkosivu" />
-      <LinkButton href="/#palvelut" text="Miksi digiaalto" alternative />
+      <LinkButton href="/tarjouspyynto" text="Uudet Websivut" />
+      <LinkButton href="/#palvelut" text="???" alternative />
     </div>
   )
 }

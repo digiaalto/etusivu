@@ -2,7 +2,7 @@ import styles from "./TarjousForm.module.sass"
 import React, { useState, useEffect, useRef } from "react"
 import axios from "axios"
 import { useForm } from "react-hook-form"
-import { Checkbox, TextArea, Selection, TextInput } from "./index"
+import { Checkbox, TextArea, TextInput } from "./index"
 import { ButtonStyler } from "../common/button"
 
 // Content. Get from CMS?
@@ -12,9 +12,6 @@ const sisalto = {
     verkkokauppa: 3200,
     blogi: 1200,
     webApp: 2000,
-    sivustoPieni: 300,
-    sivustoKeskisuuri: 700,
-    sivustoSuuri: 2000,
     sisallontuotto: 800,
     sisallonhallintaohjelma: 800,
     sisallonhallintapalvelu: 25,
@@ -47,15 +44,6 @@ const sisalto = {
     },
   },
   lisatiedot: {
-    projektinLaajuus: {
-      name: "projektinLaajuus",
-      label: "Projektin laajuus",
-      options: [
-        { label: "Pieni, 1-4 sivua.", value: "sivustoPieni" },
-        { label: "Keskisuuri, 5-10 sivua.", value: "sivustoKeskisuuri" },
-        { label: "Suuri, 11+ sivua.", value: "sivustoSuuri" },
-      ],
-    },
     projektiKuvaus: {
       name: "projektiKuvaus",
       label: "Kuvaile projektia omin sanoin",
@@ -148,9 +136,6 @@ const TarjousApp = (props) => {
     verkkokauppa: sisalto.tyypit.verkkokauppa.defaultChecked,
     blogi: sisalto.tyypit.blogi.defaultChecked,
     webApp: sisalto.tyypit.webApp.defaultChecked,
-    sivustoPieni: true,
-    sivustoKeskisuuri: false,
-    sivustoSuuri: false,
     sisallontuotto: sisalto.palvelut.sisallontuotto.defaultChecked,
     sisallonhallintapalvelu:
       sisalto.palvelut.sisallonhallintapalvelu.defaultChecked,
@@ -207,27 +192,10 @@ const TarjousApp = (props) => {
   // Updates the price widget.
   function onPriceChange(props) {
     const { target } = props
-    // For selection.
-    if (!target) {
-      // Selection sends a custom Object, no event.
-      const { value } = props
-      const disabler = {
-        sivustoPieni: false,
-        sivustoKeskisuuri: false,
-        sivustoSuuri: false,
-      }
-      setEnabledProducts({
-        ...enabledProducts,
-        ...disabler,
-        [value]: true,
-      })
-    } else {
-      // For checkboxes.
-      setEnabledProducts({
-        ...enabledProducts,
-        [target.name]: target.checked,
-      })
-    }
+    setEnabledProducts({
+      ...enabledProducts,
+      [target.name]: target.checked,
+    })
   }
 
   return (
@@ -335,14 +303,6 @@ const LisatiedotSection = ({ register, onPriceChange, data }) => {
       <FormSection>
         <Header text="Lisätietoja." />
         <ColumnGrid>
-          <Selection
-            {...data.projektinLaajuus}
-            defaultValue={data.projektinLaajuus.options[0]}
-            instanceId={data.projektinLaajuus.name}
-            onChange={onPriceChange}
-            refs={register}
-            required
-          />
           <TextArea {...data.projektiKuvaus} refs={register} />
         </ColumnGrid>
       </FormSection>

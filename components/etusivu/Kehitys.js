@@ -17,7 +17,7 @@ const Kehitys = (props) => {
         teknologien ja mikropalveluiden yhdistelmästä. Käytämme tekniikoita jota
         suosii digijätit ja muut ajan hermolla surffaavat yritykset.
       </p>
-      <LinkButton href="/verkkosivut" text="Lisää Verkkosivuista" />
+      <LinkButton href="/verkkosivut" text="Websivut" />
     </section>
   )
 }
