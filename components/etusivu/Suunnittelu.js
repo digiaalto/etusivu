@@ -14,17 +14,19 @@ const Suunnittelu = (props) => {
       />
       <div className={styles.descriptions}>
         <p className="headerDescription">
-          Suunnittelumme tarkoitus on saada käyttäjä pysymyään sivuillasi,
-          oppimaan yrityksestäsi ja kiinnostumaan palveluistasi. Viimeinen asia
-          minkä haluamme tapahtuvan, on että vierailija poistuu ennenaikaisesti
-          ja kääntyy kilpailijanne puoleen.
+          Onko sinulla oma visio sivullesi, tunnetko brändisi hyvin? Löytyykö
+          vanhoja verkkosivuja josta voimme jäsentää resursseja ja sisältöä, vai
+          aloitammeko tyhjältä pöydältä? Jokatapauksessa ensitöiksi
+          määrittelemme mahdollisimman tarkasti kuka olet, mitä teet, kuka
+          asiakkaasi on ja mitä hän haluaa. Haastattelu onnistuu parhaiten
+          meidän haastattelu-appilla tai sähköpostilla.
         </p>
-        <p className="headerDescription">
-          Saadaksemme hänet kiinnostumaan palveluistasi ja tuotteistasi,
+        {/* <p className="headerDescription">
+          Jotta saamme vierailijan kiinnostumaan palveluistasi ja tuotteistasi,
           tarvitsee meidän tutustua häneen ja kirjoittaa juuri häntä
           puhuttelevaa sisältöä. Sivun ulkoasun suunnittelua informoi sinun
           tärkeimmät tavoitteesi ja tietenkin yrityksesi brändi.
-        </p>
+        </p> */}
       </div>
       <ol className={styles.list}>
         <li>

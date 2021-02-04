@@ -3,32 +3,48 @@
 @use "@/partials/typography"
 @use "@/partials/colors"
 
-$fadeSpeed: 2500ms
+$fadeSpeed: 1500ms
 
 // Display animations.
 @keyframes fader
 	0%
-		opacity: 0
-	5%
-		opacity: 0.2
-	30%
-		opacity: 1
-	90%
-		opacity: 1
+		opacity: 0%
+	50%
+		opacity: 100%
 	100%
-		opacity: 0
+		opacity: 0%
 
 @keyframes reverseFader
 	0%
-		opacity: 1
-	5%
-		opacity: 0.8
-	30%
-		opacity: 0
-	90%
-		opacity: 0
+		opacity: 100%
+	50%
+		opacity: 50%
 	100%
-		opacity: 1
+		opacity: 100%
+
+// @keyframes fader
+// 	0%
+// 		opacity: 0
+// 	5%
+// 		opacity: 0.2
+// 	30%
+// 		opacity: 1
+// 	90%
+// 		opacity: 1
+// 	100%
+// 		opacity: 0
+
+// @keyframes reverseFader
+// 	0%
+// 		opacity: 1
+// 	5%
+// 		opacity: 0.8
+// 	30%
+// 		opacity: 0
+// 	90%
+// 		opacity: 0
+// 	100%
+// 		opacity: 1
 
 .fadeAnimation
 	animation: fader $fadeSpeed 1
@@ -40,12 +56,11 @@ $fadeSpeed: 2500ms
 .salesPitch
 	display: block
 	font-size: 3rem
-	font-weight: 900
 	line-height: 1.1em
 	margin: 0
 	
 .highlightBackground, .highlightBackground2, .highlightBackground3, .salesPitch
-	letter-spacing: -2px
+	letter-spacing: -0.03em !important
 
 .highlightBackground
 	position: relative
@@ -129,16 +144,17 @@ $fadeSpeed: 2500ms
 	margin: 2rem 0
 	gap: 1rem
 
-.nextArrow
-	display: block
+.scrollLink
+	display: flex
+	place-items: center
+	justify-content: center
 	margin-top: 1rem
 	font-size: 2rem
-	width: 48px
-	height: 48px
-	color: colors.$dark !important
-	transition: transform 200ms ease-in-out
+	color: colors.$gray
+	transition: color 200ms linear
+	user-select: none
 	&:hover
-		transform: scale(1.2) translateY(10%)
+		color: colors.$dark
 
 // Layout.
 .section

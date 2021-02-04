@@ -12,12 +12,6 @@ const Navigation = () => {
   })
 
   const inViewSpring = useSpring({
-    config: {
-      mass: 1,
-      tension: 50,
-      friction: 1,
-      clamp: 1,
-    },
     from: { top: "-28px" },
     to: {
       top: status.inView ? "48px" : "-28px",
@@ -33,9 +27,6 @@ const Navigation = () => {
         currentPosition < status.lastPosition &&
         status.lastPosition - currentPosition
 
-      console.log(
-        `currentPosition: ${currentPosition}, scrolledUp: ${scrolledUp}`
-      )
       setStatus({
         inView: scrolledUp,
         lastPosition: currentPosition,
@@ -46,7 +37,6 @@ const Navigation = () => {
 
   useEffect(() => {
     if (!window || !document) return null
-    console.log("useEffect")
     window.addEventListener("scroll", scrollHandler)
     return () => {
       window.removeEventListener("scroll", scrollHandler)

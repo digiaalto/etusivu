@@ -2,7 +2,9 @@ import styles from "./Hero.module.sass"
 import React, { useState, useEffect } from "react"
 import Link from "next/link"
 import { LinkButton } from "../common/button"
-import { ImArrowDown } from "react-icons/im"
+import { BiMouse } from "react-icons/bi"
+
+const switchDelay = 1000
 
 const Hero = (props) => {
   const { refs } = props
@@ -15,7 +17,7 @@ const Hero = (props) => {
         animElementIndex = 0
       }
       setAnimElement(animElementIndex)
-    }, 2100)
+    }, switchDelay)
     return () => clearInterval(animInterval)
   })
 
@@ -25,12 +27,12 @@ const Hero = (props) => {
         <StylizedHeaders animElement={animElement} />
         <CtaButtons />
         <h1 className={styles.description}>
-          Luomme parempia verkkosivuja. Arvostatko aikaasi ja suorapuheisuutta?
-          Olet oikeassa paikassa.
+          Luomme edistyneellä kehitysarkkitehtuurilla pienyrittäjille
+          verkkosivuja, mitkä hyötyvät rakenteellisesta kilpailuedusta netissä.
         </h1>
         <Link href="/#palvelut">
-          <a className={styles.nextArrow} aria-label="Linkki alempaan osioon">
-            <ImArrowDown />
+          <a className={styles.scrollLink} aria-label="Linkki alempaan osioon">
+            <BiMouse />
           </a>
         </Link>
       </div>

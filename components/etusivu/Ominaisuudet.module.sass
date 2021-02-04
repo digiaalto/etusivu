@@ -2,73 +2,51 @@
 @use "@/partials/typography"
 @use "@/partials/breakpoints"
 @use "@/partials/spacing"
+@use "@/partials/shadows"
 
-// Layout.
-.section
-	@include spacing.section
-	padding-top: 0 !important
-
-// Ominaisuus.
-.ominaisuudet
+.container
 	display: grid
+	margin-top: 4rem
+	gap: 4rem
 
 .ominaisuus
-	max-width: 380px
-	height: 100%
-	margin-top: 2rem
-	p
-		margin-top: 1.2rem
-		padding: 0 0.77rem
-
-// Content.
-.header
-	@include typography.headerSmall
-	display: block
-	padding: 0.5rem 1rem
+	position: relative
+	padding: 1rem
+	box-shadow: shadows.$shadowSmall
+	padding-top: 4rem
+	border-radius: 10px
+	max-width: 400px
 	text-align: center
-	border-radius: 9999px
-	background-color: colors.$dark
-	color: colors.$light
-	
-// Animations and keyframes.
-.growing
-	animation: grow 1s infinite linear
-.spinning
-	animation: rotation 3s infinite linear
-.bouncing
-	animation: bounce 1s infinite ease-in-out
 
-@keyframes rotation
-	0%
-		transform: rotate(0deg)
-	100%
-		transform: rotate(360deg)
-@keyframes bounce
-	0%
-		transform: translateY(-2px)
-	50%
-		transform: translateY(6px)
-	100%
-		transform: translateY(-2px)
-		
-@keyframes grow
-	0%
-		transform: scale(1)
-	50%
-		transform: scale(1.2)
-	100%
-		transform: scale(1)
-	
-@include breakpoints.laptop
-	.ominaisuudet
-		grid-auto-flow: column
-		gap: 1.33rem
-	.ominaisuus
-		margin-top: 1rem
-		p
-			margin-top: 1.5rem
+.iconWrapper
+	position: absolute
+	top: 0%
+	left: 50%
+	transform: translate(-50%, -40%)
+	svg
+		max-width: 75px
+		max-height: 75px
+
+.ominaisuusHeader
+	@include typography.headerMedium
+	word-spacing: 9999px
+	margin: auto
+
+@include breakpoints.tablet
+	.container
+		justify-content: center
+		gap: 5rem
 
 @include breakpoints.desktop
-	.ominaisuudet
-		place-content: center
-		gap: 5rem
+	.container
+		gap: 4rem
+		grid-auto-flow: column
+		grid-template-columns: 1fr 1fr 1fr
+	.ominaisuus
+		max-width: 400px
+		width: 100%
+		padding-top: 5rem
+	.iconWrapper
+		svg
+			max-width: 100px
+			max-height: 100px

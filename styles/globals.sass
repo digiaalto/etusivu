@@ -12,6 +12,7 @@ $font: "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ub
 // Basic resets.
 html
 	box-sizing: border-box
+	font-size: 16px
 
 *, *:before, *:after
 	box-sizing: inherit
@@ -19,7 +20,7 @@ html
 	-webkit-font-smoothing: antialiased
 	text-shadow: rgba(0,0,0,.01) 0 0 1px
 
-input, textarea, select
+input, textarea, select, button
 	font-family: inherit
 	font-size: inherit
 	line-height: $bodyLineheight
@@ -42,11 +43,6 @@ img
 ::selection
 	color: #fff
 	background: $primary
-
-button
-	font-size: inherit
-	font-family: $font
-	line-height: $bodyLineheight
 
 img
 	display: block
