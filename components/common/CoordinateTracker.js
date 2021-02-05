@@ -1,21 +1,14 @@
 import styles from "./CoordinateTracker.module.sass"
-import { useState, useEffect } from "react"
+import { useRef } from "react"
+import { useMouse } from "react-use"
 
 const CoordinateTracker = () => {
-  const [pos, setPos] = useState({ x: 0, y: 0 })
-
-  const updatePos = (e) => {
-    setPos({ x: e.pageX, y: e.pageY })
-  }
-
-  useEffect(() => {
-    window.addEventListener("mousemove", updatePos)
-    return () => window.removeEventListener("mousemove", updatePos)
-  })
+  const ref = useRef(null)
+  const { docX, docY } = useMouse(ref)
 
   return (
-    <span className={styles.tracker}>
-      X: {pos.x} Y: {pos.y}
+    <span className={styles.tracker} ref={ref}>
+      X: {docX} Y: {docY}
     </span>
   )
 }

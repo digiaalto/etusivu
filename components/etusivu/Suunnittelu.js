@@ -18,15 +18,8 @@ const Suunnittelu = (props) => {
           vanhoja verkkosivuja josta voimme jäsentää resursseja ja sisältöä, vai
           aloitammeko tyhjältä pöydältä? Jokatapauksessa ensitöiksi
           määrittelemme mahdollisimman tarkasti kuka olet, mitä teet, kuka
-          asiakkaasi on ja mitä hän haluaa. Haastattelu onnistuu parhaiten
-          meidän haastattelu-appilla tai sähköpostilla.
+          asiakkaasi on ja mitä hän haluaa.
         </p>
-        {/* <p className="headerDescription">
-          Jotta saamme vierailijan kiinnostumaan palveluistasi ja tuotteistasi,
-          tarvitsee meidän tutustua häneen ja kirjoittaa juuri häntä
-          puhuttelevaa sisältöä. Sivun ulkoasun suunnittelua informoi sinun
-          tärkeimmät tavoitteesi ja tietenkin yrityksesi brändi.
-        </p> */}
       </div>
       <ol className={styles.list}>
         <li>

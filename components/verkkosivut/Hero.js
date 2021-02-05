@@ -9,9 +9,7 @@ const Hero = (props) => {
     <section className={styles.section} ref={refs} id="verkkosivut">
       <Background />
       <div className={styles.headersWrap}>
-        <h1 className={styles.header}>
-          Haluatko älykkään kotisivun joka tukee liiketoimintaasi varmasti?
-        </h1>
+        <h1 className={styles.header}>Verkkosivut paremmalla tekniikalla.</h1>
         <h2 className={styles.description}>
           Valmistamme helppokäyttöisiä, sisältörikkaita verkkosivuja yrittäjille
           jotka välittävä asiakkaidensa kokemuksesta.

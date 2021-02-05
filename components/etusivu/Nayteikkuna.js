@@ -2,51 +2,52 @@ import styles from "./Nayteikkuna.module.sass"
 import Tyonayte from "../common/Tyonayte"
 import Overline from "../common/Overline"
 
-const desktopDivider = 3
+const desktopDivider = 4
+const mobileDivider = 3
 
 const digiaalto = {
   imgData: {
     desktop: {
-      src: "/tyonayte/digiaalto/desktop.png",
+      src: "/images/tyonayte/digiaalto/desktop.png",
       alt: "Työnäyte - Digiaalto, PC",
       width: 1920 / desktopDivider,
       height: 3792 / desktopDivider,
     },
     mobile: {
-      src: "/tyonayte/digiaalto/mobile.png",
+      src: "/images/tyonayte/digiaalto/mobile.png",
       alt: "Työnäyte - Digiaalto, Mobiili",
-      width: 411 / 2,
-      height: 5212 / 2,
+      width: 411 / mobileDivider,
+      height: 5212 / mobileDivider,
     },
   },
-  scoreSrc: "/tyonayte/digiaalto/scores.png",
-  header: "Digiaalto",
+  scoreSrc: "/images/tyonayte/digiaalto/scores.png",
+  scores: [100, 100, 100, 100],
+  header: "Digiaalto.fi",
   paragraphs: [
-    `Web-designer ja verkkokehittäjä Digiaalto rakentaa huipputehokkaita ja kestäviä verkkosivuja pk-yrittäjille.`,
-    `Digiaallon palvelut sopivat täydellisesti yrittäjälle joka haluaa pitkäikäisen verkkosivuston.`,
+    `Verkkosuunnittelija verkkokehittäjä Digiaalto kehittää suorituskykyisiä sivustoja edistyneemmällä arkkitehtuurilla.`,
   ],
 }
 
 const majoitusroosa = {
   imgData: {
     desktop: {
-      src: "/tyonayte/majoitusroosa/desktop.png",
+      src: "/images/tyonayte/majoitusroosa/desktop.png",
       alt: "Työnäyte - Majoitusroosa, PC",
       width: 1920 / desktopDivider,
       height: 6174 / desktopDivider,
     },
     mobile: {
-      src: "/tyonayte/majoitusroosa/mobile.png",
+      src: "/images/tyonayte/majoitusroosa/mobile.png",
       alt: "Työnäyte - Majoitusroosa, Mobiili",
-      width: 411 / 2,
-      height: 8533 / 2,
+      width: 411 / mobileDivider,
+      height: 8533 / mobileDivider,
     },
   },
-  scoreSrc: "/tyonayte/majoitusroosa/scores.png",
-  header: "Majoitusroosa",
+  scoreSrc: "/images/tyonayte/majoitusroosa/scores.png",
+  scores: [79, 94, 100, 100],
+  header: "Majoitusroosa.fi",
   paragraphs: [
-    `Lammen kauniissa luonnossa sijaitseva majoitusyrityksen majoitustila joka palvelee pääsääntöisesti seurakuntia, yrityksiä ja muita isoja ryhmiä.`,
-    `Roosan sivuilla esitellään rauhallista luontoa ja tarjotaan sesonkitarjouksia.`,
+    `Majoitusalan yritys Kanta-hämeen Lammin kauniissa luonossa. Varattavissa isommille ryhmille.`,
   ],
 }
 

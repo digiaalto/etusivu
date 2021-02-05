@@ -9,7 +9,7 @@ const Palvelut = (props) => {
     <section className={styles.section} id="palvelut" ref={refs}>
       <HeadersWrap>
         <Overline
-          text="Jotain tehokasta ja modernia."
+          text="Suorituskykyistä ja modernia."
           customClass={styles.customOverline}
         />
         <h1 className={styles.headerMain}>
@@ -22,7 +22,7 @@ const Palvelut = (props) => {
           Prosessimme sisältää kaikki laadukkaan verkkosivun rakennusvaiheet
           alusta loppuun. Edullisilla lisäpalveluilla autamme sivustoasi
           kasvamaan julkaisun jälkeenkin ja lupaamme, että hybrid-sivumme
-          erottuvat omaan luokkaansa Googlen verkkosivujen laatutestissä.
+          erottuvat omaan luokkaansa Googlen laatutestissä.
         </h2>
       </TextsWrapper>
       <Ominaisuudet />

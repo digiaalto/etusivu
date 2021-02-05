@@ -12,7 +12,7 @@
 .ominaisuus
 	position: relative
 	padding: 1rem
-	box-shadow: shadows.$shadowSmall
+	box-shadow: shadows.$shadowSubtle
 	padding-top: 4rem
 	border-radius: 10px
 	max-width: 400px
@@ -50,3 +50,13 @@
 		svg
 			max-width: 100px
 			max-height: 100px
+
+// Animations
+.spinning
+	animation: spinner 10s linear infinite
+
+@keyframes spinner
+	0%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(360deg)
