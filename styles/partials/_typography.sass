@@ -1,13 +1,27 @@
 @use "@/partials/colors"
 @use "@/partials/breakpoints"
 
+$font: "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif
+$lineheight: 1.6
+$headerLineheightSmall: 1.3
+$headerLineheightBig: 1.45
+
+@font-face
+	font-family: "Inter"
+	src: url("/fonts/inter.ttf") format("truetype")
+	font-style: normal
+	font-weight: 400 900
+	font-display: swap
+
+
 @mixin headerDescription
 	font-size: 1.15rem
 	font-weight: 400
 	letter-spacing: -0.02em
-	line-height: 1.45
+	line-height: $headerLineheightBig
 	color: colors.$gray
 	max-width: 800px
+	margin-top: 0
 	@include breakpoints.lgPhone
 		font-size: 1.3rem
 
@@ -15,7 +29,7 @@
 	font-size: 2rem
 	font-weight: 800
 	letter-spacing: -0.02em
-	line-height: 1.3
+	line-height: $headerLineheightSmall
 	color: colors.$dark
 	margin-top: 0
 	margin-bottom: 0.5em
@@ -30,7 +44,7 @@
 	font-size: 1.3rem
 	font-weight: 800
 	letter-spacing: -0.02em
-	line-height: 1.45
+	line-height: $headerLineheightBig
 	color: colors.$dark
 	margin-top: 0
 	margin-bottom: 0.5em
@@ -38,7 +52,7 @@
 		font-size: 1.5rem
 	@include breakpoints.tablet
 		font-size: 2.3rem
-		line-height: 1.3
+		line-height: $headerLineheightSmall
 	@include breakpoints.laptop
 		font-size: 3.5rem
 	
@@ -46,7 +60,7 @@
 	font-size: 1.2rem
 	font-weight: 700
 	letter-spacing: -0.02em
-	line-height: 1.45
+	line-height: $headerLineheightBig
 	color: colors.$dark
 	@include breakpoints.lgPhone
 		font-size: 1.5rem
@@ -55,8 +69,8 @@
 	
 @mixin headerSmall
 	font-size: 1.1rem
-	font-weight: 500
-	line-height: 1.45
+	font-weight: 600
+	line-height: $headerLineheightBig
 	color: colors.$dark
 	@include breakpoints.lgPhone
 		font-size: 1.2rem

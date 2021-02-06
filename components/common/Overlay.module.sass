@@ -1,5 +1,4 @@
-@import "../../styles/_partials"
-
+@use "@/partials/colors"
 .overlay
 	z-index: 999
 	height: 100vh
@@ -10,9 +9,8 @@
 	position: fixed
 	left: 0
 	top: 0
-	background-color: $dark
+	background-color: colors.$dark
 	animation: overlayAnimation 400ms ease-in-out
-	// animation: overlayAnimation 0.33s 1
 
 @keyframes overlayAnimation
 	from 

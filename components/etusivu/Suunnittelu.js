@@ -14,37 +14,34 @@ const Suunnittelu = (props) => {
       />
       <div className={styles.descriptions}>
         <p className="headerDescription">
-          Onko sinulla oma visio sivullesi, tunnetko brändisi hyvin? Löytyykö
-          vanhoja verkkosivuja josta voimme jäsentää resursseja ja sisältöä, vai
-          aloitammeko tyhjältä pöydältä? Jokatapauksessa ensitöiksi
-          määrittelemme mahdollisimman tarkasti kuka olet, mitä teet, kuka
-          asiakkaasi on ja mitä hän haluaa.
+          Onko sinulla oma visio ja tunnet brändisi hyvin? Löytyykö sinulta
+          valmiita resursseja vai aloitammeko tyhjältä pöydältä? Oli miten oli,
+          voimme auttaa. Suunnittelu alkaa tutustumiselle.
         </p>
       </div>
       <ol className={styles.list}>
         <li>
-          <h2 className={styles.listHeader}>1. Vuorovaikutus</h2>
+          <h2 className={styles.listHeader}>1. Käyttökokemus</h2>
           <p>
-            Luodaan positiivinen keskustelu verkkosivusi ja asiakkaasi välille
-            loogisella sivukartalla, tarkoituksenmukaisella käyttäjävirralla ja
-            hyödyllisellä tietohierarkialla.
+            Verkkosivujen vierailijat päättävät sekunneissa haluatko he pysyä
+            sivulla vai eivät. Suunnittelemme mukavan käyttökokemuksen pitämällä
+            hänen tarpeensa ensimmäisenä ja odotukset toisena.
           </p>
         </li>
         <li>
-          <h2 className={styles.listHeader}>2. Tyyli</h2>
+          <h2 className={styles.listHeader}>2. Sisältö</h2>
           <p>
-            Suunnitellaan sivustolle brändisi mukainen tyylikollaasi. Valitaan
-            sopiva typografia, kuvat, väripaletti ja luodaan pieniä mutta
-            uudelleenkäytettäviä sivuelementtejä.
+            Tehokas verkkosivu tarvitsee tehokasta sisältöä. Voit kirjoittaa
+            tekstit itse, tai voimme haastattelussa kerättyjen tietojen ja
+            toimialaasi tutkimalla kehittää sopivaa sisältöä puolestasi.
           </p>
         </li>
         <li>
-          <h2 className={styles.listHeader}>3. Sisältö</h2>
+          <h2 className={styles.listHeader}>3. Ulkoasu</h2>
           <p>
-            Vakuuttava yrityssivu tarvitsee tuloksia tuottavaa tekstiä joka
-            puhuttelee juuri sinun unelma-asiakastasi. Sisältö on loistava
-            paikka korostaa avainsanoja luonnollisella, osuvalla tavalla ja
-            auttaa hakukoneita ja asiakkaita valitsemaan sinut.
+            Suunnittelemme kauniin estetiikan, jonka perimmäinen tarkoitus on
+            tehdä potentiaaliseen asiakkaaseen positiivinen vaikutus ja eroittaa
+            sinut kilpailijoistasi tyylillä.
           </p>
         </li>
       </ol>

@@ -1,4 +1,6 @@
-@import "../../styles/_partials"
+@use "@/partials/colors"
+@use "@/partials/typography"
+@use "@/partials/breakpoints"
 
 .wrapper
 	position: relative
@@ -16,7 +18,7 @@
 	gap: 1rem
 
 .error
-	color: $red
+	color: colors.$red
 	margin-top: 0.5rem
 	margin-left: 0.3rem
 
@@ -41,10 +43,10 @@
 			opacity: 50%
 
 .header
-	@include headerMedium
+	@include typography.headerMedium
 	margin-bottom: 1em
 	font-weight: 600
-	color: $light
+	color: colors.$light
 
 // Feedback.
 .feedbackWrapper
@@ -76,6 +78,6 @@
 	100%
 		transform: rotate(360deg)
 
-@include laptop
+@include breakpoints.laptop
 	.wrapper
 		margin-top: 0

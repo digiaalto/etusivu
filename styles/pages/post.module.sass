@@ -1,7 +1,8 @@
-@import "../_partials"
+@use "@/partials/typography"
+@use "@/partials/spacing"
 
 .container
-	@include spacing
+	@include spacing.hero
 
 .blogArticle
 	display: grid
@@ -27,4 +28,4 @@
 	margin: 0
 
 .mainHeader
-	@include headerMain
+	@include typography.headerMain

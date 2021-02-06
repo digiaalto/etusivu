@@ -1,15 +1,13 @@
-@import "../../styles/_partials"
+@use "@/partials/breakpoints"
+@use "@/partials/typography"
+@use "@/partials/spacing"
 
 .section
-	@include spacing
+	@include spacing.hero
 	display: flex
 	flex-direction: column
 	align-items: center
 	margin-top: 3rem
 
 .header
-	@include headerBig
-
-@include laptop
-	.section
-		margin-top: 8rem
+	@include typography.headerMain

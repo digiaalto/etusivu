@@ -1,13 +1,6 @@
-@import "_partials.sass"
-
-@font-face
-	font-family: "Inter"
-	src: url("/fonts/inter.ttf") format("truetype")
-	font-style: normal
-	font-weight: 400 800
-	font-display: swap
-
-$font: "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif
+@use "@/partials/typography"
+@use "@/partials/colors"
+@use "@/partials/breakpoints"
 
 // Basic resets.
 html
@@ -23,13 +16,13 @@ html
 input, textarea, select, button
 	font-family: inherit
 	font-size: inherit
-	line-height: $bodyLineheight
+	line-height: typography.$lineheight
 
 body
 	margin: 0
 	padding: 0
-	font-family: $font 
-	line-height: $bodyLineheight
+	font-family: typography.$font 
+	line-height: typography.$lineheight
 
 ol, ul
 	list-style: none
@@ -41,40 +34,34 @@ img
 	height: auto
 
 ::selection
-	color: #fff
-	background: $primary
+	color: colors.$light
+	background: colors.$primary
 
 img
 	display: block
 	max-with: 100%
 	height: auto
 
-// Typografia.
-h1, h2, h3
-	@include headerBig
-
-h4, h5, h6
-	@include headerMedium
-
 a
 	text-decoration: none
-	color: $primary
+	color: colors.$primary
 	&:hover
-		color: $dark
+		color: colors.$dark
 	
 p
-	color: $gray
-	@include tablet
+	color: colors.$gray
+	@include breakpoints.tablet
 		max-width: 520px
 
 // Custom classes.
 .important
 	font-weight: 600
 	letter-spacing: 0.005em
-	color: $dark
+	color: colors.$dark
+
 .headerMain
-	@include headerMain
+	@include typography.headerMain
 .headerDescription
-	@include headerDescription
+	@include typography.headerDescription
 .headerBig
-	@include headerBig
+	@include typography.headerBig

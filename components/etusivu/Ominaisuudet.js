@@ -25,13 +25,12 @@ const Ominaisuudet = () => {
       </Ominaisuus>
       <Ominaisuus icon={HeartIcon} header="Vaivaton palvelu.">
         <p>
-          Ymmärrämme että pienyrittäjän elämä on kiireistä, eikä aina ole
-          taloudellisesti kannattavaa käyttää normaaliin yritystoimintaan
-          kuuluvia arvokkaita työtunteja verkkosivujen suunnitteluun. Luomme
-          yrityssivunne niin itsenäisesti tai tiiviissä yhteistyössä kanssanne
-          kuin teille parhaiten sopii. Tarjoamme myös käteviä julkaisun
-          jälkeisiä kertahintaisia mikropalveluita, jolloin muutamme ja
-          optimoimme sivustoa uuden datan tullessa sisälle.
+          Luomme sivustonne niin itsenäisesti tai tiiviissä yhteistyössä
+          kanssanne kuin teille parhaiten sopii. Tarjoamme myös käteviä
+          julkaisun jälkeisiä kertahintaisia mikropalveluita. Ymmärrämme että
+          pienyrittäjän elämä on kiireistä. Aina ei ole taloudellisesti
+          kannattavaa käyttää normaaliin yritystoimintaan kuuluvia arvokkaita
+          työtunteja verkkosivun suunnitteluun.
         </p>
       </Ominaisuus>
     </div>

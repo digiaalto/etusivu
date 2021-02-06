@@ -1,4 +1,4 @@
-@import "../../styles/_partials"
+@use "@/partials/breakpoints"
 
 .container
 	display: grid
@@ -9,6 +9,6 @@
 	font-weight: 500
 	user-select: none
 
-@include tablet
+@include breakpoints.tablet
 	.container
 		grid-auto-flow: column

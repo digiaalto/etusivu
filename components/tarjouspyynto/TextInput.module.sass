@@ -1,4 +1,4 @@
-@import "../../styles/_partials"
+@use "@/partials/colors"
 
 .wrapper
 	display: grid
@@ -16,9 +16,9 @@
 		border-color: hsl(0, 0%, 75%)
 	&:focus, &:active
 		outline: none
-		box-shadow: 0px 0px 0px 1px $primary
-		border-color: $primary
+		box-shadow: 0px 0px 0px 1px colors.$primary
+		border-color: colors.$primary
 	
 .error
 	font-weight: 600
-	color: $red
+	color: colors.$red

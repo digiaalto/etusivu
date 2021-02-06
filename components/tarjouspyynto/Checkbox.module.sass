@@ -1,5 +1,4 @@
-@import "../../styles/_partials"
-
+@use "@/partials/breakpoints"
 // Layout.
 .column
 	display: grid
@@ -22,7 +21,7 @@
 	cursor: pointer
 
 // Media queries.
-@include laptop
+@include breakpoints.laptop
 	.wrapper
 		max-width: 500px
 	.column

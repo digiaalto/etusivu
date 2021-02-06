@@ -1,4 +1,5 @@
-@import "../../styles/_partials"
+@use "@/partials/colors"
+@use "@/partials/breakpoints"
 
 .widget
 	z-index: 99
@@ -12,8 +13,8 @@
 	height: 50px
 	width: 120px
 	border-radius: 4px
-	background-color: $dark
-	color: $light
+	background-color: colors.$dark
+	color: colors.$light
 	font-weight: 900
 	letter-spacing: 1px
 
@@ -29,11 +30,11 @@
 	font-size: 0.5em
 	opacity: 0.7
 
-@include tablet
+@include breakpoints.tablet
 	.widget
 		top: 30px
 
-@include laptop
+@include breakpoints.laptop
 	.widget
 		border-radius: 9999px
 		height: 150px

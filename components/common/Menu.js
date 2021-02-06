@@ -11,10 +11,6 @@ const links = [
     href: "/",
   },
   {
-    text: "Verkkosivut",
-    href: "/verkkosivut",
-  },
-  {
     text: "Tarjouspyyntö",
     href: "/tarjouspyynto",
   },

@@ -1,10 +1,11 @@
-@import "../../styles/_partials"
+@use "@/partials/colors"
+@use "@/partials/breakpoints"
 
 .button
 	width: 100%
 	padding: 0.5rem 1rem
-	background-color: $dark
-	color: $light
+	background-color: colors.$dark
+	color: colors.$light
 	border: none
 	outline: none
 	user-select: none
@@ -13,7 +14,7 @@
 	letter-spacing: 1px
 	font-size: 1rem
 	&:hover, &:focus, &:active
-		background-color: $lighterDark
+		background-color: colors.$lighterDark
 	
 .contentWrapper
 	overflow: hidden
@@ -26,6 +27,6 @@
 	margin-top: 0
 	margin-bottom: 1.6rem
 
-@include tablet
+@include breakpoints.tablet
 	.button
 		padding: 1rem

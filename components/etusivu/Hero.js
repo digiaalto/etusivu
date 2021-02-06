@@ -45,8 +45,8 @@ export default Hero
 const CtaButtons = () => {
   return (
     <div className={styles.ctaButtons}>
-      <LinkButton href="/verkkosivut" text="Modernit Websivut" />
-      <LinkButton href="/tarjouspyynto" text="Tarjouspyyntö" alternative />
+      <LinkButton href="/tarjouspyynto" text="Hinta & Tarjouspyyntö" />
+      <LinkButton href="/#palvelut" text="Lue lisää" alternative />
     </div>
   )
 }
@@ -90,7 +90,7 @@ const StylizedHeaders = ({ animElement }) => {
             animElement === 2 ? styles.fadeAnimation : null
           }`}
         >
-          Julkaisu.
+          Palvelu.
         </span>
       </div>
     </h1>
