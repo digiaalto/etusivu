@@ -1,7 +1,7 @@
 import Layout from "../components/layouts"
 import TarjousApp from "../components/tarjouspyynto"
 
-const Tarjouspyynto = () => {
+const Hinta = () => {
   return (
     <Layout topbar={true}>
       <TarjousApp />
@@ -9,4 +9,4 @@ const Tarjouspyynto = () => {
   )
 }
 
-export default Tarjouspyynto
+export default Hinta

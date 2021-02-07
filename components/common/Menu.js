@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react"
 import { useRouter } from "next/router"
 import { FiMenu } from "react-icons/fi"
 import { AiOutlineClose } from "react-icons/ai"
+
 import Overlay from "./Overlay"
 
 const links = [
@@ -11,8 +12,8 @@ const links = [
     href: "/",
   },
   {
-    text: "Tarjouspyyntö",
-    href: "/tarjouspyynto",
+    text: "Hinta",
+    href: "/hinta",
   },
   {
     text: "Usein kysyttyä",

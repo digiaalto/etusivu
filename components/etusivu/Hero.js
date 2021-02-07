@@ -1,8 +1,9 @@
 import styles from "./Hero.module.sass"
 import React, { useState, useEffect } from "react"
 import Link from "next/link"
-import { LinkButton } from "../common/button"
 import { BiMouse } from "react-icons/bi"
+
+import { LinkButton } from "../common/button"
 
 const switchDelay = 1000
 
@@ -45,8 +46,8 @@ export default Hero
 const CtaButtons = () => {
   return (
     <div className={styles.ctaButtons}>
-      <LinkButton href="/tarjouspyynto" text="Hinta & Tarjouspyyntö" />
-      <LinkButton href="/#palvelut" text="Lue lisää" alternative />
+      <LinkButton href="/#palvelut" text="Lue lisää" />
+      <LinkButton href="/tarjouspyynto" text="Hinta" alternative />
     </div>
   )
 }
@@ -90,7 +91,7 @@ const StylizedHeaders = ({ animElement }) => {
             animElement === 2 ? styles.fadeAnimation : null
           }`}
         >
-          Palvelu.
+          Takuu.
         </span>
       </div>
     </h1>

@@ -11,7 +11,7 @@ const IndexPage = () => {
   const nayteikkunaRef = useRef(null)
   const suunnitteluRef = useRef(null)
   const kehitysRef = useRef(null)
-  const palveluRef = useRef(null)
+  const takuuRef = useRef(null)
 
   const sectionRefs = [
     { section: "", hoverText: `Ylös`, ref: heroRef },
@@ -36,9 +36,9 @@ const IndexPage = () => {
       ref: kehitysRef,
     },
     {
-      section: "#palvelu",
-      hoverText: "Palvelu",
-      ref: palveluRef,
+      section: "#takuu",
+      hoverText: "Takuu",
+      ref: takuuRef,
     },
   ]
 
@@ -52,7 +52,7 @@ const IndexPage = () => {
           refs={{
             suunnitteluRef: suunnitteluRef,
             kehitysRef: kehitysRef,
-            palveluRef: palveluRef,
+            takuuRef: takuuRef,
           }}
         />
       </Layout>

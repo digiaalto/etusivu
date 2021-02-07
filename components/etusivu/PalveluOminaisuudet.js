@@ -1,6 +1,6 @@
-import styles from "./Ominaisuudet.module.sass"
+import styles from "./PalveluOminaisuudet.module.sass"
 
-const Ominaisuudet = () => {
+const PalveluOminaisuudet = () => {
   return (
     <div className={styles.container}>
       <Ominaisuus icon={BrainIcon} header="Asiakaslähtöinen suunnittelu.">
@@ -154,4 +154,4 @@ const HeartIcon = () => {
   )
 }
 
-export default Ominaisuudet
+export default PalveluOminaisuudet

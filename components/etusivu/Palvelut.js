@@ -1,6 +1,6 @@
 import styles from "./Palvelut.module.sass"
 import Overline from "../common/Overline"
-import Ominaisuudet from "./Ominaisuudet"
+import PalveluOminaisuudet from "./PalveluOminaisuudet"
 
 const Palvelut = (props) => {
   const { refs } = props
@@ -25,7 +25,7 @@ const Palvelut = (props) => {
           erottuvat omaan luokkaansa Googlen laatutestissä.
         </h2>
       </TextsWrapper>
-      <Ominaisuudet />
+      <PalveluOminaisuudet />
     </section>
   )
 }

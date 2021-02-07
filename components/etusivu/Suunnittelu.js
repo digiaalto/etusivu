@@ -16,7 +16,7 @@ const Suunnittelu = (props) => {
         <p className="headerDescription">
           Onko sinulla oma visio ja tunnet brändisi hyvin? Löytyykö sinulta
           valmiita resursseja vai aloitammeko tyhjältä pöydältä? Oli miten oli,
-          voimme auttaa. Suunnittelu alkaa tutustumiselle.
+          voimme auttaa. Suunnittelu alkaa tutustumisella.
         </p>
       </div>
       <ol className={styles.list}>
