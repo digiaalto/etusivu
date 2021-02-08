@@ -1,6 +1,6 @@
 import styles from "./Palvelut.module.sass"
 import Overline from "../common/Overline"
-import PalveluOminaisuudet from "./PalveluOminaisuudet"
+import PalvelutOminaisuudet from "./PalvelutOminaisuudet"
 
 const Palvelut = (props) => {
   const { refs } = props
@@ -22,10 +22,10 @@ const Palvelut = (props) => {
           Prosessimme sisältää kaikki laadukkaan verkkosivun rakennusvaiheet
           alusta loppuun. Edullisilla lisäpalveluilla autamme sivustoasi
           kasvamaan julkaisun jälkeenkin ja lupaamme, että hybrid-sivumme
-          erottuvat omaan luokkaansa Googlen laatutestissä.
+          erottuvat omaan luokkaansa laadussa.
         </h2>
       </TextsWrapper>
-      <PalveluOminaisuudet />
+      <PalvelutOminaisuudet />
     </section>
   )
 }

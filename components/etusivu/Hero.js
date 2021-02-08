@@ -28,8 +28,9 @@ const Hero = (props) => {
         <StylizedHeaders animElement={animElement} />
         <CtaButtons />
         <h1 className={styles.description}>
-          Luomme edistyneellä kehitysarkkitehtuurilla pienyrittäjille
-          verkkosivuja, mitkä hyötyvät rakenteellisesta kilpailuedusta netissä.
+          Teemme epäreilun tehokkaita verkkosivuja yrityksille, jotka haluavat
+          asiakkailleen parhaan käyttökokemuksen ja itselleen kestävän
+          kotisivun.
         </h1>
         <Link href="/#palvelut">
           <a className={styles.scrollLink} aria-label="Linkki alempaan osioon">

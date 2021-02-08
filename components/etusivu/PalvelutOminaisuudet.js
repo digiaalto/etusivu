@@ -1,36 +1,34 @@
-import styles from "./PalveluOminaisuudet.module.sass"
+import styles from "./PalvelutOminaisuudet.module.sass"
 
-const PalveluOminaisuudet = () => {
+const PalvelutOminaisuudet = () => {
   return (
     <div className={styles.container}>
       <Ominaisuus icon={BrainIcon} header="Asiakaslähtöinen suunnittelu.">
         <p>
-          Designinimme päätarkoitus on saada käyttäjä pysymyään sivuillasi,
-          oppimaan yrityksestäsi ja kiinnostumaan palveluistasi. Viimeinen asia
-          minkä haluamme tapahtuvan, on että vierailija poistuu ennenaikaisesti
-          ja kääntyy kilpailijanne puoleen. Opimme sinulta kuka asiakkaasi on,
-          ja yhdistämme hänen tarpeensa sinun tarjoamiisi palveluihin ja
-          tuotteisiin.
+          Suunnittlelun tarkoitus on saada käyttäjä pysymyään sivuilla ja
+          kiinnostumaan palvelustasi. Viimeinen asia minkä haluamme tapahtuvan,
+          on että vierailija poistuu ennenaikaisesti ja kääntyy kilpailijanne
+          puoleen. Opimme sinulta kuka asiakkaasi on, ja yhdistämme hänen
+          tarpeensa sinun tarjoamiisi palveluihin ja tuotteisiin.
         </p>
       </Ominaisuus>
       <Ominaisuus icon={CogIcon} header="Nykyaikainen arkkitehtuuri.">
         <p>
-          Hybrid-sivumme renderöidään käyttäjien laitteilla tavanomaisia
-          palvelinsivuja nopeammin ja älykkäämmin. Sivustomme ovat
-          suorituskykyisiä, turvallisia, kustannustehokkaita ja toimivat
-          virheettömästi ilman erillistä ylläpitopalvelua. Käytämme globaalia
-          sisällönjulkaisuverkkoa, jossa sivumme skaalautuu automaattisesti
-          vaikka käyttäjävirta kasvaisi 10,000x.
+          Hybrid-sivumme toimivat tavanomaisia palvelinsivuja älykkäämpiä.
+          Sivustomme ovat suorituskykyisiä, turvallisia, kustannustehokkaita ja
+          toimivat virheettömästi ilman erillistä ylläpitopalvelua. Käytämme
+          globaalia sisällönjulkaisuverkkoa, jossa sivumme skaalautuu
+          automaattisesti vaikka käyttäjävirta kasvaisi 10,000x.
         </p>
       </Ominaisuus>
       <Ominaisuus icon={HeartIcon} header="Vaivaton palvelu.">
         <p>
-          Luomme sivustonne niin itsenäisesti tai tiiviissä yhteistyössä
-          kanssanne kuin teille parhaiten sopii. Tarjoamme myös käteviä
-          julkaisun jälkeisiä kertahintaisia mikropalveluita. Ymmärrämme että
-          pienyrittäjän elämä on kiireistä. Aina ei ole taloudellisesti
-          kannattavaa käyttää normaaliin yritystoimintaan kuuluvia arvokkaita
-          työtunteja verkkosivun suunnitteluun.
+          Työskentelemme niin itsenäisesti tai tiiviissä yhteistyössä kanssanne
+          kuin teille parhaiten sopii. Ymmärrämme että yrittäjän elämä on
+          kiireistä, eikä aina ole taloudellisesti kannattavaa panostaa
+          verkkosivujen toimintaan jos se vaikuttaa negatiivisesti normaaliin
+          yritystoimintaan. Hoidamme kaiken puolestanne ja pidämme teidät
+          ajantasalla.
         </p>
       </Ominaisuus>
     </div>
@@ -154,4 +152,4 @@ const HeartIcon = () => {
   )
 }
 
-export default PalveluOminaisuudet
+export default PalvelutOminaisuudet

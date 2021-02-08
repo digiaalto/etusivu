@@ -23,9 +23,9 @@ const Suunnittelu = (props) => {
         <li>
           <h2 className={styles.listHeader}>1. Käyttökokemus</h2>
           <p>
-            Verkkosivujen vierailijat päättävät sekunneissa haluatko he pysyä
-            sivulla vai eivät. Suunnittelemme mukavan käyttökokemuksen pitämällä
-            hänen tarpeensa ensimmäisenä ja odotukset toisena.
+            Suunnittelemme sivustostasi helposti saavutettavan, väsymättömmän
+            asiakaspalvelijan joka pitää asiakkaasi tarpeet ensimmäisenä ja
+            odotukset toisena.
           </p>
         </li>
         <li>
@@ -33,15 +33,15 @@ const Suunnittelu = (props) => {
           <p>
             Tehokas verkkosivu tarvitsee tehokasta sisältöä. Voit kirjoittaa
             tekstit itse, tai voimme haastattelussa kerättyjen tietojen ja
-            toimialaasi tutkimalla kehittää sopivaa sisältöä puolestasi.
+            toimialaasi tutkimalla kehittää osuvaa sisältöä.
           </p>
         </li>
         <li>
           <h2 className={styles.listHeader}>3. Ulkoasu</h2>
           <p>
-            Suunnittelemme kauniin estetiikan, jonka perimmäinen tarkoitus on
-            tehdä potentiaaliseen asiakkaaseen positiivinen vaikutus ja eroittaa
-            sinut kilpailijoistasi tyylillä.
+            Suunnittelemme kauniin estetiikan jonka perimmäinen tarkoitus on
+            tehdä käyttäjään positiivinen vaikutus, sekä erottaa sivusi muista,
+            omien arvojesi ja tyylisi mukaisesti.
           </p>
         </li>
       </ol>
