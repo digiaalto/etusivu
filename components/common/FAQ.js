@@ -3,7 +3,7 @@ import Accordion from "./Accordion"
 
 const sisalto = [
   {
-    button: "Kauanko verkoksivun valmistukseen menee?",
+    button: "Kauanko verkkosivun valmistukseen menee?",
     content: `Riippuen projektin laajuudesta sivusto voi valmistua viikossa tai töihin voi mennä monta kuukautta. Yleinen verkkosivu valmistuu alle kuukaudessa. Aikakriittisissä tilanteissa voimme kiirehtiä markkinoille minimituotteella.`,
   },
   {
