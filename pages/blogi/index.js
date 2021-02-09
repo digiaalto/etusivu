@@ -1,7 +1,6 @@
 import styles from "../../styles/pages/blogi.module.sass"
 import client from "../../client"
 import groq from "groq"
-import imageUrlBuilder from "@sanity/image-url"
 import { useNextSanityImage } from "next-sanity-image"
 import BlogLayout from "@/layouts/BlogLayout"
 import Link from "next/link"
@@ -9,7 +8,6 @@ import Image from "next/image"
 
 const Blogi = (props) => {
   const { posts } = props
-
   return (
     <BlogLayout topbar={true}>
       <Hero />
@@ -72,14 +70,6 @@ const PostItem = ({ post }) => {
       </div>
     </div>
   )
-}
-
-function formatDate(dateString) {
-  const date = new Date(dateString)
-  const formattedDate = `${date.getDate()}.${
-    date.getMonth() + 1
-  }.${date.getFullYear()}`
-  return formattedDate
 }
 
 export async function getStaticProps(ctx) {

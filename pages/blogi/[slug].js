@@ -56,18 +56,6 @@ const AuthorImage = ({ image }) => {
   )
 }
 
-// const Categories = ({ categories }) => (
-//   <span>
-//     {categories && (
-//       <ul className={styles.categories}>
-//         {categories.map((category) => (
-//           <li key={category}>{category}</li>
-//         ))}
-//       </ul>
-//     )}
-//   </span>
-// )
-
 function formatCategories(categories) {
   let formatted = ""
   for (let i = 0; i < categories.length; i++) {
@@ -78,7 +66,6 @@ function formatCategories(categories) {
 
 const Content = ({ title, body, categories }) => {
   const formattedCategories = formatCategories(categories)
-  console.log(categories)
   return (
     <div className={styles.textContent}>
       <Overline text={formattedCategories} />
