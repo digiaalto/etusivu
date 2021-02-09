@@ -1,64 +1,83 @@
 @use "@/partials/typography"
 @use "@/partials/spacing"
+@use "@/partials/breakpoints"
 @use "@/partials/colors"
+@use "@/partials/shadows"
 
 .container
-	@include spacing.hero
+	@include spacing.section
 	display: flex
 	flex-direction: column
 	align-items: center
 	justify-content: center
 
-.posts
-	margin-top: 4rem
+.heroBg
+	z-index: -2
+	position: relative
+	height: 75vh
+	display: flex
+	place-content: center
+	&::after
+		background: linear-gradient( rgba(7, 70, 245, 0.45), rgba(110, 22, 224, 0.45))
+		content: ""
+		position: absolute
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
 
 .headers
 	display: grid
-	grid-auto-flow: row
-	justify-items: center
-	align-items: center
-	gap: 1rem
-
-.overline
-	opacity: 75%
-	font-weight: 600
-	font-size: 1.3rem
-
-// Post Item
-.thumbnailLink
-	background-color: rgb(241, 243, 245)
-	display: block
-	overflow: hidden
-	max-width: 420px
-	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15)
-	&:hover
-		box-shadow: 0px 0px 12px rgba(0, 0, 0, .15)
-.postItem
-	display: grid
-	grid-auto-flow: row
-	justify-items: center
+	place-items: center
+	place-content: center
 	text-align: center
-
-// Thumbnail
-.thumbnailWrapper
-	display: flex
-	justify-content: center
-	max-height: 200px
-	overflow: hidden
-.thumbnail
-	object-fit: cover
-	object-position: center center
-
-// Texts
-.itemTexts
-	display: grid
-	grid-auto-flow: row
-	gap: 0.5rem
-	color: colors.$dark !important
-	padding: 1rem 2rem
-	span
-		display: block
-		opacity: 0.42
-
+	z-index: 1
+	user-select: none
+.overline
+	@include typography.headerSmall
+	letter-spacing: 1px
+	color: colors.$light !important
 .mainHeader
 	@include typography.headerMain
+	letter-spacing: 1px
+	color: colors.$light !important
+
+
+// Posts.
+.posts
+	transform: translateY(-30%)
+.postItem
+	display: inline-block
+	overflow: hidden
+	max-width: 420px
+	border-radius: 10px
+	box-shadow: shadows.$shadowSmall
+	background-color: colors.$light
+.postThumbnail
+	overflow: hidden
+.postThumbnailImage
+	transition: transform 200ms ease-in-out
+	&:hover
+		transform: scale(1.2)
+
+// Texts
+.postMeta
+	padding: 2rem
+
+.postTitle
+	@include typography.headerSmall
+	display: inline-block !important
+
+.postCategory
+	display: inline-block
+	background-color: colors.$primary
+	color: colors.$light
+	border-radius: 10px
+	padding: 0.5rem
+	margin-bottom: 1.5rem
+
+@include breakpoints.laptop
+	.posts
+		transform: translateY(-40%)
+	.heroBg
+		padding-top: 4rem

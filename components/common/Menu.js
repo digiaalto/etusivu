@@ -12,8 +12,8 @@ const links = [
     href: "/",
   },
   {
-    text: "Hinta",
-    href: "/hinta",
+    text: "Hinnat",
+    href: "/hinnat",
   },
   {
     text: "Usein kysyttyä",

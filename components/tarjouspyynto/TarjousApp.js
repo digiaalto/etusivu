@@ -24,7 +24,7 @@ const sisalto = {
   },
 }
 
-const Tarjouspyynto = (props) => {
+const TarjousApp = (props) => {
   const { refs } = props
   const [price, setPrice] = useState(0)
   const [status, setStatus] = useState({
@@ -109,4 +109,4 @@ const FormFailed = ({ header, subheader }) => {
   )
 }
 
-export default Tarjouspyynto
+export default TarjousApp

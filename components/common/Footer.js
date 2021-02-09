@@ -32,11 +32,8 @@ const NavigationRow = () => {
         <Link href="/">
           <a className={styles.link}>Etusivu</a>
         </Link>
-        <Link href="/verkkosivut">
-          <a className={styles.link}>Verkkosivut</a>
-        </Link>
-        <Link href="/tarjouspyynto">
-          <a className={styles.link}>Tarjouspyyntö</a>
+        <Link href="/hinnat">
+          <a className={styles.link}>Hinnat</a>
         </Link>
         <Link href="/usein-kysyttya">
           <a className={styles.link}>Usein kysyttyä</a>

@@ -24,10 +24,10 @@ const PalvelutOminaisuudet = () => {
       <Ominaisuus icon={HeartIcon} header="Täysi tyytyväisyystakuu.">
         <p>
           Työskentelemme niin itsenäisesti tai tiiviissä yhteistyössä kuin
-          teille parhaiten sopii, sekä lupaamme tyytyväisyystakuun
-          verkkosivuillemme tai palautamme rahanne takaisin. Iteroimme designia
-          palautteenne mukaisesti kunnes olette tyytyväinen ja voitte muokata
-          sisältöä ennen julkaisua.
+          teille parhaiten sopii. Lupaamme tyytyväisyystakuun verkkosivuillemme
+          tai palautamme rahanne takaisin. Iteroimme designia feedbackin
+          mukaisesti kunnes olette tyytyväisiä ja voitte itse editoida
+          tekstisisältöä ennen julkaisua.
         </p>
       </Ominaisuus>
     </div>

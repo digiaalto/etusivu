@@ -29,7 +29,8 @@ const Hero = (props) => {
         <CtaButtons />
         <h1 className={styles.description}>
           Teemme epäreilun tehokkaita verkkosivuja yrityksille jotka haluavat
-          asiakkaalle paremman käyttökokemuksen, ja itselleen kestävän kotsivun.
+          asiakkaalle paremman käyttökokemuksen, ja itselleen kestävän
+          kotisivun.
         </h1>
         <Link href="/#palvelut">
           <a className={styles.scrollLink} aria-label="Linkki alempaan osioon">
@@ -47,7 +48,7 @@ const CtaButtons = () => {
   return (
     <div className={styles.ctaButtons}>
       <LinkButton href="/#palvelut" text="Lue lisää" />
-      <LinkButton href="/tarjouspyynto" text="Hinta" alternative />
+      <LinkButton href="/hinnat" text="Hinnat" alternative />
     </div>
   )
 }

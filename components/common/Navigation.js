@@ -5,7 +5,7 @@ import Link from "next/link"
 import Logo from "./Logo"
 import { debounce } from "../../utils/helpers"
 
-const Navigation = () => {
+const Navigation = ({ stayTop }) => {
   const [status, setStatus] = useState({
     inView: true,
     lastPosition: 0,
@@ -14,7 +14,7 @@ const Navigation = () => {
   const inViewSpring = useSpring({
     from: { top: "-28px" },
     to: {
-      top: status.inView ? "48px" : "-28px",
+      top: status.inView || stayTop ? "48px" : "-28px",
     },
   })
 
@@ -36,7 +36,7 @@ const Navigation = () => {
   )
 
   useEffect(() => {
-    if (!window || !document) return null
+    if (!window || !document || stayTop) return null
     window.addEventListener("scroll", scrollHandler)
     return () => {
       window.removeEventListener("scroll", scrollHandler)
@@ -47,7 +47,7 @@ const Navigation = () => {
     <animated.nav role="navigation" className={styles.nav} style={inViewSpring}>
       <Logo />
       <ol className={styles.links}>
-        <NavLink href={"/hinta"} text="Hinta" />
+        <NavLink href={"/hinnat"} text="Hinnat" />
         <NavLink href={"/usein-kysyttya"} text="Usein kysyttyä" />
         <NavLink href={"/blogi"} text="Blogi" />
       </ol>

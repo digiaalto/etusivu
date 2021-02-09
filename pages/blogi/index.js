@@ -2,52 +2,75 @@ import styles from "../../styles/pages/blogi.module.sass"
 import client from "../../client"
 import groq from "groq"
 import imageUrlBuilder from "@sanity/image-url"
+import { useNextSanityImage } from "next-sanity-image"
+import BlogLayout from "@/layouts/BlogLayout"
 import Link from "next/link"
-
-import Layout from "../../components/layouts"
+import Image from "next/image"
 
 const Blogi = (props) => {
   const { posts } = props
 
   return (
-    <Layout topbar={true}>
-      <div className={styles.container}>
-        <div className={styles.headers}>
-          <h1 className={styles.overline}>Tervetuloa Digiaallon blogiin!</h1>
-          <h2 className={styles.mainHeader}>Ohjeita ja vinkkejä.</h2>
-        </div>
-        <div className={styles.posts}>
-          {posts.map((post) => (
-            <PostItem post={post} key={post._id} />
-          ))}
-        </div>
+    <BlogLayout topbar={true}>
+      <Hero />
+      <Posts posts={posts} />
+    </BlogLayout>
+  )
+}
+
+const Hero = () => {
+  return (
+    <div className={styles.heroBg}>
+      <Image
+        src="/images/blog/WaveBackground.jpg"
+        layout="fill"
+        objectFit="cover"
+      />
+      <div className={styles.headers}>
+        <h1 className={styles.overline}>Tervetuloa Digiaallon blogiin!</h1>
+        <h2 className={styles.mainHeader}>
+          Vinkkejä ja tarinoita verkkomaailmasta.
+        </h2>
       </div>
-    </Layout>
+    </div>
+  )
+}
+
+const Posts = ({ posts }) => {
+  return (
+    <div className={styles.container}>
+      <div className={styles.posts}>
+        {posts.map((post) => (
+          <PostItem post={post} key={post._id} />
+        ))}
+      </div>
+    </div>
   )
 }
 
 const PostItem = ({ post }) => {
   const { slug, title, category, mainImage } = post
-  console.log(category)
+  let thumbnailProps = useNextSanityImage(client, mainImage)
   return (
-    <>
+    <div className={styles.postItem}>
       <Link href="/blogi/[slug]" as={`/blogi/${slug.current}`}>
-        <a className={styles.thumbnailLink}>
-          <div className={styles.postItem}>
-            <div className={styles.thumbnailWrapper}>
-              <img
-                src={urlFor(mainImage).width(420).url()}
-                className={styles.thumbnail}
-              />
-            </div>
-            <p className={styles.itemTexts}>
-              <span className={styles.itemCategory}>{category}</span>
-              {title}
-            </p>
+        <a>
+          <div className={styles.postThumbnail}>
+            <Image
+              {...thumbnailProps}
+              alt={`Kuva: ${title}`}
+              className={styles.postThumbnailImage}
+            />
           </div>
         </a>
       </Link>
-    </>
+      <div className={styles.postMeta}>
+        <span className={styles.postCategory}>{category}</span>
+        <Link href="/blogi/[slug]" as={`/blogi/${slug.current}`}>
+          <a className={styles.postTitle}>{title}</a>
+        </Link>
+      </div>
+    </div>
   )
 }
 
@@ -72,10 +95,6 @@ export async function getStaticProps(ctx) {
       posts: await client.fetch(query),
     },
   }
-}
-
-function urlFor(source) {
-  return imageUrlBuilder(client).image(source)
 }
 
 export default Blogi

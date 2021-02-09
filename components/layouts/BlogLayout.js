@@ -1,4 +1,3 @@
-import styles from "./BlogLayout.module.sass"
 import React, { useState } from "react"
 
 import SEO from "../common/SEO"
@@ -20,13 +19,13 @@ const BlogLayout = (props) => {
     <React.Fragment>
       <SEO {...props} />
       {topbar && <Topbar toggleOverlay={toggleOverlay} />}
-      <Navigation topbar={topbar} />
+      <Navigation topbar={topbar} stayTop={true} />
       <Menu
         menuOpen={overlayVisible}
         toggleOverlay={toggleOverlay}
         sectionRefs={sectionRefs}
       />
-      <main className={styles.main}>{children}</main>
+      <main>{children}</main>
       <Footer />
     </React.Fragment>
   )

@@ -3,64 +3,91 @@ import client from "../../client"
 import groq from "groq"
 import imageUrlBuilder from "@sanity/image-url"
 import BlockContent from "@sanity/block-content-to-react"
-import { BlogLayout } from "../../components/layouts"
+import { useNextSanityImage } from "next-sanity-image"
+import BlogLayout from "@/layouts/BlogLayout"
+import Image from "next/image"
+import Overline from "@/common/Overline"
 
 const Post = (props) => {
-  const { title, body, name, categories, authorImage } = props
+  const { title, body, mainImage, name, categories, authorImage } = props
   return (
     <BlogLayout topbar={true}>
       <div className={styles.container}>
         <article className={styles.blogArticle}>
-          <BlogMetadata
-            name={name}
-            categories={categories}
-            authorImage={authorImage}
-          />
-          <Content title={title} body={body} />
+          <div className={styles.topContainer}>
+            <BlogMetadata
+              name={name}
+              authorImage={authorImage}
+              categories={categories}
+            />
+            <SideImage mainImage={mainImage} />
+          </div>
+          <Content title={title} body={body} categories={categories} />
         </article>
       </div>
     </BlogLayout>
   )
 }
 
-const Content = ({ title, body }) => {
+const SideImage = ({ mainImage }) => {
+  const postImageProps = useNextSanityImage(client, mainImage)
   return (
-    <div className={styles.content}>
-      <Hero title={title} />
-      <div className={styles.bodyWrapper}>
-        <BlockContent
-          blocks={body}
-          imageOptions={{ w: 320, h: 240, fit: "max" }}
-          {...client.config()}
-        />
-      </div>
+    <div className={styles.postImageWrap}>
+      <Image {...postImageProps} alt="Blogpostaukseen liittyvä kuva" />
     </div>
   )
-}
-
-const Hero = ({ title }) => {
-  return <h1 className={styles.mainHeader}>{title}</h1>
 }
 
 const BlogMetadata = ({ name, categories, authorImage }) => {
   return (
     <div className={styles.metadata}>
-      <div className={styles.authorImageWrapper}>
-        <img src={urlFor(authorImage).width(100).url()} alt="Kirjoittaja" />
-      </div>
-      <div className={styles.metatext}>
-        <span>Kirjoittaja: {name}</span>
-        <span>
-          Kategoriat:{" "}
-          {categories && (
-            <ul className={styles.categories}>
-              {categories.map((category) => (
-                <li key={category}>{category}</li>
-              ))}
-            </ul>
-          )}
-        </span>
-      </div>
+      <AuthorImage image={authorImage} />
+      <span>{name}</span>
+      {/* <Categories categories={categories} /> */}
+    </div>
+  )
+}
+const AuthorImage = ({ image }) => {
+  const imageProps = useNextSanityImage(client, image)
+  return (
+    <div className={styles.authorImageWrapper}>
+      <Image {...imageProps} alt="Kirjoittaja" />
+    </div>
+  )
+}
+
+// const Categories = ({ categories }) => (
+//   <span>
+//     {categories && (
+//       <ul className={styles.categories}>
+//         {categories.map((category) => (
+//           <li key={category}>{category}</li>
+//         ))}
+//       </ul>
+//     )}
+//   </span>
+// )
+
+function formatCategories(categories) {
+  let formatted = ""
+  for (let i = 0; i < categories.length; i++) {
+    formatted += ` ${categories[i]}`
+  }
+  return formatted
+}
+
+const Content = ({ title, body, categories }) => {
+  const formattedCategories = formatCategories(categories)
+  console.log(categories)
+  return (
+    <div className={styles.textContent}>
+      <Overline text={formattedCategories} />
+      <h1 className={styles.mainHeader}>{title}</h1>
+      <BlockContent
+        blocks={body}
+        imageOptions={{ w: 320, h: 240, fit: "max" }}
+        {...client.config()}
+      />
     </div>
   )
 }
@@ -87,6 +114,7 @@ export async function getStaticProps({ params }) {
 		"name": author->name,
 		"categories": categories[]->title,
 		"authorImage": author->image,
+		mainImage,
 		body
 	}`
   return {
