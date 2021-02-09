@@ -5,30 +5,29 @@ const PalvelutOminaisuudet = () => {
     <div className={styles.container}>
       <Ominaisuus icon={BrainIcon} header="Asiakaslähtöinen suunnittelu.">
         <p>
-          Suunnittlelun tarkoitus on saada käyttäjä pysymyään sivuilla ja
+          Suunnittelumme tarkoitus on saada vierailija pysymyään sivuillasi ja
           kiinnostumaan palvelustasi. Viimeinen asia minkä haluamme tapahtuvan,
           on että vierailija poistuu ennenaikaisesti ja kääntyy kilpailijanne
-          puoleen. Opimme sinulta kuka asiakkaasi on, ja yhdistämme hänen
-          tarpeensa sinun tarjoamiisi palveluihin ja tuotteisiin.
+          puoleen. Opimme sinulta kuka asiakkaasi on ja yhdistämme hänen
+          tarpeensa sinun palveluun ja tuotteeseen.
         </p>
       </Ominaisuus>
       <Ominaisuus icon={CogIcon} header="Nykyaikainen arkkitehtuuri.">
         <p>
-          Hybrid-sivumme toimivat tavanomaisia palvelinsivuja älykkäämpiä.
-          Sivustomme ovat suorituskykyisiä, turvallisia, kustannustehokkaita ja
-          toimivat virheettömästi ilman erillistä ylläpitopalvelua. Käytämme
-          globaalia sisällönjulkaisuverkkoa, jossa sivumme skaalautuu
-          automaattisesti vaikka käyttäjävirta kasvaisi 10,000x.
+          Hybrid-sivumme kehitetään tavanomaisia palvelinsivuja älykkäämmin.
+          Hyödyntämällä uutta teknologiaa, verkkosivumme voivat olla erittäin
+          suorituskykyisiä, turvallisia, kustannustehokkaita, toimia helposti
+          ilman erillistä ylläpitoa ja skaalautua edullisesti vaikka käyttävirta
+          kasvaisi 10,000x.
         </p>
       </Ominaisuus>
-      <Ominaisuus icon={HeartIcon} header="Vaivaton palvelu.">
+      <Ominaisuus icon={HeartIcon} header="Täysi tyytyväisyystakuu.">
         <p>
-          Työskentelemme niin itsenäisesti tai tiiviissä yhteistyössä kanssanne
-          kuin teille parhaiten sopii. Ymmärrämme että yrittäjän elämä on
-          kiireistä, eikä aina ole taloudellisesti kannattavaa panostaa
-          verkkosivujen toimintaan jos se vaikuttaa negatiivisesti normaaliin
-          yritystoimintaan. Hoidamme kaiken puolestanne ja pidämme teidät
-          ajantasalla.
+          Työskentelemme niin itsenäisesti tai tiiviissä yhteistyössä kuin
+          teille parhaiten sopii, sekä lupaamme tyytyväisyystakuun
+          verkkosivuillemme tai palautamme rahanne takaisin. Iteroimme designia
+          palautteenne mukaisesti kunnes olette tyytyväinen ja voitte muokata
+          sisältöä ennen julkaisua.
         </p>
       </Ominaisuus>
     </div>
