@@ -24,7 +24,7 @@ const digiaalto = {
   scores: [100, 100, 100, 100],
   header: "Digiaalto.fi",
   paragraphs: [
-    `Verkkosuunnittelija verkkokehittäjä Digiaalto kehittää suorituskykyisiä sivustoja edistyneemmällä arkkitehtuurilla.`,
+    `Digiaalto suunnittelee ja kehittää mukavakäyttöisiä yrityssivuja.`,
   ],
 }
 
@@ -47,21 +47,17 @@ const majoitusroosa = {
   scores: [79, 94, 100, 100],
   header: "Majoitusroosa.fi",
   paragraphs: [
-    `Majoitusalan yritys Kanta-hämeen Lammin kauniissa luonossa. Varattavissa isommille ryhmille.`,
+    `Kanta-hämeen Lammin kauniissa luonossa sijaitse majoitsualan yritys.`,
   ],
 }
 
 const Nayteikkuna = (props) => {
   const { refs } = props
   return (
-    <section
-      className={styles.section}
-      ref={refs}
-      id="viimeisimmat-tyonaytteet"
-    >
+    <section className={styles.section} ref={refs} id="viimeisimmat-tyot">
       <div className={styles.content}>
         <Overline text="Vieritä ikkunoita" />
-        <h1 className="headerMain">Viimeisimmät työnäytteet.</h1>
+        <h1 className="headerMain">Viimeisimmät työt.</h1>
         <div className={styles.naytteetWrap}>
           <Tyonayte {...digiaalto} />
           <Tyonayte {...majoitusroosa} inverted={true} />

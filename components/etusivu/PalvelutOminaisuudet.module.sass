@@ -7,11 +7,11 @@
 .container
 	display: grid
 	margin-top: 4rem
-	gap: 4rem
+	gap: 3rem
 
 .ominaisuus
 	position: relative
-	padding-top: 4rem
+	padding-top: 3rem
 	border-radius: 10px
 	max-width: 400px
 	text-align: center
@@ -22,8 +22,8 @@
 	left: 50%
 	transform: translate(-50%, -40%)
 	svg
-		max-width: 75px
-		max-height: 75px
+		max-width: 50px
+		max-height: 50px
 
 .ominaisuusHeader
 	@include typography.headerMedium
@@ -32,9 +32,11 @@
 
 @include breakpoints.tablet
 	.ominaisuus
-		padding: 1rem
 		padding-top: 4rem
-		box-shadow: shadows.$shadowSubtle
+	.iconWrapper
+		svg
+			max-width: 66px
+			max-height: 66px
 	.container
 		justify-content: center
 		gap: 5rem
@@ -47,13 +49,7 @@
 	.ominaisuus
 		max-width: 400px
 		width: 100%
-		padding-top: 5rem
-	.iconWrapper
-		svg
-			max-width: 100px
-			max-height: 100px
 
-// Animations
 .spinning
 	animation: spinner 10s linear infinite
 

@@ -1,6 +1,7 @@
 import styles from "./Palvelut.module.sass"
 import Overline from "../common/Overline"
 import PalvelutOminaisuudet from "./PalvelutOminaisuudet"
+import Link from "next/link"
 
 const Palvelut = (props) => {
   const { refs } = props
@@ -8,21 +9,20 @@ const Palvelut = (props) => {
   return (
     <section className={styles.section} id="palvelut" ref={refs}>
       <HeadersWrap>
-        <Overline
-          text="Suorituskykyistä ja modernia."
-          customClass={styles.customOverline}
-        />
+        <Overline text="Parempaa palvelua." />
         <h1 className={styles.headerMain}>
-          Kutsumuksemme on tuoda uutta teknologiaa Piilaaksosta suomalaisten
-          yritysten ja yritysasiakkaiden iloksi.
+          Tuomme uutta teknologiaa Piilaaksosta suomalaisten yritysten ja
+          asiakkaiden iloksi.
         </h1>
       </HeadersWrap>
       <TextsWrapper>
         <h2 className={styles.headerDescription}>
-          Prosessimme sisältää kaikki laadukkaan verkkosivun rakennusvaiheet
-          alusta loppuun. Edullisilla lisäpalveluilla autamme sivustoasi
-          kasvamaan julkaisun jälkeenkin ja lupaamme, että hybrid-sivumme
-          erottuvat omaan luokkaansa laadussa.
+          <Link href="/#suunnittelu">
+            <a>Prosessimme</a>
+          </Link>{" "}
+          sisältää kaikki laadukkaan verkkosivun rakennusvaiheet alusta loppuun.
+          Edullisilla mikropalveluilla autamme sivustoasi kasvamaan julkaisun
+          jälkeenkin.
         </h2>
       </TextsWrapper>
       <PalvelutOminaisuudet />

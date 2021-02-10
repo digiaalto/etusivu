@@ -1,5 +1,5 @@
 import styles from "./KehitysEdut.module.sass"
-import { useCallback, useState } from "react"
+import { useState } from "react"
 import { useTransition, animated } from "react-spring"
 import { BsLightningFill } from "react-icons/bs"
 import { FaShieldAlt } from "react-icons/fa"
@@ -23,15 +23,15 @@ const edut = [
     <animated.div className={styles.content} style={{ ...style }}>
       <h3 className={styles.header}>Turvallisuus</h3>
       <p>
-        Koska sivustomme ovat generoitu valmiiksi kokonaisuudeksi etukäteen
-        hyökkäyspinta-ala on minimoitu todella pieneksi. Onko hankala hakkeroida
-        tai kaataa staattista sivustoa.
+        Kun palvelinpuolen prosessit erotetaan kolmannen osapuolen palveluiden
+        sovellusliittymiksi, ja verkkosivuista rakennetaan staattinen
+        kokonaisuus on hyökkäyspinta-alat heti minimoituja ja DDoS mahdotonta.
       </p>
     </animated.div>
   ),
   ({ style }) => (
     <animated.div className={styles.content} style={{ ...style }}>
-      <h3 className={styles.header}>Skaalautuva</h3>
+      <h3 className={styles.header}>Skaalautuvuus</h3>
       <p>
         Pystytkö kuvittelemaan tilanteen jossa verkkosivullesi ilmestyy tuhansia
         käyttäjiä? Mitä jos tuotteesi viralisoituu, palvelunne saa
@@ -44,7 +44,7 @@ const edut = [
   ),
   ({ style }) => (
     <animated.div className={styles.content} style={{ ...style }}>
-      <h3 className={styles.header}>Kustannustehokas</h3>
+      <h3 className={styles.header}>Kustannustehokkuus</h3>
       <p>
         Enään ei tarvitse puhua web-hotelleista, servereistä tai palvelimista
         ollenkaan. Voimme abstraktoida kaikki tarpeet niihin erikoistuneille
@@ -61,12 +61,12 @@ const KehitysEdut = () => {
   const [index, setIndex] = useState(0)
   const transitions = useTransition(index, (p) => p, {
     from: { opacity: 0, transform: "translate3d(100%, 0, 0)" },
-    enter: { opacity: 1, transform: "translate3d(0%, 0, 0)" },
-    leave: { opacity: 0, transform: "translate3d(-50%, 0, 0)" },
+    enter: { opacity: 1, transform: "translate3d(-50%, 0, 0)" },
+    leave: { opacity: 0, transform: "translate3d(-150%, 0, 0)" },
   })
 
   return (
-    <div className={styles.mainGrid}>
+    <div className={styles.container}>
       <div className={styles.iconRow}>
         <BsLightningFill
           className={`${styles.etuIcon} ${styles.tehokkuusIcon} ${

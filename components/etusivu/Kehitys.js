@@ -1,7 +1,7 @@
 import styles from "./Kehitys.module.sass"
 import StepIndicator from "../common/StepIndicator"
 import LogosWeUse from "../common/LogosWeUse"
-import KehitysEtu from "./KehitysEdut"
+import KehitysEdut from "./KehitysEdut"
 
 const Kehitys = (props) => {
   const { refs } = props
@@ -18,7 +18,7 @@ const Kehitys = (props) => {
         <LogosWeUse />
       </div>
       <div className={styles.kehitysEdut}>
-        <KehitysEtu />
+        <KehitysEdut />
       </div>
     </section>
   )

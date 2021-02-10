@@ -5,11 +5,13 @@ import Link from "next/link"
 import Logo from "./Logo"
 import { debounce } from "../../utils/helpers"
 
-const Navigation = ({ stayTop }) => {
+const Navigation = ({ stayTop, topbar }) => {
   const [status, setStatus] = useState({
     inView: true,
     lastPosition: 0,
   })
+
+  const defaultTopPos = topbar ? "-28px" : "0px"
 
   const inViewSpring = useSpring({
     from: { top: "-28px" },
@@ -44,7 +46,18 @@ const Navigation = ({ stayTop }) => {
   }, [scrollHandler])
 
   return (
-    <animated.nav role="navigation" className={styles.nav} style={inViewSpring}>
+    <animated.nav
+      role="navigation"
+      className={styles.nav}
+      style={
+        stayTop
+          ? {
+              boxShadow: "inset 0 -1px 0 0 rgba(0,0,0,0.1)",
+              top: defaultTopPos,
+            }
+          : inViewSpring
+      }
+    >
       <Logo />
       <ol className={styles.links}>
         <NavLink href={"/hinnat"} text="Hinnat" />

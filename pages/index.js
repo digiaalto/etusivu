@@ -21,8 +21,8 @@ const IndexPage = () => {
       ref: palvelutRef,
     },
     {
-      section: "#viimeisimmat-tyonaytteet",
-      hoverText: "Työnäytteet",
+      section: "#viimeisimmat-tyot",
+      hoverText: "Työt",
       ref: nayteikkunaRef,
     },
     {

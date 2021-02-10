@@ -1,7 +1,6 @@
 import styles from "../../styles/pages/post.module.sass"
 import client from "../../client"
 import groq from "groq"
-import imageUrlBuilder from "@sanity/image-url"
 import BlockContent from "@sanity/block-content-to-react"
 import { useNextSanityImage } from "next-sanity-image"
 import BlogLayout from "@/layouts/BlogLayout"
@@ -9,19 +8,14 @@ import Image from "next/image"
 import Overline from "@/common/Overline"
 
 const Post = (props) => {
-  const { title, body, mainImage, name, categories, authorImage } = props
+  const { title, body, mainImage, categories } = props
+
   return (
-    <BlogLayout topbar={true}>
+    <BlogLayout topbar={false}>
       <div className={styles.container}>
+        <Ad />
         <article className={styles.blogArticle}>
-          <div className={styles.topContainer}>
-            <BlogMetadata
-              name={name}
-              authorImage={authorImage}
-              categories={categories}
-            />
-            <SideImage mainImage={mainImage} />
-          </div>
+          <MainImage image={mainImage} />
           <Content title={title} body={body} categories={categories} />
         </article>
       </div>
@@ -29,46 +23,31 @@ const Post = (props) => {
   )
 }
 
-const SideImage = ({ mainImage }) => {
-  const postImageProps = useNextSanityImage(client, mainImage)
+const Ad = () => {
   return (
-    <div className={styles.postImageWrap}>
-      <Image {...postImageProps} alt="Blogpostaukseen liittyvä kuva" />
+    <div className={styles.ad}>
+      <span className={styles.adHeader}>Digiaallon blogi</span>
+      <p className={styles.adDescription}>
+        Teemme verkkosivuja ja kirjoittelemme blogeja.
+      </p>
     </div>
   )
 }
 
-const BlogMetadata = ({ name, categories, authorImage }) => {
-  return (
-    <div className={styles.metadata}>
-      <AuthorImage image={authorImage} />
-      <span>{name}</span>
-      {/* <Categories categories={categories} /> */}
-    </div>
-  )
-}
-const AuthorImage = ({ image }) => {
+const MainImage = ({ image }) => {
   const imageProps = useNextSanityImage(client, image)
   return (
-    <div className={styles.authorImageWrapper}>
-      <Image {...imageProps} alt="Kirjoittaja" />
+    <div className={styles.mainImageWrapper}>
+      <Image {...imageProps} alt="Blogpostaukseen liittyvä kuva" />
     </div>
   )
-}
-
-function formatCategories(categories) {
-  let formatted = ""
-  for (let i = 0; i < categories.length; i++) {
-    formatted += ` ${categories[i]}`
-  }
-  return formatted
 }
 
 const Content = ({ title, body, categories }) => {
-  const formattedCategories = formatCategories(categories)
+  const categoyString = formatCategories(categories)
   return (
-    <div className={styles.textContent}>
-      <Overline text={formattedCategories} />
+    <div className={styles.content}>
+      <Overline text={categoyString} customStyle={{ textAlign: "left" }} />
       <h1 className={styles.mainHeader}>{title}</h1>
       <BlockContent
         blocks={body}
@@ -77,10 +56,6 @@ const Content = ({ title, body, categories }) => {
       />
     </div>
   )
-}
-
-function urlFor(source) {
-  return imageUrlBuilder(client).image(source)
 }
 
 export async function getStaticPaths() {
@@ -98,9 +73,7 @@ export async function getStaticProps({ params }) {
   const { slug = "" } = params
   const query = groq`*[_type == "post" && slug.current == $slug][0]{
 		title,
-		"name": author->name,
 		"categories": categories[]->title,
-		"authorImage": author->image,
 		mainImage,
 		body
 	}`
@@ -115,4 +88,12 @@ Post.defaultProps = {
   title: "Ei otsikkoa!",
   name: "Ei kirjoittajaa?",
   categories: ["Ei kategoriaa!?"],
+}
+
+function formatCategories(categories) {
+  let formatted = ""
+  for (let i = 0; i < categories.length; i++) {
+    formatted += ` ${categories[i]}`
+  }
+  return formatted
 }

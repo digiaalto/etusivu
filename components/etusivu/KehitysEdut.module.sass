@@ -2,13 +2,9 @@
 @use "@/partials/breakpoints"
 @use "@/partials/shadows"
 
-.mainGrid
-	display: grid
-	gap: 2rem
-	margin-top: 3rem
-	max-width: 100vw
-	width: 500px
-
+.container
+	margin-top: 2rem
+	width: 100%
 .iconRow
 	display: grid
 	grid-auto-flow: column
@@ -16,18 +12,21 @@
 	gap: 1rem
 	place-content: center
 	place-items: center
-
 .contentWrap
 	position: relative
 	min-height: 300px
-
 .content
-	text-align: center
+	display: block
+	width: max-content
+	max-width: 100%
+	margin-top: 1rem
 	position: absolute
-
+	left: 50%
+	text-align: center
 .header
 	color: colors.$dark
 
+// Colors.
 .etuIcon
 	color: colors.$light
 	font-size: 1.5rem
@@ -41,8 +40,8 @@
 		filter: saturate(100%)
 .selected
 	filter: saturate(100%)
-	box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5)
-
+	@supports (box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5))
+		box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5)
 .tehokkuusIcon
 	background-color: colors.$red
 .turvallisuusIcon
@@ -52,9 +51,8 @@
 .kustannustehokkuusIcon
 	background-color: colors.$yellow
 
-
 @include breakpoints.tablet
 	.iconRow
 		grid-template: min-content / repeat(4, min-content)
 	.contentWrap
-		min-height: 250px
+		min-height: 240px
