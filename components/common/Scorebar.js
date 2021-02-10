@@ -8,8 +8,8 @@ class Scorebar extends React.Component {
     this.progress = props.progress
     this.customClass = props.customClass
     this.config = {
-      size: 80,
-      strokeWidth: 10,
+      size: 50,
+      strokeWidth: 5,
     }
   }
 

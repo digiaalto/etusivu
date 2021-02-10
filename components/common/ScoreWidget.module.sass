@@ -1,17 +1,15 @@
-.container
-	font-size: 0.9rem
+@use "@/partials/breakpoints"
 
 .outerWrapper
 	position: relative
 
 .innerWrapper
+	position: relative
 	transform: rotate(-90deg)
-
-.background, .foreground
-	fill: none
-
-.foreground
-	animation-direction: forwards
+	
+.svg
+	margin: auto
+	display: block
 
 .centerLabel
 	position: absolute
@@ -23,3 +21,14 @@
 	display: inline-block
 	text-align: center
 	margin-top: 0.33rem
+	font-size: 0.7rem
+
+.background, .foreground
+	fill: none
+
+.foreground
+	animation-direction: forwards
+
+@include breakpoints.tablet
+	.container
+		font-size: 1rem

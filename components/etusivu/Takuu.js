@@ -7,22 +7,19 @@ const Takuu = (props) => {
   return (
     <section className={styles.section} ref={refs} id="takuu">
       <StepIndicator
-        overline="Takuu"
-        header="Tyytyväisyystakuu ja käyttöönotto."
+        overline="Laatutakuu"
+        header="Taattua asiakaspalvelua ja laatua."
         third
       />
       <p className={styles.description}>
-        Kuuntelemme palautettanne ja iteroimme verkkosivun designia kunnes
-        olette tyytyväisiä. Jos tilasitte meiltä sisällöntuoton voitte editoida
-        tekstiä ennen julkaisua.
+        Tarjoamme kaikille verkkosivuillemme tyytyväisyystakuun ja huippuluokan
+        tulokset Googlen verkkosivujen laatutestissä, tai{" "}
+        <span className="important">tai emme veloita mitään.</span>
       </p>
-      <p className={styles.description}>
-        Perehdytämme sivuston käyttöön ja mielellämme jatkamme yhteistyötä
-        julkaisun jälkeisten mikropalveluiden merkeissä.
-      </p>
+      <p className={styles.description}></p>
       <LinkButton
-        href="/tarjouspyynto"
-        text="Hinta & Tarjouspyyntö"
+        href="/hinnat"
+        text="Lähetä tarjouspyyntö"
         customClass={styles.ccButton}
       />
     </section>

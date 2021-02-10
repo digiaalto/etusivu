@@ -28,8 +28,8 @@ const Hero = (props) => {
         <StylizedHeaders animElement={animElement} />
         <CtaButtons />
         <h1 className={styles.description}>
-          Teemme epäreilun tehokkaita hybrid-sivuja yrityksille jotka haluavat
-          asiakkailleen paremman käyttökokemuksen.
+          Rakennamme epäreilun tehokkaita hybrid-verkkosivuja yrityksille
+          tyytyväisyystakuulla.
         </h1>
         <Link href="/#palvelut">
           <a className={styles.scrollLink} aria-label="Linkki alempaan osioon">
@@ -46,7 +46,7 @@ export default Hero
 const CtaButtons = () => {
   return (
     <div className={styles.ctaButtons}>
-      <LinkButton href="/#palvelut" text="Lue lisää" />
+      <LinkButton href="/#palvelut" text="Kerro lisää" />
       <LinkButton href="/hinnat" text="Hinnat" alternative />
     </div>
   )
@@ -91,7 +91,7 @@ const StylizedHeaders = ({ animElement }) => {
             animElement === 2 ? styles.fadeAnimation : null
           }`}
         >
-          Takuu.
+          Laatutakuu.
         </span>
       </div>
     </h1>

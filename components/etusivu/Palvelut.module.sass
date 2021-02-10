@@ -7,12 +7,17 @@
 	min-height: 100vh
 	display: grid
 	place-content: center
+	place-items: center
+
+.headersWrap
+	text-align: center
 
 .headerMain
 	@include typography.headerMain
 
 .headerDescription
 	@include typography.headerDescription
+	text-align: center
 
 @include breakpoints.laptop
 	.paragraphsWrap
@@ -29,9 +34,6 @@
 		text-align: center
 
 @include breakpoints.desktop
-	.section
-		place-items: center
-	.headersWrap
-		text-align: center
+
 	.paragraphsWrap
 		margin-bottom: 4rem

@@ -34,16 +34,10 @@
 	border-radius: 999px
 	cursor: help
 	box-shadow: shadows.$shadowSmall
-	@supports (background: linear-gradient(-45deg, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.3)))
-		background: linear-gradient(-45deg, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.3))
-	filter: saturate(0%)
+	background: linear-gradient(-45deg, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.3))
 	overflow: hidden
-	&:hover
-		filter: saturate(100%)
 .selected
-	filter: saturate(100%)
-	@supports (box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5))
-		box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5)
+	box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5)
 .tehokkuusIcon
 	background-color: colors.$red
 .turvallisuusIcon

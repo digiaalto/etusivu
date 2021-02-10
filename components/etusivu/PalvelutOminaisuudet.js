@@ -3,25 +3,25 @@ import styles from "./PalvelutOminaisuudet.module.sass"
 const PalvelutOminaisuudet = () => {
   return (
     <div className={styles.container}>
-      <Ominaisuus icon={BrainIcon} header="Asiakaslähtöinen suunnittelu.">
+      <Ominaisuus icon={BrainIcon} header="Suunnittelemme asiakaslähtöisesti.">
         <p>
           Suunnittelumme tarkoitus on saada vierailija pysymyään sivuillasi ja
           kiinnostumaan palvelustasi. Opimme sinulta kuka asiakkaasi on ja
           yhdistämme hänen tarpeensa sinun palveluun ja tuotteeseen.
         </p>
       </Ominaisuus>
-      <Ominaisuus icon={CogIcon} header="Nykyaikainen arkkitehtuuri.">
+      <Ominaisuus icon={CogIcon} header="Kehitämme huipputeknologialla.">
         <p>
-          Hybrid-sivumme kehitetään tavanomaisia palvelinsivuja älykkäämmin.
+          Hybrid-sivut ovat tavanomaisia palvelinsivuja älykkäämpiä.
           Hyödyntämällä uutta teknologiaa, verkkosivumme voivat olla erittäin
           suorituskykyisiä, turvallisia ja kustannustehokkaita.
         </p>
       </Ominaisuus>
-      <Ominaisuus icon={HeartIcon} header="Täysi tyytyväisyystakuu.">
+      <Ominaisuus icon={HeartIcon} header="Palvelemme tyytyväisyystakuulla.">
         <p>
-          Työskentelemme niin itsenäisesti tai tiiviissä yhteistyössä kanssanne
-          kuin teille parhaiten sopii. Lupaamme tyytyväisyystakuun
-          verkkosivuillemme tai palautamme rahanne takaisin.
+          Työskentelemme itsenäisesti tai yhteystyössä kanssanne kuin teille
+          parhaiten sopii. Lupaamme tyytyväisyystakuun tai rahat takaisin ja
+          verkkosivulle huippuluokan tulokset Googlen laatutestissä.
         </p>
       </Ominaisuus>
     </div>

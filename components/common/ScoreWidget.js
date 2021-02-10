@@ -69,7 +69,7 @@ const ScoreWidget = (props) => {
             />
           </svg>
         </div>
-        <span className={styles.centerLabel}>{progress}%</span>
+        <span className={styles.centerLabel}>{progress}</span>
       </div>
       {label && <span className={styles.label}>{label}</span>}
     </div>

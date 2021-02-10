@@ -2,13 +2,12 @@
 
 .container
 	display: grid
-	grid-template: auto / auto auto
-	justify-content: flex-start
-	gap: 2rem
+	grid-auto-flow: column
+	grid-template: auto / repeat(4, 60px)
+	gap: 0.66rem
 	text-align: center
-	font-weight: 500
 	user-select: none
 
 @include breakpoints.tablet
 	.container
-		grid-auto-flow: column
+		gap: 2rem

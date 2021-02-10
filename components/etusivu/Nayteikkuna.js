@@ -20,8 +20,12 @@ const digiaalto = {
       height: 5212 / mobileDivider,
     },
   },
-  scoreSrc: "/images/tyonayte/digiaalto/scores.png",
-  scores: [100, 100, 100, 100],
+  scores: {
+    suorituskyky: 100,
+    esteettomyys: 100,
+    parhaatKaytannot: 100,
+    seo: 100,
+  },
   header: "Digiaalto.fi",
   paragraphs: [
     `Digiaalto suunnittelee ja kehittää mukavakäyttöisiä yrityssivuja.`,
@@ -43,8 +47,12 @@ const majoitusroosa = {
       height: 8533 / mobileDivider,
     },
   },
-  scoreSrc: "/images/tyonayte/majoitusroosa/scores.png",
-  scores: [79, 94, 100, 100],
+  scores: {
+    suorituskyky: 91,
+    esteettomyys: 94,
+    parhaatKaytannot: 100,
+    seo: 100,
+  },
   header: "Majoitusroosa.fi",
   paragraphs: [
     `Kanta-hämeen Lammin kauniissa luonossa sijaitse majoitsualan yritys.`,

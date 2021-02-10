@@ -1,5 +1,6 @@
 import styles from "./Tyonayte.module.sass"
 import Image from "next/image"
+import Scorebar from "@/common/Scorebar"
 
 const as16_9 = 0.5625 // Desktop ratio
 const as9_16 = 1.777777777777778 // Mobile ratio
@@ -56,7 +57,7 @@ const DesktopView = ({ imgData }) => {
   )
 }
 
-const TyonayteText = ({ header, paragraphs, scoreSrc }) => {
+const TyonayteText = ({ header, paragraphs, scores }) => {
   return (
     <div className={styles.textView}>
       <span className={styles.nayteHeader}>{header}</span>
@@ -67,13 +68,9 @@ const TyonayteText = ({ header, paragraphs, scoreSrc }) => {
           </p>
         ))}
       </div>
-      <Score src={scoreSrc} />
+      <Scorebar progress={scores} />
     </div>
   )
-}
-
-const Score = ({ src }) => {
-  return <Image src={src} width={288} height={81} className={styles.score} />
 }
 
 export default Tyonayte
