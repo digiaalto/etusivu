@@ -14,7 +14,7 @@
 	place-items: center
 .contentWrap
 	position: relative
-	min-height: 300px
+	min-height: 360px
 .content
 	display: block
 	width: max-content
@@ -33,9 +33,11 @@
 	padding: 1.5rem
 	border-radius: 999px
 	cursor: help
-	background: linear-gradient(-45deg, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.3))
 	box-shadow: shadows.$shadowSmall
+	@supports (background: linear-gradient(-45deg, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.3)))
+		background: linear-gradient(-45deg, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.3))
 	filter: saturate(0%)
+	overflow: hidden
 	&:hover
 		filter: saturate(100%)
 .selected
