@@ -16,10 +16,10 @@ const BlogLayout = (props) => {
   }
 
   return (
-    <React.Fragment>
+    <div>
       <SEO {...props} />
       {topbar && <Topbar toggleOverlay={toggleOverlay} />}
-      <Navigation topbar={topbar} stayTop={true} />
+      <Navigation topbar={topbar} />
       <Menu
         menuOpen={overlayVisible}
         toggleOverlay={toggleOverlay}
@@ -27,7 +27,7 @@ const BlogLayout = (props) => {
       />
       <main>{children}</main>
       <Footer />
-    </React.Fragment>
+    </div>
   )
 }
 

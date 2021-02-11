@@ -31,17 +31,17 @@ const Suunnittelu = (props) => {
         <li>
           <h2 className={styles.listHeader}>2. Sisältö</h2>
           <p>
-            Tehokas verkkosivu tarvitsee tehokasta sisältöä. Voit kirjoittaa
-            tekstit itse, tai voimme haastattelussa kerättyjen tietojen ja
-            toimialaasi tutkimalla kehittää osuvaa sisältöä.
+            Tehokas verkkosivu tarvitsee tehokasta sisältöä. Voit tuottaa
+            tekstit itse, tai Digiaalto luo sisällön haastattelutietojen
+            perusteella sekä analysoimalla toimialaasi.
           </p>
         </li>
         <li>
           <h2 className={styles.listHeader}>3. Ulkoasu</h2>
           <p>
             Suunnittelemme kauniin estetiikan jonka perimmäinen tarkoitus on
-            tehdä käyttäjään positiivinen vaikutus, sekä erottaa sivusi muista,
-            omien arvojesi ja tyylisi mukaisesti.
+            tehdä potentiaaliseen asiakkaaseen positiivinen vaikutus, sekä
+            erottaa sinut muista omien arvojesi ja tyylisi mukaisesti.
           </p>
         </li>
       </ol>

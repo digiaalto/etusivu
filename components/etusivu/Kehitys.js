@@ -9,7 +9,7 @@ const Kehitys = (props) => {
     <section className={styles.section} ref={refs} id="kehitys">
       <StepIndicator overline="Kehitys" header="Verkkosivun moottori." second />
       <h2 className={styles.description}>
-        Tavallinen verkkoasiakas päättää sekunneissa haluaako hän selata sivua
+        Tavallinen verkkoasiakas päättää sekunneissa haluaako hän pysyä sivulla
         vai ei. Huonosti optimoitu sivusto tekee tämän päätöksen heidän
         puolestaan. Mahdollistamme asiakkaallesi parhaan käyttökokemuksen
         tekniikalla joka ylittää hänen odotukset.

@@ -4,80 +4,47 @@
 @use "@/partials/colors"
 @use "@/partials/shadows"
 
-.container
-	@include spacing.section
-	display: flex
-	flex-direction: column
-	align-items: center
-	justify-content: center
-
-.heroBg
-	z-index: -2
-	position: relative
-	height: 75vh
-	display: flex
-	place-content: center
-	&::after
-		background: linear-gradient( rgba(7, 70, 245, 0.45), rgba(110, 22, 224, 0.45))
-		content: ""
-		position: absolute
-		left: 0
-		top: 0
-		right: 0
-		bottom: 0
-
-.headers
-	display: grid
-	place-items: center
-	place-content: center
+.hero
+	@include spacing.hero
 	text-align: center
-	z-index: 1
-	user-select: none
-.overline
+
+.pageOverline
 	@include typography.headerSmall
 	letter-spacing: 1px
-	color: colors.$light !important
-.mainHeader
+
+.pageHeader
 	@include typography.headerMain
 	letter-spacing: 1px
-	color: colors.$light !important
 
+.pageDescription
+	@include typography.headerDescription
+	display: inline-block
+	font-weight: 400
 
 // Posts.
-.posts
-	transform: translateY(-30%)
-.postItem
-	display: inline-block
-	overflow: hidden
+.postsContainer
+	@include spacing.section
+	padding-top: 0 !important
+	display: grid
+	place-content: center
+
+.post
+	display: grid
+	// grid-template: auto / auto auto
+	grid-template: auto auto / auto
+	align-items: center
+
+.postImageWrapper
 	max-width: 420px
-	border-radius: 10px
-	box-shadow: shadows.$shadowSmall
-	background-color: colors.$light
-.postThumbnail
-	overflow: hidden
-.postThumbnailImage
-	transition: transform 200ms ease-in-out
-	&:hover
-		transform: scale(1.2)
 
-// Texts
-.postMeta
-	padding: 2rem
-
-.postTitle
-	@include typography.headerSmall
-	display: inline-block !important
-
-.postCategory
+.postHeader
+	@include typography.headerMedium
 	display: inline-block
-	background-color: colors.$primary
-	color: colors.$light
-	border-radius: 10px
-	padding: 0.5rem
-	margin-bottom: 1.5rem
+	text-decoration: underline
+	margin: 0
 
 @include breakpoints.laptop
-	.posts
-		transform: translateY(-40%)
-	.heroBg
-		padding-top: 4rem
+	.postsContainer
+	.post
+		grid-template: auto / minmax(auto, 420px) minmax(auto, 600px)
+		gap: 2rem
