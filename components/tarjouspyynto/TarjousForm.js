@@ -14,8 +14,9 @@ const sisalto = {
     webApp: 1750,
     sisallontuotto: 700,
     sisallonhallintaohjelma: 500,
-    sisallonhallintapalvelu: 30,
     kansainvalistaminen: 650,
+    sisallonhallintapalvelu: 30,
+    hakukonetarkistus: 80,
   },
   tyypit: {
     verkkosivu: {
@@ -46,7 +47,7 @@ const sisalto = {
   lisatiedot: {
     projektiKuvaus: {
       name: "projektiKuvaus",
-      label: "Kerro projektin laajuudesta omin sanoin.",
+      label: "Kerro projektista omin sanoin.",
     },
   },
   palvelut: {
@@ -62,17 +63,22 @@ const sisalto = {
       info: `Integroimme sivustoosi sisällönhallintaohjelman minkä kautta pystytte itsenäisesti muuttamaan tekstisisältöä.`,
       defaultChecked: false,
     },
-    sisallonhallintapalvelu: {
-      name: "sisallonhallintapalvelu",
-      label: "Sisällönhallintapalvelu",
-      info: `Uudelleenkäytettävä mikropalvelu yrityksille jotka eivät tarvitse kokonaista sisällönhallintaohjelmaa. Tarpeen tullessa editoimme muutostyötä vaativan kohdan 30€ kertahintaan.`,
-      defaultChecked: false,
-    },
     kansainvalistaminen: {
       name: "kansainvalistaminen",
       label: "Kansainvälistäminen",
       info: `Kasvata ulkomaalaisten asiakkaiden luottamusta tarjoamalla sisältöä heidän omalla kielellään.`,
       defaultChecked: false,
+    },
+    sisallonhallintapalvelu: {
+      name: "sisallonhallintapalvelu",
+      label: "Sisällönhallintapalvelu",
+      info: `Muutamme verkkosivusi sisältöä 30€ eurolla ohjeidesi mukaisesti. Uudelleenkäytettävä mikropalvelu yrityksille jotka eivät tarvitse kokonaista sisällönhallintaohjelmaa.`,
+      defaultChecked: false,
+    },
+    hakukonetarkastus: {
+      name: "hakukonetarkistus",
+      label: "Hakukonetarkastus",
+      info: `Tarkistamme 2kk julkaisun jälkeen hakukoneoptimoinnin orgaaniset tulokset ja hienosäädämme avainsanoja.`,
     },
   },
   yhteystiedot: {
@@ -297,7 +303,7 @@ const Yhteystiedot = ({ register, data, errors }) => {
     </FormSection>
   )
 }
-const LisatiedotSection = ({ register, onPriceChange, data }) => {
+const LisatiedotSection = ({ register, data }) => {
   return (
     <>
       <FormSection>
@@ -312,7 +318,7 @@ const LisatiedotSection = ({ register, onPriceChange, data }) => {
 const PalvelutSection = ({ register, onPriceChange, data }) => {
   return (
     <FormSection>
-      <Header text="Valitse sisältöpalvelut." />
+      <Header text="Valitse lisäpalvelut." />
       <RowGrid>
         <Checkbox
           {...data.sisallontuotto}
@@ -325,12 +331,17 @@ const PalvelutSection = ({ register, onPriceChange, data }) => {
           onChange={onPriceChange}
         />
         <Checkbox
+          {...data.kansainvalistaminen}
+          refs={register}
+          onChange={onPriceChange}
+        />
+        <Checkbox
           {...data.sisallonhallintapalvelu}
           refs={register}
           onChange={onPriceChange}
         />
         <Checkbox
-          {...data.kansainvalistaminen}
+          {...data.hakukonetarkastus}
           refs={register}
           onChange={onPriceChange}
         />
