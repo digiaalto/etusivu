@@ -3,36 +3,32 @@ import Accordion from "./Accordion"
 
 const sisalto = [
   {
-    button: "Kauanko verkkosivun valmistukseen menee?",
+    button: "Kauanko verkkosivun rakentamiseen menee?",
     content: `Riippuen projektin laajuudesta sivusto voi valmistua viikossa tai töihin voi mennä monta kuukautta. Yleinen verkkosivu valmistuu alle kuukaudessa. Aikakriittisissä tilanteissa voimme kiirehtiä markkinoille minimituotteella.`,
   },
   {
-    button: "Paljon tälläiset verkkosivut maksavat?",
-    content: `Sivujen hinnat vaihtelevat projektin vaatimusten mukaisesti noin tuhannesta eurosta kymmeneen tuhanteen. Voit katsoa alustavia hinta-arvioita tarjouspyynnön ohella.`,
+    button: "Paljon hybird-verkkosivut maksavat?",
+    content: `Sivujen hinnat vaihtelevat projektin vaatimusten mukaisesti noin tuhannesta eurosta kymmeneen tuhanteen. Voit katsoa projektillesi alustavan hinta-arvioita tarjouspyynnön ohella ja tarkemman vastauksen saat lähettämällä pyynnön.`,
   },
   {
     button: "Voiko hybrid-sivustot toimia ilman minkäänlaista ylläpitoa?",
-    content: `Ei, mutta modernin Jamstack arkkitehtuurin kanssa voimme jättää huoltotyöt niihin erikoistuneille palveluntarjoajille. Harva asia voi mennä rikki hybrid-sivustossa mikä generoidaan etukäteen.`,
+    content: `Ei, mutta modernin JAMStack arkkitehtuurin kanssa voimme jättää huoltotyöt niihin erikoistuneille palveluntarjoajille. Harva asia voi mennä rikki hybrid-sivustossa mikä generoidaan staattiseksi kokonaisuudeksi.`,
   },
   {
     button: "Toimiiko sivustoni ilman palvelukustannuksia?",
-    content: `Digiaalto käyttää kansainvälisesti menestyneitä palveluita jotka pitävät hengissä ison osan maailman internet-infrastruktuuria ilman taukoja. Pienen suomalaisen yrityksen vaatimukset eivät yleensä ylitä edes maksurajaa.`,
+    content: `Tavallisen suomalaisen yrityksen palvelinvaatimukset eivät yleensä ylitä käyttämiemme palveluntarjoajien maksurajoja. Vastaus vaihtelee vaatimusten mukaisesti.`,
   },
   {
-    button: "Uudistatteko verkkosivuja?",
-    content: `Jos verkkosivusi pyörii vanhalla ja huonosti optimoidulla WordPressillä on meidän henkilökohtainen kutsumus auttaa sinua. Ota yhteyttä ja laaditaan sopiva lähestymistapa.`,
+    button: "Uudistatteko vanhoja verkkosivuja?",
+    content: `Jos verkkosivusi vetelee viimeisiään vanhalla ja huonosti optimoidulla järjestelmällä autamme varmasti. Ota yhteyttä ja laaditaan sopiva lähestymistapa.`,
   },
   {
-    button: "Tarjoatteko hosting-palvelua?",
-    content: `Teemme kaikki tarpeelliset palvelutilit puolestanne.`,
-  },
-  {
-    button: `Kuinka voit kirjoittaa tekstisisältöä tuntematta yritystäni yhtä intiimisti kuten minä?`,
-    content: `Kukaan ei tunne yritystäsi ja brändiäsi paremmin kuin sinä. Tästä syystä haastattelemme teitä ja perehdymme toimialaasi.`,
+    button: `Kuinka Digiaalto kirjoittaa tekstisisältöä tuntematta yritystäni yhtä intiimisti kuten minä?`,
+    content: `Kukaan ei tunne yritystäsi ja brändiäsi paremmin kuin sinä, tästä syystä tenttaamme teiltä tietoja ennen suunnittelua tai sisällöntuottoa.`,
   },
   {
     button: "Voitteko auttaa sosiaalisen mediani kanssa?",
-    content: `Emme ole markkinointitoimisto. Mutta, pidämme huolen että sivustonne on yhteensopiva kaikkien some-alustojen kanssa meta-tägeillä.`,
+    content: `Emme ole markkinointitoimisto, mutta pidämme huolen että sivustonne on yhteensopiva kaikkien some-alustojen kanssa oikeilla meta-tägeillä, ei kun jakamaan!`,
   },
 ]
 

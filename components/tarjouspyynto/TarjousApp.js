@@ -7,19 +7,18 @@ import { MdThumbUp, MdThumbDown } from "react-icons/md"
 import { PriceWidget } from "./index"
 
 const sisalto = {
-  header: "Lähetä tarjouspyyntö!",
+  header: "Tarjouspyyntö.",
   subheader:
-    "Tämä tarjouspyyntö ei maksa mitään eikä sido sinua mihinkään. Vastaamme sähköpostiisi parissa arkipäivässä.",
+    "Tarjouspyyntö ei maksa mitään eikä sido sinua mihinkään, lähetämme vastauksen sähköpostiisi yleensä ensimmäisenä arkipäivänä.",
   vahvistusViesti: {
     success: {
       header: "Kiitos tarjouspyynnöstä!",
       subheader:
-        "Luemme antamasi tiedot läpi ja vastaamme sähköpostiisi muutamassa arkipäivässä.",
+        "Luemme tarjouspyyntösi tiedot läpi ja vastaamme mahdollisimman pian.",
     },
     error: {
       header: "Kaikki ei mennyt kuin Strömsössä...",
-      subheader:
-        "Auringonpurkaus keskeytti lähetyksen, onneksi sähköposti toimii aina.",
+      subheader: "Viesti ei mennyt perille. Kokeile sähköpostia.",
     },
   },
 }

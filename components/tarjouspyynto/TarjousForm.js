@@ -8,70 +8,70 @@ import { ButtonStyler } from "../common/button"
 // Content. Get from CMS?
 const sisalto = {
   hinnasto: {
-    verkkosivu: 2200,
-    verkkokauppa: 3200,
-    blogi: 1200,
-    webApp: 2000,
-    sisallontuotto: 800,
-    sisallonhallintaohjelma: 800,
-    sisallonhallintapalvelu: 25,
-    kansainvalistaminen: 1000,
+    verkkosivu: 1500,
+    verkkokauppa: 2000,
+    blogi: 1000,
+    webApp: 1750,
+    sisallontuotto: 700,
+    sisallonhallintaohjelma: 500,
+    sisallonhallintapalvelu: 30,
+    kansainvalistaminen: 650,
   },
   tyypit: {
     verkkosivu: {
       name: "verkkosivu",
       label: "Verkkosivu",
-      info: `Rakennamme verkkosivuston jonka päätarkoitus on vakuuttaa vierailijat ostamaan sinun palveluitasi. Jokainen sivusto tarvitsee vähintään markkinoitisivun tai aloitussivun.`,
+      info: `Verkkosivu joka palvelee yrityksesi tarkoituksiasi.`,
       defaultChecked: true,
     },
     verkkokauppa: {
       name: "verkkokauppa",
       label: "Verkkokauppa",
-      info: `Kehitämme verkkokaupan jolla myyt tuotteitasi tehokaasti 24/7. Integroimme sivustoon maksuportaalin ja varastonhallintapalvelun.`,
+      info: `Varastonhallinnalla ja maksuportaalilla varustettu verkkokauppaa joka toimii tehokkaasti ympäri vuoden.`,
       defaultChecked: false,
     },
     blogi: {
       name: "blogi",
       label: "Blogi",
-      info: `Yritysblogin tarkoitus on houkutella kävijöitä pääsivullesi kirjoittamalla kiinnostavilla artikkeleilla.`,
+      info: `Houkuttele kävijöitä pääsivullesi kirjoittamalla kiinnostavilla artikkeleilla.`,
       defaultChecked: false,
     },
     webApp: {
       name: "webApp",
       label: "Web-app",
-      info: `Hyötyykö yrityksesi React-pohjaisesta web-appista, joka palvelee asiakkaitasi uusilla menetelmillä? Teemme tilaustyönnä vaatimusten mukaisia verkkotuotteita ja palveluita.`,
+      info: `Tilaustyönä tehty React-pohjainen verkkosovellus tarkan ohjelmistomäärityksen mukaan.`,
       defaultChecked: false,
     },
   },
   lisatiedot: {
     projektiKuvaus: {
       name: "projektiKuvaus",
-      label: "Kuvaile projektia omin sanoin",
+      label: "Kerro projektin laajuudesta omin sanoin.",
     },
   },
   palvelut: {
     sisallontuotto: {
       name: "sisallontuotto",
       label: "Sisällöntuotto",
-      info: `Kirjoitamme tekstit haastattelun ja toimialasi perusteella. Sisältöä on mahdollista editoida ennen julkaisua.`,
+      info: `Kirjoitamme verkkosivusi tutkimalla toimialaasi ja tuottamalla tekstisisällön haastattelutietojen perusteella.`,
       defaultChecked: true,
-    },
-    sisallonhallintapalvelu: {
-      name: "sisallonhallintapalvelu",
-      label: "Sisällönhallintapalvelu",
-      info: `Digiaalto hoitaa satunnaiset sisällönmuutokset puolestasi kertahintaan 25€ / muutos. Sopii yrityksille jotka eivät ennusta tarvitsevansa kokonaista sisällönhalintaohjelmaa.`,
-      defaultChecked: false,
     },
     sisallonhallintaohjelma: {
       name: "sisallonhallintaohjelma",
       label: "Sisällönhallintaohjelma",
-      info: `Integroimme sivustoon sisällönhallintaohjelman minkä kautta pystytte itsenäisesti muuttamaan tekstisisältöä.`,
+      info: `Integroimme sivustoosi sisällönhallintaohjelman minkä kautta pystytte itsenäisesti muuttamaan tekstisisältöä.`,
+      defaultChecked: false,
+    },
+    sisallonhallintapalvelu: {
+      name: "sisallonhallintapalvelu",
+      label: "Sisällönhallintapalvelu",
+      info: `Uudelleenkäytettävä mikropalvelu yrityksille jotka eivät ennusta tarvitsevansa kokonaista sisällönhalintaohjelmaa. Muutamme sivustosi sisältöä tarpeen noustessa kertahintaan 30€ / työ.`,
       defaultChecked: false,
     },
     kansainvalistaminen: {
       name: "kansainvalistaminen",
       label: "Kansainvälistäminen",
-      info: `Laajennu kansainvälisille markkinoille ja kasvata ulkomaalaisten asiakkaiden luottamusta tarjoamalla sisältöä heidän omalla kielellään.`,
+      info: `Kasvata ulkomaalaisten asiakkaiden luottamusta tarjoamalla sisältöä heidän omalla kielellään.`,
       defaultChecked: false,
     },
   },
@@ -320,12 +320,12 @@ const PalvelutSection = ({ register, onPriceChange, data }) => {
           onChange={onPriceChange}
         />
         <Checkbox
-          {...data.sisallonhallintapalvelu}
+          {...data.sisallonhallintaohjelma}
           refs={register}
           onChange={onPriceChange}
         />
         <Checkbox
-          {...data.sisallonhallintaohjelma}
+          {...data.sisallonhallintapalvelu}
           refs={register}
           onChange={onPriceChange}
         />

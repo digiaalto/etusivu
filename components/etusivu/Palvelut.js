@@ -12,7 +12,7 @@ const Palvelut = (props) => {
         <Overline text="Parempaa palvelua." />
         <h1 className={styles.headerMain}>
           Tuomme uutta teknologiaa Piilaaksosta suomalaisten yritysten ja
-          asiakkaiden iloksi.
+          asiakkaiden helpotukseksi.
         </h1>
       </HeadersWrap>
       <TextsWrapper>

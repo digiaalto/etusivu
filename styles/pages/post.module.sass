@@ -5,30 +5,13 @@
 .container
 	@include spacing.hero
 
-// Ad content.
-.ad
-	position: relative
-	text-align: center
-	@include spacing.section
-	padding-top: 0 !important
-
-.adHeader
-	margin: 0
-	font-size: 6rem
-	font-weight: 800
-	line-height: 1.2
-	display: block
-
-.adDescription
-	@include typography.headerDescription
-	display: inline-block
-	margin-top: 1rem
-
 // Blog Content.
 .blogArticle
 	display: grid
 	gap: 2rem
 	place-content: center
+.descriptionHeader
+	@include typography.headerMedium
 .mainImageWrapper
 	max-width: 900px
 	width: 100%

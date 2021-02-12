@@ -17,11 +17,7 @@ const Takuu = (props) => {
         <span className="important">tai emme veloita mitään.</span>
       </p>
       <p className={styles.description}></p>
-      <LinkButton
-        href="/hinnat"
-        text="Lähetä tarjouspyyntö"
-        customClass={styles.ccButton}
-      />
+      <LinkButton href="/hinnat" text="Lähetä tarjouspyyntö" primary />
     </section>
   )
 }

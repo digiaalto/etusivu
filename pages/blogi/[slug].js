@@ -6,31 +6,36 @@ import { useNextSanityImage } from "next-sanity-image"
 import BlogLayout from "@/layouts/BlogLayout"
 import Image from "next/image"
 import Overline from "@/common/Overline"
+import Link from "next/link"
 
 const Post = (props) => {
-  const { title, body, mainImage, categories } = props
+  const { title, body, excerpt, mainImage, categories } = props
 
   return (
     <BlogLayout topbar={false}>
       <div className={styles.container}>
-        <Ad />
         <article className={styles.blogArticle}>
+          <div>
+            <Link href="/blogi">
+              <a
+                style={{
+                  justifySelf: "start",
+                }}
+              >
+                &larr; Blogi
+              </a>
+            </Link>
+          </div>
           <MainImage image={mainImage} />
-          <Content title={title} body={body} categories={categories} />
+          <Content
+            title={title}
+            categories={categories}
+            excerpt={excerpt}
+            body={body}
+          />
         </article>
       </div>
     </BlogLayout>
-  )
-}
-
-const Ad = () => {
-  return (
-    <div className={styles.ad}>
-      <span className={styles.adHeader}>Digiaallon blogi</span>
-      <p className={styles.adDescription}>
-        Teemme verkkosivuja ja kirjoittelemme blogeja.
-      </p>
-    </div>
   )
 }
 
@@ -43,12 +48,19 @@ const MainImage = ({ image }) => {
   )
 }
 
-const Content = ({ title, body, categories }) => {
-  const categoyString = formatCategories(categories)
+const Content = ({ title, body, categories, excerpt }) => {
+  const categoryString = formatCategories(categories)
+
   return (
     <div className={styles.content}>
-      <Overline text={categoyString} customStyle={{ textAlign: "left" }} />
+      <Overline
+        text={"Kategoria: " + categoryString}
+        customStyle={{ textAlign: "left", margin: "0" }}
+      />
       <h1 className={styles.mainHeader}>{title}</h1>
+      <h2 className={styles.descriptionHeader}>
+        <BlockContent blocks={excerpt} {...client.config()} />
+      </h2>
       <BlockContent
         blocks={body}
         imageOptions={{ w: 320, h: 240, fit: "max" }}
@@ -75,7 +87,8 @@ export async function getStaticProps({ params }) {
 		title,
 		"categories": categories[]->title,
 		mainImage,
-		body
+		body,
+		excerpt
 	}`
   return {
     props: await client.fetch(query, { slug }),
@@ -93,7 +106,8 @@ Post.defaultProps = {
 function formatCategories(categories) {
   let formatted = ""
   for (let i = 0; i < categories.length; i++) {
-    formatted += ` ${categories[i]}`
+    let seperator = categories[i + 1] ? ", " : ""
+    formatted += `${categories[i]}${seperator}`
   }
   return formatted
 }
