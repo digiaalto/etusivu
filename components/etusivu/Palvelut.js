@@ -1,7 +1,7 @@
 import styles from "./Palvelut.module.sass"
 import Overline from "../common/Overline"
 import PalvelutOminaisuudet from "./PalvelutOminaisuudet"
-import Link from "next/link"
+import { Link as LinkScroll } from "react-scroll"
 
 const Palvelut = (props) => {
   const { refs } = props
@@ -17,9 +17,9 @@ const Palvelut = (props) => {
       </HeadersWrap>
       <TextsWrapper>
         <h2 className={styles.headerDescription}>
-          <Link href="/#suunnittelu">
-            <a>Prosessimme</a>
-          </Link>{" "}
+          <LinkScroll to="suunnittelu" smooth={true}>
+            Prosessime
+          </LinkScroll>{" "}
           sisältää kaikki laadukkaan verkkosivun rakennusvaiheet alusta loppuun.
           Edullisilla mikropalveluilla autamme sivustoasi kasvamaan julkaisun
           jälkeenkin.

@@ -1,6 +1,6 @@
 import styles from "./Hero.module.sass"
 import React, { useState, useEffect } from "react"
-import Link from "next/link"
+import { Link as LinkScroll } from "react-scroll"
 import { BiMouse } from "react-icons/bi"
 
 import { LinkButton } from "../common/button"
@@ -31,11 +31,14 @@ const Hero = (props) => {
           Rakennamme epäreilun tehokkaita hybrid-verkkosivuja yrityksille
           tyytyväisyystakuulla.
         </h1>
-        <Link href="/#palvelut">
-          <a className={styles.scrollLink} aria-label="Linkki alempaan osioon">
-            <BiMouse />
-          </a>
-        </Link>
+        <LinkScroll
+          className={styles.scrollLink}
+          aria-label="Linkki alempaan osioon"
+          smooth={true}
+          to="palvelut"
+        >
+          <BiMouse />
+        </LinkScroll>
       </div>
     </section>
   )
@@ -46,7 +49,7 @@ export default Hero
 const CtaButtons = () => {
   return (
     <div className={styles.ctaButtons}>
-      <LinkButton href="/#palvelut" text="Kerro lisää" />
+      <LinkButton href="palvelut" text="Kerro lisää" smooth />
       <LinkButton href="/hinnat" text="Hinnat" alternative />
     </div>
   )

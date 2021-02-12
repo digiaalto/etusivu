@@ -1,6 +1,7 @@
 import Link from "next/link"
 import PropTypes from "prop-types"
 import ButtonStyler from "./ButtonStyler"
+import { Link as LinkScroll } from "react-scroll"
 
 const LinkButton = (props) => {
   const { external } = props
@@ -13,8 +14,12 @@ const LinkButton = (props) => {
 }
 
 const InternalLink = (props) => {
-  const { text, href } = props
-  return (
+  const { text, href, smooth } = props
+  return smooth ? (
+    <LinkScroll to={href} smooth={true}>
+      {text}
+    </LinkScroll>
+  ) : (
     <Link href={href}>
       <a>{text}</a>
     </Link>
