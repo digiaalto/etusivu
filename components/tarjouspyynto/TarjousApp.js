@@ -61,19 +61,10 @@ const TarjousApp = (props) => {
 const DefaultForm = ({ status, setStatus, price, setPrice }) => {
   return (
     <div className={styles.defaultForm}>
-      <div className={styles.defaultFormColumn}>
-        <h2 className={styles.header}>{sisalto.header}</h2>
-        <h3 className={styles.subheader}>{sisalto.subheader}</h3>
-        <PriceWidget price={price} hideIfDesktop />
-        <TarjousForm
-          status={status}
-          setStatus={setStatus}
-          setPrice={setPrice}
-        />
-      </div>
-      <div className={styles.defaultFormColumn}>
-        <PriceWidget price={price} />
-      </div>
+      <PriceWidget price={price} />
+      <h2 className={styles.header}>{sisalto.header}</h2>
+      <h3 className={styles.subheader}>{sisalto.subheader}</h3>
+      <TarjousForm status={status} setStatus={setStatus} setPrice={setPrice} />
     </div>
   )
 }

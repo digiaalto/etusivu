@@ -18,12 +18,10 @@ const PriceWidget = ({ price, hideIfDesktop }) => {
     <div
       className={`${styles.widget} ${hideIfDesktop && styles.hideIfDesktop}`}
     >
-      <span className={styles.price}>
-        <animated.span>
-          {spring.number.interpolate((val) => `${Math.floor(val)}€`)}
-        </animated.span>
-        <span className={styles.alv}>+ alv</span>
-      </span>
+      <animated.span>
+        {spring.number.interpolate((val) => `${Math.floor(val)}€`)}
+      </animated.span>
+      <span className={styles.alv}>+ alv</span>
     </div>
   )
 }

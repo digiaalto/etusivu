@@ -13,7 +13,7 @@ const Takuu = (props) => {
       />
       <p className={styles.description}>
         Tarjoamme kaikille verkkosivuillemme tyytyväisyystakuun ja huippuluokan
-        tulokset Googlen verkkosivujen laatutestissä, tai{" "}
+        tulokset Googlen verkkosivujen laatutestissä,{" "}
         <span className="important">tai emme veloita mitään.</span>
       </p>
       <p className={styles.description}></p>

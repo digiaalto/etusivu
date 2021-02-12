@@ -65,7 +65,7 @@ const sisalto = {
     sisallonhallintapalvelu: {
       name: "sisallonhallintapalvelu",
       label: "Sisällönhallintapalvelu",
-      info: `Uudelleenkäytettävä mikropalvelu yrityksille jotka eivät ennusta tarvitsevansa kokonaista sisällönhalintaohjelmaa. Muutamme sivustosi sisältöä tarpeen noustessa kertahintaan 30€ / työ.`,
+      info: `Uudelleenkäytettävä mikropalvelu yrityksille jotka eivät tarvitse kokonaista sisällönhallintaohjelmaa. Tarpeen tullessa editoimme muutostyötä vaativan kohdan 30€ kertahintaan.`,
       defaultChecked: false,
     },
     kansainvalistaminen: {

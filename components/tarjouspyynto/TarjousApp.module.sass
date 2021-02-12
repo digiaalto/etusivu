@@ -4,15 +4,16 @@
 
 // Layout.
 .section
-	@include spacing.section
+	@include spacing.hero
 	display: flex
-	justify-content: center
-	margin-top: 3rem
+	place-items: center
+	place-content: center
 
-.defaultFormColumn
-	position: relative
-	&:last-of-type
-		display: none
+.defaultForm
+	display: grid
+	grid-auto-flow: row
+	place-items: start
+	place-content: start
 
 // Headers.
 .headers
@@ -48,18 +49,5 @@
 		transform: rotate(360deg)
 
 @include breakpoints.laptop
-	.section
-		margin-top: 8rem
 	.header
 		max-width: 100% !important
-	.defaultForm
-		display: grid
-		grid-template: auto / 1fr auto
-		gap: 5rem
-	.defaultFormColumn
-		&:last-of-type
-			display: block !important
-
-@include breakpoints.desktop
-	.defaultForm
-		gap: 7rem
