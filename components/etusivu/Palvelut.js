@@ -17,12 +17,12 @@ const Palvelut = (props) => {
       </HeadersWrap>
       <TextsWrapper>
         <h2 className={styles.headerDescription}>
+          Prosessime sisältää kaikki laadukkaan verkkosivun{" "}
           <LinkScroll to="suunnittelu" smooth={true}>
-            Prosessime
+            rakennusvaiheet
           </LinkScroll>{" "}
-          sisältää kaikki laadukkaan verkkosivun rakennusvaiheet alusta loppuun.
-          Edullisilla mikropalveluilla autamme sivustoasi kasvamaan julkaisun
-          jälkeenkin.
+          alusta loppuun. Edullisilla mikropalveluilla autamme sivustoasi
+          kasvamaan julkaisun jälkeenkin.
         </h2>
       </TextsWrapper>
       <PalvelutOminaisuudet />
