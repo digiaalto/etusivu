@@ -47,7 +47,11 @@
 @keyframes rotate
 	100%
 		transform: rotate(360deg)
-
+	
 @include breakpoints.laptop
-	.header
-		max-width: 100% !important
+	.defaultForm
+		grid-auto-flow: column
+		gap: 4rem
+	.content
+		order: -1
+		
