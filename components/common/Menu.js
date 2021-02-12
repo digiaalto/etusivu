@@ -58,10 +58,10 @@ const Menu = (props) => {
   }, [visibleSection])
 
   function scrollTo(ele, section) {
-    if (window && window.location) {
-      const href = window.location.origin + "/" + section
-      history.pushState(null, "", href)
-    }
+    // if (window && window.location) {
+    //   const href = window.location.origin + "/" + section
+    //   history.pushState(null, "", href)
+    // }
     ele.scrollIntoView({
       behavior: "smooth",
       block: "start",
