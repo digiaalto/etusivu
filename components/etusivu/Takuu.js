@@ -8,12 +8,12 @@ const Takuu = (props) => {
     <section className={styles.section} ref={refs} id="takuu">
       <StepIndicator
         overline="Laatutakuu"
-        header="Taattua asiakaspalvelua ja laatua."
+        header="Tyytyväisyystakuulla palvelua ja laatua."
         third
       />
       <p className={styles.description}>
-        Tarjoamme kaikille verkkosivuillemme tyytyväisyystakuun ja huippuluokan
-        tulokset Googlen verkkosivujen laatutestissä,{" "}
+        Tarjoamme verkkosivuillemme tyytyväisyystakuun ja huippuluokan tulokset
+        Googlen verkkosivujen laatutestissä,{" "}
         <span className="important">tai emme veloita mitään.</span>
       </p>
       <p className={styles.description}></p>
