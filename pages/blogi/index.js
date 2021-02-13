@@ -23,7 +23,7 @@ const Hero = () => {
     <section className={styles.hero}>
       <span className={styles.pageOverline}>Moi Digiaallon blogista!</span>
       <h1 className={styles.pageHeader}>
-        Faktaa ja tarinoita verkkomaailmasta.
+        Faktaa ja legendaa verkkomaailmasta.
       </h1>
       <h2 className={styles.pageDescription}>
         Kirjoitamme ohjeita verkkosivujen omistajille, teknisiä juttuja ja
