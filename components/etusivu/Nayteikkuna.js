@@ -11,13 +11,13 @@ const digiaalto = {
       src: "/images/tyonayte/digiaalto/desktop.png",
       alt: "Työnäyte - Digiaalto, PC",
       width: 1920 / desktopDivider,
-      height: 3792 / desktopDivider,
+      height: 6117 / desktopDivider,
     },
     mobile: {
       src: "/images/tyonayte/digiaalto/mobile.png",
       alt: "Työnäyte - Digiaalto, Mobiili",
-      width: 411 / mobileDivider,
-      height: 6046 / mobileDivider,
+      width: 375 / mobileDivider,
+      height: 6882 / mobileDivider,
     },
   },
   scores: {
