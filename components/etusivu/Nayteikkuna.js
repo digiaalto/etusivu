@@ -28,7 +28,7 @@ const digiaalto = {
   },
   header: "Digiaalto.fi",
   paragraphs: [
-    `Digiaalto suunnittelee ja kehittää mukavakäyttöisiä yrityssivuja.`,
+    `Oma verkkosivu. Digiaalto rakentaa mukavakäyttöisiä yrityssivuja yhtä mukaville yrittäjille.`,
   ],
 }
 
@@ -53,10 +53,8 @@ const majoitusroosa = {
     parhaatKaytannot: 100,
     seo: 100,
   },
-  header: "Majoitusroosa.fi",
-  paragraphs: [
-    `Kanta-hämeen Lammin kauniissa luonossa sijaitse majoitsualan yritys.`,
-  ],
+  header: "Majoitusroosa",
+  paragraphs: [`Kanta-Hämeessä idyylinen majoituspaikka isoille ryhmille.`],
 }
 
 const Nayteikkuna = (props) => {
@@ -67,8 +65,8 @@ const Nayteikkuna = (props) => {
         <Overline text="Vieritä ikkunoita" />
         <h1 className="headerMain">Viimeisimmät työt.</h1>
         <div className={styles.naytteetWrap}>
+          <Tyonayte {...majoitusroosa} />
           <Tyonayte {...digiaalto} />
-          <Tyonayte {...majoitusroosa} inverted={true} />
         </div>
       </div>
     </section>

@@ -1,6 +1,5 @@
 import styles from "./Kehitys.module.sass"
 import StepIndicator from "../common/StepIndicator"
-import LogosWeUse from "../common/LogosWeUse"
 import KehitysEdut from "./KehitysEdut"
 
 const Kehitys = (props) => {
@@ -14,9 +13,6 @@ const Kehitys = (props) => {
         puolestaan. Mahdollistamme asiakkaallesi parhaan käyttökokemuksen
         tekniikalla joka ylittää hänen odotukset.
       </h2>
-      <div className={styles.logosWeUse}>
-        <LogosWeUse />
-      </div>
       <div className={styles.kehitysEdut}>
         <KehitysEdut />
       </div>
