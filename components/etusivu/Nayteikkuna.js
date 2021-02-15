@@ -54,7 +54,9 @@ const majoitusroosa = {
     seo: 100,
   },
   header: "Majoitusroosa",
-  paragraphs: [`Kanta-Hämeessä idyylinen majoituspaikka isoille ryhmille.`],
+  paragraphs: [
+    `Kanta-Hämeessä idyylinen majoituspaikka isoille ryhmille. Sisältö englanniksi ja suomeksi.`,
+  ],
 }
 
 const Nayteikkuna = (props) => {
