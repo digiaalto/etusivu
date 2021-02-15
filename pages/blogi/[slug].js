@@ -15,7 +15,7 @@ const Post = (props) => {
     <BlogLayout topbar={false}>
       <div className={styles.container}>
         <article className={styles.blogArticle}>
-          <div>
+          {/* <div>
             <Link href="/blogi">
               <a
                 style={{
@@ -25,7 +25,7 @@ const Post = (props) => {
                 &larr; Blogi
               </a>
             </Link>
-          </div>
+          </div> */}
           <MainImage image={mainImage} />
           <Content
             title={title}
@@ -48,6 +48,20 @@ const MainImage = ({ image }) => {
   )
 }
 
+const BlockRenderer = (props) => {
+  const { style = "normal" } = props.node
+
+  if (style === "blockquote") {
+    return (
+      <blockquote style={{ maxWidth: "600px", color: "#666" }}>
+        {props.children}
+      </blockquote>
+    )
+  }
+  // Fall back to default handling
+  return BlockContent.defaultSerializers.types.block(props)
+}
+
 const Content = ({ title, body, categories, excerpt }) => {
   const categoryString = formatCategories(categories)
 
@@ -61,11 +75,15 @@ const Content = ({ title, body, categories, excerpt }) => {
       <h2 className={styles.descriptionHeader}>
         <BlockContent blocks={excerpt} {...client.config()} />
       </h2>
-      <BlockContent
-        blocks={body}
-        imageOptions={{ w: 320, h: 240, fit: "max" }}
-        {...client.config()}
-      />
+      <div className={styles.blockContent}>
+        <BlockContent
+          blocks={body}
+          {...client.config()}
+          serializers={{
+            types: { block: BlockRenderer },
+          }}
+        />
+      </div>
     </div>
   )
 }
