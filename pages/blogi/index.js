@@ -27,7 +27,7 @@ const Hero = () => {
       </h1>
       <h2 className={styles.pageDescription}>
         Kirjoitamme ohjeita verkkosivujen omistajille, teknisiä juttuja ja
-        ajankohtaisia kirjoitelmia web-designista ja verkkokehitykestä.
+        ajankohtaisia kirjoitelmia web-designista ja verkkokehityksestä.
       </h2>
     </section>
   )
