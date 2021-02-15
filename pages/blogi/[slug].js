@@ -15,7 +15,7 @@ const Post = (props) => {
     <BlogLayout topbar={false}>
       <div className={styles.container}>
         <article className={styles.blogArticle}>
-          {/* <div>
+          <div>
             <Link href="/blogi">
               <a
                 style={{
@@ -25,7 +25,7 @@ const Post = (props) => {
                 &larr; Blogi
               </a>
             </Link>
-          </div> */}
+          </div>
           <MainImage image={mainImage} />
           <Content
             title={title}
