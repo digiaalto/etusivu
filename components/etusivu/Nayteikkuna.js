@@ -17,7 +17,7 @@ const digiaalto = {
       src: "/images/tyonayte/digiaalto/mobile.png",
       alt: "Työnäyte - Digiaalto, Mobiili",
       width: 411 / mobileDivider,
-      height: 5212 / mobileDivider,
+      height: 6046 / mobileDivider,
     },
   },
   scores: {
@@ -43,8 +43,8 @@ const majoitusroosa = {
     mobile: {
       src: "/images/tyonayte/majoitusroosa/mobile.png",
       alt: "Työnäyte - Majoitusroosa, Mobiili",
-      width: 411 / mobileDivider,
-      height: 8533 / mobileDivider,
+      width: 375 / mobileDivider,
+      height: 8552 / mobileDivider,
     },
   },
   scores: {
