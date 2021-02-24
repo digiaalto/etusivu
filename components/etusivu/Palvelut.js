@@ -17,12 +17,11 @@ const Palvelut = (props) => {
       </HeadersWrap>
       <TextsWrapper>
         <h2 className={styles.headerDescription}>
-          Prosessime sisältää kaikki laadukkaan verkkosivun{" "}
-          <LinkScroll to="suunnittelu" smooth={true}>
-            rakennusvaiheet
-          </LinkScroll>{" "}
-          alusta loppuun. Edullisilla mikropalveluilla autamme sivustoasi
-          kasvamaan julkaisun jälkeenkin.
+          Uskomme että verkkosivujen hallinnan kuuluu olla vaivatonta ja
+          kannattavaa yrityksen näkökulmasta. Tämän takia kehittämämme sivustot
+          ovat tavanomaisia palvelinsivuja pitkäikäisempiä, kestäviä ja
+          suunnittellaan alusta loppuun toteuttamaan realistisia
+          yritystavoitteita.
         </h2>
       </TextsWrapper>
       <PalvelutOminaisuudet />

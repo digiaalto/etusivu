@@ -5,23 +5,25 @@ const PalvelutOminaisuudet = () => {
     <div className={styles.container}>
       <Ominaisuus icon={BrainIcon} header="Suunnittelemme asiakaslähtöisesti.">
         <p>
-          Suunnittelumme tarkoitus on saada vierailija pysymyään sivuillasi ja
-          kiinnostumaan palvelustasi. Opimme sinulta kuka asiakkaasi on ja
-          yhdistämme hänen tarpeensa sinun palveluun ja tuotteeseen.
+          Haluamme vierailijan pysymyään sivuillasi ja kiinnostumaan
+          palvelustasi. Tutkimalla toimialaasi ja oppimalla asiakkaastasi
+          sinulta, yhdistämme hänen tarpeensa sinun palveluihisi ja tuotteisiin.
         </p>
       </Ominaisuus>
       <Ominaisuus icon={CogIcon} header="Kehitämme huipputeknologialla.">
         <p>
-          Hybrid-sivut ovat tavanomaisia palvelinsivuja älykkäämpiä.
-          Hyödyntämällä uutta teknologiaa, verkkosivumme voivat olla erittäin
-          suorituskykyisiä, turvallisia ja kustannustehokkaita.
+          Hybrid-sivumme ovat normaaleja palvelinsivuja älykkäämpiä. Uudella
+          teknologialla kehitetyt verkkosivumme ovat erittäin suorituskykyisiä,
+          turvallisia, kustannustehokkaita, eivätkä vaadi erillisiä
+          ylläpitopalveluita.
         </p>
       </Ominaisuus>
       <Ominaisuus icon={HeartIcon} header="Palvelemme tyytyväisyystakuulla.">
         <p>
-          Työskentelemme itsenäisesti tai yhteystyössä kanssanne kuin teille
-          parhaiten sopii. Lupaamme tyytyväisyystakuun tai rahat takaisin ja
-          verkkosivulle huippuluokan tulokset Googlen laatutestissä.
+          Työskentelemme omatoimisesti tai tiiviissä yhteystyössä kanssanne,
+          miten vain teille parhaiten sopii. Lupaamme tyytyväisyystakuun tai
+          emme veloita palveluista, sekä tähtäämme huippuluokan tuloksiin
+          Googlen verkkosivujen laatutestissä.
         </p>
       </Ominaisuus>
     </div>

@@ -7,6 +7,8 @@ import BlogLayout from "@/layouts/BlogLayout"
 import Image from "next/image"
 import Overline from "@/common/Overline"
 import Link from "next/link"
+import { formatCategories } from "../../utils/helpers"
+import styled from "styled-components"
 
 const Post = (props) => {
   const { title, body, excerpt, mainImage, categories } = props
@@ -48,15 +50,20 @@ const MainImage = ({ image }) => {
   )
 }
 
+const StyledBlockquote = styled.blockquote`
+  max-width: 550px;
+  color: #666;
+  margin: 20px;
+  padding: 20px;
+  font-size: 18px;
+  border-left: 3px solid #666;
+`
+
 const BlockRenderer = (props) => {
   const { style = "normal" } = props.node
 
   if (style === "blockquote") {
-    return (
-      <blockquote style={{ maxWidth: "600px", color: "#666" }}>
-        {props.children}
-      </blockquote>
-    )
+    return <StyledBlockquote>{props.children}</StyledBlockquote>
   }
   // Fall back to default handling
   return BlockContent.defaultSerializers.types.block(props)
@@ -119,13 +126,4 @@ Post.defaultProps = {
   title: "Ei otsikkoa!",
   name: "Ei kirjoittajaa?",
   categories: ["Ei kategoriaa!?"],
-}
-
-function formatCategories(categories) {
-  let formatted = ""
-  for (let i = 0; i < categories.length; i++) {
-    let seperator = categories[i + 1] ? ", " : ""
-    formatted += `${categories[i]}${seperator}`
-  }
-  return formatted
 }

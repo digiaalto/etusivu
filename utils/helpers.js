@@ -22,3 +22,12 @@ export function formatDate(dateString) {
   }.${date.getFullYear()}`
   return formattedDate
 }
+
+export function formatCategories(categories) {
+  let formatted = ""
+  for (let i = 0; i < categories.length; i++) {
+    let seperator = categories[i + 1] ? ", " : ""
+    formatted += `${categories[i]}${seperator}`
+  }
+  return formatted
+}
