@@ -44,11 +44,11 @@ const SEO = (props) => {
 export default SEO
 
 SEO.defaultProps = {
-  title: "Laatutestatut nettisivut yritykselle", // 60 chars.
+  title: "Laatutestatut verkkosivut yritykselle tyytyväisyystakuulla", // 60 chars.
   description:
-    "Huippuluokan nettisivut kiireiselle yrittäjälle. Välittävällä palvelulla ilman julkaisun jälkeisiä ylläpitokustannuksia.", // 155-160
+    "Kehittämämme yrityssivut ovat tavanomaisia palvelinsivuja pitkäikäisempiä, kestäviä ja suunnittellaan alusta loppuun toteuttamaan realistisia yritystavoitteita.", // 155-160
   keywords:
-    "nettisivut yritykselle, nettisivut pk-yritykselle, yritykselle nettisivut, nettisivut, hyvät nettisivut, modernit nettisivut, nykyaikaiset nettisivut, laadukkaat nettisivut, laatutestatut nettisivut, optimoidut nettisivut, nopeat nettisivut, nätit nettisivut, kauniit nettusivut",
+    "nettisivut yritykselle, verkkosivut yritykselle, verkkosivu yritykselle, nettisivut pk-yritykselle, yritykselle nettisivut, nettisivut, hyvät nettisivut, modernit nettisivut, nykyaikaiset nettisivut, laadukkaat nettisivut, laatutestatut nettisivut, optimoidut nettisivut, nopeat nettisivut, nätit nettisivut, kauniit nettusivut",
   author: "Digiaalto",
 
   ogSiteName: "Digiaalto.fi",
