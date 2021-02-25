@@ -1,7 +1,6 @@
 import styles from "./Palvelut.module.sass"
 import Overline from "../common/Overline"
 import PalvelutOminaisuudet from "./PalvelutOminaisuudet"
-import { Link as LinkScroll } from "react-scroll"
 
 const Palvelut = (props) => {
   const { refs } = props
