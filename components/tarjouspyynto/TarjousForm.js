@@ -47,7 +47,7 @@ const sisalto = {
   lisatiedot: {
     projektiKuvaus: {
       name: "projektiKuvaus",
-      label: "Kerro projektista omin sanoin.",
+      label: "Kerro projektista omin sanoin (laajuus, vaatimukset, tarkoitus).",
     },
   },
   palvelut: {
