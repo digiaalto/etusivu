@@ -14,9 +14,9 @@ const Suunnittelu = (props) => {
       />
       <div className={styles.descriptions}>
         <p className="headerDescription">
-          Onko sinulla oma visio ja tunnet brändisi hyvin? Löytyykö valmiita
-          resursseja vai aloitammeko tyhjältä pöydältä? Oli miten oli, voimme
-          auttaa. Suunnittelu alkaa tutustumisella.
+          Onko sinulla oma visio ja valmis brändi vai aloitammeko tyhjältä
+          pöydältä? Joka tapauksessa suunnittelu alkaa tutustumisella jossa
+          kartoitamme projektin taustatietoja ja vaatimuksia.
         </p>
       </div>
       <ol className={styles.list}>

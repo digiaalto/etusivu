@@ -9,7 +9,7 @@ import { PriceWidget } from "./index"
 const sisalto = {
   header: "Tarjouspyyntö.",
   subheader:
-    "Pyyntö ei maksa mitään ei sido teitä mihinkään. Lähetämme tarjouksen sähköpostiisi yleensä ensimmäisenä arkipäivänä.",
+    "Tarjouspyyntö ei maksa mitään eikä ole sitova. Lähetämme pyyntöön vastauksen sähköpostiisi 1-2 arkipäivässä.",
   vahvistusViesti: {
     success: {
       header: "Kiitos tarjouspyynnöstä!",

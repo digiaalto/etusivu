@@ -10,17 +10,15 @@ const Palvelut = (props) => {
       <HeadersWrap>
         <Overline text="Parempaa palvelua." />
         <h1 className={styles.headerMain}>
-          Tuomme uutta teknologiaa Piilaaksosta suomalaisten yritysten ja
-          asiakkaiden helpotukseksi.
+          Uutta teknologiaa Piilaaksosta suomalaisten yritysten ja asiakkaiden
+          iloksi.
         </h1>
       </HeadersWrap>
       <TextsWrapper>
         <h2 className={styles.headerDescription}>
-          Uskomme että verkkosivujen hallinnan kuuluu olla vaivatonta ja
-          kannattavaa yrityksen näkökulmasta. Tämän takia kehittämämme sivustot
-          ovat tavanomaisia palvelinsivuja pitkäikäisempiä, kestäviä ja
-          suunnittellaan alusta loppuun toteuttamaan realistisia
-          yritystavoitteita.
+          Kehitämme teille massasta erottuvan nettisivun jota on mukava käyttää,
+          vaivaton ylläpitää ja helppo löytää. Suunnittelemme luotettavan
+          yrityskumppanin joka toteuttaa asettamiamme tavoitteita kellon ympäri.
         </h2>
       </TextsWrapper>
       <PalvelutOminaisuudet />

@@ -12,10 +12,9 @@ const PalvelutOminaisuudet = () => {
       </Ominaisuus>
       <Ominaisuus icon={CogIcon} header="Kehitämme huipputeknologialla.">
         <p>
-          Hybrid-sivumme ovat normaaleja palvelinsivuja älykkäämpiä. Uudella
-          teknologialla kehitetyt verkkosivumme ovat erittäin suorituskykyisiä,
-          turvallisia, kustannustehokkaita, eivätkä vaadi erillisiä
-          ylläpitopalveluita.
+          Hybrid-sivumme ovat normaaleja palvelinsivuja älykkäämpiä. Uusi
+          teknologia mahdollistaa erinomaisen suorituskyvyn, turvallisuuden,
+          kustannustehokkuuden ja täysin ilmaisen ja vaivattoman ylläpidon.
         </p>
       </Ominaisuus>
       <Ominaisuus icon={HeartIcon} header="Palvelemme tyytyväisyystakuulla.">
