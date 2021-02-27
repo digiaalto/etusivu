@@ -3,22 +3,22 @@ import TarjousForm from "./TarjousForm"
 import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
 import { AiOutlineLoading3Quarters } from "react-icons/ai"
-import { MdThumbUp, MdThumbDown } from "react-icons/md"
 import { PriceWidget } from "./index"
 
 const sisalto = {
-  header: "Tarjouspyyntö.",
+  header: "Lähetä tarjouspyyntö.",
   subheader:
-    "Tarjouspyyntö ei maksa mitään eikä ole sitova. Lähetämme pyyntöön vastauksen sähköpostiisi 1-2 arkipäivässä.",
+    "Tarjouspyyntö ei maksa mitään eikä ole sitova. Lähetämme tarjouksen antamaanne sähköpostiin 1-2 arkipäivässä.",
   vahvistusViesti: {
     success: {
-      header: "Kiitos tarjouspyynnöstä!",
-      subheader:
-        "Luemme tarjouspyyntösi tiedot läpi ja vastaamme mahdollisimman pian.",
+      header: "Kiitos yhteydenotosta.",
+      subheader: "Luemme antamasi tiedot läpi ja vastaamme piakkoin.",
     },
     error: {
-      header: "Kaikki ei mennyt kuin Strömsössä...",
-      subheader: "Viesti ei mennyt perille. Kokeile sähköpostia.",
+      header:
+        "Tarjouspyyntöjä on tullut niin monta että lähetysraja on ylittynyt...",
+      subheader:
+        "Viesti ei mennyt perille, pahoittelumme. Onneksi sähköposti toimii aina.",
     },
   },
 }
@@ -88,7 +88,6 @@ const FormSubmitting = () => {
 const FormSubmitted = ({ header, subheader }) => {
   return (
     <div className={styles.headers}>
-      <MdThumbUp className={styles.icon} />
       <h2 className={styles.header}>{header}</h2>
       <h3 className={styles.subheader}>{subheader}</h3>
     </div>
@@ -98,7 +97,6 @@ const FormSubmitted = ({ header, subheader }) => {
 const FormFailed = ({ header, subheader }) => {
   return (
     <div className={styles.headers}>
-      <MdThumbDown className={styles.icon} />
       <h2 className={styles.header}>{header}</h2>
       <h3 className={styles.subheader}>{subheader}</h3>
     </div>
