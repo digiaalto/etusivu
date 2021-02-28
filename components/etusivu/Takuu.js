@@ -12,9 +12,10 @@ const Takuu = (props) => {
         third
       />
       <p className={styles.description}>
-        Tarjoamme verkkosivuillemme tyytyväisyystakuun ja huippuluokan tulokset
-        Googlen verkkosivujen laatutestissä,{" "}
-        <span className="important">tai emme veloita mitään.</span>
+        Tarjoamme työllemme tyytyväisyystakuun ja huippuluokan tulokset Googlen
+        verkkosivujen laatutestissä,{" "}
+        <span className="important">tai emme veloita mitään.</span> Onko
+        kysyttävää? Lähetä viesti tai aloita suoraan tarjouspyynnöllä.
       </p>
       <p className={styles.description}></p>
       <LinkButton href="/hinnat" text="Lähetä tarjouspyyntö" primary />

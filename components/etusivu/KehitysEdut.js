@@ -36,8 +36,8 @@ const edut = [
         Pystytkö kuvittelemaan tilanteen jossa verkkosivullesi ilmestyy tuhansia
         käyttäjiä? Mitä jos tuotteesi viralisoituu, palvelunne saa
         kansainvälistä huomiota, tai markkinointikamppanja onnistuukin odotettua
-        paremmin? Sivumme voivat hyödyntää Amazonin tehokasta julkaisuverkkoa ja
-        sinun ei tarvitse pelätä, että asiakastasi tervehtii toimimaton
+        paremmin? Sivumme hyödyntävät Amazonin tehokasta julkaisuverkkoa jotta
+        sinun ei tarvitse pelätä, että asiakastasi tervehtisi toimimaton
         yrityssivu.
       </p>
     </animated.div>
@@ -48,10 +48,10 @@ const edut = [
       <p>
         Enään ei tarvitse puhua web-hotelleista, servereistä tai palvelimista
         ollenkaan. Voimme abstraktoida kaikki tarpeet niihin erikoistuneille
-        kolmansille osapuolille jotka hoitavat ylläpidon ja ovat uskomattoman
-        kustannustehokkaita. Suomen mittakaavalla nämä palvelut tarjoavat niin
-        anteliaat maksurajat, että voimme käyttää niitä veloituksetta tai
-        muutamalla eurolla kuussa.
+        kolmansille osapuolille jotka hoitavat ylläpidon ja toimivat
+        uskomattoman kustannustehokkaasti. Suomen mittakaavalla nämä palvelut
+        tarjoavat niin anteliaat maksurajat, että voimme käyttää niitä
+        veloituksetta tai muutamalla eurolla kuussa.
       </p>
     </animated.div>
   ),
