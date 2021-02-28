@@ -5,9 +5,9 @@ const PalvelutOminaisuudet = () => {
     <div className={styles.container}>
       <Ominaisuus icon={BrainIcon} header="Suunnittelu">
         <p>
-          Ylitetään asiakkaidesi odotukset huolellisella suunnittelulla ja
-          kiinnostavalla kotisivulla, mikä luodaan toteuttamaan tärkeitä
-          yritystavoiteitta kuin luotettava yrityskumppani.
+          Ylitetään asiakkaasi odotukset vaikuttavalla designilla ja
+          puhuttelevalla sisällöllä. Suunnitellaan verkkosivusta luotettava
+          yrityskumppani joka toteuttaa tärkeitä liiketoiminnan tavoitteita.
         </p>
       </Ominaisuus>
       <Ominaisuus icon={CogIcon} header="Kehitys">
