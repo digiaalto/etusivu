@@ -3,26 +3,25 @@ import styles from "./PalvelutOminaisuudet.module.sass"
 const PalvelutOminaisuudet = () => {
   return (
     <div className={styles.container}>
-      <Ominaisuus icon={BrainIcon} header="Suunnittelemme asiakaslähtöisesti.">
+      <Ominaisuus icon={BrainIcon} header="Suunnittelu">
         <p>
-          Haluamme vierailijan pysymyään sivuillasi ja kiinnostumaan
-          palvelustasi. Tutkimalla toimialaasi ja oppimalla asiakkaastasi
-          sinulta, yhdistämme hänen tarpeensa sinun palveluihisi ja tuotteisiin.
+          Ylitetään asiakkaidesi odotukset huolellisella suunnittelulla ja
+          kiinnostavalla kotisivulla, mikä luodaan toteuttamaan tärkeitä
+          yritystavoiteitta kuin luotettava yrityskumppani.
         </p>
       </Ominaisuus>
-      <Ominaisuus icon={CogIcon} header="Kehitämme huipputeknologialla.">
+      <Ominaisuus icon={CogIcon} header="Kehitys">
         <p>
-          Hybrid-sivumme ovat normaaleja palvelinsivuja älykkäämpiä. Uusi
-          teknologia mahdollistaa erinomaisen suorituskyvyn, turvallisuuden,
-          kustannustehokkuuden ja täysin ilmaisen ja vaivattoman ylläpidon.
+          Nykyaikainen Jamstack-arkkitehtuuri mahdollistaa älykkäät
+          hybrid-sivut, jotka ovat erinomaisen suorituskykyisiä, turvallisia,
+          kustannustehokkaita ja pitkäikäisiä.
         </p>
       </Ominaisuus>
-      <Ominaisuus icon={HeartIcon} header="Palvelemme tyytyväisyystakuulla.">
+      <Ominaisuus icon={HeartIcon} header="Palvelu">
         <p>
-          Työskentelemme omatoimisesti tai tiiviissä yhteystyössä kanssanne,
-          miten vain teille parhaiten sopii. Lupaamme tyytyväisyystakuun tai
-          emme veloita palveluista, sekä tähtäämme huippuluokan tuloksiin
-          Googlen verkkosivujen laatutestissä.
+          Voimme työskennellä omatoimisesti tai tiivissä yhteistyössä
+          järjestönne kanssa. Lupaamme huippuluokan tulokset maailman
+          suosituimmassa verkkosivujen laatutestissä ja 100% tyytyväisyystakuun.
         </p>
       </Ominaisuus>
     </div>

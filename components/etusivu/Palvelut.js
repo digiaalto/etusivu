@@ -16,10 +16,9 @@ const Palvelut = (props) => {
       </HeadersWrap>
       <TextsWrapper>
         <h2 className={styles.headerDescription}>
-          Kehitämme massasta erottuvia nettisivuja joita on mukava käyttää,
-          vaivaton ylläpitää ja helppo löytää. Suunnittelemme verkkosivusta
-          luotettavan kumppanin yritykselle joka haluaa kasvaa uusien kanavien
-          kautta.
+          Nopea palvelu on hyvää palvelua ja sama pätee verkossakin. Kehitämme
+          tehokkaalla ja tarkasti optimoidulla koodilla massasta erottuvia
+          verkkosivuja joita on mukava käyttää ja vaivaton ylläpitää.
         </h2>
       </TextsWrapper>
       <PalvelutOminaisuudet />
