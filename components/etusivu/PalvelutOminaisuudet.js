@@ -3,18 +3,19 @@ import styles from "./PalvelutOminaisuudet.module.sass"
 const PalvelutOminaisuudet = () => {
   return (
     <div className={styles.container}>
-      <Ominaisuus icon={BrainIcon} header="Suunnittelu">
+      <Ominaisuus icon={BrainIcon} header="Design">
         <p>
-          Ylitetään asiakkaasi odotukset vaikuttavalla designilla ja
-          puhuttelevalla sisällöllä. Suunnitellaan verkkosivusta luotettava
-          yrityskumppani joka toteuttaa tärkeitä liiketoiminnan tavoitteita.
+          Suunnittelemme yksinkertaisista verkkosivuista tehokkaita
+          yrityskumppaneita jotka kasvavat yrityksen kanssa ja puhuttelevat
+          vierailijaa oleellisella sisällöllä ja vaikuttavalla designilla.
         </p>
       </Ominaisuus>
       <Ominaisuus icon={CogIcon} header="Kehitys">
         <p>
-          Nykyaikainen Jamstack-arkkitehtuuri mahdollistaa älykkäät
-          hybrid-sivut, jotka ovat erinomaisen suorituskykyisiä, turvallisia,
-          kustannustehokkaita ja pitkäikäisiä.
+          Nykyaikaisella ohjelmistoarkkitehtuurilla kehitetään älykkäitä
+          hybrid-sivustoja. Hyödy kilpailua paremmasta suorituskyvystä,
+          optimoinnista, kustannustehokkuudesta, skaalautuvuudesta ja
+          turvallisuudesta.
         </p>
       </Ominaisuus>
       <Ominaisuus icon={HeartIcon} header="Palvelu">
