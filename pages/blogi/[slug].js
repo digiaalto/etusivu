@@ -24,7 +24,7 @@ const Post = (props) => {
                   justifySelf: "start",
                 }}
               >
-                &larr; Blogi
+                &larr; Blogin Etusivu
               </a>
             </Link>
           </div>
