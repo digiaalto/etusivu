@@ -1,5 +1,6 @@
 @use "@/partials/colors"
 @use "@/partials/breakpoints"
+@use "@/partials/typography"
 
 .textArea
 	display: grid
@@ -13,6 +14,8 @@
 	border-style: solid
 	border-color: hsl(0,0%,80%)
 	resize: vertical
+	font-family: typography.$font 
+	font-size: inherit
 	&:hover
 		border-color: hsl(0, 0%, 75%)
 

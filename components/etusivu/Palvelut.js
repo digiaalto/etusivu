@@ -8,7 +8,7 @@ const Palvelut = (props) => {
   return (
     <section className={styles.section} id="palvelut" ref={refs}>
       <HeadersWrap>
-        <Overline text="Parempaa palvelua." />
+        <Overline text="Parempaa laatua." />
         <h1 className={styles.headerMain}>
           Uutta teknologiaa Piilaaksosta suomalaisten yritysten ja asiakkaiden
           iloksi.
@@ -16,9 +16,8 @@ const Palvelut = (props) => {
       </HeadersWrap>
       <TextsWrapper>
         <h2 className={styles.headerDescription}>
-          Nopea palvelu on hyvää palvelua ja sama pätee verkossakin. Kehitämme
-          tehokkaalla ja tarkasti optimoidulla koodilla massasta erottuvia
-          verkkosivuja joita on mukava käyttää ja vaivaton ylläpitää.
+          Luomme uudella tehokkaalla ja tarkasti optimoidulla koodilla massasta
+          erottuvia verkkosivuja joita on mukava käyttää ja vaivaton ylläpitää.
         </h2>
       </TextsWrapper>
       <PalvelutOminaisuudet />
