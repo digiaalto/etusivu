@@ -1,15 +1,17 @@
 @use "@/partials/typography"
+@use "@/partials/breakpoints"
 @use "@/partials/spacing"
 @use "@/partials/colors"
 
-.container
+.section
 	@include spacing.hero
+	display: flex
+	flex-direction: column
 
 // Blog Content.
 .blogArticle
 	display: grid
 	gap: 2rem
-	place-content: center
 
 .mainImageWrapper
 	max-width: 900px

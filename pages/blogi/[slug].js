@@ -3,31 +3,20 @@ import client from "../../client"
 import groq from "groq"
 import BlockContent from "@sanity/block-content-to-react"
 import { useNextSanityImage } from "next-sanity-image"
-import BlogLayout from "@/layouts/BlogLayout"
 import Image from "next/image"
-import Overline from "@/common/Overline"
-import Link from "next/link"
-import { formatCategories } from "../../utils/helpers"
 import styled from "styled-components"
+
+import { formatCategories } from "../../utils/helpers"
+import BlogLayout from "@/layouts/BlogLayout"
+import Overline from "@/common/Overline"
 
 const Post = (props) => {
   const { title, body, excerpt, mainImage, categories } = props
 
   return (
-    <BlogLayout topbar={false}>
-      <div className={styles.container}>
+    <BlogLayout topbar={true}>
+      <section className={styles.section}>
         <article className={styles.blogArticle}>
-          <div>
-            <Link href="/blogi">
-              <a
-                style={{
-                  justifySelf: "start",
-                }}
-              >
-                &larr; Blogin Etusivu
-              </a>
-            </Link>
-          </div>
           <MainImage image={mainImage} />
           <Content
             title={title}
@@ -36,7 +25,7 @@ const Post = (props) => {
             body={body}
           />
         </article>
-      </div>
+      </section>
     </BlogLayout>
   )
 }
@@ -49,15 +38,6 @@ const MainImage = ({ image }) => {
     </div>
   )
 }
-
-const StyledBlockquote = styled.blockquote`
-  max-width: 550px;
-  color: #666;
-  margin: 20px;
-  padding: 20px;
-  font-size: 18px;
-  border-left: 3px solid #666;
-`
 
 const BlockRenderer = (props) => {
   const { style = "normal" } = props.node
@@ -94,6 +74,15 @@ const Content = ({ title, body, categories, excerpt }) => {
     </div>
   )
 }
+
+const StyledBlockquote = styled.blockquote`
+  max-width: 550px;
+  color: #666;
+  margin: 20px;
+  padding: 20px;
+  font-size: 18px;
+  border-left: 3px solid #666;
+`
 
 export async function getStaticPaths() {
   const paths = await client.fetch(
