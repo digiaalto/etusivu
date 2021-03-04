@@ -16,8 +16,7 @@ const Palvelut = (props) => {
       </HeadersWrap>
       <TextsWrapper>
         <h2 className={styles.headerDescription}>
-          Luomme uudella tehokkaalla ja tarkasti optimoidulla koodilla massasta
-          erottuvia verkkosivuja joita on mukava käyttää ja vaivaton ylläpitää.
+          Optimoidulla koodilla massasta erottuvia verkkosivuja.
         </h2>
       </TextsWrapper>
       <PalvelutOminaisuudet />

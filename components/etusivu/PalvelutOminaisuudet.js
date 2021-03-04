@@ -5,25 +5,20 @@ const PalvelutOminaisuudet = () => {
     <div className={styles.container}>
       <Ominaisuus icon={BrainIcon} header="Design">
         <p>
-          Valmistamme kotisivuista tehokkaita yrityskumppaneita, jotka kasvavat
-          yrityksensä kanssa ja puhuttelevat vierailijaansa oleellisella
-          sisällöllä ja vaikuttavalla designilla.
+          Suunnittelemme verkkosivuista tehokkaita yrirtyskumppaneita kasvaville
+          järjestöille.
         </p>
       </Ominaisuus>
-      <Ominaisuus icon={CogIcon} header="Kehitys">
+      <Ominaisuus icon={CogIcon} header="Development">
         <p>
           Kehitämme nykyaikaisella ohjelmistoarkkitehtuurilla älykkäitä
-          hybrid-sivustoja. Meidän kanssa hyödyt kilpailua paremmasta
-          suorituskyvystä, optimoinnista, kustannustehokkuudesta,
-          skaalautuvuudesta ja turvallisuudesta.
+          hybrid-sivustoja.
         </p>
       </Ominaisuus>
-      <Ominaisuus icon={HeartIcon} header="Palvelu">
+      <Ominaisuus icon={HeartIcon} header="Service">
         <p>
-          Valmistamme projektin tiiviissä yhteistyössä järjestönne kanssa, tai
-          täysin omatoimisesti pienellä ohjeistuksella. Lupaamme huippuluokan
-          laadun tuotteelle ja korkeat pisteet Googlen laatutestissä, sekä 100%
-          tyytyväisyystakuun.
+          Riskivapaa palvelu tyytyväisyystakuulla ja huippuluokan tulokset
+          Googlen laatutestissä.
         </p>
       </Ominaisuus>
     </div>
