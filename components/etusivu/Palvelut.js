@@ -14,11 +14,6 @@ const Palvelut = (props) => {
           iloksi.
         </h1>
       </HeadersWrap>
-      <TextsWrapper>
-        <h2 className={styles.headerDescription}>
-          Optimoidulla koodilla massasta erottuvia verkkosivuja.
-        </h2>
-      </TextsWrapper>
       <PalvelutOminaisuudet />
     </section>
   )
@@ -26,10 +21,6 @@ const Palvelut = (props) => {
 
 const HeadersWrap = ({ children }) => (
   <div className={styles.headersWrap}>{children}</div>
-)
-
-const TextsWrapper = ({ children }) => (
-  <div className={styles.paragraphsWrap}>{children}</div>
 )
 
 export default Palvelut

@@ -28,8 +28,9 @@ const Hero = (props) => {
         <StylizedHeaders animElement={animElement} />
         <CtaButtons />
         <h1 className={styles.description}>
-          Digiaalto kehittää laatutestattuja verkkosivuja yrityksille
-          tyytyväisyystakuulla.
+          Suunnittelemme optimoidulla ohjelmistoarkkitehtuurilla massasta
+          erottuvia verkkosivuja yrityksille, ankaralla laatutestauksella ja
+          100% tyytyväisyystakuulla.
         </h1>
         <LinkScroll
           className={styles.scrollLink}
