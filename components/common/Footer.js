@@ -33,7 +33,7 @@ const NavigationRow = () => {
           <a className={styles.link}>Etusivu</a>
         </Link>
         <Link href="/tarjouspyynto">
-          <a className={styles.link}>Hinnat</a>
+          <a className={styles.link}>Tarjouspyyntö</a>
         </Link>
         <Link href="/usein-kysyttya">
           <a className={styles.link}>Usein kysyttyä</a>
