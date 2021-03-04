@@ -9,14 +9,17 @@ const Suunnittelu = (props) => {
       <Overline text="Prosessi" customStyle={{ textAlign: "center" }} />
       <StepIndicator
         overline="Suunnittelu"
-        header="Ilman ideaa ei ole mitään."
+        header="Kaikki alkaa ideoinnista."
         first
       />
       <div className={styles.descriptions}>
         <p className="headerDescription">
-          Onko sinulla oma visio ja valmis brändi vai aloitammeko tyhjältä
-          pöydältä? Joka tapauksessa suunnittelu alkaa tutustumisella jossa
-          kartoitamme projektin taustatietoja ja vaatimuksia.
+          {/* Projekti lähtee käyntiin tutustumisella. Määrittelemme yrityksenne tai
+          järjestönne brändin, verkkosivun kohderyhmän, vaatimukset, ja
+          tavoitteet. */}
+          Tuottaaksemme vaikuttavan designin ja puhuttelevaa sisältöä, ensiksi
+          määritellään projektin vaatimukset ja tarkoitus, sekä yrityksenne
+          brändi ja tärkein kohderyhmä.
         </p>
       </div>
       <ol className={styles.list}>

@@ -1,6 +1,7 @@
 import styles from "./Takuu.module.sass"
 import StepIndicator from "../common/StepIndicator"
 import { LinkButton } from "../common/button"
+import { Link as LinkScroll } from "react-scroll"
 
 const Takuu = (props) => {
   const { refs } = props
@@ -8,17 +9,21 @@ const Takuu = (props) => {
     <section className={styles.section} ref={refs} id="takuu">
       <StepIndicator
         overline="Laatutakuu"
-        header="Tyytyväisyystakuulla palvelua ja laatua."
+        header="100% tyytyväisyystakuu."
         third
       />
       <p className={styles.description}>
         Tarjoamme työllemme tyytyväisyystakuun ja huippuluokan tulokset Googlen
         verkkosivujen laatutestissä,{" "}
         <span className="important">tai emme veloita mitään.</span> Onko
-        kysyttävää? Lähetä viesti tai aloita suoraan tarjouspyynnöllä.
+        kysyttävää?{" "}
+        <LinkScroll to="laheta-viesti" smooth>
+          Lähetä viesti
+        </LinkScroll>{" "}
+        tai aloita suoraan tarjouspyynnöllä.
       </p>
       <p className={styles.description}></p>
-      <LinkButton href="/hinnat" text="Lähetä tarjouspyyntö" primary />
+      <LinkButton href="/tarjouspyynto" text="Lähetä tarjouspyyntö" primary />
     </section>
   )
 }

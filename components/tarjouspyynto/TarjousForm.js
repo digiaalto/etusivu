@@ -47,7 +47,7 @@ const sisalto = {
   lisatiedot: {
     projektiKuvaus: {
       name: "projektiKuvaus",
-      label: "Kerro projektista omin sanoin (laajuus, vaatimukset, tarkoitus).",
+      label: "Kuvaile projektia. (mm. laajuus, vaatimukset, tarkoitus)",
     },
   },
   palvelut: {
@@ -244,9 +244,9 @@ const TyyppiSection = ({
 }) => {
   return (
     <FormSection>
-      <Header text={"Valitse projektin tyypit."} refs={typeRef} />
+      <Header text={"Projektin tyyppi."} refs={typeRef} />
       {showError && (
-        <span className={styles.error}>Valitse ainakin yksin tyyppi.</span>
+        <span className={styles.error}>Valitse vähintään yksi ominaisuus.</span>
       )}
       <RowGrid>
         <Checkbox

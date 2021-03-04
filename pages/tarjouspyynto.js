@@ -1,7 +1,7 @@
 import Layout from "../components/layouts"
 import TarjousApp from "../components/tarjouspyynto"
 import Image from "next/image"
-import styles from "@/styles/pages/hinnat.module.sass"
+import styles from "@/styles/pages/tarjouspyynto.module.sass"
 
 const Hinnat = () => {
   return (
@@ -12,6 +12,7 @@ const Hinnat = () => {
           layout="fill"
           objectFit="cover"
           alt="Tarjouspyyntöä kuvaava paperilentokone."
+          objectPosition="50% 30%"
         />
       </div>
       <TarjousApp />

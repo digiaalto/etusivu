@@ -26,9 +26,9 @@ const digiaalto = {
     parhaatKaytannot: 100,
     seo: 100,
   },
-  header: "Digiaalto.fi",
+  header: "Digiaalto",
   paragraphs: [
-    `Oma sivu; luomme mukavakäyttöisiä verkkosivuja jotka optimoidaan tappiin tehokkaalla koodilla.`,
+    `Mukavakäyttöisiä ja tehokkaita verkkosivuja mitkä optimoidaan uudella tavalla.`,
   ],
 }
 
@@ -55,7 +55,7 @@ const majoitusroosa = {
   },
   header: "Majoitusroosa",
   paragraphs: [
-    `Kanta-Hämeen Lammen luonnossa sijaitseva majoituspaikka isoille ryhmille. Englanniksi ja suomeksi.`,
+    `Kanta-Hämeen Lammen luonnossa majoituspaikka isoille ryhmille. Sivusto englanniksi ja suomeksi.`,
   ],
 }
 

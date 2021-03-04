@@ -11,7 +11,7 @@ const Navigation = ({ topbar }) => {
     >
       <Logo />
       <ol className={styles.links}>
-        <NavLink href={"/hinnat"} text="Hinnat" />
+        <NavLink href={"/tarjouspyynto"} text="Tarjouspyyntö" />
         <NavLink href={"/usein-kysyttya"} text="Usein kysyttyä" />
         <NavLink href={"/blogi"} text="Blogi" />
       </ol>

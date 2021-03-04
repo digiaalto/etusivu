@@ -8,17 +8,16 @@ import { PriceWidget } from "./index"
 const sisalto = {
   header: "Lähetä tarjouspyyntö.",
   subheader:
-    "Tarjouspyyntö ei maksa mitään eikä ole sitova. Lähetämme tarjouksen antamaanne sähköpostiin 1-2 arkipäivässä.",
+    "Tarjouspyyntö ei maksa mitään eikä ole sitova. Tarjous lähetetään sähköpostiin muutamassa arkipäivässä.",
   vahvistusViesti: {
     success: {
       header: "Kiitos yhteydenotosta.",
-      subheader: "Luemme antamasi tiedot läpi ja vastaamme piakkoin.",
+      subheader: "Käymme tiedot läpi ja vastaamme mahdollisimman pian.",
     },
     error: {
       header:
         "Tarjouspyyntöjä on tullut niin monta että lähetysraja on ylittynyt...",
-      subheader:
-        "Viesti ei mennyt perille, pahoittelumme. Onneksi sähköposti toimii aina.",
+      subheader: "Viesti ei mennyt perille, pahoittelumme.",
     },
   },
 }
