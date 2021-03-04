@@ -46,7 +46,7 @@ export default SEO
 SEO.defaultProps = {
   title: "Laatutestatut verkkosivut yritykselle tyytyväisyystakuulla", // 60 chars.
   description:
-    "Suunnittelemme optimoidulla ohjelmistoarkkitehtuurilla massasta erottuvia verkkosivuja yrityksille, ankaralla laatutestauksella ja 100% tyytyväisyystakuulla.", // 155-160
+    "Suunnittelemme optimoidulla ohjelmistoarkkitehtuurilla massasta erottuvia verkkosivuja yrityksille ankaralla laatutestauksella ja 100% tyytyväisyystakuulla.", // 155-160
   keywords:
     "nettisivut yritykselle, verkkosivut yritykselle, verkkosivu yritykselle, nettisivut pk-yritykselle, yritykselle nettisivut, nettisivut, hyvät nettisivut, modernit nettisivut, nykyaikaiset nettisivut, laadukkaat nettisivut, laatutestatut nettisivut, optimoidut nettisivut, nopeat nettisivut, nätit nettisivut, kauniit nettusivut",
   author: "Digiaalto",

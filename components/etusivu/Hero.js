@@ -29,8 +29,8 @@ const Hero = (props) => {
         <CtaButtons />
         <h1 className={styles.description}>
           Suunnittelemme optimoidulla ohjelmistoarkkitehtuurilla massasta
-          erottuvia verkkosivuja yrityksille, ankaralla laatutestauksella ja
-          100% tyytyväisyystakuulla.
+          erottuvia verkkosivuja yrityksille ankaralla laatutestauksella ja 100%
+          tyytyväisyystakuulla.
         </h1>
         <LinkScroll
           className={styles.scrollLink}
