@@ -14,30 +14,30 @@ const Suunnittelu = (props) => {
       />
       <div className={styles.descriptions}>
         <p className="headerDescription">
-          Tuottaaksemme vaikuttavan designin ja puhuttelevaa sisältöä, ensiksi
-          määritellään projektin vaatimukset ja tarkoitus, sekä yrityksenne
-          brändi ja tärkein kohderyhmä.
+          Tuottaaksemme vaikuttavan designin ja osuvan tekstisisällön, ensiksi
+          pitää määritellä projektin vaatimukset ja tarkoitus, sekä yrityksenne
+          brändi ja unelma-asiakas.
         </p>
       </div>
       <ol className={styles.list}>
         <li>
           <h2 className={styles.listHeader}>1. Käyttökokemus</h2>
           <p>
-            Suunnittelemme sivustostasi helposti saavutettavan, väsymättömmän
-            asiakaspalvelijan joka pitää asiakkaasi odotukset ensimmäisenä.
+            Toteutamme realistisia yritystavoitteita keskittymällä asiakkaan
+            kokemukseen ja ylittämällä odotuksia.
           </p>
         </li>
         <li>
           <h2 className={styles.listHeader}>2. Sisältö</h2>
           <p>
-            Tehokas verkkosivu tarvitsee tehokasta sisältöä. Voit tuottaa
-            tekstit itse, tai tilata sisällöntuotannon sivujen kanssa.
+            Tehokas verkkosivu tarvitsee tehokasta sisältöä, tekstisuunnittele
+            itse tai tilaa Digiaallon sisällöntuotanto.
           </p>
         </li>
         <li>
           <h2 className={styles.listHeader}>3. Ulkoasu</h2>
           <p>
-            Suunnittelemme kauniin estetiikan ja erotamme sinut muista omien
+            Suunnittelemme kauniin estetiikan joka erottaa sinut muista omien
             arvojesi ja tyylisi mukaisesti.
           </p>
         </li>

@@ -25,7 +25,7 @@ const Takuu = (props) => {
         </LinkScroll>{" "}
       </p>
       <p className={styles.description}></p>
-      <LinkButton href="/tarjouspyynto" text="Lähetä tarjouspyyntö" primary />
+      <LinkButton href="/tarjouspyynto" text="Tarjouspyyntö" primary />
     </section>
   )
 }

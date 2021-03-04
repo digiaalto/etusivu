@@ -14,7 +14,7 @@ const IndexPage = () => {
   const takuuRef = useRef(null)
 
   const sectionRefs = [
-    { section: "", hoverText: `Ylös`, ref: heroRef },
+    { section: "", hoverText: `Etusivu`, ref: heroRef },
     {
       section: "#palvelut",
       hoverText: "Palvelut",
