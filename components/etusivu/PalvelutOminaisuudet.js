@@ -5,7 +5,7 @@ const PalvelutOminaisuudet = () => {
     <div className={styles.container}>
       <Ominaisuus icon={BrainIcon} header="Design">
         <p>
-          Suunnittelemme verkkosivuista tehokkaita yrirtyskumppaneita kasvaville
+          Suunnittelemme verkkosivuista tehokkaita yrityskumppaneita kasvaville
           järjestöille.
         </p>
       </Ominaisuus>
