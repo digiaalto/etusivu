@@ -3,19 +3,19 @@ import styles from "./PalvelutOminaisuudet.module.sass"
 const PalvelutOminaisuudet = () => {
   return (
     <div className={styles.container}>
-      <Ominaisuus icon={BrainIcon} header="Design">
+      <Ominaisuus icon={BrainIcon} header="Suunnittelu">
         <p>
           Suunnittelemme verkkosivuista tehokkaita verkkopalvelukanavia
           kasvaville yrityksille ja järjestöille.
         </p>
       </Ominaisuus>
-      <Ominaisuus icon={CogIcon} header="Development">
+      <Ominaisuus icon={CogIcon} header="Kehitys">
         <p>
           Kehitämme älykkäitä verkkosivuja, hybrid-sivustoja ja web-appeja
           modernilla ohjelmistoarkkitehtuurilla.
         </p>
       </Ominaisuus>
-      <Ominaisuus icon={HeartIcon} header="Service">
+      <Ominaisuus icon={HeartIcon} header="Palvelu">
         <p>
           Tarjoamme riskivapaan palvelun tyytyväisyystakuulla ja huippuluokan
           tulokset Googlen laatutestissä.

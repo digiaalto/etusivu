@@ -64,7 +64,7 @@ const Nayteikkuna = (props) => {
   return (
     <section className={styles.section} ref={refs} id="viimeisimmat-tyot">
       <div className={styles.content}>
-        <Overline text="Vieritä ikkunoita" />
+        <Overline text="Vieritä näyteikkunoita" />
         <h1 className="headerMain">Viimeisimmät työt.</h1>
         <div className={styles.naytteetWrap}>
           <Tyonayte {...majoitusroosa} />

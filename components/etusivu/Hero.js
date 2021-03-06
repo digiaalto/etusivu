@@ -28,7 +28,7 @@ const Hero = (props) => {
         <StylizedHeaders animElement={animElement} />
         <CtaButtons />
         <h1 className={styles.description}>
-          Suunnittelemme laatutestattuja verkkosivuja yrityksille 100%
+          Laatutestattuja verkkosivuja yrityksille täydellä
           tyytyväisyystakuulla.
         </h1>
         <LinkScroll
@@ -94,7 +94,7 @@ const StylizedHeaders = ({ animElement }) => {
             animElement === 2 ? styles.fadeAnimation : null
           }`}
         >
-          Takuu.
+          Palvelu.
         </span>
       </div>
     </h1>

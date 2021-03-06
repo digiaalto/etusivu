@@ -6,7 +6,7 @@ const Suunnittelu = (props) => {
   const { refs } = props
   return (
     <section className={styles.section} ref={refs} id="suunnittelu">
-      <Overline text="Meidän prosessi" customStyle={{ textAlign: "center" }} />
+      <Overline text="Valmistustapa" customStyle={{ textAlign: "center" }} />
       <StepIndicator
         overline="Suunnittelu"
         header="Kaikki alkaa ideoinnista."
@@ -14,9 +14,9 @@ const Suunnittelu = (props) => {
       />
       <div className={styles.descriptions}>
         <p className="headerDescription">
-          Ennen varsinaista suunnittelua määrittelemme verkkoprojektin
+          Ennen varsinaista web-suunnittelua määrittelemme verkkoprojektin
           vaatimukset ja perimmäisen tarkoituksen, sekä yrityksen
-          brändiominaisuudet ja tärkein kohderyhmä.
+          brändiominaisuudet ja tärkeimmän kohderyhmä.
         </p>
       </div>
       <ol className={styles.list}>

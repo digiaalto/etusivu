@@ -38,8 +38,8 @@ const IndexPage = () => {
       ref: kehitysRef,
     },
     {
-      section: "#takuu",
-      hoverText: "Takuu",
+      section: "#palvelu",
+      hoverText: "Palvelu",
       ref: takuuRef,
     },
     {

@@ -11,11 +11,10 @@ const edut = [
     <animated.div className={styles.content} style={{ ...style }}>
       <h3 className={styles.header}>Tehokkuus</h3>
       <p>
-        Siinä missä tavanomaiset Wordpress-sivut joudutaan rakentamaan joka
-        kerta kun vierailija lataa sivun, hybrid-sivumme ovat generoitu
-        etukäteen pilvestä, ja lähetetty asiakkaan laitteelle suorituskykyisesti
-        ilman viiveitä. Linkit esiladataan jolloin käyttäjä ei koe
-        navigoidessaan latausaikoja.
+        Siinä missä tavanomaiset Wordpress-sivut pitää rakentaa aina uuden
+        vierailijan tullessa sivulle, hybrid-sivumme ovat generoitu etukäteen
+        pilvestä ja lähetetty asiakkaan laitteelle suorituskykyisesti ilman
+        viiveitä ja esiladatut linkit tekevät navigoinnista salamannopeaa.
       </p>
     </animated.div>
   ),
@@ -23,9 +22,9 @@ const edut = [
     <animated.div className={styles.content} style={{ ...style }}>
       <h3 className={styles.header}>Turvallisuus</h3>
       <p>
-        Kun palvelinpuolen prosessit erotetaan kolmannen osapuolen palveluiden
-        sovellusliittymiksi, ja verkkosivuista rakennetaan staattinen
-        kokonaisuus on hyökkäyspinta-alat heti minimoituja ja DDoS mahdotonta.
+        Erotamme palvelinpuolen prosessit kolmannen osapuolen palveluiden
+        sovellusliittymiksi ja generoimme verkkosivuista tehokkaita staattisia
+        kokonaisuuksia joiden hyökkäyspinta-ala on mahdollisimman pieni.
       </p>
     </animated.div>
   ),
@@ -33,12 +32,11 @@ const edut = [
     <animated.div className={styles.content} style={{ ...style }}>
       <h3 className={styles.header}>Skaalautuvuus</h3>
       <p>
-        Pystytkö kuvittelemaan tilanteen jossa verkkosivullesi ilmestyy tuhansia
-        käyttäjiä? Mitä jos tuotteesi viralisoituu, palvelunne saa
-        kansainvälistä huomiota, tai markkinointikamppanja onnistuukin odotettua
-        paremmin? Sivumme hyödyntävät Amazonin tehokasta julkaisuverkkoa jotta
-        sinun ei tarvitse pelätä, että asiakastasi tervehtisi toimimaton
-        yrityssivu.
+        Mitä tapahtuu sivullesi jos tuote viralisoituu, palvelu saa
+        kansainvälistä huomiota tai markkinointikamppanja onnistuu odotettua
+        paremmin? Tavallinen web-hotelli kaatuu isosta kävijävirrasta, tarvitaan
+        tehokas sisällönjulkaisuverkko joka on sisällytetty jokaisessa
+        Digiaallon sivussa.
       </p>
     </animated.div>
   ),
@@ -46,12 +44,11 @@ const edut = [
     <animated.div className={styles.content} style={{ ...style }}>
       <h3 className={styles.header}>Kustannustehokkuus</h3>
       <p>
-        Enään ei tarvitse puhua web-hotelleista, servereistä tai palvelimista
-        ollenkaan. Voimme abstraktoida kaikki tarpeet niihin erikoistuneille
-        kolmansille osapuolille jotka hoitavat ylläpidon ja toimivat
-        uskomattoman kustannustehokkaasti. Suomen mittakaavalla nämä palvelut
-        tarjoavat niin anteliaat maksurajat, että voimme käyttää niitä
-        veloituksetta tai muutamalla eurolla kuussa.
+        Enään ei tarvitse puhua web-hotelleista tai palvelimista. Voimme
+        abstraktoida kaikki vaatimuset kolmansille osapuolille jotka hoitavat
+        ylläpidon ja toimivat erittäin kustannustehokkaasti. Suomen
+        mittakaavalla nämä palvelut tarjoavat niin anteliaat käyttörajat, että
+        voimme hyödyntää niitä lähes veloituksetta.
       </p>
     </animated.div>
   ),

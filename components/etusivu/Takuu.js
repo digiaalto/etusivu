@@ -7,19 +7,19 @@ import Link from "next/link"
 const Takuu = (props) => {
   const { refs } = props
   return (
-    <section className={styles.section} ref={refs} id="takuu">
+    <section className={styles.section} ref={refs} id="palvelu">
       <StepIndicator
-        overline="Takuu"
-        header="Tyytyväisyys- ja laatutakuu."
+        overline="Palvelu"
+        header="Yhteistyö kahdella tärkeällä takuulla."
         third
       />
       <p className={styles.description}>
-        Saat meiltä täysin riskivapaan verkkosivun, 100% tyytyväisyystakuulla.
-        Tähtäämme myös huippuluokan tuloksiin{" "}
+        Saat meiltä täysin riskivapaan verkkosivun täydellä
+        tyytyväisyystakuulla, sekä huippuluokan tulokset{" "}
         <Link href="/blogi/testaa-verkkosivuja-lighthousella">
           <a>Googlen laatutestissä.</a>
         </Link>{" "}
-        Tarkastele hinnastoa tarjouspyynnön ohella tai{" "}
+        Aloita lähettämällä tarjouspyyntö tai{" "}
         <LinkScroll to="laheta-viesti" smooth>
           ota yhteyttä.
         </LinkScroll>{" "}
