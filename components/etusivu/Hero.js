@@ -28,8 +28,7 @@ const Hero = (props) => {
         <StylizedHeaders animElement={animElement} />
         <CtaButtons />
         <h1 className={styles.description}>
-          Suunnittelemme optimoidulla ohjelmistoarkkitehtuurilla massasta
-          erottuvia verkkosivuja yrityksille ankaralla laatutestauksella ja 100%
+          Suunnittelemme laatutestattuja verkkosivuja yrityksille 100%
           tyytyväisyystakuulla.
         </h1>
         <LinkScroll

@@ -12,11 +12,9 @@ const Kehitys = (props) => {
         second
       />
       <h2 className={styles.description}>
-        Tavallinen käyttäjä päättää sekunneissa pysyykö hän yrityksen sivulla
-        vai hyppääkö hän kilpailijan syliin; tehoton sivusto tekee tämän
-        päätöksen heidän puolestaan. Mahdollistamme asiakkaallesi parhaan
-        käyttökokemuksen tehokkaalla teknologialla joka kestää tulevaisuuden
-        haasteet.
+        Kehitämme tulevaisuuden tekniikalla sillä tavallinen verkkokäyttäjä
+        päättää sekunneissa pysyykö hän sivustolla vai ei, ja tehoton verkkosivu
+        tekee tämän päätöksen heidän puolestaan.
       </h2>
       <div className={styles.kehitysEdut}>
         <KehitysEdut />
