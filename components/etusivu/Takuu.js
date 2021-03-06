@@ -14,8 +14,8 @@ const Takuu = (props) => {
         third
       />
       <p className={styles.description}>
-        Tarjoamme riskivaapata palvelua täydellä tyytyväisyystakuulla. Tähtäämme
-        myös huippuluokan tuloksiin{" "}
+        Saat meiltä täysin riskivapaan verkkosivun, 100% tyytyväisyystakuulla.
+        Tähtäämme myös huippuluokan tuloksiin{" "}
         <Link href="/blogi/testaa-verkkosivuja-lighthousella">
           <a>Googlen laatutestissä.</a>
         </Link>{" "}

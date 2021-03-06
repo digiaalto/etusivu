@@ -4,6 +4,7 @@ import Hero from "../components/etusivu/Hero"
 import Palvelut from "../components/etusivu/Palvelut"
 import Nayteikkuna from "../components/etusivu/Nayteikkuna"
 import Creation from "../components/etusivu/Creation"
+import FAQ from "@/common/FAQ"
 
 const IndexPage = () => {
   const heroRef = useRef(null)
@@ -12,6 +13,7 @@ const IndexPage = () => {
   const suunnitteluRef = useRef(null)
   const kehitysRef = useRef(null)
   const takuuRef = useRef(null)
+  const useinKysyttyaRef = useRef(null)
 
   const sectionRefs = [
     { section: "", hoverText: `Etusivu`, ref: heroRef },
@@ -40,6 +42,11 @@ const IndexPage = () => {
       hoverText: "Takuu",
       ref: takuuRef,
     },
+    {
+      section: "#usein-kysyttya",
+      hoverText: "Usein Kysyttyä",
+      ref: useinKysyttyaRef,
+    },
   ]
 
   return (
@@ -55,6 +62,7 @@ const IndexPage = () => {
             takuuRef: takuuRef,
           }}
         />
+        <FAQ refs={useinKysyttyaRef} />
       </Layout>
     </div>
   )

@@ -14,23 +14,24 @@ const Suunnittelu = (props) => {
       />
       <div className={styles.descriptions}>
         <p className="headerDescription">
-          Määritellä projektin vaatimukset ja tarkoitus, sekä yrityksenne brändi
-          ja unelma-asiakas.
+          Ennen varsinaista suunnittelua määrittelemme verkkoprojektin
+          vaatimukset ja perimmäisen tarkoituksen, sekä yrityksen
+          brändiominaisuudet ja tärkein kohderyhmä.
         </p>
       </div>
       <ol className={styles.list}>
         <li>
-          <h2 className={styles.listHeader}>1. Käyttökokemus</h2>
+          <h2 className={styles.listHeader}>1. Käyttäjäkokemus</h2>
           <p>
-            Toteutamme realistisia yritystavoitteita keskittymällä asiakkaan
-            kokemukseen.
+            Luomme vierailijalle nautinnollisen ja sujuvan käyttökokemuksen joka
+            toteuttaa tärkeimpiä verkkotavoitteita.
           </p>
         </li>
         <li>
-          <h2 className={styles.listHeader}>2. Sisältö</h2>
+          <h2 className={styles.listHeader}>2. Sisältösuunnittelu</h2>
           <p>
-            Tehokas verkkosivu tarvitsee tehokasta sisältöä, kirjoita
-            tekstisisällöt itse tai tilaa sisällöntuotanto.
+            Tehokas verkkosivu tarvitsee tehokasta sisältöä joka puhuttelee
+            tärkeintä kohderyhmää.
           </p>
         </li>
         <li>

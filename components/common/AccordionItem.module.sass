@@ -2,7 +2,7 @@
 @use "@/partials/breakpoints"
 
 .button
-	width: 100%
+	display: block
 	padding: 0.5rem 1rem
 	background-color: colors.$dark
 	color: colors.$light
@@ -13,6 +13,8 @@
 	text-align: left
 	letter-spacing: 1px
 	font-size: 1rem
+	width: 100%
+	box-sizing: border-box
 	&:hover, &:focus, &:active
 		background-color: colors.$lighterDark
 	

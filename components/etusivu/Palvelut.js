@@ -8,10 +8,10 @@ const Palvelut = (props) => {
   return (
     <section className={styles.section} id="palvelut" ref={refs}>
       <HeadersWrap>
-        <Overline text="Parempaa laatua." />
+        <Overline text="Mitä teemme" />
         <h1 className={styles.headerMain}>
-          Uutta teknologiaa Piilaaksosta suomalaisten yritysten ja asiakkaiden
-          iloksi.
+          Tuomme tuorretta laatua Piilaaksosta välittävällä palvelulla
+          suomalaisten yritysten ja asiakkaiden hyödyksi.
         </h1>
       </HeadersWrap>
       <PalvelutOminaisuudet />
