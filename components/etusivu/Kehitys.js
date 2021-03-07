@@ -13,8 +13,8 @@ const Kehitys = (props) => {
       />
       <h2 className={styles.description}>
         Verkkosivun ylläpidon pitää olla vaivatonta sekä käyttö nopeaa, sillä
-        tavallinen verkkokäyttäjä päättää sekunneissa hyppääkö hän pois
-        sivuilta, tehottomalla tekniikalla rakennettu verkkosivu tekee tämän
+        tavallinen verkkokäyttäjä päättää sekunneissa poistuuko hän
+        yrityssivuilta. Tehottomalla tekniikalla rakennettu sivusto tekee tämän
         päätöksen heidän puolestaan.
       </h2>
       <div className={styles.kehitysEdut}>
