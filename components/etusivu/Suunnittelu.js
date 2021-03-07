@@ -17,9 +17,9 @@ const Suunnittelu = (props) => {
       />
       <div className={styles.descriptions}>
         <p className="headerDescription">
-          Ennen varsinaista web-suunnittelua määrittelemme verkkoprojektin
-          vaatimukset ja perimmäisen tarkoituksen, sekä yrityksen
-          brändiominaisuudet ja tärkeimmät kohderyhmät.
+          Ennen varsinaista web-suunnittelua kartoitamme haastattelussa pari
+          tärkeää juttua. Selvitämme projektin vaatimukset ja tavoitteet, sekä
+          tärkeimmät kohderyhmät ja brändin ominaisuudet.
         </p>
       </div>
       <ol className={styles.list}>

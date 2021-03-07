@@ -14,8 +14,9 @@ const Kehitys = (props) => {
       <h2 className={styles.description}>
         Verkkosivun ylläpidon pitää olla vaivatonta sekä käyttö nopeaa, sillä
         tavallinen verkkokäyttäjä päättää sekunneissa poistuuko hän
-        yrityssivuilta. Tehottomalla tekniikalla rakennettu sivusto tekee tämän
-        päätöksen heidän puolestaan.
+        yrityssivuilta. Kehitämme tehokkailla React ja Next.js
+        ohjelmistokehyksillä joilla voimm pitää käyttäjän ennenaikaisen
+        poistumisprosentin alhaisena.
       </h2>
       <div className={styles.kehitysEdut}>
         <KehitysEdut />
