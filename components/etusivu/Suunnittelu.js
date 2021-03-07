@@ -19,29 +19,29 @@ const Suunnittelu = (props) => {
         <p className="headerDescription">
           Ennen varsinaista web-suunnittelua määrittelemme verkkoprojektin
           vaatimukset ja perimmäisen tarkoituksen, sekä yrityksen
-          brändiominaisuudet ja tärkeimmän kohderyhmä.
+          brändiominaisuudet ja tärkeimmät kohderyhmät.
         </p>
       </div>
       <ol className={styles.list}>
         <li>
           <h2 className={styles.listHeader}>1. Käyttäjäkokemus</h2>
           <p>
-            Luomme vierailijalle nautinnollisen ja sujuvan käyttökokemuksen joka
-            toteuttaa tärkeimpiä verkkotavoitteita.
+            Vierailija haluaa esteettömän ja nautinnollisen käyttökokemuksen
+            jonka luomme huolellisella UX-designilla.
           </p>
         </li>
         <li>
           <h2 className={styles.listHeader}>2. Sisältösuunnittelu</h2>
           <p>
-            Tehokas verkkosivu tarvitsee tehokasta sisältöä joka puhuttelee
-            tärkeintä kohderyhmää.
+            Tehokas verkkosivu tarvitsee tehokasta sisältöä joka puhuttelee ja
+            ohjailee vierailijaa halutulla tavalla.
           </p>
         </li>
         <li>
           <h2 className={styles.listHeader}>3. Ulkoasu</h2>
           <p>
-            Suunnittelemme kauniin estetiikan joka erottaa sinut muista omien
-            arvojesi ja tyylisi mukaisesti.
+            Varustamme verkkosivun kauniilla estetiikalla joka erottaa
+            yrityksenne kilpailijoista oman brändin mukaisesti.
           </p>
         </li>
       </ol>
