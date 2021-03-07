@@ -6,11 +6,16 @@ const Kehitys = (props) => {
   const { refs } = props
   return (
     <section className={styles.section} ref={refs} id="kehitys">
-      <StepIndicator overline="Kehitys" header="Tehostettu moottori." second />
+      <StepIndicator
+        overline="Kehitys"
+        header="Luotettava ja tehokas moottori."
+        second
+      />
       <h2 className={styles.description}>
-        Tavallinen verkkokäyttäjä päättää sekunnissa poistuuko vai jatkaako hän
-        verkkosivun selailua, tehottomalla tekniikalla rakennettu verkkosivu
-        tekee tämän päätöksen heidän puolestaan.
+        Verkkosivun ylläpidon pitää olla vaivatonta sekä käyttö nopeaa, sillä
+        tavallinen verkkokäyttäjä päättää sekunneissa hyppääkö hän pois
+        sivuilta, tehottomalla tekniikalla rakennettu verkkosivu tekee tämän
+        päätöksen heidän puolestaan.
       </h2>
       <div className={styles.kehitysEdut}>
         <KehitysEdut />

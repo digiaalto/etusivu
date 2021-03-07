@@ -6,7 +6,10 @@ const Suunnittelu = (props) => {
   const { refs } = props
   return (
     <section className={styles.section} ref={refs} id="suunnittelu">
-      <Overline text="Valmistustapa" customStyle={{ textAlign: "center" }} />
+      <Overline
+        text="Valmistusprosessi"
+        customStyle={{ textAlign: "center" }}
+      />
       <StepIndicator
         overline="Suunnittelu"
         header="Kaikki alkaa ideoinnista."

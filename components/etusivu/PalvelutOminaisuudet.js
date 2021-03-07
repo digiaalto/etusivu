@@ -5,14 +5,14 @@ const PalvelutOminaisuudet = () => {
     <div className={styles.container}>
       <Ominaisuus icon={BrainIcon} header="Suunnittelu">
         <p>
-          Suunnittelemme verkkosivuista tehokkaita verkkopalvelukanavia
-          kasvaville yrityksille ja järjestöille.
+          Suunnittelemme verkkosivuista tehokkaita yrityskumppaneita kasvaville
+          yrityksille ja järjestöille.
         </p>
       </Ominaisuus>
       <Ominaisuus icon={CogIcon} header="Kehitys">
         <p>
-          Kehitämme älykkäitä verkkosivuja, hybrid-sivustoja ja web-appeja
-          modernilla ohjelmistoarkkitehtuurilla.
+          Kehitämme älykkäällä teknologialla luotettavia ja kestäviä
+          hybrid-sivustoja ja web-appeja.
         </p>
       </Ominaisuus>
       <Ominaisuus icon={HeartIcon} header="Palvelu">

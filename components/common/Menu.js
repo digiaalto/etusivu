@@ -16,6 +16,10 @@ const links = [
     href: "/tarjouspyynto",
   },
   {
+    text: "Usein Kysyttyä",
+    href: "/#usein-kysyttya",
+  },
+  {
     text: "Blogi",
     href: "/blogi",
   },

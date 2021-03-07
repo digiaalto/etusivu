@@ -11,10 +11,10 @@ const edut = [
     <animated.div className={styles.content} style={{ ...style }}>
       <h3 className={styles.header}>Tehokkuus</h3>
       <p>
-        Siinä missä tavanomaiset Wordpress-sivut pitää rakentaa aina uuden
-        vierailijan tullessa sivulle, hybrid-sivumme ovat generoitu etukäteen
-        pilvestä ja lähetetty asiakkaan laitteelle suorituskykyisesti ilman
-        viiveitä ja esiladatut linkit tekevät navigoinnista salamannopeaa.
+        Siinä missä vanha Wordpress-sivu pitää rakentaa aina uuden vierailijan
+        tullessa sivulle, hybrid-sivumme ovat generoitu etukäteen pilvestä ja
+        lähetetty asiakkaan laitteelle suorituskykyisesti ilman viiveitä ja
+        esiladatut linkit tekevät navigoinnista salamannopeaa.
       </p>
     </animated.div>
   ),

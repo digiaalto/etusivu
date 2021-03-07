@@ -10,8 +10,7 @@ const Palvelut = (props) => {
       <HeadersWrap>
         <Overline text="Mitä teemme" />
         <h1 className={styles.headerMain}>
-          Tuomme uutta koodia Piilaaksosta suomalaisten yritysten ja asiakkaiden
-          hyödyksi.
+          Optimoituja ja kestäviä kotisivuja reilulla palvelulla.
         </h1>
       </HeadersWrap>
       <PalvelutOminaisuudet />
