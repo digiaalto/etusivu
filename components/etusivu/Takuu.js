@@ -10,16 +10,16 @@ const Takuu = (props) => {
     <section className={styles.section} ref={refs} id="palvelu">
       <StepIndicator
         overline="Palvelu"
-        header="Täysi tyytyväisyystakuu ja huippuluokan laatutakuu."
+        header="Asiakastyytyvyys on tärkein."
         third
       />
       <p className={styles.description}>
-        Asiakastyytyväisyys on meille tärkeintä. Palvelemme 100%
-        tyytyväisyystakuulla ja lupaamme huippuluokan tulokset{" "}
+        Valmistamme verkkoprojektisi täydellä tyytyväisyystakuulla ja
+        huippuluokan tulokset Googlen{" "}
         <Link href="/blogi/testaa-verkkosivuja-lighthousella">
-          <a>Googlen laatutestissä.</a>
+          <a>laatutestissä.</a>
         </Link>{" "}
-        Aloitetaan hommat tarjouspyynnöllä tai ota suoraan{" "}
+        Starttaa hommat tarjouspyynnöllä tai ota suoraan{" "}
         <LinkScroll to="laheta-viesti" smooth>
           yhteyttä.
         </LinkScroll>{" "}

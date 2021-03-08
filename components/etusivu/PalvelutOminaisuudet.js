@@ -12,13 +12,13 @@ const PalvelutOminaisuudet = () => {
       <Ominaisuus icon={CogIcon} header="Kehitys">
         <p>
           Kehitämme älykkäällä teknologialla luotettavia ja kestäviä
-          hybrid-sivustoja ja web-appeja.
+          verkkosivuja ja web-appeja.
         </p>
       </Ominaisuus>
       <Ominaisuus icon={HeartIcon} header="Palvelu">
         <p>
-          Tarjoamme riskivapaan palvelun tyytyväisyystakuulla ja huippuluokan
-          tulokset Googlen laatutestissä.
+          Valmistamme verkkosivuja täydellä tyytyväisyystakuulla ja
+          laatutestaamme Google Lighthousella.
         </p>
       </Ominaisuus>
     </div>

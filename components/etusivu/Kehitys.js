@@ -8,15 +8,12 @@ const Kehitys = (props) => {
     <section className={styles.section} ref={refs} id="kehitys">
       <StepIndicator
         overline="Kehitys"
-        header="Luotettava ja tehokas moottori."
+        header="Kilpailua parempaa ohjelmointia."
         second
       />
       <h2 className={styles.description}>
-        Verkkosivun ylläpidon pitää olla vaivatonta sekä käyttö nopeaa, sillä
-        tavallinen verkkokäyttäjä päättää sekunneissa poistuuko hän
-        yrityssivuilta. Kehitämme tehokkailla React ja Next.js
-        ohjelmistokehyksillä joilla voimm pitää käyttäjän ennenaikaisen
-        poistumisprosentin alhaisena.
+        Pidämme nettisivut suorituskykyisinä ja turvallisina nykyaikaisilla
+        React ja Next.js ohjelmistokehyksillä.
       </h2>
       <div className={styles.kehitysEdut}>
         <KehitysEdut />

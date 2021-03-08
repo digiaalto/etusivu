@@ -10,7 +10,7 @@ const Palvelut = (props) => {
       <HeadersWrap>
         <Overline text="Mitä teemme" />
         <h1 className={styles.headerMain}>
-          Optimoituja ja kestäviä kotisivuja reilulla palvelulla.
+          Helppoja ja kestäviä kotisivuja reilulla palvelulla.
         </h1>
       </HeadersWrap>
       <PalvelutOminaisuudet />
