@@ -40,8 +40,8 @@ const Suunnittelu = (props) => {
         <li>
           <h2 className={styles.listHeader}>3. Ulkoasu</h2>
           <p>
-            Varustamme verkkosivun kauniilla estetiikalla joka eroaa
-            kilpailijoista oman brändin ja arvojen mukaisesti.
+            Varustamme verkkosivun kauniilla estetiikalla joka eroaa muista oman
+            brändin ja arvojen mukaisesti.
           </p>
         </li>
       </ol>

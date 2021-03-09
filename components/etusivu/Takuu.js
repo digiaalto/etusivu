@@ -10,7 +10,7 @@ const Takuu = (props) => {
     <section className={styles.section} ref={refs} id="palvelu">
       <StepIndicator
         overline="Palvelu"
-        header="Asiakastyytyvyys on tärkein."
+        header="Asiakastyytyvyys on tärkeintä."
         third
       />
       <p className={styles.description}>
