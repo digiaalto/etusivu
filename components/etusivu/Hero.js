@@ -28,8 +28,8 @@ const Hero = (props) => {
         <StylizedHeaders animElement={animElement} />
         <CtaButtons />
         <h1 className={styles.description}>
-          Laatutestattuja verkkosivuja yrityksille ja järjestöille täydellä
-          tyytyväisyystakuulla.
+          Valmistamme laatutestattuja verkkosivuja yrityksille ja järjestöille
+          täydellä tyytyväisyystakuulla.
         </h1>
         <LinkScroll
           className={styles.scrollLink}
@@ -50,7 +50,7 @@ const CtaButtons = () => {
   return (
     <div className={styles.ctaButtons}>
       <LinkButton href="/tarjouspyynto" text="Uudet kotisivut" />
-      <LinkButton href="palvelut" text="Lue lisää" alternative smooth />
+      <LinkButton href="palvelut" text="Lisätietoa" alternative smooth />
     </div>
   )
 }
@@ -68,7 +68,7 @@ const StylizedHeaders = ({ animElement }) => {
             animElement === 0 ? styles.fadeAnimation : null
           }`}
         >
-          Suunnittelu.
+          Suunnittelemme.
         </span>
       </span>
       <div
@@ -81,7 +81,7 @@ const StylizedHeaders = ({ animElement }) => {
             animElement === 1 ? styles.fadeAnimation : null
           }`}
         >
-          Kehitys.
+          Kehitämme.
         </span>
       </div>
       <div
@@ -94,7 +94,7 @@ const StylizedHeaders = ({ animElement }) => {
             animElement === 2 ? styles.fadeAnimation : null
           }`}
         >
-          Palvelu.
+          Autamme.
         </span>
       </div>
     </h1>

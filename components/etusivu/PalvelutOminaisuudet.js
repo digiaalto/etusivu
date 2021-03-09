@@ -17,7 +17,8 @@ const PalvelutOminaisuudet = () => {
       </Ominaisuus>
       <Ominaisuus icon={HeartIcon} header="Palvelemme">
         <p>
-          Täydellä tyytyväisyystakuulla ja laatutestaamme Google Lighthousella.
+          Täydellä tyytyväisyystakuulla sekä laatutestaamme Google
+          Lighthousella.
         </p>
       </Ominaisuus>
     </div>

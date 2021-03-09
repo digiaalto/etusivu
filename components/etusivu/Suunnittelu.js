@@ -17,9 +17,9 @@ const Suunnittelu = (props) => {
       />
       <div className={styles.descriptions}>
         <p className="headerDescription">
-          Ennen varsinaista web-suunnittelua kartoitamme haastattelussa pari
-          tärkeää juttua. Selvitämme projektin vaatimukset ja tavoitteet, sekä
-          tärkeimmät kohderyhmät ja brändin ominaisuudet.
+          Ennen varsinaista työn alkua kartoitamme haastattelussa pari tärkeää
+          juttua, kuten projektin vaatimukset ja tavoitteet, sekä tärkeimmät
+          kohderyhmät ja brändin ominaisuudet. Sitten aloitamme suunnittelun.
         </p>
       </div>
       <ol className={styles.list}>

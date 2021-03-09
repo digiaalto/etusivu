@@ -13,7 +13,8 @@ const Kehitys = (props) => {
       />
       <h2 className={styles.description}>
         Pidämme nettisivut suorituskykyisinä ja turvallisina nykyaikaisilla
-        React ja Next.js ohjelmistokehyksillä.
+        React ja Next.js ohjelmistokehyksillä. Lue lisää alla olevista
+        painikkeista.
       </h2>
       <div className={styles.kehitysEdut}>
         <KehitysEdut />
