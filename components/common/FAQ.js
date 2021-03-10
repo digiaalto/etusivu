@@ -11,6 +11,10 @@ const sisalto = [
     content: `Hinnat vaihtelevat projektin vaatimusten mukaisesti noin tuhannesta eurosta kymmeneen tuhanteen. Voit katsoa projektillesi alustavan hinta-arvioita tarjouspyynnön ohella.`,
   },
   {
+    button: "Meillä on jo domain ja palvelin, miten se vaikuttaa asioihin?",
+    content: `Domainin voi helposti ohjata uuteen osoitteeseen, erillistä hostaus-palvelua ei tarvita ja muut palvelut voidaan integroida sivustoihin vaatimusten mukaisesti.`,
+  },
+  {
     button: "Mitä tarkoittaa 100% tyytyväisyystakuu?",
     content: `Iteroimme designia palautteenne mukaisesti kunnes hyväksytte työnjäljen, mutta korkeintaan kolme kertaa, tai emme veloita mitään. Emme kuitenkaan myy mitään ilman vastinetta, jos otatte materiaalia käyttöön laskutamme siltä osin.`,
   },

@@ -1,24 +1,29 @@
 import styles from "./PalvelutOminaisuudet.module.sass"
+import Link from "next/link"
 
 const PalvelutOminaisuudet = () => {
   return (
     <div className={styles.container}>
       <Ominaisuus icon={BrainIcon} header="Suunnittelemme">
         <p>
-          Verkkosivuista tehokkaita yrityskumppaneita kasvaville järjestöille ja
+          Verkkosivuista luotettavia kumppaneita kasvaville järjestöille ja
           yrityksille.
         </p>
       </Ominaisuus>
       <Ominaisuus icon={CogIcon} header="Kehitämme">
         <p>
-          Älykkäällä teknologialla luotettavia ja kestäviä verkkosivuja ja
-          web-appeja.
+          Älykkäällä teknologialla luotettavia ja kestäviä verkkosivuja jotka
+          eivät vaadi jatkuvaa ylläpitoa.
         </p>
       </Ominaisuus>
       <Ominaisuus icon={HeartIcon} header="Palvelemme">
         <p>
-          Täydellä tyytyväisyystakuulla sekä laatutestaamme Google
-          Lighthousella.
+          Täydellä tyytyväisyystakuulla sekä laatutestaamme Googlen
+          verkkosivujen{" "}
+          <Link href="/blogi/testaa-verkkosivuja-lighthousella">
+            <a>laatutestillä</a>
+          </Link>
+          .
         </p>
       </Ominaisuus>
     </div>
