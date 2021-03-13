@@ -16,27 +16,27 @@ const Post = (props) => {
 
   if (!router.isFallback && !slug) {
     router.push("/404")
+  } else {
+    return (
+      <BlogLayout topbar={true}>
+        <section className={styles.section}>
+          {router.isFallback ? (
+            <Fallback />
+          ) : (
+            <article className={styles.blogArticle}>
+              <MainImage image={mainImage} />
+              <Content
+                title={title}
+                categories={categories}
+                excerpt={excerpt}
+                body={body}
+              />
+            </article>
+          )}
+        </section>
+      </BlogLayout>
+    )
   }
-
-  return (
-    <BlogLayout topbar={true}>
-      <section className={styles.section}>
-        {router.isFallback ? (
-          <Fallback />
-        ) : (
-          <article className={styles.blogArticle}>
-            <MainImage image={mainImage} />
-            <Content
-              title={title}
-              categories={categories}
-              excerpt={excerpt}
-              body={body}
-            />
-          </article>
-        )}
-      </section>
-    </BlogLayout>
-  )
 }
 
 const Fallback = () => {
