@@ -11,32 +11,28 @@ import BlogLayout from "@/layouts/BlogLayout"
 import Overline from "@/common/Overline"
 
 const Post = (props) => {
-  const { title, slug, body, excerpt, mainImage, categories } = props
+  const { title, body, excerpt, mainImage, categories } = props
   const router = useRouter()
 
-  if (!router.isFallback && !slug) {
-    router.push("/404")
-  } else {
-    return (
-      <BlogLayout topbar={true}>
-        <section className={styles.section}>
-          {router.isFallback ? (
-            <Fallback />
-          ) : (
-            <article className={styles.blogArticle}>
-              <MainImage image={mainImage} />
-              <Content
-                title={title}
-                categories={categories}
-                excerpt={excerpt}
-                body={body}
-              />
-            </article>
-          )}
-        </section>
-      </BlogLayout>
-    )
-  }
+  return (
+    <BlogLayout topbar={true}>
+      <section className={styles.section}>
+        {router.isFallback ? (
+          <Fallback />
+        ) : (
+          <article className={styles.blogArticle}>
+            <MainImage image={mainImage} />
+            <Content
+              title={title}
+              categories={categories}
+              excerpt={excerpt}
+              body={body}
+            />
+          </article>
+        )}
+      </section>
+    </BlogLayout>
+  )
 }
 
 const Fallback = () => {
@@ -117,6 +113,7 @@ export async function getStaticProps({ params }) {
 	}`
   return {
     props: await client.fetch(query, { post }),
+    revalidate: 1800,
   }
 }
 
