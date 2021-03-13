@@ -5,6 +5,7 @@
       "@/styles/*": ["/styles/*"],
       "@/partials/*": ["/styles/partials/*"],
       "@/layouts/*": ["/components/layouts/*"],
+      "@/components/*": ["/components/*"],
       "@/common/*": ["/components/common/*"],
       "@/images/*": ["/public/images/*"]
     }

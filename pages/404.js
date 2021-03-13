@@ -1,10 +1,10 @@
 import styles from "../styles/pages/404.module.sass"
-import Layout from "../components/layouts"
+import DefaultLayout from "@/layouts/DefaultLayout"
 import Link from "next/link"
 
 const Page404 = () => {
   return (
-    <Layout topbar={true}>
+    <DefaultLayout topbar={true}>
       <section className={styles.section}>
         <h1 className={styles.header}>Tässä osoitteessa ei ole mitään.</h1>
         <p>
@@ -13,7 +13,7 @@ const Page404 = () => {
           </Link>
         </p>
       </section>
-    </Layout>
+    </DefaultLayout>
   )
 }
 

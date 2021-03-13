@@ -50,7 +50,7 @@ const PostItem = ({ post }) => {
   return (
     <div className={styles.post}>
       <div className={styles.postImageWrapper}>
-        <Link href="/blogi/[slug]" as={`/blogi/${slug.current}`}>
+        <Link href="/blogi/[post]" as={`/blogi/${slug.current}`}>
           <a>
             <Image
               {...thumbnailProps}
@@ -61,7 +61,7 @@ const PostItem = ({ post }) => {
         </Link>
       </div>
       <div className={styles.postInfoWrapper}>
-        <Link href="/blogi/[slug]" as={`/blogi/${slug.current}`}>
+        <Link href="/blogi/[post]" as={`/blogi/${slug.current}`}>
           <a>
             <h3 className={styles.postHeader}>{title}</h3>
           </a>
@@ -78,32 +78,6 @@ const PostItem = ({ post }) => {
     </div>
   )
 }
-
-// const PostItem = ({ post }) => {
-//   const { slug, title, category, mainImage } = post
-//   let thumbnailProps = useNextSanityImage(client, mainImage)
-//   return (
-//     <div className={styles.postItem}>
-//       <Link href="/blogi/[slug]" as={`/blogi/${slug.current}`}>
-//         <a>
-//           <div className={styles.postThumbnail}>
-//             <Image
-//               {...thumbnailProps}
-//               alt={`Kuva: ${title}`}
-//               className={styles.postThumbnailImage}
-//             />
-//           </div>
-//         </a>
-//       </Link>
-//       <div className={styles.postMeta}>
-//         <span className={styles.postCategory}>{category}</span>
-//         <Link href="/blogi/[slug]" as={`/blogi/${slug.current}`}>
-//           <a className={styles.postTitle}>{title}</a>
-//         </Link>
-//       </div>
-//     </div>
-//   )
-// }
 
 export async function getStaticProps(ctx) {
   // excerpt

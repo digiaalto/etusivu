@@ -3,7 +3,7 @@ import TarjousForm from "./TarjousForm"
 import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
 import { AiOutlineLoading3Quarters } from "react-icons/ai"
-import { PriceWidget } from "./index"
+import PriceWidget from "./PriceWidget"
 
 const sisalto = {
   header: "Lähetä tarjouspyyntö.",

@@ -4,36 +4,43 @@
 // Layout.
 .topbar
 	z-index: 1000
-	display: none
 	position: fixed
 	top: 0
 	right: 0
 	left: 0
+	display: flex
+	justify-content: flex-start
+	gap: 0.5rem
 	padding: 0 1rem
 	background-color: colors.$dark
 	height: 3rem
+
+.divider
+	color: colors.$light
+	display: flex
+	align-content: center
+	align-items: center
+	opacity: 80%
 
 // Content.
 .contactLink
 	display: flex
 	align-content: center
 	align-items: center
-	font-size: 1rem
+	font-size: 0.9rem
 	color: colors.$light
 	&:hover
 		color: colors.$primary
 .contactText
-	margin-left: 8px
-	display: none
+	font-weight: 600
 	
 // Media queries.
 @include breakpoints.tablet
 	.topbar
-		display: flex
 		justify-content: center
 		gap: 2rem
-
+	.contactLink
+		font-size: 1rem
 	.contactText
 		display: inline-block
-		font-weight: 600
 		letter-spacing: 0.5px

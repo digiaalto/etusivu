@@ -1,19 +1,19 @@
 @use "@/partials/colors"
 @use "@/partials/misc"
 
-.logo // a
-  @include misc.hoverFill(colors.$dark)
-  position: relative
-  display: inline-block
-  font-size: 1.5rem
-  font-weight: 800
-  letter-spacing: 1px
-  color: colors.$dark
-  user-select: none
-  overflow: hidden
-  &:hover
-    color: colors.$primary
+.logo
+	@include misc.hoverFill(colors.$dark)
+	position: relative
+	display: inline-block
+	font-size: 1.5rem
+	font-weight: 800
+	letter-spacing: 1px
+	color: colors.$dark
+	user-select: none
+	overflow: hidden
+	&:hover
+		color: colors.$primary
 
 .invert
-  color: colors.$light
-  @include misc.hoverFill(colors.$light)
+	color: colors.$light
+	@include misc.hoverFill(colors.$light)

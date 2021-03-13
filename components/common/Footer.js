@@ -35,7 +35,7 @@ const NavigationRow = () => {
         <Link href="/tarjouspyynto">
           <a className={styles.link}>Tarjouspyyntö</a>
         </Link>
-        <Link href="/usein-kysyttya">
+        <Link href="/#usein-kysyttya">
           <a className={styles.link}>Usein kysyttyä</a>
         </Link>
         <Link href="/blogi">

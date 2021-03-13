@@ -1,5 +1,5 @@
 import styles from "./TextInput.module.sass"
-import { Label } from "./index"
+import Label from "./Label"
 
 const TextInput = ({ name, label, refs, error, required }) => {
   return (

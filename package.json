@@ -20,7 +20,7 @@
     "@sanity/image-url": "^0.140.22",
     "axios": "^0.21.1",
     "groq": "^2.2.6",
-    "next": "^10.0.7",
+    "next": "^10.0.8",
     "next-sanity-image": "^1.0.1",
     "node-fetch": "^2.6.1",
     "postcss-flexbugs-fixes": "^5.0.2",
@@ -32,15 +32,16 @@
     "react-hook-form": "^6.15.4",
     "react-icons": "^4.2.0",
     "react-intersection-observer": "^8.31.0",
-    "react-scroll": "^1.8.1",
+    "react-scroll": "^1.8.2",
     "react-spring": "^8.0.27",
-    "react-textarea-autosize": "^8.3.1",
+    "react-textarea-autosize": "^8.3.2",
     "react-transition-group": "^4.4.1",
-    "react-use": "^17.1.1",
+    "react-use": "^17.2.1",
     "sass": "^1.32.8",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
+    "babel-plugin-styled-components": "^1.12.0",
     "prettier": "^2.2.1"
   }
 }

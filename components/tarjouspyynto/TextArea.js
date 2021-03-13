@@ -1,6 +1,6 @@
 import styles from "./TextArea.module.sass"
 import TextareaAutosize from "react-textarea-autosize"
-import { Label } from "./index"
+import Label from "./Label"
 
 const size = {
   minRows: 8,

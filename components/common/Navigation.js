@@ -10,6 +10,7 @@ const Navigation = ({ topbar }) => {
       style={{ top: topbar ? "48px" : "0px" }}
     >
       <Logo />
+      <span className={styles.description}>Takuulla kotisivuja.</span>
       <ol className={styles.links}>
         <NavLink href={"/tarjouspyynto"} text="Tarjouspyyntö" />
         <NavLink href={"/#usein-kysyttya"} text="Usein Kysyttyä" />

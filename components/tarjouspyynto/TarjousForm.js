@@ -2,7 +2,9 @@ import styles from "./TarjousForm.module.sass"
 import React, { useState, useEffect, useRef } from "react"
 import axios from "axios"
 import { useForm } from "react-hook-form"
-import { Checkbox, TextArea, TextInput } from "./index"
+import Checkbox from "./Checkbox"
+import TextArea from "./TextArea"
+import TextInput from "./TextInput"
 import { ButtonStyler } from "../common/button"
 
 // Content. Get from CMS?

@@ -1,11 +1,11 @@
-import Layout from "../components/layouts"
-import TarjousApp from "../components/tarjouspyynto"
+import DefaultLayout from "@/layouts/DefaultLayout"
+import TarjousApp from "@/components/tarjouspyynto/TarjousApp"
 import Image from "next/image"
 import styles from "@/styles/pages/tarjouspyynto.module.sass"
 
 const Hinnat = () => {
   return (
-    <Layout topbar={true}>
+    <DefaultLayout topbar={true}>
       <div className={styles.heroWrapper}>
         <Image
           src="/images/hinnat/tausta_paperikone.jpg"
@@ -16,7 +16,7 @@ const Hinnat = () => {
         />
       </div>
       <TarjousApp />
-    </Layout>
+    </DefaultLayout>
   )
 }
 

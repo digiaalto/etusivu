@@ -1,5 +1,5 @@
 import { useRef } from "react"
-import Layout from "../components/layouts/"
+import DefaultLayout from "@/layouts/DefaultLayout"
 import Hero from "../components/etusivu/Hero"
 import Palvelut from "../components/etusivu/Palvelut"
 import Nayteikkuna from "../components/etusivu/Nayteikkuna"
@@ -51,7 +51,7 @@ const IndexPage = () => {
 
   return (
     <div>
-      <Layout topbar={true} sectionRefs={sectionRefs}>
+      <DefaultLayout topbar={true} sectionRefs={sectionRefs}>
         <Hero refs={heroRef} />
         <Palvelut refs={palvelutRef} />
         <Nayteikkuna refs={nayteikkunaRef} />
@@ -63,7 +63,7 @@ const IndexPage = () => {
           }}
         />
         <FAQ refs={useinKysyttyaRef} />
-      </Layout>
+      </DefaultLayout>
     </div>
   )
 }

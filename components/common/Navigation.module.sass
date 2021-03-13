@@ -3,29 +3,34 @@
 @use "@/partials/misc"
 
 .nav
+	z-index: 999
+	display: grid
+	grid-auto-flow: column
+	align-items: center
+	justify-content: space-around
+	position: relative
+	width: 100%
+	padding: 0.65rem 1rem
+	background-color: colors.$light
+	background-color: hsla(0,0%,100%,0.8)
+	backdrop-filter: saturate(180%) blur(5px)
+	box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.1)
+
+.links
 	display: none
 
+.description
+	display: inline-block
+	font-weight: 600
+
 @include breakpoints.laptop
-	.nav
-		z-index: 999
-		position: absolute
-		left: 0
-		right: 0
-		display: flex
-		justify-content: space-around
-		align-items: center
-		// background-color: colors.$light
-		// background-color: hsla(0,0%,100%,0.8)
-		background-color: #fff
-		border-bottom: 1px solid #eaeaea
-		// backdrop-filter: saturate(180%) blur(5px)
-		// box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.1)
+	.description
+		display: none
 	.links
 		display: grid
 		grid-auto-flow: column
 		align-items: center
 		gap: 2rem
-		padding: 1.33rem 0
 	.link
 		font-size: 1.1rem
 		font-weight: 500
