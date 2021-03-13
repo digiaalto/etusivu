@@ -94,6 +94,7 @@ export async function getStaticProps(ctx) {
     props: {
       posts: await client.fetch(query),
     },
+    revalidate: 1800,
   }
 }
 

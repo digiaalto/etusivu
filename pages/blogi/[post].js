@@ -1,6 +1,7 @@
 import styles from "../../styles/pages/post.module.sass"
 import styled from "styled-components"
 import client from "../../client"
+import { useRouter } from "next/router"
 import groq from "groq"
 import BlockContent from "@sanity/block-content-to-react"
 import { useNextSanityImage } from "next-sanity-image"
@@ -10,22 +11,41 @@ import BlogLayout from "@/layouts/BlogLayout"
 import Overline from "@/common/Overline"
 
 const Post = (props) => {
-  const { title, body, excerpt, mainImage, categories } = props
+  const { title, slug, body, excerpt, mainImage, categories } = props
+  const router = useRouter()
+
+  if (!router.isFallback && !slug) {
+    router.push("/404")
+  }
 
   return (
     <BlogLayout topbar={true}>
       <section className={styles.section}>
-        <article className={styles.blogArticle}>
-          <MainImage image={mainImage} />
-          <Content
-            title={title}
-            categories={categories}
-            excerpt={excerpt}
-            body={body}
-          />
-        </article>
+        {router.isFallback ? (
+          <Fallback />
+        ) : (
+          <article className={styles.blogArticle}>
+            <MainImage image={mainImage} />
+            <Content
+              title={title}
+              categories={categories}
+              excerpt={excerpt}
+              body={body}
+            />
+          </article>
+        )}
       </section>
     </BlogLayout>
+  )
+}
+
+const Fallback = () => {
+  return (
+    <div className={styles.fallback}>
+      <h1 className="headerMain">
+        Blogia ladataan ensimmäistä kertaa, hetkinen...
+      </h1>
+    </div>
   )
 }
 
@@ -74,28 +94,13 @@ const Content = ({ title, body, categories, excerpt }) => {
   )
 }
 
-const StyledBlockquote = styled.blockquote`
-  max-width: 550px;
-  color: #666;
-  margin: 20px;
-  padding: 20px;
-  font-size: 18px;
-  border-left: 3px solid #666;
-`
-
-Post.defaultProps = {
-  title: "Ei otsikkoa!",
-  name: "Ei kirjoittajaa?",
-  categories: ["Ei kategoriaa!?"],
-}
-
 export async function getStaticPaths() {
   const paths = await client.fetch(
     groq`*[_type == "post" && defined(slug.current)][].slug.current`
   )
   return {
     paths: paths.map((post) => ({ params: { post } })),
-    fallback: false,
+    fallback: true,
   }
 }
 
@@ -104,6 +109,7 @@ export async function getStaticProps({ params }) {
   const { post = "" } = params
   const query = groq`*[_type == "post" && slug.current == $post][0]{
 		title,
+		"slug": slug.current,
 		"categories": categories[]->title,
 		mainImage,
 		body,
@@ -115,3 +121,18 @@ export async function getStaticProps({ params }) {
 }
 
 export default Post
+
+Post.defaultProps = {
+  title: "Ei otsikkoa!",
+  name: "Ei kirjoittajaa?",
+  categories: ["Ei kategoriaa!?"],
+}
+
+const StyledBlockquote = styled.blockquote`
+  max-width: 550px;
+  color: #666;
+  margin: 20px;
+  padding: 20px;
+  font-size: 18px;
+  border-left: 3px solid #666;
+`
