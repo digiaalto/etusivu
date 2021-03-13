@@ -37,11 +37,9 @@ const Post = (props) => {
 
 const Fallback = () => {
   return (
-    <div className={styles.fallback}>
-      <h1 className="headerMain">
-        Blogia ladataan ensimmäistä kertaa, hetkinen...
-      </h1>
-    </div>
+    <h1 className="headerMain">
+      Blogia ladataan ensimmäistä kertaa, hetkinen...
+    </h1>
   )
 }
 
@@ -113,7 +111,7 @@ export async function getStaticProps({ params }) {
 	}`
   return {
     props: await client.fetch(query, { post }),
-    revalidate: 1800,
+    revalidate: 60,
   }
 }
 

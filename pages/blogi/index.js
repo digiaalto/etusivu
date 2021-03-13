@@ -1,6 +1,7 @@
 import styles from "../../styles/pages/blogi.module.sass"
 import client from "../../client"
 import groq from "groq"
+import { useRouter } from "next/router"
 import { useNextSanityImage } from "next-sanity-image"
 import BlogLayout from "@/layouts/BlogLayout"
 import Link from "next/link"
@@ -10,10 +11,12 @@ import { formatDate } from "../../utils/helpers"
 
 const Blogi = (props) => {
   const { posts } = props
+  const router = useRouter()
+
   return (
     <BlogLayout topbar={true}>
       <Hero />
-      <Posts posts={posts} />
+      {router.isFallback ? <Fallback /> : <Posts posts={posts} />}
     </BlogLayout>
   )
 }
@@ -79,8 +82,11 @@ const PostItem = ({ post }) => {
   )
 }
 
+const Fallback = () => {
+  return <h1 className="headerMain">Ladataan uusia blogiviestejä...</h1>
+}
+
 export async function getStaticProps(ctx) {
-  // excerpt
   const query = groq`*[_type == "post" && publishedAt < now()]{
 		_id,
 		publishedAt,
@@ -94,7 +100,7 @@ export async function getStaticProps(ctx) {
     props: {
       posts: await client.fetch(query),
     },
-    revalidate: 1800,
+    revalidate: 60,
   }
 }
 
