@@ -28,8 +28,8 @@ const Hero = (props) => {
         <StylizedHeaders animElement={animElement} />
         <CtaButtons />
         <h1 className={styles.description}>
-          Valmistamme laatutestattuja verkkosivuja yrityksille ja järjestöille
-          täydellä tyytyväisyystakuulla.
+          Laatutestattuja verkkosivuja yrityksille ja järjestöille täydellä
+          tyytyväisyystakuulla sekä välittävällä palvelulla.
         </h1>
         <LinkScroll
           className={styles.scrollLink}

@@ -4,26 +4,25 @@ import Link from "next/link"
 const PalvelutOminaisuudet = () => {
   return (
     <div className={styles.container}>
-      <Ominaisuus icon={BrainIcon} header="Suunnittelemme">
+      <Ominaisuus icon={BrainIcon} header="Suunnittelu">
         <p>
-          Verkkosivuista luotettavia kumppaneita kasvaville järjestöille ja
-          yrityksille.
+          Muovaamme verkkosivuista tehokkaita työkaluja kasvaville järjestöille
+          ja yrityksille.
         </p>
       </Ominaisuus>
-      <Ominaisuus icon={CogIcon} header="Kehitämme">
+      <Ominaisuus icon={CogIcon} header="Kehitys">
         <p>
-          Älykkäällä teknologialla luotettavia ja kestäviä verkkosivuja jotka
-          eivät vaadi jatkuvaa ylläpitoa.
+          Kustannustehokkaalla ohjelmistoarkkitehtuurilla joka ei vaadi
+          päivityksiä tai erillistä ylläpitoa.
         </p>
       </Ominaisuus>
-      <Ominaisuus icon={HeartIcon} header="Palvelemme">
+      <Ominaisuus icon={HeartIcon} header="Palvelu">
         <p>
-          Täydellä tyytyväisyystakuulla sekä laatutestaamme Googlen
-          verkkosivujen{" "}
+          Täydellä tyytyväisyystakuulla ja työn tulitestaus ennen julkaisua
+          Googlen{" "}
           <Link href="/blogi/testaa-verkkosivuja-lighthousella">
-            <a>laatutestillä</a>
+            <a>laatutestillä.</a>
           </Link>
-          .
         </p>
       </Ominaisuus>
     </div>

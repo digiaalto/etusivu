@@ -44,9 +44,9 @@ const SEO = (props) => {
 export default SEO
 
 SEO.defaultProps = {
-  title: "Huippuluokan verkkosivut yritykselle tyytyväisyystakuulla", // 60 chars.
+  title: "Laatutestatut verkkosivut yritykselle tyytyväisyystakuulla", // 60 chars.
   description:
-    "Valmistamme laatutestattuja verkkosivuja yrityksille täydellä tyytyväisyystakuulla, sekä tarjoamme julkaisun jälkeisiä avuliaita lisäpalveluita.", // 155-160
+    "Laatutestattuja verkkosivuja yrityksille ja järjestöille täydellä tyytyväisyystakuulla ja tarjoamme julkaisun jälkeisiä käytännöllisiä lisäpalveluita.", // 155-160
   keywords:
     "nettisivut yritykselle, verkkosivut yritykselle, verkkosivu yritykselle, nettisivut pk-yritykselle, web-design, design, yritykselle nettisivut, nettisivut, hyvät nettisivut, modernit nettisivut, nykyaikaiset nettisivut, laadukkaat nettisivut, laatutestatut nettisivut, optimoidut nettisivut, nopeat nettisivut, nätit nettisivut, kauniit nettusivut",
   author: "Digiaalto",

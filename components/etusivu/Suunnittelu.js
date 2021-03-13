@@ -17,7 +17,7 @@ const Suunnittelu = (props) => {
       />
       <div className={styles.descriptions}>
         <p className="headerDescription">
-          Ennen varsinaista työn alkua kartoitamme haastattelussa pari tärkeää
+          Ennen varsinaisen työn alkua kartoitamme haastattelussa pari tärkeää
           juttua, kuten projektin vaatimukset ja tavoitteet, sekä tärkeimmät
           kohderyhmät ja brändin ominaisuudet. Sitten aloitamme suunnittelun.
         </p>

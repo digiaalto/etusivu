@@ -66,27 +66,19 @@ const KehitysEdut = () => {
     <div className={styles.container}>
       <div className={styles.iconRow}>
         <BsLightningFill
-          className={`${styles.etuIcon} ${styles.tehokkuusIcon} ${
-            index === 0 && styles.selected
-          }`}
+          className={`${styles.etuIcon} ${index === 0 && styles.selected}`}
           onClick={() => setIndex(0)}
         />
         <FaShieldAlt
-          className={`${styles.etuIcon} ${styles.turvallisuusIcon} ${
-            index === 1 && styles.selected
-          }`}
+          className={`${styles.etuIcon} ${index === 1 && styles.selected}`}
           onClick={() => setIndex(1)}
         />
         <RiLineChartFill
-          className={`${styles.etuIcon} ${styles.skaalautuvuusIcon} ${
-            index === 2 && styles.selected
-          }`}
+          className={`${styles.etuIcon} ${index === 2 && styles.selected}`}
           onClick={() => setIndex(2)}
         />
         <GiTwoCoins
-          className={`${styles.etuIcon} ${styles.kustannustehokkuusIcon} ${
-            index === 3 && styles.selected
-          }`}
+          className={`${styles.etuIcon} ${index === 3 && styles.selected}`}
           onClick={() => setIndex(3)}
         />
       </div>
